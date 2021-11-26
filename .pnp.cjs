@@ -25,12 +25,72 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "@site/app",
         "reference": "workspace:site/app"
+      },
+      {
+        "name": "@site/articles-fragment",
+        "reference": "workspace:site/articles-fragment"
+      },
+      {
+        "name": "@site/blog-page",
+        "reference": "workspace:site/block-page"
+      },
+      {
+        "name": "@site/contacts-page",
+        "reference": "workspace:site/contacts-page"
+      },
+      {
+        "name": "@site/footer-fragment",
+        "reference": "workspace:site/footer-fragment"
+      },
+      {
+        "name": "@site/header-fragment",
+        "reference": "workspace:site/header-fragment"
+      },
+      {
+        "name": "@site/navigation-fragment",
+        "reference": "workspace:site/navigation-fragment"
+      },
+      {
+        "name": "@site/price-page",
+        "reference": "workspace:site/price-page"
+      },
+      {
+        "name": "@site/registration-fragment",
+        "reference": "workspace:site/registration-fragment"
+      },
+      {
+        "name": "@site/service-fragment",
+        "reference": "workspace:site/service-fragment"
+      },
+      {
+        "name": "@site/services-fragment",
+        "reference": "workspace:site/services-fragment"
+      },
+      {
+        "name": "@site/services-infographics-fragment",
+        "reference": "workspace:site/services-infographics-fragment"
+      },
+      {
+        "name": "@site/works-examples-fragment",
+        "reference": "workspace:site/works-examples-fragment"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
       ["@site/app", ["workspace:site/app"]],
+      ["@site/articles-fragment", ["workspace:site/articles-fragment"]],
+      ["@site/blog-page", ["workspace:site/block-page"]],
+      ["@site/contacts-page", ["workspace:site/contacts-page"]],
+      ["@site/footer-fragment", ["workspace:site/footer-fragment"]],
+      ["@site/header-fragment", ["workspace:site/header-fragment"]],
+      ["@site/navigation-fragment", ["workspace:site/navigation-fragment"]],
+      ["@site/price-page", ["workspace:site/price-page"]],
+      ["@site/registration-fragment", ["workspace:site/registration-fragment"]],
+      ["@site/service-fragment", ["workspace:site/service-fragment"]],
+      ["@site/services-fragment", ["workspace:site/services-fragment"]],
+      ["@site/services-infographics-fragment", ["workspace:site/services-infographics-fragment"]],
+      ["@site/works-examples-fragment", ["workspace:site/works-examples-fragment"]],
       ["root-workspace-0b6124", ["workspace:."]]
     ],
     "fallbackPool": [
@@ -2796,6 +2856,114 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["recompose", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:0.30.0"],
             ["styled-system", "npm:5.1.5"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=d8b4e7"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/articles-fragment", [
+        ["workspace:site/articles-fragment", {
+          "packageLocation": "./site/articles-fragment/",
+          "packageDependencies": [
+            ["@site/articles-fragment", "workspace:site/articles-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/blog-page", [
+        ["workspace:site/block-page", {
+          "packageLocation": "./site/block-page/",
+          "packageDependencies": [
+            ["@site/blog-page", "workspace:site/block-page"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/contacts-page", [
+        ["workspace:site/contacts-page", {
+          "packageLocation": "./site/contacts-page/",
+          "packageDependencies": [
+            ["@site/contacts-page", "workspace:site/contacts-page"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/footer-fragment", [
+        ["workspace:site/footer-fragment", {
+          "packageLocation": "./site/footer-fragment/",
+          "packageDependencies": [
+            ["@site/footer-fragment", "workspace:site/footer-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/header-fragment", [
+        ["workspace:site/header-fragment", {
+          "packageLocation": "./site/header-fragment/",
+          "packageDependencies": [
+            ["@site/header-fragment", "workspace:site/header-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/navigation-fragment", [
+        ["workspace:site/navigation-fragment", {
+          "packageLocation": "./site/navigation-fragment/",
+          "packageDependencies": [
+            ["@site/navigation-fragment", "workspace:site/navigation-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/price-page", [
+        ["workspace:site/price-page", {
+          "packageLocation": "./site/price-page/",
+          "packageDependencies": [
+            ["@site/price-page", "workspace:site/price-page"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/registration-fragment", [
+        ["workspace:site/registration-fragment", {
+          "packageLocation": "./site/registration-fragment/",
+          "packageDependencies": [
+            ["@site/registration-fragment", "workspace:site/registration-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/service-fragment", [
+        ["workspace:site/service-fragment", {
+          "packageLocation": "./site/service-fragment/",
+          "packageDependencies": [
+            ["@site/service-fragment", "workspace:site/service-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/services-fragment", [
+        ["workspace:site/services-fragment", {
+          "packageLocation": "./site/services-fragment/",
+          "packageDependencies": [
+            ["@site/services-fragment", "workspace:site/services-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/services-infographics-fragment", [
+        ["workspace:site/services-infographics-fragment", {
+          "packageLocation": "./site/services-infographics-fragment/",
+          "packageDependencies": [
+            ["@site/services-infographics-fragment", "workspace:site/services-infographics-fragment"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["@site/works-examples-fragment", [
+        ["workspace:site/works-examples-fragment", {
+          "packageLocation": "./site/works-examples-fragment/",
+          "packageDependencies": [
+            ["@site/works-examples-fragment", "workspace:site/works-examples-fragment"]
           ],
           "linkType": "SOFT",
         }]

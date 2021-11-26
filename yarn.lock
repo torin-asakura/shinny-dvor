@@ -1744,6 +1744,78 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@site/articles-fragment@workspace:site/articles-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/articles-fragment@workspace:site/articles-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/blog-page@workspace:site/block-page":
+  version: 0.0.0-use.local
+  resolution: "@site/blog-page@workspace:site/block-page"
+  languageName: unknown
+  linkType: soft
+
+"@site/contacts-page@workspace:site/contacts-page":
+  version: 0.0.0-use.local
+  resolution: "@site/contacts-page@workspace:site/contacts-page"
+  languageName: unknown
+  linkType: soft
+
+"@site/footer-fragment@workspace:site/footer-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/footer-fragment@workspace:site/footer-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/header-fragment@workspace:site/header-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/header-fragment@workspace:site/header-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/navigation-fragment@workspace:site/navigation-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/navigation-fragment@workspace:site/navigation-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/price-page@workspace:site/price-page":
+  version: 0.0.0-use.local
+  resolution: "@site/price-page@workspace:site/price-page"
+  languageName: unknown
+  linkType: soft
+
+"@site/registration-fragment@workspace:site/registration-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/registration-fragment@workspace:site/registration-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/service-fragment@workspace:site/service-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/service-fragment@workspace:site/service-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/services-fragment@workspace:site/services-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/services-fragment@workspace:site/services-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/services-infographics-fragment@workspace:site/services-infographics-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/services-infographics-fragment@workspace:site/services-infographics-fragment"
+  languageName: unknown
+  linkType: soft
+
+"@site/works-examples-fragment@workspace:site/works-examples-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/works-examples-fragment@workspace:site/works-examples-fragment"
+  languageName: unknown
+  linkType: soft
+
 "@styled-system/background@npm:^5.1.2":
   version: 5.1.2
   resolution: "@styled-system/background@npm:5.1.2"

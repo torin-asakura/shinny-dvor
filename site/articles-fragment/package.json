@@ -1,0 +1,5 @@
+{
+  "name": "@site/articles-fragment",
+  "version": "0.0.0",
+  "main": "src/index.ts"
+}
