@@ -74,6 +74,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/layout@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls-ui-parts/layout@npm:0.0.2"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  checksum: 0c1e7eff5e46cf2dd865fec7070fdfea03f18430b3ed37b23bbb4d639a7b14134ff00e7bc94f2877f09ae8266f6b7ab7cd9c0f5522921ae3529e49cb8f4be124
+  languageName: node
+  linkType: hard
+
 "@atls/actl-cli@npm:^0.4.48, @atls/actl-cli@npm:^0.4.50":
   version: 0.4.50
   resolution: "@atls/actl-cli@npm:0.4.50"
@@ -1175,6 +1186,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/react@npm:^11.6.0":
+  version: 11.7.0
+  resolution: "@emotion/react@npm:11.7.0"
+  dependencies:
+    "@babel/runtime": ^7.13.10
+    "@emotion/cache": ^11.6.0
+    "@emotion/serialize": ^1.0.2
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    hoist-non-react-statics: ^3.3.1
+  peerDependencies:
+    "@babel/core": ^7.0.0
+    react: ">=16.8.0"
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+    "@types/react":
+      optional: true
+  checksum: 8b50d61caabe04ae413ae23b98c170da643754ec89f25eb001464095685686585d0f88988bc36432f231e6de6abdbee73308c42ba427de9eaaf5a54d7f2f6ae5
+  languageName: node
+  linkType: hard
+
 "@emotion/serialize@npm:^1.0.0, @emotion/serialize@npm:^1.0.2":
   version: 1.0.2
   resolution: "@emotion/serialize@npm:1.0.2"
@@ -1766,12 +1800,30 @@ __metadata:
 "@site/footer-fragment@workspace:site/footer-fragment":
   version: 0.0.0-use.local
   resolution: "@site/footer-fragment@workspace:site/footer-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/divider": "workspace:ui/divider"
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
 "@site/header-fragment@workspace:site/header-fragment":
   version: 0.0.0-use.local
   resolution: "@site/header-fragment@workspace:site/header-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1779,16 +1831,36 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/index-page"
   dependencies:
+    "@site/footer-fragment": "workspace:site/footer-fragment"
+    "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/registration-fragment": "workspace:site/registration-fragment"
+    "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-helmet: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
 "@site/navigation-fragment@workspace:site/navigation-fragment":
   version: 0.0.0-use.local
   resolution: "@site/navigation-fragment@workspace:site/navigation-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1801,6 +1873,15 @@ __metadata:
 "@site/registration-fragment@workspace:site/registration-fragment":
   version: 0.0.0-use.local
   resolution: "@site/registration-fragment@workspace:site/registration-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -1825,6 +1906,13 @@ __metadata:
 "@site/works-examples-fragment@workspace:site/works-examples-fragment":
   version: 0.0.0-use.local
   resolution: "@site/works-examples-fragment@workspace:site/works-examples-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -2479,6 +2567,58 @@ __metadata:
   checksum: 59953e474ad4610c1aa23b2b1a964445e2c6201521da6367752f37939d854352bbfced5c04ea539274065e012b1337ba3ffa49c2647a240a4e87155378ba9873
   languageName: node
   linkType: hard
+
+"@ui/condition@workspace:ui/condition":
+  version: 0.0.0-use.local
+  resolution: "@ui/condition@workspace:ui/condition"
+  dependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/divider@workspace:ui/divider":
+  version: 0.0.0-use.local
+  resolution: "@ui/divider@workspace:ui/divider"
+  dependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/layout@workspace:ui/layout":
+  version: 0.0.0-use.local
+  resolution: "@ui/layout@workspace:ui/layout"
+  dependencies:
+    "@atls-ui-parts/layout": ^0.0.2
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
 
 "@webassemblyjs/ast@npm:1.11.1":
   version: 1.11.1

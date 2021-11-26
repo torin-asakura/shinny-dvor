@@ -1,1 +1,3 @@
-export { default } from '@site/index-page'
+import IndexPage from '../../../index-page'
+
+export default IndexPage
