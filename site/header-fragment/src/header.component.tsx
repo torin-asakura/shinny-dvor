@@ -5,6 +5,7 @@ import { Box }        from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
+import { Logo }       from '@ui/logo'
 import { Navigation } from '@site/navigation-fragment'
 
 const Header: FC = () => (
@@ -14,7 +15,7 @@ const Header: FC = () => (
       <Row justifyContent='space-between'>
         <Layout flexBasis={[20, 32, 32]} flexShrink={0} />
         <Box width='100%' border='1px solid black' height={48} alignItems='center'>
-          Logo
+          <Logo />
         </Box>
         <Box
           display={['none', 'flex', 'flex']}

@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
+    "@site/articles-fragment": "workspace:site/articles-fragment",
     "@site/footer-fragment": "workspace:site/footer-fragment",
     "@site/header-fragment": "workspace:site/header-fragment",
+    "@site/main-fragment": "workspace:site/main-fragment",
     "@site/registration-fragment": "workspace:site/registration-fragment",
+    "@site/services-fragment": "workspace:site/services-fragment",
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment",
     "@ui/layout": "workspace:ui/layout",
     "react": "^17.0.2",

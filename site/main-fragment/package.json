@@ -1,9 +1,12 @@
 {
-  "name": "@site/service-fragment",
+  "name": "@site/main-fragment",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
+    "@site/header-fragment": "workspace:site/header-fragment",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/divider": "workspace:ui/divider",
     "@ui/layout": "workspace:ui/layout",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

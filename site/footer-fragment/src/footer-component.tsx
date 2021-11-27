@@ -5,32 +5,34 @@ import { Box }        from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
+import { Logo }       from '@ui/logo'
 import { Divider }    from '@ui/divider'
+import { Text }       from '@ui/text'
 import { Navigation } from '@site/navigation-fragment'
 
 const Footer: FC = () => (
-  <Box width='100%' height={[416, 252, 252]} border='1px solid black'>
+  <Box width='100%' border='1px solid black'>
     <Column width='100%'>
       <Row>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[24, 48, 48]} />
-          <Row>
-            <Box width='100%'>
-              <Box border='1px solid black' width='100%'>
-                Logo
+          <Row justifyContent='space-between'>
+            <Box>
+              <Box border='1px solid black'>
+                <Logo />
               </Box>
               <Box display={['none', 'flex', 'flex']} width='100%'>
-                <Layout flexBasis={70} />
+                <Layout flexBasis={70} flexShrink={0} />
                 <Navigation />
               </Box>
             </Box>
-            <Box border='1px solid black' width='100%' justifyContent='flex-end'>
+            <Box border='1px solid black' justifyContent='flex-end'>
               Sosial
             </Box>
           </Row>
           <Layout flexBasis={[24, 48, 48]} />
-          <Box display={['flex', 'none', 'none']} width='100%' minHeight={136} alignItems='center'>
+          <Box display={['flex', 'none', 'none']} width='100%' minHeight={136}>
             <Navigation />
             <Layout flexBasis={24} />
           </Box>
@@ -38,11 +40,42 @@ const Footer: FC = () => (
         <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
       </Row>
       <Divider />
-      <Row>
+      <Row alignItems='center'>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[24, 32, 32]} />
-          <Row>Contacts</Row>
+          <Row
+            justifyContent='space-between'
+            alignItems='center'
+            display={['none', 'flex', 'flex']}
+          >
+            <Box width='50%'>
+              <Layout>
+                <Text>Address</Text>
+              </Layout>
+              <Layout flexBasis={80} />
+              <Layout>
+                <Text>Tel</Text>
+              </Layout>
+            </Box>
+            <Layout>
+              <Text>by TorinAsakura</Text>
+            </Layout>
+          </Row>
+          <Column justifyContent='space-between' display={['flex', 'none', 'none']}>
+            <Layout>
+              <Text>Address</Text>
+            </Layout>
+            <Layout flexBasis={24} />
+            <Row justifyContent='space-between'>
+              <Layout>
+                <Text>Tel</Text>
+              </Layout>
+              <Layout>
+                <Text>by TorinAsakura</Text>
+              </Layout>
+            </Row>
+          </Column>
           <Layout flexBasis={[24, 32, 32]} />
         </Column>
         <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
