@@ -1,20 +1,22 @@
 {
-  "name": "@site/blog-page",
+  "name": "@site/services-page",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
     "@site/articles-fragment": "workspace:site/articles-fragment",
     "@site/footer-fragment": "workspace:site/footer-fragment",
     "@site/header-fragment": "workspace:site/header-fragment",
-    "@site/main-fragment": "workspace:site/main-fragment",
-    "@site/registration-fragment": "workspace:site/registration-fragment",
-    "@site/services-fragment": "workspace:site/services-fragment",
-    "@site/works-examples-fragment": "workspace:site/works-examples-fragment",
+    "@site/service-fragment": "workspace:site/service-fragment",
+    "@store/services": "workspace:store/services",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/divider": "workspace:ui/divider",
     "@ui/layout": "workspace:ui/layout",
+    "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.5.5",
     "@types/react": "^17",
     "@types/react-dom": "^17"
   },

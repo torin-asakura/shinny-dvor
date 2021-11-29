@@ -1,3 +1,3 @@
-import IndexPage from '../../../index-page'
+import ServicesPage from '@site/services-page'
 
-export default IndexPage
+export default ServicesPage

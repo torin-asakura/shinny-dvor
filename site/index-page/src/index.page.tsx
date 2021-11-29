@@ -1,6 +1,7 @@
 import React             from 'react'
 import { FC }            from 'react'
 
+import { Column }        from '@ui/layout'
 import { Header }        from '@site/header-fragment'
 import { Footer }        from '@site/footer-fragment'
 import { Main }          from '@site/main-fragment'
@@ -9,14 +10,14 @@ import { Services }      from '@site/services-fragment'
 import { Articles }      from '@site/articles-fragment'
 
 const IndexPage: FC = () => (
-  <div width='100%'>
+  <Column width='100%'>
     <Header />
     <Main />
     <Services />
     <Articles />
     <WorksExamples />
     <Footer />
-  </div>
+  </Column>
 )
 
 export default IndexPage

@@ -13,13 +13,14 @@ import { Navigation } from '@site/navigation-fragment'
 const Footer: FC = () => (
   <Box width='100%' border='1px solid black'>
     <Column width='100%'>
+      <Divider />
       <Row>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[24, 48, 48]} />
           <Row justifyContent='space-between'>
-            <Box>
-              <Box border='1px solid black'>
+            <Box width='50%'>
+              <Box border='1px solid black' width={[148, 198, 198]}>
                 <Logo />
               </Box>
               <Box display={['none', 'flex', 'flex']} width='100%'>
@@ -32,10 +33,10 @@ const Footer: FC = () => (
             </Box>
           </Row>
           <Layout flexBasis={[24, 48, 48]} />
-          <Box display={['flex', 'none', 'none']} width='100%' minHeight={136}>
+          <Column display={['flex', 'none', 'none']} width='100%' minHeight={136}>
             <Navigation />
             <Layout flexBasis={24} />
-          </Box>
+          </Column>
         </Column>
         <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
       </Row>

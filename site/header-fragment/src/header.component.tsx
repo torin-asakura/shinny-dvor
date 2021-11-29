@@ -14,9 +14,17 @@ const Header: FC = () => (
       <Layout flexBasis={[20, 28, 28]} />
       <Row justifyContent='space-between'>
         <Layout flexBasis={[20, 32, 32]} flexShrink={0} />
-        <Box width='100%' border='1px solid black' height={48} alignItems='center'>
-          <Logo />
-        </Box>
+        <Row alignItems='center'>
+          <Box width={24} height={24} border='1px solid blue' display={['flex', 'none', 'none']}>
+            Menu
+          </Box>
+          <Layout flexBasis={17} display={['flex', 'none', 'none']} />
+          <Box border='1px solid black' height={48} width={32} alignItems='center'>
+            <Layout>
+              <Logo />
+            </Layout>
+          </Box>
+        </Row>
         <Box
           display={['none', 'flex', 'flex']}
           width='100%'
@@ -26,15 +34,15 @@ const Header: FC = () => (
         >
           <Navigation />
         </Box>
-        <Box
-          width='100%'
-          border='1px solid black'
-          height={48}
-          justifyContent='flex-end'
-          alignItems='center'
-        >
-          Sign up
-        </Box>
+        <Row alignItems='center' justifyContent='flex-end'>
+          <Box width={[40, 48, 48]} height={[40, 48, 48]} border='1px solid green'>
+            Choosed radius
+          </Box>
+          <Layout flexBasis={[12, 16, 16]} />
+          <Box width={[124, 137, 137]} border='1px solid black' height={48} justifyContent='center'>
+            Sign up
+          </Box>
+        </Row>
         <Layout flexBasis={[20, 32, 32]} flexShrink={0} />
       </Row>
       <Layout flexBasis={[20, 28, 28]} />
