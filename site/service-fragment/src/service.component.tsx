@@ -42,6 +42,15 @@ const Service: FC = () => {
           <Layout minHeight={130}>
             <Text>Text</Text>
           </Layout>
+          {/* FIXME find out the condition */}
+          <Condition match={false}>
+            <Layout flexBasis={24} />
+            <Divider />
+            <Layout flexBasis={24} />
+            <Box width='100%' height={26} border='1px solid gray'>
+              Accordion
+            </Box>
+          </Condition>
           <Condition match={isTireFitting}>
             <Layout flexBasis={24} />
             <Box width='100%' height={[88, 104, 104]} border='1px solid gray'>

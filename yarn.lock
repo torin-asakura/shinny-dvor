@@ -1782,6 +1782,8 @@ __metadata:
     "@emotion/css": ^11.1.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
+    "@site/blog-page": "workspace:site/blog-page"
+    "@site/contacts-page": "workspace:site/contacts-page"
     "@site/index-page": "workspace:site/index-page"
     "@site/services-page": "workspace:site/services-page"
     "@types/events": ^3
@@ -1810,13 +1812,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/articles-fragment@workspace:site/articles-fragment"
   dependencies:
+    "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@store/articles": "workspace:store/articles"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -1824,6 +1833,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/blog-page@workspace:site/blog-page"
   dependencies:
+    "@apollo/client": ^3.5.5
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
     "@site/header-fragment": "workspace:site/header-fragment"
@@ -1831,8 +1841,10 @@ __metadata:
     "@site/registration-fragment": "workspace:site/registration-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
+    "@store/articles": "workspace:store/articles"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1850,6 +1862,20 @@ __metadata:
 "@site/contacts-page@workspace:site/contacts-page":
   version: 0.0.0-use.local
   resolution: "@site/contacts-page@workspace:site/contacts-page"
+  dependencies:
+    "@apollo/client": ^3.5.5
+    "@site/footer-fragment": "workspace:site/footer-fragment"
+    "@site/header-fragment": "workspace:site/header-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -1944,9 +1970,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/price-page@workspace:site/price-page":
+"@site/prices-page@workspace:site/prices-page":
   version: 0.0.0-use.local
-  resolution: "@site/price-page@workspace:site/price-page"
+  resolution: "@site/prices-page@workspace:site/prices-page"
+  dependencies:
+    "@site/footer-fragment": "workspace:site/footer-fragment"
+    "@site/header-fragment": "workspace:site/header-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/divider": "workspace:ui/divider"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -2050,6 +2090,18 @@ __metadata:
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
+"@store/articles@workspace:store/articles":
+  version: 0.0.0-use.local
+  resolution: "@store/articles@workspace:store/articles"
+  dependencies:
+    "@apollo/client": ^3.4.8
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 

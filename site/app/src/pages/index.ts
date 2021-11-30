@@ -1,3 +1,1 @@
-import ServicesPage from '@site/services-page'
-
-export default ServicesPage
+export { default } from '@site/blog-page'

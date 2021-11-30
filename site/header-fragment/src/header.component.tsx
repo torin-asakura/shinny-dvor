@@ -19,11 +19,7 @@ const Header: FC = () => (
             Menu
           </Box>
           <Layout flexBasis={17} display={['flex', 'none', 'none']} />
-          <Box border='1px solid black' height={48} width={32} alignItems='center'>
-            <Layout>
-              <Logo />
-            </Layout>
-          </Box>
+          <Logo />
         </Row>
         <Box
           display={['none', 'flex', 'flex']}

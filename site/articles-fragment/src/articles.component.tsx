@@ -1,11 +1,13 @@
-import React      from 'react'
-import { FC }     from 'react'
+import React         from 'react'
+import { FC }        from 'react'
 
-import { Box }    from '@ui/layout'
-import { Row }    from '@ui/layout'
-import { Text }   from '@ui/text'
-import { Column } from '@ui/layout'
-import { Layout } from '@ui/layout'
+import { screenVar } from '@store/articles'
+import { ARTICLE }   from '@store/articles'
+import { Box }       from '@ui/layout'
+import { Row }       from '@ui/layout'
+import { Text }      from '@ui/text'
+import { Column }    from '@ui/layout'
+import { Layout }    from '@ui/layout'
 
 const Articles: FC = () => {
   // FIXME change to LastArticles component
@@ -22,7 +24,7 @@ const Articles: FC = () => {
           <Layout flexBasis={[32, 48, 48]} />
           <Row justifyContent='space-between' display={['none', 'flex', 'flex']}>
             {lastArticles.map((article) => (
-              <Column>
+              <Column onClick={() => screenVar(ARTICLE)}>
                 <Box width={405} height={260} border='1px solid brown'>
                   Pic
                 </Box>

@@ -3,6 +3,8 @@ import { FC }        from 'react'
 
 import { Condition } from '@ui/condition'
 import { Divider }   from '@ui/divider'
+import { screenVar } from '@store/services'
+import { SERVICE }   from '@store/services'
 import { Box }       from '@ui/layout'
 import { Row }       from '@ui/layout'
 import { Column }    from '@ui/layout'
@@ -33,7 +35,12 @@ const AllServices: FC = () => {
             <>
               <Column width={['100%', 296, 296]}>
                 <Layout flexBasis={[20, 32, 32]} />
-                <Box width='100%' height={[312, 388, 388]} border='1px solid green'>
+                <Box
+                  width='100%'
+                  height={[312, 388, 388]}
+                  border='1px solid green'
+                  onClick={() => screenVar(SERVICE)}
+                >
                   <Layout flexBasis={[24, 32, 32]} />
                   <Column width='100%'>
                     <Layout flexBasis={32} />

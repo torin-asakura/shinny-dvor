@@ -1,17 +1,32 @@
-import React        from 'react'
-import { FC }       from 'react'
+import React              from 'react'
+import { FC }             from 'react'
+import { useReactiveVar } from '@apollo/client'
 
-import { Column }   from '@ui/layout'
-import { Header }   from '@site/header-fragment'
-import { Footer }   from '@site/footer-fragment'
-import { Articles } from '@site/articles-fragment'
+import { screenVar }      from '@store/articles'
+import { Screen }         from '@store/articles'
+import { ARTICLE }        from '@store/articles'
+import { ALL_ARTICLES }   from '@store/articles'
+import { Column }         from '@ui/layout'
+import { Condition }      from '@ui/condition'
+import { Header }         from '@site/header-fragment'
+import { Footer }         from '@site/footer-fragment'
+import { AllArticles }    from '@site/articles-fragment'
+import { Article }        from '@site/articles-fragment'
 
-const IndexPage: FC = () => (
-  <Column width='100%'>
-    <Header />
-    <Articles />
-    <Footer />
-  </Column>
-)
+const IndexPage: FC = () => {
+  const screen = useReactiveVar<Screen>(screenVar)
+  return (
+    <Column width='100%'>
+      <Header />
+      <Condition match={screen === ALL_ARTICLES}>
+        <AllArticles />
+      </Condition>
+      <Condition match={screen === ARTICLE}>
+        <Article />
+      </Condition>
+      <Footer />
+    </Column>
+  )
+}
 
 export default IndexPage

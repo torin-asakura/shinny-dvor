@@ -29,7 +29,7 @@ const Footer: FC = () => (
               </Box>
             </Box>
             <Box border='1px solid black' justifyContent='flex-end'>
-              Sosial
+              Social
             </Box>
           </Row>
           <Layout flexBasis={[24, 48, 48]} />
