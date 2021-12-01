@@ -16,8 +16,5 @@
     "site/**/*",
     "ui/**/*",
     "store/**/*"
-  ],
-  "dependencies": {
-    "@apollo/client": "^3.5.5"
-  }
+  ]
 }

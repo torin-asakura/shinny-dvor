@@ -1,1 +1,1 @@
-export { default } from '@site/blog-page'
+export { default } from '@site/index-page'

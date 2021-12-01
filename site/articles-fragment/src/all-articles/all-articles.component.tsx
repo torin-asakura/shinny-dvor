@@ -28,11 +28,11 @@ const AllArticles: FC = () => {
         <Layout>
           <Text>Text</Text>
         </Layout>
-        <Layout flexBasis={[24, 48, 48]} />
-        <Row justifyContent='space-between' display={['none', 'flex', 'flex']}>
+        <Row justifyContent='space-between' flexWrap='wrap'>
           {allArticles.map((article) => (
-            <Column onClick={() => screenVar(ARTICLE)}>
-              <Box width={405} height={260} border='1px solid yellow'>
+            <Column width={['100%', 405, 405]} onClick={() => screenVar(ARTICLE)}>
+              <Layout flexBasis={[32, 48, 48]} />
+              <Box width='100%' height={[224, 260, 260]} border='1px solid yellow'>
                 Pic
               </Box>
               <Layout flexBasis={24} />
@@ -41,12 +41,14 @@ const AllArticles: FC = () => {
               </Layout>
               <Layout flexBasis={8} />
               <Layout>
-                <Text>Text</Text>
+                <Text>Heading</Text>
               </Layout>
               <Layout flexBasis={8} />
-              <Layout>
-                <Text>Text</Text>
-              </Layout>
+              <Box height={52} border='1px solid yellow'>
+                <Layout>
+                  <Text>Text...</Text>
+                </Layout>
+              </Box>
             </Column>
           ))}
         </Row>

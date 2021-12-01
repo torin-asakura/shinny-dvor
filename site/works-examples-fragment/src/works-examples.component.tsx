@@ -4,8 +4,8 @@ import { FC }     from 'react'
 import { Box }    from '@ui/layout'
 import { Row }    from '@ui/layout'
 import { Layout } from '@ui/layout'
-import { Text }   from '@ui/text'
 import { Column } from '@ui/layout'
+import { Text }   from '@ui/text'
 
 const WorksExamples: FC = () => (
   <Box width='100%' height={[609, 976, 976]} border='1px solid yellow'>

@@ -3,10 +3,8 @@ import { FC }              from 'react'
 
 import { Box }             from '@ui/layout'
 import { Column }          from '@ui/layout'
-import { Row }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
-import { Condition }       from '@ui/condition'
 
 import { PricesAccordion } from '../prices-accordion'
 

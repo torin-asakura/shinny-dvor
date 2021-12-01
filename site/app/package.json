@@ -7,7 +7,7 @@
     "dev": "next dev"
   },
   "dependencies": {
-    "@apollo/client": "^3.3.21",
+    "@apollo/client": "^3.5.5",
     "@apollo/react-ssr": "^4.0.0",
     "@atls/next-app-with-apollo": "^0.2.70",
     "@atls/next-app-with-emotion": "^0.2.67",
@@ -21,6 +21,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@site/blog-page": "workspace:site/blog-page",
+    "@site/booking-page": "workspace:site/booking-page",
     "@site/contacts-page": "workspace:site/contacts-page",
     "@site/index-page": "workspace:site/index-page",
     "@site/services-page": "workspace:site/services-page",

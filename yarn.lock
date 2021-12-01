@@ -1768,7 +1768,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/app@workspace:site/app"
   dependencies:
-    "@apollo/client": ^3.3.21
+    "@apollo/client": ^3.5.5
     "@apollo/react-ssr": ^4.0.0
     "@atls/actl-cli": ^0.4.48
     "@atls/next-app-with-apollo": ^0.2.70
@@ -1783,6 +1783,7 @@ __metadata:
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@site/blog-page": "workspace:site/blog-page"
+    "@site/booking-page": "workspace:site/booking-page"
     "@site/contacts-page": "workspace:site/contacts-page"
     "@site/index-page": "workspace:site/index-page"
     "@site/services-page": "workspace:site/services-page"
@@ -1859,6 +1860,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@site/booking-page@workspace:site/booking-page":
+  version: 0.0.0-use.local
+  resolution: "@site/booking-page@workspace:site/booking-page"
+  dependencies:
+    "@apollo/client": ^3.5.5
+    "@store/booking": "workspace:store/booking"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/divider": "workspace:ui/divider"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/logo": "workspace:ui/logo"
+    "@ui/text": "workspace:ui/text"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-helmet: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@site/contacts-page@workspace:site/contacts-page":
   version: 0.0.0-use.local
   resolution: "@site/contacts-page@workspace:site/contacts-page"
@@ -1900,15 +1927,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/header-fragment@workspace:site/header-fragment"
   dependencies:
+    "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
     "@site/navigation-fragment": "workspace:site/navigation-fragment"
+    "@store/booking": "workspace:store/booking"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
     react: ^17.0.2
     react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
   languageName: unknown
   linkType: soft
 
@@ -2096,6 +2128,18 @@ __metadata:
 "@store/articles@workspace:store/articles":
   version: 0.0.0-use.local
   resolution: "@store/articles@workspace:store/articles"
+  dependencies:
+    "@apollo/client": ^3.4.8
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@store/booking@workspace:store/booking":
+  version: 0.0.0-use.local
+  resolution: "@store/booking@workspace:store/booking"
   dependencies:
     "@apollo/client": ^3.4.8
     react: ^17.0.2
@@ -10830,7 +10874,6 @@ resolve@^2.0.0-next.3:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@apollo/client": ^3.5.5
     "@atls/actl-cli": ^0.4.50
     "@types/node": 16
     "@types/react": ^17.0.19
