@@ -1,8 +1,6 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { Condition } from '@ui/condition'
-import { Divider }   from '@ui/divider'
 import { screenVar } from '@store/services'
 import { SERVICE }   from '@store/services'
 import { Box }       from '@ui/layout'
