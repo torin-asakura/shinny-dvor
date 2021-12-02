@@ -8,7 +8,7 @@ import { Column }         from '@ui/layout'
 import { ALL_SERVICES }   from '@store/services'
 import { SERVICE }        from '@store/services'
 import { Condition }      from '@ui/condition'
-import { Header }         from '@site/header-fragment'
+import { Navigation }     from '@site/navigation-fragment'
 import { Footer }         from '@site/footer-fragment'
 import { Articles }       from '@site/articles-fragment'
 import { Service }        from '@site/service-fragment'
@@ -19,7 +19,7 @@ const ServicesPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
     <Column width='100%'>
-      <Header />
+      <Navigation location='header' />
       <Condition match={screen === ALL_SERVICES}>
         <AllServices />
       </Condition>

@@ -8,7 +8,7 @@ import { ARTICLE }        from '@store/articles'
 import { ALL_ARTICLES }   from '@store/articles'
 import { Column }         from '@ui/layout'
 import { Condition }      from '@ui/condition'
-import { Header }         from '@site/header-fragment'
+import { Navigation }     from '@site/navigation-fragment'
 import { Footer }         from '@site/footer-fragment'
 import { AllArticles }    from '@site/articles-fragment'
 import { Article }        from '@site/articles-fragment'
@@ -17,7 +17,7 @@ const IndexPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
     <Column width='100%'>
-      <Header />
+      <Navigation location='header' />
       <Condition match={screen === ALL_ARTICLES}>
         <AllArticles />
       </Condition>

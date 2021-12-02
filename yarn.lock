@@ -1786,6 +1786,7 @@ __metadata:
     "@site/booking-page": "workspace:site/booking-page"
     "@site/contacts-page": "workspace:site/contacts-page"
     "@site/index-page": "workspace:site/index-page"
+    "@site/prices-page": "workspace:site/prices-page"
     "@site/services-page": "workspace:site/services-page"
     "@types/events": ^3
     "@types/express": ^4
@@ -1837,9 +1838,8 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/header-fragment": "workspace:site/header-fragment"
     "@site/main-fragment": "workspace:site/main-fragment"
-    "@site/registration-fragment": "workspace:site/registration-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
     "@store/articles": "workspace:store/articles"
@@ -1871,6 +1871,7 @@ __metadata:
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
@@ -1892,7 +1893,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
@@ -1923,36 +1924,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/header-fragment@workspace:site/header-fragment":
-  version: 0.0.0-use.local
-  resolution: "@site/header-fragment@workspace:site/header-fragment"
-  dependencies:
-    "@apollo/client": ^3.5.5
-    "@emotion/react": ^11.6.0
-    "@site/navigation-fragment": "workspace:site/navigation-fragment"
-    "@store/booking": "workspace:store/booking"
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/condition": "workspace:ui/condition"
-    "@ui/layout": "workspace:ui/layout"
-    "@ui/link": "workspace:ui/link"
-    "@ui/logo": "workspace:ui/logo"
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  peerDependencies:
-    "@apollo/client": "*"
-  languageName: unknown
-  linkType: soft
-
 "@site/index-page@workspace:site/index-page":
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/index-page"
   dependencies:
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/header-fragment": "workspace:site/header-fragment"
     "@site/main-fragment": "workspace:site/main-fragment"
-    "@site/registration-fragment": "workspace:site/registration-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
     "@types/react": ^17
@@ -1976,12 +1955,13 @@ __metadata:
   resolution: "@site/main-fragment@workspace:site/main-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
-    "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1994,8 +1974,10 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
+    "@ui/logo": "workspace:ui/logo"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2007,7 +1989,7 @@ __metadata:
   resolution: "@site/prices-page@workspace:site/prices-page"
   dependencies:
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
@@ -2019,21 +2001,6 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@site/registration-fragment@workspace:site/registration-fragment":
-  version: 0.0.0-use.local
-  resolution: "@site/registration-fragment@workspace:site/registration-fragment"
-  dependencies:
-    "@emotion/react": ^11.6.0
-    "@site/navigation-fragment": "workspace:site/navigation-fragment"
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/condition": "workspace:ui/condition"
-    "@ui/layout": "workspace:ui/layout"
-    react: ^17.0.2
-    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 
@@ -2089,7 +2056,7 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/header-fragment": "workspace:site/header-fragment"
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@site/service-fragment": "workspace:site/service-fragment"
     "@store/services": "workspace:store/services"
     "@types/react": ^17

@@ -14,6 +14,7 @@ import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
 import { Logo }           from '@ui/logo'
 
+import { NextLink }       from '@ui/link'
 import { Booking }        from './booking'
 import { Successed }      from './successed'
 import { Invalid }        from './invalid'
@@ -27,10 +28,19 @@ const BookingPage: FC = () => {
         <Row>
           <Layout flexBasis={[21, 32, 32]} />
           <Box width='100%' justifyContent='space-between' alignItems='center'>
-            <Logo />
-            <Box width={[40, 48, 48]} height={[40, 48, 48]} border='1px solid blue'>
-              Button
-            </Box>
+            <Layout>
+              <Logo />
+            </Layout>
+            <NextLink href='/'>
+              <Box
+                width={[40, 48, 48]}
+                height={[40, 48, 48]}
+                border='1px solid blue'
+                onClick={() => screenVar(INITIAL)}
+              >
+                Button
+              </Box>
+            </NextLink>
           </Box>
           <Layout flexBasis={[21, 32, 32]} />
         </Row>

@@ -45,9 +45,7 @@ const AllArticles: FC = () => {
               </Layout>
               <Layout flexBasis={8} />
               <Box height={52} border='1px solid yellow'>
-                <Layout>
-                  <Text>Text...</Text>
-                </Layout>
+                <Text>Text...</Text>
               </Box>
             </Column>
           ))}

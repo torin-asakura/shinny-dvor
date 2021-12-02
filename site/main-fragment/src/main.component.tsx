@@ -1,11 +1,12 @@
-import React       from 'react'
-import { FC }      from 'react'
+import React        from 'react'
+import { FC }       from 'react'
 
-import { Box }     from '@ui/layout'
-import { Row }     from '@ui/layout'
-import { Column }  from '@ui/layout'
-import { Layout }  from '@ui/layout'
-import { Divider } from '@ui/divider'
+import { Box }      from '@ui/layout'
+import { Row }      from '@ui/layout'
+import { Column }   from '@ui/layout'
+import { Layout }   from '@ui/layout'
+import { Divider }  from '@ui/divider'
+import { NextLink } from '@ui/link'
 
 const Main: FC = () => (
   <Box width='100%' border='1px solid orange'>
@@ -17,9 +18,11 @@ const Main: FC = () => (
           Welcome text
         </Box>
         <Layout flexBasis={32} />
-        <Box border='1px solid orange' width={['100%', '180px', '180px']} height={48}>
-          Button
-        </Box>
+        <NextLink href='/booking'>
+          <Box border='1px solid orange' width={['100%', '180px', '180px']} height={48}>
+            Button
+          </Box>
+        </NextLink>
         <Layout flexBasis={[40, 48, 48]} />
         <Divider />
         <Layout flexBasis={[20, 30, 30]} />

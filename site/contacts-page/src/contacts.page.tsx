@@ -1,15 +1,15 @@
-import React        from 'react'
-import { FC }       from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { Column }   from '@ui/layout'
-import { Header }   from '@site/header-fragment'
-import { Footer }   from '@site/footer-fragment'
+import { Column }     from '@ui/layout'
+import { Navigation } from '@site/navigation-fragment'
+import { Footer }     from '@site/footer-fragment'
 
-import { Contacts } from './contacts.component'
+import { Contacts }   from './contacts.component'
 
 const ContactsPage: FC = () => (
   <Column width='100%'>
-    <Header />
+    <Navigation location='header' />
     <Contacts />
     <Footer />
   </Column>

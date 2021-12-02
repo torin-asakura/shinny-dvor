@@ -5,7 +5,6 @@ import { Box }        from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Layout }     from '@ui/layout'
-import { Logo }       from '@ui/logo'
 import { Divider }    from '@ui/divider'
 import { Text }       from '@ui/text'
 import { Navigation } from '@site/navigation-fragment'
@@ -14,32 +13,7 @@ const Footer: FC = () => (
   <Box width='100%' border='1px solid black'>
     <Column width='100%'>
       <Divider />
-      <Row>
-        <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
-        <Column width='100%'>
-          <Layout flexBasis={[24, 48, 48]} />
-          <Row justifyContent='space-between'>
-            <Box width='50%'>
-              <Box border='1px solid black' width={[148, 198, 198]}>
-                <Logo />
-              </Box>
-              <Box display={['none', 'flex', 'flex']} width='100%'>
-                <Layout flexBasis={70} flexShrink={0} />
-                <Navigation />
-              </Box>
-            </Box>
-            <Box border='1px solid black' justifyContent='flex-end'>
-              Social
-            </Box>
-          </Row>
-          <Layout flexBasis={[24, 48, 48]} />
-          <Column display={['flex', 'none', 'none']} width='100%' minHeight={136}>
-            <Navigation />
-            <Layout flexBasis={24} />
-          </Column>
-        </Column>
-        <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
-      </Row>
+      <Navigation location='footer' />
       <Divider />
       <Row alignItems='center'>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />

@@ -5,7 +5,7 @@
   "dependencies": {
     "@site/articles-fragment": "workspace:site/articles-fragment",
     "@site/footer-fragment": "workspace:site/footer-fragment",
-    "@site/header-fragment": "workspace:site/header-fragment",
+    "@site/navigation-fragment": "workspace:site/navigation-fragment",
     "@site/service-fragment": "workspace:site/service-fragment",
     "@store/services": "workspace:store/services",
     "@ui/condition": "workspace:ui/condition",
