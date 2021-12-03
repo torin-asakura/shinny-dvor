@@ -10,7 +10,7 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 
 const Articles: FC = () => {
-  // FIXME change to LastArticles component
+  // FIXME take first 3 elements
   const lastArticles = ['Article 1', 'Article 2', 'Article 3']
   return (
     <Box width='100%' height={[569, 693, 693]} border='1px solid brown'>

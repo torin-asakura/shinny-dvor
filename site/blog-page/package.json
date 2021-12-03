@@ -5,7 +5,7 @@
   "dependencies": {
     "@site/articles-fragment": "workspace:site/articles-fragment",
     "@site/footer-fragment": "workspace:site/footer-fragment",
-    "@site/main-fragment": "workspace:site/main-fragment",
+    "@site/hero-fragment": "workspace:site/hero-fragment",
     "@site/navigation-fragment": "workspace:site/navigation-fragment",
     "@site/services-fragment": "workspace:site/services-fragment",
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment",

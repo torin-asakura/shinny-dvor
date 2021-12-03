@@ -12,11 +12,11 @@ import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
+import { NextLink }       from '@ui/link'
 import { Logo }           from '@ui/logo'
 
-import { NextLink }       from '@ui/link'
 import { Booking }        from './booking'
-import { Successed }      from './successed'
+import { Success }        from './success'
 import { Invalid }        from './invalid'
 
 const BookingPage: FC = () => {
@@ -48,7 +48,7 @@ const BookingPage: FC = () => {
           <Booking />
         </Condition>
         <Condition match={screen === SUCCESS}>
-          <Successed />
+          <Success />
         </Condition>
         <Condition match={screen === INVALID}>
           <Invalid />

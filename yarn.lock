@@ -1838,7 +1838,7 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/main-fragment": "workspace:site/main-fragment"
+    "@site/hero-fragment": "workspace:site/hero-fragment"
     "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
@@ -1924,15 +1924,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@site/hero-fragment@workspace:site/hero-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/hero-fragment@workspace:site/hero-fragment"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@site/navigation-fragment": "workspace:site/navigation-fragment"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/divider": "workspace:ui/divider"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  languageName: unknown
+  linkType: soft
+
 "@site/index-page@workspace:site/index-page":
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/index-page"
   dependencies:
     "@site/articles-fragment": "workspace:site/articles-fragment"
     "@site/footer-fragment": "workspace:site/footer-fragment"
-    "@site/main-fragment": "workspace:site/main-fragment"
+    "@site/hero-fragment": "workspace:site/hero-fragment"
     "@site/navigation-fragment": "workspace:site/navigation-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
+    "@site/services-infographics-fragment": "workspace:site/services-infographics-fragment"
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -1947,23 +1965,6 @@ __metadata:
     react-dom: "*"
     react-helmet: "*"
     styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@site/main-fragment@workspace:site/main-fragment":
-  version: 0.0.0-use.local
-  resolution: "@site/main-fragment@workspace:site/main-fragment"
-  dependencies:
-    "@emotion/react": ^11.6.0
-    "@site/navigation-fragment": "workspace:site/navigation-fragment"
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/condition": "workspace:ui/condition"
-    "@ui/divider": "workspace:ui/divider"
-    "@ui/layout": "workspace:ui/layout"
-    "@ui/link": "workspace:ui/link"
-    react: ^17.0.2
-    react-dom: ^17.0.2
   languageName: unknown
   linkType: soft
 

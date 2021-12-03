@@ -1,5 +1,5 @@
 {
-  "name": "@site/main-fragment",
+  "name": "@site/hero-fragment",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {

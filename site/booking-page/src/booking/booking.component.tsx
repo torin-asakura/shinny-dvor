@@ -3,7 +3,6 @@ import { FC }        from 'react'
 
 import { screenVar } from '@store/booking'
 import { SUCCESS }   from '@store/booking'
-import { INVALID }   from '@store/booking'
 import { Divider }   from '@ui/divider'
 import { Column }    from '@ui/layout'
 import { Row }       from '@ui/layout'
@@ -12,11 +11,8 @@ import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
 
 const Booking: FC = () => {
-  // TODO write correct conditions for isSended
-  const isSended = () => {
-    const isSuccessful = false
-    return isSuccessful ? screenVar(SUCCESS) : screenVar(INVALID)
-  }
+  // TODO write correct conditions for getStatus
+  const getStatus = () => screenVar(SUCCESS)
   return (
     <Box width='100%' border='1px solid blue'>
       <Row>
@@ -63,7 +59,7 @@ const Booking: FC = () => {
           <Layout flexBasis={16} />
           <Divider />
           <Layout flexBasis={32} />
-          <Box width='100%' height={48} border='1px solid blue' onClick={() => isSended()}>
+          <Box width='100%' height={48} border='1px solid blue' onClick={() => getStatus()}>
             Button
           </Box>
           <Layout flexBasis={[48, 128, 128]} />

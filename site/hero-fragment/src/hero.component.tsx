@@ -8,7 +8,7 @@ import { Layout }   from '@ui/layout'
 import { Divider }  from '@ui/divider'
 import { NextLink } from '@ui/link'
 
-const Main: FC = () => (
+const Hero: FC = () => (
   <Box width='100%' border='1px solid orange'>
     <Row>
       <Layout flexBasis={[20, 80, 80]} />
@@ -45,4 +45,4 @@ const Main: FC = () => (
   </Box>
 )
 
-export { Main }
+export { Hero }

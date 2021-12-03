@@ -20,7 +20,7 @@ const Navigation: FC<NavigationProps> = ({ location }) => (
         <Column width='100%'>
           <Layout flexBasis={[20, 28, 28]} />
           <Row justifyContent='space-between'>
-            <Box width={[180, 210, 210]} alignItems='center'>
+            <Box alignItems='center' width={[84, 201, 201]}>
               <Box
                 display={['flex', 'none', 'none']}
                 width={24}
@@ -37,7 +37,7 @@ const Navigation: FC<NavigationProps> = ({ location }) => (
             <Box display={['none', 'flex', 'flex']} width={410} alignItems='center'>
               <NavigationList />
             </Box>
-            <Box width={[180, 210, 210]}>
+            <Box width={[176, 201, 201]}>
               <Box width={[40, 48, 48]} height={[40, 48, 48]} border='1px solid blue'>
                 Diametr
               </Box>

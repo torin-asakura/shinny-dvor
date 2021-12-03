@@ -8,7 +8,7 @@ import { Box }      from '@ui/layout'
 import { Text }     from '@ui/text'
 import { NextLink } from '@ui/link'
 
-const Successed: FC = () => (
+const Success: FC = () => (
   <Box width='100%' border='1px solid blue'>
     <Row>
       <Layout flexBasis={[20, 360, 360]} />
@@ -34,4 +34,4 @@ const Successed: FC = () => (
   </Box>
 )
 
-export { Successed }
+export { Success }
