@@ -11,8 +11,8 @@ import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
 
 const Booking: FC = () => {
-  // TODO write correct conditions for getStatus
-  const getStatus = () => screenVar(SUCCESS)
+  // TODO write correct conditions for updateStatus
+  const updateStatus = () => screenVar(SUCCESS)
   return (
     <Box width='100%' border='1px solid blue'>
       <Row>
@@ -59,7 +59,7 @@ const Booking: FC = () => {
           <Layout flexBasis={16} />
           <Divider />
           <Layout flexBasis={32} />
-          <Box width='100%' height={48} border='1px solid blue' onClick={() => getStatus()}>
+          <Box width='100%' height={48} border='1px solid blue' onClick={() => updateStatus()}>
             Button
           </Box>
           <Layout flexBasis={[48, 128, 128]} />
