@@ -1,0 +1,23 @@
+{
+  "name": "@ui/divider",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@types/styled-system": "^5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
+  },
+  "dependencies": {
+    "@ui/layout": "workspace:ui/layout"
+  }
+}

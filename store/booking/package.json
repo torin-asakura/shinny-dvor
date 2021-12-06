@@ -1,0 +1,14 @@
+{
+  "name": "@store/booking",
+  "version": "0.0.0",
+  "license": "BSD-3-Clause",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.4.8",
+    "react": "^17.0.2"
+  }
+}
