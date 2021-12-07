@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@site/footer-fragment": "workspace:site/footer-fragment",
-    "@site/navigation-fragment": "workspace:site/navigation-fragment",
+    "@fragments/footer-fragment": "workspace:fragments/footer-fragment",
+    "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/layout": "workspace:ui/layout",

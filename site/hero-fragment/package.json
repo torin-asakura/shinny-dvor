@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@site/navigation-fragment": "workspace:site/navigation-fragment",
+    "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/layout": "workspace:ui/layout",

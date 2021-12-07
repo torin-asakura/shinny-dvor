@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
-    "@site/articles-fragment": "workspace:site/articles-fragment",
-    "@site/footer-fragment": "workspace:site/footer-fragment",
+    "@fragments/articles-fragment": "workspace:fragments/articles-fragment",
+    "@fragments/footer-fragment": "workspace:fragments/footer-fragment",
+    "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment",
     "@site/hero-fragment": "workspace:site/hero-fragment",
-    "@site/navigation-fragment": "workspace:site/navigation-fragment",
     "@site/services-fragment": "workspace:site/services-fragment",
     "@site/services-infographics-fragment": "workspace:site/services-infographics-fragment",
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment",
