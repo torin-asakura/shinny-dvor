@@ -2,6 +2,8 @@ import React        from 'react'
 import { FC }       from 'react'
 
 import { Box }      from '@ui/layout'
+import { Button }   from '@ui/button'
+import { Text }     from '@ui/text'
 import { Row }      from '@ui/layout'
 import { Column }   from '@ui/layout'
 import { Layout }   from '@ui/layout'
@@ -9,18 +11,22 @@ import { Divider }  from '@ui/divider'
 import { NextLink } from '@ui/link'
 
 const Hero: FC = () => (
-  <Box width='100%' border='1px solid orange'>
+  <Box width='100%'>
     <Row>
       <Layout flexBasis={[20, 80, 80]} />
       <Column width='100%'>
         <Layout flexBasis={[120, 267, 267]} />
         <Box width={['100%', '900px', '900px']} height={[240, 201, 201]} border='1px solid orange'>
-          Welcome text
+          <Layout>
+            <Text fontSize='giant' fontWeight='bold'>
+              Welcome text
+            </Text>
+          </Layout>
         </Box>
         <Layout flexBasis={32} />
         <NextLink href='/booking'>
           <Box border='1px solid orange' width={['100%', '180px', '180px']} height={48}>
-            Button
+            <Button>Button</Button>
           </Box>
         </NextLink>
         <Layout flexBasis={[40, 48, 48]} />

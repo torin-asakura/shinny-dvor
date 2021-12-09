@@ -1,6 +1,6 @@
 const fonts = {
-  primary: 'sans-serif',
-  secondary: 'sans-serif',
+  primary: 'IBM+Plex+Sans',
+  secondary: 'IBM+Plex+Sans',
 }
 
 export { fonts }

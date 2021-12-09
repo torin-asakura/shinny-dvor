@@ -7,25 +7,25 @@ import { NextLink } from '@ui/link'
 import { Text }     from '@ui/text'
 
 const NavigationList: FC = () => (
-  <Box width='100%' border='1px solid orange' justifyContent='space-between' flexWrap='wrap'>
+  <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     <NextLink href='/services'>
       <Layout>
-        <Text>Услуги</Text>
+        <Text color='white'>Услуги</Text>
       </Layout>
     </NextLink>
     <NextLink href='/prices'>
       <Layout>
-        <Text>Прайс лист</Text>
+        <Text color='white'>Прайс лист</Text>
       </Layout>
     </NextLink>
     <NextLink href='/contacts'>
       <Layout>
-        <Text>Контакты</Text>
+        <Text color='white'>Контакты</Text>
       </Layout>
     </NextLink>
     <NextLink href='/blog'>
       <Layout>
-        <Text>Блог</Text>
+        <Text color='white'>Блог</Text>
       </Layout>
     </NextLink>
   </Box>

@@ -12,7 +12,7 @@ import { ServicesInfographics } from '@site/services-infographics-fragment'
 
 const IndexPage: FC = () => (
   <Column width='100%'>
-    <Navigation location='header' />
+    <Navigation />
     <Hero />
     <Services />
     <Articles />

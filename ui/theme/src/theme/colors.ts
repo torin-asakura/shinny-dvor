@@ -1,4 +1,5 @@
 const colors = {
+  white: 'rgba(255, 255, 255, 1)',
   button: {
     primary: {
       default: 'rgba(69, 121, 255, 1)',

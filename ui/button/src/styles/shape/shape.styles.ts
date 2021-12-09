@@ -4,12 +4,9 @@ import { prop }                from 'styled-tools'
 
 import { getNormalSizeStyles } from './abstract'
 
-const getShapeStyles = (theme): styleFn => {
-  const normalSizeStyles = getNormalSizeStyles(theme)
-
-  return switchProp(prop('size', 'normal'), {
-    normal: normalSizeStyles,
+const getShapeStyles = (theme): styleFn =>
+  switchProp(prop('size', 'normal'), {
+    normal: getNormalSizeStyles(theme),
   })
-}
 
 export { getShapeStyles }

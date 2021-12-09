@@ -19,7 +19,7 @@ const getPrimaryColorsStyles = (): styleFn => {
     }),
   })
 
-  const primaryActiveColors: styleFn = (theme) => ({
+  const primaryActiveColors: styleFn = () => ({
     '&:active': createAppearanceStyles({
       fontColor: prop('theme.colors.button.primary.fontColor'),
       backgroundColor: prop('theme.colors.button.primary.active'),

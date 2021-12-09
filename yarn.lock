@@ -1508,6 +1508,7 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
@@ -1522,11 +1523,14 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
+    "@ui/icons": "workspace:ui/icons"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
     "@ui/text": "workspace:ui/text"
+    "@ui/theme": "workspace:ui/theme"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -1999,6 +2003,7 @@ __metadata:
     "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@types/styled-system": ^5
+    "@ui/theme": "workspace:ui/theme"
     events: ^3.3.0
     express: ^4.17.1
     graphql: ^15.5.1
@@ -2072,6 +2077,7 @@ __metadata:
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
+    "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
   languageName: unknown
@@ -2910,6 +2916,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5
     "@ui/condition": "workspace:ui/condition"
+    "@ui/theme": "workspace:ui/theme"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -2979,6 +2986,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/icons@workspace:ui/icons":
+  version: 0.0.0-use.local
+  resolution: "@ui/icons@workspace:ui/icons"
+  dependencies:
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
@@ -3028,6 +3047,7 @@ __metadata:
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5
+    "@ui/icons": "workspace:ui/icons"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
     react: ^17.0.2

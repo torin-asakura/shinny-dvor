@@ -21,6 +21,7 @@
     "@atls-ui-parts/button": "^0.0.4",
     "@atls-ui-parts/styles": "^0.0.1",
     "@ui/condition": "workspace:ui/condition",
+    "@ui/theme": "workspace:ui/theme",
     "styled-tools": "^1.7.2"
   }
 }

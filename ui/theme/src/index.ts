@@ -1,5 +1,2 @@
-import * as theme from './theme'
-
+export * from './global.styles'
 export * from './theme.provider'
-
-export { theme }
