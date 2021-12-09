@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
     "react": "*",
     "react-dom": "*"
   },

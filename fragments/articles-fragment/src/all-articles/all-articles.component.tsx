@@ -1,13 +1,14 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { screenVar } from '@store/articles'
-import { ARTICLE }   from '@store/articles'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
+import { screenVar }  from '@store/articles'
+import { ARTICLE }    from '@store/articles'
+import { ImageBlock } from '@ui/image'
+import { Box }        from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
 
 const AllArticles: FC = () => {
   // TODO write allArticles mocks
@@ -21,33 +22,37 @@ const AllArticles: FC = () => {
     'Article 7',
   ]
   return (
-    <Box width='100%' border='1px solid yellow'>
+    <Box width='100%'>
       <Layout flexBasis={[20, 80, 80]} />
       <Column width='100%'>
         <Layout flexBasis={[20, 32, 32]} />
         <Layout>
-          <Text>Text</Text>
+          <Text fontSize='extra'>Text</Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
           {allArticles.map((article) => (
-            <Column width={['100%', 405, 405]} onClick={() => screenVar(ARTICLE)}>
-              <Layout flexBasis={[32, 48, 48]} />
-              <Box width='100%' height={[224, 260, 260]} border='1px solid yellow'>
-                Pic
-              </Box>
-              <Layout flexBasis={24} />
-              <Layout>
-                <Text>{article}</Text>
-              </Layout>
-              <Layout flexBasis={8} />
-              <Layout>
-                <Text>Heading</Text>
-              </Layout>
-              <Layout flexBasis={8} />
-              <Box height={52} border='1px solid yellow'>
-                <Text>Text...</Text>
-              </Box>
-            </Column>
+            <Box width={['100%', 405, 405]} onClick={() => screenVar(ARTICLE)}>
+              <Column width='100%'>
+                <Layout flexBasis={[32, 48, 48]} />
+                <Box width='100%' height={[224, 260, 260]}>
+                  <ImageBlock />
+                </Box>
+                <Layout flexBasis={24} />
+                <Layout>
+                  <Text fontSise='large'>{article}</Text>
+                </Layout>
+                <Layout flexBasis={8} />
+                <Layout>
+                  <Text>Heading</Text>
+                </Layout>
+                <Layout flexBasis={8} />
+                <Box height={52} border='1px solid yellow'>
+                  <Text overflow='hidden' text-overflow='ellipsis' lignHeight='medium'>
+                    Text ...
+                  </Text>
+                </Box>
+              </Column>
+            </Box>
           ))}
         </Row>
         <Layout flexBasis={[20, 32, 32]} />

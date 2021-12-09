@@ -9,7 +9,7 @@ import { Contacts }   from './contacts.component'
 
 const ContactsPage: FC = () => (
   <Column width='100%'>
-    <Navigation location='header' />
+    <Navigation />
     <Contacts />
     <Footer />
   </Column>

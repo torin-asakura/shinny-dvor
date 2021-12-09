@@ -1,20 +1,21 @@
-import React              from 'react'
-import { FC }             from 'react'
+import React               from 'react'
+import { FC }              from 'react'
 
-import { Box }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { Button }         from '@ui/button'
-import { Layout }         from '@ui/layout'
-import { NextLink }       from '@ui/link'
-import { Logo }           from '@ui/logo'
-import { MenuIcon }       from '@ui/icons'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Text }            from '@ui/text'
+import { Button }          from '@ui/button'
+import { Layout }          from '@ui/layout'
+import { NextLink }        from '@ui/link'
+import { Logo }            from '@ui/logo'
+import { MenuIcon }        from '@ui/icons'
 
-import { NavigationList } from './navigation-list'
+import { NavigationList }  from './navigation-list'
+import { NavigationProps } from './navigation.interface'
 
-const Navigation: FC = () => (
-  <Box width='100%' minHeight={[80, 104, 104]} backgroundColor='black'>
+const Navigation: FC<NavigationProps> = ({ pageStyle }) => (
+  <Box width='100%' minHeight={[80, 104, 104]}>
     <Row>
       <Layout flexBasis={[20, 32, 32]} />
       <Column width='100%'>
@@ -26,15 +27,17 @@ const Navigation: FC = () => (
             </Layout>
             <Layout flexBasis={[16, 0, 0]} flexShrink={0} />
             <Layout>
-              <Logo />
+              <Logo pageStyle={pageStyle} />
             </Layout>
           </Box>
           <Box display={['none', 'flex', 'flex']} width={410} alignItems='center'>
-            <NavigationList />
+            <NavigationList pageStyle={pageStyle} />
           </Box>
           <Box width={[176, 201, 201]}>
             <Box width={[40, 48, 48]} height={[40, 48, 48]} border='1px solid blue'>
-              Diametr
+              <Button>
+                <Text>R13</Text>
+              </Button>
             </Box>
             <Layout flexBasis={16} />
             <NextLink href='/booking'>

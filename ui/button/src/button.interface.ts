@@ -6,4 +6,6 @@ type ButtonColors = 'primary' | 'secondary' | 'transparent'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   color?: ButtonColors
+  width?: number | string | number[] | string[]
+  height?: number | string | number[] | string[]
 }

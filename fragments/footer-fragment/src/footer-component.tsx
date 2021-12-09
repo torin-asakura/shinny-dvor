@@ -13,7 +13,7 @@ import { Text }       from '@ui/text'
 const Footer: FC = () => (
   <Box width='100%' border='1px solid black'>
     <Column width='100%'>
-      <Divider />
+      <Divider color='gray' />
       <Row>
         <Layout flexBasis={[20, 80, 80]} />
         <Column width='100%'>
@@ -24,6 +24,7 @@ const Footer: FC = () => (
                 <FooterLogo />
               </Layout>
               <Box display={['none', 'flex', 'flex']} width={392} alignItems='center'>
+                <Layout flexBasis={60} />
                 <Box
                   width='100%'
                   border='1px solid orange'
@@ -32,22 +33,22 @@ const Footer: FC = () => (
                 >
                   <NextLink href='/services'>
                     <Layout>
-                      <Text>Услуги</Text>
+                      <Text fontWeight='medium'>Услуги</Text>
                     </Layout>
                   </NextLink>
                   <NextLink href='/prices'>
                     <Layout>
-                      <Text>Прайс лист</Text>
+                      <Text fontWeight='medium'>Прайс лист</Text>
                     </Layout>
                   </NextLink>
                   <NextLink href='/contacts'>
                     <Layout>
-                      <Text>Контакты</Text>
+                      <Text fontWeight='medium'>Контакты</Text>
                     </Layout>
                   </NextLink>
                   <NextLink href='/blog'>
                     <Layout>
-                      <Text>Блог</Text>
+                      <Text fontWeight='medium'>Блог</Text>
                     </Layout>
                   </NextLink>
                 </Box>
@@ -96,7 +97,7 @@ const Footer: FC = () => (
         </Column>
         <Layout flexBasis={[20, 80, 80]} />
       </Row>
-      <Divider />
+      <Divider color='gray' />
       <Row alignItems='center'>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
         <Column width='100%'>

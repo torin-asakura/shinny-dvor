@@ -20,11 +20,13 @@ const Booking: FC = () => {
         <Column width='100%'>
           <Layout flexBasis={[40, 44, 44]} />
           <Layout>
-            <Text>Text</Text>
+            <Text fontSize='giant' fontWeight='medium'>
+              Text
+            </Text>
           </Layout>
           <Layout flexBasis={32} />
           <Layout>
-            <Text>Text</Text>
+            <Text color='darkGray'>Text</Text>
           </Layout>
           <Layout flexBasis={16} />
           <Box width='100%' height={40} border='1px solid blue'>
@@ -32,7 +34,7 @@ const Booking: FC = () => {
           </Box>
           <Layout flexBasis={32} />
           <Layout>
-            <Text>Text</Text>
+            <Text color='darkGray'>Text</Text>
           </Layout>
           <Layout flexBasis={16} />
           <Box width='100%' height={40} border='1px solid blue'>

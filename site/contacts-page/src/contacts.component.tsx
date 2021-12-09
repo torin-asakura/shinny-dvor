@@ -15,7 +15,9 @@ const Contacts: FC = () => (
         <Column width='100%'>
           <Layout flexBasis={[20, 32, 32]} />
           <Layout>
-            <Text>Text</Text>
+            <Text fontWeight='bold' fontSize='extra'>
+              Text
+            </Text>
           </Layout>
           <Layout flexBasis={[24, 48, 48]} />
         </Column>

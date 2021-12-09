@@ -1,16 +1,16 @@
 import { createShapeStyles } from '@atls-ui-parts/button'
 import { styleFn }           from 'styled-system'
 
-const getNormalSizeStyles = (theme): styleFn => {
-  const normalSizeStyles = createShapeStyles({
-    size: 48,
-    fontSize: 16,
+const getSmallSizeStyles = (theme): styleFn => {
+  const smallSizeStyles = createShapeStyles({
+    size: 40,
+    fontSize: 14,
     rounding: 2222,
     fontWeight: 600,
     fontFamily: theme.fonts.primary,
   })
 
-  return normalSizeStyles
+  return smallSizeStyles
 }
 
-export { getNormalSizeStyles }
+export { getSmallSizeStyles }

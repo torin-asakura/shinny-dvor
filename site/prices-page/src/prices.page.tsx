@@ -9,7 +9,7 @@ import { Prices }     from './prices'
 
 const PricesPage: FC = () => (
   <Column width='100%'>
-    <Navigation location='header' />
+    <Navigation />
     <Prices />
     <Footer />
   </Column>

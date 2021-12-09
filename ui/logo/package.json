@@ -18,6 +18,7 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
+    "@ui/condition": "workspace:ui/condition",
     "@ui/icons": "workspace:ui/icons",
     "@ui/layout": "workspace:ui/layout",
     "@ui/link": "workspace:ui/link"

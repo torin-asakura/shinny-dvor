@@ -19,7 +19,7 @@ const ServicesPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
     <Column width='100%'>
-      <Navigation location='header' />
+      <Navigation />
       <Condition match={screen === ALL_SERVICES}>
         <AllServices />
       </Condition>

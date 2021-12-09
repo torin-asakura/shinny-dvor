@@ -17,6 +17,7 @@
     "@types/react-dom": "^17"
   },
   "peerDependencies": {
+    "@emotion/react": "*",
     "react": "*",
     "react-dom": "*"
   }

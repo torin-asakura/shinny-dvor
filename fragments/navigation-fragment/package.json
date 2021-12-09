@@ -6,6 +6,7 @@
     "@emotion/react": "^11.6.0",
     "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
+    "@ui/divider": "workspace:ui/divider",
     "@ui/icons": "workspace:ui/icons",
     "@ui/layout": "workspace:ui/layout",
     "@ui/link": "workspace:ui/link",
@@ -16,7 +17,14 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@emotion/styled": "^11.6.0",
     "@types/react": "^17",
     "@types/react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

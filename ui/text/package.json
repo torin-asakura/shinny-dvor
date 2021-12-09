@@ -18,6 +18,9 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@atls-ui-parts/text": "^0.0.6"
+    "@atls-ui-parts/text": "^0.0.6",
+    "remove": "^0.1.5",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.1"
   }
 }
