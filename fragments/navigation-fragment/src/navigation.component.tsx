@@ -12,9 +12,10 @@ import { Logo }            from '@ui/logo'
 import { MenuIcon }        from '@ui/icons'
 
 import { NavigationList }  from './navigation-list'
+import { SizeButton }      from './size-button'
 import { NavigationProps } from './navigation.interface'
 
-const Navigation: FC<NavigationProps> = ({ pageStyle }) => (
+const Navigation: FC<NavigationProps> = ({ pageStyle = 'light' }) => (
   <Box width='100%' minHeight={[80, 104, 104]}>
     <Row>
       <Layout flexBasis={[20, 32, 32]} />
@@ -23,7 +24,7 @@ const Navigation: FC<NavigationProps> = ({ pageStyle }) => (
         <Row justifyContent='space-between'>
           <Box alignItems='center' width={[84, 201, 201]}>
             <Layout display={['flex', 'none', 'none']}>
-              <MenuIcon />
+              <MenuIcon width={24} height={24} />
             </Layout>
             <Layout flexBasis={[16, 0, 0]} flexShrink={0} />
             <Layout>
@@ -34,17 +35,20 @@ const Navigation: FC<NavigationProps> = ({ pageStyle }) => (
             <NavigationList pageStyle={pageStyle} />
           </Box>
           <Box width={[176, 201, 201]}>
-            <Box width={[40, 48, 48]} height={[40, 48, 48]} border='1px solid blue'>
-              <Button>
-                <Text>R13</Text>
-              </Button>
-            </Box>
+            <SizeButton pageStyle={pageStyle} />
             <Layout flexBasis={16} />
             <NextLink href='/booking'>
-              <Box width={[124, 137, 137]} height={[40, 48, 48]} border='1px solid blue'>
-                <Button>
-                  <Text>Sign up</Text>
-                </Button>
+              <Box width={[124, 137, 137]} height={[40, 48, 48]}>
+                <Layout width='100%' display={['flex', 'none', 'none']}>
+                  <Button size='small'>
+                    <Text>Sign up</Text>
+                  </Button>
+                </Layout>
+                <Layout width='100%' display={['none', 'flex', 'flex']}>
+                  <Button>
+                    <Text>Sign up</Text>
+                  </Button>
+                </Layout>
               </Box>
             </NextLink>
           </Box>

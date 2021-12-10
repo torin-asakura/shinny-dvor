@@ -8,6 +8,9 @@
     "husky": "^7.0.1",
     "typescript": "4.3.5"
   },
+  "scripts": {
+    "postinstall": "yarn workspace @ui/icons build"
+  },
   "resolutions": {
     "typescript": "4.3.5",
     "@apollo/client": "^3.5.5"

@@ -11,7 +11,7 @@ import { appearanceStyles } from './button.styles'
 export const ButtonElement = styled.button<any>(baseStyles, shapeStyles, appearanceStyles)
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => (
-  <ButtonElement {...props}>
+  <ButtonElement fill {...props}>
     <Content>{children}</Content>
   </ButtonElement>
 )

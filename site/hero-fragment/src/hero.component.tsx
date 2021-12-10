@@ -18,7 +18,7 @@ const Hero: FC = () => (
         <Layout flexBasis={[120, 267, 267]} />
         <Box width={['100%', '900px', '900px']} height={[240, 201, 201]} border='1px solid orange'>
           <Layout>
-            <Text fontSize='giant' fontWeight='bold'>
+            <Text fontSize='giant' fontWeight='bold' color='white'>
               Welcome text
             </Text>
           </Layout>
@@ -30,15 +30,23 @@ const Hero: FC = () => (
           </Box>
         </NextLink>
         <Layout flexBasis={[40, 48, 48]} />
-        <Divider />
+        <Divider color='milkGray' />
         <Layout flexBasis={[20, 30, 30]} />
         <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
           <Box width='100%' border='1px solid orange' display={['none', 'flex', 'flex']}>
-            Text
+            <Layout>
+              <Text color='white' fontWeight='medium'>
+                Text
+              </Text>
+            </Layout>
           </Box>
           <Box width='100%' border='1px solid orange'>
             <Box width='100%' justifyContent={['flex-start', 'flex-end', 'flex-end']}>
-              Telephone
+              <Layout>
+                <Text color='white' fontWeight='medium'>
+                  Telephone
+                </Text>
+              </Layout>
             </Box>
             <Layout flexBasis={32} display={['none', 'flex', 'flex']} />
             <Box justifyContent='flex-end'>Social</Box>
