@@ -3,9 +3,11 @@ import { FC }        from 'react'
 
 import { screenVar } from '@store/booking'
 import { SUCCESS }   from '@store/booking'
+import { Button }    from '@ui/button'
 import { Divider }   from '@ui/divider'
 import { Column }    from '@ui/layout'
 import { Row }       from '@ui/layout'
+import { RadioList } from '@ui/radio'
 import { Layout }    from '@ui/layout'
 import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
@@ -13,6 +15,8 @@ import { Text }      from '@ui/text'
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
   const updateStatus = () => screenVar(SUCCESS)
+  const availableRadii = ['R12', 'R13', 'R14', 'R15', 'R16', 'R17', 'R18', 'R19', 'R20', 'R21']
+  const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
   return (
     <Box width='100%' border='1px solid blue'>
       <Row>
@@ -29,20 +33,16 @@ const Booking: FC = () => {
             <Text color='darkGray'>Text</Text>
           </Layout>
           <Layout flexBasis={16} />
-          <Box width='100%' height={40} border='1px solid blue'>
-            Diameters buttons
-          </Box>
+          <RadioList items={availableRadii} />
           <Layout flexBasis={32} />
           <Layout>
             <Text color='darkGray'>Text</Text>
           </Layout>
           <Layout flexBasis={16} />
-          <Box width='100%' height={40} border='1px solid blue'>
-            Car body type buttons
-          </Box>
+          <RadioList items={carBodyList} />
           <Layout flexBasis={32} />
           <Layout>
-            <Text>Text</Text>
+            <Text color='darkGray'>Text</Text>
           </Layout>
           <Layout flexBasis={12} />
           <Box width='100%' height={26} border='1px solid blue'>
@@ -61,9 +61,7 @@ const Booking: FC = () => {
           <Layout flexBasis={16} />
           <Divider />
           <Layout flexBasis={32} />
-          <Box width='100%' height={48} border='1px solid blue' onClick={() => updateStatus()}>
-            Button
-          </Box>
+          <Button onClick={() => updateStatus()}>Button</Button>
           <Layout flexBasis={[48, 128, 128]} />
         </Column>
         <Layout flexBasis={[20, 360, 360]} />

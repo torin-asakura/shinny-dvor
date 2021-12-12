@@ -1,0 +1,23 @@
+{
+  "name": "@ui/radio",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2"
+  },
+  "dependencies": {
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/layout": "workspace:ui/layout",
+    "@ui/text": "workspace:ui/text",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
+  }
+}

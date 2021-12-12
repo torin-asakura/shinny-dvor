@@ -1,15 +1,17 @@
 {
-  "name": "@fragments/footer-fragment",
+  "name": "@fragments/social-links-fragment",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@fragments/social-links-fragment": "workspace:fragments/social-links-fragment",
-    "@ui/divider": "workspace:ui/divider",
+    "@ui/button": "workspace:ui/button",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/icons": "workspace:ui/icons",
     "@ui/layout": "workspace:ui/layout",
     "@ui/link": "workspace:ui/link",
     "@ui/logo": "workspace:ui/logo",
     "@ui/text": "workspace:ui/text",
+    "@ui/theme": "workspace:ui/theme",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

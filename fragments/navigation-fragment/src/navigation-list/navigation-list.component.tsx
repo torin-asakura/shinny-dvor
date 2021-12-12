@@ -2,56 +2,40 @@ import React                   from 'react'
 import { FC }                  from 'react'
 
 import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
 import { Condition }           from '@ui/condition'
-import { Divider }             from '@ui/divider'
 import { NextLink }            from '@ui/link'
-import { Text }                from '@ui/text'
 
 import { NavigationItem }      from '../navigation-item/navigation-item.component'
 import { NavigationListProps } from './navigation-list.interface'
 
-const NavigationList: FC<NavigationListProps> = ({ pageStyle }) => (
+const NavigationList: FC<NavigationListProps> = ({ pageStyle = 'light' }) => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     <Condition match={pageStyle === 'dark'}>
       <NextLink href='/services'>
-        <Column>
-          <Layout>
-            <Text color='white'>Услуги</Text>
-          </Layout>
-          <Layout flexBasis={8} />
-          <Divider />
-        </Column>
+        <NavigationItem name='services' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/prices'>
-        <Layout>
-          <Text color='white'>Прайс лист</Text>
-        </Layout>
+        <NavigationItem name='prices' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/contacts'>
-        <Layout>
-          <Text color='white'>Контакты</Text>
-        </Layout>
+        <NavigationItem name='contacts' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/blog'>
-        <Layout>
-          <Text color='white'>Блог</Text>
-        </Layout>
+        <NavigationItem name='blog' pageStyle={pageStyle} />
       </NextLink>
     </Condition>
     <Condition match={pageStyle === 'light'}>
       <NextLink href='/services'>
-        <NavigationItem name='services' />
+        <NavigationItem name='services' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/prices'>
-        <NavigationItem name='prices' />
+        <NavigationItem name='prices' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/contacts'>
-        <NavigationItem name='contacts' />
+        <NavigationItem name='contacts' pageStyle={pageStyle} />
       </NextLink>
       <NextLink href='/blog'>
-        <NavigationItem name='blog' />
+        <NavigationItem name='blog' pageStyle={pageStyle} />
       </NextLink>
     </Condition>
   </Box>

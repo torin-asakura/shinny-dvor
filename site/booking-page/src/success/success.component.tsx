@@ -3,6 +3,7 @@ import { FC }       from 'react'
 
 import { Column }   from '@ui/layout'
 import { Row }      from '@ui/layout'
+import { Button }   from '@ui/button'
 import { Layout }   from '@ui/layout'
 import { Box }      from '@ui/layout'
 import { Text }     from '@ui/text'
@@ -23,9 +24,7 @@ const Success: FC = () => (
         </Layout>
         <Layout flexBasis={32} />
         <NextLink href='/'>
-          <Box width='100%' height={48} border='1px solid blue'>
-            Button
-          </Box>
+          <Button color='secondary'>Button</Button>
         </NextLink>
         <Layout flexBasis={[48, 128, 128]} />
       </Column>

@@ -3,6 +3,7 @@ import { FC }        from 'react'
 
 import { screenVar } from '@store/booking'
 import { INITIAL }   from '@store/booking'
+import { Button }    from '@ui/button'
 import { Column }    from '@ui/layout'
 import { Row }       from '@ui/layout'
 import { Layout }    from '@ui/layout'
@@ -23,9 +24,9 @@ const Invalid: FC = () => (
           <Text>Text</Text>
         </Layout>
         <Layout flexBasis={32} />
-        <Box width='100%' height={48} border='1px solid blue' onClick={() => screenVar(INITIAL)}>
+        <Button color='secondary' onClick={() => screenVar(INITIAL)}>
           Button
-        </Box>
+        </Button>
         <Layout flexBasis={[48, 128, 128]} />
       </Column>
       <Layout flexBasis={[20, 360, 360]} />

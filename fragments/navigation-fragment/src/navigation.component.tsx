@@ -41,12 +41,14 @@ const Navigation: FC<NavigationProps> = ({ pageStyle = 'light' }) => (
               <Box width={[124, 137, 137]} height={[40, 48, 48]}>
                 <Layout width='100%' display={['flex', 'none', 'none']}>
                   <Button size='small'>
-                    <Text>Sign up</Text>
+                    <Layout>
+                      <Text fontWeight='bold'>Sign up</Text>
+                    </Layout>
                   </Button>
                 </Layout>
                 <Layout width='100%' display={['none', 'flex', 'flex']}>
                   <Button>
-                    <Text>Sign up</Text>
+                    <Text fontWeight='bold'>Sign up</Text>
                   </Button>
                 </Layout>
               </Box>

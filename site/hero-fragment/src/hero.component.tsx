@@ -1,14 +1,16 @@
-import React        from 'react'
-import { FC }       from 'react'
+import React             from 'react'
+import { FC }            from 'react'
 
-import { Box }      from '@ui/layout'
-import { Button }   from '@ui/button'
-import { Text }     from '@ui/text'
-import { Row }      from '@ui/layout'
-import { Column }   from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Divider }  from '@ui/divider'
-import { NextLink } from '@ui/link'
+import { Box }           from '@ui/layout'
+import { Button }        from '@ui/button'
+import { ArrowDownIcon } from '@ui/icons'
+import { Text }          from '@ui/text'
+import { Row }           from '@ui/layout'
+import { Column }        from '@ui/layout'
+import { Layout }        from '@ui/layout'
+import { Divider }       from '@ui/divider'
+import { NextLink }      from '@ui/link'
+import { SocialLinks }   from '@fragments/social-links-fragment'
 
 const Hero: FC = () => (
   <Box width='100%'>
@@ -16,7 +18,7 @@ const Hero: FC = () => (
       <Layout flexBasis={[20, 80, 80]} />
       <Column width='100%'>
         <Layout flexBasis={[120, 267, 267]} />
-        <Box width={['100%', '900px', '900px']} height={[240, 201, 201]} border='1px solid orange'>
+        <Box width={['100%', '900px', '900px']} height={[240, 201, 201]}>
           <Layout>
             <Text fontSize='giant' fontWeight='bold' color='white'>
               Welcome text
@@ -25,22 +27,26 @@ const Hero: FC = () => (
         </Box>
         <Layout flexBasis={32} />
         <NextLink href='/booking'>
-          <Box border='1px solid orange' width={['100%', '180px', '180px']} height={48}>
+          <Layout width={['100%', '180px', '180px']}>
             <Button>Button</Button>
-          </Box>
+          </Layout>
         </NextLink>
         <Layout flexBasis={[40, 48, 48]} />
         <Divider color='milkGray' />
         <Layout flexBasis={[20, 30, 30]} />
         <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
-          <Box width='100%' border='1px solid orange' display={['none', 'flex', 'flex']}>
+          <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
             <Layout>
               <Text color='white' fontWeight='medium'>
                 Text
               </Text>
+              <Layout flexBasis={4} />
+            </Layout>
+            <Layout>
+              <ArrowDownIcon width={20} height={20} />
             </Layout>
           </Box>
-          <Box width='100%' border='1px solid orange'>
+          <Box width='100%' alignItems='center'>
             <Box width='100%' justifyContent={['flex-start', 'flex-end', 'flex-end']}>
               <Layout>
                 <Text color='white' fontWeight='medium'>
@@ -48,8 +54,10 @@ const Hero: FC = () => (
                 </Text>
               </Layout>
             </Box>
-            <Layout flexBasis={32} display={['none', 'flex', 'flex']} />
-            <Box justifyContent='flex-end'>Social</Box>
+            <Layout flexBasis={32} flexShrink={0} display={['none', 'flex', 'flex']} />
+            <Box justifyContent='flex-end'>
+              <SocialLinks pageStyle='dark' />
+            </Box>
           </Box>
         </Row>
         <Layout flexBasis={[20, 30, 30]} />

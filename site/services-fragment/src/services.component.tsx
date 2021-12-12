@@ -20,7 +20,9 @@ const Services: FC = () => {
           <Box width='100%' justifyContent='space-between'>
             <Column display={['none', 'flex', 'flex']}>
               <Layout>
-                <Text>Text 1</Text>
+                <Text fontWeight='medium' fontSize='giant'>
+                  Text 1
+                </Text>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>

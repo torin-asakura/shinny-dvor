@@ -1,3 +1,4 @@
 export interface NavigationItemProps {
-  name?: string
+  name: string
+  pageStyle?: string
 }

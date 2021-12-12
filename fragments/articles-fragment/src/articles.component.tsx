@@ -1,13 +1,14 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React          from 'react'
+import { FC }         from 'react'
 
-import { screenVar } from '@store/articles'
-import { ARTICLE }   from '@store/articles'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Text }      from '@ui/text'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
+import { screenVar }  from '@store/articles'
+import { ARTICLE }    from '@store/articles'
+import { ImageBlock } from '@ui/image'
+import { Box }        from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Text }       from '@ui/text'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
 
 const Articles: FC = () => {
   // FIXME take first 3 elements
@@ -19,14 +20,16 @@ const Articles: FC = () => {
         <Column width='100%'>
           <Layout flexBasis={[64, 100, 100]} />
           <Layout>
-            <Text>Text</Text>
+            <Text fontWeight='medium' fontSize='giant'>
+              Text
+            </Text>
           </Layout>
           <Layout flexBasis={[32, 48, 48]} />
           <Row justifyContent='space-between' display={['none', 'flex', 'flex']}>
             {lastArticles.map((article) => (
               <Column onClick={() => screenVar(ARTICLE)}>
                 <Box width={405} height={260} border='1px solid brown'>
-                  Pic
+                  <ImageBlock />
                 </Box>
                 <Layout flexBasis={24} />
                 <Layout>
@@ -34,20 +37,22 @@ const Articles: FC = () => {
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout>
-                  <Text>Text</Text>
+                  <Text fontWeight='medium' fontSize='large'>
+                    Text
+                  </Text>
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout>
-                  <Text>Text</Text>
+                  <Text color='darkGray'>Text</Text>
                 </Layout>
               </Column>
             ))}
           </Row>
           <Row display={['flex', 'none', 'none']}>
             {/* TODO carousel */}
-            <Column>
+            <Column width='100%'>
               <Box width={300} height={200} border='1px solid brown'>
-                Pic
+                <ImageBlock />
               </Box>
               <Layout flexBasis={24} />
               <Layout>
@@ -55,11 +60,13 @@ const Articles: FC = () => {
               </Layout>
               <Layout flexBasis={8} />
               <Layout>
-                <Text>Text</Text>
+                <Text fontWeight='medium' fontSize='big'>
+                  Text
+                </Text>
               </Layout>
               <Layout flexBasis={8} />
               <Layout>
-                <Text>Text</Text>
+                <Text color='darkGray'>Text</Text>
               </Layout>
             </Column>
           </Row>
