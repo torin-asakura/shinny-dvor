@@ -4,9 +4,12 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
+    "@store/services": "workspace:store/services",
+    "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/layout": "workspace:ui/layout",
+    "@ui/link": "workspace:ui/link",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -16,6 +19,7 @@
     "@types/react-dom": "^17"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",

@@ -24,5 +24,5 @@ export const appearanceStyles: styleFn = ({ theme, checked }) => ({
 export const shapeStyles: styleFn = ({ theme }) => ({
   width: '100%',
   height: '40px',
-  borderRadius: theme.radii.normal,
+  borderRadius: theme.radii.small,
 })

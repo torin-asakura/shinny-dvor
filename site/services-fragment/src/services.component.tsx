@@ -1,16 +1,21 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { Condition } from '@ui/condition'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Condition }      from '@ui/condition'
+import { Divider }        from '@ui/divider'
+import { Button }         from '@ui/button'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+
+import { AvailableRadii } from './available-radii'
+import { ServicesList }   from './services-list'
 
 const Services: FC = () => {
   // TODO write isSizeChoosed helper
-  const isSizeChoosed = true
+  const isSizeChoosed = false
   return (
     <Box width='100%' border='1px solid black'>
       <Column width='100%'>
@@ -18,7 +23,7 @@ const Services: FC = () => {
         <Row>
           <Layout flexBasis={[20, 80, 80]} />
           <Box width='100%' justifyContent='space-between'>
-            <Column display={['none', 'flex', 'flex']}>
+            <Column display={['none', 'flex', 'flex']} width='34%'>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant'>
                   Text 1
@@ -32,13 +37,25 @@ const Services: FC = () => {
               <Condition match={isSizeChoosed}>
                 <Layout flexBasis={24} />
                 <Row>
-                  <Box width={56} height={56} border='1px solid green'>
-                    Choosed radius
+                  <Box
+                    width={56}
+                    height={56}
+                    backgroundColor='lightGray'
+                    borderRadius='normal'
+                    justifyContent='center'
+                    alignItems='center'
+                    flexShrink={0}
+                  >
+                    <Layout>
+                      <Text fontWeight='bold'>R13</Text>
+                    </Layout>
                   </Box>
                   <Layout flexBasis={16} />
-                  <Box width={180} height={56} border='1px solid green'>
-                    Button
-                  </Box>
+                  <Layout width={180}>
+                    <Button color='secondary' size='large'>
+                      Button
+                    </Button>
+                  </Layout>
                 </Row>
               </Condition>
             </Column>
@@ -66,28 +83,15 @@ const Services: FC = () => {
                 <Layout flexBasis={32} />
               </Column>
               <Condition match={!isSizeChoosed}>
-                <Box width='100%' height={['186px', '162px', '162px']} border='1px solid pink'>
-                  <Row>
-                    <Layout flexBasis={[20, 32, 32]} />
-                    <Column width='100%'>
-                      <Layout flexBasis={[20, 32, 32]} />
-                      <Layout>
-                        <Text>Text</Text>
-                      </Layout>
-                      <Layout flexBasis={[16, 24, 24]} />
-                      <Box width='100%' height={[108, 48, 48]} border='1px solid black'>
-                        Radii list
-                      </Box>
-                      <Layout flexBasis={[20, 32, 32]} />
-                    </Column>
-                    <Layout flexBasis={[20, 32, 32]} />
-                  </Row>
-                </Box>
+                <AvailableRadii />
                 <Layout flexBasis={16} />
               </Condition>
-              <Box width='100%' minHeight={[663, 789, 789]} border='1px solid black'>
-                Services list
-              </Box>
+              <Column width='100%' border='1px solid red'>
+                <Condition match={isSizeChoosed}>
+                  <Divider color='gray' />
+                </Condition>
+                <ServicesList />
+              </Column>
             </Column>
           </Box>
           <Layout flexBasis={[20, 80, 80]} />

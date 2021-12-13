@@ -2,20 +2,24 @@ import React              from 'react'
 import { FC }             from 'react'
 import { useState }       from 'react'
 
-import { Condition }      from '@ui/condition'
-import { Layout }         from '@ui/layout'
+import { Box }            from '@ui/layout'
 import { Row }            from '@ui/layout'
 
 import { Radio }          from './radio.component'
 import { RadioListProps } from './radio.interface'
 
-const RadioList: FC<RadioListProps> = ({ items, initial = '', onChoose = (item) => {} }) => {
+const RadioList: FC<RadioListProps> = ({
+  items,
+  initial = '',
+  width = '100%',
+  onChoose = (item) => {},
+}) => {
   const [active, setActive] = useState<string>(initial)
 
   return (
-    <Row justifyContent='space-between'>
+    <Row justifyContent='space-between' flexWrap='wrap'>
       {items.map((item, index) => (
-        <>
+        <Box width={width}>
           <Radio
             checked={active === item}
             value={item}
@@ -25,10 +29,7 @@ const RadioList: FC<RadioListProps> = ({ items, initial = '', onChoose = (item) 
               setActive(item)
             }}
           />
-          <Condition match={index !== items.length - 1}>
-            <Layout flexBasis={12} flexShrink={0} />
-          </Condition>
-        </>
+        </Box>
       ))}
     </Row>
   )
