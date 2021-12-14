@@ -3,6 +3,7 @@ import { FC }       from 'react'
 
 import { Column }   from '@ui/layout'
 import { Button }   from '@ui/button'
+import { Box }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
 import { Text }     from '@ui/text'
 import { NextLink } from '@ui/link'
@@ -21,7 +22,10 @@ const Success: FC = () => (
     </Layout>
     <Layout flexBasis={32} />
     <NextLink href='/'>
-      <Button color='secondary'>Button</Button>
+      <Box width='100%'>
+        {' '}
+        <Button color='secondary'>Button</Button>
+      </Box>
     </NextLink>
     <Layout flexBasis={[48, 128, 128]} />
   </Column>

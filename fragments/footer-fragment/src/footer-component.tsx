@@ -9,7 +9,7 @@ import { FooterLogo }  from '@ui/logo'
 import { NextLink }    from '@ui/link'
 import { Divider }     from '@ui/divider'
 import { Text }        from '@ui/text'
-import { SocialLinks } from '@fragments/social-links-fragment'
+import { SocialLinks } from '@ui/social-links'
 
 const Footer: FC = () => (
   <Box width='100%'>

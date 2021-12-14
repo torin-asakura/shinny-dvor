@@ -14,7 +14,7 @@ const Articles: FC = () => {
   // FIXME take first 3 elements
   const lastArticles = ['Article 1', 'Article 2', 'Article 3']
   return (
-    <Box width='100%' height={[569, 693, 693]} border='1px solid brown'>
+    <Box width='100%' height={[569, 693, 693]} backgroundColor='fillGray'>
       <Row justifyContent='space-between'>
         <Layout flexBasis={[20, 80, 80]} />
         <Column width='100%'>
@@ -28,7 +28,7 @@ const Articles: FC = () => {
           <Row justifyContent='space-between' display={['none', 'flex', 'flex']}>
             {lastArticles.map((article) => (
               <Column onClick={() => screenVar(ARTICLE)}>
-                <Box width={405} height={260} border='1px solid brown'>
+                <Box width={405} height={260}>
                   <ImageBlock />
                 </Box>
                 <Layout flexBasis={24} />

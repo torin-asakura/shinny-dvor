@@ -5,6 +5,7 @@ import { Condition }      from '@ui/condition'
 import { Divider }        from '@ui/divider'
 import { Button }         from '@ui/button'
 import { Box }            from '@ui/layout'
+import { NextLink }       from '@ui/link'
 import { Row }            from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Layout }         from '@ui/layout'
@@ -15,9 +16,9 @@ import { ServicesList }   from './services-list'
 
 const Services: FC = () => {
   // TODO write isSizeChoosed helper
-  const isSizeChoosed = false
+  const isSizeChoosed = true
   return (
-    <Box width='100%' border='1px solid black'>
+    <Box width='100%'>
       <Column width='100%'>
         <Layout flexBasis={[48, 100, 100]} />
         <Row>
@@ -51,11 +52,13 @@ const Services: FC = () => {
                     </Layout>
                   </Box>
                   <Layout flexBasis={16} />
-                  <Layout width={180}>
-                    <Button color='secondary' size='large'>
-                      Button
-                    </Button>
-                  </Layout>
+                  <NextLink href='/services'>
+                    <Layout width={180}>
+                      <Button color='secondary' size='large'>
+                        Button
+                      </Button>
+                    </Layout>
+                  </NextLink>
                 </Row>
               </Condition>
             </Column>
@@ -86,7 +89,7 @@ const Services: FC = () => {
                 <AvailableRadii />
                 <Layout flexBasis={16} />
               </Condition>
-              <Column width='100%' border='1px solid red'>
+              <Column width='100%'>
                 <Condition match={isSizeChoosed}>
                   <Divider color='gray' />
                 </Condition>

@@ -3,6 +3,8 @@ const colors = {
   gray: 'rgba(37, 44, 50, 0.12)',
   lightGray: 'rgba(37, 44, 50, 0.06)',
   milkGray: 'rgba(255, 255, 255, 0.2)',
+  transparentGray: 'rgba(248, 248, 248, 1)',
+  fillGray: 'rgba(249, 249, 249, 1)',
   darkGray: 'rgba(123, 131, 138, 1)',
   black: 'rgba(37, 44, 50, 1)',
   blue: 'rgba(48, 100, 235, 1)',
@@ -53,13 +55,6 @@ const colors = {
       active: 'rgba(255, 255, 255, 1)',
       disabled: 'rgba(255, 255, 255, 0.1)',
       fontColor: 'rgba(255, 255, 255, 1)',
-    },
-    choice: {
-      default: 'rgba(37, 44, 50, 0.06)',
-      hover: 'rgba(69, 121, 255, 1)',
-      active: 'rgba(255, 255, 255, 1)',
-      disabled: 'rgba(197, 200, 203, 1)',
-      fontColor: 'rgba(37, 44, 50, 1)',
     },
   },
 }

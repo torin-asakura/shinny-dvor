@@ -10,7 +10,7 @@ import { Column }        from '@ui/layout'
 import { Layout }        from '@ui/layout'
 import { Divider }       from '@ui/divider'
 import { NextLink }      from '@ui/link'
-import { SocialLinks }   from '@fragments/social-links-fragment'
+import { SocialLinks }   from '@ui/social-links'
 
 const Hero: FC = () => (
   <Box width='100%'>
@@ -38,7 +38,7 @@ const Hero: FC = () => (
           <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
             <Layout>
               <Text color='white' fontWeight='medium'>
-                Text
+                Scrollspy
               </Text>
               <Layout flexBasis={4} />
             </Layout>

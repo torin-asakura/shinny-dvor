@@ -1,5 +1,5 @@
 {
-  "name": "@fragments/social-links-fragment",
+  "name": "@ui/social-links",
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {

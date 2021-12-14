@@ -4,6 +4,7 @@ import { FC }        from 'react'
 import { screenVar } from '@store/booking'
 import { INITIAL }   from '@store/booking'
 import { Button }    from '@ui/button'
+import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
@@ -21,9 +22,11 @@ const Invalid: FC = () => (
       <Text>Text</Text>
     </Layout>
     <Layout flexBasis={32} />
-    <Button color='secondary' onClick={() => screenVar(INITIAL)}>
-      Button
-    </Button>
+    <Box width='100%'>
+      <Button color='secondary' onClick={() => screenVar(INITIAL)}>
+        Button
+      </Button>
+    </Box>
     <Layout flexBasis={[48, 128, 128]} />
   </Column>
 )

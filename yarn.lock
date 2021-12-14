@@ -1546,13 +1546,13 @@ __metadata:
   resolution: "@fragments/footer-fragment@workspace:fragments/footer-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
-    "@fragments/social-links-fragment": "workspace:fragments/social-links-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
+    "@ui/social-links": "workspace:ui/social-links"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -1594,31 +1594,6 @@ __metadata:
 "@fragments/radius-type-fragment@workspace:fragments/radius-type-fragment":
   version: 0.0.0-use.local
   resolution: "@fragments/radius-type-fragment@workspace:fragments/radius-type-fragment"
-  dependencies:
-    "@emotion/react": ^11.6.0
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/button": "workspace:ui/button"
-    "@ui/condition": "workspace:ui/condition"
-    "@ui/icons": "workspace:ui/icons"
-    "@ui/layout": "workspace:ui/layout"
-    "@ui/link": "workspace:ui/link"
-    "@ui/logo": "workspace:ui/logo"
-    "@ui/text": "workspace:ui/text"
-    "@ui/theme": "workspace:ui/theme"
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@fragments/social-links-fragment@workspace:fragments/social-links-fragment":
-  version: 0.0.0-use.local
-  resolution: "@fragments/social-links-fragment@workspace:fragments/social-links-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
     "@types/react": ^17
@@ -2181,7 +2156,6 @@ __metadata:
   resolution: "@site/hero-fragment@workspace:site/hero-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
-    "@fragments/social-links-fragment": "workspace:fragments/social-links-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -2190,6 +2164,7 @@ __metadata:
     "@ui/icons": "workspace:ui/icons"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
+    "@ui/social-links": "workspace:ui/social-links"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2303,6 +2278,8 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/image": "workspace:ui/image"
+    "@ui/info-point": "workspace:ui/info-point"
     "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2328,6 +2305,7 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
+    "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
@@ -3295,6 +3273,28 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/info-point@workspace:ui/info-point":
+  version: 0.0.0-use.local
+  resolution: "@ui/info-point@workspace:ui/info-point"
+  dependencies:
+    "@emotion/react": ^11.7.0
+    "@emotion/styled": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@types/styled-system": ^5
+    "@ui/layout": "workspace:ui/layout"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
@@ -3391,6 +3391,31 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/social-links@workspace:ui/social-links":
+  version: 0.0.0-use.local
+  resolution: "@ui/social-links@workspace:ui/social-links"
+  dependencies:
+    "@emotion/react": ^11.6.0
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:ui/button"
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/icons": "workspace:ui/icons"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/link": "workspace:ui/link"
+    "@ui/logo": "workspace:ui/logo"
+    "@ui/text": "workspace:ui/text"
+    "@ui/theme": "workspace:ui/theme"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 

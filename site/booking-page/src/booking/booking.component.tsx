@@ -1,20 +1,21 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React              from 'react'
+import { FC }             from 'react'
 
-import { screenVar } from '@store/booking'
-import { SUCCESS }   from '@store/booking'
-import { Button }    from '@ui/button'
-import { Divider }   from '@ui/divider'
-import { Column }    from '@ui/layout'
-import { RadioList } from '@ui/radio'
-import { Layout }    from '@ui/layout'
-import { Box }       from '@ui/layout'
-import { Text }      from '@ui/text'
+import { screenVar }      from '@store/booking'
+import { SUCCESS }        from '@store/booking'
+import { Button }         from '@ui/button'
+import { Divider }        from '@ui/divider'
+import { Column }         from '@ui/layout'
+import { RadioList }      from '@ui/radio'
+import { Layout }         from '@ui/layout'
+import { Box }            from '@ui/layout'
+import { Text }           from '@ui/text'
+
+import { availableRadii } from '../../../data'
 
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
   const updateStatus = () => screenVar(SUCCESS)
-  const availableRadii = ['R12', 'R13', 'R14', 'R15', 'R16', 'R17', 'R18', 'R19', 'R20', 'R21']
   const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
   return (
     <Column width='100%'>
@@ -55,7 +56,9 @@ const Booking: FC = () => {
       <Layout flexBasis={16} />
       <Divider />
       <Layout flexBasis={32} />
-      <Button onClick={() => updateStatus()}>Button</Button>
+      <Box width='100%'>
+        <Button onClick={() => updateStatus()}>Button</Button>
+      </Box>
       <Layout flexBasis={[48, 128, 128]} />
     </Column>
   )

@@ -10,6 +10,7 @@
     "@store/services": "workspace:store/services",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
+    "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",

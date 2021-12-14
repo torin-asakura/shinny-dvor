@@ -8,6 +8,6 @@ export interface RadioProps extends InputHTMLAttributes<any> {
 export interface RadioListProps {
   items: string[]
   initial?: string
-  width?: string
+  width?: number | number[] | string | string[]
   onChoose?: (item: string) => any
 }
