@@ -13,7 +13,7 @@ import { ItemProps }  from './item.interface'
 
 const Item: FC<ItemProps> = ({ service }) => (
   <Box width={['100%', 296, 296]} height={[332, 420, 420]}>
-    <Column width={['100%', 296, 296]}>
+    <Column width={['100%', '296px', '296px']}>
       <Layout flexBasis={[20, 32, 32]} flexShrink={0} />
       <Box
         width='100%'

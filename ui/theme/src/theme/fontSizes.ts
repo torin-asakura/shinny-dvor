@@ -6,5 +6,6 @@ export const fontSizes = {
   xl: 28,
   extraLarge: 32,
   giant: 40,
+  godzilla: 48,
   extra: 56,
 }

@@ -29,4 +29,5 @@ export const replacements = {
   VkIcon: getReplacement()('#252C32'),
   FacebookIcon: getReplacement()('#252C32'),
   MenuIcon: getReplacement()('#252C32'),
+  BackIcon: getReplacement()('#252C32'),
 }

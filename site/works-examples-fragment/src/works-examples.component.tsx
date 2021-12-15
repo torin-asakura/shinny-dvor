@@ -14,11 +14,19 @@ const WorksExamples: FC = () => (
       <Column width='100%' alignItems='center'>
         <Layout flexBasis={[48, 100, 100]} />
         <Layout>
-          <Text>Text</Text>
+          <Text
+            fontWeight='medium'
+            fontSize={['extraLarge', 'godzilla', 'godzilla']}
+            lineHeight='grown'
+          >
+            Text
+          </Text>
         </Layout>
         <Layout flexBasis={[8, 16, 16]} />
         <Layout>
-          <Text>Text</Text>
+          <Text fontColor='darkGray' lineHeight='grown'>
+            Text
+          </Text>
         </Layout>
         <Layout flexBasis={[32, 40, 40]} />
         <Box width='100%' border='1px solid orange'>
