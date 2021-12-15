@@ -1,5 +1,6 @@
 import React              from 'react'
 import { FC }             from 'react'
+import { useReactiveVar } from '@apollo/client'
 
 import { Condition }      from '@ui/condition'
 import { Divider }        from '@ui/divider'
@@ -10,13 +11,14 @@ import { Row }            from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Text }           from '@ui/text'
+import { chosenVar }      from '@store/chosen-radius'
 
 import { AvailableRadii } from './available-radii'
 import { ServicesList }   from './services-list'
+import { ChosenRadius }   from './chosen-radius'
 
 const Services: FC = () => {
-  // TODO write isSizeChoosed helper
-  const isSizeChoosed = true
+  const isSizeChosen = useReactiveVar(chosenVar)
   return (
     <Box width='100%'>
       <Column width='100%'>
@@ -26,31 +28,19 @@ const Services: FC = () => {
           <Box width='100%' justifyContent='space-between'>
             <Column display={['none', 'flex', 'flex']} width='34%'>
               <Layout>
-                <Text fontWeight='medium' fontSize='giant'>
+                <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
                   Text 1
                 </Text>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
-                <Text>Text 2</Text>
+                <Text lignHeight='grown'>Text 2</Text>
                 <Layout flexBasis={24} />
               </Layout>
-              <Condition match={isSizeChoosed}>
+              <Condition match={isSizeChosen}>
                 <Layout flexBasis={24} />
                 <Row>
-                  <Box
-                    width={56}
-                    height={56}
-                    backgroundColor='lightGray'
-                    borderRadius='normal'
-                    justifyContent='center'
-                    alignItems='center'
-                    flexShrink={0}
-                  >
-                    <Layout>
-                      <Text fontWeight='bold'>R13</Text>
-                    </Layout>
-                  </Box>
+                  <ChosenRadius />
                   <Layout flexBasis={16} />
                   <NextLink href='/services'>
                     <Layout width={180}>
@@ -65,35 +55,39 @@ const Services: FC = () => {
             <Column width={['100%', '843px', '843px']}>
               <Column width='100%' display={['flex', 'none', 'none']}>
                 <Layout>
-                  <Text>Text 1</Text>
+                  <Text fontWeight='medium' fontSize='extraLarge'>
+                    Text 1
+                  </Text>
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
-                  <Text>Text 2</Text>
+                  <Text lignHeight='grown'>Text 2</Text>
                 </Layout>
-                <Condition match={isSizeChoosed}>
+                <Condition match={isSizeChosen}>
                   <Layout flexBasis={24} />
                   <Row>
-                    <Box width={56} height={56} border='1px solid green'>
-                      Choosed radius
+                    <Box width={56} height={56}>
+                      <ChosenRadius />
                     </Box>
                     <Layout flexBasis={16} />
-                    <Box width={180} height={56} border='1px solid green'>
-                      Button
+                    <Box width={180} height={56}>
+                      <Button color='secondary' size='large'>
+                        Button
+                      </Button>
                     </Box>
                   </Row>
                 </Condition>
                 <Layout flexBasis={32} />
               </Column>
-              <Condition match={!isSizeChoosed}>
+              <Condition match={!isSizeChosen}>
                 <AvailableRadii />
                 <Layout flexBasis={16} />
               </Condition>
               <Column width='100%'>
-                <Condition match={isSizeChoosed}>
+                <Condition match={isSizeChosen}>
                   <Divider color='gray' />
                 </Condition>
-                <ServicesList />
+                <ServicesList isSizeChosen={isSizeChosen} />
               </Column>
             </Column>
           </Box>

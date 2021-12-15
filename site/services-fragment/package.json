@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
+    "@store/chosen-radius": "workspace:store/chosen-radius",
     "@store/services": "workspace:store/services",
     "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
@@ -15,6 +16,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.5.6",
     "@types/react": "^17",
     "@types/react-dom": "^17"
   },

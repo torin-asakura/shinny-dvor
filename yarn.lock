@@ -1568,8 +1568,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
   dependencies:
+    "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
+    "@store/chosen-radius": "workspace:store/chosen-radius"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -1584,6 +1586,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -2250,7 +2253,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/services-fragment@workspace:site/services-fragment"
   dependencies:
+    "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
+    "@store/chosen-radius": "workspace:store/chosen-radius"
     "@store/services": "workspace:store/services"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2355,6 +2360,18 @@ __metadata:
 "@store/booking@workspace:store/booking":
   version: 0.0.0-use.local
   resolution: "@store/booking@workspace:store/booking"
+  dependencies:
+    "@apollo/client": ^3.4.8
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@store/chosen-radius@workspace:store/chosen-radius":
+  version: 0.0.0-use.local
+  resolution: "@store/chosen-radius@workspace:store/chosen-radius"
   dependencies:
     "@apollo/client": ^3.4.8
     react: ^17.0.2

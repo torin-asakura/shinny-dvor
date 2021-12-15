@@ -1,6 +1,7 @@
 import React               from 'react'
 import { FC }              from 'react'
 import { useState }        from 'react'
+import { useReactiveVar }  from '@apollo/client'
 
 import { Box }             from '@ui/layout'
 import { Condition }       from '@ui/condition'
@@ -8,12 +9,14 @@ import { Text }            from '@ui/text'
 import { Button }          from '@ui/button'
 import { Layout }          from '@ui/layout'
 import { WheelIcon }       from '@ui/icons'
+import { chosenVar }       from '@store/chosen-radius'
+import { radiusVar }       from '@store/chosen-radius'
 
 import { SizeButtonProps } from './size-button.interface'
 
 const SizeButton: FC<SizeButtonProps> = ({ pageStyle }) => {
-  // TODO write isRadiusSelected
-  const isRadiusSelected = true
+  const isRadiusSelected = useReactiveVar(chosenVar)
+  const radius = useReactiveVar(radiusVar)
   const [isActive, setIsActive] = useState(false)
   return (
     <Box width={[40, 48, 48]} height={[40, 48, 48]}>
@@ -26,7 +29,7 @@ const SizeButton: FC<SizeButtonProps> = ({ pageStyle }) => {
               </Condition>
               <Condition match={isRadiusSelected}>
                 <Text fontWeight='bold' fontSize='small'>
-                  R13
+                  {radius}
                 </Text>
               </Condition>
             </Layout>
@@ -39,7 +42,7 @@ const SizeButton: FC<SizeButtonProps> = ({ pageStyle }) => {
                 <WheelIcon width={24} height={24} />
               </Condition>
               <Condition match={isRadiusSelected}>
-                <Text>R13</Text>
+                <Text>{radius}</Text>
               </Condition>
             </Layout>
           </Button>
@@ -59,7 +62,7 @@ const SizeButton: FC<SizeButtonProps> = ({ pageStyle }) => {
               </Condition>
               <Condition match={isRadiusSelected}>
                 <Text fontWeight='bold' fontSize='small'>
-                  R13
+                  {radius}
                 </Text>
               </Condition>
             </Layout>
@@ -76,7 +79,7 @@ const SizeButton: FC<SizeButtonProps> = ({ pageStyle }) => {
                 <WheelIcon width={24} height={24} color={isActive ? 'black' : 'white'} />
               </Condition>
               <Condition match={isRadiusSelected}>
-                <Text>R13</Text>
+                <Text>{radius}</Text>
               </Condition>
             </Layout>
           </Button>

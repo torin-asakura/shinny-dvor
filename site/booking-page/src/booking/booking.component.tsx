@@ -36,7 +36,7 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={carBodyList} width={['48%', 171, 171]} />
+      <RadioList items={carBodyList} width={171} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>

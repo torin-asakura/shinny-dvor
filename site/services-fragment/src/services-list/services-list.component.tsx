@@ -9,20 +9,22 @@ import { Text }     from '@ui/text'
 
 import { services } from '../../../data'
 
-const ServicesList: FC = () => (
+const ServicesList: FC = ({ isSizeChosen }) => (
   <>
     {services.map((item) => (
       <Button size='ghost' color='transparent'>
         <Column width='100%'>
           <Layout flexBasis={30} />
           <Layout>
-            <Text fontWeight='medium' fontSize='xl' color='black'>
+            <Text fontWeight='medium' fontSize='xl' color='black' opacity={isSizeChosen ? 1 : 0.3}>
               {item.name}
             </Text>
           </Layout>
           <Layout flexBasis={8} />
           <Layout>
-            <Text color='darkGray'>{item.description}</Text>
+            <Text color='darkGray' opacity={isSizeChosen ? 1 : 0.3}>
+              {item.description}
+            </Text>
           </Layout>
           <Layout flexBasis={30} />
           <Divider color='gray' />
