@@ -7,13 +7,13 @@ import { Box }       from '@ui/layout'
 
 import { LogoProps } from './logo.interface'
 
-const Logo: FC<LogoProps> = ({ pageStyle }) => (
+const Logo: FC<LogoProps> = ({ ...props }) => (
   <NextLink href='/'>
     <Box display={['flex', 'none', 'none']}>
-      <LogoIcon width={48} height={32} color={pageStyle === 'dark' ? 'white' : 'black'} />
+      <LogoIcon width={48} height={32} {...props} />
     </Box>
     <Box display={['none', 'flex', 'flex']}>
-      <LogoIcon width={60} height={40} color={pageStyle === 'dark' ? 'white' : 'black'} />
+      <LogoIcon width={60} height={40} {...props} />
     </Box>
   </NextLink>
 )

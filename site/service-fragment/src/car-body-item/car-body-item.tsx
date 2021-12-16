@@ -6,7 +6,9 @@ import { Layout }    from '@ui/layout'
 import { CheckIcon } from '@ui/icons'
 import { Text }      from '@ui/text'
 
-const CarBodyItem: FC = ({ item }) => (
+import { ItemProps } from './car-body-item.interface'
+
+const CarBodyItem: FC<ItemProps> = ({ item }) => (
   <Box borderRadius='small' justifyContent='space-between' alignItems='center'>
     <Layout flexBasis={12} />
     <CheckIcon width={24} height={24} />

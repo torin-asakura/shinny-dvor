@@ -1,26 +1,44 @@
 import React               from 'react'
 import { FC }              from 'react'
+import { useState }        from 'react'
 
-import { Box }             from '@ui/layout'
 import { Button }          from '@ui/button'
+import { Condition }       from '@ui/condition'
+import { Box }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
-import { Link }            from '@ui/link'
-import { Text }            from '@ui/text'
+import { VkIcon }          from '@ui/icons'
+import { FacebookIcon }    from '@ui/icons'
 
 import { SocialLinkProps } from './social-link.interface'
 
-const SocialLink: FC<SocialLinkProps> = ({ social }) => (
-  <Link href='/'>
+const SocialLink: FC<SocialLinkProps> = ({ social }) => {
+  const [onHover, setOnHover] = useState(false)
+  return (
     <Box width={48} height={48}>
-      <Button color='radius'>
-        <Layout>
-          <Text fontWeight='bold' fontSize='small'>
-            {social}
-          </Text>
-        </Layout>
-      </Button>
+      <Condition match={social === 'vk'}>
+        <Button
+          color='radius'
+          onMouseOver={() => setOnHover(true)}
+          onMouseLeave={() => setOnHover(false)}
+        >
+          <Layout>
+            <VkIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+          </Layout>
+        </Button>
+      </Condition>
+      <Condition match={social === 'facebook'}>
+        <Button
+          color='radius'
+          onMouseOver={() => setOnHover(true)}
+          onMouseLeave={() => setOnHover(false)}
+        >
+          <Layout>
+            <FacebookIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+          </Layout>
+        </Button>
+      </Condition>
     </Box>
-  </Link>
-)
+  )
+}
 
 export { SocialLink }

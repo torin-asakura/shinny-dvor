@@ -1,3 +1,3 @@
 export interface LogoProps {
-  pageStyle?: string
+  color?: string
 }

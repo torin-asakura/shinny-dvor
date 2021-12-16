@@ -1,17 +1,20 @@
-import React            from 'react'
-import { FC }           from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { Button }       from '@ui/button'
-import { Condition }    from '@ui/condition'
-import { Divider }      from '@ui/divider'
-import { Box }          from '@ui/layout'
-import { Row }          from '@ui/layout'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Text }         from '@ui/text'
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { Divider }           from '@ui/divider'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { screenVar }         from '@store/services'
+import { ALL_SERVICES }      from '@store/services'
 
-import { ReturnButton } from './return-button'
-import { CarBodyItem }  from './car-body-item'
+import { ReturnButton }      from './return-button'
+import { CarBodyItem }       from './car-body-item'
+import { AdditionalService } from './additional-service'
 
 const Service: FC = () => {
   // TODO write isTireFitting
@@ -45,6 +48,7 @@ const Service: FC = () => {
               backgroundColor={['none', 'fillGray', 'fillGray']}
               justifyContent='space-between'
               alignItems='center'
+              borderRadius='default'
             >
               {carBodyList.map((item) => (
                 <Box maxWidth={163}>
@@ -78,19 +82,12 @@ const Service: FC = () => {
           </Condition>
           <Condition match={isTireFitting}>
             <Layout flexBasis={24} />
-            <Box
-              width='100%'
-              height={[88, 104, 104]}
-              backgroundColor='fillGray'
-              borderRadius='mini'
-            >
-              Wheel balancing
-            </Box>
+            <AdditionalService />
             <Layout flexBasis={24} />
           </Condition>
           <Layout flexBasis={32} />
           <Box width='100%' height={48}>
-            <Button>Button</Button>
+            <Button onClick={() => screenVar(ALL_SERVICES)}>Button</Button>
           </Box>
           <Layout flexBasis={[65, 120, 120]} />
         </Column>

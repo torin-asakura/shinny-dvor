@@ -1,5 +1,6 @@
 import React              from 'react'
 import { FC }             from 'react'
+import { useState }       from 'react'
 import { useReactiveVar } from '@apollo/client'
 
 import { Box }            from '@ui/layout'
@@ -14,13 +15,19 @@ import { radiusVar }      from '@store/chosen-radius'
 const SizeButton: FC = () => {
   const isRadiusSelected = useReactiveVar(chosenVar)
   const radius = useReactiveVar(radiusVar)
+  const [isActive, setIsActive] = useState(false)
   return (
     <Box width={[40, 48, 48]} height={[40, 48, 48]}>
       <Layout width='100%' display={['flex', 'none', 'none']}>
-        <Button color='lightWheel' size='small'>
+        <Button
+          color='darkWheel'
+          size='small'
+          onMouseDown={() => setIsActive(true)}
+          onMouseUp={() => setIsActive(false)}
+        >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={24} height={24} />
+              <WheelIcon width={20} height={20} color={isActive ? 'black' : 'white'} />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text fontWeight='bold' fontSize='small'>
@@ -31,10 +38,14 @@ const SizeButton: FC = () => {
         </Button>
       </Layout>
       <Layout width='100%' display={['none', 'flex', 'flex']}>
-        <Button color='lightWheel'>
+        <Button
+          color='darkWheel'
+          onMouseDown={() => setIsActive(true)}
+          onMouseUp={() => setIsActive(false)}
+        >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={24} height={24} />
+              <WheelIcon width={24} height={24} color={isActive ? 'black' : 'white'} />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text>{radius}</Text>

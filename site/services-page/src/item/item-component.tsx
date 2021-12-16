@@ -31,7 +31,6 @@ const Item: FC<ItemProps> = ({ service }) => (
           <Row>
             <Layout>
               <Text fontWeight='medium' fontSize='large'>
-                {' '}
                 {service}
               </Text>
             </Layout>

@@ -4,7 +4,7 @@ import { FC }             from 'react'
 import { Box }            from '@ui/layout'
 import { NextLink }       from '@ui/link'
 
-import { NavigationItem } from '../navigation-item/navigation-item.component'
+import { NavigationItem } from '../navigation-item'
 
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>

@@ -14,7 +14,7 @@ import { MenuIcon }       from '@ui/icons'
 import { NavigationList } from './navigation-list'
 import { SizeButton }     from './size-button'
 
-const Navigation: FC = () => (
+const NavigationDark: FC = () => (
   <Box width='100%' minHeight={[80, 104, 104]} justifyContent='center'>
     <Layout flexBasis={[20, 32, 32]} />
     <Column minWidth={['100%', '1376px', '1376px']}>
@@ -22,11 +22,11 @@ const Navigation: FC = () => (
       <Row justifyContent='space-between'>
         <Box alignItems='center' width={[84, 201, 201]}>
           <Layout display={['flex', 'none', 'none']}>
-            <MenuIcon width={24} height={24} color='black' />
+            <MenuIcon width={24} height={24} color='white' />
           </Layout>
           <Layout flexBasis={[16, 0, 0]} flexShrink={0} />
           <Layout>
-            <Logo color='black' />
+            <Logo color='white' />
           </Layout>
         </Box>
         <Box display={['none', 'flex', 'flex']} width={410} alignItems='center'>
@@ -59,4 +59,4 @@ const Navigation: FC = () => (
   </Box>
 )
 
-export { Navigation }
+export { NavigationDark }

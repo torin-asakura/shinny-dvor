@@ -3,7 +3,7 @@ import { FC }                   from 'react'
 
 import { Box }                  from '@ui/layout'
 import { Column }               from '@ui/layout'
-import { Navigation }           from '@fragments/navigation-fragment'
+import { NavigationDark }       from '@fragments/navigation-dark-fragment'
 import { Footer }               from '@fragments/footer-fragment'
 import { Hero }                 from '@site/hero-fragment'
 import { WorksExamples }        from '@site/works-examples-fragment'
@@ -14,9 +14,9 @@ import { ServicesInfographics } from '@site/services-infographics-fragment'
 const IndexPage: FC = () => (
   <Column width='100%'>
     {/* TODO change background to image */}
-    <Box width='100%' backgroundColor='black'>
+    <Box width='100%' backgroundColor='black' justifyContent='center'>
       <Column width='100%'>
-        <Navigation pageStyle='dark' />
+        <NavigationDark />
         <Hero />
       </Column>
     </Box>

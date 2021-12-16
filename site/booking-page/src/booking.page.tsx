@@ -24,11 +24,11 @@ import { Invalid }        from './invalid'
 const BookingPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
-    <Row>
+    <Row justifyContent='space-between'>
       <Layout flexBasis={[21, 32, 32]} />
       <Column width='100%' alignItems='center'>
         <Layout flexBasis={[24, 28, 28]} />
-        <Row justifyContent='space-between' alignItems='center'>
+        <Box width='100%' justifyContent='space-between' alignItems='center'>
           <Layout>
             <Logo />
           </Layout>
@@ -49,7 +49,7 @@ const BookingPage: FC = () => {
               </Button>
             </NextLink>
           </Layout>
-        </Row>
+        </Box>
         <Box width={['100%', 720, 720]}>
           <Condition match={screen === INITIAL}>
             <Booking />

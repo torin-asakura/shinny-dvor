@@ -13,9 +13,9 @@ import { SocialLinks } from '@ui/social-links'
 
 const Footer: FC = () => (
   <Box width='100%'>
-    <Column width='100%'>
+    <Column width='100%' alignItems='center'>
       <Divider color='gray' />
-      <Row>
+      <Box minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[20, 80, 80]} />
         <Column width='100%'>
           <Layout flexBasis={[24, 40, 40]} />
@@ -77,9 +77,9 @@ const Footer: FC = () => (
           </Box>
         </Column>
         <Layout flexBasis={[20, 80, 80]} />
-      </Row>
+      </Box>
       <Divider color='gray' />
-      <Row alignItems='center'>
+      <Box alignItems='center' minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[24, 32, 32]} />
@@ -118,7 +118,7 @@ const Footer: FC = () => (
           <Layout flexBasis={[24, 32, 32]} />
         </Column>
         <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
-      </Row>
+      </Box>
     </Column>
   </Box>
 )

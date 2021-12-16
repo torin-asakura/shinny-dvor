@@ -1564,9 +1564,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/navigation-fragment@workspace:fragments/navigation-fragment":
+"@fragments/navigation-dark-fragment@workspace:fragments/navigation-dark-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
+  resolution: "@fragments/navigation-dark-fragment@workspace:fragments/navigation-dark-fragment"
   dependencies:
     "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
@@ -1594,15 +1594,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/radius-type-fragment@workspace:fragments/radius-type-fragment":
+"@fragments/navigation-fragment@workspace:fragments/navigation-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/radius-type-fragment@workspace:fragments/radius-type-fragment"
+  resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
   dependencies:
+    "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
+    "@emotion/styled": ^11.6.0
+    "@store/chosen-radius": "workspace:store/chosen-radius"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
+    "@ui/divider": "workspace:ui/divider"
     "@ui/icons": "workspace:ui/icons"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
@@ -1612,6 +1616,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
@@ -2148,6 +2153,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-dom: "*"
@@ -2185,6 +2191,7 @@ __metadata:
   dependencies:
     "@fragments/articles-fragment": "workspace:fragments/articles-fragment"
     "@fragments/footer-fragment": "workspace:fragments/footer-fragment"
+    "@fragments/navigation-dark-fragment": "workspace:fragments/navigation-dark-fragment"
     "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment"
     "@site/hero-fragment": "workspace:site/hero-fragment"
     "@site/services-fragment": "workspace:site/services-fragment"
@@ -2232,7 +2239,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/service-fragment@workspace:site/service-fragment"
   dependencies:
+    "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
+    "@store/services": "workspace:store/services"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
@@ -2244,6 +2253,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"

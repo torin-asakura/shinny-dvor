@@ -10,7 +10,7 @@ import { Text }                from '@ui/text'
 import { NavigationItemProps } from './navigation-item.interface'
 
 const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
-  const [hover, setHover] = useState(false)
+  const [, setHover] = useState(false)
   const [pressed, setPressed] = useState(false)
 
   return (
@@ -20,10 +20,10 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
       onClick={() => setPressed(true)}
     >
       <Layout>
-        <Text color={hover ? 'blue' : 'black'}>{name}</Text>
+        <Text color='white'>{name}</Text>
       </Layout>
       <Layout flexBasis={8} />
-      <Divider color={pressed ? 'deepBlue' : 'transparent'} />
+      <Divider color={pressed ? 'white' : 'transparent'} />
     </Column>
   )
 }

@@ -1,16 +1,22 @@
-import React        from 'react'
-import { FC }       from 'react'
-import { useState } from 'react'
+import React            from 'react'
+import { FC }           from 'react'
+import { useState }     from 'react'
 
-import { Box }      from '@ui/layout'
-import { Layout }   from '@ui/layout'
-import { Button }   from '@ui/button'
-import { BackIcon } from '@ui/icons'
-import { Text }     from '@ui/text'
+import { Box }          from '@ui/layout'
+import { Layout }       from '@ui/layout'
+import { Button }       from '@ui/button'
+import { BackIcon }     from '@ui/icons'
+import { Text }         from '@ui/text'
+import { screenVar }    from '@store/services'
+import { ALL_SERVICES } from '@store/services'
 
 const ReturnButton: FC = () => {
   const [onHover, setOnHover] = useState(false)
   const [onPressed, setOnPressed] = useState(false)
+  const doReturn = () => {
+    setOnPressed(true)
+    screenVar(ALL_SERVICES)
+  }
   const getColor = () => {
     let color = 'black'
     if (onHover) {
@@ -24,7 +30,7 @@ const ReturnButton: FC = () => {
     <Button
       color='transparent'
       size='ghost'
-      onClick={() => setOnPressed(true)}
+      onClick={() => doReturn()}
       onMouseOver={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >

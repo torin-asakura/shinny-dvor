@@ -20,8 +20,8 @@ import { ChosenRadius }   from './chosen-radius'
 const Services: FC = () => {
   const isSizeChosen = useReactiveVar(chosenVar)
   return (
-    <Box width='100%'>
-      <Column width='100%'>
+    <Box width='100%' justifyContent='center'>
+      <Column minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[48, 100, 100]} />
         <Row>
           <Layout flexBasis={[20, 80, 80]} />
