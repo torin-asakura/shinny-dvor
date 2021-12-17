@@ -1,5 +1,6 @@
 const radii = {
   mini: 8,
+  extra: 12,
   little: 16,
   small: 20,
   default: 24,

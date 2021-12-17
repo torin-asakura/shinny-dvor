@@ -1,0 +1,31 @@
+{
+  "name": "@ui/wheel",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "devDependencies": {
+    "@emotion/css": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "@types/styled-system": "^5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-system": "^5.1.5"
+  },
+  "dependencies": {
+    "@ui/image": "workspace:ui/image",
+    "@ui/layout": "workspace:ui/layout",
+    "@ui/text": "workspace:ui/text",
+    "@ui/tooltip": "workspace:ui/tooltip",
+    "@ui/utils": "workspace:ui/utils",
+    "react-laag": "^2.0.3"
+  }
+}
