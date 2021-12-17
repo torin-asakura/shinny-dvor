@@ -20,7 +20,7 @@ const getReplacement =
     [color]: `{(theme.colors${themeProps.reduce(
       (str, prop) => `${str}.${prop}`,
       ''
-    )}[props.color] || props.color) || "${color}"}`,
+    )}[props.color || 0] || props.color) || "${color}"}`,
   })
 
 export const replacements = {
