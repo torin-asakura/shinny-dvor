@@ -15,7 +15,7 @@ const IndexPage: FC = () => (
   <Column width='100%'>
     {/* TODO change background to image */}
     <Box width='100%' backgroundColor='black' justifyContent='center'>
-      <Column width='100%'>
+      <Column width='100%' alignItems='center'>
         <NavigationDark />
         <Hero />
       </Column>

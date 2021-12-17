@@ -16,7 +16,7 @@ import { Article }        from '@fragments/articles-fragment'
 const IndexPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
-    <Column width='100%'>
+    <Column width='100%' alignItems='center'>
       <Navigation />
       <Condition match={screen === ALL_ARTICLES}>
         <AllArticles />

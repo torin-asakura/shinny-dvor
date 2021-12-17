@@ -2,6 +2,7 @@ import React                   from 'react'
 import { FC }                  from 'react'
 import { useState }            from 'react'
 
+import { Button }              from '@ui/button'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Divider }             from '@ui/divider'
@@ -14,17 +15,21 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
   const [pressed, setPressed] = useState(false)
 
   return (
-    <Column
+    <Button
+      size='ghost'
+      color='transparent'
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => setPressed(true)}
     >
-      <Layout>
-        <Text color={hover ? 'blue' : 'black'}>{name}</Text>
-      </Layout>
-      <Layout flexBasis={8} />
-      <Divider color={pressed ? 'deepBlue' : 'transparent'} />
-    </Column>
+      <Column>
+        <Layout>
+          <Text color={hover ? 'blue' : 'black'}>{name}</Text>
+        </Layout>
+        <Layout flexBasis={8} />
+        <Divider color={pressed ? 'deepBlue' : 'transparent'} />
+      </Column>
+    </Button>
   )
 }
 

@@ -7,8 +7,10 @@ import { Layout } from '@ui/layout'
 import { Column } from '@ui/layout'
 import { Text }   from '@ui/text'
 
+import { Slider } from './slider'
+
 const WorksExamples: FC = () => (
-  <Box width='100%' height={[609, 976, 976]} border='1px solid yellow'>
+  <Box width='100%' height={[609, 976, 976]} backgroundColor='fillGray'>
     <Row justifyContent='center' alignItems='center'>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />
       <Column width='100%' alignItems='center'>
@@ -30,18 +32,7 @@ const WorksExamples: FC = () => (
         </Layout>
         <Layout flexBasis={[32, 40, 40]} />
         <Box width='100%' border='1px solid orange'>
-          <Column height={[400, 640, 640]} width='100%' alignItems='center'>
-            <Box
-              height={[240, 540, 540]}
-              width='100%'
-              border='1px solid orange'
-              justifyContent='center'
-              alignItems='center'
-            >
-              Pic
-            </Box>
-            Slider
-          </Column>
+          <Slider />
         </Box>
         <Layout flexBasis={[48, 100, 100]} />
       </Column>

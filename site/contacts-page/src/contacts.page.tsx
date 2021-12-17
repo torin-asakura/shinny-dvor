@@ -8,7 +8,7 @@ import { Footer }     from '@fragments/footer-fragment'
 import { Contacts }   from './contacts.component'
 
 const ContactsPage: FC = () => (
-  <Column width='100%'>
+  <Column width='100%' alignItems='center'>
     <Navigation />
     <Contacts />
     <Footer />

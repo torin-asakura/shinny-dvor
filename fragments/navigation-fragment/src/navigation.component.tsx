@@ -15,9 +15,9 @@ import { NavigationList } from './navigation-list'
 import { SizeButton }     from './size-button'
 
 const Navigation: FC = () => (
-  <Box width='100%' minHeight={[80, 104, 104]} justifyContent='center'>
+  <Box minWidth={['100%', '1440px', '1440px']} minHeight={[80, 104, 104]}>
     <Layout flexBasis={[20, 32, 32]} />
-    <Column minWidth={['100%', '1376px', '1376px']}>
+    <Column width='100%'>
       <Layout flexBasis={[20, 28, 28]} />
       <Row justifyContent='space-between'>
         <Box alignItems='center' width={[84, 201, 201]}>

@@ -2149,6 +2149,7 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/condition": "workspace:ui/condition"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/social-links": "workspace:ui/social-links"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2217,6 +2218,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/prices-page@workspace:site/prices-page"
   dependencies:
+    "@apollo/client": ^3.5.6
     "@fragments/footer-fragment": "workspace:fragments/footer-fragment"
     "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment"
     "@types/react": ^17
@@ -2228,6 +2230,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"

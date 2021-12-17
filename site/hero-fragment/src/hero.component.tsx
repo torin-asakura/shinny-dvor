@@ -13,9 +13,9 @@ import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
 
 const Hero: FC = () => (
-  <Box width='100%' justifyContent='center'>
+  <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center'>
     <Layout flexBasis={[20, 80, 80]} />
-    <Column minWidth={['100%', '1280px', '1280px']}>
+    <Column width='100%'>
       <Layout flexBasis={[120, 267, 267]} />
       <Box width={['100%', '900px', '900px']} height={[240, 201, 201]}>
         <Layout>
