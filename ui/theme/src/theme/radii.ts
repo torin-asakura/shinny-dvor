@@ -5,6 +5,7 @@ const radii = {
   small: 20,
   default: 24,
   normal: 2222,
+  topSide: '16px 16px 0px 0px',
 }
 
 export { radii }
