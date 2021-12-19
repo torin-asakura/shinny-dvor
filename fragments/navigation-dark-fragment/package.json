@@ -6,6 +6,7 @@
     "@emotion/react": "^11.6.0",
     "@store/chosen-radius": "workspace:store/chosen-radius",
     "@ui/button": "workspace:ui/button",
+    "@ui/card": "workspace:ui/card",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/icons": "workspace:ui/icons",

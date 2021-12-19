@@ -18,10 +18,10 @@ import { AdditionalService } from './additional-service'
 
 const Service: FC = () => {
   // TODO write isTireFitting
-  const isTireFitting = true
+  const isTireFitting = false
   const carBodyList = ['Cabriolet', 'Minivan', 'Cabriolet', 'Minivan']
   return (
-    <Box width='100%' border='1px solid green'>
+    <Box width='100%'>
       <Row>
         <Layout flexBasis={[20, 299, 299]} />
         <Column width='100%'>

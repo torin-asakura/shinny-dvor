@@ -5,7 +5,6 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@ui/image": "workspace:ui/image",
-    "@ui/info-point": "workspace:ui/info-point",
     "@ui/layout": "workspace:ui/layout",
     "@ui/wheel": "workspace:ui/wheel",
     "react": "^17.0.2",

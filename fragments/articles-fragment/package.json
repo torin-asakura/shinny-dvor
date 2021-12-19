@@ -5,7 +5,9 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@store/articles": "workspace:store/articles",
+    "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",
+    "@ui/icons": "workspace:ui/icons",
     "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",

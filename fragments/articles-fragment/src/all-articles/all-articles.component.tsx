@@ -39,15 +39,24 @@ const AllArticles: FC = () => {
                 </Box>
                 <Layout flexBasis={24} />
                 <Layout>
-                  <Text fontSise='large'>{article}</Text>
+                  <Text fontSise='large' lineHeight='grown'>
+                    {article}
+                  </Text>
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout>
-                  <Text>Heading</Text>
+                  <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
+                    Heading
+                  </Text>
                 </Layout>
                 <Layout flexBasis={8} />
                 <Box height={52} border='1px solid yellow'>
-                  <Text overflow='hidden' text-overflow='ellipsis' lignHeight='medium'>
+                  <Text
+                    color='darkGray'
+                    overflow='hidden'
+                    text-overflow='ellipsis'
+                    lineHeight='medium'
+                  >
                     Text ...
                   </Text>
                 </Box>

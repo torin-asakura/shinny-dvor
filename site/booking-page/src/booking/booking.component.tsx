@@ -7,6 +7,7 @@ import { Button }         from '@ui/button'
 import { Divider }        from '@ui/divider'
 import { Column }         from '@ui/layout'
 import { RadioList }      from '@ui/radio'
+import { Input }          from '@ui/input'
 import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
 import { Text }           from '@ui/text'
@@ -47,14 +48,12 @@ const Booking: FC = () => {
       <Divider />
       <Layout flexBasis={32} />
       <Layout>
-        <Text>Text</Text>
+        <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
       <Layout>
-        <Text>Input</Text>
+        <Input placeholder='input' />
       </Layout>
-      <Layout flexBasis={16} />
-      <Divider />
       <Layout flexBasis={32} />
       <Box width='100%'>
         <Button onClick={() => updateStatus()}>Button</Button>

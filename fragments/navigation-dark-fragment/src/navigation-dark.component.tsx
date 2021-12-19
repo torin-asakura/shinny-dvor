@@ -13,6 +13,7 @@ import { MenuIcon }       from '@ui/icons'
 
 import { NavigationList } from './navigation-list'
 import { SizeButton }     from './size-button'
+import { SizeButtonCard } from './size-button'
 
 const NavigationDark: FC = () => (
   <Box minWidth={['100%', '1440px', '1440px']} minHeight={[80, 104, 104]}>
@@ -33,7 +34,12 @@ const NavigationDark: FC = () => (
           <NavigationList />
         </Box>
         <Box width={[176, 201, 201]}>
-          <SizeButton />
+          <Layout display={['flex', 'none', 'none']}>
+            <SizeButtonCard />
+          </Layout>
+          <Layout display={['none', 'flex', 'flex']}>
+            <SizeButton />
+          </Layout>
           <Layout flexBasis={16} />
           <NextLink href='/booking'>
             <Box width={[124, 137, 137]} height={[40, 48, 48]}>

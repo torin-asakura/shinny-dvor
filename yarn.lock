@@ -146,6 +146,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/events-state@npm:0.0.1":
+  version: 0.0.1
+  resolution: "@atls-ui-parts/events-state@npm:0.0.1"
+  peerDependencies:
+    react: ^17.0.1
+  checksum: d29bca36a6456e2aecec28a49f50fd606d9b325fbc0d86ecb7b4bff2a156e8336f6eb6a012181bc59cf1b985ae1becb16f2aa06e62d3b79eb22c8660156d1c0a
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/image@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls-ui-parts/image@npm:0.0.1"
@@ -154,6 +163,21 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
   checksum: d31a936fffb21356cf4ae1707c073705fc650fec9091651178a337b43041f3b2f42fb2d762442f343bdd141f2dee2cd94c60d0acf4a4d64b3ffaa9fc078b6377
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/input@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-parts/input@npm:0.0.6"
+  dependencies:
+    "@atls-ui-parts/events-state": 0.0.1
+    "@atls-ui-parts/styles": 0.0.1
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: e1b6734c546dfb59b0a6f4c7185ebb372b812f2a97bf7fb0e78151117889a7f9494864c30b0f24955900109cfa97f836ba6d7f9205955adadea7c520a5ceeb3f
   languageName: node
   linkType: hard
 
@@ -1956,7 +1980,9 @@ __metadata:
     "@store/articles": "workspace:store/articles"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/button": "workspace:ui/button"
     "@ui/condition": "workspace:ui/condition"
+    "@ui/icons": "workspace:ui/icons"
     "@ui/image": "workspace:ui/image"
     "@ui/layout": "workspace:ui/layout"
     "@ui/text": "workspace:ui/text"
@@ -2004,6 +2030,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
+    "@ui/card": "workspace:ui/card"
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
     "@ui/icons": "workspace:ui/icons"
@@ -2753,6 +2780,7 @@ __metadata:
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
     "@ui/icons": "workspace:ui/icons"
+    "@ui/input": "workspace:ui/input"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
     "@ui/logo": "workspace:ui/logo"
@@ -2932,7 +2960,6 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:ui/image"
-    "@ui/info-point": "workspace:ui/info-point"
     "@ui/layout": "workspace:ui/layout"
     "@ui/wheel": "workspace:ui/wheel"
     react: ^17.0.2
@@ -3683,7 +3710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/styled-system@npm:^5, @types/styled-system@npm:^5.1.10":
+"@types/styled-system@npm:^5, @types/styled-system@npm:^5.1.10, @types/styled-system@npm:^5.1.13":
   version: 5.1.13
   resolution: "@types/styled-system@npm:5.1.13"
   dependencies:
@@ -3962,25 +3989,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/info-point@workspace:ui/info-point":
+"@ui/input@workspace:ui/input":
   version: 0.0.0-use.local
-  resolution: "@ui/info-point@workspace:ui/info-point"
+  resolution: "@ui/input@workspace:ui/input"
   dependencies:
-    "@emotion/react": ^11.7.0
+    "@atls-ui-parts/input": ^0.0.6
     "@emotion/styled": ^11.6.0
     "@types/react": ^17
-    "@types/react-dom": ^17
-    "@types/styled-system": ^5
+    "@types/styled-system": ^5.1.13
+    "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
-    react-dom: ^17.0.2
     styled-system: ^5.1.5
+    styled-tools: ^1.7.2
   peerDependencies:
-    "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@types/styled-system": "*"
     react: "*"
-    react-dom: "*"
-    styled-system: "*"
+    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -4040,6 +4066,18 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/popover@workspace:ui/popover":
+  version: 0.0.0-use.local
+  resolution: "@ui/popover@workspace:ui/popover"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"

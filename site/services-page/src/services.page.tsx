@@ -18,7 +18,7 @@ import { AllServices }    from './all-services'
 const ServicesPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
   return (
-    <Column width='100%'>
+    <Column width='100%' alignItems='center'>
       <Navigation />
       <Condition match={screen === ALL_SERVICES}>
         <AllServices />

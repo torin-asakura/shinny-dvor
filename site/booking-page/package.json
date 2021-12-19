@@ -8,6 +8,7 @@
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/icons": "workspace:ui/icons",
+    "@ui/input": "workspace:ui/input",
     "@ui/layout": "workspace:ui/layout",
     "@ui/link": "workspace:ui/link",
     "@ui/logo": "workspace:ui/logo",
