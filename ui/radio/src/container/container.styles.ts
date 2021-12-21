@@ -1,28 +1,16 @@
-import { styleFn } from 'styled-system'
+import { styleFn }                   from 'styled-system'
+import { createContainerBaseStyles } from '@atls-ui-parts/checkbox'
 
-export const baseStyles: styleFn = () => ({
-  cursor: 'pointer',
-  alignItems: 'center',
-  justifyContent: 'center',
-  '& > input': {
-    position: 'absolute',
-    opacity: 0,
-  },
-})
+export const baseStyles: styleFn = createContainerBaseStyles()
 
 export const appearanceStyles: styleFn = ({ theme, checked }) => ({
   color: theme.colors.black,
   backgroundColor: checked ? theme.colors.primaryBlue : theme.colors.lightGray,
-  '&:hover': {
-    color: theme.colors.primaryBlue,
-  },
-  '& > input:checked ~ span': {
-    color: theme.colors.white,
-  },
 })
 
 export const shapeStyles: styleFn = ({ theme }) => ({
   width: '100%',
   height: '40px',
+  justifyContent: 'center',
   borderRadius: theme.radii.small,
 })

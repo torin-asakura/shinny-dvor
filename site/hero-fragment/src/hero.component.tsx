@@ -36,7 +36,7 @@ const Hero: FC = () => (
       <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
         <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
           <Layout>
-            <Text color='white' fontWeight='medium'>
+            <Text color='white' fontWeight='medium' fontFamily='primary'>
               Scrollspy
             </Text>
             <Layout flexBasis={4} />

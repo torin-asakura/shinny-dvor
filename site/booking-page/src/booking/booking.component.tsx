@@ -6,13 +6,13 @@ import { SUCCESS }        from '@store/booking'
 import { Button }         from '@ui/button'
 import { Divider }        from '@ui/divider'
 import { Column }         from '@ui/layout'
-import { RadioList }      from '@ui/radio'
 import { Input }          from '@ui/input'
 import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
 import { Text }           from '@ui/text'
 
 import { availableRadii } from '../../../data'
+import { RadioList }      from './radio-list'
 
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
@@ -37,7 +37,7 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={carBodyList} width={171} />
+      <RadioList items={carBodyList} width={161} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>

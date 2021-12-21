@@ -1,6 +1,5 @@
 const fonts = {
-  primary: 'IBM+Plex+Sans',
-  secondary: 'IBM+Plex+Sans',
+  primary: 'IBM Plex Sans',
 }
 
 export { fonts }

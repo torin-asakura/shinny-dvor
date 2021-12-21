@@ -5,7 +5,7 @@ import { css }    from '@emotion/react'
 export const GlobalStyles = () => (
   <Global
     styles={css`
-      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans');
+      @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
       html,
       body,
       #__next {

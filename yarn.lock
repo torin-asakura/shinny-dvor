@@ -137,6 +137,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/checkbox@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/checkbox@npm:0.0.3"
+  dependencies:
+    "@atls-ui-parts/styles": 0.0.1
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  checksum: 11d503b26b18ad12dcf31d196ee31aba6cc35994e5b36466c5fea059b221b1948ccdc9a44149ff7e7bba4afbc9fdc60070c2e63c72eae860b3925bb314439b0d
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/dom@npm:0.0.1, @atls-ui-parts/dom@npm:^0.0.1":
   version: 0.0.1
   resolution: "@atls-ui-parts/dom@npm:0.0.1"
@@ -2940,6 +2954,7 @@ __metadata:
     "@ui/divider": "workspace:ui/divider"
     "@ui/layout": "workspace:ui/layout"
     "@ui/link": "workspace:ui/link"
+    "@ui/radio": "workspace:ui/radio"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4091,6 +4106,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/radio@workspace:ui/radio"
   dependencies:
+    "@atls-ui-parts/checkbox": ^0.0.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@ui/condition": "workspace:ui/condition"
