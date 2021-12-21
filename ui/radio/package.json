@@ -18,6 +18,7 @@
     "@ui/condition": "workspace:ui/condition",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
+    "@ui/utils": "workspace:ui/utils",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   }
