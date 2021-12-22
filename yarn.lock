@@ -4163,6 +4163,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/switch@workspace:ui/switch":
+  version: 0.0.0-use.local
+  resolution: "@ui/switch@workspace:ui/switch"
+  dependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@ui/button": "workspace:ui/button"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
+    react: ^17.0.2
+    remove: ^0.1.5
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.1
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
