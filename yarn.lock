@@ -2927,6 +2927,7 @@ __metadata:
     "@ui/divider": "workspace:ui/divider"
     "@ui/icons": "workspace:ui/icons"
     "@ui/layout": "workspace:ui/layout"
+    "@ui/switch": "workspace:ui/switch"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2

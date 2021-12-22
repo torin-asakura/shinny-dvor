@@ -1,5 +1,6 @@
 import React                 from 'react'
 import { FC }                from 'react'
+import { useState }          from 'react'
 
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'
@@ -8,18 +9,21 @@ import { Box }               from '@ui/layout'
 import { Row }               from '@ui/layout'
 import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
+import { Switch }            from '@ui/switch'
+import { Item }              from '@ui/switch'
 import { Text }              from '@ui/text'
 import { screenVar }         from '@store/services'
 import { ALL_SERVICES }      from '@store/services'
 
 import { ReturnButton }      from './return-button'
-import { CarBodyItem }       from './car-body-item'
 import { AdditionalService } from './additional-service'
 
 const Service: FC = () => {
   // TODO write isTireFitting
-  const isTireFitting = false
-  const carBodyList = ['Cabriolet', 'Minivan', 'Cabriolet', 'Minivan']
+  const isTireFitting = true
+  const carBodyList = ['Легковой', 'Джип', 'Минивэн', 'Микроавтобус', 'Грузовой']
+  const [onCarBody, setOnCarbody] = useState(carBodyList[0])
+
   return (
     <Box width='100%'>
       <Row>
@@ -42,20 +46,13 @@ const Service: FC = () => {
           <Layout flexBasis={8} />
           <Condition match={isTireFitting}>
             <Layout flexBasis={24} />
-            <Box
-              width='100%'
-              height={[40, 48, 48]}
-              backgroundColor={['none', 'fillGray', 'fillGray']}
-              justifyContent='space-between'
-              alignItems='center'
-              borderRadius='default'
-            >
+            <Switch active={onCarBody}>
               {carBodyList.map((item) => (
-                <Box maxWidth={163}>
-                  <CarBodyItem item={item} />
-                </Box>
+                <Item value={item} onSelect={setOnCarbody}>
+                  {item}
+                </Item>
               ))}
-            </Box>
+            </Switch>
             <Layout flexBasis={24} />
           </Condition>
           <Layout>
