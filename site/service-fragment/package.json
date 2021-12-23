@@ -6,6 +6,7 @@
     "@emotion/react": "^11.6.0",
     "@store/services": "workspace:store/services",
     "@ui/button": "workspace:ui/button",
+    "@ui/checkbox": "workspace:ui/checkbox",
     "@ui/condition": "workspace:ui/condition",
     "@ui/divider": "workspace:ui/divider",
     "@ui/icons": "workspace:ui/icons",

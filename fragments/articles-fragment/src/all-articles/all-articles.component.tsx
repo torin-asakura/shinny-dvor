@@ -50,7 +50,7 @@ const AllArticles: FC = () => {
                   </Text>
                 </Layout>
                 <Layout flexBasis={8} />
-                <Box height={52} border='1px solid yellow'>
+                <Box height={52}>
                   <Text
                     color='darkGray'
                     overflow='hidden'

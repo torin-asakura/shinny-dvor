@@ -2755,7 +2755,6 @@ __metadata:
     "@site/booking-page": "workspace:site/booking-page"
     "@site/contacts-page": "workspace:site/contacts-page"
     "@site/index-page": "workspace:site/index-page"
-    "@site/prices-page": "workspace:site/prices-page"
     "@site/services-page": "workspace:site/services-page"
     "@types/events": ^3
     "@types/express": ^4
@@ -2889,30 +2888,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/prices-page@workspace:site/prices-page":
-  version: 0.0.0-use.local
-  resolution: "@site/prices-page@workspace:site/prices-page"
-  dependencies:
-    "@apollo/client": ^3.5.6
-    "@fragments/footer-fragment": "workspace:fragments/footer-fragment"
-    "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment"
-    "@types/react": ^17
-    "@types/react-dom": ^17
-    "@ui/condition": "workspace:ui/condition"
-    "@ui/divider": "workspace:ui/divider"
-    "@ui/layout": "workspace:ui/layout"
-    "@ui/text": "workspace:ui/text"
-    react: ^17.0.2
-    react-dom: ^17.0.2
-  peerDependencies:
-    "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
 "@site/service-fragment@workspace:site/service-fragment":
   version: 0.0.0-use.local
   resolution: "@site/service-fragment@workspace:site/service-fragment"
@@ -2923,6 +2898,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:ui/button"
+    "@ui/checkbox": "workspace:ui/checkbox"
     "@ui/condition": "workspace:ui/condition"
     "@ui/divider": "workspace:ui/divider"
     "@ui/icons": "workspace:ui/icons"
@@ -3920,6 +3896,28 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-scrolllock: ^5.0.1
+    styled-system: ^5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/checkbox@workspace:ui/checkbox":
+  version: 0.0.0-use.local
+  resolution: "@ui/checkbox@workspace:ui/checkbox"
+  dependencies:
+    "@atls-ui-parts/checkbox": ^0.0.3
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@ui/condition": "workspace:ui/condition"
+    "@ui/icons": "workspace:ui/icons"
+    "@ui/layout": "workspace:ui/layout"
+    "@ui/text": "workspace:ui/text"
+    "@ui/utils": "workspace:ui/utils"
+    react: ^17.0.2
     styled-system: ^5.1.5
     styled-tools: ^1.7.2
   peerDependencies:

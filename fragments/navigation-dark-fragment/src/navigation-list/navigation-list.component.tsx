@@ -11,9 +11,6 @@ const NavigationList: FC = () => (
     <NextLink href='/services'>
       <NavigationItem name='services' />
     </NextLink>
-    <NextLink href='/prices'>
-      <NavigationItem name='prices' />
-    </NextLink>
     <NextLink href='/contacts'>
       <NavigationItem name='contacts' />
     </NextLink>

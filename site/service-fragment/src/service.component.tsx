@@ -71,7 +71,7 @@ const Service: FC = () => {
             <Layout flexBasis={24} />
             <Divider color='gray' />
             <Layout flexBasis={24} />
-            <Box width='100%' height={26} border='1px solid gray'>
+            <Box width='100%' height={26}>
               <Text fontSize='large' fontWeight='medium'>
                 Accordion
               </Text>

@@ -24,7 +24,6 @@
     "@site/booking-page": "workspace:site/booking-page",
     "@site/contacts-page": "workspace:site/contacts-page",
     "@site/index-page": "workspace:site/index-page",
-    "@site/prices-page": "workspace:site/prices-page",
     "@site/services-page": "workspace:site/services-page",
     "@ui/theme": "workspace:ui/theme",
     "events": "^3.3.0",
