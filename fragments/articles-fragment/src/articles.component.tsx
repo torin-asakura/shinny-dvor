@@ -51,7 +51,7 @@ const Articles: FC = () => {
           <Row display={['flex', 'none', 'none']}>
             {/* TODO carousel */}
             <Column width='100%'>
-              <Box width={300} height={200} border='1px solid brown'>
+              <Box width={300} height={200}>
                 <ImageBlock />
               </Box>
               <Layout flexBasis={24} />

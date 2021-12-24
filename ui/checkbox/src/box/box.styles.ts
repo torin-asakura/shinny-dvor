@@ -10,7 +10,7 @@ export const appearanceStyles: styleFn = ({ theme, checked }) =>
     borderColor: checked ? theme.colors.primaryBlue : theme.colors.gray,
     backgroundColor: checked ? theme.colors.primaryBlue : theme.colors.white,
   })
-  
+
 export const shapeStyles: styleFn = ({ theme }) =>
   createBoxShapeStyles({
     size: 20,

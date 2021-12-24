@@ -37,7 +37,7 @@ const Contacts: FC = () => (
           </Box>
         </Column>
         <Column justifyContent='flex-end'>
-          <Box display={['none', 'flex', 'flex']} width={952} height={480} border='1px solid green'>
+          <Box display={['none', 'flex', 'flex']} width={952} height={480}>
             Map
           </Box>
         </Column>
@@ -45,7 +45,7 @@ const Contacts: FC = () => (
       <Layout flexBasis={[20, 80, 80]} />
     </Row>
     <Layout flexBasis={[24, 0, 0]} />
-    <Box width='100%' height={270} display={['flex', 'none', 'none']} border='1px solid green'>
+    <Box width='100%' height={270} display={['flex', 'none', 'none']}>
       Map
     </Box>
     <Layout flexBasis={[0, 80, 80]} />

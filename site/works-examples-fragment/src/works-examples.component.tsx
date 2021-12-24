@@ -31,9 +31,7 @@ const WorksExamples: FC = () => (
           </Text>
         </Layout>
         <Layout flexBasis={[32, 40, 40]} />
-        <Box width='100%' border='1px solid orange'>
-          <Slider />
-        </Box>
+        <Slider />
         <Layout flexBasis={[48, 100, 100]} />
       </Column>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />

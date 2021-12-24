@@ -20,7 +20,7 @@ import { AdditionalService } from './additional-service'
 
 const Service: FC = () => {
   // TODO write isTireFitting
-  const isTireFitting = true
+  const isTireFitting = false
   const carBodyList = ['Легковой', 'Джип', 'Минивэн', 'Микроавтобус', 'Грузовой']
   const [onCarBody, setOnCarbody] = useState(carBodyList[0])
 

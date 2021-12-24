@@ -53,11 +53,6 @@ const Footer: FC = () => (
                   <Text fontWeight='medium'>Услуги</Text>
                 </Layout>
               </NextLink>
-              <NextLink href='/prices'>
-                <Layout>
-                  <Text fontWeight='medium'>Прайс лист</Text>
-                </Layout>
-              </NextLink>
               <NextLink href='/contacts'>
                 <Layout>
                   <Text fontWeight='medium'>Контакты</Text>

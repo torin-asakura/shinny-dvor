@@ -14,7 +14,7 @@ const Article: FC = () => (
     <Row height={[440, 480, 480]}>
       <Box width='100%' backgroundColor='gray' justifyContent='center'>
         <Layout flexBasis={[20, 100, 100]} />
-        <Column minWidth={['100%', '1280px', '1280px']}>
+        <Column width={['100%', '1280px', '1280px']}>
           <Layout flexBasis={[32, 48, 48]} />
           <Column justifyContent='space-between'>
             <Box width={102}>
@@ -34,6 +34,7 @@ const Article: FC = () => (
                   </Text>
                 </Layout>
               </Column>
+              <Layout flexBasis={[20, 100, 100]} />
             </Box>
           </Column>
           <Layout flexBasis={[32, 48, 48]} />
@@ -42,9 +43,9 @@ const Article: FC = () => (
     </Row>
     <Row>
       <Layout flexBasis={[20, 298, 298]} />
-      <Column width='100%'>
+      <Column width={['100%', '843px', '843px']}>
         <Layout flexBasis={[48, 80, 80]} />
-        <Box width='100%' minHeight={500} border='1px solid black'>
+        <Box width='100%' minHeight={500}>
           <Layout>
             <Text lineHeight='medium'>Article</Text>
           </Layout>

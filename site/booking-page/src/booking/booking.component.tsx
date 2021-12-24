@@ -43,9 +43,13 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
-      <Box width='100%' height='45px' border='1px solid blue' />
+      <Box width='100%' height='45px'>
+        <Layout>
+          <Text>Select</Text>
+        </Layout>
+      </Box>
       <Layout flexBasis={12} />
-      <Divider />
+      <Divider color='lightGray' />
       <Layout flexBasis={32} />
       <Layout>
         <Text color='darkGray'>Text</Text>
