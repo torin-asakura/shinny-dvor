@@ -1,5 +1,6 @@
 import React              from 'react'
 import { FC }             from 'react'
+import { useState }       from 'react'
 
 import { screenVar }      from '@store/booking'
 import { SUCCESS }        from '@store/booking'
@@ -10,6 +11,7 @@ import { Input }          from '@ui/input'
 import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
 import { Text }           from '@ui/text'
+import { Select }         from '@ui/select'
 
 import { availableRadii } from '../../../data'
 import { RadioList }      from './radio-list'
@@ -18,6 +20,8 @@ const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
   const updateStatus = () => screenVar(SUCCESS)
   const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
+  const servicesList = ['Item1', 'Item2', 'Item3']
+  const [, setValue] = useState('Placeholder')
   return (
     <Column width='100%'>
       <Layout flexBasis={[40, 44, 44]} />
@@ -43,11 +47,13 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
-      <Box width='100%' height='45px'>
-        <Layout>
-          <Text>Select</Text>
-        </Layout>
-      </Box>
+      <Select
+        items={servicesList}
+        placeholder='Placeholder'
+        onChange={(item) => {
+          setValue(item)
+        }}
+      />
       <Layout flexBasis={12} />
       <Divider color='lightGray' />
       <Layout flexBasis={32} />

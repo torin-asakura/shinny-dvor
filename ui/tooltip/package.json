@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/tooltip": "^0.0.2",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^5.0.0",
     "global": "4.4.0",
     "react-laag": "1.7.3",
     "styled-system": "5.1.5",

@@ -13,6 +13,7 @@
     "@ui/link": "workspace:ui/link",
     "@ui/logo": "workspace:ui/logo",
     "@ui/radio": "workspace:ui/radio",
+    "@ui/select": "workspace:ui/select",
     "@ui/text": "workspace:ui/text",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
