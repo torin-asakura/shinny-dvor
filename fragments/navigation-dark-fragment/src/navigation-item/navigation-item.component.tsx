@@ -24,9 +24,8 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
     >
       <Column>
         <Layout>
-          <Text color='white'>{name}</Text>
+          <Text color='white' fontWeight='medium'>{name}</Text>
         </Layout>
-        <Layout flexBasis={8} />
         <Divider color={pressed ? 'white' : 'transparent'} />
       </Column>
     </Button>

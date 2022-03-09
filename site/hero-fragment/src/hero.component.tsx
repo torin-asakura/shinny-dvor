@@ -8,6 +8,7 @@ import { Text }            from '@ui/text'
 import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
+import { Link }            from '@ui/link'
 import { Divider }         from '@ui/divider'
 import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
@@ -35,15 +36,17 @@ const Hero: FC = () => (
       <Layout flexBasis={[20, 30, 30]} />
       <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
         <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
-          <Layout>
-            <Text color='white' fontWeight='medium' fontFamily='primary'>
-              Scrollspy
-            </Text>
-            <Layout flexBasis={4} />
-          </Layout>
-          <Layout>
-            <ArrowDownIcon width={20} height={20} />
-          </Layout>
+          <Link href='#services'>
+            <Layout>
+              <Text color='white' fontWeight='medium' fontFamily='primary'>
+                Scrollspy
+              </Text>
+              <Layout flexBasis={4} />
+            </Layout>
+            <Layout>
+              <ArrowDownIcon width={20} height={20} />
+            </Layout>
+          </Link>
         </Box>
         <Box width='100%' alignItems='center'>
           <Box width='100%' justifyContent={['flex-start', 'flex-end', 'flex-end']}>

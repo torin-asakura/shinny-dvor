@@ -27,17 +27,17 @@ const Footer: FC = () => (
                 <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                   <NextLink href='/services'>
                     <Layout>
-                      <Text fontWeight='medium'>Услуги</Text>
+                      <Text color='black' fontWeight='medium'>Услуги</Text>
                     </Layout>
                   </NextLink>
                   <NextLink href='/contacts'>
                     <Layout>
-                      <Text fontWeight='medium'>Контакты</Text>
+                      <Text color='black' fontWeight='medium'>Контакты</Text>
                     </Layout>
                   </NextLink>
                   <NextLink href='/blog'>
                     <Layout>
-                      <Text fontWeight='medium'>Блог</Text>
+                      <Text color='black' fontWeight='medium'>Блог</Text>
                     </Layout>
                   </NextLink>
                 </Box>
@@ -50,17 +50,17 @@ const Footer: FC = () => (
             <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
               <NextLink href='/services'>
                 <Layout>
-                  <Text fontWeight='medium'>Услуги</Text>
+                  <Text color='black' fontWeight='medium'>Услуги</Text>
                 </Layout>
               </NextLink>
               <NextLink href='/contacts'>
                 <Layout>
-                  <Text fontWeight='medium'>Контакты</Text>
+                  <Text color='black' fontWeight='medium'>Контакты</Text>
                 </Layout>
               </NextLink>
               <NextLink href='/blog'>
                 <Layout>
-                  <Text fontWeight='medium'>Блог</Text>
+                  <Text color='black' fontWeight='medium'>Блог</Text>
                 </Layout>
               </NextLink>
             </Box>
@@ -79,12 +79,16 @@ const Footer: FC = () => (
             display={['none', 'flex', 'flex']}
           >
             <Box width='50%'>
-              <Layout>
+              <Layout display='flex' flexDirection='column'>
                 <Text>Address</Text>
+                <Layout flexBasis={8} />
+                <Text color="darkGray">Date</Text>
               </Layout>
               <Layout flexBasis={80} />
-              <Layout>
+              <Layout display='flex' flexDirection='column'>
                 <Text>Tel</Text>
+                <Layout flexBasis={8} />
+                <Text color="darkGray">Телефон для записи</Text>
               </Layout>
             </Box>
             <Layout>

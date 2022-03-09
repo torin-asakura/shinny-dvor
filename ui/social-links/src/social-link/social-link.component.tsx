@@ -22,7 +22,7 @@ const SocialLink: FC<SocialLinkProps> = ({ social }) => {
           onMouseLeave={() => setOnHover(false)}
         >
           <Layout>
-            <VkIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+            <VkIcon width={28} height={28} color={onHover ? 'white' : 'black'} />
           </Layout>
         </Button>
       </Condition>
@@ -33,7 +33,7 @@ const SocialLink: FC<SocialLinkProps> = ({ social }) => {
           onMouseLeave={() => setOnHover(false)}
         >
           <Layout>
-            <FacebookIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+            <FacebookIcon width={28} height={28} color={onHover ? 'white' : 'black'} />
           </Layout>
         </Button>
       </Condition>

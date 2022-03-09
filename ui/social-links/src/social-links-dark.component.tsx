@@ -12,7 +12,7 @@ const SocialLinksDark: FC = () => (
     <Box width={48} height={48}>
       <Button color='darkSocial'>
         <Layout>
-          <VkIcon width={24} height={24} color='white' />
+          <VkIcon width={28} height={28} color='white' />
         </Layout>
       </Button>
     </Box>
@@ -20,7 +20,7 @@ const SocialLinksDark: FC = () => (
     <Box width={48} height={48}>
       <Button color='darkSocial'>
         <Layout>
-          <FacebookIcon width={24} height={24} color='white' />
+          <FacebookIcon width={28} height={28} color='white' />
         </Layout>
       </Button>
     </Box>
