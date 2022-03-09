@@ -2,9 +2,13 @@
   "private": true,
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@atls/actl-cli": "0.4.48",
+    "@atls/code-service": "^0.0.12",
+    "@atls/config-jest": "^0.0.4",
+    "@jest/core": "^27.5.1",
+    "@types/eslint": "^8",
     "@types/node": "16",
     "@types/react": "^17.0.19",
+    "eslint": "8.4.1",
     "husky": "^7.0.1",
     "typescript": "4.3.5"
   },
@@ -13,7 +17,8 @@
   },
   "resolutions": {
     "typescript": "4.3.5",
-    "@apollo/client": "^3.5.5"
+    "@apollo/client": "^3.5.5",
+    "framer-motion": "4.1.7"
   },
   "workspaces": [
     "site/**/*",
