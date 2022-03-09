@@ -1,4 +1,9 @@
-const { withWorkspaces } = require('@atls/next-config-with-pnp-workspaces')
-const withPlugins = require('next-compose-plugins')
-
-module.exports = withPlugins([withWorkspaces])
+module.exports = {
+  experimental: {
+    externalDir: true,
+    swcFileReading: false,
+    workerThreads: true,
+    esmExternals: 'loose',
+    outputStandalone: true,
+  }
+}

@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "build": "next build",
-    "dev": "next dev"
+    "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
+    "dev": "yarn next dev src",
+    "prepack": "run build",
+    "start": "node dist/index.js"
   },
   "dependencies": {
     "@apollo/client": "^3.5.5",
@@ -29,7 +31,7 @@
     "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",
-    "next": "^10.2.3",
+    "next": "^12.1.0",
     "next-compose-plugins": "^2.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
