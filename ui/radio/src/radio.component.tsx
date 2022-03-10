@@ -27,7 +27,7 @@ const Radio: FC<RadioProps> = ({ children, checked }) => {
     <Column width='100%'>
       <Container checked={checked} {...hoverProps}>
         <Checkmark>
-          <Text fontSize='small'>{children}</Text>
+          <Text fontSize='small' fontWeight='medium'>{children}</Text>
         </Checkmark>
         <RadioStyled checked={checked} />
       </Container>

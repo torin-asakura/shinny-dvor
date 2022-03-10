@@ -28,11 +28,33 @@ const Contacts: FC = () => (
       <Row justifyContent='space-between'>
         <Column width='100%' justifyContent='space-between'>
           <Column width='100%'>
-            <Layout>
-              <Text>Text</Text>
+            <Layout flexDirection='column'>
+              <Text fontWeight='medium'>
+                Text
+              </Text>
+              <Layout flexBasis={8} />
+              <Text fontWeight='regular'>
+                address
+              </Text>
+              <Layout flexBasis={24} />
+              <Text fontWeight='medium'>
+                Date
+              </Text>
+              <Layout flexBasis={8} />
+              <Text fontWeight='regular'>
+                time
+              </Text>
+              <Layout flexBasis={24} />
+              <Text fontWeight='medium'>
+                Contacts
+              </Text>
+              <Layout flexBasis={8} />
+              <Text fontWeight='regular'>
+                text
+              </Text>
             </Layout>
           </Column>
-          <Box display={['none', 'flex', 'flex']} width='116px'>
+          <Box display={['none', 'flex', 'flex']} width='110px'>
             <SocialLinks />
           </Box>
         </Column>

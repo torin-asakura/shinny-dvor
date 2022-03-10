@@ -37,9 +37,13 @@ const Item: FC<ItemProps> = ({ service }) => (
           </Row>
           <Layout flexBasis={8} />
           <Row>
-            <Layout>
+            <Layout width='100%'>
               <Text fontWeight='medium' fontSize='large'>
                 Text
+              </Text>
+              <Layout flexBasis={8} />
+              <Text color='darkGray' fontWeight='500' fontSize='large'>
+                за см2
               </Text>
             </Layout>
           </Row>

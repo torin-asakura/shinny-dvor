@@ -1,9 +1,11 @@
-import React              from 'react'
+import React, {useRef} from 'react'
 import { FC }             from 'react'
 import { useState }       from 'react'
 
-import { screenVar }      from '@store/booking'
+import {activeRadiusVar, screenVar} from '@store/booking'
 import { SUCCESS }        from '@store/booking'
+
+import { Condition }      from '@ui/condition'
 import { Button }         from '@ui/button'
 import { Divider }        from '@ui/divider'
 import { Column }         from '@ui/layout'
@@ -15,13 +17,19 @@ import { Select }         from '@ui/select'
 
 import { availableRadii } from '../../../data'
 import { RadioList }      from './radio-list'
+import {useReactiveVar} from "@apollo/client";
 
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
   const updateStatus = () => screenVar(SUCCESS)
+
+  const activeRadius = useReactiveVar(activeRadiusVar)
+
   const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
   const servicesList = ['Item1', 'Item2', 'Item3']
-  const [, setValue] = useState('Placeholder')
+  const [, setValue] = useState<string>('Placeholder')
+  const [isSelected, setIsSelected] = useState<boolean>(false)
+
   return (
     <Column width='100%'>
       <Layout flexBasis={[40, 44, 44]} />
@@ -35,27 +43,29 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={availableRadii} width={['18%', '8%', '8%']} />
+        <RadioList items={availableRadii} width={['18%', '8%', '8%']} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={carBodyList} width={161} />
+        <RadioList items={carBodyList} width={161} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
-      <Select
-        items={servicesList}
-        placeholder='Placeholder'
-        onChange={(item) => {
-          setValue(item)
-        }}
-      />
+        <Select
+          isSelected={isSelected}
+          setIsSelected={setIsSelected}
+          items={servicesList}
+          placeholder='Placeholder'
+          onChange={(item) => {
+            setValue(item)
+          }}
+        />
       <Layout flexBasis={12} />
-      <Divider color='lightGray' />
+        <Divider color={isSelected ? 'primaryBlue' : 'gray'} />
       <Layout flexBasis={32} />
       <Layout>
         <Text color='darkGray'>Text</Text>
@@ -65,9 +75,16 @@ const Booking: FC = () => {
         <Input placeholder='input' />
       </Layout>
       <Layout flexBasis={32} />
-      <Box width='100%'>
-        <Button onClick={() => updateStatus()}>Button</Button>
-      </Box>
+      <Condition match={!activeRadius || !isSelected}>
+        <Box width='100%'>
+          <Button disabled>Button</Button>
+        </Box>
+      </Condition>
+      <Condition match={activeRadius && isSelected}>
+        <Box width='100%'>
+          <Button onClick={updateStatus}>Button</Button>
+        </Box>
+      </Condition>
       <Layout flexBasis={[48, 128, 128]} />
     </Column>
   )

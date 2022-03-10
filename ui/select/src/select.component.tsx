@@ -2,7 +2,7 @@ import React             from 'react'
 import { FC }            from 'react'
 import { useSelect }     from '@atls-ui-parts/select'
 
-import { ArrowDownIcon } from '@ui/icons'
+import {ArrowDownIcon, DropDownIcon} from '@ui/icons'
 import { Layout }        from '@ui/layout'
 
 import { Button }        from './button'
@@ -10,7 +10,13 @@ import { Menu }          from './menu'
 import { MenuItem }      from './menu-item'
 import { SelectProps }   from './select.interface'
 
-const Select: FC<SelectProps> = ({ items, value, onChange, placeholder }) => {
+const Select: FC<SelectProps> = ({ items,
+                                   value,
+                                   onChange,
+                                   placeholder,
+                                   isSelected,
+                                   setIsSelected
+}) => {
   const { buttonProps, menuProps, getMenuItemProps, renderMenu, selectedItem } = useSelect({
     items,
     onChange,
@@ -22,11 +28,11 @@ const Select: FC<SelectProps> = ({ items, value, onChange, placeholder }) => {
         {value || selectedItem || placeholder}
         <Layout flexGrow={1} />
         <Layout>
-          <ArrowDownIcon width={16} height={16} />
+          <DropDownIcon width={16} height={16} />
         </Layout>
       </Button>
       {renderMenu(
-        <Menu {...menuProps}>
+        <Menu {...menuProps} onClick={() => setIsSelected(!isSelected)}>
           {items.map((item, index) => (
             <MenuItem {...getMenuItemProps(item, index)}>{item}</MenuItem>
           ))}
