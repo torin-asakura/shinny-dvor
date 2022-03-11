@@ -26,7 +26,7 @@ const WorksExamples: FC = () => (
         </Layout>
         <Layout flexBasis={[8, 16, 16]} />
         <Layout>
-          <Text fontColor='darkGray' lineHeight='grown'>
+          <Text color='darkGray' lineHeight='grown'>
             Text
           </Text>
         </Layout>

@@ -14,7 +14,7 @@ const Select: FC<SelectProps> = ({ items,
                                    value,
                                    onChange,
                                    placeholder,
-                                   setIsSelected
+                                   setSelectedItem
 }) => {
   const { buttonProps, menuProps, getMenuItemProps, renderMenu, selectedItem } = useSelect({
     items,
@@ -31,7 +31,7 @@ const Select: FC<SelectProps> = ({ items,
         </Layout>
       </Button>
       {renderMenu(
-        <Menu {...menuProps} onClick={setIsSelected(selectedItem)}>
+        <Menu {...menuProps} onClick={setSelectedItem(selectedItem)}>
           {items.map((item, index) => (
             <MenuItem {...getMenuItemProps(item, index)}>{item}</MenuItem>
           ))}

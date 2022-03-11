@@ -36,7 +36,7 @@ const Hero: FC = () => (
       <Layout flexBasis={[20, 30, 30]} />
       <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
         <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
-          <Link href='#services'>
+          <Link href={'#services'}>
             <Layout>
               <Text color='white' fontWeight='medium' fontFamily='primary'>
                 Scrollspy

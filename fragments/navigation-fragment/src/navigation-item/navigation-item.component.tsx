@@ -14,7 +14,6 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
   const [hover, setHover] = useState<boolean>(false)
   const [pressed, setPressed] = useState<boolean>(false)
 
-console.log(pressed)
   return (
     <Button
       size='ghost'

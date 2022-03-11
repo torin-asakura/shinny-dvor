@@ -15,7 +15,9 @@ import { radiusVar }      from '@store/chosen-radius'
 const SizeButton: FC = () => {
   const isRadiusSelected = useReactiveVar(chosenVar)
   const radius = useReactiveVar(radiusVar)
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState<boolean>(false)
+  const [isChecked, setIsChecked] = useState<boolean>(false)
+  console.log(isChecked)
   return (
     <Box width={[40, 48, 48]} height={[40, 48, 48]}>
       <Layout width='100%' display={['flex', 'none', 'none']}>
@@ -24,6 +26,7 @@ const SizeButton: FC = () => {
           size='small'
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
+          onClick={() => setIsChecked(!isChecked)}
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
@@ -42,6 +45,7 @@ const SizeButton: FC = () => {
           color='darkWheel'
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
+          onClick={() => setIsChecked(!isChecked)}
         >
           <Layout>
             <Condition match={!isRadiusSelected}>

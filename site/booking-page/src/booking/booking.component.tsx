@@ -1,23 +1,26 @@
-import React              from 'react'
-import { FC }             from 'react'
-import { useState }       from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
 
-import {activeCarBodyVar, activeRadiusVar, screenVar} from '@store/booking'
-import { SUCCESS }        from '@store/booking'
+import { useReactiveVar }   from '@apollo/client'
 
-import { Condition }      from '@ui/condition'
-import { Button }         from '@ui/button'
-import { Divider }        from '@ui/divider'
-import { Column }         from '@ui/layout'
-import { Input }          from '@ui/input'
-import { Layout }         from '@ui/layout'
-import { Box }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { Select }         from '@ui/select'
+import { screenVar }        from '@store/booking'
+import { activeCarBodyVar } from '@store/booking'
+import { activeRadiusVar }  from '@store/booking'
+import { SUCCESS }          from '@store/booking'
 
-import { availableRadii } from '../../../data'
-import { RadioList }      from './radio-list'
-import {useReactiveVar} from '@apollo/client'
+import { Condition }        from '@ui/condition'
+import { Button }           from '@ui/button'
+import { Divider }          from '@ui/divider'
+import { Column }           from '@ui/layout'
+import { Input }            from '@ui/input'
+import { Layout }           from '@ui/layout'
+import { Box }              from '@ui/layout'
+import { Text }             from '@ui/text'
+import { Select }           from '@ui/select'
+
+import { availableRadii }   from '../../../data'
+import { RadioList }        from './radio-list'
 
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
@@ -30,7 +33,7 @@ const Booking: FC = () => {
   const servicesList = ['Item1', 'Item2', 'Item3']
 
   const [, setValue] = useState<string>('Placeholder')
-  const [isSelected, setIsSelected] = useState<string>('')
+  const [selectedItem, setSelectedItem] = useState<string>('')
 
   return (
     <Column width='100%'>
@@ -58,7 +61,7 @@ const Booking: FC = () => {
       </Layout>
       <Layout flexBasis={12} />
         <Select
-          setIsSelected={setIsSelected}
+          setSelectedItem={setSelectedItem}
           items={servicesList}
           placeholder='Placeholder'
           onChange={(item) => {
@@ -66,7 +69,7 @@ const Booking: FC = () => {
           }}
         />
       <Layout flexBasis={12} />
-        <Divider color={isSelected ? 'primaryBlue' : 'gray'} />
+        <Divider color={selectedItem ? 'primaryBlue' : 'gray'} />
       <Layout flexBasis={32} />
       <Layout>
         <Text color='darkGray'>Text</Text>
@@ -76,12 +79,12 @@ const Booking: FC = () => {
         <Input placeholder='input' />
       </Layout>
       <Layout flexBasis={32} />
-      <Condition match={!activeRadius || !activeCarBody || !isSelected}>
+      <Condition match={!activeRadius || !activeCarBody || !selectedItem}>
         <Box width='100%'>
           <Button disabled>Button</Button>
         </Box>
       </Condition>
-      <Condition match={activeRadius && activeCarBody && isSelected}>
+      <Condition match={activeRadius && activeCarBody && selectedItem}>
         <Box width='100%'>
           <Button onClick={updateStatus}>Button</Button>
         </Box>
