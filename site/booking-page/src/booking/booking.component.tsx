@@ -1,8 +1,8 @@
-import React, {useRef} from 'react'
+import React              from 'react'
 import { FC }             from 'react'
 import { useState }       from 'react'
 
-import {activeRadiusVar, screenVar} from '@store/booking'
+import {activeCarBodyVar, activeRadiusVar, screenVar} from '@store/booking'
 import { SUCCESS }        from '@store/booking'
 
 import { Condition }      from '@ui/condition'
@@ -17,18 +17,20 @@ import { Select }         from '@ui/select'
 
 import { availableRadii } from '../../../data'
 import { RadioList }      from './radio-list'
-import {useReactiveVar} from "@apollo/client";
+import {useReactiveVar} from '@apollo/client'
 
 const Booking: FC = () => {
   // TODO write correct conditions for updateStatus
   const updateStatus = () => screenVar(SUCCESS)
 
-  const activeRadius = useReactiveVar(activeRadiusVar)
+  const activeRadius = useReactiveVar<boolean>(activeRadiusVar)
+  const activeCarBody = useReactiveVar<boolean>(activeCarBodyVar)
 
   const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
   const servicesList = ['Item1', 'Item2', 'Item3']
+
   const [, setValue] = useState<string>('Placeholder')
-  const [isSelected, setIsSelected] = useState<boolean>(false)
+  const [isSelected, setIsSelected] = useState<string>('')
 
   return (
     <Column width='100%'>
@@ -43,20 +45,19 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-        <RadioList items={availableRadii} width={['18%', '8%', '8%']} />
+        <RadioList items={availableRadii} width={['18%', '8%', '8%']} id={'radius'} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-        <RadioList items={carBodyList} width={161} />
+        <RadioList items={carBodyList} width={161} id={'carBody'} />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
         <Select
-          isSelected={isSelected}
           setIsSelected={setIsSelected}
           items={servicesList}
           placeholder='Placeholder'
@@ -75,12 +76,12 @@ const Booking: FC = () => {
         <Input placeholder='input' />
       </Layout>
       <Layout flexBasis={32} />
-      <Condition match={!activeRadius || !isSelected}>
+      <Condition match={!activeRadius || !activeCarBody || !isSelected}>
         <Box width='100%'>
           <Button disabled>Button</Button>
         </Box>
       </Condition>
-      <Condition match={activeRadius && isSelected}>
+      <Condition match={activeRadius && activeCarBody && isSelected}>
         <Box width='100%'>
           <Button onClick={updateStatus}>Button</Button>
         </Box>

@@ -1,5 +1,6 @@
 import React              from 'react'
 import { FC }             from 'react'
+
 import { useReactiveVar } from '@apollo/client'
 
 import { screenVar }      from '@store/booking'
@@ -7,6 +8,7 @@ import { Screen }         from '@store/booking'
 import { INITIAL }        from '@store/booking'
 import { SUCCESS }        from '@store/booking'
 import { INVALID }        from '@store/booking'
+
 import { Button }         from '@ui/button'
 import { Condition }      from '@ui/condition'
 import { CloseIcon }      from '@ui/icons'
