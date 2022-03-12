@@ -1,25 +1,32 @@
-import React              from 'react'
-import { FC }             from 'react'
-import { useState }       from 'react'
-import { useReactiveVar } from '@apollo/client'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
 
-import { Box }            from '@ui/layout'
-import { Condition }      from '@ui/condition'
-import { Text }           from '@ui/text'
-import { Button }         from '@ui/button'
-import { Layout }         from '@ui/layout'
-import { WheelIcon }      from '@ui/icons'
-import { chosenVar }      from '@store/chosen-radius'
-import { radiusVar }      from '@store/chosen-radius'
+import { useReactiveVar }   from '@apollo/client'
+
+import { chosenVar }        from '@store/chosen-radius'
+import { radiusVar }        from '@store/chosen-radius'
+import { checkedRadiusVar } from '@store/chosen-radius'
+
+import { Box }              from '@ui/layout'
+import { Condition }        from '@ui/condition'
+import { Text }             from '@ui/text'
+import { Button }           from '@ui/button'
+import { Layout }           from '@ui/layout'
+import { WheelIcon }        from '@ui/icons'
 
 const SizeButton: FC = () => {
-  const isRadiusSelected = useReactiveVar(chosenVar)
-  const radius = useReactiveVar(radiusVar)
+  const isRadiusSelected = useReactiveVar<boolean>(chosenVar)
+  const radius = useReactiveVar<string>(radiusVar)
   const [isActive, setIsActive] = useState<boolean>(false)
   const [isChecked, setIsChecked] = useState<boolean>(false)
-  console.log(isChecked)
+
   return (
-    <Box width={[40, 48, 48]} height={[40, 48, 48]}>
+    <Box
+      width={[40, 48, 48]}
+      height={[40, 48, 48]}
+      onClick={() => checkedRadiusVar(!isChecked)}
+    >
       <Layout width='100%' display={['flex', 'none', 'none']}>
         <Button
           color='darkWheel'

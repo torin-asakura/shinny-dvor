@@ -1,24 +1,29 @@
-import React, {useState} from 'react'
+import React              from 'react'
 import { FC }             from 'react'
 
-import { Box }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { Button }         from '@ui/button'
-import { Layout }         from '@ui/layout'
-import { NextLink }       from '@ui/link'
-import { Logo }           from '@ui/logo'
-import { MenuIcon }       from '@ui/icons'
-import { Condition }      from '@ui/condition'
+import {useReactiveVar}     from '@apollo/client'
 
-import { NavigationList } from './navigation-list'
-import { SizeButton }     from './size-button'
-import { SizeButtonCard } from './size-button'
-import {SizeButtonDropdown} from "./size-button/size-button.dropdown";
+import { SizeButtonDropdown } from './size-button/size-button.dropdown'
+
+import { Box }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Text }               from '@ui/text'
+import { Button }             from '@ui/button'
+import { Layout }             from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Logo }               from '@ui/logo'
+import { MenuIcon }           from '@ui/icons'
+import { Condition }          from '@ui/condition'
+
+import { NavigationList }     from './navigation-list'
+import { SizeButton }         from './size-button'
+import { SizeButtonCard }     from './size-button'
+
+import { checkedRadiusVar } from '@store/chosen-radius'
 
 const NavigationDark: FC = () => {
-  const [isChecked, setIsChecked] = useState<boolean>(false)
+  const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
 
   return (
     <Box minWidth={['100%', '1440px', '1440px']} minHeight={[80, 104, 104]}>
@@ -38,16 +43,16 @@ const NavigationDark: FC = () => {
           <Box display={['none', 'flex', 'flex']} width={410} alignItems='center'>
             <NavigationList />
           </Box>
-          <Box width={[176, 201, 201]}>
+          <Box width={[176, 201, 201]} zIndex={1}>
             <Layout display={['flex', 'none', 'none']}>
               <SizeButtonCard />
             </Layout>
             <Layout display={['none', 'flex', 'flex']}>
               <SizeButton />
-              <Condition match={!isChecked}>
-                <SizeButtonDropdown />
-              </Condition>
             </Layout>
+            <Condition match={checkedRadius}>
+              <SizeButtonDropdown />
+            </Condition>
             <Layout flexBasis={16} />
             <NextLink href='/booking'>
               <Box width={[124, 137, 137]} height={[40, 48, 48]}>
