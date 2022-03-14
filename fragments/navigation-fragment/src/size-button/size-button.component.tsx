@@ -62,7 +62,7 @@ const SizeButton: FC = () => {
               <WheelIcon width={24} height={24} color={getColor()} />
             </Condition>
             <Condition match={isRadiusSelected}>
-              <Text>{radius}</Text>
+              <Text fontWeight='bold' fontSize='small'>{radius}</Text>
             </Condition>
           </Layout>
         </Button>

@@ -17,7 +17,7 @@ const Hero: FC = () => (
   <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center'>
     <Layout flexBasis={[20, 80, 80]} />
     <Column width='100%'>
-      <Layout flexBasis={[120, 267, 267]} />
+      <Layout flexBasis={[120, 267, 367]} />
       <Box width={['100%', '900px', '900px']} height={[240, 201, 201]}>
         <Layout>
           <Text fontSize='giant' fontWeight='bold' color='white'>

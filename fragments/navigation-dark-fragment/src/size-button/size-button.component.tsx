@@ -50,7 +50,7 @@ const SizeButton: FC = () => {
       </Layout>
       <Layout width='100%' display={['none', 'flex', 'flex']}>
         <Button
-          color={isRadiusSelected || isChecked ? 'secondary' : 'darkWheel'}
+          color={checkedRadius ? 'secondary' : 'darkWheel'}
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
           onClick={() => setIsChecked(!isChecked)}

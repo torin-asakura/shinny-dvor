@@ -28,6 +28,7 @@ const SizeButtonDropdown: FC = () => {
       position='absolute'
       backgroundColor='white'
       justifyContent='center'
+      boxShadow='deep'
     >
       <Column justifyContent='space-around'>
         {availableRadii.map((item) => (

@@ -26,7 +26,7 @@ const NavigationDark: FC = () => {
   const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
 
   return (
-    <Box minWidth={['100%', '1440px', '1440px']} minHeight={[80, 104, 104]}>
+    <Box minWidth={['100%', '1440px', '1440px']} minHeight={[80, 104, 104]} position={'fixed'}>
       <Layout flexBasis={[20, 32, 32]} />
       <Column width='100%'>
         <Layout flexBasis={[20, 28, 28]} />
