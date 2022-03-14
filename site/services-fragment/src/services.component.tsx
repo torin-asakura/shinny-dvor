@@ -1,24 +1,30 @@
-import React              from 'react'
-import { FC }             from 'react'
-import { useReactiveVar } from '@apollo/client'
+import React                        from 'react'
+import { FC }                       from 'react'
 
-import { Condition }      from '@ui/condition'
-import { Divider }        from '@ui/divider'
-import { Button }         from '@ui/button'
-import { Box }            from '@ui/layout'
-import { NextLink }       from '@ui/link'
-import { Row }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Text }           from '@ui/text'
-import { chosenVar }      from '@store/chosen-radius'
+import { useReactiveVar }           from '@apollo/client'
 
-import { AvailableRadii } from './available-radii'
-import { ServicesList }   from './services-list'
-import { ChosenRadius }   from './chosen-radius'
+import { chosenVar }                from '@store/chosen-radius'
+import { checkedRadiusServicesVar } from '@store/chosen-radius'
+
+import { Condition }                from '@ui/condition'
+import { Divider }                  from '@ui/divider'
+import { Button }                   from '@ui/button'
+import { Box }                      from '@ui/layout'
+import { NextLink }                 from '@ui/link'
+import { Row }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Text }                     from '@ui/text'
+
+import { AvailableRadii }           from './available-radii'
+import { AvailableRadiiTile }       from './available-radii'
+import { ServicesList }             from './services-list'
+import { ChosenRadius }             from './chosen-radius'
 
 const Services: FC = () => {
   const isSizeChosen = useReactiveVar(chosenVar)
+  const isCheckedRadius = useReactiveVar<boolean>(checkedRadiusServicesVar)
+  console.log(isCheckedRadius)
   return (
     <Box width='100%' justifyContent='center' id='services'>
       <Column minWidth={['100%', '100%', '1440px']}>
@@ -50,6 +56,10 @@ const Services: FC = () => {
                     </Layout>
                   </NextLink>
                 </Row>
+              </Condition>
+              <Layout flexBasis={16} />
+              <Condition match={isCheckedRadius}>
+                <AvailableRadiiTile />
               </Condition>
             </Column>
             <Column width={['100%', '843px', '843px']}>
