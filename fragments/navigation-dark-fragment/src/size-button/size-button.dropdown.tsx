@@ -21,29 +21,31 @@ const SizeButtonDropdown: FC = () => {
   return (
     <Box
       zIndex={2}
-      position='absolute'
       top={90}
+      height={616}
+      width={56}
+      borderRadius='32px'
+      position='absolute'
+      backgroundColor='white'
+      justifyContent='center'
     >
-      <Layout flexBasis={40} />
-        <Column height={[108, 48, 48]}>
-          {availableRadii.map((item) => (
-            <>
-            <Layout flexBasis={50}>
-              <Box width={48} height={48} backgroundColor={'white'} borderRadius={5}>
-                <Button color='radius' onClick={() => {
-                  setChosenRadius({ item })
-                  checkedRadiusVar(false)
-                }}
-                >
-                  <Layout>
-                    <Text fontSize='small' fontWeight={'medium'}>{item}</Text>
-                  </Layout>
-                </Button>
-              </Box>
-            </Layout>
-            </>
-          ))}
-        </Column>
+      <Column justifyContent='space-around'>
+        {availableRadii.map((item) => (
+          <>
+            <Box width={48} height={48}>
+              <Button color='radius' onClick={() => {
+                setChosenRadius({ item })
+                checkedRadiusVar(false)
+              }}
+              >
+                <Layout>
+                  <Text fontSize='small' fontWeight={'medium'}>{item}</Text>
+                </Layout>
+              </Button>
+            </Box>
+          </>
+        ))}
+      </Column>
     </Box>
   )
 }

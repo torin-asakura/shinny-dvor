@@ -18,18 +18,19 @@ import { WheelIcon }        from '@ui/icons'
 const SizeButton: FC = () => {
   const isRadiusSelected = useReactiveVar<boolean>(chosenVar)
   const radius = useReactiveVar<string>(radiusVar)
-  const [isActive, setIsActive] = useState<boolean>(false)
+  const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
+  const [, setIsActive] = useState<boolean>(false)
   const [isChecked, setIsChecked] = useState<boolean>(false)
 
   return (
     <Box
       width={[40, 48, 48]}
       height={[40, 48, 48]}
-      onClick={() => checkedRadiusVar(!isChecked)}
+      onClick={() => checkedRadiusVar(!checkedRadius)}
     >
       <Layout width='100%' display={['flex', 'none', 'none']}>
         <Button
-          color='darkWheel'
+          color={isRadiusSelected || isChecked  ? 'secondary' : 'darkWheel'}
           size='small'
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
@@ -37,10 +38,10 @@ const SizeButton: FC = () => {
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={20} height={20} color={isActive ? 'black' : 'white'} />
+              <WheelIcon width={20} height={20} color={checkedRadius ? 'black' : 'white'} />
             </Condition>
             <Condition match={isRadiusSelected}>
-              <Text fontWeight='bold' fontSize='small'>
+              <Text fontWeight='medium' fontSize='small'>
                 {radius}
               </Text>
             </Condition>
@@ -49,17 +50,17 @@ const SizeButton: FC = () => {
       </Layout>
       <Layout width='100%' display={['none', 'flex', 'flex']}>
         <Button
-          color='darkWheel'
+          color={isRadiusSelected || isChecked ? 'secondary' : 'darkWheel'}
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
           onClick={() => setIsChecked(!isChecked)}
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={24} height={24} color={isActive ? 'black' : 'white'} />
+              <WheelIcon width={24} height={24} color={isChecked ? 'black' : 'white'} />
             </Condition>
             <Condition match={isRadiusSelected}>
-              <Text>{radius}</Text>
+              <Text fontWeight='medium' fontSize='small'>{radius}</Text>
             </Condition>
           </Layout>
         </Button>

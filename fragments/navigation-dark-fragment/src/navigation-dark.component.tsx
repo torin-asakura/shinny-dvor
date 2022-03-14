@@ -1,7 +1,9 @@
-import React              from 'react'
-import { FC }             from 'react'
+import React                  from 'react'
+import { FC }                 from 'react'
 
-import {useReactiveVar}     from '@apollo/client'
+import { useReactiveVar }     from '@apollo/client'
+
+import { checkedRadiusVar }   from '@store/chosen-radius'
 
 import { SizeButtonDropdown } from './size-button/size-button.dropdown'
 
@@ -19,8 +21,6 @@ import { Condition }          from '@ui/condition'
 import { NavigationList }     from './navigation-list'
 import { SizeButton }         from './size-button'
 import { SizeButtonCard }     from './size-button'
-
-import { checkedRadiusVar } from '@store/chosen-radius'
 
 const NavigationDark: FC = () => {
   const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
@@ -49,10 +49,10 @@ const NavigationDark: FC = () => {
             </Layout>
             <Layout display={['none', 'flex', 'flex']}>
               <SizeButton />
+              <Condition match={checkedRadius}>
+                <SizeButtonDropdown />
+              </Condition>
             </Layout>
-            <Condition match={checkedRadius}>
-              <SizeButtonDropdown />
-            </Condition>
             <Layout flexBasis={16} />
             <NextLink href='/booking'>
               <Box width={[124, 137, 137]} height={[40, 48, 48]}>
