@@ -30,7 +30,7 @@ const AvailableRadiiTile: FC = () => {
       display={['none', 'none', 'flex']}
     >
       <Row>
-        <Layout flexBasis={8} />
+        <Layout flexBasis={4} />
         <Column>
           <Layout flexBasis={8} />
           <Row flexWrap='wrap' justifyContent='center' height='100%'>
@@ -38,8 +38,9 @@ const AvailableRadiiTile: FC = () => {
               <>
                 <Layout flexBasis={4} />
                 <Box width={56} height={56}>
+                  <Layout width={10}>
                   <Button
-                    height={56}
+                    size='large'
                     color='radius'
                     onClick={() => {
                       setChosenRadius({ item })
@@ -50,12 +51,13 @@ const AvailableRadiiTile: FC = () => {
                       <Text fontSize='small' fontWeight='bold'>{item}</Text>
                     </Layout>
                   </Button>
+                </Layout>
                 </Box>
                 <Layout flexBasis={4} />
               </>
             ))}
           </Row>
-          <Layout flexBasis={8} />
+
         </Column>
       </Row>
     </Box>

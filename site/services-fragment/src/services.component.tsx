@@ -24,7 +24,7 @@ import { ChosenRadius }             from './chosen-radius'
 const Services: FC = () => {
   const isSizeChosen = useReactiveVar(chosenVar)
   const isCheckedRadius = useReactiveVar<boolean>(checkedRadiusServicesVar)
-  console.log(isCheckedRadius)
+
   return (
     <Box width='100%' justifyContent='center' id='services'>
       <Column minWidth={['100%', '100%', '1440px']}>
@@ -50,7 +50,7 @@ const Services: FC = () => {
                   <Layout flexBasis={16} />
                   <NextLink href='/services'>
                     <Layout width={180}>
-                      <Button color='secondary' size='large'>
+                      <Button color='secondary' size='large' disabled={isCheckedRadius}>
                         Button
                       </Button>
                     </Layout>

@@ -19,23 +19,17 @@ const ChosenRadius: FC = () => {
   const [isChecked, setIsChecked] = useState<boolean>(false)
 
   return (
-    <Box
-      width={48}
-      height={48}
-      backgroundColor='lightGray'
-      onClick={() => checkedRadiusServicesVar(!checkedRadiusServices)}
-    >
-      <Layout width='100%'>
+    <Box onClick={() => checkedRadiusServicesVar(!checkedRadiusServices)}>
+      <Layout width={'60px'}>
         <Button
           color={checkedRadiusServices ? 'primary' : 'radius'}
-          size='small'
+          size='large'
           onClick={() => setIsChecked(!isChecked)}
         >
           <Layout>
             <Text fontWeight='bold' fontSize='small'>{radius}</Text>
           </Layout>
         </Button>
-
       </Layout>
     </Box>
   )
