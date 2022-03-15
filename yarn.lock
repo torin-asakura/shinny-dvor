@@ -215,9 +215,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/link@npm:^0.0.4":
-  version: 0.0.4
-  resolution: "@atls-ui-parts/link@npm:0.0.4"
+"@atls-ui-parts/link@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@atls-ui-parts/link@npm:0.0.5"
   dependencies:
     "@atls-ui-parts/text": 0.0.6
   peerDependencies:
@@ -225,7 +225,7 @@ __metadata:
     next: "*"
     react: ^17.0.1
     styled-system: ^5.1.5
-  checksum: 0e993ce5e36e7d7c43ea19bcc77ab241ff710982808cf7ef62af9afe68a1f34fd32f983821802c383bd2c5eae503186fb866ff04a323fed77dcd8c8b3d8cb060
+  checksum: c11912f1bd908a64896ea31a5d321bad948d724b1027ff9b3d8feb75c8410e146315c99495e44926c13cffe82aa648b0f6d030da3957e5fa0fca0d49597b0103
   languageName: node
   linkType: hard
 
@@ -4086,7 +4086,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
-    "@atls-ui-parts/link": ^0.0.4
+    "@atls-ui-parts/link": ^0.0.5
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^17.0.9
