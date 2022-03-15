@@ -20,6 +20,7 @@
     "styled-system": "^5.1.5"
   },
   "dependencies": {
-    "@atls-ui-parts/link": "^0.0.5"
+    "@atls-ui-parts/link": "^0.0.5",
+    "@ui/text": "workspace:ui/text"
   }
 }

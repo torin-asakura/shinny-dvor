@@ -13,7 +13,7 @@ import { Row }                from '@ui/layout'
 import { Text }               from '@ui/text'
 import { Button }             from '@ui/button'
 import { Layout }             from '@ui/layout'
-import { NextLink }           from '@ui/link'
+import { Link }               from '@ui/link'
 import { Logo }               from '@ui/logo'
 import { MenuIcon }           from '@ui/icons'
 import { Condition }          from '@ui/condition'
@@ -54,7 +54,7 @@ const NavigationDark: FC = () => {
               </Condition>
             </Layout>
             <Layout flexBasis={16} />
-            <NextLink href='/booking'>
+            <Link href='/booking'>
               <Box width={[124, 137, 137]} height={[40, 48, 48]}>
                 <Layout width='100%' display={['flex', 'none', 'none']}>
                   <Button size='small'>
@@ -69,7 +69,7 @@ const NavigationDark: FC = () => {
                   </Button>
                 </Layout>
               </Box>
-            </NextLink>
+            </Link>
           </Box>
         </Row>
         <Layout flexBasis={[20, 28, 28]} />

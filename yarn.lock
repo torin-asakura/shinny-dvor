@@ -4091,6 +4091,7 @@ __metadata:
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^17.0.9
     "@types/styled-system": ^5
+    "@ui/text": "workspace:ui/text"
     next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2

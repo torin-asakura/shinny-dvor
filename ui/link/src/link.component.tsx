@@ -4,7 +4,7 @@ import styled                from '@emotion/styled'
 import { createBaseStyles }  from '@atls-ui-parts/link'
 import { createNextLink }    from '@atls-ui-parts/link'
 import { createNextNavLink } from '@atls-ui-parts/link'
-import { Text }              from '@atls-ui-proto/text'
+import { Text }              from '@ui/text'
 
 export default {
   title: 'Components/Link',
