@@ -5,8 +5,6 @@ import { useReactiveVar }     from '@apollo/client'
 
 import { checkedRadiusVar }   from '@store/chosen-radius'
 
-import { SizeButtonDropdown } from './size-button/size-button.dropdown'
-
 import { Box }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Row }                from '@ui/layout'
@@ -21,6 +19,7 @@ import { Condition }          from '@ui/condition'
 import { NavigationList }     from './navigation-list'
 import { SizeButton }         from './size-button'
 import { SizeButtonCard }     from './size-button'
+import { SizeButtonDropdown } from './size-button/size-button.dropdown'
 
 const NavigationDark: FC = () => {
   const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)

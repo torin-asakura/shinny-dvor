@@ -2,21 +2,21 @@ import React              from 'react'
 import { FC }             from 'react'
 
 import { Box }            from '@ui/layout'
-import { NextLink }       from '@ui/link'
+import { Link }           from '@ui/link'
 
 import { NavigationItem } from '../navigation-item'
 
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-    <NextLink href='/services'>
+    <Link path='/services'>
       <NavigationItem name='services' />
-    </NextLink>
-    <NextLink href='/contacts'>
+    </Link>
+    <Link path='/contacts'>
       <NavigationItem name='contacts' />
-    </NextLink>
-    <NextLink href='/blog'>
+    </Link>
+    <Link path='/blog'>
       <NavigationItem name='blog' />
-    </NextLink>
+    </Link>
   </Box>
 )
 
