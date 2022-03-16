@@ -9,13 +9,16 @@ import { NavigationItem } from '../navigation-item'
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     <NextNavLink path='/services'>
-      <NavigationItem name='services' />
+      services
+      {/*<NavigationItem name='services' />*/}
     </NextNavLink>
     <NextNavLink path='/contacts'>
-      <NavigationItem name='contacts' />
+      contacts
+      {/*<NavigationItem name='contacts' />*/}
     </NextNavLink>
     <NextNavLink path='/blog'>
-      <NavigationItem name='blog' />
+      blog
+      {/*<NavigationItem name='blog' />*/}
     </NextNavLink>
   </Box>
 )
