@@ -3,22 +3,18 @@ import { FC }             from 'react'
 
 import { Box }            from '@ui/layout'
 import { NextNavLink }    from '@ui/link'
-
-import { NavigationItem } from '../navigation-item'
+import { Text }           from '@ui/text'
 
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     <NextNavLink path='/services'>
-      services
-      {/*<NavigationItem name='services' />*/}
+      <Text>services</Text>
     </NextNavLink>
     <NextNavLink path='/contacts'>
-      contacts
-      {/*<NavigationItem name='contacts' />*/}
+      <Text>contacts</Text>
     </NextNavLink>
     <NextNavLink path='/blog'>
-      blog
-      {/*<NavigationItem name='blog' />*/}
+      <Text>blog</Text>
     </NextNavLink>
   </Box>
 )

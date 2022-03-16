@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React                   from 'react'
 import { FC }                  from 'react'
 import { useState }            from 'react'
 
@@ -12,23 +12,20 @@ import { NavigationItemProps } from './navigation-item.interface'
 
 const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
   const [hover, setHover] = useState<boolean>(false)
-  const [pressed, setPressed] = useState<boolean>(false)
-console.log(pressed)
+
   return (
     <Button
       size='ghost'
       color='transparent'
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      onClick={() => setPressed(!pressed)}
     >
       <Column>
         <Layout>
           <Text color={hover ? 'blue' : 'black'} fontWeight='medium'>{name}</Text>
         </Layout>
-        <Divider color={pressed ? 'deepBlue' : 'transparent'} weight={2} />
         <Layout flexBasis={8} />
-
+        <Divider color={'blue'} weight={2} />
       </Column>
     </Button>
   )

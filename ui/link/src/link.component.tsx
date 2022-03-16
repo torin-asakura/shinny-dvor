@@ -10,6 +10,8 @@ const BaseLink = styled(Text.withComponent('a'))<{ active: boolean }>(
   createBaseStyles(),
   ({ active }) => ({
     color: active ? 'blue' : 'black',
+    borderBottom: active ? '2px solid blue' : '',
+    paddingBottom: active ? '6px' : ''
   })
 )
 
