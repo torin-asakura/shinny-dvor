@@ -41,10 +41,9 @@ const Hero: FC = () => (
               <Text color='white' fontWeight='medium' fontFamily='primary'>
                 Scrollspy
               </Text>
-              <Layout flexBasis={4} />
-            </Layout>
-            <Layout>
-              <ArrowDownIcon width={20} height={20} />
+              <Layout>
+                <ArrowDownIcon width={20} height={20} />
+              </Layout>
             </Layout>
           </Link>
         </Box>
