@@ -7,7 +7,7 @@ import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 import { Button }         from '@ui/button'
 import { Layout }         from '@ui/layout'
-import { NextLink }           from '@ui/link'
+import { NextLink }       from '@ui/link'
 import { Logo }           from '@ui/logo'
 import { MenuIcon }       from '@ui/icons'
 
