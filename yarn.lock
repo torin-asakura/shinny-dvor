@@ -2059,6 +2059,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -2089,6 +2090,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -2914,6 +2916,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     react-helmet: "*"
@@ -4092,13 +4095,13 @@ __metadata:
     "@types/react-dom": ^17.0.9
     "@types/styled-system": ^5
     "@ui/text": "workspace:ui/text"
-    next: ^12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"

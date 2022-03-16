@@ -54,7 +54,7 @@ const NavigationDark: FC = () => {
               </Condition>
             </Layout>
             <Layout flexBasis={16} />
-            <Link href='/booking'>
+            <Link path='/booking'>
               <Box width={[124, 137, 137]} height={[40, 48, 48]}>
                 <Layout width='100%' display={['flex', 'none', 'none']}>
                   <Button size='small'>

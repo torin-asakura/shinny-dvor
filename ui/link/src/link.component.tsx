@@ -6,10 +6,6 @@ import { createNextLink }    from '@atls-ui-parts/link'
 import { createNextNavLink } from '@atls-ui-parts/link'
 import { Text }              from '@ui/text'
 
-export default {
-  title: 'Components/Link',
-}
-
 const BaseLink = styled(Text.withComponent('a'))<{ active: boolean }>(
   createBaseStyles(),
   ({ active }) => ({
