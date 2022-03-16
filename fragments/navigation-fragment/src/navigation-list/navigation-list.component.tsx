@@ -8,13 +8,13 @@ import { Text }           from '@ui/text'
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     <NextNavLink path='/services'>
-      <Text>services</Text>
+      <Text fontWeight='medium'>services</Text>
     </NextNavLink>
     <NextNavLink path='/contacts'>
-      <Text>contacts</Text>
+      <Text fontWeight='medium'>contacts</Text>
     </NextNavLink>
     <NextNavLink path='/blog'>
-      <Text>blog</Text>
+      <Text fontWeight='medium'>blog</Text>
     </NextNavLink>
   </Box>
 )
