@@ -35,7 +35,7 @@ const BookingPage: FC = () => {
             <Logo />
           </Layout>
           <Layout>
-            <NextLink href='/'>
+            <NextLink path='/'>
               <Button size='ghost' color='transparent'>
                 <Box
                   width={[40, 48, 48]}

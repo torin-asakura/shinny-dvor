@@ -21,7 +21,7 @@ const Success: FC = () => (
       <Text>Text</Text>
     </Layout>
     <Layout flexBasis={32} />
-    <NextLink href='/'>
+    <NextLink path='/'>
       <Box width='100%'>
         <Button color='secondary'>Button</Button>
       </Box>

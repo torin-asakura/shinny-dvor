@@ -26,7 +26,7 @@ const Hero: FC = () => (
         </Layout>
       </Box>
       <Layout flexBasis={32} />
-      <NextLink href='/booking'>
+      <NextLink path='/booking'>
         <Layout width={['100%', '180px', '180px']}>
           <Button>Button</Button>
         </Layout>

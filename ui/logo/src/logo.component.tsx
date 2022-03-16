@@ -8,7 +8,7 @@ import { Box }       from '@ui/layout'
 import { LogoProps } from './logo.interface'
 
 const Logo: FC<LogoProps> = ({ ...props }) => (
-  <NextLink href='/'>
+  <NextLink path='/'>
     <Box display={['flex', 'none', 'none']}>
       <LogoIcon width={48} height={32} {...props} />
     </Box>

@@ -7,7 +7,7 @@ import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 import { Button }         from '@ui/button'
 import { Layout }         from '@ui/layout'
-import { Link }           from '@ui/link'
+import { NextLink }           from '@ui/link'
 import { Logo }           from '@ui/logo'
 import { MenuIcon }       from '@ui/icons'
 
@@ -35,7 +35,7 @@ const Navigation: FC = () => (
         <Box width={[176, 201, 201]}>
           <SizeButton />
           <Layout flexBasis={16} />
-          <Link path='/booking'>
+          <NextLink path='/booking'>
             <Box width={[124, 137, 137]} height={[40, 48, 48]}>
               <Layout width='100%' display={['flex', 'none', 'none']}>
                 <Button size='small'>
@@ -50,7 +50,7 @@ const Navigation: FC = () => (
                 </Button>
               </Layout>
             </Box>
-          </Link>
+          </NextLink>
         </Box>
       </Row>
       <Layout flexBasis={[20, 28, 28]} />

@@ -21,6 +21,7 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "next": "*"
   }
 }

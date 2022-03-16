@@ -48,7 +48,7 @@ const Services: FC = () => {
                 <Row>
                   <ChosenRadius />
                   <Layout flexBasis={16} />
-                  <NextLink href='/services'>
+                  <NextLink path='/services'>
                     <Layout width={180}>
                       <Button color='secondary' size='large' disabled={isCheckedRadius}>
                         Button

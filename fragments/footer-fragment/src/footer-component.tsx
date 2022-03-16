@@ -25,17 +25,17 @@ const Footer: FC = () => (
               <Box display={['none', 'flex', 'flex']} width={392} alignItems='center'>
                 <Layout flexBasis={60} />
                 <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                  <NextLink href='/services'>
+                  <NextLink path='/services'>
                     <Layout>
                       <Text color='black' fontWeight='medium'>Услуги</Text>
                     </Layout>
                   </NextLink>
-                  <NextLink href='/contacts'>
+                  <NextLink path='/contacts'>
                     <Layout>
                       <Text color='black' fontWeight='medium'>Контакты</Text>
                     </Layout>
                   </NextLink>
-                  <NextLink href='/blog'>
+                  <NextLink path='/blog'>
                     <Layout>
                       <Text color='black' fontWeight='medium'>Блог</Text>
                     </Layout>
@@ -48,17 +48,17 @@ const Footer: FC = () => (
           <Layout flexBasis={[24, 40, 40]} />
           <Box width={90} height={136} display={['flex', 'none', 'none']}>
             <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-              <NextLink href='/services'>
+              <NextLink path='/services'>
                 <Layout>
                   <Text color='black' fontWeight='medium'>Услуги</Text>
                 </Layout>
               </NextLink>
-              <NextLink href='/contacts'>
+              <NextLink path='/contacts'>
                 <Layout>
                   <Text color='black' fontWeight='medium'>Контакты</Text>
                 </Layout>
               </NextLink>
-              <NextLink href='/blog'>
+              <NextLink path='/blog'>
                 <Layout>
                   <Text color='black' fontWeight='medium'>Блог</Text>
                 </Layout>
