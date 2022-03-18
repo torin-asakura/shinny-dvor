@@ -3,10 +3,10 @@ import { FC }          from 'react'
 
 import { useHover }    from '@ui/utils'
 
-import { KnobProps }   from './knob.interface'
-import { InnerCircle } from './inner-circle'
-import { OuterCircle } from './outer-circle'
 import { Container }   from './container'
+import { InnerCircle } from './inner-circle'
+import { KnobProps }   from './knob.interface'
+import { OuterCircle } from './outer-circle'
 
 const Knob: FC<KnobProps> = (props) => {
   const [hover, hoverProps] = useHover()

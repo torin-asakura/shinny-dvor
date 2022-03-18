@@ -1,17 +1,17 @@
 import React               from 'react'
 import { FC }              from 'react'
 
-import { Box }             from '@ui/layout'
 import { Button }          from '@ui/button'
+import { Divider }         from '@ui/divider'
 import { ArrowDownIcon }   from '@ui/icons'
-import { Text }            from '@ui/text'
+import { Box }             from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Link }            from '@ui/link'
-import { Divider }         from '@ui/divider'
 import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
+import { Text }            from '@ui/text'
 
 const Hero: FC = () => (
   <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center'>

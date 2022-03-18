@@ -20,8 +20,8 @@
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
-    "react-dom": "*",
-    "next": "*"
+    "react-dom": "*"
   }
 }

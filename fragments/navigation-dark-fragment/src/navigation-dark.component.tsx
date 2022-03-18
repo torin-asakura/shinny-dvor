@@ -1,20 +1,19 @@
+import { useReactiveVar }     from '@apollo/client'
+
 import React                  from 'react'
 import { FC }                 from 'react'
 
-import { useReactiveVar }     from '@apollo/client'
-
-import { checkedRadiusVar }   from '@store/chosen-radius'
-
+import { Button }             from '@ui/button'
+import { Condition }          from '@ui/condition'
+import { MenuIcon }           from '@ui/icons'
 import { Box }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
-import { Button }             from '@ui/button'
 import { Layout }             from '@ui/layout'
-import { NextLink }               from '@ui/link'
+import { NextLink }           from '@ui/link'
 import { Logo }               from '@ui/logo'
-import { MenuIcon }           from '@ui/icons'
-import { Condition }          from '@ui/condition'
+import { Text }               from '@ui/text'
+import { checkedRadiusVar }   from '@store/chosen-radius'
 
 import { NavigationList }     from './navigation-list'
 import { SizeButton }         from './size-button'
@@ -75,7 +74,7 @@ const NavigationDark: FC = () => {
       </Column>
       <Layout flexBasis={[20, 32, 32]} />
     </Box>
-)
+  )
 }
 
 export { NavigationDark }

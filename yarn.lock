@@ -204,7 +204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/layout@npm:0.0.2, @atls-ui-parts/layout@npm:^0.0.2":
+"@atls-ui-parts/layout@npm:0.0.2":
   version: 0.0.2
   resolution: "@atls-ui-parts/layout@npm:0.0.2"
   peerDependencies:
@@ -212,6 +212,17 @@ __metadata:
     react: ^17.0.1
     styled-system: ^5.1.5
   checksum: 0c1e7eff5e46cf2dd865fec7070fdfea03f18430b3ed37b23bbb4d639a7b14134ff00e7bc94f2877f09ae8266f6b7ab7cd9c0f5522921ae3529e49cb8f4be124
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/layout@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/layout@npm:0.0.3"
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+    styled-system: ^5.1.5
+  checksum: 5562257045e112465c59332d9c1c73b3e01dca0aaabb0c4b0e79b0b2f895dcbee146795aab14e5c252e29677b46abcecec126fcf1b785534ee7d490b066aeacb
   languageName: node
   linkType: hard
 
@@ -607,6 +618,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/config-prettier@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls/config-prettier@npm:0.0.3"
+  dependencies:
+    prettier: ^2.5.1
+  checksum: 413e3c3b4decd474452a4a5ef70855ecc48704b639eae2072748478101fef7b0104327539c25226f36168931c1ad05e58a7f41d9f005592eab378bbc692fa568
+  languageName: node
+  linkType: hard
+
 "@atls/config-typescript@npm:0.0.1":
   version: 0.0.1
   resolution: "@atls/config-typescript@npm:0.0.1"
@@ -722,6 +742,21 @@ __metadata:
     globby: "*"
     prettier: "*"
   checksum: ab978f7e0a33bcc4072bca173bdf97d0a426b701f3350d426a5890c315ac81bb740b1a6af455a6c9b06114a442244472bd784ffc2f13230addd80e8d9e0b8062
+  languageName: node
+  linkType: hard
+
+"@atls/prettier-plugin@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls/prettier-plugin@npm:0.0.3"
+  dependencies:
+    globby: ^11.0.4
+    import-sort: ^6.0.0
+    import-sort-parser: ^6.0.0
+    import-sort-parser-typescript: ^6.0.0
+    import-sort-style: ^6.0.0
+    prettier: ^2.5.1
+    sort-package-json: ^1.54.0
+  checksum: 46616fca2b6a6dc2444b1ff31e3ad473b15f39d79ecaa12e81bbe4feaa324168fb8c8b47d9d1a38cf3a8ce9d77150a004267960c0149e6ee325e34cb8fe8e650
   languageName: node
   linkType: hard
 
@@ -2028,6 +2063,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -2890,6 +2926,7 @@ __metadata:
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -3039,6 +3076,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/layout": "workspace:ui/layout"
+    "@ui/slider": "workspace:0.0.1"
     "@ui/text": "workspace:ui/text"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -3516,7 +3554,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:*, @types/glob@npm:^7":
+"@types/glob@npm:*, @types/glob@npm:^7, @types/glob@npm:^7.1.1":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
   dependencies:
@@ -3898,7 +3936,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ui/button@workspace:ui/button":
+"@ui/button@workspace:0.0.0, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
@@ -3968,7 +4006,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/condition@workspace:ui/condition":
+"@ui/condition@workspace:0.0.0, @ui/condition@workspace:ui/condition":
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
@@ -3982,7 +4020,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/divider@workspace:ui/divider":
+"@ui/divider@workspace:0.0.0, @ui/divider@workspace:ui/divider":
   version: 0.0.0-use.local
   resolution: "@ui/divider@workspace:ui/divider"
   dependencies:
@@ -4002,12 +4040,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/icons@workspace:ui/icons":
+"@ui/icons@workspace:0.0.0, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
     "@atlantis-lab/prettier-config": ^0.1.12
     "@atlantis-lab/tsconfig": ^0.1.12
+    "@atls/config-prettier": ^0.0.3
+    "@atls/prettier-plugin": ^0.0.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@svgr/core": 5.5.0
@@ -4017,7 +4057,7 @@ __metadata:
     fs-extra-promise: 1.0.1
     glob: ^7.1.7
     glob-promise: 3.4.0
-    prettier: ^2.3.2
+    prettier: 2.5.1
     react: ^17.0.2
     remove: ^0.1.5
     ts-node: 8.10.2
@@ -4065,11 +4105,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace:ui/layout":
+"@ui/layout@workspace:0.0.0, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
-    "@atls-ui-parts/layout": ^0.0.2
+    "@atls-ui-parts/layout": ^0.0.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5
@@ -4207,6 +4247,33 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@ui/slider@workspace:0.0.1, @ui/slider@workspace:ui/slider":
+  version: 0.0.0-use.local
+  resolution: "@ui/slider@workspace:ui/slider"
+  dependencies:
+    "@atls-ui-parts/dom": ^0.0.1
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    "@types/styled-system": ^5
+    "@ui/button": "workspace:0.0.0"
+    "@ui/condition": "workspace:0.0.0"
+    "@ui/divider": "workspace:0.0.0"
+    "@ui/icons": "workspace:0.0.0"
+    "@ui/layout": "workspace:0.0.0"
+    "@ui/text": "workspace:0.0.0"
+    framer-motion: 4.1.7
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@ui/social-links@workspace:ui/social-links":
   version: 0.0.0-use.local
   resolution: "@ui/social-links@workspace:ui/social-links"
@@ -4252,7 +4319,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/text@workspace:ui/text":
+"@ui/text@workspace:0.0.0, @ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
   dependencies:
@@ -6926,17 +6993,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"detect-indent@npm:^6.0.0":
+  version: 6.1.0
+  resolution: "detect-indent@npm:6.1.0"
+  checksum: ab953a73c72dbd4e8fc68e4ed4bfd92c97eb6c43734af3900add963fd3a9316f3bc0578b018b24198d4c31a358571eff5f0656e81a1f3b9ad5c547d58b2d093d
+  languageName: node
+  linkType: hard
+
+"detect-newline@npm:3.1.0, detect-newline@npm:^3.0.0":
+  version: 3.1.0
+  resolution: "detect-newline@npm:3.1.0"
+  checksum: ae6cd429c41ad01b164c59ea36f264a2c479598e61cba7c99da24175a7ab80ddf066420f2bec9a1c57a6bead411b4655ff15ad7d281c000a89791f48cbe939e7
+  languageName: node
+  linkType: hard
+
 "detect-newline@npm:^2.1.0":
   version: 2.1.0
   resolution: "detect-newline@npm:2.1.0"
   checksum: c55146fd5b97a9ce914f17f85a01466c9e8679289e2d390588b027a58f2e090dbc38457923072369c603b8904f982f87b78fee17e48d5706f35571642f4599f8
-  languageName: node
-  linkType: hard
-
-"detect-newline@npm:^3.0.0":
-  version: 3.1.0
-  resolution: "detect-newline@npm:3.1.0"
-  checksum: ae6cd429c41ad01b164c59ea36f264a2c479598e61cba7c99da24175a7ab80ddf066420f2bec9a1c57a6bead411b4655ff15ad7d281c000a89791f48cbe939e7
   languageName: node
   linkType: hard
 
@@ -7806,6 +7880,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-glob@npm:^3.0.3, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
+  version: 3.2.11
+  resolution: "fast-glob@npm:3.2.11"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: f473105324a7780a20c06de842e15ddbb41d3cb7e71d1e4fe6e8373204f22245d54f5ab9e2061e6a1c613047345954d29b022e0e76f5c28b1df9858179a0e6d7
+  languageName: node
+  linkType: hard
+
 "fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.2, fast-glob@npm:^3.2.7":
   version: 3.2.7
   resolution: "fast-glob@npm:3.2.7"
@@ -7816,19 +7903,6 @@ __metadata:
     merge2: ^1.3.0
     micromatch: ^4.0.4
   checksum: 2f4708ff112d2b451888129fdd9a0938db88b105b0ddfd043c064e3c4d3e20eed8d7c7615f7565fee660db34ddcf08a2db1bf0ab3c00b87608e4719694642d78
-  languageName: node
-  linkType: hard
-
-"fast-glob@npm:^3.2.11":
-  version: 3.2.11
-  resolution: "fast-glob@npm:3.2.11"
-  dependencies:
-    "@nodelib/fs.stat": ^2.0.2
-    "@nodelib/fs.walk": ^1.2.3
-    glob-parent: ^5.1.2
-    merge2: ^1.3.0
-    micromatch: ^4.0.4
-  checksum: f473105324a7780a20c06de842e15ddbb41d3cb7e71d1e4fe6e8373204f22245d54f5ab9e2061e6a1c613047345954d29b022e0e76f5c28b1df9858179a0e6d7
   languageName: node
   linkType: hard
 
@@ -8315,6 +8389,13 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"git-hooks-list@npm:1.0.3":
+  version: 1.0.3
+  resolution: "git-hooks-list@npm:1.0.3"
+  checksum: a1dd03d39c1d727ba08a35dbdbdcc6e96de8c4170c942dc95bf787ca6e34998d39fb5295a00242b58a3d265de0b69a0686d0cf583baa6b7830f268542c4576b9
+  languageName: node
+  linkType: hard
+
 "git-up@npm:^4.0.0":
   version: 4.0.5
   resolution: "git-up@npm:4.0.5"
@@ -8457,6 +8538,22 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"globby@npm:10.0.0":
+  version: 10.0.0
+  resolution: "globby@npm:10.0.0"
+  dependencies:
+    "@types/glob": ^7.1.1
+    array-union: ^2.1.0
+    dir-glob: ^3.0.1
+    fast-glob: ^3.0.3
+    glob: ^7.1.3
+    ignore: ^5.1.1
+    merge2: ^1.2.3
+    slash: ^3.0.0
+  checksum: fbff58d2fcaedd9207901f6e3b5341ff885b6d499c3a095f7befde0fd03ec1ea634452a82f81e894e46f6a5d704da44b842ba93066f90dced52adf84d4b8d1cc
+  languageName: node
+  linkType: hard
+
 "globby@npm:^11.0.1, globby@npm:^11.0.3":
   version: 11.0.4
   resolution: "globby@npm:11.0.4"
@@ -8468,6 +8565,20 @@ fsevents@^2.3.2:
     merge2: ^1.3.0
     slash: ^3.0.0
   checksum: d3e02d5e459e02ffa578b45f040381c33e3c0538ed99b958f0809230c423337999867d7b0dbf752ce93c46157d3bbf154d3fff988a93ccaeb627df8e1841775b
+  languageName: node
+  linkType: hard
+
+"globby@npm:^11.0.4":
+  version: 11.1.0
+  resolution: "globby@npm:11.1.0"
+  dependencies:
+    array-union: ^2.1.0
+    dir-glob: ^3.0.1
+    fast-glob: ^3.2.9
+    ignore: ^5.2.0
+    merge2: ^1.4.1
+    slash: ^3.0.0
+  checksum: b4be8885e0cfa018fc783792942d53926c35c50b3aefd3fdcfb9d22c627639dc26bd2327a40a0b74b074100ce95bb7187bfeae2f236856aa3de183af7a02aea6
   languageName: node
   linkType: hard
 
@@ -8787,6 +8898,13 @@ fsevents@^2.3.2:
   version: 4.0.6
   resolution: "ignore@npm:4.0.6"
   checksum: 248f82e50a430906f9ee7f35e1158e3ec4c3971451dd9f99c9bc1548261b4db2b99709f60ac6c6cac9333494384176cc4cc9b07acbe42d52ac6a09cad734d800
+  languageName: node
+  linkType: hard
+
+"ignore@npm:^5.1.1, ignore@npm:^5.2.0":
+  version: 5.2.0
+  resolution: "ignore@npm:5.2.0"
+  checksum: 6b1f926792d614f64c6c83da3a1f9c83f6196c2839aa41e1e32dd7b8d174cef2e329d75caabb62cb61ce9dc432f75e67d07d122a037312db7caa73166a1bdb77
   languageName: node
   linkType: hard
 
@@ -9165,6 +9283,13 @@ fsevents@^2.3.2:
   version: 2.0.0
   resolution: "is-obj@npm:2.0.0"
   checksum: c9916ac8f4621962a42f5e80e7ffdb1d79a3fab7456ceaeea394cd9e0858d04f985a9ace45be44433bf605673c8be8810540fe4cc7f4266fc7526ced95af5a08
+  languageName: node
+  linkType: hard
+
+"is-plain-obj@npm:2.1.0":
+  version: 2.1.0
+  resolution: "is-plain-obj@npm:2.1.0"
+  checksum: cec9100678b0a9fe0248a81743041ed990c2d4c99f893d935545cfbc42876cbe86d207f3b895700c690ad2fa520e568c44afc1605044b535a7820c1d40e38daa
   languageName: node
   linkType: hard
 
@@ -10856,7 +10981,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"merge2@npm:^1.3.0":
+"merge2@npm:^1.2.3, merge2@npm:^1.3.0, merge2@npm:^1.4.1":
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
   checksum: 7268db63ed5169466540b6fb947aec313200bcf6d40c5ab722c22e242f651994619bcd85601602972d3c85bd2cc45a358a4c61937e9f11a061919a1da569b0c2
@@ -11930,6 +12055,15 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"prettier@npm:2.5.1":
+  version: 2.5.1
+  resolution: "prettier@npm:2.5.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
+  languageName: node
+  linkType: hard
+
 "prettier@npm:^1.16.0":
   version: 1.19.1
   resolution: "prettier@npm:1.19.1"
@@ -11945,6 +12079,15 @@ fsevents@^2.3.2:
   bin:
     prettier: bin-prettier.js
   checksum: cc6830588b401b0d742862fe9c46bc9118204fb307c3abe0e49e95b35ed23629573807ffdf9cdd65289c252a0bb51fc0171437f6626ee36378dea80f0ee80b91
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.5.1":
+  version: 2.6.0
+  resolution: "prettier@npm:2.6.0"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 3e527ad62279676778a8404d18174d7ca2365ada4caba6eebbcdd9907d1187afd3bc6ade5b4e5f5d4549bb9fb71e45ca8930d71500017635524f8fc05bc52e93
   languageName: node
   linkType: hard
 
@@ -12969,6 +13112,29 @@ resolve@^2.0.0-next.3:
     atomic-sleep: ^1.0.0
     flatstr: ^1.0.12
   checksum: 189fa8fe5c2dc05d3513fc1a4926a2f16f132fa6fa0b511745a436010cdcd9c1d3b3cb6a9d7c05bd32a965dc77673a5ac0eb0992e920bdedd16330d95323124f
+  languageName: node
+  linkType: hard
+
+"sort-object-keys@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "sort-object-keys@npm:1.1.3"
+  checksum: abea944d6722a1710a1aa6e4f9509da085d93d5fc0db23947cb411eedc7731f80022ce8fa68ed83a53dd2ac7441fcf72a3f38c09b3d9bbc4ff80546aa2e151ad
+  languageName: node
+  linkType: hard
+
+"sort-package-json@npm:^1.54.0":
+  version: 1.54.0
+  resolution: "sort-package-json@npm:1.54.0"
+  dependencies:
+    detect-indent: ^6.0.0
+    detect-newline: 3.1.0
+    git-hooks-list: 1.0.3
+    globby: 10.0.0
+    is-plain-obj: 2.1.0
+    sort-object-keys: ^1.1.3
+  bin:
+    sort-package-json: cli.js
+  checksum: 042a6ce7a41f3ecb1f7861d97cb3ce550ea007bdd482414370da2104c53897f1e618923409fe416fbb48d3d9502be3d23072d8a7ac88c2e4d5c321247adb418f
   languageName: node
   linkType: hard
 

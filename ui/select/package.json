@@ -16,17 +16,17 @@
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*",
-    "react-dom": "*"
-  },
   "devDependencies": {
     "@emotion/css": "^11.7.1",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "react": "^17.0.2",
     "react-dom": "16"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

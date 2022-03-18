@@ -1,13 +1,13 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { screenVar } from '@store/booking'
 import { INITIAL }   from '@store/booking'
 import { Button }    from '@ui/button'
 import { Box }       from '@ui/layout'
 import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
+import { screenVar } from '@store/booking'
 
 const Invalid: FC = () => (
   <Column width='100%'>

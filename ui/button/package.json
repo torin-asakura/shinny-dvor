@@ -2,12 +2,12 @@
   "name": "@ui/button",
   "version": "0.0.0",
   "main": "src/index.ts",
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*",
-    "react-dom": "*",
-    "styled-system": "*"
+  "dependencies": {
+    "@atls-ui-parts/button": "^0.0.4",
+    "@atls-ui-parts/styles": "^0.0.1",
+    "@ui/condition": "workspace:ui/condition",
+    "@ui/theme": "workspace:ui/theme",
+    "styled-tools": "^1.7.2"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",
@@ -17,11 +17,11 @@
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
   },
-  "dependencies": {
-    "@atls-ui-parts/button": "^0.0.4",
-    "@atls-ui-parts/styles": "^0.0.1",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/theme": "workspace:ui/theme",
-    "styled-tools": "^1.7.2"
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
   }
 }

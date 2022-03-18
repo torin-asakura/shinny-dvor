@@ -7,6 +7,9 @@
     "build": "ts-node --project=./tsconfig.compile.json svgr.ts",
     "postbuild": "prettier --write 'src/**/*.{js,ts,tsx}'"
   },
+  "dependencies": {
+    "remove": "^0.1.5"
+  },
   "devDependencies": {
     "@atlantis-lab/prettier-config": "^0.1.12",
     "@atlantis-lab/tsconfig": "^0.1.12",
@@ -29,8 +32,5 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*"
-  },
-  "dependencies": {
-    "remove": "^0.1.5"
   }
 }

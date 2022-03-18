@@ -1,21 +1,17 @@
-import React             from 'react'
-import { FC }            from 'react'
-import { useSelect }     from '@atls-ui-parts/select'
+import { useSelect }    from '@atls-ui-parts/select'
 
-import { DropDownIcon }  from '@ui/icons'
-import { Layout }        from '@ui/layout'
+import React            from 'react'
+import { FC }           from 'react'
 
-import { Button }        from './button'
-import { Menu }          from './menu'
-import { MenuItem }      from './menu-item'
-import { SelectProps }   from './select.interface'
+import { DropDownIcon } from '@ui/icons'
+import { Layout }       from '@ui/layout'
 
-const Select: FC<SelectProps> = ({ items,
-                                   value,
-                                   onChange,
-                                   placeholder,
-                                   setSelectedItem
-}) => {
+import { Button }       from './button'
+import { Menu }         from './menu'
+import { MenuItem }     from './menu-item'
+import { SelectProps }  from './select.interface'
+
+const Select: FC<SelectProps> = ({ items, value, onChange, placeholder, setSelectedItem }) => {
   const { buttonProps, menuProps, getMenuItemProps, renderMenu, selectedItem } = useSelect({
     items,
     onChange,

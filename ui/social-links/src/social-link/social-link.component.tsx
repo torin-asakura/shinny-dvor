@@ -4,10 +4,10 @@ import { useState }        from 'react'
 
 import { Button }          from '@ui/button'
 import { Condition }       from '@ui/condition'
-import { Box }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
 import { VkIcon }          from '@ui/icons'
 import { FacebookIcon }    from '@ui/icons'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
 
 import { SocialLinkProps } from './social-link.interface'
 

@@ -1,12 +1,12 @@
 import React          from 'react'
 import { FC }         from 'react'
 
+import { Button }     from '@ui/button'
 import { Card }       from '@ui/card'
 import { Box }        from '@ui/layout'
 import { Row }        from '@ui/layout'
-import { Text }       from '@ui/text'
-import { Button }     from '@ui/button'
 import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
 import { radiusVar }  from '@store/chosen-radius'
 import { chosenVar }  from '@store/chosen-radius'
 

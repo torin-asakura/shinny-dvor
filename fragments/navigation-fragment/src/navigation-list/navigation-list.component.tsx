@@ -1,9 +1,9 @@
-import React              from 'react'
-import { FC }             from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import { Box }            from '@ui/layout'
-import { NextNavLink }    from '@ui/link'
-import { Text }           from '@ui/text'
+import { Box }         from '@ui/layout'
+import { NextNavLink } from '@ui/link'
+import { Text }        from '@ui/text'
 
 const NavigationList: FC = () => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>

@@ -1,14 +1,15 @@
+import { useReactiveVar } from '@apollo/client'
+
 import React              from 'react'
 import { FC }             from 'react'
 import { useState }       from 'react'
-import { useReactiveVar } from '@apollo/client'
 
-import { Box }            from '@ui/layout'
-import { Condition }      from '@ui/condition'
-import { Text }           from '@ui/text'
 import { Button }         from '@ui/button'
-import { Layout }         from '@ui/layout'
+import { Condition }      from '@ui/condition'
 import { WheelIcon }      from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
 import { chosenVar }      from '@store/chosen-radius'
 import { radiusVar }      from '@store/chosen-radius'
 
@@ -62,7 +63,9 @@ const SizeButton: FC = () => {
               <WheelIcon width={24} height={24} color={getColor()} />
             </Condition>
             <Condition match={isRadiusSelected}>
-              <Text fontWeight='bold' fontSize='small'>{radius}</Text>
+              <Text fontWeight='bold' fontSize='small'>
+                {radius}
+              </Text>
             </Condition>
           </Layout>
         </Button>

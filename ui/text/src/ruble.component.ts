@@ -1,7 +1,8 @@
 import styled            from '@emotion/styled'
-import { color }         from 'styled-system'
+
 /* eslint-disable react/require-default-props */
 import { createElement } from 'react'
+import { color }         from 'styled-system'
 
 interface RubleProps {
   fontSize?: string | string[]

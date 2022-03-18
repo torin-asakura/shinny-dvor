@@ -1,14 +1,14 @@
-import React                        from 'react'
-import { FC }                       from 'react'
-import { useState }                 from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { useState }         from 'react'
 
-import {activeCarBodyVar, activeRadiusVar} from '@store/booking'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Radio }            from '@ui/radio'
+import { activeCarBodyVar } from '@store/booking'
+import { activeRadiusVar }  from '@store/booking'
 
-import { Box }                      from '@ui/layout'
-import { Row }                      from '@ui/layout'
-import { Radio }                    from '@ui/radio'
-
-import { RadioListProps }           from './radio-list.interface'
+import { RadioListProps }   from './radio-list.interface'
 
 const RadioList: FC<RadioListProps> = ({ items, id, initial = '', width = '100%' }) => {
   const [active, setActive] = useState<string>(initial)

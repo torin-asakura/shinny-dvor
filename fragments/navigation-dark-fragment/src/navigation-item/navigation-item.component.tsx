@@ -3,9 +3,9 @@ import { FC }                  from 'react'
 import { useState }            from 'react'
 
 import { Button }              from '@ui/button'
+import { Divider }             from '@ui/divider'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
-import { Divider }             from '@ui/divider'
 import { Text }                from '@ui/text'
 
 import { NavigationItemProps } from './navigation-item.interface'
@@ -24,7 +24,9 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
     >
       <Column>
         <Layout>
-          <Text color='white' fontWeight='medium'>{name}</Text>
+          <Text color='white' fontWeight='medium'>
+            {name}
+          </Text>
         </Layout>
         <Divider color={pressed ? 'white' : 'transparent'} />
       </Column>

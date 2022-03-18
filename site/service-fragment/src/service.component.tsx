@@ -2,6 +2,7 @@ import React                 from 'react'
 import { FC }                from 'react'
 import { useState }          from 'react'
 
+import { ALL_SERVICES }      from '@store/services'
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'
 import { Divider }           from '@ui/divider'
@@ -13,10 +14,9 @@ import { Switch }            from '@ui/switch'
 import { Item }              from '@ui/switch'
 import { Text }              from '@ui/text'
 import { screenVar }         from '@store/services'
-import { ALL_SERVICES }      from '@store/services'
 
-import { ReturnButton }      from './return-button'
 import { AdditionalService } from './additional-service'
+import { ReturnButton }      from './return-button'
 
 const Service: FC = () => {
   // TODO write isTireFitting

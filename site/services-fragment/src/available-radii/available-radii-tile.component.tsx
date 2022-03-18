@@ -1,19 +1,17 @@
 import React                        from 'react'
 import { FC }                       from 'react'
 
-import { radiusVar }                from '@store/chosen-radius'
-import { checkedRadiusServicesVar } from '@store/chosen-radius'
-import { chosenVar }                from '@store/chosen-radius'
-
+import { Button }                   from '@ui/button'
 import { Box }                      from '@ui/layout'
 import { Column }                   from '@ui/layout'
 import { Layout }                   from '@ui/layout'
 import { Row }                      from '@ui/layout'
 import { Text }                     from '@ui/text'
-import { Button }                   from '@ui/button'
+import { radiusVar }                from '@store/chosen-radius'
+import { checkedRadiusServicesVar } from '@store/chosen-radius'
+import { chosenVar }                from '@store/chosen-radius'
 
 import { availableRadii }           from '../../../data'
-
 
 const AvailableRadiiTile: FC = () => {
   const setChosenRadius = ({ item }) => {
@@ -39,25 +37,26 @@ const AvailableRadiiTile: FC = () => {
                 <Layout flexBasis={4} />
                 <Box width={56} height={56}>
                   <Layout width={10}>
-                  <Button
-                    size='large'
-                    color='radius'
-                    onClick={() => {
-                      setChosenRadius({ item })
-                      checkedRadiusServicesVar(false)
-                  }}
-                  >
-                    <Layout>
-                      <Text fontSize='small' fontWeight='bold'>{item}</Text>
-                    </Layout>
-                  </Button>
-                </Layout>
+                    <Button
+                      size='large'
+                      color='radius'
+                      onClick={() => {
+                        setChosenRadius({ item })
+                        checkedRadiusServicesVar(false)
+                      }}
+                    >
+                      <Layout>
+                        <Text fontSize='small' fontWeight='bold'>
+                          {item}
+                        </Text>
+                      </Layout>
+                    </Button>
+                  </Layout>
                 </Box>
                 <Layout flexBasis={4} />
               </>
             ))}
           </Row>
-
         </Column>
       </Row>
     </Box>

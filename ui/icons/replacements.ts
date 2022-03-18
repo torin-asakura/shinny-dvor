@@ -14,8 +14,7 @@
  * />
  * */
 
-const getReplacement =
-  (...themeProps) =>
+const getReplacement = (...themeProps) =>
   (color) => ({
     [color]: `{(theme.colors${themeProps.reduce(
       (str, prop) => `${str}.${prop}`,

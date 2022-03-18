@@ -1,9 +1,9 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { NextLink }  from '@ui/link'
 import { LogoIcon }  from '@ui/icons'
 import { Box }       from '@ui/layout'
+import { NextLink }  from '@ui/link'
 
 import { LogoProps } from './logo.interface'
 

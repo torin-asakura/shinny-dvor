@@ -2,10 +2,10 @@ import React            from 'react'
 import { FC }           from 'react'
 
 import { Button }       from '@ui/button'
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
 import { VkIcon }       from '@ui/icons'
 import { FacebookIcon } from '@ui/icons'
+import { Box }          from '@ui/layout'
+import { Layout }       from '@ui/layout'
 
 const SocialLinksDark: FC = () => (
   <Box width='100%' justifyContent='flex-end'>

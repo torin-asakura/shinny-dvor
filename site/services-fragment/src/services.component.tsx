@@ -1,25 +1,24 @@
+import { useReactiveVar }           from '@apollo/client'
+
 import React                        from 'react'
 import { FC }                       from 'react'
 
-import { useReactiveVar }           from '@apollo/client'
-
-import { chosenVar }                from '@store/chosen-radius'
-import { checkedRadiusServicesVar } from '@store/chosen-radius'
-
+import { Button }                   from '@ui/button'
 import { Condition }                from '@ui/condition'
 import { Divider }                  from '@ui/divider'
-import { Button }                   from '@ui/button'
 import { Box }                      from '@ui/layout'
-import { NextLink }                 from '@ui/link'
 import { Row }                      from '@ui/layout'
 import { Column }                   from '@ui/layout'
 import { Layout }                   from '@ui/layout'
+import { NextLink }                 from '@ui/link'
 import { Text }                     from '@ui/text'
+import { chosenVar }                from '@store/chosen-radius'
+import { checkedRadiusServicesVar } from '@store/chosen-radius'
 
 import { AvailableRadii }           from './available-radii'
 import { AvailableRadiiTile }       from './available-radii'
-import { ServicesList }             from './services-list'
 import { ChosenRadius }             from './chosen-radius'
+import { ServicesList }             from './services-list'
 
 const Services: FC = () => {
   const isSizeChosen = useReactiveVar(chosenVar)

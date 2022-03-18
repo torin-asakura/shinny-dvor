@@ -1,12 +1,12 @@
 import React        from 'react'
 import { FC }       from 'react'
 
-import { Column }   from '@ui/layout'
 import { Button }   from '@ui/button'
+import { Column }   from '@ui/layout'
 import { Box }      from '@ui/layout'
 import { Layout }   from '@ui/layout'
-import { Text }     from '@ui/text'
 import { NextLink } from '@ui/link'
+import { Text }     from '@ui/text'
 
 const Success: FC = () => (
   <Column width='100%'>

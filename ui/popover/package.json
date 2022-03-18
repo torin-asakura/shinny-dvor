@@ -1,8 +1,8 @@
 {
   "name": "@ui/popover",
   "version": "0.0.0",
-  "main": "src/index.ts",
   "license": "MIT",
+  "main": "src/index.ts",
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",

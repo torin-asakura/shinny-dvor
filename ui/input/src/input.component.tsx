@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
-import { forwardRef }               from 'react'
-import { ForwardRefRenderFunction } from 'react'
 import styled                       from '@emotion/styled'
-
-import { useChangeValue }           from '@atls-ui-parts/input'
 import { RawInput }                 from '@atls-ui-parts/input'
+import { useChangeValue }           from '@atls-ui-parts/input'
+
+import React                        from 'react'
+import { ForwardRefRenderFunction } from 'react'
+import { useState }                 from 'react'
+import { forwardRef }               from 'react'
+
 import { Divider }                  from '@ui/divider'
 import { Layout }                   from '@ui/layout'
 import { Column }                   from '@ui/layout'
@@ -25,12 +27,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
   return (
     <Column width='100%'>
       <InputElement {...props} type={type} size={size}>
-        <RawInput
-          ref={ref} {...props}
-          disabled={disabled}
-          value={value}
-          onChange={changeValue}
-        />
+        <RawInput ref={ref} {...props} disabled={disabled} value={value} onChange={changeValue} />
       </InputElement>
       <Layout flexBasis={16} />
       <Divider color={value ? 'primaryBlue' : 'gray'} />

@@ -1,15 +1,15 @@
 import React              from 'react'
 import { FC }             from 'react'
 
+import { Button }         from '@ui/button'
+import { MenuIcon }       from '@ui/icons'
 import { Box }            from '@ui/layout'
 import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
-import { Text }           from '@ui/text'
-import { Button }         from '@ui/button'
 import { Layout }         from '@ui/layout'
 import { NextLink }       from '@ui/link'
 import { Logo }           from '@ui/logo'
-import { MenuIcon }       from '@ui/icons'
+import { Text }           from '@ui/text'
 
 import { NavigationList } from './navigation-list'
 import { SizeButton }     from './size-button'

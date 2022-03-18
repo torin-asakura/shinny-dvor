@@ -5,8 +5,8 @@ import { Box }         from '@ui/layout'
 import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
-import { Text }        from '@ui/text'
 import { SocialLinks } from '@ui/social-links'
+import { Text }        from '@ui/text'
 
 const Contacts: FC = () => (
   <Column width={['100%', '1440px', '1440px']}>
@@ -29,29 +29,17 @@ const Contacts: FC = () => (
         <Column width='100%' justifyContent='space-between'>
           <Column width='100%'>
             <Layout flexDirection='column'>
-              <Text fontWeight='medium'>
-                Text
-              </Text>
+              <Text fontWeight='medium'>Text</Text>
               <Layout flexBasis={8} />
-              <Text fontWeight='regular'>
-                address
-              </Text>
+              <Text fontWeight='regular'>address</Text>
               <Layout flexBasis={24} />
-              <Text fontWeight='medium'>
-                Date
-              </Text>
+              <Text fontWeight='medium'>Date</Text>
               <Layout flexBasis={8} />
-              <Text fontWeight='regular'>
-                time
-              </Text>
+              <Text fontWeight='regular'>time</Text>
               <Layout flexBasis={24} />
-              <Text fontWeight='medium'>
-                Contacts
-              </Text>
+              <Text fontWeight='medium'>Contacts</Text>
               <Layout flexBasis={8} />
-              <Text fontWeight='regular'>
-                text
-              </Text>
+              <Text fontWeight='regular'>text</Text>
             </Layout>
           </Column>
           <Box display={['none', 'flex', 'flex']} width='110px'>

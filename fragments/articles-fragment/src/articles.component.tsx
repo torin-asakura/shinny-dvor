@@ -1,14 +1,14 @@
 import React          from 'react'
 import { FC }         from 'react'
 
-import { screenVar }  from '@store/articles'
 import { ARTICLE }    from '@store/articles'
 import { ImageBlock } from '@ui/image'
 import { Box }        from '@ui/layout'
 import { Row }        from '@ui/layout'
-import { Text }       from '@ui/text'
 import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
+import { screenVar }  from '@store/articles'
 
 const Articles: FC = () => {
   // FIXME take first 3 elements

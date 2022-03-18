@@ -1,15 +1,15 @@
 import React           from 'react'
 import { FC }          from 'react'
 
+import { Divider }     from '@ui/divider'
 import { Box }         from '@ui/layout'
 import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
-import { FooterLogo }  from '@ui/logo'
 import { NextLink }    from '@ui/link'
-import { Divider }     from '@ui/divider'
-import { Text }        from '@ui/text'
+import { FooterLogo }  from '@ui/logo'
 import { SocialLinks } from '@ui/social-links'
+import { Text }        from '@ui/text'
 
 const Footer: FC = () => (
   <Box width='100%'>
@@ -27,17 +27,23 @@ const Footer: FC = () => (
                 <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                   <NextLink path='/services'>
                     <Layout>
-                      <Text color='black' fontWeight='medium'>Услуги</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Услуги
+                      </Text>
                     </Layout>
                   </NextLink>
                   <NextLink path='/contacts'>
                     <Layout>
-                      <Text color='black' fontWeight='medium'>Контакты</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Контакты
+                      </Text>
                     </Layout>
                   </NextLink>
                   <NextLink path='/blog'>
                     <Layout>
-                      <Text color='black' fontWeight='medium'>Блог</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Блог
+                      </Text>
                     </Layout>
                   </NextLink>
                 </Box>
@@ -50,17 +56,23 @@ const Footer: FC = () => (
             <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
               <NextLink path='/services'>
                 <Layout>
-                  <Text color='black' fontWeight='medium'>Услуги</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Услуги
+                  </Text>
                 </Layout>
               </NextLink>
               <NextLink path='/contacts'>
                 <Layout>
-                  <Text color='black' fontWeight='medium'>Контакты</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Контакты
+                  </Text>
                 </Layout>
               </NextLink>
               <NextLink path='/blog'>
                 <Layout>
-                  <Text color='black' fontWeight='medium'>Блог</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Блог
+                  </Text>
                 </Layout>
               </NextLink>
             </Box>
@@ -82,13 +94,13 @@ const Footer: FC = () => (
               <Layout display='flex' flexDirection='column'>
                 <Text>Address</Text>
                 <Layout flexBasis={8} />
-                <Text color="darkGray">Date</Text>
+                <Text color='darkGray'>Date</Text>
               </Layout>
               <Layout flexBasis={80} />
               <Layout display='flex' flexDirection='column'>
                 <Text>Tel</Text>
                 <Layout flexBasis={8} />
-                <Text color="darkGray">Телефон для записи</Text>
+                <Text color='darkGray'>Телефон для записи</Text>
               </Layout>
             </Box>
             <Layout>

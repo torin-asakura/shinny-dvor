@@ -1,15 +1,16 @@
-import React                           from 'react'
-import { FC }                          from 'react'
-import { useState }                    from 'react'
 import styled                          from '@emotion/styled'
 import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
 import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'
 
+import React                           from 'react'
+import { FC }                          from 'react'
+import { useState }                    from 'react'
+
 import { CheckIcon }                   from '@ui/icons'
 
-import { Container }                   from './container'
 import { Box }                         from './box'
+import { Container }                   from './container'
 import { Label }                       from './label'
 
 const Checkbox: FC = ({ children }) => {

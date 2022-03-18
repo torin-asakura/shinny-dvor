@@ -1,6 +1,7 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
-import { prop }                   from 'styled-tools'
+
 import { styleFn }                from 'styled-system'
+import { prop }                   from 'styled-tools'
 
 const getTransparentColorsStyles = (): styleFn => {
   const transparentDefaultColors: styleFn = createAppearanceStyles({

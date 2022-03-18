@@ -1,0 +1,5 @@
+export * from './slide'
+export * from './arrow'
+export * from './dot-nav'
+export * from './slider.component'
+export * from './slides-container'
