@@ -1,12 +1,17 @@
-import prettierConfig   from '@atlantis-lab/prettier-config'
-import svgr             from '@svgr/core'
-import camelcase        from 'camelcase'
-import fs               from 'fs-extra-promise'
-import glob             from 'glob-promise'
-import path             from 'path'
-import prettier         from 'prettier'
+import * as prettierPlugin from '@atls/prettier-plugin'
 
-import { replacements } from './replacements'
+import prettierConfig      from '@atls/config-prettier'
+import svgr                from '@svgr/core'
+
+import camelcase           from 'camelcase'
+import fs                  from 'fs-extra-promise'
+import glob                from 'glob-promise'
+import path                from 'path'
+import parserBabel         from 'prettier/parser-babel'
+import parserTypescript    from 'prettier/parser-typescript'
+import { format }          from 'prettier/standalone'
+
+import { replacements }    from './replacements'
 
 const TARGET_DIR = path.join(__dirname, 'src')
 
@@ -16,8 +21,9 @@ const svgrTemplate = ({ template }, opts, { componentName, jsx }) => {
   return typeScriptTpl.ast`
  import React from 'react'
  import { useTheme } from '@emotion/react'
+ import { IconProps } from '../icons.interfaces'
 
-    export const ${componentName} = (props: React.SVGProps<SVGSVGElement>) => {
+    export const ${componentName} = (props: IconProps) => {
     const theme: any = useTheme()
     
     return ${jsx}
@@ -57,20 +63,18 @@ const save = async (sources) =>
       fs.writeFileAsync(
         path.join(TARGET_DIR, `${source.name}.tsx`),
         // @ts-ignore
-        `/* eslint-disable */\n${prettier.format(source.code, {
-          parser: 'babel',
+        format(`/* eslint-disable */\n${source.code}`, {
           ...prettierConfig,
-        })}`
-      )
-    )
+          filepath: path.join(TARGET_DIR, `${source.name}.tsx`),
+          plugins: [parserTypescript, parserBabel, prettierPlugin],
+        })
+      ))
   )
 
 const createIndex = (sources) =>
   fs.writeFileAsync(
     path.join(TARGET_DIR, 'index.ts'),
-    `/* eslint-disable */\n${sources
-      .map((source) => `export * from './${source.name}'`)
-      .join('\n')}`
+    `${sources.map((source) => `export * from './${source.name}'`).join('\n')}\n`
   )
 
 const build = async () => {
