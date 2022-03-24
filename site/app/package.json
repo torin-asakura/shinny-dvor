@@ -27,6 +27,7 @@
     "@site/contacts-page": "workspace:site/contacts-page",
     "@site/index-page": "workspace:site/index-page",
     "@site/services-page": "workspace:site/services-page",
+    "@splidejs/splide": "^3.6.12",
     "@ui/theme": "workspace:ui/theme",
     "events": "^3.3.0",
     "express": "^4.17.1",

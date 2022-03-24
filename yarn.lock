@@ -2826,6 +2826,7 @@ __metadata:
     "@site/contacts-page": "workspace:site/contacts-page"
     "@site/index-page": "workspace:site/index-page"
     "@site/services-page": "workspace:site/services-page"
+    "@splidejs/splide": ^3.6.12
     "@types/events": ^3
     "@types/express": ^4
     "@types/node": 16
@@ -3087,6 +3088,22 @@ __metadata:
     react-dom: "*"
   languageName: unknown
   linkType: soft
+
+"@splidejs/react-splide@npm:^0.6.20":
+  version: 0.6.20
+  resolution: "@splidejs/react-splide@npm:0.6.20"
+  dependencies:
+    "@splidejs/splide": ^3.6.12
+  checksum: 1976c4fe38481f2275f8c93d693def3ac6e46b1d9382963e915208581c09ab3cbb16256df97be285fe87d05d255f03bb247b003cf0304e3de39c8d799838b8ee
+  languageName: node
+  linkType: hard
+
+"@splidejs/splide@npm:^3.6.12":
+  version: 3.6.12
+  resolution: "@splidejs/splide@npm:3.6.12"
+  checksum: 2257a63a3adea8693492875b8e742eddf777ff2dfca3bc4e0197f74773aa75d0dd6888197219b755b64c3b511239dc29ace0a0bb1465704b3e8e6bc35760b8f2
+  languageName: node
+  linkType: hard
 
 "@store/articles@workspace:store/articles":
   version: 0.0.0-use.local
@@ -4254,6 +4271,8 @@ __metadata:
     "@atls-ui-parts/dom": ^0.0.1
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
+    "@splidejs/react-splide": ^0.6.20
+    "@splidejs/splide": ^3.6.12
     "@types/styled-system": ^5
     "@ui/button": "workspace:0.0.0"
     "@ui/condition": "workspace:0.0.0"

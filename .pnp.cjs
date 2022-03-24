@@ -6059,6 +6059,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/contacts-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/contacts-page"],\
             ["@site/index-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/index-page"],\
             ["@site/services-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/services-page"],\
+            ["@splidejs/splide", "npm:3.6.12"],\
             ["@types/events", "npm:3.0.0"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/node", "npm:16.11.10"],\
@@ -6796,6 +6797,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@splidejs/react-splide", [\
+        ["npm:0.6.20", {\
+          "packageLocation": "./.yarn/cache/@splidejs-react-splide-npm-0.6.20-b1861499ce-1976c4fe38.zip/node_modules/@splidejs/react-splide/",\
+          "packageDependencies": [\
+            ["@splidejs/react-splide", "npm:0.6.20"],\
+            ["@splidejs/splide", "npm:3.6.12"],\
+            ["react", "npm:17.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@splidejs/splide", [\
+        ["npm:3.6.12", {\
+          "packageLocation": "./.yarn/cache/@splidejs-splide-npm-3.6.12-c08041c579-2257a63a3a.zip/node_modules/@splidejs/splide/",\
+          "packageDependencies": [\
+            ["@splidejs/splide", "npm:3.6.12"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@store/articles", [\
@@ -10441,6 +10462,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/dom", "virtual:299fb3ef88b0dd5b6c8367c624975768e77be90ee27c82bdd7a3458bc0ec0ae7f9e63c967b9bea09a3e3690cb2ecc00895bfdae78385568361a6edf6bdbca3bb#npm:0.0.1"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.6.0"],\
+            ["@splidejs/react-splide", "npm:0.6.20"],\
+            ["@splidejs/splide", "npm:3.6.12"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.36"],\
@@ -10475,6 +10498,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/dom", "virtual:299fb3ef88b0dd5b6c8367c624975768e77be90ee27c82bdd7a3458bc0ec0ae7f9e63c967b9bea09a3e3690cb2ecc00895bfdae78385568361a6edf6bdbca3bb#npm:0.0.1"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@splidejs/react-splide", "npm:0.6.20"],\
+            ["@splidejs/splide", "npm:3.6.12"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.36"],\
@@ -10510,6 +10535,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls-ui-parts/dom", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:0.0.1"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
+            ["@splidejs/react-splide", "npm:0.6.20"],\
+            ["@splidejs/splide", "npm:3.6.12"],\
             ["@types/styled-system", "npm:5.1.13"],\
             ["@ui/button", "virtual:9cbb0cd5c1493987ee568c0ec037907e67b4e00f26ceae48efdce8746e2dc8a00b354dca0134842b448e3bd7e66182594f2a1c3a78b672ca022601c8dd8087c5#workspace:ui/button"],\
             ["@ui/condition", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#workspace:ui/condition"],\

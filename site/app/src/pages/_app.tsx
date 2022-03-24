@@ -1,3 +1,5 @@
+import '@splidejs/splide/dist/css/splide.min.css'
+
 import { withApollo }    from '@atls/next-app-with-apollo'
 import { withHelmet }    from '@atls/next-app-with-helmet'
 
