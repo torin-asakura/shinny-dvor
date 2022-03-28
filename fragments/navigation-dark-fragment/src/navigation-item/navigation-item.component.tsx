@@ -9,8 +9,9 @@ import { Layout }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 import { NavigationItemProps } from './navigation-item.interface'
+import { getColor }            from '../navigation-dark.component'
 
-const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
+const NavigationItem: FC<NavigationItemProps> = ({ name, active }) => {
   const [, setHover] = useState(false)
   const [pressed, setPressed] = useState(false)
 
@@ -24,7 +25,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
     >
       <Column>
         <Layout>
-          <Text color='white' fontWeight='medium'>
+          <Text color={getColor(active!)} fontWeight='medium'>
             {name}
           </Text>
         </Layout>

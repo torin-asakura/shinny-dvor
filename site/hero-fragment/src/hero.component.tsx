@@ -1,5 +1,5 @@
 import React               from 'react'
-import { FC }              from 'react'
+import { forwardRef }      from 'react'
 
 import { Button }          from '@ui/button'
 import { Divider }         from '@ui/divider'
@@ -13,8 +13,8 @@ import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
 
-const Hero: FC = () => (
-  <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center'>
+const Hero = forwardRef((props, ref: any) => (
+  <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center' ref={ref}>
     <Layout flexBasis={[20, 80, 80]} />
     <Column width='100%'>
       <Layout flexBasis={[120, 267, 367]} />
@@ -65,6 +65,6 @@ const Hero: FC = () => (
     </Column>
     <Layout flexBasis={[20, 80, 80]} />
   </Box>
-)
+))
 
 export { Hero }

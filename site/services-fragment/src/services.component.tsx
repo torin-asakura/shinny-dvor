@@ -1,7 +1,7 @@
 import { useReactiveVar }           from '@apollo/client'
 
 import React                        from 'react'
-import { FC }                       from 'react'
+import { forwardRef }               from 'react'
 
 import { Button }                   from '@ui/button'
 import { Condition }                from '@ui/condition'
@@ -20,12 +20,12 @@ import { AvailableRadiiTile }       from './available-radii'
 import { ChosenRadius }             from './chosen-radius'
 import { ServicesList }             from './services-list'
 
-const Services: FC = () => {
+const Services = forwardRef((props, ref: any) => {
   const isSizeChosen = useReactiveVar(chosenVar)
   const isCheckedRadius = useReactiveVar<boolean>(checkedRadiusServicesVar)
 
   return (
-    <Box width='100%' justifyContent='center' id='services'>
+    <Box width='100%' justifyContent='center' id='services' ref={ref}>
       <Column minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[48, 100, 100]} />
         <Row>
@@ -106,6 +106,6 @@ const Services: FC = () => {
       </Column>
     </Box>
   )
-}
+})
 
 export { Services }

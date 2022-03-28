@@ -2947,6 +2947,7 @@ __metadata:
     "@site/works-examples-fragment": "workspace:site/works-examples-fragment"
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/intersection-observer": "workspace:ui/intersection-observer"
     "@ui/layout": "workspace:ui/layout"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -4119,6 +4120,20 @@ __metadata:
     "@types/styled-system": "*"
     react: "*"
     styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/intersection-observer@workspace:ui/intersection-observer":
+  version: 0.0.0-use.local
+  resolution: "@ui/intersection-observer@workspace:ui/intersection-observer"
+  dependencies:
+    "@emotion/react": ^11.4.1
+    "@emotion/styled": ^11.3.0
+    react: ^17.0.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
   languageName: unknown
   linkType: soft
 
