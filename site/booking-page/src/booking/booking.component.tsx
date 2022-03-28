@@ -47,13 +47,13 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={availableRadii} width={['18%', '8%', '8%']} id={'radius'} />
+      <RadioList items={availableRadii} width={['18%', '8%', '8%']} id='radius' />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={16} />
-      <RadioList items={carBodyList} width={161} id={'carBody'} />
+      <RadioList items={carBodyList} width={161} id='carBody' />
       <Layout flexBasis={20} />
       <Layout>
         <Text color='darkGray'>Text</Text>

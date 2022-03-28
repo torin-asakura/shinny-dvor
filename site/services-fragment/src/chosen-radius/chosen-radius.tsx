@@ -19,7 +19,7 @@ const ChosenRadius: FC = () => {
 
   return (
     <Box onClick={() => checkedRadiusServicesVar(!checkedRadiusServices)}>
-      <Layout width={'60px'}>
+      <Layout width='60px'>
         <Button
           color={checkedRadiusServices ? 'primary' : 'radius'}
           size='large'

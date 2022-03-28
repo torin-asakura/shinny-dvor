@@ -31,23 +31,21 @@ const SizeButtonDropdown: FC = () => {
     >
       <Column justifyContent='space-around'>
         {availableRadii.map((item) => (
-          <>
-            <Box width={48} height={48}>
-              <Button
-                color='radius'
-                onClick={() => {
-                  setChosenRadius({ item })
-                  checkedRadiusVar(false)
-                }}
-              >
-                <Layout>
-                  <Text fontSize='small' fontWeight={'medium'}>
-                    {item}
-                  </Text>
-                </Layout>
-              </Button>
-            </Box>
-          </>
+          <Box width={48} height={48}>
+            <Button
+              color='radius'
+              onClick={() => {
+                setChosenRadius({ item })
+                checkedRadiusVar(false)
+              }}
+            >
+              <Layout>
+                <Text fontSize='small' fontWeight='medium'>
+                  {item}
+                </Text>
+              </Layout>
+            </Button>
+          </Box>
         ))}
       </Column>
     </Box>

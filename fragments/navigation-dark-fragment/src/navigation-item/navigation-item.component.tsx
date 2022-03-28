@@ -9,7 +9,7 @@ import { Layout }              from '@ui/layout'
 import { Text }                from '@ui/text'
 
 import { NavigationItemProps } from './navigation-item.interface'
-import { getColor }            from '../navigation-dark.component'
+import { getColor }            from '../helpers'
 
 const NavigationItem: FC<NavigationItemProps> = ({ name, active }) => {
   const [, setHover] = useState(false)

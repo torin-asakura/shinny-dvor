@@ -14,8 +14,8 @@ import { chosenVar }        from '@store/chosen-radius'
 import { radiusVar }        from '@store/chosen-radius'
 import { checkedRadiusVar } from '@store/chosen-radius'
 
-import { getColor }         from '../navigation-dark.component'
-import { getColorButton }   from '../navigation-dark.component'
+import { getColor }         from '../helpers'
+import { getColorButton }   from '../helpers'
 import { SizeButtonProps }  from './size-button.interface'
 
 const SizeButton: FC<SizeButtonProps> = ({ active }) => {
