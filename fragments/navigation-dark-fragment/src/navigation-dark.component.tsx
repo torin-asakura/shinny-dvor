@@ -55,7 +55,7 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
                 <Layout display={['flex', 'none', 'none']}>
                   <SizeButtonCard />
                 </Layout>
-                <Layout display={['none', 'flex', 'flex']}>
+                <Layout display={['none', 'flex', 'flex']} justifyContent='center'>
                   <SizeButton active={active} />
                   <Condition match={checkedRadius}>
                     <SizeButtonDropdown />
