@@ -10519,10 +10519,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/slider", "virtual:14937c5e9ee32f9453738e5847b721e98fe296d98e83d636421c7f3ae23613fe0bd7f545ac846a7b23e1bb4f1032b2ff32441a1745fa754754340cbf0fb71903#workspace:ui/slider"],\
             ["@atls-ui-parts/dom", "virtual:299fb3ef88b0dd5b6c8367c624975768e77be90ee27c82bdd7a3458bc0ec0ae7f9e63c967b9bea09a3e3690cb2ecc00895bfdae78385568361a6edf6bdbca3bb#npm:0.0.1"],\
+            ["@emotion/css", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.5.0"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.6.0"],\
             ["@splidejs/react-splide", "npm:0.6.20"],\
             ["@splidejs/splide", "npm:3.6.12"],\
+            ["@types/emotion__css", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.36"],\
@@ -10541,6 +10543,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "packagePeers": [\
             "@emotion/react",\
+            "@types/emotion__css",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/react-dom",\
@@ -10555,10 +10558,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/slider", "virtual:20d1f28269306a16daa0fae4c629b27fc2201c5495552136f773bd71efd408fb202f22094d46339d4b9e8c3a977c1eaec74e26c8166a97c52a4a8390cdf32c2b#workspace:ui/slider"],\
             ["@atls-ui-parts/dom", "virtual:299fb3ef88b0dd5b6c8367c624975768e77be90ee27c82bdd7a3458bc0ec0ae7f9e63c967b9bea09a3e3690cb2ecc00895bfdae78385568361a6edf6bdbca3bb#npm:0.0.1"],\
+            ["@emotion/css", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.5.0"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@splidejs/react-splide", "npm:0.6.20"],\
             ["@splidejs/splide", "npm:3.6.12"],\
+            ["@types/emotion__css", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.36"],\
@@ -10578,6 +10583,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@emotion/react",\
             "@emotion/styled",\
+            "@types/emotion__css",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/react-dom",\
@@ -10592,6 +10598,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/slider", "workspace:ui/slider"],\
             ["@atls-ui-parts/dom", "virtual:5ff9d5d588778c6c990f4c9992bfb4b91473f6bc55fd11d2b2cbfe613af7bbbb619babe8d3e87af4e7955acb78be95ce9863b35961a14102dde20f49c0f81217#npm:0.0.1"],\
+            ["@emotion/css", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.5.0"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@splidejs/react-splide", "npm:0.6.20"],\

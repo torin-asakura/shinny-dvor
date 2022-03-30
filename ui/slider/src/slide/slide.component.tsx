@@ -3,7 +3,6 @@ import { SplideSlide }         from '@splidejs/react-splide'
 
 import React                   from 'react'
 import { FC }                  from 'react'
-import { useEffect }           from 'react'
 
 import { Divider }             from '@ui/divider'
 import { Box }                 from '@ui/layout'
@@ -15,7 +14,6 @@ import { Space }               from '@ui/text'
 import { Ruble }               from '@ui/text'
 
 import { SlideProps }          from './slide.interface'
-import { useStore }            from '../context'
 import { messages }            from '../messages'
 import { baseContainerStyles } from './styles'
 

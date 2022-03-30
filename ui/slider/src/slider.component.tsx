@@ -3,8 +3,6 @@ import { Splide } from '@splidejs/react-splide'
 import React      from 'react'
 import { FC }     from 'react'
 
-import { Arrow }  from './arrow'
-
 const Slider: FC = ({ children }) => (
   <Splide
     options={{
@@ -12,18 +10,13 @@ const Slider: FC = ({ children }) => (
       gap: 40,
       focus: 'center',
       type: 'loop',
+      arrows: false,
       autoWidth: true,
+      classes: {
+        pagination: 'splide__pagination splide__pagination__custom',
+        page: 'splide__pagination__page splide__pagination__page__custom'
+      },
     }}
-    renderControls={() => (
-      <div className='splide__arrows'>
-        <button className='splide__arrow splide__arrow--prev'>
-          <Arrow direction='left' />
-        </button>
-        <button className='splide__arrow splide__arrow--next'>
-          <Arrow direction='right' />
-        </button>
-      </div>
-    )}
   >
     {children}
   </Splide>
