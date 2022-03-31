@@ -10,8 +10,9 @@ const Slider: FC = ({ children }) => (
       gap: 40,
       focus: 'center',
       type: 'loop',
-      arrows: false,
+      width: '100%',
       autoWidth: true,
+      arrows: true,
       classes: {
         pagination: 'splide__pagination splide__pagination__custom',
         page: 'splide__pagination__page splide__pagination__page__custom'

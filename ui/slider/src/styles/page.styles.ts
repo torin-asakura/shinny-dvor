@@ -20,4 +20,21 @@ import { injectGlobal } from '@emotion/css'
 .splide__pagination__custom {
   top: 102%;
 }
+
+.splide__slide.is-active {
+  width: 960px;
+  height: 540px;
+  border: 1px solid black;
+}
+
+.splide__slide.is-next, .splide__slide.is-clone, .splide__slide.is-prev {
+  top: 30px;
+  width: 864px;
+  height: 486px;
+}
+
+.splide__slide {
+  border: 1px solid black;
+  border-radius: 8px;
+}
   `)
