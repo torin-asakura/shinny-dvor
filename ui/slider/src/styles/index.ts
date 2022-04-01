@@ -1,1 +1,1 @@
-export * from './page.styles'
+export * from './slider.styles'

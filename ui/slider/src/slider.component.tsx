@@ -15,7 +15,9 @@ const Slider: FC = ({ children }) => (
       arrows: true,
       classes: {
         pagination: 'splide__pagination splide__pagination__custom',
-        page: 'splide__pagination__page splide__pagination__page__custom'
+        page: 'splide__pagination__page splide__pagination__page__custom',
+        arrow : 'splide__arrow splide__arrow__custom',
+        arrows: 'splide__arrows splide__arrows_custom'
       },
     }}
   >
