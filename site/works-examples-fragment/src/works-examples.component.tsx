@@ -7,13 +7,26 @@ import { Layout }     from '@ui/layout'
 import { Column }     from '@ui/layout'
 import { Slider }     from '@ui/slider'
 import { Slide }      from '@ui/slider'
+import { Text }       from '@ui/text'
 
 const WorksExamples = forwardRef((props, ref: any) => (
   <Box width='100%' height={[609, 976, 976]} backgroundColor='fillGray' ref={ref}>
     <Row justifyContent='center' alignItems='center' overflow='hidden'>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[48, 100, 100]} />
+        <Layout flexBasis={100} />
+        <Layout>
+          <Text fontWeight='small' fontSize='giant' lignHeight='grown'>
+            Text
+          </Text>
+        </Layout>
+        <Layout flexBasis={16} />
+        <Layout>
+          <Text fontWeight='normal' fontSize='normal' color='darkGray'>
+            Text
+          </Text>
+        </Layout>
+        <Layout flexBasis={[48, 40, 40]} />
         <Slider>
           <Slide description='test1' time={2} price={12}>
             1
