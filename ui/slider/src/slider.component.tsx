@@ -10,7 +10,6 @@ const Slider: FC = ({ children }) => (
       gap: 40,
       focus: 'center',
       type: 'loop',
-      width: '100%',
       autoWidth: true,
       arrows: true,
       classes: {

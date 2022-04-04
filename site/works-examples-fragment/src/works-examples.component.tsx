@@ -14,7 +14,7 @@ const WorksExamples = forwardRef((props, ref: any) => (
     <Row justifyContent='center' alignItems='center' overflow='hidden'>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={100} />
+        <Layout flexBasis={[20, 100, 100]} />
         <Layout>
           <Text fontWeight='small' fontSize='giant' lignHeight='grown'>
             Text
