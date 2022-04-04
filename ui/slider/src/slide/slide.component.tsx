@@ -4,6 +4,7 @@ import { SplideSlide }         from '@splidejs/react-splide'
 import React                   from 'react'
 import { FC }                  from 'react'
 
+import { Condition }           from '@ui/condition'
 import { Divider }             from '@ui/divider'
 import { Box }                 from '@ui/layout'
 import { Layout }              from '@ui/layout'
@@ -30,37 +31,39 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
             {children}
           </Container>
           <Layout flexBasis={20} flexShrink={0} />
-          <Row display={['none', 'none', 'flex']}>
-            <Layout>
-              <Text fontSize='normal' color='darkGray'>
-                {description}
-              </Text>
-            </Layout>
-            <Layout flexGrow={1} />
-            <Layout>
-              <Text fontSize='normal' color='darkGray'>
-                {messages.cost}
-              </Text>
-              <Space />
-              <Text fontSize='normal' color='black' fontWeight='medium'>
-                {price}
+          <Condition match={true}>
+            <Row display={['none', 'none', 'flex']}>
+              <Layout>
+                <Text fontSize='normal' color='darkGray'>
+                  {description}
+                </Text>
+              </Layout>
+              <Layout flexGrow={1} />
+              <Layout>
+                <Text fontSize='normal' color='darkGray'>
+                  {messages.cost}
+                </Text>
                 <Space />
-                <Ruble />
-              </Text>
-            </Layout>
-            <Layout flexBasis={40} />
-            <Layout>
-              <Text fontSize='normal' color='darkGray'>
-                {messages.time}
-              </Text>
-              <Space />
-              <Text fontSize='normal' color='black' fontWeight='medium'>
-                {value}
+                <Text fontSize='normal' color='black' fontWeight='medium'>
+                  {price}
+                  <Space />
+                  <Ruble />
+                </Text>
+              </Layout>
+              <Layout flexBasis={40} />
+              <Layout>
+                <Text fontSize='normal' color='darkGray'>
+                  {messages.time}
+                </Text>
                 <Space />
-                {suffix}
-              </Text>
-            </Layout>
-          </Row>
+                <Text fontSize='normal' color='black' fontWeight='medium'>
+                  {value}
+                  <Space />
+                  {suffix}
+                </Text>
+              </Layout>
+            </Row>
+          </Condition>
           <Layout display={['flex', 'flex', 'none']}>
             <Column fill>
               <Row>

@@ -55,12 +55,11 @@ import { injectGlobal } from '@emotion/css'
 @media screen and (min-width: 52em) {
   .splide__slide.is-next, .splide__slide.is--clone, .splide__slide.is-prev {
     transform: scaleY(0.9);
-    transition: .2s;
+    transition: .3s;
   }
   
   .splide__slide.is-active {
-    transition: .2s;
+    transition: .3s;
   }
-  
 }
   `)
