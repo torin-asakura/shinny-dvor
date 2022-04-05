@@ -23,6 +23,19 @@ const Container = styled(Box)(baseContainerStyles)
 const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
 
+  function validateActiveSlide() {
+    let result = false
+
+    if (typeof window === 'object') {
+      const parent = document.querySelector('.splide__list');
+      const child = parent!.querySelector('.splide__slide.is-active.is-visible');
+      console.log(child)
+      result = parent!.contains(child!)
+    }
+
+    return result
+  }
+
   return (
     <SplideSlide>
       <Layout width={['100%', '100%', 960]}>
@@ -31,7 +44,7 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
             {children}
           </Container>
           <Layout flexBasis={20} flexShrink={0} />
-          <Condition match={true}>
+          <Condition match={validateActiveSlide()}>
             <Row display={['none', 'none', 'flex']}>
               <Layout>
                 <Text fontSize='normal' color='darkGray'>
