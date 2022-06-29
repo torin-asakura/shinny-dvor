@@ -14,9 +14,9 @@ import { chosenVar }        from '@store/chosen-radius'
 import { radiusVar }        from '@store/chosen-radius'
 import { checkedRadiusVar } from '@store/chosen-radius'
 
+import { SizeButtonProps }  from './size-button.interface'
 import { getColor }         from '../helpers'
 import { getColorButton }   from '../helpers'
-import { SizeButtonProps }  from './size-button.interface'
 
 const SizeButton: FC<SizeButtonProps> = ({ active }) => {
   const isRadiusSelected = useReactiveVar<boolean>(chosenVar)
@@ -41,7 +41,11 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={20} height={20} color={checkedRadius ? 'black' : getColor(active!)} />
+              <WheelIcon
+                width={20}
+                height={20}
+                color={checkedRadius ? 'black' : getColor(active!)}
+              />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text fontWeight='medium' fontSize='small'>

@@ -16,7 +16,7 @@ import { getCheckColor }               from './helper'
 
 const Radio: FC<RadioProps> = ({ children, checked }) => {
   const [hover, hoverProps] = useHover()
-  const RadioStyled = styled.div(createCheckBaseStyles())
+  const RadioStyled = styled.div<{ checked: boolean }>(createCheckBaseStyles())
   const Checkmark = styled.div(
     createCheckBaseStyles(),
     createCheckAppearanceStyles({

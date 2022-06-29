@@ -226,17 +226,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/link@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "@atls-ui-parts/link@npm:0.0.5"
+"@atls-ui-parts/link@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "@atls-ui-parts/link@npm:0.0.6"
   dependencies:
-    "@atls-ui-parts/text": 0.0.6
+    "@atls-ui-parts/text": 0.0.7
   peerDependencies:
     "@emotion/styled": ^11.1.5
     next: "*"
     react: ^17.0.1
     styled-system: ^5.1.5
-  checksum: c11912f1bd908a64896ea31a5d321bad948d724b1027ff9b3d8feb75c8410e146315c99495e44926c13cffe82aa648b0f6d030da3957e5fa0fca0d49597b0103
+  checksum: 71f7eb54631a709f5fd124f9597e5719bbf0080a3bfd471ab3ba06433cf17d415810b81d8ff219e7ad7ddec77b0994ac1269adeef21402e7098729d6a5e562de
   languageName: node
   linkType: hard
 
@@ -268,7 +268,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/text@npm:0.0.6, @atls-ui-parts/text@npm:^0.0.6":
+"@atls-ui-parts/text@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-parts/text@npm:0.0.7"
+  dependencies:
+    styled-system: ^5.1.5
+  peerDependencies:
+    "@emotion/styled": ^11.1.5
+    react: ^17.0.1
+  checksum: f4253211a2437a765e96f170f26871d2c5868462952d12693e292dc15ed0f173428e84d66b092a3ace9bcbe02a2301b4131f076efa14c8ee1dc2dab22cffb381
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:^0.0.6":
   version: 0.0.6
   resolution: "@atls-ui-parts/text@npm:0.0.6"
   dependencies:
@@ -1723,6 +1735,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/css@npm:*":
+  version: 11.9.0
+  resolution: "@emotion/css@npm:11.9.0"
+  dependencies:
+    "@emotion/babel-plugin": ^11.7.1
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.3
+    "@emotion/sheet": ^1.0.3
+    "@emotion/utils": ^1.0.0
+  peerDependencies:
+    "@babel/core": ^7.0.0
+  peerDependenciesMeta:
+    "@babel/core":
+      optional: true
+  checksum: bd83d9af5cf87b82992dea030b5c7db9cc26f8fee508fc8c20257bc040d35b0cc595143c5c8e3f5d6719351f3ae1c53b152899c22b60a2a5ff37d3439304401e
+  languageName: node
+  linkType: hard
+
 "@emotion/css@npm:^11.1.3":
   version: 11.5.0
   resolution: "@emotion/css@npm:11.5.0"
@@ -1919,6 +1949,19 @@ __metadata:
     "@emotion/utils": ^1.0.0
     csstype: ^3.0.2
   checksum: ff84fbe09ec06e7ad3deaef5c5b5ea6af6a522e8efe49c2b398b875d06872626284a83b6b18b7f777750c94264a61e7924157d869d9bca2f675731bbb91a6055
+  languageName: node
+  linkType: hard
+
+"@emotion/serialize@npm:^1.0.3":
+  version: 1.0.4
+  resolution: "@emotion/serialize@npm:1.0.4"
+  dependencies:
+    "@emotion/hash": ^0.8.0
+    "@emotion/memoize": ^0.7.4
+    "@emotion/unitless": ^0.7.5
+    "@emotion/utils": ^1.0.0
+    csstype: ^3.0.2
+  checksum: e8cc342056734e176ea837fe44035126dea174962db40852a7ced499d258c0056b0fd3c298743c446f9ba0f2647cb42dfb623b8e5783c265deb9eb20138d68e7
   languageName: node
   linkType: hard
 
@@ -4163,16 +4206,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
-    "@atls-ui-parts/link": ^0.0.5
+    "@atls-ui-parts/link": ^0.0.6
+    "@emotion/css": ^11.1.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^17.0.9
     "@types/styled-system": ^5
     "@ui/text": "workspace:ui/text"
+    next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
   peerDependencies:
+    "@emotion/css": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -11329,7 +11375,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"next@npm:^12.1.0":
+"next@npm:12.1.0, next@npm:^12.1.0":
   version: 12.1.0
   resolution: "next@npm:12.1.0"
   dependencies:

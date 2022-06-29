@@ -5,7 +5,7 @@ import React                   from 'react'
 import { FC }                  from 'react'
 import { useRef }              from 'react'
 import { useEffect }           from 'react'
-import { useState }           from 'react'
+import { useState }            from 'react'
 
 import { Condition }           from '@ui/condition'
 import { Divider }             from '@ui/divider'
@@ -25,12 +25,12 @@ const Container = styled(Box)(baseContainerStyles)
 
 const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
-  const slideRef = useRef(null)
+  const slideRef = useRef<any>(null)
   const [active, setActive] = useState<boolean>(false)
 
   useEffect(() => {
     if (slideRef && slideRef.current) {
-      setActive(slideRef.current.parentElement.classList.contains('is-active'))
+      setActive(slideRef!.current.parentElement.classList.contains('is-active'))
     }
   }, [slideRef])
 

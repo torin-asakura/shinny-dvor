@@ -3,6 +3,8 @@ import { createBaseStyles }       from '@atls-ui-parts/button'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
 
+import { styleFn }                from 'styled-system'
+
 export const baseStyles = createBaseStyles()
 
 export const baseSelectStyles: CSSObject = {
@@ -17,6 +19,9 @@ export const appearanceStyles = createAppearanceStyles({
   borderColor: 'transparent',
 })
 
-export const shapeStyles = createShapeStyles({
-  fontSize: ({ theme }) => theme.fontSizes.normal,
-})
+export const shapeStyles = ({ theme }): styleFn =>
+  createShapeStyles({
+    size: 26,
+    paddingRatio: 0,
+    fontSize: theme.fontSizes.normal,
+  })

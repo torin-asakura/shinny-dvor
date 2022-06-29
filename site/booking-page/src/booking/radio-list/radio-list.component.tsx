@@ -12,7 +12,7 @@ import { RadioListProps }   from './radio-list.interface'
 
 const RadioList: FC<RadioListProps> = ({ items, id, initial = '', width = '100%' }) => {
   const [active, setActive] = useState<string>(initial)
-  const [checked,] = useState(false)
+  const [checked] = useState(false)
 
   const validateButton = () => {
     if (id === 'radius') {

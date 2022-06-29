@@ -12,7 +12,7 @@ import { ThemeProvider } from '@ui/theme'
 export const withProviders = compose(
   withApollo({
     uri: process.env.WP_ENDPOINT || '',
-    onUnauthenticated: () => {},
+    onUnauthenticated: () => {}, // eslint-disable-line
   }),
   withHelmet()
 )

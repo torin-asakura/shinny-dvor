@@ -1,11 +1,7 @@
-import { FC }                 from 'react'
-
-import { GetCheckColorProps } from './getCheckColor.interface'
-
-export const getCheckColor: FC<GetCheckColorProps> = (hover, checked) => {
+export const getCheckColor = (hover: any, checked: boolean): string => {
   let newColor = 'black'
   if (hover && !checked) {
-    newColor = '#4579FF'
+    newColor = 'primaryBlue'
   } else if (checked) {
     newColor = 'white'
   }

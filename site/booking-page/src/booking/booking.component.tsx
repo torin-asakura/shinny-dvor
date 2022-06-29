@@ -6,7 +6,6 @@ import { useState }         from 'react'
 
 import { SUCCESS }          from '@store/booking'
 import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
 import { Input }            from '@ui/input'
 import { Column }           from '@ui/layout'
@@ -31,7 +30,7 @@ const Booking: FC = () => {
   const carBodyList = ['auto1', 'auto2', 'auto3', 'auto4']
   const servicesList = ['Item1', 'Item2', 'Item3']
 
-  const [, setValue] = useState<string>('Placeholder')
+  const [comment, setComment] = useState<string>('')
   const [selectedItem, setSelectedItem] = useState<string>('')
 
   return (
@@ -59,14 +58,7 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
-      <Select
-        setSelectedItem={setSelectedItem}
-        items={servicesList}
-        placeholder='Placeholder'
-        onChange={(item) => {
-          setValue(item)
-        }}
-      />
+      <Select items={servicesList} placeholder='Placeholder' onChange={setSelectedItem} />
       <Layout flexBasis={12} />
       <Divider color={selectedItem ? 'primaryBlue' : 'gray'} />
       <Layout flexBasis={32} />
@@ -75,19 +67,14 @@ const Booking: FC = () => {
       </Layout>
       <Layout flexBasis={12} />
       <Layout>
-        <Input placeholder='input' />
+        <Input value={comment} onChange={setComment} placeholder='input' />
       </Layout>
       <Layout flexBasis={32} />
-      <Condition match={!activeRadius || !activeCarBody || !selectedItem}>
-        <Box width='100%'>
-          <Button disabled>Button</Button>
-        </Box>
-      </Condition>
-      <Condition match={activeRadius && activeCarBody && selectedItem}>
-        <Box width='100%'>
-          <Button onClick={updateStatus}>Button</Button>
-        </Box>
-      </Condition>
+      <Box width='100%'>
+        <Button disabled={!activeRadius || !activeCarBody || !selectedItem} onClick={updateStatus}>
+          Button
+        </Button>
+      </Box>
       <Layout flexBasis={[48, 128, 128]} />
     </Column>
   )

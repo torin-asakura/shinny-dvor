@@ -7,7 +7,7 @@ import compose        from 'recompose/compose'
 export const withProviders = compose(
   withApollo({
     uri: process.env.WP_ENDPOINT || '',
-    onUnauthenticated: () => {},
+    onUnauthenticated: () => {}, // eslint-disable-line
   }),
   withHelmet()
 )

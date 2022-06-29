@@ -15,6 +15,6 @@ export const appearanceStyles: styleFn = ({ theme, checked }) =>
 export const shapeStyles: styleFn = ({ theme }) =>
   createBoxShapeStyles({
     size: 20,
-    borderWidth: '1px',
+    borderWidth: 1,
     borderRadius: theme.radii.micro,
   })

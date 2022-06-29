@@ -10,6 +10,7 @@ import { NextLink }    from '@ui/link'
 import { FooterLogo }  from '@ui/logo'
 import { SocialLinks } from '@ui/social-links'
 import { Text }        from '@ui/text'
+import { Space }       from '@ui/text'
 
 const Footer: FC = () => (
   <Box width='100%'>
@@ -104,7 +105,9 @@ const Footer: FC = () => (
               </Layout>
             </Box>
             <Layout>
-              <Text>by TorinAsakura</Text>
+              <Text color='darkGray'>by</Text>
+              <Space />
+              <Text fontWeight='medium'>TorinAsakura</Text>
             </Layout>
           </Row>
           <Column justifyContent='space-between' display={['flex', 'none', 'none']}>
@@ -117,7 +120,9 @@ const Footer: FC = () => (
                 <Text>Tel</Text>
               </Layout>
               <Layout>
-                <Text>by TorinAsakura</Text>
+                <Text color='darkGray'>by</Text>
+                <Space />
+                <Text fontWeight='medium'>TorinAsakura</Text>
               </Layout>
             </Row>
           </Column>

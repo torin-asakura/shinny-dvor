@@ -11,7 +11,7 @@ import { Menu }         from './menu'
 import { MenuItem }     from './menu-item'
 import { SelectProps }  from './select.interface'
 
-const Select: FC<SelectProps> = ({ items, value, onChange, placeholder, setSelectedItem }) => {
+const Select: FC<SelectProps> = ({ items, value, onChange, placeholder }) => {
   const { buttonProps, menuProps, getMenuItemProps, renderMenu, selectedItem } = useSelect({
     items,
     onChange,
@@ -27,7 +27,7 @@ const Select: FC<SelectProps> = ({ items, value, onChange, placeholder, setSelec
         </Layout>
       </Button>
       {renderMenu(
-        <Menu {...menuProps} onClick={setSelectedItem(selectedItem)}>
+        <Menu {...menuProps}>
           {items.map((item, index) => (
             <MenuItem {...getMenuItemProps(item, index)}>{item}</MenuItem>
           ))}

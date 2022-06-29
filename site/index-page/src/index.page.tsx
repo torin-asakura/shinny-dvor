@@ -9,9 +9,9 @@ import { Hero }                    from '@site/hero-fragment'
 import { Services }                from '@site/services-fragment'
 import { ServicesInfographics }    from '@site/services-infographics-fragment'
 import { WorksExamples }           from '@site/works-examples-fragment'
-import { useIntersectionObserver } from '@ui/intersection-observer'
 import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
+import { useIntersectionObserver } from '@ui/intersection-observer'
 
 const IndexPage: FC = () => {
   const [active, setActive] = useState<number>(0)

@@ -1,6 +1,6 @@
 import { injectGlobal } from '@emotion/css'
 
-  injectGlobal(`
+injectGlobal(`
 .splide__pagination__page__custom {
   width: 10px;
   height: 10px;

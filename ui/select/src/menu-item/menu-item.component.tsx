@@ -16,7 +16,6 @@ const Container = styled.li(baseItemStyles)
 const MenuItem: FC = ({ children, ...props }) => (
   <Container {...props}>
     <Column width='100%'>
-      <Layout flexBasis={16} flexShrink={0} />
       <Row>
         <Layout flexBasis={16} flexShrink={0} />
         <Checkbox>
@@ -28,7 +27,6 @@ const MenuItem: FC = ({ children, ...props }) => (
         </Checkbox>
         <Layout flexBasis={16} flexShrink={0} />
       </Row>
-      <Layout flexBasis={16} flexShrink={0} />
     </Column>
   </Container>
 )

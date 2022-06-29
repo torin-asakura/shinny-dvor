@@ -14,7 +14,13 @@ const Articles = forwardRef((props, ref: any) => {
   // FIXME take first 3 elements
   const lastArticles = ['Article 1', 'Article 2', 'Article 3']
   return (
-    <Box width='100%' height={[569, 693, 693]} backgroundColor='fillGray' justifyContent='center' ref={ref}>
+    <Box
+      width='100%'
+      height={[569, 693, 693]}
+      backgroundColor='fillGray'
+      justifyContent='center'
+      ref={ref}
+    >
       <Box minWidth={['100%', '100%', '1440px']} justifyContent='space-between'>
         <Layout flexBasis={[20, 80, 80]} />
         <Column width='100%'>
