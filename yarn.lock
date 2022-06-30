@@ -1535,7 +1535,7 @@ __metadata:
     "@atls/next-document-with-opengraph": ^0.0.2
     "@blog/index-page": "workspace:blog/index-page"
     "@emotion/cache": ^11.4.0
-    "@emotion/css": ^11.1.3
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/events": ^3
@@ -1645,7 +1645,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/babel-plugin@npm:^11.0.0, @emotion/babel-plugin@npm:^11.3.0":
+"@emotion/babel-plugin@npm:^11.3.0":
   version: 11.3.0
   resolution: "@emotion/babel-plugin@npm:11.3.0"
   dependencies:
@@ -1689,7 +1689,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.5.0, @emotion/cache@npm:^11.6.0":
+"@emotion/cache@npm:^11.4.0, @emotion/cache@npm:^11.6.0":
   version: 11.6.0
   resolution: "@emotion/cache@npm:11.6.0"
   dependencies:
@@ -1735,7 +1735,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/css@npm:*":
+"@emotion/css@npm:^11.9.0":
   version: 11.9.0
   resolution: "@emotion/css@npm:11.9.0"
   dependencies:
@@ -1750,42 +1750,6 @@ __metadata:
     "@babel/core":
       optional: true
   checksum: bd83d9af5cf87b82992dea030b5c7db9cc26f8fee508fc8c20257bc040d35b0cc595143c5c8e3f5d6719351f3ae1c53b152899c22b60a2a5ff37d3439304401e
-  languageName: node
-  linkType: hard
-
-"@emotion/css@npm:^11.1.3":
-  version: 11.5.0
-  resolution: "@emotion/css@npm:11.5.0"
-  dependencies:
-    "@emotion/babel-plugin": ^11.0.0
-    "@emotion/cache": ^11.5.0
-    "@emotion/serialize": ^1.0.0
-    "@emotion/sheet": ^1.0.3
-    "@emotion/utils": ^1.0.0
-  peerDependencies:
-    "@babel/core": ^7.0.0
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-  checksum: 45d01333c36a6449fcc4415470088ef2ee515d48a76d054bce9cf5c45fba17e5eec661aed34b4ea38f7003fd6a7e15ddf781e921977b4428875674621ef037f0
-  languageName: node
-  linkType: hard
-
-"@emotion/css@npm:^11.7.1":
-  version: 11.7.1
-  resolution: "@emotion/css@npm:11.7.1"
-  dependencies:
-    "@emotion/babel-plugin": ^11.7.1
-    "@emotion/cache": ^11.7.1
-    "@emotion/serialize": ^1.0.0
-    "@emotion/sheet": ^1.0.3
-    "@emotion/utils": ^1.0.0
-  peerDependencies:
-    "@babel/core": ^7.0.0
-  peerDependenciesMeta:
-    "@babel/core":
-      optional: true
-  checksum: ac1f56656f33bdb6539cb4ca941532d8a155167296acdc7d0f820e1a4c679cee59f4b3456e79e1c1f6a493a1f7c6c62fb6ae29a56a51a0bf531374f9b2838967
   languageName: node
   linkType: hard
 
@@ -1939,7 +1903,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/serialize@npm:^1.0.0, @emotion/serialize@npm:^1.0.2":
+"@emotion/serialize@npm:^1.0.2":
   version: 1.0.2
   resolution: "@emotion/serialize@npm:1.0.2"
   dependencies:
@@ -2862,7 +2826,7 @@ __metadata:
     "@atls/next-document-with-opengraph": ^0.0.2
     "@blog/index-page": "workspace:blog/index-page"
     "@emotion/cache": ^11.4.0
-    "@emotion/css": ^11.1.3
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@site/booking-page": "workspace:site/booking-page"
@@ -4207,7 +4171,7 @@ __metadata:
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
     "@atls-ui-parts/link": ^0.0.6
-    "@emotion/css": ^11.1.3
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/react-dom": ^17.0.9
@@ -4305,7 +4269,7 @@ __metadata:
   dependencies:
     "@atls-ui-parts/button": ^0.0.4
     "@atls-ui-parts/select": ^0.0.9
-    "@emotion/css": ^11.7.1
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@ui/checkbox": "workspace:ui/checkbox"
@@ -4332,7 +4296,7 @@ __metadata:
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
     "@atls-ui-parts/dom": ^0.0.1
-    "@emotion/css": ^11.1.3
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@splidejs/react-splide": ^0.6.20
@@ -4429,7 +4393,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
-    "@emotion/css": ^11.1.3
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/styled-system": ^5.1.10
@@ -4480,7 +4444,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/wheel@workspace:ui/wheel"
   dependencies:
-    "@emotion/css": ^11.7.1
+    "@emotion/css": ^11.9.0
     "@emotion/react": ^11.7.1
     "@emotion/styled": ^11.6.0
     "@types/react": ^17

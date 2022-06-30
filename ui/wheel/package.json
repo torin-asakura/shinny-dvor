@@ -12,7 +12,7 @@
     "react-laag": "^2.0.3"
   },
   "devDependencies": {
-    "@emotion/css": "^11.7.1",
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@types/react": "^17",

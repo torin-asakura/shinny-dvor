@@ -20,7 +20,7 @@
     "@atls/next-document-with-opengraph": "^0.0.2",
     "@blog/index-page": "workspace:blog/index-page",
     "@emotion/cache": "^11.4.0",
-    "@emotion/css": "^11.1.3",
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "events": "^3.3.0",
