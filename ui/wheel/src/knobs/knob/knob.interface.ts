@@ -1,3 +1,5 @@
 import { PositionProps } from 'styled-system'
 
-export interface KnobProps extends PositionProps {}
+export interface KnobProps extends PositionProps {
+  text: string
+}

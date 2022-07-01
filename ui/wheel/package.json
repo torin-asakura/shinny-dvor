@@ -4,6 +4,7 @@
   "license": "MIT",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/card": "workspace:0.0.0",
     "@ui/image": "workspace:ui/image",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
