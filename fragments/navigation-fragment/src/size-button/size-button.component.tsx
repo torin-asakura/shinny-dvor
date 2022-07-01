@@ -28,8 +28,8 @@ const SizeButton: FC = () => {
     return newColor
   }
   return (
-    <Box width={[40, 48, 48]} height={[40, 48, 48]}>
-      <Layout width='100%' display={['flex', 'none', 'none']}>
+    <Box width={[40, 40, 48]} height={[40, 40, 48]}>
+      <Layout width='100%' display={['flex', 'flex', 'none']}>
         <Button
           color='lightWheel'
           size='small'
@@ -50,7 +50,7 @@ const SizeButton: FC = () => {
           </Layout>
         </Button>
       </Layout>
-      <Layout width='100%' display={['none', 'flex', 'flex']}>
+      <Layout width='100%' display={['none', 'none', 'flex']}>
         <Button
           color='lightWheel'
           onMouseDown={() => setIsActive(true)}

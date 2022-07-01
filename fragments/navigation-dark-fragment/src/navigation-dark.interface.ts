@@ -1,3 +1,3 @@
 export interface NavigationDarkProps {
-  active?: number
+  active: number
 }

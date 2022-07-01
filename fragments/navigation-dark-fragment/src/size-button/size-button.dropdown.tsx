@@ -19,12 +19,9 @@ const SizeButtonDropdown: FC = () => {
 
   return (
     <Box
-      zIndex={2}
-      top={90}
       height={616}
       width={56}
       borderRadius='32px'
-      position='absolute'
       backgroundColor='white'
       justifyContent='center'
       boxShadow='deep'

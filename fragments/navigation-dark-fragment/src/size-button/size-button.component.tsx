@@ -27,11 +27,11 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
 
   return (
     <Box
-      width={[40, 48, 48]}
-      height={[40, 48, 48]}
+      width={[40, 40, 48]}
+      height={[40, 40, 48]}
       onClick={() => checkedRadiusVar(!checkedRadius)}
     >
-      <Layout width='100%' display={['flex', 'none', 'none']}>
+      <Layout width='100%' display={['flex', 'flex', 'none']}>
         <Button
           color={isRadiusSelected || isChecked ? 'secondary' : getColorButton(active!)}
           size='small'
@@ -55,7 +55,7 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
           </Layout>
         </Button>
       </Layout>
-      <Layout width='100%' display={['none', 'flex', 'flex']}>
+      <Layout width='100%' display={['none', 'none', 'flex']}>
         <Button
           color={checkedRadius ? 'secondary' : getColorButton(active!)}
           onMouseDown={() => setIsActive(true)}
