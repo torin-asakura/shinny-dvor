@@ -8,6 +8,7 @@ const getNormalSizeStyles = (theme): styleFn => {
     fontSize: 16,
     rounding: 2222,
     fontWeight: 600,
+    paddingRatio: 0,
     fontFamily: theme.fonts.primary,
   })
 

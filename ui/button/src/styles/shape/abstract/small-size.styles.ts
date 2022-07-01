@@ -8,6 +8,7 @@ const getSmallSizeStyles = (theme): styleFn => {
     fontSize: 14,
     rounding: 2222,
     fontWeight: 600,
+    paddingRatio: 0.4,
     fontFamily: theme.fonts.primary,
   })
 
