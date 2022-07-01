@@ -33,7 +33,7 @@ const AvailableRadii: FC = () => {
             {availableRadii.map((item) => (
               <>
                 <Box width={48} height={48}>
-                  <Button color='radius' onClick={() => setChosenRadius({ item })}>
+                  <Button size='normal' color='radius' onClick={() => setChosenRadius({ item })}>
                     <Layout>
                       <Text fontSize='small'>{item}</Text>
                     </Layout>

@@ -31,7 +31,7 @@ const Booking: FC = () => {
   const servicesList = ['Item1', 'Item2', 'Item3']
 
   const [comment, setComment] = useState<string>('')
-  const [selectedItem, setSelectedItem] = useState<string>('')
+  const [selectedItem, setSelectedItem] = useState<string[]>([])
 
   return (
     <Column width='100%'>
@@ -58,9 +58,14 @@ const Booking: FC = () => {
         <Text color='darkGray'>Text</Text>
       </Layout>
       <Layout flexBasis={12} />
-      <Select items={servicesList} placeholder='Placeholder' onChange={setSelectedItem} />
+      <Select
+        items={servicesList}
+        value={selectedItem}
+        placeholder='Placeholder'
+        onSelect={setSelectedItem}
+      />
       <Layout flexBasis={12} />
-      <Divider color={selectedItem ? 'primaryBlue' : 'gray'} />
+      <Divider color={selectedItem.length ? 'primaryBlue' : 'gray'} />
       <Layout flexBasis={32} />
       <Layout>
         <Text color='darkGray'>Text</Text>
@@ -71,7 +76,10 @@ const Booking: FC = () => {
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
-        <Button disabled={!activeRadius || !activeCarBody || !selectedItem} onClick={updateStatus}>
+        <Button
+          disabled={!activeRadius || !activeCarBody || !selectedItem.length}
+          onClick={updateStatus}
+        >
           Button
         </Button>
       </Box>

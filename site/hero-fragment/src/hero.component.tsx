@@ -14,7 +14,7 @@ import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
 
 const Hero = forwardRef((props, ref: any) => (
-  <Box minWidth={['100%', '1440px', '1440px']} justifyContent='center' ref={ref}>
+  <Box width={['100%', '100%', '1440px']} justifyContent='center' ref={ref}>
     <Layout flexBasis={[20, 80, 80]} />
     <Column width='100%'>
       <Layout flexBasis={[120, 267, 367]} />

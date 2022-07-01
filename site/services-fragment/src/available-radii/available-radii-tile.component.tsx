@@ -36,22 +36,20 @@ const AvailableRadiiTile: FC = () => {
               <>
                 <Layout flexBasis={4} />
                 <Box width={56} height={56}>
-                  <Layout width={10}>
-                    <Button
-                      size='large'
-                      color='radius'
-                      onClick={() => {
-                        setChosenRadius({ item })
-                        checkedRadiusServicesVar(false)
-                      }}
-                    >
-                      <Layout>
-                        <Text fontSize='small' fontWeight='bold'>
-                          {item}
-                        </Text>
-                      </Layout>
-                    </Button>
-                  </Layout>
+                  <Button
+                    size='large'
+                    color='radius'
+                    onClick={() => {
+                      setChosenRadius({ item })
+                      checkedRadiusServicesVar(false)
+                    }}
+                  >
+                    <Layout>
+                      <Text fontSize='small' fontWeight='bold'>
+                        {item}
+                      </Text>
+                    </Layout>
+                  </Button>
                 </Box>
                 <Layout flexBasis={4} />
               </>

@@ -33,13 +33,13 @@ const Card: FC<CardProps> = ({ children, container, backdrop = false }) => {
           <Backdrop {...backdropProps} onClick={hide} />
         </Condition>
         <Container {...cardProps}>
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink={0} />
           <Column>
             <Layout flexBasis={20} />
             {container}
             <Layout flexBasis={20} />
           </Column>
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink={0} />
         </Container>
       </Renderer>
     </>

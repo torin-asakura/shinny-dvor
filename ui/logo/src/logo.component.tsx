@@ -9,10 +9,10 @@ import { LogoProps } from './logo.interface'
 
 const Logo: FC<LogoProps> = ({ ...props }) => (
   <NextLink path='/'>
-    <Box display={['flex', 'none', 'none']}>
+    <Box display={['flex', 'flex', 'none']}>
       <LogoIcon width={48} height={32} {...props} />
     </Box>
-    <Box display={['none', 'flex', 'flex']}>
+    <Box display={['none', 'none', 'flex']}>
       <LogoIcon width={60} height={40} {...props} />
     </Box>
   </NextLink>
