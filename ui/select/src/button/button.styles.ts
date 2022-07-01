@@ -14,7 +14,8 @@ export const baseSelectStyles: CSSObject = {
 }
 
 export const appearanceStyles = createAppearanceStyles({
-  fontColor: ({ theme, isSelected }) => (isSelected ? theme.colors.black : theme.colors.lightGray),
+  fontColor: ({ theme, isSelected, value }) =>
+    isSelected || value.length ? theme.colors.black : theme.colors.steel,
   backgroundColor: ({ theme }) => theme.colors.white,
   borderColor: 'transparent',
 })

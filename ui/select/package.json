@@ -10,6 +10,7 @@
     "@ui/icons": "workspace:ui/icons",
     "@ui/layout": "workspace:ui/layout",
     "@ui/text": "workspace:ui/text",
+    "downshift": "^6.1.7",
     "framer-motion": "^5.5.5",
     "react-laag": "^2.0.3",
     "remove": "^0.1.5",

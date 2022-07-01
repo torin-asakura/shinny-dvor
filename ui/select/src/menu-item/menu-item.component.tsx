@@ -9,16 +9,29 @@ import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 
+import { MenuItemProps }  from './menu-item.interface'
 import { baseItemStyles } from './menu-item.styles'
 
 const Container = styled.li(baseItemStyles)
 
-const MenuItem: FC = ({ children, ...props }) => (
+const MenuItem: FC<MenuItemProps> = ({
+  children,
+  selectedItems,
+  addSelectedItem,
+  removeSelectedItem,
+  ...props
+}) => (
   <Container {...props}>
     <Column width='100%'>
       <Row>
         <Layout flexBasis={16} flexShrink={0} />
-        <Checkbox>
+        <Checkbox
+          active={selectedItems?.includes(children)}
+          onCheck={(newState) => {
+            if (newState) addSelectedItem(children)
+            if (!newState) removeSelectedItem(children)
+          }}
+        >
           <Layout>
             <Text fontSize='normal' color='black'>
               {children}
