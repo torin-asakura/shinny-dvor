@@ -18,7 +18,7 @@ const Hero = forwardRef((props, ref: any) => (
     <Layout flexBasis={[20, 80, 80]} />
     <Column width='100%'>
       <Layout flexBasis={[120, 267, 367]} />
-      <Box width={['100%', '900px', '900px']} height={[240, 201, 201]}>
+      <Box width={['100%', '100%', '900px']} height={[240, 240, 201]}>
         <Layout>
           <Text fontSize='giant' fontWeight='bold' color='white'>
             Welcome text
@@ -26,11 +26,13 @@ const Hero = forwardRef((props, ref: any) => (
         </Layout>
       </Box>
       <Layout flexBasis={32} />
-      <NextLink path='/booking'>
-        <Layout width={['100%', '180px', '180px']}>
-          <Button>Button</Button>
-        </Layout>
-      </NextLink>
+      <Row>
+        <NextLink path='/booking'>
+          <Layout width={['100%', '180px', '180px']}>
+            <Button>Button</Button>
+          </Layout>
+        </NextLink>
+      </Row>
       <Layout flexBasis={[40, 48, 48]} />
       <Divider color='milkGray' />
       <Layout flexBasis={[20, 30, 30]} />
