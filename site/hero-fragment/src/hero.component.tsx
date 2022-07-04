@@ -15,7 +15,7 @@ import { Text }            from '@ui/text'
 
 const Hero = forwardRef((props, ref: any) => (
   <Box width={['100%', '100%', '1440px']} justifyContent='center' ref={ref}>
-    <Layout flexBasis={[20, 80, 80]} />
+    <Layout flexBasis={[20, 20, 80]} />
     <Column width='100%'>
       <Layout flexBasis={[120, 267, 367]} />
       <Box width={['100%', '100%', '900px']} height={[240, 240, 201]}>
@@ -26,18 +26,16 @@ const Hero = forwardRef((props, ref: any) => (
         </Layout>
       </Box>
       <Layout flexBasis={32} />
-      <Row>
-        <NextLink path='/booking'>
-          <Layout width={['100%', '180px', '180px']}>
-            <Button>Button</Button>
-          </Layout>
-        </NextLink>
-      </Row>
-      <Layout flexBasis={[40, 48, 48]} />
+      <NextLink path='/booking'>
+        <Layout width={['100%', '100%', '180px']}>
+          <Button>Button</Button>
+        </Layout>
+      </NextLink>
+      <Layout flexBasis={[40, 40, 48]} />
       <Divider color='milkGray' />
-      <Layout flexBasis={[20, 30, 30]} />
-      <Row width='100%' justifyContent={['center', 'space-between', 'space-between']}>
-        <Box width='100%' display={['none', 'flex', 'flex']} alignItems='center'>
+      <Layout flexBasis={[20, 20, 30]} />
+      <Row width='100%' justifyContent={['center', 'center', 'space-between']}>
+        <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
           <Link href='#services'>
             <Layout>
               <Text color='white' fontWeight='medium' fontFamily='primary'>
@@ -50,22 +48,22 @@ const Hero = forwardRef((props, ref: any) => (
           </Link>
         </Box>
         <Box width='100%' alignItems='center'>
-          <Box width='100%' justifyContent={['flex-start', 'flex-end', 'flex-end']}>
+          <Box width='100%' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
             <Layout>
               <Text color='white' fontWeight='medium'>
                 Telephone
               </Text>
             </Layout>
           </Box>
-          <Layout flexBasis={32} flexShrink={0} display={['none', 'flex', 'flex']} />
+          <Layout flexBasis={32} flexShrink={0} display={['none', 'none', 'flex']} />
           <Box justifyContent='flex-end'>
             <SocialLinksDark />
           </Box>
         </Box>
       </Row>
-      <Layout flexBasis={[20, 30, 30]} />
+      <Layout flexBasis={[20, 20, 30]} />
     </Column>
-    <Layout flexBasis={[20, 80, 80]} />
+    <Layout flexBasis={[20, 20, 80]} />
   </Box>
 ))
 

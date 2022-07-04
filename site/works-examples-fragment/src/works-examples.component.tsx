@@ -10,23 +10,23 @@ import { Slide }      from '@ui/slider'
 import { Text }       from '@ui/text'
 
 const WorksExamples = forwardRef((props, ref: any) => (
-  <Box width='100%' height={[609, 976, 976]} backgroundColor='fillGray' ref={ref}>
+  <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
     <Row justifyContent='center' alignItems='center' overflow='hidden'>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[20, 100, 100]} />
+        <Layout flexBasis={[20, 20, 100]} />
         <Layout>
           <Text fontWeight='small' fontSize='giant' lignHeight='grown'>
             Text
           </Text>
         </Layout>
-        <Layout flexBasis={16} />
+        <Layout flexBasis={[8, 8, 16]} />
         <Layout>
           <Text fontWeight='normal' fontSize='normal' color='darkGray'>
             Text
           </Text>
         </Layout>
-        <Layout flexBasis={[48, 40, 40]} />
+        <Layout flexBasis={[32, 32, 40]} />
         <Slider>
           <Slide description='test1' time={2} price={12}>
             1
@@ -38,7 +38,7 @@ const WorksExamples = forwardRef((props, ref: any) => (
             3
           </Slide>
         </Slider>
-        <Layout flexBasis={[48, 100, 100]} />
+        <Layout flexBasis={[80, 80, 100]} />
       </Column>
       <Layout flexBasis={20} display={['flex', 'none', 'none']} />
     </Row>
