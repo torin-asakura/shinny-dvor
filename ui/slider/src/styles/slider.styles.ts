@@ -62,4 +62,9 @@ injectGlobal(`
     transition: .3s;
   }
 }
+
+@media screen and (max-width: 831px) {
+  .splide__pagination__custom {
+  top: 103%;
+}
   `)

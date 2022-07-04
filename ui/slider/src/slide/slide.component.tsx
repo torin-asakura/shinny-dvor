@@ -29,14 +29,16 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
   const [active, setActive] = useState<boolean>(false)
 
   useEffect(() => {
-    if (slideRef && slideRef.current) {
-      setActive(slideRef!.current.parentElement.classList.contains('is-active'))
-    }
+    setInterval(() => {
+      if (slideRef && slideRef.current && slideRef.current.parentElement) {
+        setActive(slideRef!.current.parentElement.classList.contains('is-active'))
+      }
+    })
   }, [slideRef])
 
   return (
     <SplideSlide>
-      <Layout ref={slideRef} width={['100%', '100%', 960]}>
+      <Layout ref={slideRef} width={[335, 335, 960]}>
         <Column fill>
           <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
             {children}
@@ -114,6 +116,7 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
               </Row>
             </Column>
           </Layout>
+          <Layout flexBasis={40} />
         </Column>
       </Layout>
     </SplideSlide>
