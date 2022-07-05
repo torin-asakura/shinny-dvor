@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "main": "src/index.ts",
   "dependencies": {
+    "@store/actions": "workspace:0.0.0",
     "@store/booking": "workspace:store/booking",
     "@ui/button": "workspace:ui/button",
     "@ui/condition": "workspace:ui/condition",

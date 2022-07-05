@@ -1,26 +1,17 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { useState }         from 'react'
+import React              from 'react'
+import { FC }             from 'react'
+import { useState }       from 'react'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Radio }            from '@ui/radio'
-import { activeCarBodyVar } from '@store/booking'
-import { activeRadiusVar }  from '@store/booking'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Radio }          from '@ui/radio'
+import { validateButton } from '@store/actions'
 
-import { RadioListProps }   from './radio-list.interface'
+import { RadioListProps } from './radio-list.interface'
 
 const RadioList: FC<RadioListProps> = ({ items, id, initial = '', width = '100%' }) => {
   const [active, setActive] = useState<string>(initial)
-  const [checked] = useState(false)
-
-  const validateButton = () => {
-    if (id === 'radius') {
-      activeRadiusVar(!checked)
-    } else if (id === 'carBody') {
-      activeCarBodyVar(!checked)
-    }
-  }
+  const [checked] = useState<boolean>(false)
 
   return (
     <Row justifyContent='space-between' flexWrap='wrap'>
@@ -29,7 +20,7 @@ const RadioList: FC<RadioListProps> = ({ items, id, initial = '', width = '100%'
           width={width}
           onClick={() => {
             setActive(item)
-            validateButton()
+            validateButton(id, checked)
           }}
         >
           <Radio checked={active === item}>{item}</Radio>

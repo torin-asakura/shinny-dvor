@@ -2834,6 +2834,7 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.7.0
     "@emotion/styled": ^11.6.0
+    "@store/actions": "workspace:0.0.0"
     "@store/booking": "workspace:store/booking"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -3092,6 +3093,7 @@ __metadata:
   resolution: "@store/actions@workspace:store/actions"
   dependencies:
     "@apollo/client": ^3.4.8
+    "@store/booking": "workspace:0.0.0"
     "@store/chosen-radius": "workspace:0.0.0"
     react: ^17.0.2
   peerDependencies:
@@ -3112,7 +3114,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@store/booking@workspace:store/booking":
+"@store/booking@workspace:0.0.0, @store/booking@workspace:store/booking":
   version: 0.0.0-use.local
   resolution: "@store/booking@workspace:store/booking"
   dependencies:
