@@ -10,7 +10,7 @@ import { Text }     from '@ui/text'
 
 const Success: FC = () => (
   <Column width='100%'>
-    <Layout flexBasis={[40, 44, 44]} />
+    <Layout flexBasis={[40, 40, 44]} />
     <Layout>
       <Text fontWeight='medium' fontSize='giant'>
         Успешно
@@ -26,7 +26,7 @@ const Success: FC = () => (
         <Button color='secondary'>Button</Button>
       </Box>
     </NextLink>
-    <Layout flexBasis={[48, 128, 128]} />
+    <Layout flexBasis={[48, 48, 128]} />
   </Column>
 )
 

@@ -27,11 +27,11 @@ const Services = forwardRef((props, ref: any) => {
   return (
     <Box width='100%' justifyContent='center' id='services' ref={ref}>
       <Column minWidth={['100%', '100%', '1440px']}>
-        <Layout flexBasis={[48, 100, 100]} />
+        <Layout flexBasis={[48, 48, 100]} />
         <Row>
-          <Layout flexBasis={[20, 80, 80]} />
+          <Layout flexBasis={[20, 20, 80]} />
           <Box width='100%' justifyContent='space-between'>
-            <Column display={['none', 'flex', 'flex']} width='34%'>
+            <Column display={['none', 'none', 'flex']} width='34%'>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
                   Text 1
@@ -61,8 +61,8 @@ const Services = forwardRef((props, ref: any) => {
                 <AvailableRadiiTile />
               </Condition>
             </Column>
-            <Column width={['100%', '843px', '843px']}>
-              <Column width='100%' display={['flex', 'none', 'none']}>
+            <Column width={['100%', '100%', '843px']}>
+              <Column width='100%' display={['flex', 'flex', 'none']}>
                 <Layout>
                   <Text fontWeight='medium' fontSize='extraLarge'>
                     Text 1
@@ -100,9 +100,9 @@ const Services = forwardRef((props, ref: any) => {
               </Column>
             </Column>
           </Box>
-          <Layout flexBasis={[20, 80, 80]} />
+          <Layout flexBasis={[20, 20, 80]} />
         </Row>
-        <Layout flexBasis={[48, 100, 100]} />
+        <Layout flexBasis={[48, 48, 100]} />
       </Column>
     </Box>
   )

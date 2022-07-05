@@ -35,7 +35,7 @@ const Booking: FC = () => {
 
   return (
     <Column width='100%'>
-      <Layout flexBasis={[40, 44, 44]} />
+      <Layout flexBasis={[40, 40, 44]} />
       <Layout>
         <Text fontSize='giant' fontWeight='medium'>
           Text
@@ -83,7 +83,7 @@ const Booking: FC = () => {
           Button
         </Button>
       </Box>
-      <Layout flexBasis={[48, 128, 128]} />
+      <Layout flexBasis={[48, 48, 128]} />
     </Column>
   )
 }

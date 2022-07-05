@@ -22,19 +22,19 @@ const AllArticles: FC = () => {
     'Article 7',
   ]
   return (
-    <Box maxWidth={['100%', '1440px', '1440px']}>
-      <Layout flexBasis={[20, 80, 80]} />
+    <Box maxWidth={['100%', '100%', '1440px']}>
+      <Layout flexBasis={[20, 20, 80]} />
       <Column width='100%'>
-        <Layout flexBasis={[20, 32, 32]} />
+        <Layout flexBasis={[20, 20, 32]} />
         <Layout>
           <Text fontSize='extra'>Text</Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
           {allArticles.map((article) => (
-            <Box width={['100%', 405, 405]} onClick={() => screenVar(ARTICLE)}>
+            <Box width={['100%', '100%', 405]} onClick={() => screenVar(ARTICLE)}>
               <Column width='100%'>
-                <Layout flexBasis={[32, 48, 48]} />
-                <Box width='100%' height={[224, 260, 260]}>
+                <Layout flexBasis={[32, 32, 48]} />
+                <Box width='100%' height={[224, 224, 260]}>
                   <ImageBlock />
                 </Box>
                 <Layout flexBasis={24} />
@@ -64,9 +64,9 @@ const AllArticles: FC = () => {
             </Box>
           ))}
         </Row>
-        <Layout flexBasis={[20, 32, 32]} />
+        <Layout flexBasis={[20, 20, 32]} />
       </Column>
-      <Layout flexBasis={[20, 80, 80]} />
+      <Layout flexBasis={[20, 20, 80]} />
     </Box>
   )
 }

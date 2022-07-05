@@ -18,13 +18,13 @@ const Footer: FC = () => (
     <Column width='100%' alignItems='center'>
       <Divider color='gray' />
       <Box minWidth={['100%', '100%', '1440px']}>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>
-          <Layout flexBasis={[24, 40, 40]} />
+          <Layout flexBasis={[24, 24, 40]} />
           <Row justifyContent='space-between' alignItems='center'>
             <Box width='100%' justifyContent='space-between'>
               <FooterLogo />
-              <Box display={['none', 'flex', 'flex']} width={392} alignItems='center'>
+              <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                 <Layout flexBasis={60} />
                 <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                   <NextLink path='/services'>
@@ -53,8 +53,8 @@ const Footer: FC = () => (
             </Box>
             <SocialLinks />
           </Row>
-          <Layout flexBasis={[24, 40, 40]} />
-          <Box width={90} height={136} display={['flex', 'none', 'none']}>
+          <Layout flexBasis={[24, 24, 40]} />
+          <Box width={90} height={136} display={['flex', 'flex', 'none']}>
             <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
               <NextLink path='/services'>
                 <Layout>
@@ -80,13 +80,13 @@ const Footer: FC = () => (
             </Box>
           </Box>
         </Column>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
       </Box>
       <Divider color='gray' />
       <Box alignItems='center' minWidth={['100%', '100%', '1440px']}>
-        <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={[24, 32, 32]} />
+          <Layout flexBasis={[24, 24, 32]} />
           <Row
             justifyContent='space-between'
             alignItems='center'
@@ -131,9 +131,9 @@ const Footer: FC = () => (
               </Layout>
             </Row>
           </Column>
-          <Layout flexBasis={[24, 32, 32]} />
+          <Layout flexBasis={[24, 24, 32]} />
         </Column>
-        <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Box>
     </Column>
   </Box>

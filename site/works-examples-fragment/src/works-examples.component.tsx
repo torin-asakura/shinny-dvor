@@ -27,7 +27,7 @@ const WorksExamples = forwardRef((props, ref: any) => {
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
       <Row justifyContent='center' alignItems='center' overflow='hidden'>
-        <Layout flexBasis={20} display={['flex', 'none', 'none']} />
+        <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
         <Column width='100%' alignItems='center'>
           <Layout flexBasis={[20, 20, 100]} />
           <Layout>
@@ -51,7 +51,7 @@ const WorksExamples = forwardRef((props, ref: any) => {
           </Slider>
           <Layout flexBasis={[80, 80, 100]} />
         </Column>
-        <Layout flexBasis={20} display={['flex', 'none', 'none']} />
+        <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
       </Row>
     </Box>
   )

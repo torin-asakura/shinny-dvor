@@ -7,10 +7,10 @@ import { NextLink }       from '@ui/link'
 
 const FooterLogo: FC = () => (
   <NextLink path='/'>
-    <Box display={['flex', 'none', 'none']}>
+    <Box display={['flex', 'flex', 'none']}>
       <FooterLogoIcon width={148} height={48} />
     </Box>
-    <Box display={['none', 'flex', 'flex']}>
+    <Box display={['none', 'none', 'flex']}>
       <FooterLogoIcon width={198} height={64} />
     </Box>
   </NextLink>

@@ -27,9 +27,9 @@ const Service: FC = () => {
   return (
     <Box width='100%'>
       <Row>
-        <Layout flexBasis={[20, 299, 299]} />
+        <Layout flexBasis={[20, 20, 299]} />
         <Column width='100%'>
-          <Layout flexBasis={[20, 32, 32]} />
+          <Layout flexBasis={[20, 20, 32]} />
           <Box width={102}>
             <ReturnButton />
           </Box>
@@ -37,7 +37,7 @@ const Service: FC = () => {
           <Layout>
             <Text
               fontWeight='medium'
-              fontSize={['extraLarge', 'giant', 'giant']}
+              fontSize={['extraLarge', 'extraLarge', 'giant']}
               lineHeight='grown'
             >
               Text
@@ -86,9 +86,9 @@ const Service: FC = () => {
           <Box width='100%' height={48}>
             <Button onClick={() => screenVar(ALL_SERVICES)}>Button</Button>
           </Box>
-          <Layout flexBasis={[65, 120, 120]} />
+          <Layout flexBasis={[65, 65, 120]} />
         </Column>
-        <Layout flexBasis={[20, 299, 299]} />
+        <Layout flexBasis={[20, 20, 299]} />
       </Row>
     </Box>
   )

@@ -24,10 +24,11 @@ const Navigation: FC = () => {
     <Box
       width='100%'
       height={[80, 80, 104]}
-      position='fixed'
-      zIndex={1000}
       backgroundColor='white'
       justifyContent='center'
+      position='sticky'
+      top={0}
+      zIndex={1000}
     >
       <Box width={['100%', '100%', 1440]}>
         <Layout flexBasis={[20, 20, 32]} />

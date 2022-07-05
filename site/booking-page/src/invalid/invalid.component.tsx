@@ -11,7 +11,7 @@ import { screenVar } from '@store/booking'
 
 const Invalid: FC = () => (
   <Column width='100%'>
-    <Layout flexBasis={[40, 44, 44]} />
+    <Layout flexBasis={[40, 40, 44]} />
     <Layout>
       <Text fontWeight='medium' fontSize='giant'>
         Что-то пошло не так
@@ -27,7 +27,7 @@ const Invalid: FC = () => (
         Button
       </Button>
     </Box>
-    <Layout flexBasis={[48, 128, 128]} />
+    <Layout flexBasis={[48, 48, 128]} />
   </Column>
 )
 
