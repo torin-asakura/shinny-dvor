@@ -7,31 +7,15 @@ import { Box }             from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
-import { radiusVar }       from '@store/chosen-radius'
-import { chosenVar }       from '@store/chosen-radius'
+import { setChosenRadius } from '@store/actions'
 
 import { SizeButton }      from './size-button.component'
 import { SizeButtonProps } from './size-button.interface'
+import { useMockedRadii }  from '../data'
 
 const SizeButtonCard: FC<SizeButtonProps> = ({ active }) => {
-  // TODO availableRadii should come from server
-  const availableRadii = [
-    'R12',
-    'R13',
-    'R14',
-    'R15',
-    'R16',
-    'R17',
-    'R18',
-    'R19',
-    'R20',
-    'R21',
-    'R22',
-  ]
-  const setChosenRadius = ({ item }) => {
-    radiusVar(item)
-    chosenVar(true)
-  }
+  const { radii } = useMockedRadii()
+
   return (
     <Card
       backdrop
@@ -40,12 +24,12 @@ const SizeButtonCard: FC<SizeButtonProps> = ({ active }) => {
           <Text fontWeight='medium'>Text</Text>
           <Layout flexBasis={20} />
           <Row flexWrap='wrap'>
-            {availableRadii.map((item) => (
+            {radii.map(({ id, radius }) => (
               <>
-                <Box width={56} height={65}>
-                  <Button size='large' color='radius' onClick={() => setChosenRadius({ item })}>
+                <Box key={id} width={56} height={65}>
+                  <Button size='large' color='radius' onClick={() => setChosenRadius(radius)}>
                     <Text fontSize='small' fontWeight='medium'>
-                      {item}
+                      {radius}
                     </Text>
                   </Button>
                 </Box>

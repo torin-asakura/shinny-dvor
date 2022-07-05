@@ -1,6 +1,11 @@
 import { injectGlobal } from '@emotion/css'
 
 injectGlobal(`
+.splide {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .splide__pagination__page__custom {
   width: 10px;
   height: 10px;
@@ -37,11 +42,17 @@ injectGlobal(`
 
 .splide__arrow__custom {
   background: transparent;
-  position: static;
-  margin-left: 53px;
-  margin-right: 53px;
+  position: relative;
   opacity: 1;
   z-index: 0;
+}
+
+.splide__arrow--next {
+  margin-left: 90px;
+}
+
+.splide__arrow--prev {
+  margin-right: 90px;
 }
 
 .splide__arrow:hover {

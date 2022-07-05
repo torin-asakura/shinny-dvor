@@ -43,28 +43,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/link-error@npm:^2.0.0-beta.3":
-  version: 2.0.0-beta.3
-  resolution: "@apollo/link-error@npm:2.0.0-beta.3"
-  dependencies:
-    "@apollo/client": ^3.0.0-beta.23
-    tslib: ^1.9.3
-  checksum: e3fce77e26e204d865cfdc7999dc5f744eed80fb32c83340effa098540e58d3c62928127c30b613c7d6b5b012b4b382650cb9aeadb3828b230a0b1dc4d808cef
-  languageName: node
-  linkType: hard
-
-"@apollo/link-schema@npm:^2.0.0-beta.3":
-  version: 2.0.0-beta.3
-  resolution: "@apollo/link-schema@npm:2.0.0-beta.3"
-  dependencies:
-    "@apollo/client": ^3.0.0-beta.23
-    tslib: ^1.9.3
-  peerDependencies:
-    graphql: ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0
-  checksum: fb58926040613fc4e55f2ec282e67d21366bb00cb1e8854f0a2f818e422c8f4d1b6c14b47aa2e4b3e0cab2550a4cc55feaa1758239e499f36a8eb280fcb55ead
-  languageName: node
-  linkType: hard
-
 "@apollo/react-ssr@npm:^4.0.0":
   version: 4.0.0
   resolution: "@apollo/react-ssr@npm:4.0.0"
@@ -652,24 +630,6 @@ __metadata:
   dependencies:
     pino: ^6.11.3
   checksum: ad4fc939b618d6924a852ed1580933bc89265dd907a6631d3eaf458a28748a69c0e8174fb07fc3273d99bfef89928e8e4f394ec9561e486f509393847f54b1a7
-  languageName: node
-  linkType: hard
-
-"@atls/next-app-with-apollo@npm:^0.2.70":
-  version: 0.2.71
-  resolution: "@atls/next-app-with-apollo@npm:0.2.71"
-  dependencies:
-    "@apollo/link-error": ^2.0.0-beta.3
-    "@apollo/link-schema": ^2.0.0-beta.3
-    isomorphic-unfetch: ^3.1.0
-  peerDependencies:
-    "@apollo/client": ^3.0.0-james.33.0
-    "@apollo/react-ssr": ^4.0.0-beta.1
-    graphql: ^14.5.0 || ^15.0.0
-    next: "*"
-    react: ^16.12.0
-    react-dom: ^16.9.0
-  checksum: 8a75f523e0ec42004cee8788b28a88e58bc5a8f4e5b5f45870a54235fb20b7b5b905f0a2cc914dcf04d02c192d2fbc19bb59e3ecd02a9044a877d8cfc2581be4
   languageName: node
   linkType: hard
 
@@ -1526,7 +1486,6 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@apollo/react-ssr": ^4.0.0
     "@atls/actl-cli": ^0.4.48
-    "@atls/next-app-with-apollo": ^0.2.70
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
@@ -1546,6 +1505,7 @@ __metadata:
     "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@types/styled-system": ^5
+    "@ui/theme": "workspace:0.0.0"
     events: ^3.3.0
     express: ^4.17.1
     graphql: ^15.5.1
@@ -2027,6 +1987,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@faker-js/faker@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "@faker-js/faker@npm:7.3.0"
+  checksum: ef5b64af30ce0ec76cb22798fbbe50184946fac389b4d81235f9d8d9eaaa77d67a80f46954fa993996b7c774bae23314529a95a42a6b68794f0795976c9be82b
+  languageName: node
+  linkType: hard
+
 "@fragments/articles-fragment@workspace:fragments/articles-fragment":
   version: 0.0.0-use.local
   resolution: "@fragments/articles-fragment@workspace:fragments/articles-fragment"
@@ -2083,6 +2050,7 @@ __metadata:
     "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
+    "@store/actions": "workspace:0.0.0"
     "@store/chosen-radius": "workspace:store/chosen-radius"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2820,7 +2788,6 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@apollo/react-ssr": ^4.0.0
     "@atls/actl-cli": ^0.4.48
-    "@atls/next-app-with-apollo": ^0.2.70
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
@@ -3007,6 +2974,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.6
     "@emotion/react": ^11.6.0
+    "@store/actions": "workspace:0.0.0"
     "@store/chosen-radius": "workspace:store/chosen-radius"
     "@store/services": "workspace:store/services"
     "@types/react": ^17
@@ -3085,8 +3053,10 @@ __metadata:
   resolution: "@site/works-examples-fragment@workspace:site/works-examples-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
+    "@faker-js/faker": ^7.3.0
     "@types/react": ^17
     "@types/react-dom": ^17
+    "@ui/image": "workspace:0.0.0"
     "@ui/layout": "workspace:ui/layout"
     "@ui/slider": "workspace:0.0.1"
     "@ui/text": "workspace:ui/text"
@@ -3116,6 +3086,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@store/actions@workspace:0.0.0, @store/actions@workspace:store/actions":
+  version: 0.0.0-use.local
+  resolution: "@store/actions@workspace:store/actions"
+  dependencies:
+    "@apollo/client": ^3.4.8
+    "@store/chosen-radius": "workspace:0.0.0"
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
+
 "@store/articles@workspace:store/articles":
   version: 0.0.0-use.local
   resolution: "@store/articles@workspace:store/articles"
@@ -3140,7 +3123,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@store/chosen-radius@workspace:store/chosen-radius":
+"@store/chosen-radius@workspace:0.0.0, @store/chosen-radius@workspace:store/chosen-radius":
   version: 0.0.0-use.local
   resolution: "@store/chosen-radius@workspace:store/chosen-radius"
   dependencies:
@@ -4138,7 +4121,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/image@workspace:ui/image":
+"@ui/image@workspace:0.0.0, @ui/image@workspace:ui/image":
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
@@ -4433,7 +4416,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/theme@workspace:ui/theme":
+"@ui/theme@workspace:0.0.0, @ui/theme@workspace:ui/theme":
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
@@ -9539,16 +9522,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"isomorphic-unfetch@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "isomorphic-unfetch@npm:3.1.0"
-  dependencies:
-    node-fetch: ^2.6.1
-    unfetch: ^4.2.0
-  checksum: 82b92fe4ec2823a81ab0fc0d11bd94d710e6f9a940d56b3cba31896d4345ec9ffc7949f4ff31ebcae84f6b95f7ebf3474c4c7452b834eb4078ea3f2c37e459c5
-  languageName: node
-  linkType: hard
-
 "istanbul-lib-coverage@npm:^3.0.0, istanbul-lib-coverage@npm:^3.2.0":
   version: 3.2.0
   resolution: "istanbul-lib-coverage@npm:3.2.0"
@@ -11457,15 +11430,6 @@ fsevents@^2.3.2:
     encoding: ^0.1.11
     is-stream: ^1.0.1
   checksum: 3bb0528c05d541316ebe52770d71ee25a6dce334df4231fd55df41a644143e07f068637488c18a5b0c43f05041dbd3346752f9e19b50df50569a802484544d5b
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:^2.6.1":
-  version: 2.6.6
-  resolution: "node-fetch@npm:2.6.6"
-  dependencies:
-    whatwg-url: ^5.0.0
-  checksum: ee8290626bdb73629c59722b75dcf4b9b6a67c1ed7eb9102e368479c4a13b56a48c2bb3ad71571e378e98c8b2c64c820e11f9cd39e4b8557dd138ad571ef9a42
   languageName: node
   linkType: hard
 
@@ -13993,13 +13957,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tr46@npm:~0.0.3":
-  version: 0.0.3
-  resolution: "tr46@npm:0.0.3"
-  checksum: 726321c5eaf41b5002e17ffbd1fb7245999a073e8979085dacd47c4b4e8068ff5777142fc6726d6ca1fd2ff16921b48788b87225cbc57c72636f6efa8efbffe3
-  languageName: node
-  linkType: hard
-
 "traverse@npm:>=0.2.4":
   version: 0.6.6
   resolution: "traverse@npm:0.6.6"
@@ -14185,7 +14142,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.13.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
@@ -14353,13 +14310,6 @@ typescript@4.3.5:
     has-symbols: ^1.0.2
     which-boxed-primitive: ^1.0.2
   checksum: 89d950e18fb45672bc6b3c961f1e72c07beb9640c7ceed847b571ba6f7d2af570ae1a2584cfee268b9d9ea1e3293f7e33e0bc29eaeb9f8e8a0bab057ff9e6bba
-  languageName: node
-  linkType: hard
-
-"unfetch@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "unfetch@npm:4.2.0"
-  checksum: 6a4b2557e1d921eaa80c4425ce27a404945ec26491ed06e62598f333996a91a44c7908cb26dc7c2746d735762b13276cf4aa41829b4c8f438dde63add3045d7a
   languageName: node
   linkType: hard
 
@@ -14536,13 +14486,6 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"webidl-conversions@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "webidl-conversions@npm:3.0.1"
-  checksum: c92a0a6ab95314bde9c32e1d0a6dfac83b578f8fa5f21e675bc2706ed6981bc26b7eb7e6a1fab158e5ce4adf9caa4a0aee49a52505d4d13c7be545f15021b17c
-  languageName: node
-  linkType: hard
-
 "webidl-conversions@npm:^5.0.0":
   version: 5.0.0
   resolution: "webidl-conversions@npm:5.0.0"
@@ -14675,16 +14618,6 @@ typescript@4.3.5:
   version: 2.3.0
   resolution: "whatwg-mimetype@npm:2.3.0"
   checksum: 23eb885940bcbcca4ff841c40a78e9cbb893ec42743993a42bf7aed16085b048b44b06f3402018931687153550f9a32d259dfa524e4f03577ab898b6965e5383
-  languageName: node
-  linkType: hard
-
-"whatwg-url@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "whatwg-url@npm:5.0.0"
-  dependencies:
-    tr46: ~0.0.3
-    webidl-conversions: ^3.0.0
-  checksum: b8daed4ad3356cc4899048a15b2c143a9aed0dfae1f611ebd55073310c7b910f522ad75d727346ad64203d7e6c79ef25eafd465f4d12775ca44b90fa82ed9e2c
   languageName: node
   linkType: hard
 

@@ -7,6 +7,7 @@ import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { NextLink }    from '@ui/link'
+import { Link }        from '@ui/link'
 import { FooterLogo }  from '@ui/logo'
 import { SocialLinks } from '@ui/social-links'
 import { Text }        from '@ui/text'
@@ -89,7 +90,7 @@ const Footer: FC = () => (
           <Row
             justifyContent='space-between'
             alignItems='center'
-            display={['none', 'flex', 'flex']}
+            display={['none', 'none', 'flex']}
           >
             <Box width='50%'>
               <Layout display='flex' flexDirection='column'>
@@ -107,10 +108,12 @@ const Footer: FC = () => (
             <Layout>
               <Text color='darkGray'>by</Text>
               <Space />
-              <Text fontWeight='medium'>TorinAsakura</Text>
+              <Link href='https://torinasakura.name/' target='_blank' rel='me'>
+                <Text fontWeight='medium'>TorinAsakura</Text>
+              </Link>
             </Layout>
           </Row>
-          <Column justifyContent='space-between' display={['flex', 'none', 'none']}>
+          <Column justifyContent='space-between' display={['flex', 'flex', 'none']}>
             <Layout>
               <Text>Address</Text>
             </Layout>
@@ -120,9 +123,11 @@ const Footer: FC = () => (
                 <Text>Tel</Text>
               </Layout>
               <Layout>
-                <Text color='darkGray'>by</Text>
-                <Space />
-                <Text fontWeight='medium'>TorinAsakura</Text>
+                <Link href='https://torinasakura.name/' target='_blank' rel='me'>
+                  <Text color='darkGray'>by</Text>
+                  <Space />
+                  <Text fontWeight='medium'>TorinAsakura</Text>
+                </Link>
               </Layout>
             </Row>
           </Column>

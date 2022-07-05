@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
+    "@store/actions": "workspace:0.0.0",
     "@store/chosen-radius": "workspace:store/chosen-radius",
     "@store/services": "workspace:store/services",
     "@ui/button": "workspace:ui/button",

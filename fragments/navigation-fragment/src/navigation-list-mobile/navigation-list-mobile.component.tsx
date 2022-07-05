@@ -2,6 +2,7 @@ import React           from 'react'
 import { FC }          from 'react'
 
 import { Box }         from '@ui/layout'
+import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { Column }      from '@ui/layout'
 import { NextNavLink } from '@ui/link'
@@ -11,17 +12,23 @@ const NavigationListMobile: FC = () => (
   <Box backgroundColor='white'>
     <Layout flexBasis={20} flexShrink={0} />
     <Column>
-      <NextNavLink path='/services'>
-        <Text fontWeight='medium'>services</Text>
-      </NextNavLink>
+      <Row>
+        <NextNavLink path='/services'>
+          <Text fontWeight='medium'>services</Text>
+        </NextNavLink>
+      </Row>
       <Layout flexBasis={24} />
-      <NextNavLink path='/contacts'>
-        <Text fontWeight='medium'>contacts</Text>
-      </NextNavLink>
+      <Row>
+        <NextNavLink path='/contacts'>
+          <Text fontWeight='medium'>contacts</Text>
+        </NextNavLink>
+      </Row>
       <Layout flexBasis={24} />
-      <NextNavLink path='/blog'>
-        <Text fontWeight='medium'>blog</Text>
-      </NextNavLink>
+      <Row>
+        <NextNavLink path='/blog'>
+          <Text fontWeight='medium'>blog</Text>
+        </NextNavLink>
+      </Row>
       <Layout flexBasis={32} />
     </Column>
     <Layout flexBasis={20} flexShrink={0} />
