@@ -18,6 +18,7 @@ import { AllServices }    from './all-services'
 
 const ServicesPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
+
   return (
     <Column width='100%' alignItems='center'>
       <Navigation />

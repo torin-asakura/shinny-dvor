@@ -6811,6 +6811,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.5.5"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@faker-js/faker", "npm:7.3.0"],\
             ["@fragments/articles-fragment", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:fragments/articles-fragment"],\
             ["@fragments/footer-fragment", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:fragments/footer-fragment"],\
             ["@fragments/navigation-fragment", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:fragments/navigation-fragment"],\
@@ -6856,6 +6857,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@site/services-page", "workspace:site/services-page"],\
             ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
+            ["@faker-js/faker", "npm:7.3.0"],\
             ["@fragments/articles-fragment", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#workspace:fragments/articles-fragment"],\
             ["@fragments/footer-fragment", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#workspace:fragments/footer-fragment"],\
             ["@fragments/navigation-fragment", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#workspace:fragments/navigation-fragment"],\

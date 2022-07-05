@@ -1,3 +1,4 @@
 export interface ItemProps {
-  service: string
+  price: string
+  serviceName: string
 }
