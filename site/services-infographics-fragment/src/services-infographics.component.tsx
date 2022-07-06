@@ -1,27 +1,21 @@
-import React   from 'react'
-import { FC }  from 'react'
+import React          from 'react'
+import { forwardRef } from 'react'
 
-import { Box } from '@ui/layout'
+import { Box }        from '@ui/layout'
+import { Wheel }      from '@ui/wheel'
 
-const ServicesInfographics: FC = () => (
+const ServicesInfographics = forwardRef((props, ref: any) => (
   <Box
     width='100%'
-    height={[640, 800, 800]}
+    minHeight={[640, 640, 800]}
     justifyContent='center'
     alignItems='center'
-    border='1px solid yellow'
+    ref={ref}
   >
-    <Box
-      width={[335, 440, 440]}
-      height={[335, 440, 440]}
-      border='1px solid yellow'
-      justifyContent='center'
-      alignItems='center'
-    >
-      {' '}
-      Services infographics
+    <Box width={[335, 335, 440]} height={[335, 335, 440]} position='relative'>
+      <Wheel />
     </Box>
   </Box>
-)
+))
 
 export { ServicesInfographics }

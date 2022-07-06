@@ -1,18 +1,32 @@
 {
   "name": "@site/services-fragment",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/divider": "workspace:ui/divider",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
+    "@store/actions": "workspace:0.0.1",
+    "@store/chosen-radius": "workspace:0.0.1",
+    "@store/services": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
+    "@ui/radio": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.5.6",
     "@types/react": "^17",
     "@types/react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

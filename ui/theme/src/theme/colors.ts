@@ -1,0 +1,63 @@
+const colors = {
+  white: 'rgba(255, 255, 255, 1)',
+  gray: 'rgba(37, 44, 50, 0.12)',
+  lightGray: 'rgba(37, 44, 50, 0.06)',
+  steel: 'rgba(37, 44, 50, 0.7)',
+  milkGray: 'rgba(255, 255, 255, 0.2)',
+  transparentGray: 'rgba(248, 248, 248, 1)',
+  fillGray: 'rgba(249, 249, 249, 1)',
+  darkGray: 'rgba(123, 131, 138, 1)',
+  black: 'rgba(37, 44, 50, 1)',
+  blue: 'rgba(48, 100, 235, 1)',
+  darkBlue: 'rgba(38, 89, 220, 1)',
+  primaryBlue: 'rgba(69, 121, 255, 1)',
+  button: {
+    primary: {
+      default: 'rgba(69, 121, 255, 1)',
+      hover: 'rgba(48, 100, 235, 1)',
+      active: 'rgba(38, 89, 220, 1)',
+      disabled: 'rgba(197, 200, 203, 1)',
+      fontColor: 'rgba(255, 255, 255, 1)',
+    },
+    secondary: {
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      default: 'rgba(37, 44, 50, 0.12)',
+      hover: 'rgba(48, 100, 235, 1)',
+      active: 'rgba(38, 89, 220, 1)',
+      disabled: 'rgba(37, 44, 50, 0.12)',
+      fontColor: 'rgba(37, 44, 50, 1)',
+    },
+    radius: {
+      backgroundColor: 'rgba(37, 44, 50, 0.06)',
+      default: 'rgba(37, 44, 50, 0.06)',
+      hover: 'rgba(48, 100, 235, 1)',
+      active: 'rgba(38, 89, 220, 1)',
+      disabled: 'rgba(37, 44, 50, 0.06)',
+      fontColor: 'rgba(197, 200, 203, 1)',
+    },
+    darkSocial: {
+      backgroundColor: 'rgba(37, 44, 50, 0.06)',
+      default: 'rgba(255, 255, 255, 0.2)',
+      hover: 'rgba(255, 255, 255, 0.3)',
+      active: 'rgba(255, 255, 255, 0.4)',
+      disabled: 'rgba(255, 255, 255, 0.1)',
+      fontColor: 'rgba(255, 255, 255, 0.5)',
+    },
+    lightWheel: {
+      default: 'rgba(37, 44, 50, 0.06)',
+      hover: 'rgba(48, 100, 235, 1)',
+      active: 'rgba(38, 89, 220, 1)',
+      disabled: 'rgba(37, 44, 50, 0.06)',
+      fontColor: 'rgba(197, 200, 203, 1)',
+    },
+    darkWheel: {
+      default: 'rgba(255, 255, 255, 0.2)',
+      hover: 'rgba(255, 255, 255, 0.3)',
+      active: 'rgba(255, 255, 255, 1)',
+      disabled: 'rgba(255, 255, 255, 0.1)',
+      fontColor: 'rgba(255, 255, 255, 1)',
+    },
+  },
+}
+
+export { colors }

@@ -54,7 +54,7 @@ node_modules
 build
 dist
 .next/
-frontend/ui/icons/src
+ui/icons/src
 
 # env vars
 .env

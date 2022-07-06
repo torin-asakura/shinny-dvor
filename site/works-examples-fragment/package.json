@@ -1,16 +1,25 @@
 {
   "name": "@site/works-examples-fragment",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/slider": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@types/react": "^17",
     "@types/react-dom": "^17"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

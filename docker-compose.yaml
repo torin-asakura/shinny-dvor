@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  yarn:
+    image: node:16
+    working_dir: /workspace
+    volumes:
+      - ./:/workspace
+    entrypoint: yarn
+
+  site:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @site/app dev
+    ports:
+      - 3000:3000
+
+  site-build:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @site/app build
+
+  blog:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @blog/app dev
+    ports:
+      - 3000:3000
+
+  blog-build:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @blog/app build

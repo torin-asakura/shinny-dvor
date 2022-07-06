@@ -1,25 +1,29 @@
 {
   "name": "@ui/link",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*",
-    "react-dom": "*",
-    "styled-system": "*"
+  "dependencies": {
+    "@atls-ui-parts/link": "^0.0.6",
+    "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@types/react-dom": "^17.0.9",
     "@types/styled-system": "^5",
-    "next": "^10.2.3",
+    "next": "12.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
   },
-  "dependencies": {
-    "@atls-ui-parts/link": "^0.0.4"
+  "peerDependencies": {
+    "@emotion/css": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*"
   }
 }

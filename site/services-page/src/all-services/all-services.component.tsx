@@ -1,70 +1,46 @@
-import React         from 'react'
-import { FC }        from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { useState }          from 'react'
+import { useEffect }         from 'react'
 
-import { screenVar } from '@store/services'
-import { SERVICE }   from '@store/services'
-import { Box }       from '@ui/layout'
-import { Row }       from '@ui/layout'
-import { Column }    from '@ui/layout'
-import { Layout }    from '@ui/layout'
-import { Text }      from '@ui/text'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+
+import { Services }          from '../data'
+import { Item }              from '../item'
+import { useMockedServices } from '../data'
 
 const AllServices: FC = () => {
-  // TODO add actual allServicesList
-  const allServicesList = [
-    'Service 1',
-    'Service 2',
-    'Service 3',
-    'Service 4',
-    'Service 3',
-    'Service 3',
-  ]
+  const { services: servicesMock } = useMockedServices()
+
+  const [services, setServices] = useState<Services[]>([])
+
+  useEffect(() => {
+    setServices(servicesMock)
+  }, [servicesMock])
+
   return (
-    <Box width='100%' border='1px solid green'>
-      <Layout flexBasis={[20, 80, 80]} />
+    <Box maxWidth={['100%', '100%', '1440px']}>
+      <Layout flexBasis={[20, 20, 80]} />
       <Column width='100%'>
-        <Layout flexBasis={[20, 32, 32]} />
+        <Layout flexBasis={[20, 20, 32]} />
         <Layout>
-          <Text>Text</Text>
+          <Text fontWeight='bold' fontSize={56}>
+            Text
+          </Text>
         </Layout>
-        <Layout flexBasis={[12, 16, 16]} />
+        <Layout flexBasis={[12, 12, 16]} />
         <Row flexWrap='wrap'>
-          {allServicesList.map((service) => (
-            <>
-              <Column width={['100%', 296, 296]}>
-                <Layout flexBasis={[20, 32, 32]} />
-                <Box
-                  width='100%'
-                  height={[312, 388, 388]}
-                  border='1px solid green'
-                  onClick={() => screenVar(SERVICE)}
-                >
-                  <Layout flexBasis={[24, 32, 32]} />
-                  <Column width='100%'>
-                    <Layout flexBasis={32} />
-                    <Box width='100%' height={[180, 232, 232]} border='1px solid pink'>
-                      Pic
-                    </Box>
-                    <Layout flexBasis={[24, 32, 32]} />
-                    <Layout>
-                      <Text> {service}</Text>
-                    </Layout>
-                    <Layout flexBasis={8} />
-                    <Layout>
-                      <Text>Text</Text>
-                    </Layout>
-                    <Layout flexBasis={[24, 32, 32]} />
-                  </Column>
-                  <Layout flexBasis={[24, 32, 32]} />
-                </Box>
-              </Column>
-              <Layout flexBasis={[0, 32, 32]} />
-            </>
+          {services.map(({ id, serviceName, price }) => (
+            <Item key={id} serviceName={serviceName} price={price} />
           ))}
         </Row>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
       </Column>
-      <Layout flexBasis={[20, 80, 80]} />
+      <Layout flexBasis={[20, 20, 80]} />
     </Box>
   )
 }
