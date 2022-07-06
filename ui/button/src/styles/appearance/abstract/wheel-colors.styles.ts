@@ -1,8 +1,9 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
-import { styleFn }                from 'styled-system'
-import { prop }                   from 'styled-tools'
 import { execAndSerialize }       from '@atls-ui-parts/styles'
 import { combine }                from '@atls-ui-parts/styles'
+
+import { styleFn }                from 'styled-system'
+import { prop }                   from 'styled-tools'
 
 const getPrimaryColorsStyles = (): styleFn => {
   const primaryDefaultColors: styleFn = createAppearanceStyles({

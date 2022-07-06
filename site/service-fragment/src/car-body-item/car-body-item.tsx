@@ -1,9 +1,9 @@
 import React         from 'react'
 import { FC }        from 'react'
 
+import { CheckIcon } from '@ui/icons'
 import { Box }       from '@ui/layout'
 import { Layout }    from '@ui/layout'
-import { CheckIcon } from '@ui/icons'
 import { Text }      from '@ui/text'
 
 import { ItemProps } from './car-body-item.interface'

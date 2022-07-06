@@ -1,8 +1,23 @@
 {
   "private": true,
   "license": "BSD-3-Clause",
+  "workspaces": [
+    "site/**/*",
+    "fragments/**/*",
+    "blog/**/*",
+    "ui/**/*",
+    "store/**/*"
+  ],
+  "scripts": {
+    "postinstall": "yarn workspace @ui/icons build"
+  },
+  "resolutions": {
+    "@apollo/client": "^3.5.5",
+    "framer-motion": "4.1.7",
+    "typescript": "4.3.5"
+  },
   "devDependencies": {
-    "@atls/code-service": "^0.0.12",
+    "@atls/code-service": "^0.0.16",
     "@atls/config-jest": "^0.0.4",
     "@jest/core": "^27.5.1",
     "@types/eslint": "^8",
@@ -12,19 +27,5 @@
     "husky": "^7.0.1",
     "typescript": "4.3.5"
   },
-  "scripts": {
-    "postinstall": "yarn workspace @ui/icons build"
-  },
-  "resolutions": {
-    "typescript": "4.3.5",
-    "@apollo/client": "^3.5.5",
-    "framer-motion": "4.1.7"
-  },
-  "workspaces": [
-    "site/**/*",
-    "fragments/**/*",
-    "blog/**/*",
-    "ui/**/*",
-    "store/**/*"
-  ]
+  "packageManager": "yarn@3.2.1"
 }

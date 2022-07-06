@@ -10,4 +10,5 @@ export const baseOuterCircleStyles: styleFn = ({ theme, hover }) => ({
   backgroundColor: hover ? theme.colors.primaryBlue : theme.colors.white,
   borderRadius: theme.radii.default,
   transition: '.5s',
+  boxShadow: theme.shadows.default,
 })

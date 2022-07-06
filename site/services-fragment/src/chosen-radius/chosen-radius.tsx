@@ -1,26 +1,36 @@
-import React              from 'react'
-import { FC }             from 'react'
-import { useReactiveVar } from '@apollo/client'
+import { useReactiveVar }           from '@apollo/client'
 
-import { Box }            from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Text }           from '@ui/text'
-import { radiusVar }      from '@store/chosen-radius'
+import React                        from 'react'
+import { FC }                       from 'react'
+import { useState }                 from 'react'
+
+import { Button }                   from '@ui/button'
+import { Box }                      from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { radiusVar }                from '@store/chosen-radius'
+import { checkedRadiusServicesVar } from '@store/chosen-radius'
 
 const ChosenRadius: FC = () => {
-  const radius = useReactiveVar(radiusVar)
+  const radius = useReactiveVar<string>(radiusVar)
+  const checkedRadiusServices = useReactiveVar<boolean>(checkedRadiusServicesVar)
+
+  const [isChecked, setIsChecked] = useState<boolean>(false)
+
   return (
-    <Box
-      width={56}
-      height={56}
-      backgroundColor='lightGray'
-      borderRadius='normal'
-      justifyContent='center'
-      alignItems='center'
-      flexShrink={0}
-    >
-      <Layout>
-        <Text fontWeight='bold'>{radius}</Text>
+    <Box onClick={() => checkedRadiusServicesVar(!checkedRadiusServices)}>
+      <Layout width={56}>
+        <Button
+          color={checkedRadiusServices ? 'primary' : 'radius'}
+          size='large'
+          onClick={() => setIsChecked(!isChecked)}
+        >
+          <Layout>
+            <Text fontWeight='bold' fontSize='small'>
+              {radius}
+            </Text>
+          </Layout>
+        </Button>
       </Layout>
     </Box>
   )

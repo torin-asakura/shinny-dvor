@@ -1,8 +1,8 @@
-import React              from 'react'
-import { FC }             from 'react'
 import { useReactiveVar } from '@apollo/client'
 
-import { screenVar }      from '@store/booking'
+import React              from 'react'
+import { FC }             from 'react'
+
 import { Screen }         from '@store/booking'
 import { INITIAL }        from '@store/booking'
 import { SUCCESS }        from '@store/booking'
@@ -16,28 +16,30 @@ import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
 import { NextLink }       from '@ui/link'
 import { Logo }           from '@ui/logo'
+import { screenVar }      from '@store/booking'
 
 import { Booking }        from './booking'
-import { Success }        from './success'
 import { Invalid }        from './invalid'
+import { Success }        from './success'
 
 const BookingPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
+
   return (
     <Row justifyContent='space-between'>
-      <Layout flexBasis={[21, 32, 32]} />
+      <Layout flexBasis={[21, 21, 32]} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[24, 28, 28]} />
+        <Layout flexBasis={[24, 24, 28]} />
         <Box width='100%' justifyContent='space-between' alignItems='center'>
           <Layout>
             <Logo />
           </Layout>
           <Layout>
-            <NextLink href='/'>
+            <NextLink path='/'>
               <Button size='ghost' color='transparent'>
                 <Box
-                  width={[40, 48, 48]}
-                  height={[40, 48, 48]}
+                  width={[40, 40, 48]}
+                  height={[40, 40, 48]}
                   justifyContent='center'
                   alignItems='center'
                   backgroundColor='lightGray'
@@ -50,7 +52,7 @@ const BookingPage: FC = () => {
             </NextLink>
           </Layout>
         </Box>
-        <Box width={['100%', 720, 720]}>
+        <Box width={['100%', '100%', 720]}>
           <Condition match={screen === INITIAL}>
             <Booking />
           </Condition>
@@ -62,7 +64,7 @@ const BookingPage: FC = () => {
           </Condition>
         </Box>
       </Column>
-      <Layout flexBasis={[21, 32, 32]} />
+      <Layout flexBasis={[21, 21, 32]} />
     </Row>
   )
 }

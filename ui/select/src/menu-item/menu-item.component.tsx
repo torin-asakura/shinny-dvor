@@ -1,6 +1,7 @@
+import styled             from '@emotion/styled'
+
 import React              from 'react'
 import { FC }             from 'react'
-import styled             from '@emotion/styled'
 
 import { Checkbox }       from '@ui/checkbox'
 import { Layout }         from '@ui/layout'
@@ -8,17 +9,29 @@ import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 
+import { MenuItemProps }  from './menu-item.interface'
 import { baseItemStyles } from './menu-item.styles'
 
 const Container = styled.li(baseItemStyles)
 
-const MenuItem: FC = ({ children, ...props }) => (
+const MenuItem: FC<MenuItemProps> = ({
+  children,
+  selectedItems,
+  addSelectedItem,
+  removeSelectedItem,
+  ...props
+}) => (
   <Container {...props}>
     <Column width='100%'>
-      <Layout flexBasis={16} flexShrink={0} />
       <Row>
         <Layout flexBasis={16} flexShrink={0} />
-        <Checkbox>
+        <Checkbox
+          active={selectedItems?.includes(children)}
+          onCheck={(newState) => {
+            if (newState) addSelectedItem(children)
+            if (!newState) removeSelectedItem(children)
+          }}
+        >
           <Layout>
             <Text fontSize='normal' color='black'>
               {children}
@@ -27,7 +40,6 @@ const MenuItem: FC = ({ children, ...props }) => (
         </Checkbox>
         <Layout flexBasis={16} flexShrink={0} />
       </Row>
-      <Layout flexBasis={16} flexShrink={0} />
     </Column>
   </Container>
 )

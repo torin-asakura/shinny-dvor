@@ -1,24 +1,24 @@
 {
   "name": "@ui/switch",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/button": "workspace:ui/button",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
     "remove": "^0.1.5",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.1"
-  },
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "react": "^17.0.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*"
   }
 }

@@ -1,8 +1,8 @@
 import React         from 'react'
 import { FC }        from 'react'
 
-import { Box }       from '@ui/layout'
 import { Button }    from '@ui/button'
+import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
 
 import { ItemProps } from './item.interface'

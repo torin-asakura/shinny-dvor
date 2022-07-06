@@ -1,16 +1,19 @@
 {
   "name": "@ui/wheel",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
   "main": "src/index.ts",
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*",
-    "react-dom": "*"
+  "dependencies": {
+    "@ui/card": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/tooltip": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "react-laag": "^2.0.3"
   },
   "devDependencies": {
-    "@emotion/css": "^11.7.1",
+    "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@types/react": "^17",
@@ -20,12 +23,10 @@
     "react-dom": "^17.0.2",
     "styled-system": "^5.1.5"
   },
-  "dependencies": {
-    "@ui/image": "workspace:ui/image",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
-    "@ui/tooltip": "workspace:ui/tooltip",
-    "@ui/utils": "workspace:ui/utils",
-    "react-laag": "^2.0.3"
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*",
+    "react-dom": "*"
   }
 }

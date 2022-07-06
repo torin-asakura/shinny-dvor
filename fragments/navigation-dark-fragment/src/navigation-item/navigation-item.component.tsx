@@ -3,14 +3,15 @@ import { FC }                  from 'react'
 import { useState }            from 'react'
 
 import { Button }              from '@ui/button'
+import { Divider }             from '@ui/divider'
 import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
-import { Divider }             from '@ui/divider'
 import { Text }                from '@ui/text'
 
 import { NavigationItemProps } from './navigation-item.interface'
+import { getColor }            from '../helpers'
 
-const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
+const NavigationItem: FC<NavigationItemProps> = ({ name, active }) => {
   const [, setHover] = useState(false)
   const [pressed, setPressed] = useState(false)
 
@@ -24,9 +25,10 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
     >
       <Column>
         <Layout>
-          <Text color='white'>{name}</Text>
+          <Text color={getColor(active!)} fontWeight='medium'>
+            {name}
+          </Text>
         </Layout>
-        <Layout flexBasis={8} />
         <Divider color={pressed ? 'white' : 'transparent'} />
       </Column>
     </Button>

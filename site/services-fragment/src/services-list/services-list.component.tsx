@@ -7,8 +7,8 @@ import { Column }    from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { services }  from '../../../data'
 import { ItemProps } from './services-list.interface'
+import { services }  from '../../../data'
 
 const ServicesList: FC<ItemProps> = ({ isSizeChosen }) => (
   <>

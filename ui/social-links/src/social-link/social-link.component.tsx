@@ -4,10 +4,10 @@ import { useState }        from 'react'
 
 import { Button }          from '@ui/button'
 import { Condition }       from '@ui/condition'
-import { Box }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
 import { VkIcon }          from '@ui/icons'
 import { FacebookIcon }    from '@ui/icons'
+import { Box }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
 
 import { SocialLinkProps } from './social-link.interface'
 
@@ -22,7 +22,7 @@ const SocialLink: FC<SocialLinkProps> = ({ social }) => {
           onMouseLeave={() => setOnHover(false)}
         >
           <Layout>
-            <VkIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+            <VkIcon width={28} height={28} color={onHover ? 'white' : 'black'} />
           </Layout>
         </Button>
       </Condition>
@@ -33,7 +33,7 @@ const SocialLink: FC<SocialLinkProps> = ({ social }) => {
           onMouseLeave={() => setOnHover(false)}
         >
           <Layout>
-            <FacebookIcon width={24} height={24} color={onHover ? 'white' : 'black'} />
+            <FacebookIcon width={28} height={28} color={onHover ? 'white' : 'black'} />
           </Layout>
         </Button>
       </Condition>

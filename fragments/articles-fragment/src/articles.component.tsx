@@ -1,31 +1,37 @@
 import React          from 'react'
-import { FC }         from 'react'
+import { forwardRef } from 'react'
 
-import { screenVar }  from '@store/articles'
 import { ARTICLE }    from '@store/articles'
 import { ImageBlock } from '@ui/image'
 import { Box }        from '@ui/layout'
 import { Row }        from '@ui/layout'
-import { Text }       from '@ui/text'
 import { Column }     from '@ui/layout'
 import { Layout }     from '@ui/layout'
+import { Text }       from '@ui/text'
+import { screenVar }  from '@store/articles'
 
-const Articles: FC = () => {
+const Articles = forwardRef((props, ref: any) => {
   // FIXME take first 3 elements
   const lastArticles = ['Article 1', 'Article 2', 'Article 3']
   return (
-    <Box width='100%' height={[569, 693, 693]} backgroundColor='fillGray' justifyContent='center'>
+    <Box
+      width='100%'
+      height={[569, 569, 693]}
+      backgroundColor='fillGray'
+      justifyContent='center'
+      ref={ref}
+    >
       <Box minWidth={['100%', '100%', '1440px']} justifyContent='space-between'>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>
-          <Layout flexBasis={[64, 100, 100]} />
+          <Layout flexBasis={[64, 64, 100]} />
           <Layout>
             <Text fontWeight='medium' fontSize='giant'>
               Text
             </Text>
           </Layout>
-          <Layout flexBasis={[32, 48, 48]} />
-          <Row justifyContent='space-between' display={['none', 'flex', 'flex']}>
+          <Layout flexBasis={[32, 32, 48]} />
+          <Row justifyContent='space-between' display={['none', 'none', 'flex']}>
             {lastArticles.map((article) => (
               <Column onClick={() => screenVar(ARTICLE)}>
                 <Box width={405} height={260}>
@@ -48,7 +54,7 @@ const Articles: FC = () => {
               </Column>
             ))}
           </Row>
-          <Row display={['flex', 'none', 'none']}>
+          <Row display={['flex', 'flex', 'none']}>
             {/* TODO carousel */}
             <Column width='100%'>
               <Box width={300} height={200}>
@@ -70,11 +76,12 @@ const Articles: FC = () => {
               </Layout>
             </Column>
           </Row>
-          <Layout flexBasis={[64, 100, 100]} />
+          <Layout flexBasis={[64, 64, 100]} />
         </Column>
-        <Layout flexBasis={[0, 80, 80]} />
+        <Layout flexBasis={[0, 0, 80]} />
       </Box>
     </Box>
   )
-}
+})
+
 export { Articles }

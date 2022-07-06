@@ -14,8 +14,7 @@
  * />
  * */
 
-const getReplacement =
-  (...themeProps) =>
+const getReplacement = (...themeProps) =>
   (color) => ({
     [color]: `{(theme.colors${themeProps.reduce(
       (str, prop) => `${str}.${prop}`,
@@ -28,6 +27,6 @@ export const replacements = {
   WheelIcon: getReplacement()('#252C32'),
   VkIcon: getReplacement()('#252C32'),
   FacebookIcon: getReplacement()('#252C32'),
-  MenuIcon: getReplacement()('#252C32'),
+  MenuIcon: getReplacement()('white'),
   BackIcon: getReplacement()('#252C32'),
 }

@@ -1,14 +1,16 @@
-import React                          from 'react'
-import { FC }                         from 'react'
 import styled                         from '@emotion/styled'
-import { useCardControls }            from '@atls-ui-parts/card'
 import { Container as BaseContainer } from '@atls-ui-parts/card'
 import { Backdrop }                   from '@atls-ui-parts/card'
 import { Renderer }                   from '@atls-ui-parts/card'
+import { useCardControls }            from '@atls-ui-parts/card'
+
+import React                          from 'react'
+import { FC }                         from 'react'
 
 import { Condition }                  from '@ui/condition'
 import { Layout }                     from '@ui/layout'
 import { Column }                     from '@ui/layout'
+
 import { CardProps }                  from './card.interface'
 
 const Card: FC<CardProps> = ({ children, container, backdrop = false }) => {
@@ -31,13 +33,13 @@ const Card: FC<CardProps> = ({ children, container, backdrop = false }) => {
           <Backdrop {...backdropProps} onClick={hide} />
         </Condition>
         <Container {...cardProps}>
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink={0} />
           <Column>
             <Layout flexBasis={20} />
             {container}
             <Layout flexBasis={20} />
           </Column>
-          <Layout flexBasis={20} />
+          <Layout flexBasis={20} flexShrink={0} />
         </Container>
       </Renderer>
     </>

@@ -1,43 +1,51 @@
 import React           from 'react'
 import { FC }          from 'react'
 
+import { Divider }     from '@ui/divider'
 import { Box }         from '@ui/layout'
 import { Column }      from '@ui/layout'
 import { Row }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
-import { FooterLogo }  from '@ui/logo'
 import { NextLink }    from '@ui/link'
-import { Divider }     from '@ui/divider'
-import { Text }        from '@ui/text'
+import { Link }        from '@ui/link'
+import { FooterLogo }  from '@ui/logo'
 import { SocialLinks } from '@ui/social-links'
+import { Text }        from '@ui/text'
+import { Space }       from '@ui/text'
 
 const Footer: FC = () => (
   <Box width='100%'>
     <Column width='100%' alignItems='center'>
       <Divider color='gray' />
       <Box minWidth={['100%', '100%', '1440px']}>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>
-          <Layout flexBasis={[24, 40, 40]} />
+          <Layout flexBasis={[24, 24, 40]} />
           <Row justifyContent='space-between' alignItems='center'>
             <Box width='100%' justifyContent='space-between'>
               <FooterLogo />
-              <Box display={['none', 'flex', 'flex']} width={392} alignItems='center'>
+              <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                 <Layout flexBasis={60} />
                 <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                  <NextLink href='/services'>
+                  <NextLink path='/services'>
                     <Layout>
-                      <Text fontWeight='medium'>Услуги</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Услуги
+                      </Text>
                     </Layout>
                   </NextLink>
-                  <NextLink href='/contacts'>
+                  <NextLink path='/contacts'>
                     <Layout>
-                      <Text fontWeight='medium'>Контакты</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Контакты
+                      </Text>
                     </Layout>
                   </NextLink>
-                  <NextLink href='/blog'>
+                  <NextLink path='/blog'>
                     <Layout>
-                      <Text fontWeight='medium'>Блог</Text>
+                      <Text color='black' fontWeight='medium'>
+                        Блог
+                      </Text>
                     </Layout>
                   </NextLink>
                 </Box>
@@ -45,53 +53,67 @@ const Footer: FC = () => (
             </Box>
             <SocialLinks />
           </Row>
-          <Layout flexBasis={[24, 40, 40]} />
-          <Box width={90} height={136} display={['flex', 'none', 'none']}>
+          <Layout flexBasis={[24, 24, 40]} />
+          <Box width={90} height={136} display={['flex', 'flex', 'none']}>
             <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-              <NextLink href='/services'>
+              <NextLink path='/services'>
                 <Layout>
-                  <Text fontWeight='medium'>Услуги</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Услуги
+                  </Text>
                 </Layout>
               </NextLink>
-              <NextLink href='/contacts'>
+              <NextLink path='/contacts'>
                 <Layout>
-                  <Text fontWeight='medium'>Контакты</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Контакты
+                  </Text>
                 </Layout>
               </NextLink>
-              <NextLink href='/blog'>
+              <NextLink path='/blog'>
                 <Layout>
-                  <Text fontWeight='medium'>Блог</Text>
+                  <Text color='black' fontWeight='medium'>
+                    Блог
+                  </Text>
                 </Layout>
               </NextLink>
             </Box>
           </Box>
         </Column>
-        <Layout flexBasis={[20, 80, 80]} />
+        <Layout flexBasis={[20, 20, 80]} />
       </Box>
       <Divider color='gray' />
       <Box alignItems='center' minWidth={['100%', '100%', '1440px']}>
-        <Layout flexBasis={[20, 84, 84]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={[24, 32, 32]} />
+          <Layout flexBasis={[24, 24, 32]} />
           <Row
             justifyContent='space-between'
             alignItems='center'
-            display={['none', 'flex', 'flex']}
+            display={['none', 'none', 'flex']}
           >
             <Box width='50%'>
-              <Layout>
+              <Layout display='flex' flexDirection='column'>
                 <Text>Address</Text>
+                <Layout flexBasis={8} />
+                <Text color='darkGray'>Date</Text>
               </Layout>
               <Layout flexBasis={80} />
-              <Layout>
+              <Layout display='flex' flexDirection='column'>
                 <Text>Tel</Text>
+                <Layout flexBasis={8} />
+                <Text color='darkGray'>Телефон для записи</Text>
               </Layout>
             </Box>
             <Layout>
-              <Text>by TorinAsakura</Text>
+              <Text color='darkGray'>by</Text>
+              <Space />
+              <Link href='https://torinasakura.name/' target='_blank' rel='me'>
+                <Text fontWeight='medium'>TorinAsakura</Text>
+              </Link>
             </Layout>
           </Row>
-          <Column justifyContent='space-between' display={['flex', 'none', 'none']}>
+          <Column justifyContent='space-between' display={['flex', 'flex', 'none']}>
             <Layout>
               <Text>Address</Text>
             </Layout>
@@ -101,13 +123,17 @@ const Footer: FC = () => (
                 <Text>Tel</Text>
               </Layout>
               <Layout>
-                <Text>by TorinAsakura</Text>
+                <Link href='https://torinasakura.name/' target='_blank' rel='me'>
+                  <Text color='darkGray'>by</Text>
+                  <Space />
+                  <Text fontWeight='medium'>TorinAsakura</Text>
+                </Link>
               </Layout>
             </Row>
           </Column>
-          <Layout flexBasis={[24, 32, 32]} />
+          <Layout flexBasis={[24, 24, 32]} />
         </Column>
-        <Layout flexBasis={[20, 80, 80]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Box>
     </Column>
   </Box>

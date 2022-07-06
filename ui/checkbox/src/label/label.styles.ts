@@ -1,10 +1,11 @@
-import { styleFn }                     from 'styled-system'
 import { createLabelAppearanceStyles } from '@atls-ui-parts/checkbox'
 import { createLabelShapeStyles }      from '@atls-ui-parts/checkbox'
 import { createLabelPositionStyles }   from '@atls-ui-parts/checkbox'
 
+import { styleFn }                     from 'styled-system'
+
 export const positionStyles: styleFn = createLabelPositionStyles({
-  margin: '24px',
+  margin: '10px',
 })
 
 export const appearanceStyles: styleFn = createLabelAppearanceStyles({
@@ -12,7 +13,7 @@ export const appearanceStyles: styleFn = createLabelAppearanceStyles({
 })
 
 export const shapeStyles: styleFn = createLabelShapeStyles({
-  fontSize: ['big', 'large', 'large'],
+  fontSize: 22,
   fontWeight: 'medium',
   fontFamily: 'primary',
 })

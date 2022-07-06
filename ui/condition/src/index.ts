@@ -1,3 +1,2 @@
-const Condition = ({ match, children }) => (match ? children : null)
-
-export { Condition }
+export * from './condition.component'
+export * from './condition.interface'

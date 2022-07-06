@@ -11,26 +11,26 @@ import { Ruble }    from '@ui/text'
 const AdditionalService: FC = () => (
   <Box
     width='100%'
-    height={[88, 104, 104]}
+    height={[88, 88, 104]}
     backgroundColor='fillGray'
     borderRadius='mini'
     alignItems='center'
   >
-    <Layout flexBasis={[20, 24, 24]} />
+    <Layout flexBasis={[20, 20, 24]} />
     <Checkbox>
       <Column justifyContent='center'>
         <Layout>
-          <Text fontSize={['big', 'large', 'large']} fontWeight='medium'>
+          <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
             Wheel balancing
           </Text>
         </Layout>
         <Layout flexBasis={4} />
         <Layout>
-          <Ruble fontSize={['big', 'large', 'large']} fontWeight='medium' />
+          <Ruble fontSize={['big', 'big', 'large']} fontWeight='medium' />
         </Layout>
       </Column>
     </Checkbox>
-    <Layout flexBasis={[20, 24, 24]} />
+    <Layout flexBasis={[20, 20, 24]} />
   </Box>
 )
 

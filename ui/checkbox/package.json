@@ -1,26 +1,26 @@
 {
   "name": "@ui/checkbox",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
   "main": "src/index.ts",
-  "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "react": "*"
+  "dependencies": {
+    "@atls-ui-parts/checkbox": "^0.0.3",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "styled-system": "^5.1.5",
+    "styled-tools": "^1.7.2"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "react": "^17.0.2"
   },
-  "dependencies": {
-    "@atls-ui-parts/checkbox": "^0.0.3",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/icons": "workspace:ui/icons",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
-    "@ui/utils": "workspace:ui/utils",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+  "peerDependencies": {
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "react": "*"
   }
 }

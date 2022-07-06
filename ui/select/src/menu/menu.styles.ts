@@ -13,6 +13,7 @@ export const baseMenuStyles: styleFn = ({ triggerBounds }) => ({
 export const shapeMenuStyles: styleFn = ({ theme }) => ({
   borderRadius: theme.radii.mini,
   fontFamily: theme.fonts.primary,
+  marginTop: 17,
 })
 
 export const appearanceMenuStyles: styleFn = ({ theme }) => ({

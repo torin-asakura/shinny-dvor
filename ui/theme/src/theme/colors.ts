@@ -2,6 +2,7 @@ const colors = {
   white: 'rgba(255, 255, 255, 1)',
   gray: 'rgba(37, 44, 50, 0.12)',
   lightGray: 'rgba(37, 44, 50, 0.06)',
+  steel: 'rgba(37, 44, 50, 0.7)',
   milkGray: 'rgba(255, 255, 255, 0.2)',
   transparentGray: 'rgba(248, 248, 248, 1)',
   fillGray: 'rgba(249, 249, 249, 1)',

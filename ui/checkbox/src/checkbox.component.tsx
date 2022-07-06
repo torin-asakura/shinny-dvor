@@ -1,19 +1,23 @@
-import React                           from 'react'
-import { FC }                          from 'react'
-import { useState }                    from 'react'
 import styled                          from '@emotion/styled'
 import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
 import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'
 
+import React                           from 'react'
+import { FC }                          from 'react'
+
 import { CheckIcon }                   from '@ui/icons'
 
-import { Container }                   from './container'
+import { CheckboxProps }               from '../checkbox.interface'
 import { Box }                         from './box'
+import { Container }                   from './container'
 import { Label }                       from './label'
 
-const Checkbox: FC = ({ children }) => {
-  const [checked, setChecked] = useState<boolean>(false)
+const doNothing = (...args) => {
+  // do nothing
+}
+
+const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = (newState) => doNothing() }) => {
   const Checkmark = styled.div(
     createCheckBaseStyles(),
     createCheckAppearanceStyles({
@@ -24,8 +28,8 @@ const Checkbox: FC = ({ children }) => {
     })
   )
   return (
-    <Container onClick={() => setChecked(!checked)}>
-      <Box checked={checked}>
+    <Container onClick={() => onCheck(!active)}>
+      <Box checked={active}>
         <Checkmark>
           <CheckIcon width={20} height={20} />
         </Checkmark>
