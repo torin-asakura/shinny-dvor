@@ -17,17 +17,11 @@
     "@atls/next-document-with-helmet": "^0.2.64",
     "@atls/next-document-with-icons": "^0.0.2",
     "@atls/next-document-with-opengraph": "^0.0.2",
-    "@blog/index-page": "workspace:blog/index-page",
     "@emotion/cache": "^11.4.0",
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@site/booking-page": "workspace:site/booking-page",
-    "@site/contacts-page": "workspace:site/contacts-page",
-    "@site/index-page": "workspace:site/index-page",
-    "@site/services-page": "workspace:site/services-page",
     "@splidejs/splide": "^3.6.12",
-    "@ui/theme": "workspace:ui/theme",
     "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",
@@ -41,7 +35,10 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "@atls/actl-cli": "^0.4.48",
+    "@site/booking-page": "workspace:site/booking-page",
+    "@site/contacts-page": "workspace:site/contacts-page",
+    "@site/index-page": "workspace:site/index-page",
+    "@site/services-page": "workspace:site/services-page",
     "@types/events": "^3",
     "@types/express": "^4",
     "@types/node": "16",
@@ -49,6 +46,7 @@
     "@types/react-dom": "^17",
     "@types/react-helmet": "^6",
     "@types/recompose": "^0",
-    "@types/styled-system": "^5"
+    "@types/styled-system": "^5",
+    "@ui/theme": "workspace:ui/theme"
   }
 }
