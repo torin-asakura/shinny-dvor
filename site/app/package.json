@@ -1,6 +1,6 @@
 {
   "name": "@site/app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
@@ -35,10 +35,10 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "@site/booking-page": "workspace:site/booking-page",
-    "@site/contacts-page": "workspace:site/contacts-page",
-    "@site/index-page": "workspace:site/index-page",
-    "@site/services-page": "workspace:site/services-page",
+    "@site/booking-page": "workspace:0.0.1",
+    "@site/contacts-page": "workspace:0.0.1",
+    "@site/index-page": "workspace:0.0.1",
+    "@site/services-page": "workspace:0.0.1",
     "@types/events": "^3",
     "@types/express": "^4",
     "@types/node": "16",
@@ -47,6 +47,6 @@
     "@types/react-helmet": "^6",
     "@types/recompose": "^0",
     "@types/styled-system": "^5",
-    "@ui/theme": "workspace:ui/theme"
+    "@ui/theme": "workspace:0.0.1"
   }
 }

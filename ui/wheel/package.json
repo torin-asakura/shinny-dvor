@@ -1,15 +1,15 @@
 {
   "name": "@ui/wheel",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/card": "workspace:0.0.0",
-    "@ui/image": "workspace:ui/image",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
-    "@ui/tooltip": "workspace:ui/tooltip",
-    "@ui/utils": "workspace:ui/utils",
+    "@ui/card": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/tooltip": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
     "react-laag": "^2.0.3"
   },
   "devDependencies": {

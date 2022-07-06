@@ -1,14 +1,14 @@
 {
   "name": "@ui/radio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/checkbox": "^0.0.3",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/text": "workspace:ui/text",
-    "@ui/utils": "workspace:ui/utils",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
     "styled-system": "^5.1.5",
     "styled-tools": "^1.7.2"
   },

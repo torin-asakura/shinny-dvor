@@ -1,6 +1,6 @@
 {
   "name": "@ui/scrollspy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "devDependencies": {
     "@types/styled-system": "^5",

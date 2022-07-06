@@ -1,10 +1,10 @@
 {
   "name": "@ui/link",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/link": "^0.0.6",
-    "@ui/text": "workspace:ui/text"
+    "@ui/text": "workspace:0.0.1"
   },
   "devDependencies": {
     "@emotion/css": "^11.9.0",

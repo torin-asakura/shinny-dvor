@@ -1,12 +1,12 @@
 {
   "name": "@site/services-infographics-fragment",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@ui/image": "workspace:ui/image",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/wheel": "workspace:ui/wheel",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/wheel": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

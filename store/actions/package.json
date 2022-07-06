@@ -1,11 +1,11 @@
 {
   "name": "@store/actions",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
-    "@store/booking": "workspace:0.0.0",
-    "@store/chosen-radius": "workspace:0.0.0"
+    "@store/booking": "workspace:0.0.1",
+    "@store/chosen-radius": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.4.8",

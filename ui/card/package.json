@@ -1,13 +1,13 @@
 {
   "name": "@ui/card",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/card": "^0.0.4",
     "@atls-ui-parts/dom": "^0.0.1",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/layout": "workspace:ui/layout",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
     "framer-motion": "^5.0.0",
     "react-scrolllock": "^5.0.1",
     "styled-system": "^5.1.5",

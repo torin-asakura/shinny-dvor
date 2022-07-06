@@ -1,6 +1,5 @@
 import styled            from '@emotion/styled'
 
-/* eslint-disable react/require-default-props */
 import { createElement } from 'react'
 import { color }         from 'styled-system'
 

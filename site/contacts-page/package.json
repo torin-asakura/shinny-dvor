@@ -1,14 +1,14 @@
 {
   "name": "@site/contacts-page",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/footer-fragment": "workspace:fragments/footer-fragment",
-    "@fragments/navigation-fragment": "workspace:fragments/navigation-fragment",
-    "@ui/condition": "workspace:ui/condition",
-    "@ui/layout": "workspace:ui/layout",
-    "@ui/social-links": "workspace:ui/social-links",
-    "@ui/text": "workspace:ui/text",
+    "@fragments/footer-fragment": "workspace:0.0.1",
+    "@fragments/navigation-fragment": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/social-links": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
