@@ -1,26 +1,20 @@
-import React          from 'react'
-import { FC }         from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { ARTICLE }    from '@store/articles'
-import { ImageBlock } from '@ui/image'
-import { Box }        from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Text }       from '@ui/text'
-import { screenVar }  from '@store/articles'
+import { ARTICLE }           from '@store/articles'
+import { ImageBlock }        from '@ui/image'
+import { Box }               from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { screenVar }         from '@store/articles'
+
+import { useMockedArticles } from '../data'
 
 const AllArticles: FC = () => {
-  // TODO write allArticles mocks
-  const allArticles = [
-    'Article 1',
-    'Article 2',
-    'Article 3',
-    'Article 4',
-    'Article 5',
-    'Article 6',
-    'Article 7',
-  ]
+  const { articles } = useMockedArticles()
+
   return (
     <Box maxWidth={['100%', '100%', '1440px']}>
       <Layout flexBasis={[20, 20, 80]} />
@@ -30,8 +24,8 @@ const AllArticles: FC = () => {
           <Text fontSize='extra'>Text</Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
-          {allArticles.map((article) => (
-            <Box width={['100%', '100%', 405]} onClick={() => screenVar(ARTICLE)}>
+          {articles.map(({ id, name }) => (
+            <Box key={id} width={['100%', '100%', 405]} onClick={() => screenVar(ARTICLE)}>
               <Column width='100%'>
                 <Layout flexBasis={[32, 32, 48]} />
                 <Box width='100%' height={[224, 224, 260]}>
@@ -40,7 +34,7 @@ const AllArticles: FC = () => {
                 <Layout flexBasis={24} />
                 <Layout>
                   <Text fontSise='large' lineHeight='grown'>
-                    {article}
+                    {name}
                   </Text>
                 </Layout>
                 <Layout flexBasis={8} />
