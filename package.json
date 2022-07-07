@@ -6,7 +6,8 @@
     "fragments/**/*",
     "blog/**/*",
     "ui/**/*",
-    "store/**/*"
+    "store/**/*",
+    "shared/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @ui/icons build"

@@ -2000,6 +2000,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@shared/utils": "workspace:0.0.1"
     "@store/articles": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2755,6 +2756,15 @@ __metadata:
   checksum: 94ac8035538a55a3ca1b19f2c5f0eaea5bc97986ef251149d9db0b3382be5d4271f0080ba077b070e50330844e364dd48a83e453a415dad0a1364e05ffb70f8d
   languageName: node
   linkType: hard
+
+"@shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
+  version: 0.0.0-use.local
+  resolution: "@shared/utils@workspace:shared/utils"
+  dependencies:
+    "@types/luxon": ^2
+    luxon: ^2.4.0
+  languageName: unknown
+  linkType: soft
 
 "@sindresorhus/is@npm:^4.0.0":
   version: 4.2.0
@@ -3644,6 +3654,13 @@ __metadata:
   version: 4.14.177
   resolution: "@types/lodash@npm:4.14.177"
   checksum: 00f9eb300ed5219cfbabb3448d4a71744895edad60dcfda9f028c0808a50eb6ad1ca9f673b56a85f85668a4ea54b9870643625468a747039c435643e52253a75
+  languageName: node
+  linkType: hard
+
+"@types/luxon@npm:^2":
+  version: 2.3.2
+  resolution: "@types/luxon@npm:2.3.2"
+  checksum: b9fe79118681f4bb9f2e37696a7df992a82683ba4448e7ad1af8cc241443ffc64ef08fdeaad749de9e6259b42b0d4b6540d7e880bca39bb504e0f3863d503c98
   languageName: node
   linkType: hard
 
@@ -11024,6 +11041,13 @@ fsevents@^2.3.2:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
+  languageName: node
+  linkType: hard
+
+"luxon@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "luxon@npm:2.4.0"
+  checksum: 6071028d65cc3d3bdab5e6a3995dd97411c92bb3b3163a02deb7b7014318ad3a6fd750ae77131c42141b717c14aef8880d3130f265281d500ef2365f7265b3f3
   languageName: node
   linkType: hard
 

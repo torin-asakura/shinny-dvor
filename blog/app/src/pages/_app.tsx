@@ -13,7 +13,7 @@ export const withProviders = compose(withHelmet())
 
 const Bare = ({ Component, pageProps, props }) => {
   const client = new ApolloClient({
-    uri: process.env.WP_ENDPOINT || '',
+    uri: 'https://wp.shdvor.pro/graphql',
     cache: new InMemoryCache(),
   })
 

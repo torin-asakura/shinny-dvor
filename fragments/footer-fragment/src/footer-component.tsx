@@ -131,7 +131,7 @@ const Footer: FC = () => (
               </Layout>
             </Row>
           </Column>
-          <Layout flexBasis={[24, 24, 32]} />
+          <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Box>

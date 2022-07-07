@@ -16,8 +16,9 @@ import { screenVar }      from '@store/articles'
 
 const IndexPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
+
   return (
-    <Column width='100%' alignItems='center'>
+    <Column height='auto' width='100%' alignItems='center'>
       <Navigation />
       <Condition match={screen === ALL_ARTICLES}>
         <AllArticles />
