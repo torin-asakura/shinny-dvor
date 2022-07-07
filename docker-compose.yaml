@@ -24,6 +24,15 @@ services:
     working_dir: /workspace
     entrypoint: yarn workspace @site/app build
 
+  site-start:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @site/app start
+    ports:
+      - 3000:3000
+
   blog:
     image: node:16
     volumes:
@@ -39,3 +48,12 @@ services:
       - ./:/workspace
     working_dir: /workspace
     entrypoint: yarn workspace @blog/app build
+
+  blog-start:
+    image: node:16
+    volumes:
+      - ./:/workspace
+    working_dir: /workspace
+    entrypoint: yarn workspace @blog/app start
+    ports:
+      - 3000:3000
