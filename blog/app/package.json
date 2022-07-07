@@ -34,7 +34,6 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
-    "@atls/actl-cli": "^0.4.48",
     "@blog/index-page": "workspace:0.0.1",
     "@types/events": "^3",
     "@types/express": "^4",
