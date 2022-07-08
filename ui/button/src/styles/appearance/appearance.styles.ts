@@ -2,6 +2,7 @@ import { styleFn }                    from 'styled-system'
 import { switchProp }                 from 'styled-tools'
 import { prop }                       from 'styled-tools'
 
+import { getGreyColorsStyles }        from './abstract'
 import { getPrimaryColorsStyles }     from './abstract'
 import { getSecondaryColorsStyles }   from './abstract'
 import { getTransparentColorsStyles } from './abstract'
@@ -18,6 +19,7 @@ const getAppearanceStyles = (): styleFn => {
   const darkSocialColorsStyles = getDarkSocialColorsStyles()
   const darkWheelColorsStyles = getDarkWheelColorsStyles()
   const lightWheelColorsStyles = getLightWheelColorsStyles()
+  const greyColorsStyles = getGreyColorsStyles()
 
   return switchProp(prop('color', 'primary'), {
     primary: primaryColorsStyles,
@@ -27,6 +29,7 @@ const getAppearanceStyles = (): styleFn => {
     darkSocial: darkSocialColorsStyles,
     darkWheel: darkWheelColorsStyles,
     lightWheel: lightWheelColorsStyles,
+    grey: greyColorsStyles,
   })
 }
 

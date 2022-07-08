@@ -11,6 +11,7 @@ type ButtonColors =
   | 'darkSocial'
   | 'darkWheel'
   | 'lightWheel'
+  | 'grey'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   color?: ButtonColors
