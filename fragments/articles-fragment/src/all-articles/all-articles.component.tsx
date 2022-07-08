@@ -19,15 +19,17 @@ const AllArticles: FC = () => {
   const { posts } = usePosts()
 
   return (
-    <Box maxWidth={['100%', '100%', '1440px']}>
-      <Layout flexBasis={[20, 20, 80]} />
-      <Column width='100%'>
-        <Layout flexBasis={[20, 20, 32]} />
+    <Box maxWidth={['100%', '100%', '1440px']} height='auto'>
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+      <Column width='100%' height='auto'>
+        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
         <Layout>
-          <Text fontSize='extra'>Text</Text>
+          <Text fontWeight='bold' fontSize='extra'>
+            Text
+          </Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
-          {posts.map(({ id, title, date, excerpt }) => (
+          {posts.map(({ id, title, date, excerpt, featuredImage }) => (
             <Box
               key={id}
               width={['100%', '100%', 405]}
@@ -41,7 +43,10 @@ const AllArticles: FC = () => {
               <Column width='100%'>
                 <Layout flexBasis={[32, 32, 48]} />
                 <Box width='100%' height={[224, 224, 260]}>
-                  <ImageBlock />
+                  <ImageBlock
+                    src={featuredImage.node.mediaItemUrl}
+                    alt={featuredImage.node.altText}
+                  />
                 </Box>
                 <Layout flexBasis={24} />
                 <Layout>
@@ -70,9 +75,9 @@ const AllArticles: FC = () => {
             </Box>
           ))}
         </Row>
-        <Layout flexBasis={[20, 20, 32]} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Column>
-      <Layout flexBasis={[20, 20, 80]} />
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
     </Box>
   )
 }

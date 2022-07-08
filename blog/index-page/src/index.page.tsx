@@ -18,7 +18,7 @@ const IndexPage: FC = () => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
-    <Column height='auto' width='100%' alignItems='center'>
+    <Column width='100%' alignItems='center'>
       <Navigation />
       <Condition match={screen === ALL_ARTICLES}>
         <AllArticles />

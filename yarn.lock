@@ -2006,10 +2006,13 @@ __metadata:
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    plural-ru: ^2.0.2
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
@@ -12153,6 +12156,13 @@ fsevents@^2.3.2:
   dependencies:
     find-up: ^2.1.0
   checksum: 8c72b712305b51e1108f0ffda5ec1525a8307e54a5855db8fb1dcf77561a5ae98e2ba3b4814c9806a679f76b2f7e5dd98bde18d07e594ddd9fdd25e9cf242ea1
+  languageName: node
+  linkType: hard
+
+"plural-ru@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "plural-ru@npm:2.0.2"
+  checksum: 6739590014ce4343aaa4c22fc74bd5b2b468bde889be9b2124ec55257e4b5f1ebb9f1a0ff1a2a0744b29979322ede30d0456302de5210c25525dd349b3c05252
   languageName: node
   linkType: hard
 

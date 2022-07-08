@@ -8,6 +8,12 @@ export const GET_POSTS = gql`
         title
         date
         excerpt
+        featuredImage {
+          node {
+            mediaItemUrl
+            altText
+          }
+        }
       }
     }
   }
