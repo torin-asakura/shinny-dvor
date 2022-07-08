@@ -14,9 +14,9 @@ import { Text }        from '@ui/text'
 import { Space }       from '@ui/text'
 
 const Footer: FC = () => (
-  <Box width='100%'>
+  <Box width='100%' marginTop='auto'>
     <Column width='100%' alignItems='center'>
-      <Divider color='gray' />
+      <Divider backgroundColor='gray' />
       <Box minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>
@@ -82,7 +82,7 @@ const Footer: FC = () => (
         </Column>
         <Layout flexBasis={[20, 20, 80]} />
       </Box>
-      <Divider color='gray' />
+      <Divider backgroundColor='gray' />
       <Box alignItems='center' minWidth={['100%', '100%', '1440px']}>
         <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
         <Column width='100%'>

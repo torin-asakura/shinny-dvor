@@ -28,7 +28,7 @@ const ServicesList: FC<ItemProps> = ({ isSizeChosen }) => (
             </Text>
           </Layout>
           <Layout flexBasis={30} />
-          <Divider color='gray' />
+          <Divider backgroundColor='gray' />
         </Column>
       </Button>
     ))}

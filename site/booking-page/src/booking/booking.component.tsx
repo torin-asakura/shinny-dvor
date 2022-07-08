@@ -65,7 +65,7 @@ const Booking: FC = () => {
         onSelect={setSelectedItem}
       />
       <Layout flexBasis={12} />
-      <Divider color={selectedItem.length ? 'primaryBlue' : 'gray'} />
+      <Divider backgroundColor={selectedItem.length ? 'primaryBlue' : 'gray'} />
       <Layout flexBasis={32} />
       <Layout>
         <Text color='darkGray'>Text</Text>

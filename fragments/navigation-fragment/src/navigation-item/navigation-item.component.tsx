@@ -27,7 +27,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ name }) => {
           </Text>
         </Layout>
         <Layout flexBasis={8} />
-        <Divider color='blue' weight={2} />
+        <Divider backgroundColor='blue' weight={2} />
       </Column>
     </Button>
   )

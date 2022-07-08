@@ -86,7 +86,7 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
               </Row>
               <Layout flexBasis={16} />
               <Row>
-                <Divider color='lightGray' />
+                <Divider backgroundColor='lightGray' />
               </Row>
               <Layout flexBasis={16} />
               <Row>

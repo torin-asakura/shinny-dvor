@@ -94,7 +94,7 @@ const Services = forwardRef((props, ref: any) => {
               </Condition>
               <Column width='100%'>
                 <Condition match={isSizeChosen}>
-                  <Divider color='gray' />
+                  <Divider backgroundColor='gray' />
                 </Condition>
                 <ServicesList isSizeChosen={isSizeChosen} />
               </Column>

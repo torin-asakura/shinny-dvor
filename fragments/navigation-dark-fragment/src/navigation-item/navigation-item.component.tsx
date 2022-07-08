@@ -29,7 +29,7 @@ const NavigationItem: FC<NavigationItemProps> = ({ name, active }) => {
             {name}
           </Text>
         </Layout>
-        <Divider color={pressed ? 'white' : 'transparent'} />
+        <Divider backgroundColor={pressed ? 'white' : 'transparent'} />
       </Column>
     </Button>
   )

@@ -61,7 +61,7 @@ const Service: FC = () => {
             </Text>
           </Layout>
           <Layout flexBasis={24} />
-          <Divider color='gray' />
+          <Divider backgroundColor='gray' />
           <Layout flexBasis={24} />
           <Layout minHeight={130}>
             <Text>Text</Text>
@@ -69,7 +69,7 @@ const Service: FC = () => {
           {/* FIXME find out the condition */}
           <Condition match>
             <Layout flexBasis={24} />
-            <Divider color='gray' />
+            <Divider backgroundColor='gray' />
             <Layout flexBasis={24} />
             <Box width='100%' height={26}>
               <Text fontSize='large' fontWeight='medium'>

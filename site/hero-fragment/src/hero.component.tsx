@@ -32,7 +32,7 @@ const Hero = forwardRef((props, ref: any) => (
         </Layout>
       </NextLink>
       <Layout flexBasis={[40, 40, 48]} />
-      <Divider color='milkGray' />
+      <Divider backgroundColor='milkGray' />
       <Layout flexBasis={[20, 20, 30]} />
       <Row width='100%' justifyContent={['center', 'center', 'space-between']}>
         <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
