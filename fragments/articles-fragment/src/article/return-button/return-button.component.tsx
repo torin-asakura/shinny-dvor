@@ -1,16 +1,18 @@
-import React            from 'react'
-import { FC }           from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
 
-import { ALL_ARTICLES } from '@store/articles'
-import { Button }       from '@ui/button'
-import { BackIcon }     from '@ui/icons'
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Text }         from '@ui/text'
-import { screenVar }    from '@store/articles'
-import { useHover }     from '@ui/utils'
+import { ALL_ARTICLES }      from '@store/articles'
+import { Button }            from '@ui/button'
+import { BackIcon }          from '@ui/icons'
+import { Box }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { screenVar }         from '@store/articles'
+import { useHover }          from '@ui/utils'
 
-const ReturnButton: FC = () => {
+import { ReturnButtonProps } from './return-button.interface'
+
+const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [hover, hoverProps] = useHover()
 
   return (
@@ -21,7 +23,7 @@ const ReturnButton: FC = () => {
         </Layout>
         <Layout flexBasis={8} />
         <Layout>
-          <Text fontWeight='medium'>Button</Text>
+          <Text fontWeight='medium'>{title}</Text>
         </Layout>
       </Box>
     </Button>

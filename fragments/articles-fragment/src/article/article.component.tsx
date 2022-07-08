@@ -18,6 +18,7 @@ import { normalizeString } from '@shared/utils'
 import { postIdVar }       from '@store/articles'
 
 import { ReturnButton }    from './return-button'
+import { useAllFragments } from '../data'
 import { usePostById }     from '../data'
 import { messages }        from '../messages'
 
@@ -28,6 +29,7 @@ const Article: FC = () => {
   const views = 200
 
   const { content, title, date, featuredImage } = usePostById({ postId })
+  const { fragments } = useAllFragments()
 
   return (
     <Column width='100%' height='auto'>
@@ -55,7 +57,7 @@ const Article: FC = () => {
             <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
             <Column justifyContent='space-between'>
               <Box width={102}>
-                <ReturnButton />
+                <ReturnButton title={fragments[0]?.fragments.blog} />
               </Box>
               <Box>
                 <Column>

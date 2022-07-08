@@ -13,10 +13,12 @@ import { formattedDate }   from '@shared/utils'
 import { screenVar }       from '@store/articles'
 import { postIdVar }       from '@store/articles'
 
+import { useAllFragments } from '../data'
 import { usePosts }        from '../data'
 
 const AllArticles: FC = () => {
   const { posts } = usePosts()
+  const { fragments } = useAllFragments()
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']} height='auto'>
@@ -25,7 +27,7 @@ const AllArticles: FC = () => {
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
         <Layout>
           <Text fontWeight='bold' fontSize='extra'>
-            Text
+            {fragments[0]?.fragments.blog}
           </Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
