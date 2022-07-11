@@ -1,5 +1,6 @@
 import { useReactiveVar }  from '@apollo/client'
 
+import DOMPurify           from 'dompurify'
 import React               from 'react'
 import plural              from 'plural-ru'
 import { FC }              from 'react'
@@ -14,7 +15,6 @@ import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
 import { Space }           from '@ui/text'
 import { formattedDate }   from '@shared/utils'
-import { normalizeString } from '@shared/utils'
 import { postIdVar }       from '@store/articles'
 
 import { ReturnButton }    from './return-button'
@@ -33,78 +33,75 @@ const Article: FC = () => {
 
   return (
     <Column width='100%' height='auto'>
-      <Row minHeight={[440, 440, 480]} style={{ position: 'relative' }}>
-        <Box width='100%' backgroundColor='gray' justifyContent='center'>
-          <Box
-            backgroundColor='black'
-            position='absolute'
-            width={[375, 375, '100%']}
-            height={[440, 440, 480]}
-            right={0}
-            left={0}
-            top={0}
-            zIndex='-1'
-          >
-            <ImageBlock
-              width='100%'
-              src={featuredImage?.node.mediaItemUrl}
-              alt={featuredImage?.node.altText}
-              style={{ opacity: 0.5 }}
-            />
-          </Box>
-          <Layout flexBasis={[20, 20, 83]} />
-          <Column width={['100%', '100%', '1280px']}>
-            <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
-            <Column justifyContent='space-between'>
-              <Box width={102}>
-                <ReturnButton title={fragments[0]?.fragments.blog} />
-              </Box>
-              <Box>
-                <Column>
+      <Box minHeight={[440, 440, 480]} width='100%' position='relative' justifyContent='center'>
+        <Box
+          backgroundColor='black'
+          position='absolute'
+          width={[375, 375, '100%']}
+          height={[440, 440, 480]}
+          zIndex='-1'
+        >
+          <ImageBlock
+            width='100%'
+            src={featuredImage?.node.mediaItemUrl}
+            alt={featuredImage?.node.altText}
+            style={{ opacity: 0.5 }}
+          />
+        </Box>
+        <Layout flexBasis={[20, 20, 83]} />
+        <Column width={['100%', '100%', '1280px']}>
+          <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
+          <Column justifyContent='space-between'>
+            <Box width={102}>
+              <ReturnButton title={fragments[0]?.fragments.blog} />
+            </Box>
+            <Box>
+              <Column>
+                <Layout>
+                  <Text fontWeight='medium' fontSize='giant' lineHeight='grown' color='white'>
+                    {title}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={[16, 16, 24]} />
+                <Row>
                   <Layout>
-                    <Text fontWeight='medium' fontSize='giant' lineHeight='grown' color='white'>
-                      {title}
+                    <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
+                      {views}
+                      <Space />
+                      {plural(
+                        views,
+                        messages.views.view,
+                        messages.views.viewed,
+                        messages.views.views
+                      )}
                     </Text>
                   </Layout>
-                  <Layout flexBasis={[16, 16, 24]} />
-                  <Row>
-                    <Layout>
-                      <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
-                        {views}
-                        <Space />
-                        {plural(
-                          views,
-                          messages.views.view,
-                          messages.views.viewed,
-                          messages.views.views
-                        )}
-                      </Text>
-                    </Layout>
-                    <Layout flexBasis={24} />
-                    <Layout>
-                      <Divider direction='vertical' weight={2} backgroundColor='charcoal' />
-                    </Layout>
-                    <Layout flexBasis={24} />
-                    <Layout>
-                      <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
-                        {formattedDate(date)}
-                      </Text>
-                    </Layout>
-                  </Row>
-                </Column>
-                <Layout flexBasis={[20, 20, 100]} />
-              </Box>
-            </Column>
-            <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
+                  <Layout flexBasis={24} />
+                  <Layout>
+                    <Divider direction='vertical' weight={2} backgroundColor='charcoal' />
+                  </Layout>
+                  <Layout flexBasis={24} />
+                  <Layout>
+                    <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
+                      {formattedDate(date)}
+                    </Text>
+                  </Layout>
+                </Row>
+              </Column>
+              <Layout flexBasis={[20, 20, 100]} />
+            </Box>
           </Column>
-        </Box>
-      </Row>
+          <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
+        </Column>
+      </Box>
       <Row justifyContent='center'>
         <Layout flexBasis={[20, 20, 298]} flexShrink={0} />
         <Column width={['100%', '100%', 843]}>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
           <Row>
-            <Text lineHeight='medium'>{normalizeString(content)}</Text>
+            <Text lineHeight='medium'>
+              <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }} />
+            </Text>
           </Row>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
         </Column>
