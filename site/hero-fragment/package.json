@@ -8,6 +8,7 @@
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
     "@ui/social-links": "workspace:0.0.1",
@@ -16,10 +17,12 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@apollo/client": "^3.5.5",
     "@types/react": "^17",
     "@types/react-dom": "^17"
   },
   "peerDependencies": {
+    "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "next": "*",

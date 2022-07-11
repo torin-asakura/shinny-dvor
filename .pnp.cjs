@@ -5405,8 +5405,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@site-hero-fragment-virtual-cf61e892cf/1/site/hero-fragment/",\
           "packageDependencies": [\
             ["@site/hero-fragment", "virtual:887211c014720666c298d0cc784ecaa83812ffcd25ea845e45c78a76af51fbbe4424e2dbb0855c6fb8d782e71e93cf9a0cc67f81bc8ad6b9f88a687cea152a75#workspace:site/hero-fragment"],\
+            ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", null],\
+            ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/next", null],\
@@ -5416,6 +5418,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/condition", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/condition"],\
             ["@ui/divider", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/divider"],\
             ["@ui/icons", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/icons"],\
+            ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/layout"],\
             ["@ui/link", "virtual:ca07e39e3541f796937771a8726f37de6dd1bb7baee66ecc92279ee5e741819ef34fe7714ea1043edadb049cf4a187a10caa8435f342fe982d113726f11baa12#workspace:ui/link"],\
             ["@ui/social-links", "virtual:ca07e39e3541f796937771a8726f37de6dd1bb7baee66ecc92279ee5e741819ef34fe7714ea1043edadb049cf4a187a10caa8435f342fe982d113726f11baa12#workspace:ui/social-links"],\
@@ -5426,6 +5429,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "packagePeers": [\
             "@emotion/styled",\
+            "@types/apollo__client",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/next",\
@@ -5441,8 +5445,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@site-hero-fragment-virtual-57e1ca9d92/1/site/hero-fragment/",\
           "packageDependencies": [\
             ["@site/hero-fragment", "virtual:9156f028d356eea5022fc3a8afb9deb14e4afafe9fcce511e624465f38aff438bed8c35a02f7fbcbe6519cf5430f5039b1776eb6521a7cc14e44c6337e61f3d2#workspace:site/hero-fragment"],\
+            ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.5.5"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/next", null],\
@@ -5452,6 +5458,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/condition", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:ui/condition"],\
             ["@ui/divider", "virtual:9af6a2a36276b61f6eaa55fd0b835ca826a2b43bbdff2fb2d5d0b5a57ae13ec51d196abb88ad08dc5a2914c081af33ad888d13f2803f9f43ea15fc12cdd963cc#workspace:ui/divider"],\
             ["@ui/icons", "virtual:d03b6a98ea7dacda719dbd7b1824e2f243a4751296aaf94e7004ff6bc0019d6e88b979b3059fa44037f0674aac1aff1659b7af7e494e8959b15040512d1d8440#workspace:ui/icons"],\
+            ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:ui/layout"],\
             ["@ui/link", "virtual:d80706a646ea425ab51b3302e6ecb53f4ee4edc1404a27c6d364399a4b6c8e52cd833279350892d6b79dc40c06e8e0cbe0f323c960aa72d4937d3f78ead78d08#workspace:ui/link"],\
             ["@ui/social-links", "virtual:9af6a2a36276b61f6eaa55fd0b835ca826a2b43bbdff2fb2d5d0b5a57ae13ec51d196abb88ad08dc5a2914c081af33ad888d13f2803f9f43ea15fc12cdd963cc#workspace:ui/social-links"],\
@@ -5461,8 +5468,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"]\
           ],\
           "packagePeers": [\
+            "@apollo/client",\
             "@emotion/react",\
             "@emotion/styled",\
+            "@types/apollo__client",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/next",\
@@ -5478,6 +5487,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./site/hero-fragment/",\
           "packageDependencies": [\
             ["@site/hero-fragment", "workspace:site/hero-fragment"],\
+            ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
@@ -5485,6 +5495,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/condition", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/condition"],\
             ["@ui/divider", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/divider"],\
             ["@ui/icons", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/icons"],\
+            ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/layout"],\
             ["@ui/link", "virtual:ca07e39e3541f796937771a8726f37de6dd1bb7baee66ecc92279ee5e741819ef34fe7714ea1043edadb049cf4a187a10caa8435f342fe982d113726f11baa12#workspace:ui/link"],\
             ["@ui/social-links", "virtual:ca07e39e3541f796937771a8726f37de6dd1bb7baee66ecc92279ee5e741819ef34fe7714ea1043edadb049cf4a187a10caa8435f342fe982d113726f11baa12#workspace:ui/social-links"],\
@@ -5774,8 +5785,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@site-services-infographics-fragment-virtual-7f96f7cf12/1/site/services-infographics-fragment/",\
           "packageDependencies": [\
             ["@site/services-infographics-fragment", "virtual:887211c014720666c298d0cc784ecaa83812ffcd25ea845e45c78a76af51fbbe4424e2dbb0855c6fb8d782e71e93cf9a0cc67f81bc8ad6b9f88a687cea152a75#workspace:site/services-infographics-fragment"],\
+            ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", null],\
+            ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/next", null],\
@@ -5790,6 +5803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "packagePeers": [\
             "@emotion/styled",\
+            "@types/apollo__client",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/next",\
@@ -5805,8 +5819,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@site-services-infographics-fragment-virtual-44d71259f5/1/site/services-infographics-fragment/",\
           "packageDependencies": [\
             ["@site/services-infographics-fragment", "virtual:9156f028d356eea5022fc3a8afb9deb14e4afafe9fcce511e624465f38aff438bed8c35a02f7fbcbe6519cf5430f5039b1776eb6521a7cc14e44c6337e61f3d2#workspace:site/services-infographics-fragment"],\
+            ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.5.5"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/next", null],\
@@ -5820,8 +5836,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"]\
           ],\
           "packagePeers": [\
+            "@apollo/client",\
             "@emotion/react",\
             "@emotion/styled",\
+            "@types/apollo__client",\
             "@types/emotion__react",\
             "@types/emotion__styled",\
             "@types/next",\
@@ -5837,6 +5855,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./site/services-infographics-fragment/",\
           "packageDependencies": [\
             ["@site/services-infographics-fragment", "workspace:site/services-infographics-fragment"],\
+            ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\

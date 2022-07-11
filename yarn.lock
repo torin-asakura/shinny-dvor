@@ -2231,6 +2231,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/hero-fragment@workspace:site/hero-fragment"
   dependencies:
+    "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2238,6 +2239,7 @@ __metadata:
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/social-links": "workspace:0.0.1"
@@ -2245,6 +2247,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"
@@ -2344,6 +2347,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/services-infographics-fragment@workspace:site/services-infographics-fragment"
   dependencies:
+    "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2353,6 +2357,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
+    "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
     next: "*"

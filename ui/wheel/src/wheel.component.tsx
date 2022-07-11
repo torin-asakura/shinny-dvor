@@ -3,10 +3,11 @@ import { FC }                  from 'react'
 
 import { Knobs }               from './knobs'
 import { Wheel as Background } from './wheel'
+import { WheelProps }          from './wheel.interface'
 
-const Wheel: FC = () => (
+const Wheel: FC<WheelProps> = ({ titles }) => (
   <Background>
-    <Knobs />
+    <Knobs titles={titles} />
   </Background>
 )
 

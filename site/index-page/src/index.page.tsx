@@ -24,8 +24,7 @@ const IndexPage: FC = () => {
 
   return (
     <Column width='100%'>
-      {/* TODO change background to image */}
-      <Box width='100%' backgroundColor='black' justifyContent='center'>
+      <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <NavigationDark active={active} />
           <Hero {...getObserverOptions('hero', 0.7)} />
