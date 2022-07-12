@@ -30,12 +30,12 @@ const Hero = forwardRef((props, ref: any) => {
   let featuredImage
 
   if (hero) {
-    CTA = extractor(hero, 'id', 'cG9zdDoyMDAy')
-    phone = extractor(hero, 'id', 'cG9zdDoyMDA1')
-    signIn = extractor(hero, 'id', 'cG9zdDoyMDAz')
+    CTA = extractor(hero, 'title', 'cG9zdDoyMDAy')
+    phone = extractor(hero, 'title', 'cG9zdDoyMDA1')
+    signIn = extractor(hero, 'title', 'cG9zdDoyMDAz')
     featuredImage = extractor(hero, 'featuredImage', 'cG9zdDoyMDA0')
-    title.text = extractor(hero, 'id', 'cG9zdDoyMDA0')
-    title.highlighted = extractor(hero, 'id', 'cG9zdDoyMDA0')
+    title.text = extractor(hero, 'title', 'cG9zdDoyMDA0')
+    title.highlighted = extractor(hero, 'title', 'cG9zdDoyMDA0')
   }
 
   return (

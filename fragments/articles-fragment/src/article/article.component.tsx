@@ -35,7 +35,7 @@ const Article: FC = () => {
   let CTA = ''
 
   if (blog) {
-    CTA = extractor(blog, 'id', 'cG9zdDoxOTk3')
+    CTA = extractor(blog, 'title', 'cG9zdDoxOTk3')
   }
 
   return (
