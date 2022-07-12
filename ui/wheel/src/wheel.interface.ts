@@ -1,7 +1,3 @@
 export interface WheelProps {
-  titles: {
-    titleTop: string
-    titleMiddle: string
-    titleBottom: string
-  }
+  titles: Map<string, string>
 }

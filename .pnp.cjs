@@ -5408,6 +5408,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", null],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -5448,6 +5449,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.5.5"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -5489,6 +5491,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/hero-fragment", "workspace:site/hero-fragment"],\
             ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
             ["@ui/button", "virtual:02d8619222f3535cf4923b36730b5ec5eba0ad6fd4248a05d803e85123e3a29e53e6a41d577a7b6883403cba5bd5ca991da14ea5841078c9b2b536184a34c9cd#workspace:ui/button"],\
@@ -5788,6 +5791,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
             ["@emotion/styled", null],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -5822,6 +5826,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.5.5"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/apollo__client", null],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
@@ -5857,6 +5862,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@site/services-infographics-fragment", "workspace:site/services-infographics-fragment"],\
             ["@apollo/client", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#npm:3.5.5"],\
             ["@emotion/react", "virtual:14f2ef23579ec19f4189aa7c92f7fd3a1cc449c09cba55ae49fd8b71f4b0c4e35dce32c27c696027bf3149840f77ebd5bd938c1dbc1848eff170908704a8c6e2#npm:11.7.0"],\
+            ["@shared/utils", "workspace:shared/utils"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
             ["@ui/image", "workspace:ui/image"],\

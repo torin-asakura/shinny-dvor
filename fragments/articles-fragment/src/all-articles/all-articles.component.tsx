@@ -8,17 +8,24 @@ import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
+import { extractor }       from '@shared/utils'
 import { normalizeString } from '@shared/utils'
 import { formattedDate }   from '@shared/utils'
 import { screenVar }       from '@store/articles'
 import { postIdVar }       from '@store/articles'
 
-import { useAllFragments } from '../data'
+import { useBlog }         from '../data'
 import { usePosts }        from '../data'
 
 const AllArticles: FC = () => {
   const { posts } = usePosts()
-  const { fragments } = useAllFragments()
+  const { blog } = useBlog()
+
+  let titlePage = ''
+
+  if (blog) {
+    titlePage = extractor(blog, 'id', 'cG9zdDoxOTk3')
+  }
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']} height='auto'>
@@ -27,7 +34,7 @@ const AllArticles: FC = () => {
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
         <Layout>
           <Text fontWeight='bold' fontSize='extra'>
-            {fragments[0]?.fragments.blog}
+            {titlePage}
           </Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>

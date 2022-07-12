@@ -2233,6 +2233,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -2349,6 +2350,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@shared/utils": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:0.0.1"

@@ -4,6 +4,7 @@ export const GET_HERO = gql`
   query GetHero {
     heroFragments {
       nodes {
+        id
         title
         featuredImage {
           node {

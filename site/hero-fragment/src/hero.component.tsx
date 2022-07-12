@@ -13,6 +13,7 @@ import { Link }            from '@ui/link'
 import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
+import { extractor }       from '@shared/utils'
 
 import { useHero }         from './data'
 
@@ -26,13 +27,15 @@ const Hero = forwardRef((props, ref: any) => {
   let phone = ''
   let CTA = ''
   let signIn = ''
+  let featuredImage
 
   if (hero) {
-    CTA = hero[3]?.title
-    phone = hero[0]?.title
-    signIn = hero[2]?.title
-    title.text = hero[1]?.title.substring(0, hero[1]?.title.lastIndexOf(' '))
-    title.highlighted = hero[1]?.title.slice(hero[1]?.title.lastIndexOf(' '))
+    CTA = extractor(hero, 'id', 'cG9zdDoyMDAy')
+    phone = extractor(hero, 'id', 'cG9zdDoyMDA1')
+    signIn = extractor(hero, 'id', 'cG9zdDoyMDAz')
+    featuredImage = extractor(hero, 'featuredImage', 'cG9zdDoyMDA0')
+    title.text = extractor(hero, 'id', 'cG9zdDoyMDA0')
+    title.highlighted = extractor(hero, 'id', 'cG9zdDoyMDA0')
   }
 
   return (
@@ -50,8 +53,8 @@ const Hero = forwardRef((props, ref: any) => {
         zIndex='-1'
       >
         <ImageBlock
-          src={hero[1]?.featuredImage.node.mediaItemUrl}
-          alt={hero[1]?.featuredImage.node.altText}
+          src={featuredImage?.node.mediaItemUrl}
+          alt={featuredImage?.node.altText}
           style={{ opacity: 0.5 }}
         />
       </Box>
@@ -66,7 +69,7 @@ const Hero = forwardRef((props, ref: any) => {
               fontWeight='bold'
               color='white'
             >
-              {title.text}
+              {title.text?.substring(0, title.text.lastIndexOf(' '))}
             </Text>
           </Row>
           <Row>
@@ -77,7 +80,7 @@ const Hero = forwardRef((props, ref: any) => {
               color='white'
               opacity={0.5}
             >
-              {title.highlighted}
+              {title.highlighted?.slice(title.text.lastIndexOf(' '))}
             </Text>
           </Row>
         </Column>

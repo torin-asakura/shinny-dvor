@@ -3,22 +3,19 @@ import { forwardRef }      from 'react'
 
 import { Box }             from '@ui/layout'
 import { Wheel }           from '@ui/wheel'
+import { extractor }       from '@shared/utils'
 
 import { useInfographics } from './data'
 
 const ServicesInfographics = forwardRef((props, ref: any) => {
   const { infographics } = useInfographics()
 
-  const titles = {
-    titleTop: '',
-    titleMiddle: '',
-    titleBottom: '',
-  }
+  const titles = new Map<string, string>()
 
   if (infographics) {
-    titles.titleTop = infographics[2]?.title
-    titles.titleMiddle = infographics[1]?.title
-    titles.titleBottom = infographics[0]?.title
+    titles.set('titleTop', extractor(infographics, 'id', 'cG9zdDoyMDA2'))
+    titles.set('titleMiddle', extractor(infographics, 'id', 'cG9zdDoyMDA4'))
+    titles.set('titleBottom', extractor(infographics, 'id', 'cG9zdDoyMDA5'))
   }
 
   return (

@@ -1,26 +1,27 @@
-import { useReactiveVar }  from '@apollo/client'
+import { useReactiveVar } from '@apollo/client'
 
-import DOMPurify           from 'dompurify'
-import React               from 'react'
-import plural              from 'plural-ru'
-import { FC }              from 'react'
+import DOMPurify          from 'dompurify'
+import React              from 'react'
+import plural             from 'plural-ru'
+import { FC }             from 'react'
 
-import { PostId }          from '@store/articles'
-import { Divider }         from '@ui/divider'
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Text }            from '@ui/text'
-import { Space }           from '@ui/text'
-import { formattedDate }   from '@shared/utils'
-import { postIdVar }       from '@store/articles'
+import { PostId }         from '@store/articles'
+import { Divider }        from '@ui/divider'
+import { ImageBlock }     from '@ui/image'
+import { Box }            from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Text }           from '@ui/text'
+import { Space }          from '@ui/text'
+import { extractor }      from '@shared/utils'
+import { formattedDate }  from '@shared/utils'
+import { postIdVar }      from '@store/articles'
 
-import { ReturnButton }    from './return-button'
-import { useAllFragments } from '../data'
-import { usePostById }     from '../data'
-import { messages }        from '../messages'
+import { ReturnButton }   from './return-button'
+import { useBlog }        from '../data'
+import { usePostById }    from '../data'
+import { messages }       from '../messages'
 
 const Article: FC = () => {
   const postId = useReactiveVar<PostId>(postIdVar)
@@ -29,7 +30,13 @@ const Article: FC = () => {
   const views = 200
 
   const { content, title, date, featuredImage } = usePostById({ postId })
-  const { fragments } = useAllFragments()
+  const { blog } = useBlog()
+
+  let CTA = ''
+
+  if (blog) {
+    CTA = extractor(blog, 'id', 'cG9zdDoxOTk3')
+  }
 
   return (
     <Column width='100%' height='auto'>
@@ -53,7 +60,7 @@ const Article: FC = () => {
           <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
           <Column justifyContent='space-between'>
             <Box width={102}>
-              <ReturnButton title={fragments[0]?.fragments.blog} />
+              <ReturnButton title={CTA} />
             </Box>
             <Box>
               <Column>
