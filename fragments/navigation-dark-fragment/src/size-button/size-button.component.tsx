@@ -18,7 +18,7 @@ import { SizeButtonProps }  from './size-button.interface'
 import { getColor }         from '../helpers'
 import { getColorButton }   from '../helpers'
 
-const SizeButton: FC<SizeButtonProps> = ({ active }) => {
+const SizeButton: FC<SizeButtonProps> = ({ active, isOpen, setOpen }) => {
   const isRadiusSelected = useReactiveVar<boolean>(chosenVar)
   const radius = useReactiveVar<string>(radiusVar)
   const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
@@ -29,7 +29,10 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
     <Box
       width={[40, 40, 48]}
       height={[40, 40, 48]}
-      onClick={() => checkedRadiusVar(!checkedRadius)}
+      onClick={() => {
+        setOpen?.(!isOpen)
+        checkedRadiusVar(!checkedRadius)
+      }}
     >
       <Layout width='100%' display={['flex', 'flex', 'none']}>
         <Button
@@ -41,11 +44,7 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon
-                width={20}
-                height={20}
-                color={checkedRadius ? 'black' : getColor(active!)}
-              />
+              <WheelIcon width={20} height={20} color={isOpen ? 'black' : getColor(active!)} />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text fontWeight='medium' fontSize='small'>
@@ -57,14 +56,14 @@ const SizeButton: FC<SizeButtonProps> = ({ active }) => {
       </Layout>
       <Layout width='100%' display={['none', 'none', 'flex']}>
         <Button
-          color={checkedRadius ? 'secondary' : getColorButton(active!)}
+          color={isOpen ? 'secondary' : getColorButton(active!)}
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
           onClick={() => setIsChecked(!isChecked)}
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={24} height={24} color={isChecked ? 'black' : getColor(active!)} />
+              <WheelIcon width={24} height={24} color={isOpen ? 'black' : getColor(active!)} />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text fontWeight='medium' fontSize='small'>

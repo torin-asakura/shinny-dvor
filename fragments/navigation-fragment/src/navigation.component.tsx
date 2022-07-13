@@ -31,7 +31,7 @@ const Navigation: FC = () => {
       zIndex={1000}
     >
       <Box width={['100%', '100%', 1440]}>
-        <Layout flexBasis={[20, 20, 32]} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[20, 20, 28]} />
           <Row justifyContent='space-between'>
@@ -75,7 +75,7 @@ const Navigation: FC = () => {
           </Row>
           <Layout flexBasis={[20, 20, 28]} />
         </Column>
-        <Layout flexBasis={[20, 20, 32]} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
       </Box>
     </Box>
   )

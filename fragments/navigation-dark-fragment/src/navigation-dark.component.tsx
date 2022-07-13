@@ -26,7 +26,11 @@ import { getColorBackground }   from './helpers'
 const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
   const [drawer, setDrawer] = useState<boolean>(false)
 
-  const { layerProps, triggerProps, render, setOpen } = usePopover('bottom-center', 12, 'click')
+  const { layerProps, triggerProps, render, isOpen, setOpen } = usePopover(
+    'bottom-center',
+    12,
+    'click'
+  )
 
   return (
     <Box
@@ -67,7 +71,7 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
               </Layout>
               <Layout display={['none', 'none', 'flex']} justifyContent='center'>
                 <Layout {...triggerProps}>
-                  <SizeButton active={active} />
+                  <SizeButton setOpen={setOpen} isOpen={isOpen} active={active} />
                 </Layout>
                 {render(
                   <Layout {...layerProps}>
