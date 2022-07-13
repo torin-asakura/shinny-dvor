@@ -24,7 +24,7 @@ const AllArticles: FC = () => {
   let titlePage = ''
 
   if (blog) {
-    titlePage = extractor(blog, 'title', 'cG9zdDoxOTk3')
+    titlePage = extractor(blog, 'title', 'title')
   }
 
   return (

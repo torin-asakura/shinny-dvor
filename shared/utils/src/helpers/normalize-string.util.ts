@@ -6,7 +6,7 @@ const normalizeString = (string: string): string => {
       .replace(/&#8212;/g, '-')
       .replace(/<meta charset="utf-8">/g, '')
       .replace(/<br\/>/g, '')
-      .replace(/<br \/>/g, '')
+      .replace(/<br>|<br \/>/g, '')
   }
 
   return ''

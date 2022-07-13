@@ -32,10 +32,10 @@ const Article: FC = () => {
   const { content, title, date, featuredImage } = usePostById({ postId })
   const { blog } = useBlog()
 
-  let CTA = ''
+  let goBack = ''
 
   if (blog) {
-    CTA = extractor(blog, 'title', 'cG9zdDoxOTk3')
+    goBack = extractor(blog, 'title', 'title')
   }
 
   return (
@@ -60,7 +60,7 @@ const Article: FC = () => {
           <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
           <Column justifyContent='space-between'>
             <Box width={102}>
-              <ReturnButton title={CTA} />
+              <ReturnButton title={goBack} />
             </Box>
             <Box>
               <Column>

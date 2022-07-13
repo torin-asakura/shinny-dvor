@@ -4,8 +4,10 @@ export const GET_BLOG = gql`
   query GetBlog {
     blogFragments {
       nodes {
-        id
         title
+        fragmentParams {
+          object
+        }
       }
     }
   }

@@ -13,9 +13,9 @@ const ServicesInfographics = forwardRef((props, ref: any) => {
   const titles = new Map<string, string>()
 
   if (infographics) {
-    titles.set('titleTop', extractor(infographics, 'title', 'cG9zdDoyMDA2'))
-    titles.set('titleMiddle', extractor(infographics, 'title', 'cG9zdDoyMDA4'))
-    titles.set('titleBottom', extractor(infographics, 'title', 'cG9zdDoyMDA5'))
+    titles.set('titleTop', extractor(infographics, 'title', 'title-top'))
+    titles.set('titleMiddle', extractor(infographics, 'title', 'title-middle'))
+    titles.set('titleBottom', extractor(infographics, 'title', 'title-bottom'))
   }
 
   return (

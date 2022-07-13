@@ -26,16 +26,16 @@ const Hero = forwardRef((props, ref: any) => {
   }
   let phone = ''
   let CTA = ''
-  let signIn = ''
+  let signUp = ''
   let featuredImage
 
   if (hero) {
-    CTA = extractor(hero, 'title', 'cG9zdDoyMDAy')
-    phone = extractor(hero, 'title', 'cG9zdDoyMDA1')
-    signIn = extractor(hero, 'title', 'cG9zdDoyMDAz')
-    featuredImage = extractor(hero, 'featuredImage', 'cG9zdDoyMDA0')
-    title.text = extractor(hero, 'title', 'cG9zdDoyMDA0')
-    title.highlighted = extractor(hero, 'title', 'cG9zdDoyMDA0')
+    CTA = extractor(hero, 'title', 'our-services')
+    phone = extractor(hero, 'title', 'telephone')
+    signUp = extractor(hero, 'title', 'sign-up')
+    featuredImage = extractor(hero, 'featuredImage', 'text')
+    title.text = extractor(hero, 'title', 'text')
+    title.highlighted = extractor(hero, 'title', 'text')
   }
 
   return (
@@ -87,7 +87,7 @@ const Hero = forwardRef((props, ref: any) => {
         <Layout flexBasis={32} />
         <NextLink path='/booking'>
           <Layout width={['100%', '100%', '180px']}>
-            <Button>{signIn !== undefined ? signIn : ''}</Button>
+            <Button>{signUp !== undefined ? signUp : ''}</Button>
           </Layout>
         </NextLink>
         <Layout flexBasis={[40, 40, 48]} />
@@ -96,14 +96,17 @@ const Hero = forwardRef((props, ref: any) => {
         <Row width='100%' justifyContent={['center', 'center', 'space-between']}>
           <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
             <Link href='#services'>
-              <Layout>
-                <Text color='white' fontWeight='medium' fontFamily='primary'>
-                  {CTA}
-                </Text>
+              <Row width={150}>
+                <Layout>
+                  <Text color='white' fontWeight='medium' fontFamily='primary'>
+                    {CTA}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={10} flexShrink={0} />
                 <Layout>
                   <ArrowDownIcon width={20} height={20} />
                 </Layout>
-              </Layout>
+              </Row>
             </Link>
           </Box>
           <Box width='100%' alignItems='center'>
