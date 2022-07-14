@@ -52,7 +52,9 @@ const Articles = forwardRef((props, ref: any) => {
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout>
-                  <Text lineHeight='medium' color='darkGray'>Text</Text>
+                  <Text lineHeight='medium' color='darkGray'>
+                    Text
+                  </Text>
                 </Layout>
               </Column>
             ))}
@@ -75,11 +77,11 @@ const Articles = forwardRef((props, ref: any) => {
                     </Text>
                   </Layout>
                   <Layout flexBasis={8} />
-                  <Layout>
-                    <Text lineHeight='medium' color='darkGray'>
+                  <Row width={300} minHeight={52}>
+                    <Text lineHeight='medium' color='darkGray' overflow='hidden'>
                       {name}
                     </Text>
-                  </Layout>
+                  </Row>
                 </Column>
               ))}
             </Carousel>

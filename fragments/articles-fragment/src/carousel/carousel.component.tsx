@@ -21,12 +21,12 @@ const Tablet: FC = ({ children }) => {
 const Mobile: FC = ({ children }) => {
   const { carousel } = useCarousel({
     children,
-    slidesPerView: 1.1,
-    spaceBetween: 0,
+    slidesPerView: 2,
+    spaceBetween: 290,
     centered: false,
     height: 333,
     width: 355,
-    loop: false,
+    loop: true,
   })
 
   return carousel
