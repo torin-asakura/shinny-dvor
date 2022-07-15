@@ -8,13 +8,12 @@ import { Layout }          from '@ui/layout'
 import { Link }            from '@ui/link'
 import { SocialLinks }     from '@ui/social-links'
 import { Text }            from '@ui/text'
-import { extractor }       from '@shared/utils'
+import { extractor }       from '@globals/data'
+import { useData }         from '@globals/data'
 import { normalizeString } from '@shared/utils'
 
-import { useContacts }     from './data'
-
 const Contacts: FC = () => {
-  const { contacts } = useContacts()
+  const { fragments } = useData()
 
   let title = ''
   let titleTime = ''
@@ -26,14 +25,14 @@ const Contacts: FC = () => {
     content: '',
   }
 
-  if (contacts) {
-    email = extractor(contacts, 'title', 'email')
-    title = extractor(contacts, 'title', 'title')
-    telephone = extractor(contacts, 'title', 'telephone')
-    titleTime = extractor(contacts, 'title', 'working-hours')
-    workingHours = extractor(contacts, 'content', 'working-hours')
-    address.title = extractor(contacts, 'title', 'address')
-    address.content = extractor(contacts, 'content', 'address')
+  if (fragments) {
+    email = extractor(fragments?.contacts?.Contacts, 'title', 'email')
+    title = extractor(fragments?.contacts?.Contacts, 'title', 'contacts')
+    telephone = extractor(fragments?.contacts?.Contacts, 'title', 'telephone')
+    titleTime = extractor(fragments?.contacts?.Contacts, 'title', 'working-hours')
+    workingHours = extractor(fragments?.contacts?.Contacts, 'content', 'working-hours')
+    address.title = extractor(fragments?.contacts?.Contacts, 'title', 'address')
+    address.content = extractor(fragments?.contacts?.Contacts, 'content', 'address')
   }
 
   return (

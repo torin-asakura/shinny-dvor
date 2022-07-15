@@ -1607,6 +1607,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@store/articles": "workspace:0.0.1"
     "@types/dompurify": ^2
@@ -1639,6 +1640,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
+    "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -1733,6 +1735,19 @@ __metadata:
   checksum: d05081e0887a49c178b75ee3067bd6ee086f73c154d121b854fb2e044e8a89cb1cbb6de3a0dd93a519b80f0531fda68b099dd7256205f7fbb3490324342f2217
   languageName: node
   linkType: hard
+
+"@globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
+  version: 0.0.0-use.local
+  resolution: "@globals/data@workspace:globals/data"
+  dependencies:
+    "@apollo/client": ^3.5.5
+    graphql: ^15.5.1
+    react: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    react: "*"
+  languageName: unknown
+  linkType: soft
 
 "@graphql-typed-document-node/core@npm:^3.0.0":
   version: 3.1.1
@@ -2329,6 +2344,7 @@ __metadata:
     "@apollo/client": ^3.5.5
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2353,7 +2369,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
-    "@shared/utils": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/button": "workspace:0.0.1"
@@ -2470,7 +2486,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.5.5
     "@emotion/react": ^11.6.0
-    "@shared/utils": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/image": "workspace:0.0.1"

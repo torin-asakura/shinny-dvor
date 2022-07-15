@@ -4,7 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
-    "@shared/utils": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/wheel": "workspace:0.0.1",

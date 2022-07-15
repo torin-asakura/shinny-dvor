@@ -1,20 +1,31 @@
-import React                 from 'react'
-import { forwardRef }        from 'react'
+import React               from 'react'
+import { forwardRef }      from 'react'
 
-import { ARTICLE }           from '@store/articles'
-import { ImageBlock }        from '@ui/image'
-import { Box }               from '@ui/layout'
-import { Row }               from '@ui/layout'
-import { Column }            from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Text }              from '@ui/text'
-import { screenVar }         from '@store/articles'
+import { ARTICLE }         from '@store/articles'
+import { ImageBlock }      from '@ui/image'
+import { Box }             from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Text }            from '@ui/text'
+import { useData }         from '@globals/data'
+import { extractor }       from '@globals/data'
+import { formattedDate }   from '@shared/utils'
+import { normalizeString } from '@shared/utils'
+import { screenVar }       from '@store/articles'
 
-import { Carousel }          from './carousel'
-import { useMockedArticles } from './data'
+import { Carousel }        from './carousel'
+import { usePosts }        from './data'
 
 const Articles = forwardRef((props, ref: any) => {
-  const { articles } = useMockedArticles()
+  const { posts } = usePosts()
+  const { fragments } = useData()
+
+  let latestPublications = ''
+
+  if (fragments) {
+    latestPublications = extractor(fragments?.blog?.Blog, 'title', 'latest-publications')
+  }
 
   return (
     <Box
@@ -29,31 +40,38 @@ const Articles = forwardRef((props, ref: any) => {
         <Column fill>
           <Layout flexBasis={[64, 64, 100]} />
           <Layout>
-            <Text fontWeight='medium' fontSize='giant'>
-              Text
+            <Text
+              lineHeight=''
+              fontWeight='medium'
+              fontSize={['extraLarge', 'extraLarge', 'giant']}
+            >
+              {latestPublications}
             </Text>
           </Layout>
           <Layout flexBasis={[32, 32, 48]} />
           <Row justifyContent='space-between' display={['none', 'none', 'flex']}>
-            {articles.slice(0, 3).map(({ id, name }) => (
+            {posts.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
               <Column key={id} onClick={() => screenVar(ARTICLE)}>
                 <Box width={405} height={260}>
-                  <ImageBlock />
+                  <ImageBlock
+                    src={featuredImage?.node.mediaItemUrl}
+                    alt={featuredImage?.node.altText}
+                  />
                 </Box>
                 <Layout flexBasis={24} />
                 <Layout>
-                  <Text lineHeight='grown'>date</Text>
+                  <Text lineHeight='grown'>{formattedDate(date)}</Text>
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout>
                   <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
-                    {name}
+                    {title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={8} />
-                <Layout>
-                  <Text lineHeight='medium' color='darkGray'>
-                    Text
+                <Layout maxHeight={52} width={405}>
+                  <Text lineHeight='medium' color='darkGray' overflow='hidden'>
+                    {normalizeString(excerpt)}
                   </Text>
                 </Layout>
               </Column>
@@ -61,25 +79,28 @@ const Articles = forwardRef((props, ref: any) => {
           </Row>
           <Row display={['flex', 'flex', 'none']} overflow='hidden'>
             <Carousel>
-              {articles.map(({ id, name }) => (
+              {posts.map(({ id, title, date, excerpt, featuredImage }) => (
                 <Column fill maxHeight={333} key={id}>
                   <Box width={300} height={200} backgroundColor='gray'>
-                    <ImageBlock />
+                    <ImageBlock
+                      src={featuredImage?.node.mediaItemUrl}
+                      alt={featuredImage?.node.altText}
+                    />
                   </Box>
                   <Layout flexBasis={24} />
-                  <Layout>
-                    <Text fontWeight='grown'>Article</Text>
+                  <Layout width={300}>
+                    <Text fontWeight='grown'>{formattedDate(date)}</Text>
                   </Layout>
                   <Layout flexBasis={8} />
-                  <Layout>
-                    <Text fontWeight='grown' fontSize='big'>
-                      Text
+                  <Layout width={300}>
+                    <Text fontWeight='medium' fontSize='big'>
+                      {title}
                     </Text>
                   </Layout>
                   <Layout flexBasis={8} />
-                  <Row width={300} minHeight={52}>
+                  <Row width={300} maxHeight={52}>
                     <Text lineHeight='medium' color='darkGray' overflow='hidden'>
-                      {name}
+                      {normalizeString(excerpt)}
                     </Text>
                   </Row>
                 </Column>

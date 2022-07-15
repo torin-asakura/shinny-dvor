@@ -1,21 +1,26 @@
-import React               from 'react'
-import { forwardRef }      from 'react'
+import React          from 'react'
+import { forwardRef } from 'react'
 
-import { Box }             from '@ui/layout'
-import { Wheel }           from '@ui/wheel'
-import { extractor }       from '@shared/utils'
-
-import { useInfographics } from './data'
+import { Box }        from '@ui/layout'
+import { Wheel }      from '@ui/wheel'
+import { extractor }  from '@globals/data'
+import { useData }    from '@globals/data'
 
 const ServicesInfographics = forwardRef((props, ref: any) => {
-  const { infographics } = useInfographics()
+  const { fragments } = useData()
 
   const titles = new Map<string, string>()
 
-  if (infographics) {
-    titles.set('titleTop', extractor(infographics, 'title', 'title-top'))
-    titles.set('titleMiddle', extractor(infographics, 'title', 'title-middle'))
-    titles.set('titleBottom', extractor(infographics, 'title', 'title-bottom'))
+  if (fragments) {
+    titles.set('titleTop', extractor(fragments?.infographic?.Infographic, 'title', 'title-top'))
+    titles.set(
+      'titleMiddle',
+      extractor(fragments?.infographic?.Infographic, 'title', 'title-middle')
+    )
+    titles.set(
+      'titleBottom',
+      extractor(fragments?.infographic?.Infographic, 'title', 'title-bottom')
+    )
   }
 
   return (

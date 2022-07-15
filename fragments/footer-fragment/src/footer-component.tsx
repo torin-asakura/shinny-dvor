@@ -12,14 +12,14 @@ import { FooterLogo }      from '@ui/logo'
 import { SocialLinks }     from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { Space }           from '@ui/text'
+import { useData }         from '@globals/data'
+import { extractor }       from '@globals/data'
 import { normalizeString } from '@shared/utils'
-import { extractor }       from '@shared/utils'
 
-import { useContacts }     from './data'
 import { stringSeparator } from './helpers'
 
 const Footer: FC = () => {
-  const { contacts } = useContacts()
+  const { fragments } = useData()
 
   const by = new Map()
   let workingHours = ''
@@ -27,13 +27,13 @@ const Footer: FC = () => {
   let telephone = ''
   let appointmentPhone = ''
 
-  if (contacts) {
-    address = extractor(contacts, 'content', 'address')
-    telephone = extractor(contacts, 'title', 'telephone')
-    appointmentPhone = extractor(contacts, 'title', 'appointment-phone')
-    workingHours = extractor(contacts, 'content', 'working-hours')
-    by.set('title', extractor(contacts, 'title', 'by'))
-    by.set('content', extractor(contacts, 'content', 'by'))
+  if (fragments) {
+    address = extractor(fragments?.contacts?.Contacts, 'content', 'address')
+    telephone = extractor(fragments?.contacts?.Contacts, 'title', 'telephone')
+    appointmentPhone = extractor(fragments?.contacts?.Contacts, 'title', 'appointment-phone')
+    workingHours = extractor(fragments?.contacts?.Contacts, 'content', 'working-hours')
+    by.set('title', extractor(fragments?.contacts?.Contacts, 'title', 'by'))
+    by.set('content', extractor(fragments?.contacts?.Contacts, 'content', 'by'))
   }
 
   const { firstPart, secondPart } = stringSeparator(workingHours)

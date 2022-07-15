@@ -8,23 +8,23 @@ import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
-import { extractor }       from '@shared/utils'
+import { useData }         from '@globals/data'
+import { extractor }       from '@globals/data'
 import { normalizeString } from '@shared/utils'
 import { formattedDate }   from '@shared/utils'
 import { screenVar }       from '@store/articles'
 import { postIdVar }       from '@store/articles'
 
-import { useBlog }         from '../data'
 import { usePosts }        from '../data'
 
 const AllArticles: FC = () => {
   const { posts } = usePosts()
-  const { blog } = useBlog()
+  const { fragments } = useData()
 
   let titlePage = ''
 
-  if (blog) {
-    titlePage = extractor(blog, 'title', 'title')
+  if (fragments) {
+    titlePage = extractor(fragments?.blog?.Blog, 'title', 'blog')
   }
 
   return (

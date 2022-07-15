@@ -13,29 +13,25 @@ import { Link }            from '@ui/link'
 import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
-import { extractor }       from '@shared/utils'
-
-import { useHero }         from './data'
+import { useData }         from '@globals/data'
+import { extractor }       from '@globals/data'
 
 const Hero = forwardRef((props, ref: any) => {
-  const { hero } = useHero()
+  const { fragments } = useData()
 
-  const title = {
-    text: '',
-    highlighted: '',
-  }
+  const title = new Map()
   let phone = ''
   let CTA = ''
   let signUp = ''
   let featuredImage
 
-  if (hero) {
-    CTA = extractor(hero, 'title', 'our-services')
-    phone = extractor(hero, 'title', 'telephone')
-    signUp = extractor(hero, 'title', 'sign-up')
-    featuredImage = extractor(hero, 'featuredImage', 'text')
-    title.text = extractor(hero, 'title', 'text')
-    title.highlighted = extractor(hero, 'title', 'text')
+  if (fragments) {
+    CTA = extractor(fragments?.hero?.Hero, 'title', 'our-services')
+    phone = extractor(fragments?.contacts?.Contacts, 'title', 'telephone')
+    signUp = extractor(fragments?.hero?.Hero, 'title', 'sign-up')
+    featuredImage = extractor(fragments?.hero?.Hero, 'featuredImage', 'main-text')
+    title.set('title', extractor(fragments?.hero?.Hero, 'title', 'main-text'))
+    title.set('highlighted', extractor(fragments?.hero?.Hero, 'title', 'main-text'))
   }
 
   return (
@@ -69,7 +65,7 @@ const Hero = forwardRef((props, ref: any) => {
               fontWeight='bold'
               color='white'
             >
-              {title.text?.substring(0, title.text.lastIndexOf(' '))}
+              {title.get('title')?.substring(0, title.get('title')?.lastIndexOf(' '))}
             </Text>
           </Row>
           <Row>
@@ -80,7 +76,7 @@ const Hero = forwardRef((props, ref: any) => {
               color='white'
               opacity={0.5}
             >
-              {title.highlighted?.slice(title.text.lastIndexOf(' '))}
+              {title.get('highlighted')?.slice(title.get('highlighted')?.lastIndexOf(' '))}
             </Text>
           </Row>
         </Column>

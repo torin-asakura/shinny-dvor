@@ -1,21 +1,24 @@
 import { gql } from '@apollo/client'
 
-export const GET_HERO = gql`
-  query GetHero {
-    heroFragments {
+const GET_FRAGMENTS = gql`
+  query GetFragments {
+    fragments(first: 1000) {
       nodes {
         title
         content
-        fragmentParams {
-          object
-        }
         featuredImage {
           node {
             altText
             mediaItemUrl
           }
         }
+        fragmentParams {
+          object
+          scope
+        }
       }
     }
   }
 `
+
+export { GET_FRAGMENTS }

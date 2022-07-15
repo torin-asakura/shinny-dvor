@@ -14,12 +14,12 @@ import { Column }         from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Text }           from '@ui/text'
 import { Space }          from '@ui/text'
-import { extractor }      from '@shared/utils'
+import { useData }        from '@globals/data'
+import { extractor }      from '@globals/data'
 import { formattedDate }  from '@shared/utils'
 import { postIdVar }      from '@store/articles'
 
 import { ReturnButton }   from './return-button'
-import { useBlog }        from '../data'
 import { usePostById }    from '../data'
 import { messages }       from '../messages'
 
@@ -30,12 +30,12 @@ const Article: FC = () => {
   const views = 200
 
   const { content, title, date, featuredImage } = usePostById({ postId })
-  const { blog } = useBlog()
+  const { fragments } = useData()
 
   let goBack = ''
 
-  if (blog) {
-    goBack = extractor(blog, 'title', 'title')
+  if (fragments) {
+    goBack = extractor(fragments?.blog?.Blog, 'title', 'blog')
   }
 
   return (
