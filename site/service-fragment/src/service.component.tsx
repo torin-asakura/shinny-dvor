@@ -27,7 +27,7 @@ const Service: FC = () => {
   return (
     <Box width='100%'>
       <Row>
-        <Layout flexBasis={[20, 20, 299]} />
+        <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[20, 20, 32]} />
           <Box width={102}>
@@ -88,7 +88,7 @@ const Service: FC = () => {
           </Box>
           <Layout flexBasis={[65, 65, 120]} />
         </Column>
-        <Layout flexBasis={[20, 20, 299]} />
+        <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
       </Row>
     </Box>
   )

@@ -24,7 +24,7 @@ const AllServices: FC = () => {
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']}>
-      <Layout flexBasis={[20, 20, 80]} />
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />
         <Layout>
@@ -40,7 +40,7 @@ const AllServices: FC = () => {
         </Row>
         <Layout flexBasis={[20, 20, 80]} />
       </Column>
-      <Layout flexBasis={[20, 20, 80]} />
+      <Layout flexBasis={[20, 20, 48]} flexShrink={0} />
     </Box>
   )
 }

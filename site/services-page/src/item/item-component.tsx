@@ -15,8 +15,14 @@ import { screenVar }  from '@store/services'
 import { ItemProps }  from './item.interface'
 
 const Item: FC<ItemProps> = ({ serviceName, price }) => (
-  <Box width={['100%', '100%', 296]} height={[332, 332, 420]}>
-    <Column width={['100%', '100%', '296px']}>
+  <Box
+    minWidth={['100%', '100%', 296]}
+    height={[332, 332, 420]}
+    marginRight={32}
+    // @ts-ignore
+    cursor='pointer'
+  >
+    <Column minWidth={['100%', '100%', 296]}>
       <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
       <Box
         width='100%'
@@ -24,16 +30,16 @@ const Item: FC<ItemProps> = ({ serviceName, price }) => (
         backgroundColor='transparentGray'
         onClick={() => screenVar(SERVICE)}
       >
-        <Layout flexBasis={[24, 32, 32]} />
+        <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
         <Column width='100%' alignItems='center'>
-          <Layout flexBasis={32} />
-          <Box width={[180, 180, 232]} height={[180, 180, 232]}>
+          <Layout flexBasis={32} flexShrink={0} />
+          <Box minWidth={[180, 180, 232]} minHeight={[180, 180, 232]}>
             <ImageBlock />
           </Box>
-          <Layout flexBasis={[24, 24, 32]} />
+          <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
           <Row>
-            <Layout>
-              <Text fontWeight='medium' fontSize='large'>
+            <Layout width={232}>
+              <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
                 {serviceName}
               </Text>
             </Layout>
@@ -41,23 +47,22 @@ const Item: FC<ItemProps> = ({ serviceName, price }) => (
           <Layout flexBasis={8} />
           <Row>
             <Layout width='100%'>
-              <Text fontWeight='medium' fontSize='large'>
+              <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
                 {price}
                 <Space />
                 <Ruble />
               </Text>
               <Layout flexBasis={8} />
-              <Text color='darkGray' fontWeight='500' fontSize='large'>
+              <Text lineHeight='grown' color='darkGray' fontWeight='500' fontSize='large'>
                 за см2
               </Text>
             </Layout>
           </Row>
-          <Layout flexBasis={[24, 24, 32]} />
+          <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
         </Column>
-        <Layout flexBasis={[24, 24, 32]} />
+        <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
       </Box>
     </Column>
-    <Layout flexBasis={[0, 0, 32]} />
   </Box>
 )
 
