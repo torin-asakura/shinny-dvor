@@ -14,32 +14,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:^3.5.5":
-  version: 3.5.5
-  resolution: "@apollo/client@npm:3.5.5"
+"@apollo/client@npm:^3.6.9":
+  version: 3.6.9
+  resolution: "@apollo/client@npm:3.6.9"
   dependencies:
-    "@graphql-typed-document-node/core": ^3.0.0
+    "@graphql-typed-document-node/core": ^3.1.1
     "@wry/context": ^0.6.0
     "@wry/equality": ^0.5.0
     "@wry/trie": ^0.3.0
-    graphql-tag: ^2.12.3
+    graphql-tag: ^2.12.6
     hoist-non-react-statics: ^3.3.2
     optimism: ^0.16.1
     prop-types: ^15.7.2
     symbol-observable: ^4.0.0
-    ts-invariant: ^0.9.0
+    ts-invariant: ^0.10.3
     tslib: ^2.3.0
-    zen-observable-ts: ^1.2.0
+    zen-observable-ts: ^1.2.5
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
-    react: ^16.8.0 || ^17.0.0
+    graphql-ws: ^5.5.5
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
     subscriptions-transport-ws: ^0.9.0 || ^0.11.0
   peerDependenciesMeta:
+    graphql-ws:
+      optional: true
     react:
       optional: true
     subscriptions-transport-ws:
       optional: true
-  checksum: 765675a25d2e983c1ed0050a2a2d168e581d98de6771c9ebd8a67e7cf9b13275b08d1b2e4a3fe50d66c46e56f8c206909ff5c0145bf86a906830b6bc3d5e4ed7
+  checksum: a3c037ef3465cb5d736d8495c9c2dcb9741e39d9c102f147b479af1923c5913f710981a311d1098b9969ebe87769b749c22274decb5977ad0619032e7ac2cf26
   languageName: node
   linkType: hard
 
@@ -1117,7 +1120,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@blog/app@workspace:blog/app"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@apollo/react-ssr": ^4.0.0
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
@@ -1157,7 +1160,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@blog/index-page@workspace:blog/index-page"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@fragments/articles-fragment": "workspace:0.0.1"
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
@@ -1601,11 +1604,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fragments/articles-fragment@workspace:0.0.1, @fragments/articles-fragment@workspace:fragments/articles-fragment":
+"@fragments/articles-fragment@workspace:0.0.1, @fragments/articles-fragment@workspace:site/fragments/articles-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/articles-fragment@workspace:fragments/articles-fragment"
+  resolution: "@fragments/articles-fragment@workspace:site/fragments/articles-fragment"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
@@ -1634,11 +1637,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/footer-fragment@workspace:0.0.1, @fragments/footer-fragment@workspace:fragments/footer-fragment":
+"@fragments/footer-fragment@workspace:0.0.1, @fragments/footer-fragment@workspace:site/fragments/footer-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/footer-fragment@workspace:fragments/footer-fragment"
+  resolution: "@fragments/footer-fragment@workspace:site/fragments/footer-fragment"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
@@ -1662,11 +1665,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/navigation-dark-fragment@workspace:0.0.1, @fragments/navigation-dark-fragment@workspace:fragments/navigation-dark-fragment":
+"@fragments/navigation-dark-fragment@workspace:0.0.1, @fragments/navigation-dark-fragment@workspace:site/fragments/navigation-dark-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/navigation-dark-fragment@workspace:fragments/navigation-dark-fragment"
+  resolution: "@fragments/navigation-dark-fragment@workspace:site/fragments/navigation-dark-fragment"
   dependencies:
-    "@apollo/client": ^3.5.6
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@store/actions": "workspace:0.0.1"
@@ -1697,11 +1700,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/navigation-fragment@workspace:0.0.1, @fragments/navigation-fragment@workspace:fragments/navigation-fragment":
+"@fragments/navigation-fragment@workspace:0.0.1, @fragments/navigation-fragment@workspace:site/fragments/navigation-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
+  resolution: "@fragments/navigation-fragment@workspace:site/fragments/navigation-fragment"
   dependencies:
-    "@apollo/client": ^3.5.6
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@store/chosen-radius": "workspace:0.0.1"
@@ -1740,7 +1743,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     graphql: ^15.5.1
     react: ^17.0.2
   peerDependencies:
@@ -1749,7 +1752,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@graphql-typed-document-node/core@npm:^3.0.0":
+"@graphql-typed-document-node/core@npm:^3.1.1":
   version: 3.1.1
   resolution: "@graphql-typed-document-node/core@npm:3.1.1"
   peerDependencies:
@@ -2262,7 +2265,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@site/app@workspace:site/app"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@apollo/react-ssr": ^4.0.0
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
@@ -2274,6 +2277,7 @@ __metadata:
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
+    "@globals/data": "workspace:0.0.1"
     "@site/booking-page": "workspace:0.0.1"
     "@site/contacts-page": "workspace:0.0.1"
     "@site/index-page": "workspace:0.0.1"
@@ -2302,11 +2306,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/booking-page@workspace:0.0.1, @site/booking-page@workspace:site/booking-page":
+"@site/booking-page@workspace:0.0.1, @site/booking-page@workspace:site/pages/booking-page":
   version: 0.0.0-use.local
-  resolution: "@site/booking-page@workspace:site/booking-page"
+  resolution: "@site/booking-page@workspace:site/pages/booking-page"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.7.0
     "@emotion/styled": ^11.6.0
     "@store/actions": "workspace:0.0.1"
@@ -2337,11 +2341,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/contacts-page@workspace:0.0.1, @site/contacts-page@workspace:site/contacts-page":
+"@site/contacts-page@workspace:0.0.1, @site/contacts-page@workspace:site/pages/contacts-page":
   version: 0.0.0-use.local
-  resolution: "@site/contacts-page@workspace:site/contacts-page"
+  resolution: "@site/contacts-page@workspace:site/pages/contacts-page"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
@@ -2363,11 +2367,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/hero-fragment@workspace:0.0.1, @site/hero-fragment@workspace:site/hero-fragment":
+"@site/hero-fragment@workspace:0.0.1, @site/hero-fragment@workspace:site/fragments/hero-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/hero-fragment@workspace:site/hero-fragment"
+  resolution: "@site/hero-fragment@workspace:site/fragments/hero-fragment"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
@@ -2393,14 +2397,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/index-page@workspace:0.0.1, @site/index-page@workspace:site/index-page":
+"@site/index-page@workspace:0.0.1, @site/index-page@workspace:site/pages/index-page":
   version: 0.0.0-use.local
-  resolution: "@site/index-page@workspace:site/index-page"
+  resolution: "@site/index-page@workspace:site/pages/index-page"
   dependencies:
+    "@apollo/client": ^3.6.9
     "@fragments/articles-fragment": "workspace:0.0.1"
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-dark-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
     "@site/hero-fragment": "workspace:0.0.1"
     "@site/services-fragment": "workspace:0.0.1"
     "@site/services-infographics-fragment": "workspace:0.0.1"
@@ -2423,11 +2429,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/service-fragment@workspace:0.0.1, @site/service-fragment@workspace:site/service-fragment":
+"@site/service-fragment@workspace:0.0.1, @site/service-fragment@workspace:site/fragments/service-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/service-fragment@workspace:site/service-fragment"
+  resolution: "@site/service-fragment@workspace:site/fragments/service-fragment"
   dependencies:
-    "@apollo/client": ^3.5.6
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@store/services": "workspace:0.0.1"
     "@types/react": ^17
@@ -2451,11 +2457,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/services-fragment@workspace:0.0.1, @site/services-fragment@workspace:site/services-fragment":
+"@site/services-fragment@workspace:0.0.1, @site/services-fragment@workspace:site/fragments/services-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/services-fragment@workspace:site/services-fragment"
+  resolution: "@site/services-fragment@workspace:site/fragments/services-fragment"
   dependencies:
-    "@apollo/client": ^3.5.6
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@store/actions": "workspace:0.0.1"
     "@store/chosen-radius": "workspace:0.0.1"
@@ -2480,11 +2486,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/services-infographics-fragment@workspace:0.0.1, @site/services-infographics-fragment@workspace:site/services-infographics-fragment":
+"@site/services-infographics-fragment@workspace:0.0.1, @site/services-infographics-fragment@workspace:site/fragments/services-infographics-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/services-infographics-fragment@workspace:site/services-infographics-fragment"
+  resolution: "@site/services-infographics-fragment@workspace:site/fragments/services-infographics-fragment"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@globals/data": "workspace:0.0.1"
     "@types/react": ^17
@@ -2504,11 +2510,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/services-page@workspace:0.0.1, @site/services-page@workspace:site/services-page":
+"@site/services-page@workspace:0.0.1, @site/services-page@workspace:site/pages/services-page":
   version: 0.0.0-use.local
-  resolution: "@site/services-page@workspace:site/services-page"
+  resolution: "@site/services-page@workspace:site/pages/services-page"
   dependencies:
-    "@apollo/client": ^3.5.5
+    "@apollo/client": ^3.6.9
     "@faker-js/faker": ^7.3.0
     "@fragments/articles-fragment": "workspace:0.0.1"
     "@fragments/footer-fragment": "workspace:0.0.1"
@@ -2535,9 +2541,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/works-examples-fragment@workspace:0.0.1, @site/works-examples-fragment@workspace:site/works-examples-fragment":
+"@site/works-examples-fragment@workspace:0.0.1, @site/works-examples-fragment@workspace:site/fragments/works-examples-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/works-examples-fragment@workspace:site/works-examples-fragment"
+  resolution: "@site/works-examples-fragment@workspace:site/fragments/works-examples-fragment"
   dependencies:
     "@emotion/react": ^11.6.0
     "@faker-js/faker": ^7.3.0
@@ -2577,7 +2583,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/actions@workspace:store/actions"
   dependencies:
-    "@apollo/client": ^3.4.8
+    "@apollo/client": ^3.6.9
     "@store/booking": "workspace:0.0.1"
     "@store/chosen-radius": "workspace:0.0.1"
     react: ^17.0.2
@@ -2591,7 +2597,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/articles@workspace:store/articles"
   dependencies:
-    "@apollo/client": ^3.4.8
+    "@apollo/client": ^3.6.9
     react: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
@@ -2603,7 +2609,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/booking@workspace:store/booking"
   dependencies:
-    "@apollo/client": ^3.4.8
+    "@apollo/client": ^3.6.9
     react: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
@@ -2615,7 +2621,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/chosen-radius@workspace:store/chosen-radius"
   dependencies:
-    "@apollo/client": ^3.4.8
+    "@apollo/client": ^3.6.9
     react: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
@@ -2627,7 +2633,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/services@workspace:store/services"
   dependencies:
-    "@apollo/client": ^3.4.8
+    "@apollo/client": ^3.6.9
     react: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
@@ -6559,7 +6565,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"graphql-tag@npm:^2.12.3":
+"graphql-tag@npm:^2.12.6":
   version: 2.12.6
   resolution: "graphql-tag@npm:2.12.6"
   dependencies:
@@ -9814,12 +9820,12 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"ts-invariant@npm:^0.9.0":
-  version: 0.9.3
-  resolution: "ts-invariant@npm:0.9.3"
+"ts-invariant@npm:^0.10.3":
+  version: 0.10.3
+  resolution: "ts-invariant@npm:0.10.3"
   dependencies:
     tslib: ^2.1.0
-  checksum: 593c096b8ae21073eb6a0faa76db76752c1e929ca9042b02cedab64dd78d67b8b73fb4b965857e889a2df492fdfb2f9737b486640e212d32dc6b39d188c9151c
+  checksum: bb07d56fe4aae69d8860e0301dfdee2d375281159054bc24bf1e49e513fb0835bf7f70a11351344d213a79199c5e695f37ebbf5a447188a377ce0cd81d91ddb5
   languageName: node
   linkType: hard
 
@@ -10255,12 +10261,12 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"zen-observable-ts@npm:^1.2.0":
-  version: 1.2.3
-  resolution: "zen-observable-ts@npm:1.2.3"
+"zen-observable-ts@npm:^1.2.5":
+  version: 1.2.5
+  resolution: "zen-observable-ts@npm:1.2.5"
   dependencies:
     zen-observable: 0.8.15
-  checksum: 0548b555c67671f1240fb416755d2c27abf095b74a9e25c1abf23b2e15de40e6b076c678a162021358fe62914864eb9f0a57cd65e203d66c4988a08b220e6172
+  checksum: 3b707b7a0239a9bc40f73ba71b27733a689a957c1f364fabb9fa9cbd7d04b7c2faf0d517bf17004e3ed3f4330ac613e84c0d32313e450ddaa046f3350af44541
   languageName: node
   linkType: hard
 

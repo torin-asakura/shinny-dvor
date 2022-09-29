@@ -1,14 +1,13 @@
 {
-  "name": "@blog/index-page",
+  "name": "@site/services-infographics-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/articles-fragment": "workspace:0.0.1",
-    "@fragments/footer-fragment": "workspace:0.0.1",
-    "@fragments/navigation-fragment": "workspace:0.0.1",
-    "@store/articles": "workspace:0.0.1",
-    "@ui/condition": "workspace:0.0.1",
+    "@emotion/react": "^11.6.0",
+    "@globals/data": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
+    "@ui/wheel": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -21,9 +20,8 @@
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-helmet": "*",
-    "styled-system": "*"
+    "react-dom": "*"
   }
 }

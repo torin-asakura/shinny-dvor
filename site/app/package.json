@@ -9,7 +9,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@apollo/client": "^3.5.5",
+    "@apollo/client": "^3.6.9",
     "@apollo/react-ssr": "^4.0.0",
     "@atls/next-app-with-emotion": "^0.2.67",
     "@atls/next-app-with-helmet": "^0.2.64",
@@ -35,6 +35,7 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@globals/data": "workspace:0.0.1",
     "@site/booking-page": "workspace:0.0.1",
     "@site/contacts-page": "workspace:0.0.1",
     "@site/index-page": "workspace:0.0.1",

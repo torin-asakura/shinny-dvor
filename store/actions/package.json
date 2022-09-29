@@ -8,7 +8,7 @@
     "@store/chosen-radius": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.4.8",
+    "@apollo/client": "^3.6.9",
     "react": "^17.0.2"
   },
   "peerDependencies": {

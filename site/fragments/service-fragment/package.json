@@ -1,14 +1,18 @@
 {
-  "name": "@blog/index-page",
+  "name": "@site/service-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/articles-fragment": "workspace:0.0.1",
-    "@fragments/footer-fragment": "workspace:0.0.1",
-    "@fragments/navigation-fragment": "workspace:0.0.1",
-    "@store/articles": "workspace:0.0.1",
+    "@emotion/react": "^11.6.0",
+    "@store/services": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/checkbox": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
+    "@ui/switch": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -22,8 +26,6 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-helmet": "*",
-    "styled-system": "*"
+    "react-dom": "*"
   }
 }
