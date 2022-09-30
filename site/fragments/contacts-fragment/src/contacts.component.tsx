@@ -8,32 +8,25 @@ import { Layout }          from '@ui/layout'
 import { Link }            from '@ui/link'
 import { SocialLinks }     from '@ui/social-links'
 import { Text }            from '@ui/text'
-import { extractor }       from '@globals/data'
-import { useData }         from '@globals/data'
-import { normalizeString } from '@shared/utils'
+import { extractFragment } from '@globals/data'
 
-const Contacts: FC = () => {
-  const { fragments } = useData()
+import { ContactsProps }   from './contacts.interface'
 
-  let title = ''
-  let titleTime = ''
-  let workingHours = ''
-  let email = ''
-  let telephone = ''
-  const address = {
-    title: '',
-    content: '',
-  }
+const Contacts: FC<ContactsProps> = ({ contactsData }) => {
+  const titleObj = extractFragment('contactAddons', 'contactsTitle', contactsData)
+  const addressTitleObj = extractFragment('contactAddons', 'addressTitle', contactsData)
+  const workingHoursTitleObj = extractFragment('contactAddons', 'workingHoursTitle', contactsData)
+  const contactsObj = extractFragment('contactAddons', 'info', contactsData)
 
-  if (fragments) {
-    email = extractor(fragments?.contacts?.Contacts, 'title', 'email')
-    title = extractor(fragments?.contacts?.Contacts, 'title', 'contacts')
-    telephone = extractor(fragments?.contacts?.Contacts, 'title', 'telephone')
-    titleTime = extractor(fragments?.contacts?.Contacts, 'title', 'working-hours')
-    workingHours = extractor(fragments?.contacts?.Contacts, 'content', 'working-hours')
-    address.title = extractor(fragments?.contacts?.Contacts, 'title', 'address')
-    address.content = extractor(fragments?.contacts?.Contacts, 'content', 'address')
-  }
+  const contactsTitle = titleObj?.title
+  const addressTitle = addressTitleObj?.title
+  const workingHoursTitle = workingHoursTitleObj?.title
+  const address = contactsObj?.address
+  const workingHours = contactsObj?.workinghours
+  const telephone = contactsObj?.telephone
+  const email = contactsObj?.email
+  const linkVk = contactsObj?.linkVk
+  const linkFb = contactsObj?.linkFb
 
   return (
     <Column width={['100%', '100%', '1440px']}>
@@ -43,7 +36,7 @@ const Contacts: FC = () => {
           <Layout flexBasis={[20, 20, 32]} />
           <Layout>
             <Text fontWeight='bold' fontSize='extra'>
-              {title}
+              {contactsTitle}
             </Text>
           </Layout>
           <Layout flexBasis={[24, 24, 48]} />
@@ -57,25 +50,28 @@ const Contacts: FC = () => {
             <Column width='100%'>
               <Layout flexDirection='column'>
                 <Row>
-                  <Text fontWeight='medium'>{address.title}</Text>
+                  <Text fontWeight='medium'>{addressTitle}</Text>
                 </Row>
                 <Layout flexBasis={8} />
                 <Row>
-                  <Text fontWeight='regular'>{normalizeString(address.content)}</Text>
+                  <Text fontWeight='regular'>{address}</Text>
                 </Row>
                 <Layout flexBasis={24} />
                 <Row>
-                  <Text fontWeight='medium'>{titleTime}</Text>
+                  <Text fontWeight='medium'>{workingHoursTitle}</Text>
                 </Row>
                 <Layout flexBasis={8} />
-                <Row maxWidth={152}>
+                <Column height='auto' maxWidth={152}>
                   <Text fontWeight='regular' lineHeight='medium'>
-                    {normalizeString(workingHours)}
+                    {workingHours.split('|n|')[0]}
                   </Text>
-                </Row>
+                  <Text fontWeight='regular' lineHeight='medium'>
+                    {workingHours.split('|n|')[1]}
+                  </Text>
+                </Column>
                 <Layout flexBasis={24} />
                 <Row>
-                  <Text fontWeight='medium'>{title}</Text>
+                  <Text fontWeight='medium'>{contactsTitle}</Text>
                 </Row>
                 <Layout flexBasis={8} />
                 <Column height='auto'>
@@ -94,7 +90,7 @@ const Contacts: FC = () => {
               </Layout>
             </Column>
             <Box display={['none', 'none', 'flex']} width='110px'>
-              <SocialLinks />
+              <SocialLinks linkVk={linkVk} linkFb={linkFb} />
             </Box>
           </Column>
           <Column justifyContent='flex-end'>

@@ -1,4 +1,4 @@
 export interface SocialLinksProps {
-  vk: string
-  facebook: string
+  linkVk: string
+  linkFb: string
 }

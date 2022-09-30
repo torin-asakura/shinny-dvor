@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/contacts-fragment": "workspace:0.0.1",
     "@fragments/footer-fragment": "workspace:0.0.1",
     "@fragments/navigation-fragment": "workspace:0.0.1",
     "@globals/data": "workspace:0.0.1",

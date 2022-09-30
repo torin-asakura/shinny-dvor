@@ -16,7 +16,11 @@ import { screenVar }      from '@store/services'
 
 import { AllServices }    from './all-services'
 
-const ServicesPage: FC = () => {
+interface Props {
+  data: any
+}
+
+const ServicesPage: FC<Props> = ({ data: { footer, contacts } }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
@@ -29,7 +33,7 @@ const ServicesPage: FC = () => {
         <Service />
         <Articles />
       </Condition>
-      <Footer />
+      <Footer footerData={footer} contactsData={contacts} />
     </Column>
   )
 }

@@ -21,14 +21,18 @@ import { stringSeparator } from './helpers'
 const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointmentPhone', footerData)
+  const byObj = extractFragment('contentAddons', 'by', footerData)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
+  const linkVk = contactsObj?.linkVk
+  const linkFb = contactsObj?.linkFb
   const by = new Map()
-  by.set('title', extractFragment('contentAddons', 'by', footerData)?.title)
-  by.set('content', extractFragment('contentAddons', 'by', footerData)?.highlightedtext)
+  by.set('title', byObj?.title)
+  by.set('content', byObj?.highlightedtext)
+  by.set('link', byObj?.content)
 
   const { firstPart, secondPart } = stringSeparator(workingHours)
 
@@ -70,7 +74,7 @@ const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
                   </Box>
                 </Box>
               </Box>
-              <SocialLinks />
+              <SocialLinks linkVk={linkVk} linkFb={linkFb} />
             </Row>
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
@@ -148,7 +152,7 @@ const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
                 <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
                 <Space />
                 <Link
-                  href='https://torinasakura.name/'
+                  href={by.get('link')}
                   title={normalizeString(by.get('content'))}
                   target='_blank'
                   rel='me'
@@ -196,7 +200,7 @@ const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
                 </Column>
                 <Layout>
                   <Link
-                    href='https://torinasakura.name/'
+                    href={by.get('link')}
                     target='_blank'
                     rel='me'
                     title={normalizeString(by.get('content'))}

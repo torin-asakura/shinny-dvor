@@ -116,7 +116,7 @@ const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
             </Box>
             <Layout flexBasis={32} flexShrink={0} display={['none', 'none', 'flex']} />
             <Box justifyContent='flex-end'>
-              <SocialLinksDark vk={linkVk} facebook={linkFb} />
+              <SocialLinksDark linkVk={linkVk} linkFb={linkFb} />
             </Box>
           </Box>
         </Row>

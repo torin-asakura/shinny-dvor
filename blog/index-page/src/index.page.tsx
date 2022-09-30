@@ -14,7 +14,11 @@ import { Condition }      from '@ui/condition'
 import { Column }         from '@ui/layout'
 import { screenVar }      from '@store/articles'
 
-const IndexPage: FC = () => {
+interface Props {
+  data: any
+}
+
+const IndexPage: FC<Props> = ({ data: { footer, contacts } }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
@@ -26,7 +30,7 @@ const IndexPage: FC = () => {
       <Condition match={screen === ARTICLE}>
         <Article />
       </Condition>
-      <Footer />
+      <Footer footerData={footer} contactsData={contacts} />
     </Column>
   )
 }

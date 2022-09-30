@@ -1,1 +1,1 @@
-export { default } from '@site/contacts-page'
+export { default, getServerSideProps } from '@site/contacts-page'
