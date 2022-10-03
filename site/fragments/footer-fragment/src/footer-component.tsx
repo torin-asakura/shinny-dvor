@@ -1,27 +1,32 @@
-import React               from 'react'
-import { FC }              from 'react'
+import React                from 'react'
+import { FC }               from 'react'
 
-import { Divider }         from '@ui/divider'
-import { Box }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { NextLink }        from '@ui/link'
-import { Link }            from '@ui/link'
-import { FooterLogo }      from '@ui/logo'
-import { SocialLinks }     from '@ui/social-links'
-import { Text }            from '@ui/text'
-import { Space }           from '@ui/text'
-import { extractFragment } from '@globals/data'
-import { normalizeString } from '@shared/utils'
+import { Divider }          from '@ui/divider'
+import { Box }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Link }             from '@ui/link'
+import { FooterLogo }       from '@ui/logo'
+import { SocialLinks }      from '@ui/social-links'
+import { Text }             from '@ui/text'
+import { Space }            from '@ui/text'
+import { extractFragment }  from '@globals/data'
+import { extractFragments } from '@globals/data'
+import { normalizeString }  from '@shared/utils'
 
-import { FooterProps }     from './footer.interface'
-import { stringSeparator } from './helpers'
+import { FooterProps }      from './footer.interface'
+import { useNavigation }    from './data'
+import { stringSeparator }  from './helpers'
 
 const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
+  const navigation = useNavigation()
+
+  const byObj = extractFragment('contentAddons', 'by', footerData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointmentPhone', footerData)
-  const byObj = extractFragment('contentAddons', 'by', footerData)
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
@@ -50,27 +55,15 @@ const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                    <NextLink path='/services'>
-                      <Layout>
-                        <Text color='black' fontWeight='medium'>
-                          Услуги
-                        </Text>
-                      </Layout>
-                    </NextLink>
-                    <NextLink path='/contacts'>
-                      <Layout>
-                        <Text color='black' fontWeight='medium'>
-                          Контакты
-                        </Text>
-                      </Layout>
-                    </NextLink>
-                    <NextLink path='/blog'>
-                      <Layout>
-                        <Text color='black' fontWeight='medium'>
-                          Блог
-                        </Text>
-                      </Layout>
-                    </NextLink>
+                    {navigationItems.map(({ contentAddons: { title, content } }) => (
+                      <NextLink path={content}>
+                        <Layout>
+                          <Text color='black' fontWeight='medium'>
+                            {title}
+                          </Text>
+                        </Layout>
+                      </NextLink>
+                    ))}
                   </Box>
                 </Box>
               </Box>
@@ -79,27 +72,15 @@ const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
               <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                <NextLink path='/services'>
-                  <Layout>
-                    <Text color='black' fontWeight='medium'>
-                      Услуги
-                    </Text>
-                  </Layout>
-                </NextLink>
-                <NextLink path='/contacts'>
-                  <Layout>
-                    <Text color='black' fontWeight='medium'>
-                      Контакты
-                    </Text>
-                  </Layout>
-                </NextLink>
-                <NextLink path='/blog'>
-                  <Layout>
-                    <Text color='black' fontWeight='medium'>
-                      Блог
-                    </Text>
-                  </Layout>
-                </NextLink>
+                {navigationItems.map(({ contentAddons: { title, content } }) => (
+                  <NextLink path={content}>
+                    <Layout>
+                      <Text color='black' fontWeight='medium'>
+                        {title}
+                      </Text>
+                    </Layout>
+                  </NextLink>
+                ))}
               </Box>
             </Box>
           </Column>

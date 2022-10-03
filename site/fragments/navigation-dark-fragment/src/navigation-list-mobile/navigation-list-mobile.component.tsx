@@ -12,33 +12,22 @@ import { NavigationListMobileProps } from './navigation-list-mobile.interface'
 import { getColor }                  from '../helpers'
 import { getColorBackground }        from '../helpers'
 
-const NavigationListMobile: FC<NavigationListMobileProps> = ({ active }) => (
+const NavigationListMobile: FC<NavigationListMobileProps> = ({ active, navigation }) => (
   <Box backgroundColor={getColorBackground(active!)} style={{ transition: '.2s' }}>
     <Layout flexBasis={20} flexShrink={0} />
     <Column fill>
-      <Row>
-        <NextNavLink path='/services'>
-          <Text color={getColor(active!)} fontWeight='medium'>
-            services
-          </Text>
-        </NextNavLink>
-      </Row>
-      <Layout flexBasis={24} />
-      <Row>
-        <NextNavLink path='/contacts'>
-          <Text color={getColor(active!)} fontWeight='medium'>
-            contacts
-          </Text>
-        </NextNavLink>
-      </Row>
-      <Layout flexBasis={24} />
-      <Row>
-        <NextNavLink path='/blog'>
-          <Text color={getColor(active!)} fontWeight='medium'>
-            blog
-          </Text>
-        </NextNavLink>
-      </Row>
+      {navigation.map(({ title, content }, index) => (
+        <React.Fragment key={title}>
+          <Row>
+            <NextNavLink path={content}>
+              <Text color={getColor(active!)} fontWeight='medium'>
+                {title}
+              </Text>
+            </NextNavLink>
+          </Row>
+          <Layout flexBasis={navigation.length - 1 !== index ? 24 : 0} />
+        </React.Fragment>
+      ))}
       <Layout flexBasis={32} />
     </Column>
   </Box>

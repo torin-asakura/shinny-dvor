@@ -1,28 +1,29 @@
-import { useReactiveVar }           from '@apollo/client'
+import { useReactiveVar }     from '@apollo/client'
 
-import React                        from 'react'
-import { forwardRef }               from 'react'
+import React                  from 'react'
+import { forwardRef }         from 'react'
 
-import { Button }                   from '@ui/button'
-import { Condition }                from '@ui/condition'
-import { Divider }                  from '@ui/divider'
-import { Box }                      from '@ui/layout'
-import { Row }                      from '@ui/layout'
-import { Column }                   from '@ui/layout'
-import { Layout }                   from '@ui/layout'
-import { NextLink }                 from '@ui/link'
-import { Text }                     from '@ui/text'
-import { chosenVar }                from '@store/chosen-radius'
-import { checkedRadiusServicesVar } from '@store/chosen-radius'
+import { Button }             from '@ui/button'
+import { Condition }          from '@ui/condition'
+import { Divider }            from '@ui/divider'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Text }               from '@ui/text'
+import { chosenVar }          from '@store/chosen-radius'
+import { usePopover }         from '@ui/utils'
 
-import { AvailableRadii }           from './available-radii'
-import { AvailableRadiiTile }       from './available-radii'
-import { ChosenRadius }             from './chosen-radius'
-import { ServicesList }             from './services-list'
+import { AvailableRadii }     from './available-radii'
+import { AvailableRadiiTile } from './available-radii'
+import { ChosenRadius }       from './chosen-radius'
+import { ServicesList }       from './services-list'
 
 const Services = forwardRef((props, ref: any) => {
-  const isSizeChosen = useReactiveVar(chosenVar)
-  const isCheckedRadius = useReactiveVar<boolean>(checkedRadiusServicesVar)
+  const isSizeChosen = useReactiveVar<boolean>(chosenVar)
+
+  const { layerProps, triggerProps, render, isOpen } = usePopover('bottom-start', 16, 'click')
 
   return (
     <Box width='100%' justifyContent='center' id='services' ref={ref}>
@@ -45,21 +46,24 @@ const Services = forwardRef((props, ref: any) => {
               <Condition match={isSizeChosen}>
                 <Layout flexBasis={24} />
                 <Row>
-                  <ChosenRadius />
+                  <Layout {...triggerProps}>
+                    <ChosenRadius />
+                  </Layout>
                   <Layout flexBasis={16} />
                   <NextLink path='/services'>
                     <Layout width={180}>
-                      <Button color='secondary' size='large' disabled={isCheckedRadius}>
+                      <Button color='secondary' size='large' disabled={isOpen}>
                         Button
                       </Button>
                     </Layout>
                   </NextLink>
                 </Row>
               </Condition>
-              <Layout flexBasis={16} />
-              <Condition match={isCheckedRadius}>
-                <AvailableRadiiTile />
-              </Condition>
+              {render(
+                <Layout {...layerProps}>
+                  <AvailableRadiiTile />
+                </Layout>
+              )}
             </Column>
             <Column width={['100%', '100%', '843px']}>
               <Column width='100%' display={['flex', 'flex', 'none']}>

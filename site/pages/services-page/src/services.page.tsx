@@ -20,7 +20,7 @@ interface Props {
   data: any
 }
 
-const ServicesPage: FC<Props> = ({ data: { footer, contacts } }) => {
+const ServicesPage: FC<Props> = ({ data: { footer, contacts, posts, blog } }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
@@ -31,7 +31,7 @@ const ServicesPage: FC<Props> = ({ data: { footer, contacts } }) => {
       </Condition>
       <Condition match={screen === SERVICE}>
         <Service />
-        <Articles />
+        <Articles postsData={posts} blogData={blog} />
       </Condition>
       <Footer footerData={footer} contactsData={contacts} />
     </Column>

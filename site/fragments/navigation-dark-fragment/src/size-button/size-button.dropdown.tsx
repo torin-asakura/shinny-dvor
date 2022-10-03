@@ -1,3 +1,5 @@
+import { useReactiveVar }          from '@apollo/client'
+
 import React                       from 'react'
 import { FC }                      from 'react'
 
@@ -8,12 +10,14 @@ import { Layout }                  from '@ui/layout'
 import { Text }                    from '@ui/text'
 import { setChosenRadius }         from '@store/actions'
 import { checkedRadiusVar }        from '@store/chosen-radius'
+import { radiusVar }               from '@store/chosen-radius'
 
 import { SizeButtonDropdownProps } from './size-button-dropdown.interface'
 import { useMockedRadii }          from '../data'
 
 const SizeButtonDropdown: FC<SizeButtonDropdownProps> = ({ setOpen }) => {
   const { radii } = useMockedRadii()
+  const radius = useReactiveVar<string>(radiusVar)
 
   return (
     <Box
@@ -25,19 +29,19 @@ const SizeButtonDropdown: FC<SizeButtonDropdownProps> = ({ setOpen }) => {
       boxShadow='deep'
     >
       <Column justifyContent='space-around'>
-        {radii.map(({ id, radius }) => (
+        {radii.map(({ id, radius: item }) => (
           <Box key={id} width={48} height={48}>
             <Button
-              color='radius'
+              color={radius === item ? 'primary' : 'radius'}
               onClick={() => {
                 setOpen(false)
-                setChosenRadius(radius)
+                setChosenRadius(item)
                 checkedRadiusVar(false)
               }}
             >
               <Layout>
                 <Text fontSize='small' fontWeight='medium'>
-                  {radius}
+                  {item}
                 </Text>
               </Layout>
             </Button>

@@ -11,19 +11,19 @@ const radiiMock: Radii[] = [
   },
   {
     id: '2',
-    radius: 'R13',
-  },
-  {
-    id: '3',
     radius: 'R14',
   },
   {
-    id: '4',
+    id: '3',
     radius: 'R15',
   },
   {
-    id: '5',
+    id: '4',
     radius: 'R16',
+  },
+  {
+    id: '5',
+    radius: 'R17',
   },
   {
     id: '6',

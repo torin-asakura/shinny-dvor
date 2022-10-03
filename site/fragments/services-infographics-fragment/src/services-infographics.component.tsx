@@ -1,27 +1,35 @@
-import React          from 'react'
-import { forwardRef } from 'react'
+import React                         from 'react'
+import { LegacyRef }                 from 'react'
+import { FC }                        from 'react'
+import { forwardRef }                from 'react'
 
-import { Box }        from '@ui/layout'
-import { Wheel }      from '@ui/wheel'
-import { extractor }  from '@globals/data'
-import { useData }    from '@globals/data'
+import { Box }                       from '@ui/layout'
+import { Wheel }                     from '@ui/wheel'
+import { extractFragment }           from '@globals/data'
 
-const ServicesInfographics = forwardRef((props, ref: any) => {
-  const { fragments } = useData()
+import { ServicesInfographicsProps } from './services-infographic.interface'
 
+const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
+  { infographicsData },
+  ref: LegacyRef<HTMLDivElement>
+) => {
   const titles = new Map<string, string>()
+  const wheelImg = new Map<string, string>()
 
-  if (fragments) {
-    titles.set('titleTop', extractor(fragments?.infographic?.Infographic, 'title', 'title-top'))
-    titles.set(
-      'titleMiddle',
-      extractor(fragments?.infographic?.Infographic, 'title', 'title-middle')
-    )
-    titles.set(
-      'titleBottom',
-      extractor(fragments?.infographic?.Infographic, 'title', 'title-bottom')
-    )
-  }
+  titles.set('titleTop', extractFragment('contentAddons', 'title-top', infographicsData).title)
+  titles.set(
+    'titleMiddle',
+    extractFragment('contentAddons', 'title-middle', infographicsData).title
+  )
+  titles.set(
+    'titleBottom',
+    extractFragment('contentAddons', 'title-bottom', infographicsData).title
+  )
+  wheelImg.set('altText', extractFragment('contentAddons', 'wheel', infographicsData).image.altText)
+  wheelImg.set(
+    'sourceUrl',
+    extractFragment('contentAddons', 'wheel', infographicsData).image.sourceUrl
+  )
 
   return (
     <Box
@@ -32,7 +40,7 @@ const ServicesInfographics = forwardRef((props, ref: any) => {
       ref={ref}
     >
       <Box width={[335, 335, 440]} height={[335, 335, 440]} position='relative'>
-        <Wheel titles={titles} />
+        <Wheel titles={titles} wheelImg={wheelImg} />
       </Box>
     </Box>
   )

@@ -23,6 +23,7 @@ const SizeButton: FC<SizeButtonProps> = ({ active, isOpen, setOpen }) => {
   const radius = useReactiveVar<string>(radiusVar)
   const checkedRadius = useReactiveVar<boolean>(checkedRadiusVar)
   const [, setIsActive] = useState<boolean>(false)
+  const [isOpenMobile, setIsOpenMobile] = useState<boolean>(false)
   const [isChecked, setIsChecked] = useState<boolean>(false)
 
   return (
@@ -36,15 +37,22 @@ const SizeButton: FC<SizeButtonProps> = ({ active, isOpen, setOpen }) => {
     >
       <Layout width='100%' display={['flex', 'flex', 'none']}>
         <Button
-          color={isRadiusSelected || isChecked ? 'secondary' : getColorButton(active!)}
+          color={isOpen || isChecked ? 'secondary' : getColorButton(active!)}
           size='small'
           onMouseDown={() => setIsActive(true)}
           onMouseUp={() => setIsActive(false)}
-          onClick={() => setIsChecked(!isChecked)}
+          onClick={() => {
+            setIsChecked(!isChecked)
+            setIsOpenMobile(!isOpenMobile)
+          }}
         >
           <Layout>
             <Condition match={!isRadiusSelected}>
-              <WheelIcon width={20} height={20} color={isOpen ? 'black' : getColor(active!)} />
+              <WheelIcon
+                width={20}
+                height={20}
+                color={isOpenMobile ? 'black' : getColor(active!)}
+              />
             </Condition>
             <Condition match={isRadiusSelected}>
               <Text fontWeight='medium' fontSize='small'>

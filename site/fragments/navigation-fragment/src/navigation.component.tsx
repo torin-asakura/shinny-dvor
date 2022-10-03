@@ -12,13 +12,21 @@ import { Layout }               from '@ui/layout'
 import { NextLink }             from '@ui/link'
 import { Logo }                 from '@ui/logo'
 import { Text }                 from '@ui/text'
+import { extractFragment }      from '@globals/data'
+import { extractFragments }     from '@globals/data'
 
 import { NavigationList }       from './navigation-list'
 import { NavigationListMobile } from './navigation-list-mobile'
 import { SizeButton }           from './size-button'
+import { useNavigation }        from './data'
 
 const Navigation: FC = () => {
   const [drawer, setDrawer] = useState<boolean>(false)
+
+  const navigation = useNavigation()
+
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
+  const signUp = extractFragment('contentAddons', 'booking', navigation)
 
   return (
     <Box
@@ -41,7 +49,7 @@ const Navigation: FC = () => {
                   <MenuIcon width={24} height={24} color='black' />
                 </Button>
                 <Drawer active={drawer} onClose={() => setDrawer(!drawer)}>
-                  <NavigationListMobile />
+                  <NavigationListMobile navigation={navigationItems} />
                 </Drawer>
               </Layout>
               <Layout flexBasis={[16, 16, 0]} flexShrink={0} />
@@ -50,23 +58,23 @@ const Navigation: FC = () => {
               </Layout>
             </Box>
             <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
-              <NavigationList />
+              <NavigationList navigation={navigationItems} />
             </Box>
             <Box width={[176, 176, 201]}>
               <SizeButton />
               <Layout flexBasis={16} />
-              <NextLink path='/booking'>
+              <NextLink path={signUp?.content}>
                 <Box width={[124, 124, 137]} height={[40, 40, 48]}>
                   <Layout width='100%' display={['flex', 'flex', 'none']}>
                     <Button size='small'>
                       <Layout>
-                        <Text fontWeight='bold'>Sign up</Text>
+                        <Text fontWeight='bold'>{signUp?.title}</Text>
                       </Layout>
                     </Button>
                   </Layout>
                   <Layout width='100%' display={['none', 'none', 'flex']}>
                     <Button>
-                      <Text fontWeight='bold'>Sign up</Text>
+                      <Text fontWeight='bold'>{signUp?.title}</Text>
                     </Button>
                   </Layout>
                 </Box>

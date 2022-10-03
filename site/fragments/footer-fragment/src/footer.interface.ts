@@ -9,7 +9,7 @@ interface ContactAddons {
   workingHours: string
 }
 
-interface ContentAddons {
+interface FooterAddons {
   content: string
   highlightedtext: string
   role: string
@@ -18,5 +18,5 @@ interface ContentAddons {
 
 export interface FooterProps {
   contactsData: ContactAddons[]
-  footerData: ContentAddons[]
+  footerData: FooterAddons[]
 }

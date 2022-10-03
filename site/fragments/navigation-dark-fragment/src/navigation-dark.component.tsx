@@ -12,6 +12,8 @@ import { Layout }               from '@ui/layout'
 import { NextLink }             from '@ui/link'
 import { Logo }                 from '@ui/logo'
 import { Text }                 from '@ui/text'
+import { extractFragment }      from '@globals/data'
+import { extractFragments }     from '@globals/data'
 import { usePopover }           from '@ui/utils'
 
 import { NavigationDarkProps }  from './navigation-dark.interface'
@@ -20,6 +22,7 @@ import { NavigationListMobile } from './navigation-list-mobile'
 import { SizeButton }           from './size-button'
 import { SizeButtonCard }       from './size-button'
 import { SizeButtonDropdown }   from './size-button'
+import { useNavigation }        from './data'
 import { getColor }             from './helpers'
 import { getColorBackground }   from './helpers'
 
@@ -31,6 +34,11 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
     12,
     'click'
   )
+
+  const navigation = useNavigation()
+
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
+  const signUp = extractFragment('contentAddons', 'booking', navigation)
 
   return (
     <Box
@@ -52,7 +60,7 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
                 <MenuIcon width={24} height={24} color={getColor(active!)} />
               </Button>
               <Drawer active={drawer} onClose={() => setDrawer(false)}>
-                <NavigationListMobile active={active} />
+                <NavigationListMobile active={active} navigation={navigationItems} />
               </Drawer>
               <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
               <Layout>
@@ -63,7 +71,7 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
               <Logo color={getColor(active!)} />
             </Layout>
             <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
-              <NavigationList active={active} />
+              <NavigationList active={active} navigation={navigationItems} />
             </Box>
             <Box width={[176, 176, 201]} zIndex={1}>
               <Layout display={['flex', 'flex', 'none']}>
@@ -80,18 +88,18 @@ const NavigationDark: FC<NavigationDarkProps> = ({ active }) => {
                 )}
               </Layout>
               <Layout flexBasis={16} />
-              <NextLink path='/booking'>
+              <NextLink path={signUp?.content}>
                 <Box width={[124, 124, 137]} height={[40, 40, 48]}>
                   <Layout width='100%' display={['flex', 'flex', 'none']}>
                     <Button size='small'>
                       <Layout>
-                        <Text fontWeight='bold'>Sign up</Text>
+                        <Text fontWeight='bold'>{signUp?.title}</Text>
                       </Layout>
                     </Button>
                   </Layout>
                   <Layout width='100%' display={['none', 'none', 'flex']}>
                     <Button>
-                      <Text fontWeight='bold'>Sign up</Text>
+                      <Text fontWeight='bold'>{signUp?.title}</Text>
                     </Button>
                   </Layout>
                 </Box>

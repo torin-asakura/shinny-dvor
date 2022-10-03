@@ -1,3 +1,6 @@
 export * from './hero.query'
 export * from './contacts.query'
 export * from './footer.query'
+export * from './infographics.query'
+export * from './posts.query'
+export * from './blog.query'

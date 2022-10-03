@@ -3,7 +3,6 @@
   "license": "BSD-3-Clause",
   "workspaces": [
     "site/**/*",
-    "fragments/**/*",
     "blog/**/*",
     "ui/**/*",
     "store/**/*",

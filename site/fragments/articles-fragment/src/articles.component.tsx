@@ -1,4 +1,5 @@
 import React               from 'react'
+import { FC }              from 'react'
 import { forwardRef }      from 'react'
 
 import { ARTICLE }         from '@store/articles'
@@ -8,24 +9,17 @@ import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
-import { useData }         from '@globals/data'
-import { extractor }       from '@globals/data'
+import { TextEllipsis }    from '@ui/text'
+import { extractFragment } from '@globals/data'
 import { formattedDate }   from '@shared/utils'
 import { normalizeString } from '@shared/utils'
 import { screenVar }       from '@store/articles'
 
+import { ArticlesProps }   from './articles.interface'
 import { Carousel }        from './carousel'
-import { usePosts }        from './data'
 
-const Articles = forwardRef((props, ref: any) => {
-  const { posts } = usePosts()
-  const { fragments } = useData()
-
-  let latestPublications = ''
-
-  if (fragments) {
-    latestPublications = extractor(fragments?.blog?.Blog, 'title', 'latest-publications')
-  }
+const Articles: FC<ArticlesProps> = forwardRef(({ postsData, blogData }, ref: any) => {
+  const latestPublications = extractFragment('contentAddons', 'latest-publications', blogData).title
 
   return (
     <Box
@@ -50,7 +44,7 @@ const Articles = forwardRef((props, ref: any) => {
           </Layout>
           <Layout flexBasis={[32, 32, 48]} />
           <Row justifyContent='space-between' display={['none', 'none', 'flex']}>
-            {posts.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
+            {postsData.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
               <Column key={id} onClick={() => screenVar(ARTICLE)}>
                 <Box width={405} height={260}>
                   <ImageBlock
@@ -70,16 +64,21 @@ const Articles = forwardRef((props, ref: any) => {
                 </Layout>
                 <Layout flexBasis={8} />
                 <Layout maxHeight={52} width={405}>
-                  <Text lineHeight='medium' color='darkGray' overflow='hidden'>
+                  <TextEllipsis
+                    lineHeight='medium'
+                    color='darkGray'
+                    overflow='hidden'
+                    lineClamp={2}
+                  >
                     {normalizeString(excerpt)}
-                  </Text>
+                  </TextEllipsis>
                 </Layout>
               </Column>
             ))}
           </Row>
           <Row display={['flex', 'flex', 'none']} overflow='hidden'>
             <Carousel>
-              {posts.map(({ id, title, date, excerpt, featuredImage }) => (
+              {postsData.map(({ id, title, date, excerpt, featuredImage }) => (
                 <Column fill maxHeight={333} key={id}>
                   <Box width={300} height={200} backgroundColor='gray'>
                     <ImageBlock

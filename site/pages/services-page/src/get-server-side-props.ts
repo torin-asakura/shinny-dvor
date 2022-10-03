@@ -1,8 +1,15 @@
+import { runBlogQuery }     from './queries'
 import { runContactsQuery } from './queries'
+import { runPostsQuery }    from './queries'
 import { runFooterQuery }   from './queries'
 
 export const getServerSideProps = async () => {
-  const queryPromises: Array<Promise<any>> = [runFooterQuery(), runContactsQuery()]
+  const queryPromises: Array<Promise<any>> = [
+    runFooterQuery(),
+    runContactsQuery(),
+    runPostsQuery(),
+    runBlogQuery(),
+  ]
 
   const retrievedData = await Promise.all(queryPromises)
 

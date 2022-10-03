@@ -1,2 +1,2 @@
-export * from '@atls-ui-parts/text'
-export * from './ruble.component'
+export * from './ruble'
+export * from './text-ellipsis'

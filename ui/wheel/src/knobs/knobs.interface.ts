@@ -1,3 +1,3 @@
-import { WheelProps } from '../wheel.interface'
-
-export interface KnobsProps extends WheelProps {}
+export interface KnobsProps {
+  titles: Map<string, string>
+}
