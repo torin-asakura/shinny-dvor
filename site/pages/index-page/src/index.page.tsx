@@ -1,5 +1,7 @@
 import React                       from 'react'
 import { FC }                      from 'react'
+import { useRef }                  from 'react'
+import { useEffect }               from 'react'
 import { useState }                from 'react'
 
 import { Articles }                from '@fragments/articles-fragment'
@@ -17,13 +19,23 @@ interface Props {
   data: any
 }
 
-const IndexPage: FC<Props> = ({ data: { hero, contacts, footer } }) => {
+const IndexPage: FC<Props> = ({ data: { hero, contacts, footer, infographics, posts, blog } }) => {
   const [active, setActive] = useState<number>(0)
+
+  const isLoaded = useRef<boolean>(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      isLoaded.current = true
+    }, 200)
+  }, [])
 
   const { getObserverOptions } = useIntersectionObserver((id) => {
     const order = ['hero', 'services', 'articles', 'infographics', 'works-examples']
 
-    setActive(order.indexOf(id))
+    if (isLoaded.current) {
+      setActive(order.indexOf(id))
+    }
   })
 
   return (
@@ -31,13 +43,16 @@ const IndexPage: FC<Props> = ({ data: { hero, contacts, footer } }) => {
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <NavigationDark active={active} />
-          <Hero heroData={hero} contactsData={contacts} {...getObserverOptions('hero', 0.7)} />
+          <Hero heroData={hero} contactsData={contacts} {...getObserverOptions('hero')} />
         </Column>
       </Box>
-      <Services {...getObserverOptions('services', 1)} />
-      <Articles {...getObserverOptions('articles', 1)} />
-      <ServicesInfographics {...getObserverOptions('infographics', 1)} />
-      <WorksExamples {...getObserverOptions('works-examples', 1)} />
+      <Services {...getObserverOptions('services')} />
+      <Articles postsData={posts} blogData={blog} {...getObserverOptions('articles')} />
+      <ServicesInfographics
+        infographicsData={infographics}
+        {...getObserverOptions('infographics')}
+      />
+      <WorksExamples {...getObserverOptions('works-examples')} />
       <Footer footerData={footer} contactsData={contacts} />
     </Column>
   )
