@@ -8,23 +8,22 @@ import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
 import { ItemProps } from './services-list.interface'
-import { services }  from '../../../../data'
 
-const ServicesList: FC<ItemProps> = ({ isSizeChosen }) => (
+const ServicesList: FC<ItemProps> = ({ isSizeChosen, services }) => (
   <>
-    {services.map((item) => (
-      <Button size='ghost' color='transparent'>
+    {services.map(({ title, description }) => (
+      <Button size='ghost' color='transparent' disabled={!isSizeChosen}>
         <Column width='100%'>
           <Layout flexBasis={30} />
           <Layout>
             <Text fontWeight='medium' fontSize='xl' color='black' opacity={isSizeChosen ? 1 : 0.3}>
-              {item.name}
+              {title}
             </Text>
           </Layout>
           <Layout flexBasis={8} />
           <Layout>
             <Text color='darkGray' opacity={isSizeChosen ? 1 : 0.3}>
-              {item.description}
+              {description}
             </Text>
           </Layout>
           <Layout flexBasis={30} />

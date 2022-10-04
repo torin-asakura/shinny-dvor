@@ -4,5 +4,5 @@ export const getColorBackground = (step: number) => {
   if (step === 2) return 'white'
   if (step === 3) return 'white'
   if (step === 4) return 'white'
-  return 'black'
+  return 'white'
 }

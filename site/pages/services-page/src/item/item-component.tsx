@@ -10,6 +10,7 @@ import { Layout }     from '@ui/layout'
 import { Text }       from '@ui/text'
 import { Ruble }      from '@ui/text'
 import { Space }      from '@ui/text'
+import { scrollTop }  from '@shared/utils'
 import { screenVar }  from '@store/services'
 
 import { ItemProps }  from './item.interface'
@@ -28,7 +29,10 @@ const Item: FC<ItemProps> = ({ serviceName, price }) => (
         width='100%'
         height={[312, 312, 388]}
         backgroundColor='transparentGray'
-        onClick={() => screenVar(SERVICE)}
+        onClick={() => {
+          scrollTop()
+          screenVar(SERVICE)
+        }}
       >
         <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
         <Column width='100%' alignItems='center'>

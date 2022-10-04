@@ -8,24 +8,18 @@ import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Text }            from '@ui/text'
-import { useData }         from '@globals/data'
-import { extractor }       from '@globals/data'
+import { TextEllipsis }    from '@ui/text'
+import { extractFragment } from '@globals/data'
 import { normalizeString } from '@shared/utils'
+import { scrollTop }       from '@shared/utils'
 import { formattedDate }   from '@shared/utils'
 import { screenVar }       from '@store/articles'
 import { postIdVar }       from '@store/articles'
 
-import { usePosts }        from '../data'
+import { ArticlesProps }   from '../articles.interface'
 
-const AllArticles: FC = () => {
-  const { posts } = usePosts()
-  const { fragments } = useData()
-
-  let titlePage = ''
-
-  if (fragments) {
-    titlePage = extractor(fragments?.blog?.Blog, 'title', 'blog')
-  }
+const AllArticles: FC<ArticlesProps> = ({ blogData, postsData }) => {
+  const titlePage = extractFragment('contentAddons', 'title-blog', blogData).title
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']} height='auto'>
@@ -38,13 +32,14 @@ const AllArticles: FC = () => {
           </Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
-          {posts.map(({ id, title, date, excerpt, featuredImage }) => (
+          {postsData.map(({ id, title, date, excerpt, featuredImage }) => (
             <Box
               key={id}
               width={['100%', '100%', 405]}
               onClick={() => {
                 postIdVar(id)
                 screenVar(ARTICLE)
+                scrollTop()
               }}
               // @ts-ignore
               cursor='pointer'
@@ -71,14 +66,15 @@ const AllArticles: FC = () => {
                 </Layout>
                 <Layout flexBasis={8} />
                 <Box height={52}>
-                  <Text
+                  <TextEllipsis
                     color='darkGray'
                     overflow='hidden'
                     text-overflow='ellipsis'
                     lineHeight='medium'
+                    lineClamp={2}
                   >
                     {normalizeString(excerpt)}
-                  </Text>
+                  </TextEllipsis>
                 </Box>
               </Column>
             </Box>

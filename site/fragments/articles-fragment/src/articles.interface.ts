@@ -1,4 +1,4 @@
-interface Article {
+export interface Article {
   date: string
   id: string
   excerpt: string
@@ -11,7 +11,7 @@ interface Article {
   }
 }
 
-interface Blog {
+export interface Blog {
   contentAddons: {
     title: string
     role: string

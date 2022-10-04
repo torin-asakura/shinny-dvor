@@ -4,5 +4,5 @@ export const getColor = (step: number) => {
   if (step === 2) return 'black'
   if (step === 3) return 'black'
   if (step === 4) return 'black'
-  return 'white'
+  return 'black'
 }

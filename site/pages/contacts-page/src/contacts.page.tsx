@@ -10,9 +10,9 @@ interface Props {
   data: any
 }
 
-const ContactsPage: FC<Props> = ({ data: { footer, contacts } }) => (
+const ContactsPage: FC<Props> = ({ data: { footer, contacts, navigation, availableRadii } }) => (
   <Column width='100%' alignItems='center'>
-    <Navigation />
+    <Navigation active={2} navigationData={navigation} availableRadiiData={availableRadii} />
     <Contacts contactsData={contacts} />
     <Footer footerData={footer} contactsData={contacts} />
   </Column>

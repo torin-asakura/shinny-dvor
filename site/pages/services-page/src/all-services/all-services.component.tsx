@@ -23,7 +23,7 @@ const AllServices: FC = () => {
   }, [servicesMock])
 
   return (
-    <Box maxWidth={['100%', '100%', '1440px']}>
+    <Box maxWidth={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />

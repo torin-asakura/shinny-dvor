@@ -29,7 +29,7 @@ const Contacts: FC<ContactsProps> = ({ contactsData }) => {
   const linkFb = contactsObj?.linkFb
 
   return (
-    <Column width={['100%', '100%', '1440px']}>
+    <Column width={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
       <Row>
         <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>

@@ -1,9 +1,13 @@
-import { runBlogQuery }         from './queries'
-import { runContactsQuery }     from './queries'
-import { runPostsQuery }        from './queries'
-import { runInfographicsQuery } from './queries'
-import { runFooterQuery }       from './queries'
-import { runHeroQuery }         from './queries'
+import { runAvailableRadiiQuery } from './queries'
+import { runServicesQuery }       from './queries'
+import { runBlogQuery }           from './queries'
+import { runWorkExamplesQuery }   from './queries'
+import { runNavigationQuery }     from './queries'
+import { runContactsQuery }       from './queries'
+import { runPostsQuery }          from './queries'
+import { runInfographicsQuery }   from './queries'
+import { runFooterQuery }         from './queries'
+import { runHeroQuery }           from './queries'
 
 export const getServerSideProps = async () => {
   const queryPromises: Array<Promise<any>> = [
@@ -13,6 +17,10 @@ export const getServerSideProps = async () => {
     runInfographicsQuery(),
     runPostsQuery(),
     runBlogQuery(),
+    runNavigationQuery(),
+    runWorkExamplesQuery(),
+    runAvailableRadiiQuery(),
+    runServicesQuery(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

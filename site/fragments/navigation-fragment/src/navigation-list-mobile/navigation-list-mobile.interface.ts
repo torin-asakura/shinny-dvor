@@ -1,4 +1,4 @@
-import { NavigationItem } from '../navigation-dark.interface'
+import { NavigationItem } from '../navigation.interface'
 
 export interface NavigationListMobileProps {
   active: number

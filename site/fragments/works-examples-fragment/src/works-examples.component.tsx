@@ -1,4 +1,5 @@
 import React                       from 'react'
+import { FC }                      from 'react'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { forwardRef }              from 'react'
@@ -11,11 +12,13 @@ import { Column }                  from '@ui/layout'
 import { Slider }                  from '@ui/slider'
 import { Slide }                   from '@ui/slider'
 import { Text }                    from '@ui/text'
+import { extractFragment }         from '@globals/data'
 
 import { Slide as SlideInterface } from './data'
+import { WorksExamplesProps }      from './works-examples.interface'
 import { useMockedSlides }         from './data'
 
-const WorksExamples = forwardRef((props, ref: any) => {
+const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ workExamplesData }, ref: any) => {
   const { slides } = useMockedSlides()
 
   const [slide, setSlide] = useState<SlideInterface[]>([])
@@ -23,6 +26,9 @@ const WorksExamples = forwardRef((props, ref: any) => {
   useEffect(() => {
     setSlide([...slides])
   }, [slides])
+
+  const { title } = extractFragment('contentAddons', 'title', workExamplesData)
+  const subTitle = extractFragment('contentAddons', 'title', workExamplesData).content
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
@@ -32,13 +38,13 @@ const WorksExamples = forwardRef((props, ref: any) => {
           <Layout flexBasis={[20, 20, 100]} />
           <Layout>
             <Text fontWeight='small' fontSize='giant' lignHeight='grown'>
-              Text
+              {title}
             </Text>
           </Layout>
           <Layout flexBasis={[8, 8, 16]} />
           <Layout>
             <Text fontWeight='normal' fontSize='normal' color='darkGray'>
-              Text
+              {subTitle}
             </Text>
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />

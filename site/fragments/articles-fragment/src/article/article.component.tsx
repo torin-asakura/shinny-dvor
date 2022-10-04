@@ -1,42 +1,37 @@
-import { useReactiveVar } from '@apollo/client'
+import { useReactiveVar }  from '@apollo/client'
 
-import DOMPurify          from 'dompurify'
-import React              from 'react'
-import plural             from 'plural-ru'
-import { FC }             from 'react'
+import DOMPurify           from 'dompurify'
+import React               from 'react'
+import plural              from 'plural-ru'
+import { FC }              from 'react'
 
-import { PostId }         from '@store/articles'
-import { Divider }        from '@ui/divider'
-import { ImageBlock }     from '@ui/image'
-import { Box }            from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Text }           from '@ui/text'
-import { Space }          from '@ui/text'
-import { useData }        from '@globals/data'
-import { extractor }      from '@globals/data'
-import { formattedDate }  from '@shared/utils'
-import { postIdVar }      from '@store/articles'
+import { PostId }          from '@store/articles'
+import { Divider }         from '@ui/divider'
+import { ImageBlock }      from '@ui/image'
+import { Box }             from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Text }            from '@ui/text'
+import { Space }           from '@ui/text'
+import { extractFragment } from '@globals/data'
+import { formattedDate }   from '@shared/utils'
+import { postIdVar }       from '@store/articles'
 
-import { ReturnButton }   from './return-button'
-import { usePostById }    from '../data'
-import { messages }       from '../messages'
+import { ArticleProps }    from './article.interface'
+import { ReturnButton }    from './return-button'
+import { usePostById }     from '../data'
+import { messages }        from '../messages'
 
-const Article: FC = () => {
+const Article: FC<ArticleProps> = ({ blogData }) => {
   const postId = useReactiveVar<PostId>(postIdVar)
 
   // TODO fetch views
   const views = 200
 
   const { content, title, date, featuredImage } = usePostById({ postId })
-  const { fragments } = useData()
 
-  let goBack = ''
-
-  if (fragments) {
-    goBack = extractor(fragments?.blog?.Blog, 'title', 'blog')
-  }
+  const goBack = extractFragment('contentAddons', 'title-blog', blogData).title
 
   return (
     <Column width='100%' height='auto'>

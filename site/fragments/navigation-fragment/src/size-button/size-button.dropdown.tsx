@@ -13,10 +13,8 @@ import { checkedRadiusVar }        from '@store/chosen-radius'
 import { radiusVar }               from '@store/chosen-radius'
 
 import { SizeButtonDropdownProps } from './size-button-dropdown.interface'
-import { useMockedRadii }          from '../data'
 
-const SizeButtonDropdown: FC<SizeButtonDropdownProps> = ({ setOpen }) => {
-  const { radii } = useMockedRadii()
+const SizeButtonDropdown: FC<SizeButtonDropdownProps> = ({ setOpen, radii }) => {
   const radius = useReactiveVar<string>(radiusVar)
 
   return (
@@ -29,19 +27,19 @@ const SizeButtonDropdown: FC<SizeButtonDropdownProps> = ({ setOpen }) => {
       boxShadow='deep'
     >
       <Column justifyContent='space-around'>
-        {radii.map(({ id, radius: item }) => (
-          <Box key={id} width={48} height={48}>
+        {radii.map(({ contentAddons: { title } }) => (
+          <Box key={title} width={48} height={48}>
             <Button
-              color={radius === item ? 'primary' : 'radius'}
+              color={radius === title ? 'primary' : 'radius'}
               onClick={() => {
                 setOpen(false)
-                setChosenRadius(item)
+                setChosenRadius(title)
                 checkedRadiusVar(false)
               }}
             >
               <Layout>
                 <Text fontSize='small' fontWeight='medium'>
-                  {item}
+                  {title}
                 </Text>
               </Layout>
             </Button>

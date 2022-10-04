@@ -25,7 +25,7 @@ const Service: FC = () => {
   const [onCarBody, setOnCarbody] = useState(carBodyList[0])
 
   return (
-    <Box width='100%'>
+    <Box width='100%' marginTop={[80, 80, 104]}>
       <Row>
         <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
         <Column width='100%'>

@@ -13,9 +13,9 @@ import { setChosenRadius }          from '@store/actions'
 import { radiusVar }                from '@store/chosen-radius'
 import { checkedRadiusServicesVar } from '@store/chosen-radius'
 
-import { availableRadii }           from '../../../../data'
+import { AvailableRadiiTileProps }  from './available-radii-tile.interface'
 
-const AvailableRadiiTile: FC = () => {
+const AvailableRadiiTile: FC<AvailableRadiiTileProps> = ({ setOpen, radii }) => {
   const radius = useReactiveVar<string>(radiusVar)
 
   return (
@@ -31,21 +31,22 @@ const AvailableRadiiTile: FC = () => {
         <Column>
           <Layout flexBasis={8} />
           <Row flexWrap='wrap' justifyContent='center' height='100%'>
-            {availableRadii.map((item) => (
-              <React.Fragment key={item}>
+            {radii.map(({ contentAddons: { title } }) => (
+              <React.Fragment key={title}>
                 <Layout flexBasis={4} />
                 <Box width={56} height={56}>
                   <Button
                     size='large'
-                    color={radius === item ? 'primary' : 'radius'}
+                    color={radius === title ? 'primary' : 'radius'}
                     onClick={() => {
-                      setChosenRadius(item)
+                      setOpen(false)
+                      setChosenRadius(title)
                       checkedRadiusServicesVar(false)
                     }}
                   >
                     <Layout>
                       <Text fontSize='small' fontWeight='bold'>
-                        {item}
+                        {title}
                       </Text>
                     </Layout>
                   </Button>

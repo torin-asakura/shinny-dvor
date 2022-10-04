@@ -14,54 +14,77 @@ import { Logo }                 from '@ui/logo'
 import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { extractFragments }     from '@globals/data'
+import { usePopover }           from '@ui/utils'
 
 import { NavigationList }       from './navigation-list'
 import { NavigationListMobile } from './navigation-list-mobile'
+import { NavigationProps }      from './navigation.interface'
 import { SizeButton }           from './size-button'
-import { useNavigation }        from './data'
+import { SizeButtonCard }       from './size-button'
+import { SizeButtonDropdown }   from './size-button'
+import { getColor }             from './helpers'
+import { getColorBackground }   from './helpers'
 
-const Navigation: FC = () => {
+const Navigation: FC<NavigationProps> = ({ active, navigationData, availableRadiiData }) => {
   const [drawer, setDrawer] = useState<boolean>(false)
 
-  const navigation = useNavigation()
+  const { layerProps, triggerProps, render, isOpen, setOpen } = usePopover(
+    'bottom-center',
+    12,
+    'click'
+  )
 
-  const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
-  const signUp = extractFragment('contentAddons', 'booking', navigation)
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
+  const signUp = extractFragment('contentAddons', 'booking', navigationData)
+  const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
 
   return (
     <Box
       width='100%'
-      height={[80, 80, 104]}
-      backgroundColor='white'
-      justifyContent='center'
-      position='sticky'
-      top={0}
       zIndex={1000}
+      height={[80, 80, 104]}
+      position='fixed'
+      justifyContent='center'
+      backgroundColor={getColorBackground(active!)}
+      style={{ transition: '.2s' }}
     >
-      <Box width={['100%', '100%', 1440]}>
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+      <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+      <Box width={['100%', '100%', '1440px']}>
         <Column width='100%'>
           <Layout flexBasis={[20, 20, 28]} />
           <Row justifyContent='space-between'>
-            <Box alignItems='center' width={[84, 84, 201]}>
-              <Layout display={['flex', 'flex', 'none']}>
-                <Button size='ghost' color='transparent' onClick={() => setDrawer(!drawer)}>
-                  <MenuIcon width={24} height={24} color='black' />
-                </Button>
-                <Drawer active={drawer} onClose={() => setDrawer(!drawer)}>
-                  <NavigationListMobile navigation={navigationItems} />
-                </Drawer>
-              </Layout>
-              <Layout flexBasis={[16, 16, 0]} flexShrink={0} />
+            <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
+              <Button size='ghost' color='transparent' onClick={() => setDrawer(!drawer)}>
+                <MenuIcon width={24} height={24} color={getColor(active!)} />
+              </Button>
+              <Drawer active={drawer} onClose={() => setDrawer(false)}>
+                <NavigationListMobile active={active} navigation={navigationItems} />
+              </Drawer>
+              <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
               <Layout>
-                <Logo color='black' />
+                <Logo color={getColor(active!)} />
               </Layout>
             </Box>
+            <Layout display={['none', 'none', 'flex']}>
+              <Logo color={getColor(active!)} />
+            </Layout>
             <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
-              <NavigationList navigation={navigationItems} />
+              <NavigationList active={active} navigation={navigationItems} />
             </Box>
-            <Box width={[176, 176, 201]}>
-              <SizeButton />
+            <Box width={[176, 176, 201]} zIndex={1}>
+              <Layout display={['flex', 'flex', 'none']}>
+                <SizeButtonCard active={active} />
+              </Layout>
+              <Layout display={['none', 'none', 'flex']} justifyContent='center'>
+                <Layout {...triggerProps}>
+                  <SizeButton setOpen={setOpen} isOpen={isOpen} active={active} />
+                </Layout>
+                {render(
+                  <Layout {...layerProps}>
+                    <SizeButtonDropdown setOpen={setOpen} radii={radii} />
+                  </Layout>
+                )}
+              </Layout>
               <Layout flexBasis={16} />
               <NextLink path={signUp?.content}>
                 <Box width={[124, 124, 137]} height={[40, 40, 48]}>
@@ -83,8 +106,8 @@ const Navigation: FC = () => {
           </Row>
           <Layout flexBasis={[20, 20, 28]} />
         </Column>
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
       </Box>
+      <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
     </Box>
   )
 }
