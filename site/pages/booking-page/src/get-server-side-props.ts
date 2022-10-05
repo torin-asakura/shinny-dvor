@@ -1,19 +1,13 @@
 import { runAvailableRadiiQuery } from './queries'
+import { runBookingQuery }        from './queries'
+import { runCarBodiesQuery }      from './queries'
 import { runServicesQuery }       from './queries'
-import { runBlogQuery }           from './queries'
-import { runNavigationQuery }     from './queries'
-import { runContactsQuery }       from './queries'
-import { runPostsQuery }          from './queries'
-import { runFooterQuery }         from './queries'
 
 export const getServerSideProps = async () => {
   const queryPromises: Array<Promise<any>> = [
-    runFooterQuery(),
-    runContactsQuery(),
-    runPostsQuery(),
-    runBlogQuery(),
-    runNavigationQuery(),
+    runBookingQuery(),
     runAvailableRadiiQuery(),
+    runCarBodiesQuery(),
     runServicesQuery(),
   ]
 

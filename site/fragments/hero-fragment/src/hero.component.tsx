@@ -1,6 +1,7 @@
 import React               from 'react'
 import { forwardRef }      from 'react'
 
+import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
 import { Divider }         from '@ui/divider'
 import { ArrowDownIcon }   from '@ui/icons'
@@ -14,6 +15,7 @@ import { NextLink }        from '@ui/link'
 import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
+import { screenVar }       from '@store/booking'
 
 const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
   const leadObj = extractFragment('contentAddons', 'lead', heroData)
@@ -84,7 +86,7 @@ const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
         <Layout flexBasis={32} />
         <NextLink path='/booking'>
           <Layout width={['100%', '100%', '180px']}>
-            <Button>{CTA}</Button>
+            <Button onClick={() => screenVar(INITIAL)}>{CTA}</Button>
           </Layout>
         </NextLink>
         <Layout flexBasis={[40, 40, 48]} />

@@ -6,6 +6,7 @@ import { Column }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Link }            from '@ui/link'
+import { Map }             from '@ui/map'
 import { SocialLinks }     from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
@@ -95,7 +96,7 @@ const Contacts: FC<ContactsProps> = ({ contactsData }) => {
           </Column>
           <Column justifyContent='flex-end'>
             <Box display={['none', 'none', 'flex']} width={952} height={480}>
-              Map
+              <Map width='100%' height={480} />
             </Box>
           </Column>
         </Row>
@@ -103,7 +104,7 @@ const Contacts: FC<ContactsProps> = ({ contactsData }) => {
       </Row>
       <Layout flexBasis={[24, 24, 0]} />
       <Box width='100%' height={270} display={['flex', 'flex', 'none']}>
-        Map
+        <Map width='100%' height={270} />
       </Box>
       <Layout flexBasis={[0, 0, 80]} />
     </Column>

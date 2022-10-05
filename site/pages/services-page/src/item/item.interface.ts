@@ -1,4 +1,9 @@
 export interface ItemProps {
-  price: string
+  price: number
   serviceName: string
+  addon: string
+  image: {
+    sourceUrl: string
+    altText: string
+  }
 }

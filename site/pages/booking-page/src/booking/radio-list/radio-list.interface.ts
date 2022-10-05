@@ -1,6 +1,7 @@
 export interface RadioListProps {
   items: string[]
   id: string
-  initial?: string
+  selectedItem: string
+  setSelectedItem: (selectedItem: string) => void
   width?: number | string[]
 }

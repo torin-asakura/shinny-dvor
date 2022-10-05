@@ -1,1 +1,1 @@
-export { default } from '@site/booking-page'
+export { default, getServerSideProps } from '@site/booking-page'

@@ -2,6 +2,7 @@ import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
 
+import { INITIAL }              from '@store/booking'
 import { Button }               from '@ui/button'
 import { Drawer }               from '@ui/drawer'
 import { MenuIcon }             from '@ui/icons'
@@ -14,6 +15,7 @@ import { Logo }                 from '@ui/logo'
 import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { extractFragments }     from '@globals/data'
+import { screenVar }            from '@store/booking'
 import { usePopover }           from '@ui/utils'
 
 import { NavigationList }       from './navigation-list'
@@ -89,14 +91,14 @@ const Navigation: FC<NavigationProps> = ({ active, navigationData, availableRadi
               <NextLink path={signUp?.content}>
                 <Box width={[124, 124, 137]} height={[40, 40, 48]}>
                   <Layout width='100%' display={['flex', 'flex', 'none']}>
-                    <Button size='small'>
+                    <Button size='small' onClick={() => screenVar(INITIAL)}>
                       <Layout>
                         <Text fontWeight='bold'>{signUp?.title}</Text>
                       </Layout>
                     </Button>
                   </Layout>
                   <Layout width='100%' display={['none', 'none', 'flex']}>
-                    <Button>
+                    <Button onClick={() => screenVar(INITIAL)}>
                       <Text fontWeight='bold'>{signUp?.title}</Text>
                     </Button>
                   </Layout>

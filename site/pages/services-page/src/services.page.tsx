@@ -21,7 +21,7 @@ interface Props {
 }
 
 const ServicesPage: FC<Props> = ({
-  data: { footer, contacts, posts, blog, navigation, availableRadii },
+  data: { footer, contacts, posts, blog, navigation, availableRadii, services },
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
@@ -29,7 +29,7 @@ const ServicesPage: FC<Props> = ({
     <Column width='100%' alignItems='center'>
       <Navigation active={2} navigationData={navigation} availableRadiiData={availableRadii} />
       <Condition match={screen === ALL_SERVICES}>
-        <AllServices />
+        <AllServices serviceData={services} />
       </Condition>
       <Condition match={screen === SERVICE}>
         <Service />

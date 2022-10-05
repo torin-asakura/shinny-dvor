@@ -22,7 +22,11 @@ import { Booking }        from './booking'
 import { Invalid }        from './invalid'
 import { Success }        from './success'
 
-const BookingPage: FC = () => {
+interface Props {
+  data: any
+}
+
+const BookingPage: FC<Props> = ({ data: { booking, availableRadii, carBodies, services } }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
@@ -44,7 +48,6 @@ const BookingPage: FC = () => {
                   alignItems='center'
                   backgroundColor='lightGray'
                   borderRadius='default'
-                  onClick={() => screenVar(INITIAL)}
                 >
                   <CloseIcon width={24} height={24} />
                 </Box>
@@ -54,13 +57,18 @@ const BookingPage: FC = () => {
         </Box>
         <Box width={['100%', '100%', 720]}>
           <Condition match={screen === INITIAL}>
-            <Booking />
+            <Booking
+              bookingData={booking}
+              availableRadiiData={availableRadii}
+              carBodiesData={carBodies}
+              servicesData={services}
+            />
           </Condition>
           <Condition match={screen === SUCCESS}>
-            <Success />
+            <Success bookingData={booking} />
           </Condition>
           <Condition match={screen === INVALID}>
-            <Invalid />
+            <Invalid bookingData={booking} />
           </Condition>
         </Box>
       </Column>

@@ -47,7 +47,7 @@ const Select: FC<SelectProps> = ({ items, value, onChange, onSelect, placeholder
   return (
     <>
       <Button isSelected={!!selectedItem} value={value} {...buttonProps}>
-        <Text>{value?.join(', ') || selectedItem || placeholder}</Text>
+        <Text textAlign='start'>{value?.join(', ') || selectedItem || placeholder}</Text>
         <Layout flexGrow={1} />
         <Layout>
           <DropDownIcon width={16} height={16} />

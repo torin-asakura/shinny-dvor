@@ -9,21 +9,26 @@ import { validateButton } from '@store/actions'
 
 import { RadioListProps } from './radio-list.interface'
 
-const RadioList: FC<RadioListProps> = ({ items, id, initial = '', width = '100%' }) => {
-  const [active, setActive] = useState<string>(initial)
+const RadioList: FC<RadioListProps> = ({
+  items,
+  id,
+  selectedItem,
+  setSelectedItem,
+  width = '100%',
+}) => {
   const [checked] = useState<boolean>(false)
 
   return (
     <Row justifyContent='space-between' flexWrap='wrap'>
-      {items.map((item) => (
+      {items.map((title) => (
         <Box
           width={width}
           onClick={() => {
-            setActive(item)
             validateButton(id, checked)
+            setSelectedItem(title)
           }}
         >
-          <Radio checked={active === item}>{item}</Radio>
+          <Radio checked={selectedItem === title}>{title}</Radio>
         </Box>
       ))}
     </Row>
