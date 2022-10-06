@@ -31,7 +31,7 @@ const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = (newState) =>
     <Container onClick={() => onCheck(!active)}>
       <Box checked={active}>
         <Checkmark>
-          <CheckIcon width={20} height={20} />
+          <CheckIcon width={17} height={18} />
         </Checkmark>
       </Box>
       <Label>{children}</Label>

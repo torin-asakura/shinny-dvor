@@ -23,6 +23,7 @@ import { AvailableRadiiTile } from './available-radii'
 import { ChosenRadius }       from './chosen-radius'
 import { ServicesList }       from './services-list'
 import { ServicesProps }      from './services.interface'
+import { SizeButtonCard }     from './size-button-card/size-button-card.component'
 
 const Services: FC<ServicesProps> = forwardRef(({ availableRadiiData, servicesData }, ref: any) => {
   const isSizeChosen = useReactiveVar<boolean>(chosenVar)
@@ -97,7 +98,7 @@ const Services: FC<ServicesProps> = forwardRef(({ availableRadiiData, servicesDa
                   <Layout flexBasis={24} />
                   <Row>
                     <Box width={56} height={56}>
-                      <ChosenRadius />
+                      <SizeButtonCard />
                     </Box>
                     <Layout flexBasis={16} />
                     <Box width={180} height={56}>

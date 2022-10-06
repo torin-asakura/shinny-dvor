@@ -5,11 +5,13 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@store/services": "workspace:0.0.1",
+    "@ui/accordion": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/checkbox": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/switch": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",

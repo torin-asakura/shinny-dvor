@@ -3,11 +3,6 @@ import styled            from '@emotion/styled'
 import { createElement } from 'react'
 import { color }         from 'styled-system'
 
-interface RubleProps {
-  fontSize?: string | string[]
-  fontWeight?: string | string[]
-}
-
 const Span = styled.span(
   () => ({
     display: 'inline-flex',
@@ -15,4 +10,4 @@ const Span = styled.span(
   color
 )
 
-export const Ruble = ({ fontSize, fontWeight }: RubleProps) => createElement(Span, {}, '\u20BD')
+export const Ruble = () => createElement(Span, {}, '\u20BD')

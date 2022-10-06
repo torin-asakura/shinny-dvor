@@ -3,6 +3,7 @@ import { FC }                from 'react'
 import { useState }          from 'react'
 
 import { ALL_SERVICES }      from '@store/services'
+import { Accordion }         from '@ui/accordion/src'
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'
 import { Divider }           from '@ui/divider'
@@ -12,18 +13,41 @@ import { Column }            from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Switch }            from '@ui/switch'
 import { Item }              from '@ui/switch'
+import { Ruble }             from '@ui/text'
+import { Space }             from '@ui/text'
 import { Text }              from '@ui/text'
 import { screenVar }         from '@store/services'
 
 import { AdditionalService } from './additional-service'
 import { ReturnButton }      from './return-button'
+import { WorkExample }       from './work-example'
 
 const Service: FC = () => {
-  // TODO write isTireFitting
-  const isTireFitting = false
+  // eslint-disable-next-line
+  let variant = 'tertiary' // secondary, tertiary
+  const description = '1. Снятие колес|n|2. Балансировка колес|n|3. Монтаж/демонтаж резины с дисков'
   const carBodyList = ['Легковой', 'Джип', 'Минивэн', 'Микроавтобус', 'Грузовой']
-  const [onCarBody, setOnCarbody] = useState(carBodyList[0])
+  const [onCarBody, setOnCarBody] = useState(carBodyList[0])
+  const [additionalService, setAdditionalService] = useState<boolean>(false)
 
+  const arr = [
+    {
+      image: {
+        sourceUrl: 'https://wp.shdvor.pro/wp-content/uploads/2022/07/alloy-wheel-repair-1.png',
+        altText: 'text',
+      },
+      title: 'Литые диски',
+      price: 0,
+    },
+    {
+      image: {
+        sourceUrl: 'https://wp.shdvor.pro/wp-content/uploads/2022/07/alloy-wheel-repair-1.png',
+        altText: 'text',
+      },
+      title: 'Литые диски',
+      price: 0,
+    },
+  ]
   return (
     <Box width='100%' marginTop={[80, 80, 104]}>
       <Row>
@@ -44,11 +68,11 @@ const Service: FC = () => {
             </Text>
           </Layout>
           <Layout flexBasis={8} />
-          <Condition match={isTireFitting}>
+          <Condition match={variant === 'primary' || variant === 'tertiary'}>
             <Layout flexBasis={24} />
             <Switch active={onCarBody}>
               {carBodyList.map((item) => (
-                <Item value={item} onSelect={setOnCarbody}>
+                <Item value={item} onSelect={setOnCarBody}>
                   {item}
                 </Item>
               ))}
@@ -56,30 +80,49 @@ const Service: FC = () => {
             <Layout flexBasis={24} />
           </Condition>
           <Layout>
-            <Text fontColor='darkGray' fontSize='xl' fontWeight='medium'>
-              Text
+            <Text fontSize='xl' fontWeight='medium'>
+              1000
+              <Space />
+              <Ruble />
+            </Text>
+            <Space />
+            <Text color='darkGray' fontSize='xl' fontWeight='medium'>
+              за диск
             </Text>
           </Layout>
           <Layout flexBasis={24} />
           <Divider backgroundColor='gray' />
           <Layout flexBasis={24} />
-          <Layout minHeight={130}>
-            <Text>Text</Text>
+          <Layout>
+            <Column fill>
+              {description.split('|n|').map((item) => (
+                <Text lineHeight='medium'>{item}</Text>
+              ))}
+            </Column>
           </Layout>
-          {/* FIXME find out the condition */}
-          <Condition match>
+          <Condition match={variant === 'tertiary'}>
             <Layout flexBasis={24} />
             <Divider backgroundColor='gray' />
             <Layout flexBasis={24} />
-            <Box width='100%' height={26}>
-              <Text fontSize='large' fontWeight='medium'>
-                Accordion
-              </Text>
-            </Box>
+            <Row>
+              <Accordion text='Примеры работ'>
+                {arr.map(({ image, title, price }, index) => (
+                  <>
+                    <WorkExample image={image} title={title} price={price} />
+                    <Condition match={index === 0}>
+                      <Layout flexBasis={32} flexShrink={0} />
+                    </Condition>
+                  </>
+                ))}
+              </Accordion>
+            </Row>
           </Condition>
-          <Condition match={isTireFitting}>
+          <Condition match={variant === 'primary'}>
             <Layout flexBasis={24} />
-            <AdditionalService />
+            <AdditionalService
+              additionalService={additionalService}
+              setAdditionalService={setAdditionalService}
+            />
             <Layout flexBasis={24} />
           </Condition>
           <Layout flexBasis={32} />
