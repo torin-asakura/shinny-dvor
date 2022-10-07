@@ -11,14 +11,16 @@ export interface Article {
   }
 }
 
-export interface Blog {
+export interface Fragment {
   contentAddons: {
     title: string
+    content: string
     role: string
+    highlightedtext: string
   }
 }
 
 export interface ArticlesProps {
   postsData: Article[]
-  blogData: Blog[]
+  fragmentsData: Fragment[]
 }

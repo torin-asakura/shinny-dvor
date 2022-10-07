@@ -19,7 +19,7 @@ interface Props {
 }
 
 const IndexPage: FC<Props> = ({
-  data: { footer, contacts, blog, posts, navigation, availableRadii },
+  data: { contacts, posts, navigation, availableRadii, fragments },
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
@@ -27,12 +27,12 @@ const IndexPage: FC<Props> = ({
     <Column width='100%' alignItems='center'>
       <Navigation active={2} availableRadiiData={availableRadii} navigationData={navigation} />
       <Condition match={screen === ALL_ARTICLES}>
-        <AllArticles blogData={blog} postsData={posts} />
+        <AllArticles fragmentsData={fragments} postsData={posts} />
       </Condition>
       <Condition match={screen === ARTICLE}>
-        <Article blogData={blog} />
+        <Article fragmentsData={fragments} />
       </Condition>
-      <Footer footerData={footer} contactsData={contacts} />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )
 }

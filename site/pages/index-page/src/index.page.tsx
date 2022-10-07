@@ -20,18 +20,7 @@ interface Props {
 }
 
 const IndexPage: FC<Props> = ({
-  data: {
-    hero,
-    contacts,
-    footer,
-    infographics,
-    posts,
-    blog,
-    navigation,
-    workExamples,
-    availableRadii,
-    services,
-  },
+  data: { contacts, posts, navigation, availableRadii, services, fragments, ui },
 }) => {
   const [active, setActive] = useState<number>(0)
 
@@ -60,21 +49,29 @@ const IndexPage: FC<Props> = ({
             navigationData={navigation}
             availableRadiiData={availableRadii}
           />
-          <Hero heroData={hero} contactsData={contacts} {...getObserverOptions('hero')} />
+          <Hero
+            fragmentsData={fragments}
+            uiData={ui}
+            contactsData={contacts}
+            availableRadiiData={availableRadii}
+            {...getObserverOptions('hero')}
+          />
         </Column>
       </Box>
       <Services
         servicesData={services}
+        fragmentsData={fragments}
         availableRadiiData={availableRadii}
         {...getObserverOptions('services')}
       />
-      <Articles postsData={posts} blogData={blog} {...getObserverOptions('articles')} />
+      <Articles postsData={posts} fragmentsData={fragments} {...getObserverOptions('articles')} />
       <ServicesInfographics
-        infographicsData={infographics}
+        uiData={ui}
+        fragmentsData={fragments}
         {...getObserverOptions('infographics')}
       />
-      <WorksExamples workExamplesData={workExamples} {...getObserverOptions('works-examples')} />
-      <Footer footerData={footer} contactsData={contacts} />
+      <WorksExamples fragmentsData={fragments} {...getObserverOptions('works-examples')} />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )
 }

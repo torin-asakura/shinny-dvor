@@ -1,11 +1,12 @@
-import { runAvailableRadiiQuery } from './queries'
-import { runBookingQuery }        from './queries'
+import { runAvailableRadiiQuery } from '@globals/data'
+import { runFragmentsQuery }      from '@globals/data'
+
 import { runCarBodiesQuery }      from './queries'
 import { runServicesQuery }       from './queries'
 
 export const getServerSideProps = async () => {
   const queryPromises: Array<Promise<any>> = [
-    runBookingQuery(),
+    runFragmentsQuery(),
     runAvailableRadiiQuery(),
     runCarBodiesQuery(),
     runServicesQuery(),

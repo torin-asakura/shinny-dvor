@@ -4,9 +4,9 @@ import { getClient } from '@globals/data'
 
 const GET_SERVICES = gql`
   query GetServices {
-    ourServiceItems {
+    services {
       nodes {
-        contentAddons {
+        servicesParams {
           title
           role
         }
@@ -24,7 +24,7 @@ const runServicesQuery = async () => {
 
   if (servicesData) {
     return {
-      services: servicesData.ourServiceItems.nodes,
+      services: servicesData.services.nodes,
     }
   }
 

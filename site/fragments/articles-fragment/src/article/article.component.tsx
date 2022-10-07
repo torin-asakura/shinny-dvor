@@ -23,7 +23,7 @@ import { ReturnButton }    from './return-button'
 import { usePostById }     from '../data'
 import { messages }        from '../messages'
 
-const Article: FC<ArticleProps> = ({ blogData }) => {
+const Article: FC<ArticleProps> = ({ fragmentsData }) => {
   const postId = useReactiveVar<PostId>(postIdVar)
 
   // TODO fetch views
@@ -31,10 +31,10 @@ const Article: FC<ArticleProps> = ({ blogData }) => {
 
   const { content, title, date, featuredImage } = usePostById({ postId })
 
-  const goBack = extractFragment('contentAddons', 'title-blog', blogData).title
+  const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   return (
-    <Column width='100%' height='auto'>
+    <Column width='100%' height='auto' marginTop={[80, 80, 104]}>
       <Box minHeight={[440, 440, 480]} width='100%' position='relative' justifyContent='center'>
         <Box
           backgroundColor='black'

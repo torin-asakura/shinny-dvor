@@ -25,7 +25,10 @@ import { ServicesList }       from './services-list'
 import { ServicesProps }      from './services.interface'
 import { SizeButtonCard }     from './size-button-card/size-button-card.component'
 
-const Services: FC<ServicesProps> = forwardRef(({ availableRadiiData, servicesData }, ref: any) => {
+const Services: FC<ServicesProps> = forwardRef((
+  { fragmentsData, availableRadiiData, servicesData },
+  ref: any
+) => {
   const isSizeChosen = useReactiveVar<boolean>(chosenVar)
 
   const { layerProps, triggerProps, render, isOpen, setOpen } = usePopover(
@@ -35,13 +38,13 @@ const Services: FC<ServicesProps> = forwardRef(({ availableRadiiData, servicesDa
   )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
-  const services = extractFragments('serviceItem', 'servicesParams', servicesData)
+  const services = extractFragments('service-item', 'servicesParams', servicesData)
   const serviceItems = services.map((item) => item.servicesParams)
 
-  const { title } = extractFragment('contentAddons', 'title', servicesData)
-  const subTitle = extractFragment('contentAddons', 'title', servicesData).content
-  const selectRadiusTitle = extractFragment('contentAddons', 'select-radius', servicesData).title
-  const allServicesTitle = extractFragment('contentAddons', 'all-services', servicesData).title
+  const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
+  const subTitle = extractFragment('contentAddons', 'select-needed-radius', fragmentsData).title
+  const selectRadiusTitle = extractFragment('contentAddons', 'select-radius', fragmentsData).title
+  const allServicesTitle = extractFragment('contentAddons', 'all-services', fragmentsData).title
 
   return (
     <Box width='100%' justifyContent='center' id='services' ref={ref}>
@@ -101,11 +104,13 @@ const Services: FC<ServicesProps> = forwardRef(({ availableRadiiData, servicesDa
                       <SizeButtonCard />
                     </Box>
                     <Layout flexBasis={16} />
-                    <Box width={180} height={56}>
-                      <Button color='secondary' size='large'>
-                        {allServicesTitle}
-                      </Button>
-                    </Box>
+                    <NextLink path='/services'>
+                      <Box width={180} height={56}>
+                        <Button color='secondary' size='large'>
+                          {allServicesTitle}
+                        </Button>
+                      </Box>
+                    </NextLink>
                   </Row>
                 </Condition>
                 <Layout flexBasis={32} />

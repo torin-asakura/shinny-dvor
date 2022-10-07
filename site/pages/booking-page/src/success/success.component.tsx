@@ -11,11 +11,11 @@ import { extractFragment } from '@globals/data'
 
 import { SuccessProps }    from './success.interface'
 
-const Success: FC<SuccessProps> = ({ bookingData }) => {
+const Success: FC<SuccessProps> = ({ fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
     'contentAddons',
     'success',
-    bookingData
+    fragmentsData
   )
 
   return (

@@ -12,8 +12,8 @@ import { Ruble }            from '@ui/text'
 import { WorkExampleProps } from './work-example.interface'
 
 const WorkExample: FC<WorkExampleProps> = ({ image, title, price }) => (
-  <Row maxWidth={405} height={382}>
-    <Column fill>
+  <Row maxWidth={405} height={[282, 282, 382]}>
+    <Column fill height='auto'>
       <Layout maxWidth={405} maxHeight={320}>
         <ImageBlock src={image.sourceUrl} alt={image.altText} width={405} height={320} />
       </Layout>

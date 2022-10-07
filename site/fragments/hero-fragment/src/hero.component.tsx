@@ -1,8 +1,12 @@
+import { useReactiveVar }  from '@apollo/client'
+
 import React               from 'react'
+import { useState }        from 'react'
 import { forwardRef }      from 'react'
 
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
+import { Condition }       from '@ui/condition'
 import { Divider }         from '@ui/divider'
 import { ArrowDownIcon }   from '@ui/icons'
 import { ImageBlock }      from '@ui/image'
@@ -16,20 +20,36 @@ import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
+import { radiusVar }       from '@store/chosen-radius'
 
-const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
-  const leadObj = extractFragment('contentAddons', 'lead', heroData)
-  const ctaObj = extractFragment('contentAddons', 'cta', heroData)
-  const anchorObj = extractFragment('contentAddons', 'anchor', heroData)
+import { Selector }        from './selector'
+
+const Hero = forwardRef((
+  { uiData, fragmentsData, contactsData, availableRadiiData }: any,
+  ref: any
+) => {
+  const [openSelector, setOpenSelector] = useState<boolean>(true)
+  const radius = useReactiveVar<string>(radiusVar)
+
+  const leadObj = extractFragment('contentAddons', 'hero-title', fragmentsData)
+  const ctaObj = extractFragment('contentAddons', 'sign-up', fragmentsData)
+  const anchorObj = extractFragment('contentAddons', 'our-services', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
+  const backgroundObj = extractFragment('contentAddons', 'hero', uiData)
+  const closeTitle = extractFragment('contentAddons', 'close', fragmentsData).title
+  const selectDiameterTitle = extractFragment(
+    'contentAddons',
+    'select-diameter',
+    fragmentsData
+  ).title
 
   const title = new Map([
     ['title', leadObj?.title],
     ['highlighted', leadObj?.highlightedtext],
   ])
   const backgroundImage = new Map([
-    ['url', leadObj?.image.sourceUrl],
-    ['altText', leadObj?.image.altText],
+    ['url', backgroundObj?.image.sourceUrl],
+    ['altText', backgroundObj?.image.altText],
   ])
   const CTA = ctaObj?.title
   const anchor = anchorObj?.title
@@ -92,7 +112,11 @@ const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
         <Layout flexBasis={[40, 40, 48]} />
         <Divider backgroundColor='milkGray' />
         <Layout flexBasis={[20, 20, 30]} />
-        <Row width='100%' justifyContent={['center', 'center', 'space-between']}>
+        <Box
+          width='100%'
+          position='relative'
+          justifyContent={['center', 'center', 'space-between']}
+        >
           <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
             <Link href='#services'>
               <Row width={150}>
@@ -108,6 +132,16 @@ const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
               </Row>
             </Link>
           </Box>
+          <Condition match={openSelector && !radius.length}>
+            <Box width='100%' display={['none', 'none', 'flex']}>
+              <Selector
+                closeTitle={closeTitle}
+                selectDiameterTitle={selectDiameterTitle}
+                radii={availableRadiiData}
+                setOpenSelector={setOpenSelector}
+              />
+            </Box>
+          </Condition>
           <Box width='100%' alignItems='center'>
             <Box width='100%' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
               <Link href={`tel:${phone}`}>
@@ -121,7 +155,7 @@ const Hero = forwardRef(({ heroData, contactsData }: any, ref: any) => {
               <SocialLinksDark linkVk={linkVk} linkFb={linkFb} />
             </Box>
           </Box>
-        </Row>
+        </Box>
         <Layout flexBasis={[20, 20, 30]} />
       </Column>
       <Layout flexBasis={[20, 20, 80]} />

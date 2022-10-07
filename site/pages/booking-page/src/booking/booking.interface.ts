@@ -14,7 +14,7 @@ export interface ContentAddons {
 }
 
 export interface BookingProps {
-  bookingData: ExtendedContentAddons[]
+  fragmentsData: ExtendedContentAddons[]
   availableRadiiData: ContentAddons[]
   carBodiesData: ContentAddons[]
   servicesData: ContentAddons[]

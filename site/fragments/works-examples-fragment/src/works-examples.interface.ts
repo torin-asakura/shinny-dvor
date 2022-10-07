@@ -2,8 +2,9 @@ interface ContentAddons {
   title: string
   content: string
   role: string
+  highlightedtext: string
 }
 
 export interface WorksExamplesProps {
-  workExamplesData: ContentAddons[]
+  fragmentsData: ContentAddons[]
 }

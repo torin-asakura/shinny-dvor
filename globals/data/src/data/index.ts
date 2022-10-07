@@ -1,1 +1,1 @@
-export * from './use-data.hook'
+export * from './queries'

@@ -23,7 +23,7 @@ import { BookingProps }     from './booking.interface'
 import { RadioList }        from './radio-list'
 
 const Booking: FC<BookingProps> = ({
-  bookingData,
+  fragmentsData,
   availableRadiiData,
   carBodiesData,
   servicesData,
@@ -39,22 +39,18 @@ const Booking: FC<BookingProps> = ({
   const [selectedCarBody, setSelectedCarBody] = useState<string>('')
   const [selectedRepairTypes, setSelectedRepairTypes] = useState<string[]>([])
 
-  const signUpTitle = extractFragment('contentAddons', 'sign-up-title', bookingData).title
-  const wheelDiameterTitle = extractFragment(
-    'contentAddons',
-    'wheel-diameter-title',
-    bookingData
-  ).title
-  const carBodyTitle = extractFragment('contentAddons', 'car-body-title', bookingData).title
+  const signUpTitle = extractFragment('contentAddons', 'sign-up', fragmentsData).title
+  const wheelDiameterTitle = extractFragment('contentAddons', 'wheel-diameter', fragmentsData).title
+  const carBodyTitle = extractFragment('contentAddons', 'car-body', fragmentsData).title
   const { title: repairTypeTitle, content: repairTypePlaceholder } = extractFragment(
     'contentAddons',
-    'repair-type-title',
-    bookingData
+    'repair-type',
+    fragmentsData
   )
   const { title: commentTitle, content: commentPlaceholder } = extractFragment(
     'contentAddons',
-    'comment-title',
-    bookingData
+    'comment',
+    fragmentsData
   )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
@@ -63,8 +59,8 @@ const Booking: FC<BookingProps> = ({
   const carBodies = extractFragments('car-body-item', 'contentAddons', carBodiesData)
   const carBodyItems = carBodies.map((item) => item.contentAddons.title)
 
-  const repairTypes = extractFragments('serviceItem', 'contentAddons', servicesData)
-  const repairTypeItems = repairTypes.map((item) => item.contentAddons.title)
+  const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
+  const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
 
   return (
     <Column width='100%'>

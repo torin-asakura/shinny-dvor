@@ -9,6 +9,16 @@ interface ContactAddons {
   workingHours: string
 }
 
+interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
+}
+
 export interface ContactsProps {
   contactsData: ContactAddons[]
+  fragmentsData: Fragment[]
 }

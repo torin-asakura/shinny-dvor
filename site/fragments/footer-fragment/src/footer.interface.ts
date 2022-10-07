@@ -9,14 +9,16 @@ interface ContactAddons {
   workingHours: string
 }
 
-interface FooterAddons {
-  content: string
-  highlightedtext: string
-  role: string
-  title: string
+export interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
 }
 
 export interface FooterProps {
   contactsData: ContactAddons[]
-  footerData: FooterAddons[]
+  fragmentsData: Fragment[]
 }

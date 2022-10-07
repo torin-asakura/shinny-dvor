@@ -19,6 +19,7 @@ import { Text }              from '@ui/text'
 import { screenVar }         from '@store/services'
 
 import { AdditionalService } from './additional-service'
+import { Carousel }          from './carousel'
 import { ReturnButton }      from './return-button'
 import { WorkExample }       from './work-example'
 
@@ -104,7 +105,7 @@ const Service: FC = () => {
             <Layout flexBasis={24} />
             <Divider backgroundColor='gray' />
             <Layout flexBasis={24} />
-            <Row>
+            <Row display={['none', 'none', 'flex']}>
               <Accordion text='Примеры работ'>
                 {arr.map(({ image, title, price }, index) => (
                   <>
@@ -115,6 +116,13 @@ const Service: FC = () => {
                   </>
                 ))}
               </Accordion>
+            </Row>
+            <Row display={['flex', 'flex', 'none']} overflow='hidden'>
+              <Carousel>
+                {arr.map(({ image, title, price }) => (
+                  <WorkExample image={image} title={title} price={price} />
+                ))}
+              </Carousel>
             </Row>
           </Condition>
           <Condition match={variant === 'primary'}>

@@ -12,10 +12,10 @@ import { extractFragments } from '@globals/data'
 import { Item }             from '../item'
 import { AllServicesProps } from './all-services.interface'
 
-const AllServices: FC<AllServicesProps> = ({ serviceData }) => {
-  const { title } = extractFragment('contentAddons', 'title', serviceData)
+const AllServices: FC<AllServicesProps> = ({ fragmentsData, serviceData }) => {
+  const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
 
-  const services = extractFragments('serviceItem', 'servicesParams', serviceData)
+  const services = extractFragments('service-item', 'servicesParams', serviceData)
   const serviceItems = services.map((item) => item.servicesParams)
 
   return (

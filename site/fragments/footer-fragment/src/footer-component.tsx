@@ -20,12 +20,12 @@ import { FooterProps }      from './footer.interface'
 import { useNavigation }    from './data'
 import { stringSeparator }  from './helpers'
 
-const Footer: FC<FooterProps> = ({ contactsData, footerData }) => {
+const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const navigation = useNavigation()
 
-  const byObj = extractFragment('contentAddons', 'by', footerData)
+  const byObj = extractFragment('contentAddons', 'by', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
-  const footerObj = extractFragment('contentAddons', 'appointmentPhone', footerData)
+  const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
 
   const appointmentPhone = footerObj?.title

@@ -13,15 +13,12 @@ import { extractFragment } from '@globals/data'
 
 import { ContactsProps }   from './contacts.interface'
 
-const Contacts: FC<ContactsProps> = ({ contactsData }) => {
-  const titleObj = extractFragment('contactAddons', 'contactsTitle', contactsData)
-  const addressTitleObj = extractFragment('contactAddons', 'addressTitle', contactsData)
-  const workingHoursTitleObj = extractFragment('contactAddons', 'workingHoursTitle', contactsData)
+const Contacts: FC<ContactsProps> = ({ contactsData, fragmentsData }) => {
+  const contactsTitle = extractFragment('contentAddons', 'contacts', fragmentsData).title
+  const addressTitle = extractFragment('contentAddons', 'address', fragmentsData).title
+  const workingHoursTitle = extractFragment('contentAddons', 'working-hours', fragmentsData).title
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
 
-  const contactsTitle = titleObj?.title
-  const addressTitle = addressTitleObj?.title
-  const workingHoursTitle = workingHoursTitleObj?.title
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
   const telephone = contactsObj?.telephone

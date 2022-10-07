@@ -1,12 +1,23 @@
-interface ContentAddons {
-  role: string
-  title: string
-  image: {
-    sourceUrl: string
-    altText: string
+export interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
+}
+
+interface Ui {
+  contentAddons: {
+    image: {
+      altText: string
+      sourceUrl: string
+    }
+    role: string
   }
 }
 
 export interface ServicesInfographicsProps {
-  infographicsData: ContentAddons[]
+  uiData: Ui[]
+  fragmentsData: Fragment[]
 }

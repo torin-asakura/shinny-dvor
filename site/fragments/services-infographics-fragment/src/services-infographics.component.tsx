@@ -10,26 +10,23 @@ import { extractFragment }           from '@globals/data'
 import { ServicesInfographicsProps } from './services-infographic.interface'
 
 const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
-  { infographicsData },
+  { fragmentsData, uiData },
   ref: LegacyRef<HTMLDivElement>
 ) => {
   const titles = new Map<string, string>()
   const wheelImg = new Map<string, string>()
 
-  titles.set('titleTop', extractFragment('contentAddons', 'title-top', infographicsData).title)
+  titles.set('titleTop', extractFragment('contentAddons', 'info-title-top', fragmentsData).title)
   titles.set(
     'titleMiddle',
-    extractFragment('contentAddons', 'title-middle', infographicsData).title
+    extractFragment('contentAddons', 'info-title-middle', fragmentsData).title
   )
   titles.set(
     'titleBottom',
-    extractFragment('contentAddons', 'title-bottom', infographicsData).title
+    extractFragment('contentAddons', 'info-title-bottom', fragmentsData).title
   )
-  wheelImg.set('altText', extractFragment('contentAddons', 'wheel', infographicsData).image.altText)
-  wheelImg.set(
-    'sourceUrl',
-    extractFragment('contentAddons', 'wheel', infographicsData).image.sourceUrl
-  )
+  wheelImg.set('altText', extractFragment('contentAddons', 'wheel', uiData).image.altText)
+  wheelImg.set('sourceUrl', extractFragment('contentAddons', 'wheel', uiData).image.sourceUrl)
 
   return (
     <Box

@@ -22,7 +22,17 @@ export interface Service {
   servicesParams: ServicesParams
 }
 
+interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
+}
+
 export interface ServicesProps {
   servicesData: Service[]
+  fragmentsData: Fragment[]
   availableRadiiData: ContentAddons[]
 }

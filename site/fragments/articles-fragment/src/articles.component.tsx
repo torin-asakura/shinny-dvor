@@ -18,8 +18,12 @@ import { screenVar }       from '@store/articles'
 import { ArticlesProps }   from './articles.interface'
 import { Carousel }        from './carousel'
 
-const Articles: FC<ArticlesProps> = forwardRef(({ postsData, blogData }, ref: any) => {
-  const latestPublications = extractFragment('contentAddons', 'latest-publications', blogData).title
+const Articles: FC<ArticlesProps> = forwardRef(({ postsData, fragmentsData }, ref: any) => {
+  const latestPublications = extractFragment(
+    'contentAddons',
+    'latest-publications',
+    fragmentsData
+  ).title
 
   return (
     <Box

@@ -7,6 +7,7 @@
     "@store/services": "workspace:0.0.1",
     "@ui/accordion": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
+    "@ui/carousel": "workspace:0.0.1",
     "@ui/checkbox": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",

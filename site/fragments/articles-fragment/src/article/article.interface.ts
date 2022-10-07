@@ -1,5 +1,5 @@
-import { Blog } from '../articles.interface'
+import { Fragment } from '../articles.interface'
 
 export interface ArticleProps {
-  blogData: Blog[]
+  fragmentsData: Fragment[]
 }

@@ -20,6 +20,7 @@ import { ItemProps }      from './item.interface'
 
 const Item: FC<ItemProps> = ({ serviceName, price, image, addon }) => {
   const radius = useReactiveVar<string>(radiusVar)
+  const cost = price[radius.toLowerCase()]
 
   return (
     <Box
@@ -60,12 +61,12 @@ const Item: FC<ItemProps> = ({ serviceName, price, image, addon }) => {
             <Row>
               <Layout width='100%'>
                 <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
-                  {price}
+                  {cost}
                   <Space />
                   <Ruble />
                 </Text>
                 <Layout flexBasis={8} />
-                <Text lineHeight='grown' color='darkGray' fontWeight='500' fontSize='large'>
+                <Text lineHeight='grown' color='darkGray' fontWeight='medium' fontSize='large'>
                   {addon}
                 </Text>
               </Layout>

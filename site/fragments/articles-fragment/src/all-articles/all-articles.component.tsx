@@ -18,11 +18,11 @@ import { postIdVar }       from '@store/articles'
 
 import { ArticlesProps }   from '../articles.interface'
 
-const AllArticles: FC<ArticlesProps> = ({ blogData, postsData }) => {
-  const titlePage = extractFragment('contentAddons', 'title-blog', blogData).title
+const AllArticles: FC<ArticlesProps> = ({ fragmentsData, postsData }) => {
+  const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   return (
-    <Box maxWidth={['100%', '100%', '1440px']} height='auto'>
+    <Box maxWidth={['100%', '100%', '1440px']} height='auto' marginTop={[80, 80, 104]}>
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%' height='auto'>
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />

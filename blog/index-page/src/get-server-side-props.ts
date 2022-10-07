@@ -1,18 +1,17 @@
-import { runAvailableRadiiQuery } from './queries'
-import { runBlogQuery }           from './queries'
-import { runNavigationQuery }     from './queries'
-import { runContactsQuery }       from './queries'
+import { runAvailableRadiiQuery } from '@globals/data'
+import { runFragmentsQuery }      from '@globals/data'
+import { runContactsQuery }       from '@globals/data'
+import { runNavigationQuery }     from '@globals/data'
+
 import { runPostsQuery }          from './queries'
-import { runFooterQuery }         from './queries'
 
 export const getServerSideProps = async () => {
   const queryPromises: Array<Promise<any>> = [
-    runFooterQuery(),
     runContactsQuery(),
-    runBlogQuery(),
     runPostsQuery(),
     runNavigationQuery(),
     runAvailableRadiiQuery(),
+    runFragmentsQuery(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

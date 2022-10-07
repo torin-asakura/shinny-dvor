@@ -26,7 +26,7 @@ interface Props {
   data: any
 }
 
-const BookingPage: FC<Props> = ({ data: { booking, availableRadii, carBodies, services } }) => {
+const BookingPage: FC<Props> = ({ data: { fragments, availableRadii, carBodies, services } }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
@@ -58,17 +58,17 @@ const BookingPage: FC<Props> = ({ data: { booking, availableRadii, carBodies, se
         <Box width={['100%', '100%', 720]}>
           <Condition match={screen === INITIAL}>
             <Booking
-              bookingData={booking}
+              fragmentsData={fragments}
               availableRadiiData={availableRadii}
               carBodiesData={carBodies}
               servicesData={services}
             />
           </Condition>
           <Condition match={screen === SUCCESS}>
-            <Success bookingData={booking} />
+            <Success fragmentsData={fragments} />
           </Condition>
           <Condition match={screen === INVALID}>
-            <Invalid bookingData={booking} />
+            <Invalid fragmentsData={fragments} />
           </Condition>
         </Box>
       </Column>

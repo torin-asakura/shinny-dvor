@@ -12,8 +12,12 @@ import { screenVar }       from '@store/booking'
 
 import { InvalidProps }    from './invalid.interface'
 
-const Invalid: FC<InvalidProps> = ({ bookingData }) => {
-  const { title, content, highlightedtext } = extractFragment('contentAddons', 'error', bookingData)
+const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
+  const { title, content, highlightedtext } = extractFragment(
+    'contentAddons',
+    'error',
+    fragmentsData
+  )
 
   return (
     <Column width='100%'>

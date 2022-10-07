@@ -18,7 +18,7 @@ import { Slide as SlideInterface } from './data'
 import { WorksExamplesProps }      from './works-examples.interface'
 import { useMockedSlides }         from './data'
 
-const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ workExamplesData }, ref: any) => {
+const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref: any) => {
   const { slides } = useMockedSlides()
 
   const [slide, setSlide] = useState<SlideInterface[]>([])
@@ -27,8 +27,8 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ workExamplesData }, 
     setSlide([...slides])
   }, [slides])
 
-  const { title } = extractFragment('contentAddons', 'title', workExamplesData)
-  const subTitle = extractFragment('contentAddons', 'title', workExamplesData).content
+  const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
+  const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
