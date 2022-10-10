@@ -1,16 +1,18 @@
-import React            from 'react'
-import { FC }           from 'react'
-import { useState }     from 'react'
+import React                 from 'react'
+import { FC }                from 'react'
+import { useState }          from 'react'
 
-import { ALL_SERVICES } from '@store/services'
-import { Button }       from '@ui/button'
-import { BackIcon }     from '@ui/icons'
-import { Box }          from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Text }         from '@ui/text'
-import { screenVar }    from '@store/services'
+import { ALL_SERVICES }      from '@store/services'
+import { Button }            from '@ui/button'
+import { BackIcon }          from '@ui/icons'
+import { Box }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { screenVar }         from '@store/services'
 
-const ReturnButton: FC = () => {
+import { ReturnButtonProps } from './return-button.interface'
+
+const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [onHover, setOnHover] = useState(false)
   const [onPressed, setOnPressed] = useState(false)
   const doReturn = () => {
@@ -41,7 +43,7 @@ const ReturnButton: FC = () => {
         <Layout flexBasis={8} />
         <Layout>
           <Text fontWeight='medium' color={getColor()}>
-            Button
+            {title}
           </Text>
         </Layout>
       </Box>

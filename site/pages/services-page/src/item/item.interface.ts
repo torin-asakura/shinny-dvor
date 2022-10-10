@@ -1,6 +1,8 @@
 export interface ItemProps {
   serviceName: string
   addon: string
+  description: string
+  variant: string
   price: {
     r12: number
     r13: number
@@ -16,5 +18,25 @@ export interface ItemProps {
   image: {
     sourceUrl: string
     altText: string
+  }
+  workexamples: {
+    firstexample: {
+      image: {
+        altText: string
+        sourceUrl: string
+      }
+      title: string
+    }
+    secondexample: {
+      image: {
+        altText: string
+        sourceUrl: string
+      }
+      title: string
+    }
+  }
+  additionalservice: {
+    title: string
+    price: number
   }
 }

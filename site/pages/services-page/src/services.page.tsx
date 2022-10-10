@@ -23,7 +23,7 @@ interface Props {
 }
 
 const ServicesPage: FC<Props> = ({
-  data: { fragments, contacts, posts, navigation, availableRadii, services },
+  data: { fragments, contacts, posts, navigation, availableRadii, services, carBodies },
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
   const radius = useReactiveVar<string>(radiusVar)
@@ -40,7 +40,7 @@ const ServicesPage: FC<Props> = ({
         <AllServices fragmentsData={fragments} serviceData={services} />
       </Condition>
       <Condition match={screen === SERVICE}>
-        <Service />
+        <Service fragmentsData={fragments} carBodiesData={carBodies} />
         <Articles fragmentsData={fragments} postsData={posts} />
       </Condition>
       <Footer fragmentsData={fragments} contactsData={contacts} />

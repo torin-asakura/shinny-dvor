@@ -8,11 +8,11 @@ const Tablet: FC = ({ children }) => {
   const { carousel } = useCarousel({
     children,
     slidesPerView: 2,
-    spaceBetween: 0,
-    centered: true,
-    height: 333,
-    width: 282,
-    loop: true,
+    spaceBetween: 20,
+    centered: false,
+    height: 40,
+    width: 725,
+    loop: false,
   })
 
   return carousel
@@ -21,18 +21,18 @@ const Tablet: FC = ({ children }) => {
 const Mobile: FC = ({ children }) => {
   const { carousel } = useCarousel({
     children,
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 20,
     centered: false,
-    height: 333,
-    width: 282,
-    loop: true,
+    height: 50,
+    width: 350,
+    loop: false,
   })
 
   return carousel
 }
 
-const Carousel: FC = ({ children }) => (
+const CarBodiesCarousel: FC = ({ children }) => (
   <>
     <Layout display={['none', 'flex', 'none']}>
       <Tablet>{children}</Tablet>
@@ -43,4 +43,4 @@ const Carousel: FC = ({ children }) => (
   </>
 )
 
-export { Carousel }
+export { CarBodiesCarousel }

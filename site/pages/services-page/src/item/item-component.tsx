@@ -14,11 +14,21 @@ import { Ruble }          from '@ui/text'
 import { Space }          from '@ui/text'
 import { scrollTop }      from '@shared/utils'
 import { radiusVar }      from '@store/chosen-radius'
+import { serviceVar }     from '@store/services'
 import { screenVar }      from '@store/services'
 
 import { ItemProps }      from './item.interface'
 
-const Item: FC<ItemProps> = ({ serviceName, price, image, addon }) => {
+const Item: FC<ItemProps> = ({
+  serviceName,
+  price,
+  image,
+  addon,
+  description,
+  variant,
+  workexamples,
+  additionalservice,
+}) => {
   const radius = useReactiveVar<string>(radiusVar)
   const cost = price[radius.toLowerCase()]
 
@@ -39,6 +49,16 @@ const Item: FC<ItemProps> = ({ serviceName, price, image, addon }) => {
           onClick={() => {
             scrollTop()
             screenVar(SERVICE)
+            serviceVar({
+              radius,
+              serviceName,
+              price: cost,
+              addon,
+              description,
+              variant,
+              workexamples,
+              additionalservice,
+            })
           }}
         >
           <Layout flexBasis={[24, 32, 32]} flexShrink={0} />

@@ -11,9 +11,26 @@ const GET_SERVICES = gql`
           description
           role
           addon
+          variant
           image {
             altText
             sourceUrl
+          }
+          workexamples {
+            firstexample {
+              title
+              image {
+                altText
+                sourceUrl
+              }
+            }
+            secondexample {
+              title
+              image {
+                altText
+                sourceUrl
+              }
+            }
           }
           price {
             r12
@@ -26,6 +43,10 @@ const GET_SERVICES = gql`
             r19
             r20
             r21
+          }
+          additionalservice {
+            title
+            price
           }
         }
       }

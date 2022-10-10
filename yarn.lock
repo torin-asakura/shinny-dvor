@@ -2613,6 +2613,7 @@ __metadata:
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
+    "@globals/data": "workspace:0.0.1"
     "@store/services": "workspace:0.0.1"
     "@types/react": ^17
     "@types/react-dom": ^17
@@ -2659,12 +2660,14 @@ __metadata:
     "@ui/radio": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown

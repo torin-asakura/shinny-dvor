@@ -2,6 +2,7 @@ import React                from 'react'
 import { FC }               from 'react'
 
 import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
@@ -12,11 +13,16 @@ import { Ruble }            from '@ui/text'
 import { WorkExampleProps } from './work-example.interface'
 
 const WorkExample: FC<WorkExampleProps> = ({ image, title, price }) => (
-  <Row maxWidth={405} height={[282, 282, 382]}>
+  <Row width={[300, 300, 405]} height={[282, 282, 382]}>
     <Column fill height='auto'>
-      <Layout maxWidth={405} maxHeight={320}>
-        <ImageBlock src={image.sourceUrl} alt={image.altText} width={405} height={320} />
-      </Layout>
+      <Box width={[300, 300, 405]} height={320} borderRadius='mini' overflow='hidden'>
+        <ImageBlock
+          src={image ? image!.sourceUrl : ''}
+          alt={image ? image!.altText : ''}
+          width={405}
+          height={320}
+        />
+      </Box>
       <Layout flexBasis={16} />
       <Layout>
         <Text fontWeight='medium' fontSize='normal' color='text.primary'>

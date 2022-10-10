@@ -3,6 +3,7 @@ import { runNavigationQuery }     from '@globals/data'
 import { runContactsQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
 
+import { runCarBodiesQuery }      from './queries'
 import { runServicesQuery }       from './queries'
 import { runPostsQuery }          from './queries'
 
@@ -14,6 +15,7 @@ export const getServerSideProps = async () => {
     runAvailableRadiiQuery(),
     runServicesQuery(),
     runFragmentsQuery(),
+    runCarBodiesQuery(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

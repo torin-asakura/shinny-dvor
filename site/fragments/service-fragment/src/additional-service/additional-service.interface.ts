@@ -1,4 +1,8 @@
 export interface AdditionalServiceProps {
-  additionalService: boolean
-  setAdditionalService: (additionalService: boolean) => void
+  isAdditionalService: boolean
+  setIsAdditionalService: (isAdditionalService: boolean) => void
+  additionalservice: {
+    title: string
+    price: number
+  }
 }

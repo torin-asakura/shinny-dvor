@@ -14,6 +14,26 @@ export interface Service {
       altText: string
       sourceUrl: string
     }
+    workexamples: {
+      firstexample: {
+        image: {
+          altText: string
+          sourceUrl: string
+        }
+        title: string
+      }
+      secondexample: {
+        image: {
+          altText: string
+          sourceUrl: string
+        }
+        title: string
+      }
+    }
+    additionalservice: {
+      title: string
+      price: string
+    }
   }
 }
 

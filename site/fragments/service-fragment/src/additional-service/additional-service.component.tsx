@@ -12,8 +12,9 @@ import { Space }                  from '@ui/text'
 import { AdditionalServiceProps } from './additional-service.interface'
 
 const AdditionalService: FC<AdditionalServiceProps> = ({
-  additionalService,
-  setAdditionalService,
+  isAdditionalService,
+  setIsAdditionalService,
+  additionalservice,
 }) => (
   <Box
     width='100%'
@@ -23,17 +24,17 @@ const AdditionalService: FC<AdditionalServiceProps> = ({
     alignItems='center'
   >
     <Layout flexBasis={[20, 20, 24]} />
-    <Checkbox active={additionalService} onCheck={setAdditionalService}>
+    <Checkbox active={isAdditionalService} onCheck={setIsAdditionalService}>
       <Column justifyContent='center'>
         <Layout>
           <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
-            Wheel balancing
+            {additionalservice.title}
           </Text>
         </Layout>
         <Layout flexBasis={4} />
         <Layout>
           <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
-            0
+            {additionalservice.price}
             <Space />
             <Ruble />
           </Text>

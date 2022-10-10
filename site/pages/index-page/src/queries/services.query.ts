@@ -7,12 +7,46 @@ const GET_SERVICES = gql`
     services {
       nodes {
         servicesParams {
-          role
-          description
           title
+          description
+          role
+          addon
+          variant
           image {
             altText
             sourceUrl
+          }
+          workexamples {
+            firstexample {
+              title
+              image {
+                altText
+                sourceUrl
+              }
+            }
+            secondexample {
+              title
+              image {
+                altText
+                sourceUrl
+              }
+            }
+          }
+          price {
+            r12
+            r13
+            r14
+            r15
+            r16
+            r17
+            r18
+            r19
+            r20
+            r21
+          }
+          additionalservice {
+            title
+            price
           }
         }
       }
