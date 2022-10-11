@@ -21,7 +21,6 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@splidejs/splide": "^3.6.12",
     "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",
@@ -32,6 +31,7 @@
     "react-helmet": "^6.1.0",
     "recompose": "^0.30.0",
     "styled-system": "^5.1.5",
+    "swiper": "^8.4.3",
     "typescript": "^4.3.5"
   },
   "devDependencies": {

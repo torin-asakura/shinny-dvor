@@ -1,4 +1,5 @@
-import '@splidejs/splide/dist/css/splide.min.css'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 import { ApolloProvider } from '@apollo/client'
 

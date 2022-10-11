@@ -1,4 +1,5 @@
 import React                       from 'react'
+import { Children }                from 'react'
 import { FC }                      from 'react'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
@@ -11,6 +12,7 @@ import { Layout }                  from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { Slider }                  from '@ui/slider'
 import { Slide }                   from '@ui/slider'
+import { SwiperSlide }             from '@ui/slider'
 import { Text }                    from '@ui/text'
 import { extractFragment }         from '@globals/data'
 
@@ -29,6 +31,12 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
 
   const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
+
+  const sliderChildren = slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
+    <Slide key={id} description={description} price={price} time={timeOfExecution}>
+      <Image src={image} alt={alt} radius={16} />
+    </Slide>
+  ))
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
@@ -49,10 +57,8 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />
           <Slider>
-            {slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
-              <Slide key={id} description={description} price={price} time={timeOfExecution}>
-                <Image src={image} alt={alt} radius={16} />
-              </Slide>
+            {Children.map(sliderChildren, (child) => (
+              <SwiperSlide>{child}</SwiperSlide>
             ))}
           </Slider>
           <Layout flexBasis={[80, 80, 100]} />

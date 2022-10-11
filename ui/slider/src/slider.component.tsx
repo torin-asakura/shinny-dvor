@@ -1,27 +1,22 @@
-import { Splide } from '@splidejs/react-splide'
-
-import React      from 'react'
-import { FC }     from 'react'
+import React          from 'react'
+import { FC }         from 'react'
+import { Pagination } from 'swiper'
+import { Swiper }     from 'swiper/react'
 
 const Slider: FC = ({ children }) => (
-  <Splide
-    options={{
-      perPage: 3,
-      gap: 40,
-      focus: 'center',
-      type: 'loop',
-      autoWidth: true,
-      arrows: true,
-      classes: {
-        pagination: 'splide__pagination splide__pagination__custom',
-        page: 'splide__pagination__page splide__pagination__page__custom',
-        arrow: 'splide__arrow splide__arrow__custom',
-        arrows: 'splide__arrows splide__arrows_custom',
-      },
+  <Swiper
+    slidesPerView={3}
+    spaceBetween={700}
+    loop
+    centeredSlides
+    pagination={{
+      clickable: true,
     }}
+    touchEventsTarget='container'
+    modules={[Pagination]}
   >
     {children}
-  </Splide>
+  </Swiper>
 )
 
 export { Slider }

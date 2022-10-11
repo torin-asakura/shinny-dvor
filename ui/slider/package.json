@@ -4,15 +4,14 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/dom": "^0.0.1",
-    "@splidejs/react-splide": "^0.6.20",
-    "@splidejs/splide": "^3.6.12",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "framer-motion": "4.1.7"
+    "framer-motion": "4.1.7",
+    "swiper": "^8.4.3"
   },
   "devDependencies": {
     "@emotion/css": "^11.9.0",
