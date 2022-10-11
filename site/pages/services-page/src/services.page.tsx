@@ -35,13 +35,18 @@ const ServicesPage: FC<Props> = ({
 
   return (
     <Column width='100%' alignItems='center'>
-      <Navigation active={2} navigationData={navigation} availableRadiiData={availableRadii} />
+      <Navigation
+        active={2}
+        navigationData={navigation}
+        availableRadiiData={availableRadii}
+        fragmentsData={fragments}
+      />
       <Condition match={screen === ALL_SERVICES}>
         <AllServices fragmentsData={fragments} serviceData={services} />
       </Condition>
       <Condition match={screen === SERVICE}>
         <Service fragmentsData={fragments} carBodiesData={carBodies} />
-        <Articles fragmentsData={fragments} postsData={posts} />
+        <Articles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
       </Condition>
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>

@@ -69,7 +69,7 @@ const Item: FC<ItemProps> = ({
             </Box>
             <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
             <Row>
-              <Row width={232}>
+              <Row width={['100%', '100%', 232]}>
                 <Text display='inline' lineHeight='grown' fontWeight='medium' fontSize='large'>
                   {serviceName}
                   <Space />

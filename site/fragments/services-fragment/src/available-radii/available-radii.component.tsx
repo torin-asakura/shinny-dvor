@@ -29,7 +29,9 @@ const AvailableRadii: FC<AvailableRadiiProps> = ({ radii, title }) => (
               <Box width={48} height={48}>
                 <Button size='normal' color='radius' onClick={() => setChosenRadius(radius)}>
                   <Layout>
-                    <Text fontSize='small'>{radius}</Text>
+                    <Text fontSize='small' fontWeight='medium'>
+                      {radius}
+                    </Text>
                   </Layout>
                 </Button>
               </Box>

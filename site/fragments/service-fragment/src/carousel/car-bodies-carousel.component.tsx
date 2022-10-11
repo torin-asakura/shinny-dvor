@@ -1,13 +1,14 @@
 import React           from 'react'
 import { FC }          from 'react'
 
+import { Box }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { useCarousel } from '@ui/carousel'
 
 const Tablet: FC = ({ children }) => {
   const { carousel } = useCarousel({
     children,
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 20,
     centered: false,
     height: 40,
@@ -22,10 +23,10 @@ const Mobile: FC = ({ children }) => {
   const { carousel } = useCarousel({
     children,
     slidesPerView: 3,
-    spaceBetween: 20,
+    spaceBetween: 16,
     centered: false,
-    height: 50,
-    width: 350,
+    height: 40,
+    width: 335,
     loop: false,
   })
 
@@ -37,9 +38,9 @@ const CarBodiesCarousel: FC = ({ children }) => (
     <Layout display={['none', 'flex', 'none']}>
       <Tablet>{children}</Tablet>
     </Layout>
-    <Layout display={['flex', 'none', 'none']}>
+    <Box display={['flex', 'none', 'none']} overflow='hidden'>
       <Mobile>{children}</Mobile>
-    </Layout>
+    </Box>
   </>
 )
 

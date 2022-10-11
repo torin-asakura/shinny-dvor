@@ -48,12 +48,12 @@ const Services: FC<ServicesProps> = forwardRef((
 
   return (
     <Box width='100%' justifyContent='center' id='services' ref={ref}>
-      <Column minWidth={['100%', '100%', '1440px']}>
+      <Column width='100%'>
         <Layout flexBasis={[48, 48, 100]} />
         <Row>
-          <Layout flexBasis={[20, 20, 80]} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Box width='100%' justifyContent='space-between'>
-            <Column display={['none', 'none', 'flex']} width='34%'>
+            <Column display={['none', 'none', 'flex']} minWidth={400}>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
                   {title}
@@ -86,7 +86,8 @@ const Services: FC<ServicesProps> = forwardRef((
                 </Layout>
               )}
             </Column>
-            <Column width={['100%', '100%', '843px']}>
+            <Layout flexBasis={[0, 0, 37]} flexShrink={0} />
+            <Column width='100%'>
               <Column width='100%' display={['flex', 'flex', 'none']}>
                 <Layout>
                   <Text fontWeight='medium' fontSize='extraLarge'>
@@ -101,7 +102,7 @@ const Services: FC<ServicesProps> = forwardRef((
                   <Layout flexBasis={24} />
                   <Row>
                     <Box width={56} height={56}>
-                      <SizeButtonCard />
+                      <SizeButtonCard title={title} radii={radii} />
                     </Box>
                     <Layout flexBasis={16} />
                     <NextLink path='/services'>
@@ -121,13 +122,15 @@ const Services: FC<ServicesProps> = forwardRef((
               </Condition>
               <Column width='100%'>
                 <Condition match={isSizeChosen}>
-                  <Divider backgroundColor='gray' />
+                  <Layout>
+                    <Divider backgroundColor='gray' />
+                  </Layout>
                 </Condition>
                 <ServicesList services={serviceItems} isSizeChosen={isSizeChosen} />
               </Column>
             </Column>
           </Box>
-          <Layout flexBasis={[20, 20, 80]} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Row>
         <Layout flexBasis={[48, 48, 100]} />
       </Column>

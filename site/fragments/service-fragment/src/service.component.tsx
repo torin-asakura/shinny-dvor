@@ -107,7 +107,30 @@ const Service: FC<ServiceProps> = ({ fragmentsData, carBodiesData }) => {
             <Layout display={['flex', 'flex', 'none']}>
               <CarBodiesCarousel>
                 {carBodies.map((item) => (
-                  <Button>{item}</Button>
+                  <Box
+                    width='100%'
+                    height='100%'
+                    alignItems='center'
+                    justifyContent='center'
+                    borderRadius='small'
+                    backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
+                  >
+                    <Button
+                      color='transparent'
+                      size='small'
+                      height='100%'
+                      width='100%'
+                      onClick={() => setOnCarBody(item)}
+                    >
+                      <Text
+                        color={onCarBody === item ? 'white' : 'black'}
+                        fontWeight='bold'
+                        fontSize='small'
+                      >
+                        {item}
+                      </Text>
+                    </Button>
+                  </Box>
                 ))}
               </CarBodiesCarousel>
             </Layout>

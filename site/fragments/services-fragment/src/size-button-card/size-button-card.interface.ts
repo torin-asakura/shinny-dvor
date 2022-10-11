@@ -1,3 +1,6 @@
+import { ContentAddons } from '../services.interface'
+
 export interface SizeButtonCardProps {
-  active: boolean
+  title: string
+  radii: ContentAddons[]
 }

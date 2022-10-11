@@ -1,29 +1,38 @@
-import React               from 'react'
-import { FC }              from 'react'
-import { forwardRef }      from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { forwardRef }       from 'react'
 
-import { ARTICLE }         from '@store/articles'
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Text }            from '@ui/text'
-import { TextEllipsis }    from '@ui/text'
-import { extractFragment } from '@globals/data'
-import { formattedDate }   from '@shared/utils'
-import { normalizeString } from '@shared/utils'
-import { screenVar }       from '@store/articles'
+import { ARTICLE }          from '@store/articles'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
+import { TextEllipsis }     from '@ui/text'
+import { extractFragment }  from '@globals/data'
+import { extractFragments } from '@globals/data'
+import { formattedDate }    from '@shared/utils'
+import { normalizeString }  from '@shared/utils'
+import { screenVar }        from '@store/articles'
+import { postIdVar }        from '@store/articles'
 
-import { ArticlesProps }   from './articles.interface'
-import { Carousel }        from './carousel'
+import { ArticlesProps }    from './articles.interface'
+import { Carousel }         from './carousel'
 
-const Articles: FC<ArticlesProps> = forwardRef(({ postsData, fragmentsData }, ref: any) => {
+const Articles: FC<ArticlesProps> = forwardRef((
+  { postsData, fragmentsData, navigationData },
+  ref: any
+) => {
   const latestPublications = extractFragment(
     'contentAddons',
     'latest-publications',
     fragmentsData
   ).title
+
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
+  const linkBlog = navigationItems.filter(({ contentAddons }) => contentAddons.title === 'Блог')[0]
 
   return (
     <Box
@@ -47,66 +56,46 @@ const Articles: FC<ArticlesProps> = forwardRef(({ postsData, fragmentsData }, re
             </Text>
           </Layout>
           <Layout flexBasis={[32, 32, 48]} />
-          <Row justifyContent='space-between' display={['none', 'none', 'flex']}>
-            {postsData.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
-              <Column key={id} onClick={() => screenVar(ARTICLE)}>
-                <Box width={405} height={260}>
-                  <ImageBlock
-                    src={featuredImage?.node.mediaItemUrl}
-                    alt={featuredImage?.node.altText}
-                  />
-                </Box>
-                <Layout flexBasis={24} />
-                <Layout>
-                  <Text lineHeight='grown'>{formattedDate(date)}</Text>
-                </Layout>
-                <Layout flexBasis={8} />
-                <Layout>
-                  <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
-                    {title}
-                  </Text>
-                </Layout>
-                <Layout flexBasis={8} />
-                <Layout maxHeight={52} width={405}>
-                  <TextEllipsis
-                    lineHeight='medium'
-                    color='darkGray'
-                    overflow='hidden'
-                    lineClamp={2}
-                  >
-                    {normalizeString(excerpt)}
-                  </TextEllipsis>
-                </Layout>
-              </Column>
-            ))}
-          </Row>
-          <Row display={['flex', 'flex', 'none']} overflow='hidden'>
+          <Row overflow='hidden'>
             <Carousel>
-              {postsData.map(({ id, title, date, excerpt, featuredImage }) => (
-                <Column fill maxHeight={333} key={id}>
-                  <Box width={300} height={200} backgroundColor='gray'>
-                    <ImageBlock
-                      src={featuredImage?.node.mediaItemUrl}
-                      alt={featuredImage?.node.altText}
-                    />
-                  </Box>
-                  <Layout flexBasis={24} />
-                  <Layout width={300}>
-                    <Text fontWeight='grown'>{formattedDate(date)}</Text>
-                  </Layout>
-                  <Layout flexBasis={8} />
-                  <Layout width={300}>
-                    <Text fontWeight='medium' fontSize='big'>
-                      {title}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={8} />
-                  <Row width={300} maxHeight={52}>
-                    <Text lineHeight='medium' color='darkGray' overflow='hidden'>
-                      {normalizeString(excerpt)}
-                    </Text>
-                  </Row>
-                </Column>
+              {postsData.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
+                <NextLink key={id} path={linkBlog.contentAddons.content}>
+                  <Column
+                    fill
+                    onClick={() => {
+                      postIdVar(id)
+                      screenVar(ARTICLE)
+                    }}
+                  >
+                    <Box width={[300, 300, 405]} height={[200, 260, 260]} backgroundColor='gray'>
+                      <ImageBlock
+                        src={featuredImage?.node.mediaItemUrl}
+                        alt={featuredImage?.node.altText}
+                      />
+                    </Box>
+                    <Layout flexBasis={24} />
+                    <Layout width={300}>
+                      <Text lineHeight='grown'>{formattedDate(date)}</Text>
+                    </Layout>
+                    <Layout flexBasis={8} />
+                    <Layout width={300}>
+                      <Text fontWeight='medium' fontSize='big'>
+                        {title}
+                      </Text>
+                    </Layout>
+                    <Layout flexBasis={8} />
+                    <Row width={[300, 300, 405]} maxHeight={52}>
+                      <TextEllipsis
+                        lineHeight='medium'
+                        color='darkGray'
+                        overflow='hidden'
+                        lineClamp={2}
+                      >
+                        {normalizeString(excerpt)}
+                      </TextEllipsis>
+                    </Row>
+                  </Column>
+                </NextLink>
               ))}
             </Carousel>
           </Row>

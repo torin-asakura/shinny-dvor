@@ -20,7 +20,16 @@ export interface Fragment {
   }
 }
 
+interface NavigationItem {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+  }
+}
+
 export interface ArticlesProps {
   postsData: Article[]
   fragmentsData: Fragment[]
+  navigationData: NavigationItem[]
 }

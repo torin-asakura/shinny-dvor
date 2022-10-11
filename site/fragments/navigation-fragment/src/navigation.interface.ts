@@ -20,8 +20,18 @@ export interface AvailableRadiusData {
   }
 }
 
+export interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
+}
+
 export interface NavigationProps {
   active: number
   navigationData: NavigationData[]
   availableRadiiData: AvailableRadiusData[]
+  fragmentsData: Fragment[]
 }

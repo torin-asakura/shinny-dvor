@@ -45,8 +45,8 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
         <Divider backgroundColor='gray' />
-        <Box minWidth={['100%', '100%', '1440px']}>
-          <Layout flexBasis={[20, 20, 80]} />
+        <Box width='100%'>
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 40]} />
             <Row justifyContent='space-between' alignItems='center'>
@@ -84,10 +84,10 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
               </Box>
             </Box>
           </Column>
-          <Layout flexBasis={[20, 20, 80]} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Box>
         <Divider backgroundColor='gray' />
-        <Box alignItems='center' minWidth={['100%', '100%', '1440px']}>
+        <Box alignItems='center' width='100%'>
           <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 32]} />

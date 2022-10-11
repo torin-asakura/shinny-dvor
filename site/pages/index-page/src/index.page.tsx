@@ -48,6 +48,7 @@ const IndexPage: FC<Props> = ({
             active={active}
             navigationData={navigation}
             availableRadiiData={availableRadii}
+            fragmentsData={fragments}
           />
           <Hero
             fragmentsData={fragments}
@@ -64,7 +65,12 @@ const IndexPage: FC<Props> = ({
         availableRadiiData={availableRadii}
         {...getObserverOptions('services')}
       />
-      <Articles postsData={posts} fragmentsData={fragments} {...getObserverOptions('articles')} />
+      <Articles
+        postsData={posts}
+        fragmentsData={fragments}
+        navigationData={navigation}
+        {...getObserverOptions('articles')}
+      />
       <ServicesInfographics
         uiData={ui}
         fragmentsData={fragments}

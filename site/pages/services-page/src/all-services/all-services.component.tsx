@@ -53,7 +53,7 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, serviceData }) => {
             />
           ))}
         </Row>
-        <Layout flexBasis={[20, 20, 80]} />
+        <Layout flexBasis={[50, 50, 80]} />
       </Column>
       <Layout flexBasis={[20, 20, 48]} flexShrink={0} />
     </Box>

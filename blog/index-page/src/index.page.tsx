@@ -25,9 +25,14 @@ const IndexPage: FC<Props> = ({
 
   return (
     <Column width='100%' alignItems='center'>
-      <Navigation active={2} availableRadiiData={availableRadii} navigationData={navigation} />
+      <Navigation
+        active={2}
+        availableRadiiData={availableRadii}
+        navigationData={navigation}
+        fragmentsData={fragments}
+      />
       <Condition match={screen === ALL_ARTICLES}>
-        <AllArticles fragmentsData={fragments} postsData={posts} />
+        <AllArticles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
       </Condition>
       <Condition match={screen === ARTICLE}>
         <Article fragmentsData={fragments} />

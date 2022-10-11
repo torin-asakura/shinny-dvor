@@ -27,7 +27,12 @@ import { SizeButtonDropdown }   from './size-button'
 import { getColor }             from './helpers'
 import { getColorBackground }   from './helpers'
 
-const Navigation: FC<NavigationProps> = ({ active, navigationData, availableRadiiData }) => {
+const Navigation: FC<NavigationProps> = ({
+  active,
+  navigationData,
+  availableRadiiData,
+  fragmentsData,
+}) => {
   const [drawer, setDrawer] = useState<boolean>(false)
 
   const { layerProps, triggerProps, render, isOpen, setOpen } = usePopover(
@@ -39,6 +44,7 @@ const Navigation: FC<NavigationProps> = ({ active, navigationData, availableRadi
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
   const signUp = extractFragment('contentAddons', 'booking', navigationData)
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
+  const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
 
   return (
     <Box
@@ -75,7 +81,7 @@ const Navigation: FC<NavigationProps> = ({ active, navigationData, availableRadi
             </Box>
             <Box width={[176, 176, 201]} zIndex={1}>
               <Layout display={['flex', 'flex', 'none']}>
-                <SizeButtonCard active={active} />
+                <SizeButtonCard title={title} radii={radii} active={active} />
               </Layout>
               <Layout display={['none', 'none', 'flex']} justifyContent='center'>
                 <Layout {...triggerProps}>

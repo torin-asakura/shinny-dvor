@@ -58,12 +58,7 @@ const Hero = forwardRef((
   const linkFb = contactsObj?.linkFb
 
   return (
-    <Box
-      minHeight={[640, 640, 800]}
-      width={['100%', '100%', '1440px']}
-      justifyContent='center'
-      ref={ref}
-    >
+    <Box minHeight={[640, 640, 800]} width='100%' justifyContent='center' ref={ref}>
       <Box
         backgroundColor='black'
         position='absolute'
@@ -77,7 +72,7 @@ const Hero = forwardRef((
           style={{ opacity: 0.5 }}
         />
       </Box>
-      <Layout flexBasis={[20, 20, 80]} />
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
         <Column width={[335, 335, 900]} height={[240, 240, 201]}>
@@ -158,7 +153,7 @@ const Hero = forwardRef((
         </Box>
         <Layout flexBasis={[20, 20, 30]} />
       </Column>
-      <Layout flexBasis={[20, 20, 80]} />
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
     </Box>
   )
 })
