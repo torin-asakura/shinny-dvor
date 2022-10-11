@@ -5,8 +5,9 @@ import { Swiper }     from 'swiper/react'
 
 const Slider: FC = ({ children }) => (
   <Swiper
-    slidesPerView={3}
-    spaceBetween={700}
+    slidesPerView={1.5}
+    initialSlide={2}
+    spaceBetween={40}
     loop
     centeredSlides
     pagination={{

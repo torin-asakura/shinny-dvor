@@ -20,6 +20,10 @@ export const GlobalStyles = () => (
         display: flex;
         flex-direction: column;
       }
+      
+      .swiper {
+        max-width: 1440px;
+      }
     `}
   />
 )
