@@ -22,7 +22,7 @@ export const GlobalStyles = () => (
       }
       
       .swiper {
-        max-width: 1440px;
+        max-width: 100%;
       }
     `}
   />

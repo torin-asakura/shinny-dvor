@@ -33,8 +33,8 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
 
   const sliderChildren = slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
-    <Slide key={id} description={description} price={price} time={timeOfExecution}>
-      <Image src={image} alt={alt} radius={16} />
+    <Slide key={id} description={description} price={price} time={timeOfExecution} image={image}>
+      <Image src={image.firstImage} alt={alt} radius={16} />
     </Slide>
   ))
 
@@ -56,11 +56,27 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
             </Text>
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />
-          <Slider>
-            {Children.map(sliderChildren, (child) => (
-              <SwiperSlide>{child}</SwiperSlide>
-            ))}
-          </Slider>
+          <Row display={['none', 'none', 'flex']}>
+            <Slider slidesPerView={1.5} initialSlide={2} spaceBetween={40}>
+              {Children.map(sliderChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Row>
+          <Row display={['flex', 'none', 'none']}>
+            <Slider width={375} height={345} slidesPerView={1} initialSlide={0} spaceBetween={20}>
+              {Children.map(sliderChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Row>
+          <Row display={['none', 'flex', 'none']}>
+            <Slider width={750} height={345} slidesPerView={1} initialSlide={0} spaceBetween={20}>
+              {Children.map(sliderChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Row>
           <Layout flexBasis={[80, 80, 100]} />
         </Column>
         <Layout flexBasis={20} display={['flex', 'flex', 'none']} />

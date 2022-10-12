@@ -11,6 +11,8 @@
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "framer-motion": "4.1.7",
+    "prop-types": "^15.8.1",
+    "react-before-after-slider": "^1.0.4",
     "swiper": "^8.4.3"
   },
   "devDependencies": {
@@ -26,6 +28,7 @@
     "@emotion/css": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "prop-types": "*",
     "react": "*",
     "react-dom": "*",
     "styled-system": "*"

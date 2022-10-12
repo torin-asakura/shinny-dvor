@@ -1,6 +1,7 @@
 import styled                  from '@emotion/styled'
 
 import React                   from 'react'
+import BeforeAfterSlider       from 'react-before-after-slider'
 import { FC }                  from 'react'
 import { useSwiperSlide }      from 'swiper/react'
 
@@ -22,7 +23,7 @@ import { baseWrapperStyles }   from './wrapper'
 const Container = styled(Box)(baseContainerStyles)
 const Wrapper = styled(Layout)(baseWrapperStyles)
 
-const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
+const Slide: FC<SlideProps> = ({ children, description, price, time, image }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
   const swiperSlide = useSwiperSlide()
 
@@ -30,7 +31,20 @@ const Slide: FC<SlideProps> = ({ children, description, price, time }) => {
     <Wrapper width={[335, 335, 960]} active={swiperSlide.isActive}>
       <Column fill>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
-          {children}
+          <Condition match={swiperSlide.isActive}>
+            <Layout display={['none', 'none', 'flex']}>
+              <BeforeAfterSlider
+                before={image.firstImage}
+                after={image.secondImage}
+                width={960}
+                height={540}
+              />
+            </Layout>
+            <Layout width='100%' display={['flex', 'flex', 'none']}>
+              {children}
+            </Layout>
+          </Condition>
+          <Condition match={!swiperSlide.isActive}>{children}</Condition>
         </Container>
         <Layout flexBasis={20} flexShrink={0} />
         <Condition match={swiperSlide.isActive}>

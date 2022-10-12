@@ -1,19 +1,29 @@
-import React          from 'react'
-import { FC }         from 'react'
-import { Pagination } from 'swiper'
-import { Swiper }     from 'swiper/react'
+import React           from 'react'
+import { FC }          from 'react'
+import { Pagination }  from 'swiper'
+import { Swiper }      from 'swiper/react'
 
-const Slider: FC = ({ children }) => (
+import { SliderProps } from './slider.interface'
+
+const Slider: FC<SliderProps> = ({
+  children,
+  slidesPerView,
+  initialSlide,
+  spaceBetween,
+  width,
+  height,
+}) => (
   <Swiper
-    slidesPerView={1.5}
-    initialSlide={2}
-    spaceBetween={40}
+    slidesPerView={slidesPerView}
+    initialSlide={initialSlide}
+    spaceBetween={spaceBetween}
+    width={width}
+    height={height}
     loop
     centeredSlides
     pagination={{
       clickable: true,
     }}
-    touchEventsTarget='container'
     modules={[Pagination]}
   >
     {children}

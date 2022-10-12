@@ -3925,7 +3925,9 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     framer-motion: 4.1.7
+    prop-types: ^15.8.1
     react: ^17.0.2
+    react-before-after-slider: ^1.0.4
     react-dom: ^17.0.2
     styled-system: ^5.1.5
     swiper: ^8.4.3
@@ -3933,6 +3935,7 @@ __metadata:
     "@emotion/css": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    prop-types: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -5423,6 +5426,13 @@ __metadata:
   version: 1.2.2
   resolution: "cjs-module-lexer@npm:1.2.2"
   checksum: 977f3f042bd4f08e368c890d91eecfbc4f91da0bc009a3c557bc4dfbf32022ad1141244ac1178d44de70fc9f3dea7add7cd9a658a34b9fae98a55d8f92331ce5
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.2.5":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
   languageName: node
   linkType: hard
 
@@ -8902,6 +8912,17 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"prop-types@npm:^15.8.1":
+  version: 15.8.1
+  resolution: "prop-types@npm:15.8.1"
+  dependencies:
+    loose-envify: ^1.4.0
+    object-assign: ^4.1.1
+    react-is: ^16.13.1
+  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
+  languageName: node
+  linkType: hard
+
 "property-expr@npm:^2.0.4":
   version: 2.0.4
   resolution: "property-expr@npm:2.0.4"
@@ -9020,6 +9041,30 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"react-before-after-slider@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "react-before-after-slider@npm:1.0.4"
+  dependencies:
+    classnames: ^2.2.5
+    react-block-image: ^1.0.0
+  peerDependencies:
+    prop-types: ^15.6.2
+    react: ^15.0.0 || ^16.0.0
+  checksum: cde6137442e7fb4ff8513fdc8f2af37efdda22d41fa5972009bac88999812642dc6724af7fd128aa215b7b02bc8bc0cc5b0f4e020baad7125e5d3544c01b3a1a
+  languageName: node
+  linkType: hard
+
+"react-block-image@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "react-block-image@npm:1.0.0"
+  peerDependencies:
+    prop-types: ^15.5.4
+    react: ^15.0.0 || ^16.0.0
+    react-dom: ^15.0.0 || ^16.0.0
+  checksum: 4f15026320066c27a33817c61005e870ff4987383a5d229b10390a5ea8109f49a8f79ea7d6b8e08f4813184a2967dcb2c42cdad10e6227910a0dc8e15cfd8207
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -9054,7 +9099,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
@@ -9908,12 +9953,12 @@ fsevents@^2.3.2:
   linkType: hard
 
 "swiper@npm:^8.4.3":
-  version: 8.4.3
-  resolution: "swiper@npm:8.4.3"
+  version: 8.4.4
+  resolution: "swiper@npm:8.4.4"
   dependencies:
     dom7: ^4.0.4
     ssr-window: ^4.0.2
-  checksum: 3f38e0fcd238bfd1573d3c5298db7c61aeffd20eee88cbf25ae55d61531ddaad60cc84906d432c1863ac710762e6bdbeeeb550c40067db5594a1117babc953a3
+  checksum: 1b016e2be22573f764d00963c919dc3338a47e261bce3d5b50d6e2abb5e1760c606441739b789c96a777675457e85595d76d851a80c3d34417e0c78c9886cb93
   languageName: node
   linkType: hard
 
