@@ -3924,6 +3924,7 @@ __metadata:
     "@ui/icons": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     framer-motion: 4.1.7
     prop-types: ^15.8.1
     react: ^17.0.2
@@ -4056,6 +4057,7 @@ __metadata:
   dependencies:
     "@types/react": ^17
     "@types/react-dom": ^18
+    lodash: ^4.17.21
     react: ^17.0.2
     react-dom: ^18.2.0
     react-laag: ^2.0.4

@@ -63,15 +63,15 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
               ))}
             </Slider>
           </Row>
-          <Row display={['flex', 'none', 'none']}>
-            <Slider width={375} height={345} slidesPerView={1} initialSlide={0} spaceBetween={20}>
+          <Row display={['none', 'flex', 'none']}>
+            <Slider height={345} slidesPerView={2} initialSlide={0} spaceBetween={40}>
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
             </Slider>
           </Row>
-          <Row display={['none', 'flex', 'none']}>
-            <Slider width={750} height={345} slidesPerView={1} initialSlide={0} spaceBetween={20}>
+          <Row display={['flex', 'none', 'none']}>
+            <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={0}>
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}

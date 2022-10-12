@@ -7,6 +7,11 @@ injectGlobal(`
   height: 100%;
 }
 
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
