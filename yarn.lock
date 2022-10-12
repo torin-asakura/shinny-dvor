@@ -3926,9 +3926,9 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
     framer-motion: 4.1.7
-    prop-types: ^15.8.1
     react: ^17.0.2
     react-before-after-slider: ^1.0.4
+    react-compare-image: 2.0.4
     react-dom: ^17.0.2
     styled-system: ^5.1.5
     swiper: ^8.4.3
@@ -5635,6 +5635,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
+"css-element-queries@npm:^1.0.2":
+  version: 1.2.3
+  resolution: "css-element-queries@npm:1.2.3"
+  checksum: 77a054706c0dd0294bdacfc97fa13d9baf995760296d021fccf63b1cf44a53b48ccd8eab692a221cb91fc55a2d907f7587a5f880a585c6a269a3ccd2e6cc110a
   languageName: node
   linkType: hard
 
@@ -8914,17 +8921,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
-  version: 15.8.1
-  resolution: "prop-types@npm:15.8.1"
-  dependencies:
-    loose-envify: ^1.4.0
-    object-assign: ^4.1.1
-    react-is: ^16.13.1
-  checksum: c056d3f1c057cb7ff8344c645450e14f088a915d078dcda795041765047fa080d38e5d626560ccaac94a4e16e3aa15f3557c1a9a8d1174530955e992c675e459
-  languageName: node
-  linkType: hard
-
 "property-expr@npm:^2.0.4":
   version: 2.0.4
   resolution: "property-expr@npm:2.0.4"
@@ -9067,6 +9063,19 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"react-compare-image@npm:2.0.4":
+  version: 2.0.4
+  resolution: "react-compare-image@npm:2.0.4"
+  dependencies:
+    css-element-queries: ^1.0.2
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 92a81cd9be31277fb27be3b5ec754b8013ba83406bd4b5bdf0a3aab773c5b82d8a99f723a78edc56d5fbe03ea3704c04d2ababe8e1c34d75c92de25cbe2286d7
+  languageName: node
+  linkType: hard
+
 "react-dom@npm:17":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
@@ -9101,7 +9110,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"react-is@npm:^16.13.1, react-is@npm:^16.7.0, react-is@npm:^16.8.1":
+"react-is@npm:^16.7.0, react-is@npm:^16.8.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f

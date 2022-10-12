@@ -1,7 +1,7 @@
 import styled                  from '@emotion/styled'
 
 import React                   from 'react'
-import BeforeAfterSlider       from 'react-before-after-slider'
+import ReactCompareImage       from 'react-compare-image'
 import { FC }                  from 'react'
 import { useSwiperSlide }      from 'swiper/react'
 
@@ -16,6 +16,7 @@ import { Space }               from '@ui/text'
 import { Ruble }               from '@ui/text'
 import { useIsMobile }         from '@ui/utils'
 
+import { Handle }              from '../handle'
 import { SlideProps }          from './slide.interface'
 import { messages }            from '../messages'
 import { baseContainerStyles } from './styles'
@@ -35,12 +36,28 @@ const Slide: FC<SlideProps> = ({ children, description, price, time, image }) =>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
           <Condition match={swiperSlide.isActive}>
             <Layout display={['none', 'none', 'flex']}>
-              <BeforeAfterSlider
-                before={image.firstImage}
-                after={image.secondImage}
-                width={960}
-                height={540}
-              />
+              <Box width={960} height={600} justifyContent='center' alignItems='center'>
+                <ReactCompareImage
+                  hover
+                  handle={<Handle />}
+                  leftImage={image.firstImage}
+                  rightImage={image.secondImage}
+                  leftImageCss={{ width: '960px', height: '540px' }}
+                  rightImageCss={{ width: '960px', height: '540px' }}
+                />
+              </Box>
+            </Layout>
+            <Layout display={['flex', 'flex', 'none']}>
+              <Box width={335} height={250} justifyContent='center' alignItems='center'>
+                <ReactCompareImage
+                  hover
+                  handle={<Handle />}
+                  leftImage={image.firstImage}
+                  rightImage={image.secondImage}
+                  leftImageCss={{ width: '335px', height: '540px' }}
+                  rightImageCss={{ width: '335px', height: '540px' }}
+                />
+              </Box>
             </Layout>
             <Layout width='100%' display={['flex', 'flex', 'none']}>
               {children}
