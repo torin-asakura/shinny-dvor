@@ -42,28 +42,16 @@ const Slide: FC<SlideProps> = ({ children, description, price, time, image, setA
       <Column fill>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
           <Condition match={swiperSlide.isActive}>
-            <Layout display={['none', 'none', 'flex']}>
-              <Box width={960} height={600} justifyContent='center' alignItems='center'>
+            <Layout display={['flex', 'flex', 'flex']}>
+              <Box width={[425, 425, 960]} justifyContent='center' alignItems='center'>
                 <ReactCompareImage
                   hover
                   handle={<Handle />}
                   leftImage={image.firstImage}
                   rightImage={image.secondImage}
-                  leftImageCss={{ width: '960px', height: '540px' }}
-                  rightImageCss={{ width: '960px', height: '540px' }}
+                  rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                  leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
                   sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
-                />
-              </Box>
-            </Layout>
-            <Layout display={['flex', 'flex', 'none']}>
-              <Box width={335} height={250} justifyContent='center' alignItems='center'>
-                <ReactCompareImage
-                  hover
-                  handle={<Handle />}
-                  leftImage={image.firstImage}
-                  rightImage={image.secondImage}
-                  leftImageCss={{ width: '335px', height: '540px' }}
-                  rightImageCss={{ width: '335px', height: '540px' }}
                 />
               </Box>
             </Layout>

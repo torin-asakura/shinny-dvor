@@ -5,8 +5,8 @@ import { Slide } from './slide.interface'
 const slidesMock: Slide[] = [...Array(5)].map(() => ({
   id: faker.datatype.uuid(),
   image: {
-    firstImage: faker.image.transport(960, 960, true),
-    secondImage: faker.image.transport(960, 960, true),
+    firstImage: faker.image.transport(960, 540, true),
+    secondImage: faker.image.transport(960, 540, true),
   },
   price: faker.commerce.price(290, 3990),
   description: faker.lorem.words(),
