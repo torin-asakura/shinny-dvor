@@ -282,6 +282,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/swiper@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls-ui-parts/swiper@npm:0.0.3"
+  dependencies:
+    nanoid: ^4.0.0
+  peerDependencies:
+    "@emotion/css": "*"
+    react: ^17.0.1
+    swiper: ^8.3.1
+  checksum: fd2de967ab4bcae5ab677e4ce7faf79970b438a9fe8047c55365de9245b4b4f456fc7542e640b503349c3f4798595857d6da99872130f2a6ee80c817eba4a16c
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/text@npm:0.0.7":
   version: 0.0.7
   resolution: "@atls-ui-parts/text@npm:0.0.7"
@@ -2476,7 +2489,6 @@ __metadata:
     react-helmet: ^6.1.0
     recompose: ^0.30.0
     styled-system: ^5.1.5
-    swiper: ^8.4.3
     typescript: ^4.3.5
   languageName: unknown
   linkType: soft
@@ -2749,6 +2761,7 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
+    swiper: ^8.4.3
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -3916,6 +3929,7 @@ __metadata:
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
     "@atls-ui-parts/dom": ^0.0.1
+    "@atls-ui-parts/swiper": ^0.0.3
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
@@ -8312,6 +8326,15 @@ fsevents@^2.3.2:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 4ef0969e1bbe866fc223eb32276cbccb0961900bfe79104fa5abe34361979dead8d0e061410a5c03bc3d47455685adf32c09d6f27790f4a6898fb51f7df7ec86
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "nanoid@npm:4.0.0"
+  bin:
+    nanoid: bin/nanoid.js
+  checksum: 7d5946df5c6d383694195b781ae7b5067c149d164ec71e910d6b06676309c3459b68af570b944fb5ecd5065d19df464f05700d141d70bb712ff8ca06642fd8df
   languageName: node
   linkType: hard
 

@@ -1,11 +1,11 @@
 import styled                  from '@emotion/styled'
+import { useSwiper }           from '@atls-ui-parts/swiper'
+import { useSwiperSlide }      from '@atls-ui-parts/swiper'
 
 import React                   from 'react'
 import ReactCompareImage       from 'react-compare-image'
 import { FC }                  from 'react'
 import { useEffect }           from 'react'
-import { useSwiper }           from 'swiper/react'
-import { useSwiperSlide }      from 'swiper/react'
 
 import { Condition }           from '@ui/condition'
 import { Divider }             from '@ui/divider'
@@ -49,7 +49,8 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, setActiveIndex
               alignItems='center'
             >
               <ReactCompareImage
-                handle={<Handle />}
+                handle={swiperSlide.isActive ? <Handle /> : null}
+                sliderLineWidth={swiperSlide.isActive ? 2 : 0}
                 leftImage={image.firstImage}
                 rightImage={image.secondImage}
                 sliderPositionPercentage={0.5}

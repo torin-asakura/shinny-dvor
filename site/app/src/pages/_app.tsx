@@ -1,6 +1,3 @@
-import 'swiper/css'
-import 'swiper/css/pagination'
-
 import { ApolloProvider } from '@apollo/client'
 
 import React              from 'react'

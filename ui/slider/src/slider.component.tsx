@@ -1,7 +1,8 @@
+import { Swiper }      from '@atls-ui-parts/swiper'
+
 import React           from 'react'
 import { FC }          from 'react'
 import { Keyboard }    from 'swiper'
-import { Swiper }      from 'swiper/react'
 
 import { SliderProps } from './slider.interface'
 

@@ -1,6 +1,7 @@
 import React                       from 'react'
 import { Children }                from 'react'
 import { FC }                      from 'react'
+import { Swiper as SwiperCore }    from 'swiper'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { forwardRef }              from 'react'
@@ -14,12 +15,11 @@ import { Layout }                  from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { Pagination }              from '@ui/slider'
 import { Slider }                  from '@ui/slider'
-import { Swiper as SwiperCore }    from '@ui/slider'
+import { SwiperInstanceExporter }  from '@ui/slider'
 import { Slide }                   from '@ui/slider'
 import { SwiperSlide }             from '@ui/slider'
 import { Text }                    from '@ui/text'
 import { extractFragment }         from '@globals/data'
-import { useSwiper }               from '@ui/slider'
 
 import { Slide as SlideInterface } from './data'
 import { WorksExamplesProps }      from './works-examples.interface'
@@ -53,14 +53,6 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
     />
   ))
 
-  const CarouselControlsExporter = ({ swiper, setSwiper }) => {
-    const swiperInstance = useSwiper()
-
-    if (!swiper) setSwiper(swiperInstance)
-
-    return null
-  }
-
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
       <Row justifyContent='center' alignItems='center' overflow='hidden'>
@@ -80,8 +72,8 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />
           <Row display={['none', 'none', 'flex']}>
-            <Slider slidesPerView={1.5} initialSlide={2} spaceBetween={40}>
-              <CarouselControlsExporter
+            <Slider width={1440} slidesPerView={1.5} initialSlide={2} spaceBetween={40}>
+              <SwiperInstanceExporter
                 swiper={desktopControlsSwiper}
                 setSwiper={setDesktopControlsSwiper}
               />
@@ -92,7 +84,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row display={['none', 'flex', 'none']}>
             <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={40}>
-              <CarouselControlsExporter
+              <SwiperInstanceExporter
                 swiper={tabletControlsSwiper}
                 setSwiper={setTabletControlsSwiper}
               />
@@ -103,7 +95,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row display={['flex', 'none', 'none']}>
             <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={0}>
-              <CarouselControlsExporter
+              <SwiperInstanceExporter
                 swiper={mobileControlsSwiper}
                 setSwiper={setMobileControlsSwiper}
               />

@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/dom": "^0.0.1",
+    "@atls-ui-parts/swiper": "^0.0.3",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",

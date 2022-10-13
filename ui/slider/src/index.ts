@@ -1,6 +1,4 @@
+export * from '@atls-ui-parts/swiper'
 export * from './slide'
 export * from './slider.component'
-export * from './styles'
-export * from 'swiper/react'
-export { Swiper } from 'swiper'
 export * from './pagination'
