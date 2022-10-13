@@ -34,44 +34,46 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, setActiveIndex
   const isMobile = useIsMobile()
 
   useEffect(() => {
-    setActiveIndex(swiper.realIndex)
-  }, [swiper.realIndex, setActiveIndex])
+    setActiveIndex(swiper.snapIndex)
+  }, [swiper.snapIndex, setActiveIndex])
 
   return (
     <Wrapper width={[335, 335, 960]} active={swiperSlide.isActive} isMobile={isMobile}>
       <Column fill>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
-          <Box
-            width={[425, 425, 960]}
-            display={['none', 'none', 'flex']}
-            justifyContent='center'
-            alignItems='center'
-          >
-            <ReactCompareImage
-              handle={<Handle />}
-              leftImage={image.firstImage}
-              rightImage={image.secondImage}
-              sliderPositionPercentage={0.5}
-              rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-              leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-              sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
-            />
-          </Box>
-          <Box
-            width={[425, 425, 960]}
-            display={['flex', 'flex', 'none']}
-            justifyContent='center'
-            alignItems='center'
-          >
-            <ReactCompareImage
-              handle={<Handle />}
-              leftImage={image.firstImage}
-              rightImage={image.secondImage}
-              sliderPositionPercentage={0.4}
-              rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-              leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-              sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
-            />
+          <Box>
+            <Box
+              width={960}
+              display={['none', 'none', 'flex']}
+              justifyContent='center'
+              alignItems='center'
+            >
+              <ReactCompareImage
+                handle={<Handle />}
+                leftImage={image.firstImage}
+                rightImage={image.secondImage}
+                sliderPositionPercentage={0.5}
+                rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
+              />
+            </Box>
+            <Box
+              width={425}
+              display={['flex', 'flex', 'none']}
+              justifyContent='center'
+              alignItems='center'
+            >
+              <ReactCompareImage
+                handle={<Handle />}
+                leftImage={image.firstImage}
+                rightImage={image.secondImage}
+                sliderPositionPercentage={0.4}
+                rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
+              />
+            </Box>
           </Box>
         </Container>
         <Layout flexBasis={20} flexShrink={0} />

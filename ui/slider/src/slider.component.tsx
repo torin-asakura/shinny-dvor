@@ -19,7 +19,6 @@ const Slider: FC<SliderProps> = ({
     spaceBetween={spaceBetween}
     width={width}
     height={height}
-    loop
     allowTouchMove={false}
     centeredSlides
     keyboard={{
