@@ -6,26 +6,32 @@ import { Keyboard }    from 'swiper'
 
 import { SliderProps } from './slider.interface'
 
-const Slider: FC<SliderProps> = ({
-  children,
-  slidesPerView,
-  initialSlide,
-  spaceBetween,
-  width,
-  height,
-}) => (
+const Slider: FC<SliderProps> = ({ children }) => (
   <Swiper
-    slidesPerView={slidesPerView}
-    initialSlide={initialSlide}
-    spaceBetween={spaceBetween}
-    width={width}
-    height={height}
+    loop
     allowTouchMove={false}
     centeredSlides
     keyboard={{
       enabled: true,
     }}
     modules={[Keyboard]}
+    breakpoints={{
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        initialSlide: 2,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        initialSlide: 2,
+      },
+      1024: {
+        slidesPerView: 1.5,
+        spaceBetween: 40,
+        initialSlide: 2,
+      },
+    }}
   >
     {children}
   </Swiper>

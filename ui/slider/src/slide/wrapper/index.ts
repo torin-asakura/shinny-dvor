@@ -1,1 +1,1 @@
-export * from './wrapper.styles'
+export * from './wrapper.component'

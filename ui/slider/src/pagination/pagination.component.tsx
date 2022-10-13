@@ -12,13 +12,7 @@ import { transitionContainerStyles } from './styles'
 
 const TransitionBox = styled(Box)(transitionContainerStyles)
 
-const Pagination: FC<PaginationProps> = ({
-  activeItem,
-  totalItems,
-  desktopSwiper,
-  tabletSwiper,
-  mobileSwiper,
-}) => (
+const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => (
   <Row height={32} justifyContent='center' alignItems='center'>
     {[...new Array(totalItems)].map((_, index) => (
       <>
@@ -28,9 +22,7 @@ const Pagination: FC<PaginationProps> = ({
           backgroundColor={activeItem === index ? 'primaryBlue' : 'lightGray'}
           borderRadius={50}
           onClick={() => {
-            desktopSwiper?.slideTo(index)
-            tabletSwiper?.slideTo(index)
-            mobileSwiper?.slideTo(index)
+            swiper?.slideTo(index)
           }}
           cursor='pointer'
         />

@@ -16,29 +16,26 @@ import { Row }                 from '@ui/layout'
 import { Text }                from '@ui/text'
 import { Space }               from '@ui/text'
 import { Ruble }               from '@ui/text'
-import { useIsMobile }         from '@ui/utils'
 
 import { Handle }              from '../handle'
 import { SlideProps }          from './slide.interface'
+import { Wrapper }             from './wrapper'
 import { messages }            from '../messages'
 import { baseContainerStyles } from './styles'
-import { baseWrapperStyles }   from './wrapper'
 
 const Container = styled(Box)(baseContainerStyles)
-const Wrapper = styled(Layout)(baseWrapperStyles)
 
 const Slide: FC<SlideProps> = ({ description, price, time, image, setActiveIndex }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
   const swiperSlide = useSwiperSlide()
   const swiper = useSwiper()
-  const isMobile = useIsMobile()
 
   useEffect(() => {
     setActiveIndex(swiper.snapIndex)
   }, [swiper.snapIndex, setActiveIndex])
 
   return (
-    <Wrapper width={[335, 335, 960]} active={swiperSlide.isActive} isMobile={isMobile}>
+    <Wrapper active={swiperSlide.isActive}>
       <Column fill>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
           <Box>
