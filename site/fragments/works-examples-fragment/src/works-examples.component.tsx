@@ -1,16 +1,24 @@
 import React                       from 'react'
+import { Children }                from 'react'
 import { FC }                      from 'react'
+import { Swiper as SwiperCore }    from 'swiper'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { forwardRef }              from 'react'
+import { useMemo }                 from 'react'
 
-import { Image }                   from '@ui/image'
+import { Button }                  from '@ui/button'
+import { ArrowLeftIcon }           from '@ui/icons'
+import { ArrowRightIcon }          from '@ui/icons'
 import { Box }                     from '@ui/layout'
 import { Row }                     from '@ui/layout'
 import { Layout }                  from '@ui/layout'
 import { Column }                  from '@ui/layout'
+import { Pagination }              from '@ui/slider'
 import { Slider }                  from '@ui/slider'
+import { SwiperInstanceExporter }  from '@ui/slider'
 import { Slide }                   from '@ui/slider'
+import { SwiperSlide }             from '@ui/slider'
 import { Text }                    from '@ui/text'
 import { extractFragment }         from '@globals/data'
 
@@ -23,12 +31,28 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
 
   const [slide, setSlide] = useState<SlideInterface[]>([])
 
+  const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
+
   useEffect(() => {
     setSlide([...slides])
   }, [slides])
 
   const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
+
+  const sliderChildren = useMemo(
+    () =>
+      slide.map(({ id, image, price, description, timeOfExecution }) => (
+        <Slide
+          key={id}
+          description={description}
+          price={price}
+          time={timeOfExecution}
+          image={image}
+        />
+      )),
+    [slide]
+  )
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
@@ -48,13 +72,43 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
             </Text>
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />
-          <Slider>
-            {slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
-              <Slide key={id} description={description} price={price} time={timeOfExecution}>
-                <Image src={image} alt={alt} radius={16} />
-              </Slide>
-            ))}
-          </Slider>
+          <Row justifyContent='center' alignItems='center' width={['auto', 'auto', 1440]}>
+            <Slider>
+              <SwiperInstanceExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
+              {Children.map(sliderChildren, (child) => (
+                <SwiperSlide>{child}</SwiperSlide>
+              ))}
+            </Slider>
+          </Row>
+          <Row maxWidth={200} justifyContent='center'>
+            <Layout width={32} height={32}>
+              <Button
+                color='transparent'
+                size='ghost'
+                onClick={() => {
+                  controlsSwiper?.slidePrev()
+                }}
+              >
+                <ArrowLeftIcon />
+              </Button>
+            </Layout>
+            <Pagination
+              activeItem={controlsSwiper?.activeIndex}
+              swiper={controlsSwiper}
+              totalItems={sliderChildren.length}
+            />
+            <Layout width={32} height={32}>
+              <Button
+                color='transparent'
+                size='ghost'
+                onClick={() => {
+                  controlsSwiper?.slideNext()
+                }}
+              >
+                <ArrowRightIcon />
+              </Button>
+            </Layout>
+          </Row>
           <Layout flexBasis={[80, 80, 100]} />
         </Column>
         <Layout flexBasis={20} display={['flex', 'flex', 'none']} />

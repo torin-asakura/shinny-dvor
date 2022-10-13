@@ -1,27 +1,40 @@
-import { Splide } from '@splidejs/react-splide'
+import { Swiper }      from '@atls-ui-parts/swiper'
 
-import React      from 'react'
-import { FC }     from 'react'
+import React           from 'react'
+import { FC }          from 'react'
+import { Keyboard }    from 'swiper'
 
-const Slider: FC = ({ children }) => (
-  <Splide
-    options={{
-      perPage: 3,
-      gap: 40,
-      focus: 'center',
-      type: 'loop',
-      autoWidth: true,
-      arrows: true,
-      classes: {
-        pagination: 'splide__pagination splide__pagination__custom',
-        page: 'splide__pagination__page splide__pagination__page__custom',
-        arrow: 'splide__arrow splide__arrow__custom',
-        arrows: 'splide__arrows splide__arrows_custom',
+import { SliderProps } from './slider.interface'
+
+const Slider: FC<SliderProps> = ({ children }) => (
+  <Swiper
+    loop
+    allowTouchMove={false}
+    centeredSlides
+    keyboard={{
+      enabled: true,
+    }}
+    modules={[Keyboard]}
+    breakpoints={{
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        initialSlide: 2,
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        initialSlide: 2,
+      },
+      1024: {
+        slidesPerView: 1.5,
+        spaceBetween: 40,
+        initialSlide: 2,
       },
     }}
   >
     {children}
-  </Splide>
+  </Swiper>
 )
 
 export { Slider }

@@ -21,7 +21,6 @@
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@splidejs/splide": "^3.6.12",
     "events": "^3.3.0",
     "express": "^4.17.1",
     "graphql": "^15.5.1",

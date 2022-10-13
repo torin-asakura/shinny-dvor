@@ -5,12 +5,15 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@globals/data": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/slider": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "swiper": "^8.4.3"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",

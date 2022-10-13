@@ -1,5 +1,3 @@
-import '@splidejs/splide/dist/css/splide.min.css'
-
 import { ApolloProvider } from '@apollo/client'
 
 import React              from 'react'
