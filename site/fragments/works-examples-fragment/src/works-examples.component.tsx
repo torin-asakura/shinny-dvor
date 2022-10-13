@@ -5,6 +5,7 @@ import { Swiper as SwiperCore }    from 'swiper'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { forwardRef }              from 'react'
+import { useMemo }                 from 'react'
 
 import { Button }                  from '@ui/button'
 import { ArrowLeftIcon }           from '@ui/icons'
@@ -31,7 +32,6 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
   const [slide, setSlide] = useState<SlideInterface[]>([])
 
   const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
-  const [activeIndex, setActiveIndex] = useState<number>(0)
 
   useEffect(() => {
     setSlide([...slides])
@@ -40,16 +40,19 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
   const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
 
-  const sliderChildren = slide.map(({ id, image, price, description, timeOfExecution }) => (
-    <Slide
-      key={id}
-      setActiveIndex={setActiveIndex}
-      description={description}
-      price={price}
-      time={timeOfExecution}
-      image={image}
-    />
-  ))
+  const sliderChildren = useMemo(
+    () =>
+      slide.map(({ id, image, price, description, timeOfExecution }) => (
+        <Slide
+          key={id}
+          description={description}
+          price={price}
+          time={timeOfExecution}
+          image={image}
+        />
+      )),
+    [slide]
+  )
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
@@ -90,7 +93,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
               </Button>
             </Layout>
             <Pagination
-              activeItem={activeIndex}
+              activeItem={controlsSwiper?.activeIndex}
               swiper={controlsSwiper}
               totalItems={sliderChildren.length}
             />

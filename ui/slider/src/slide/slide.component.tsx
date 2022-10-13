@@ -1,11 +1,9 @@
 import styled                  from '@emotion/styled'
-import { useSwiper }           from '@atls-ui-parts/swiper'
 import { useSwiperSlide }      from '@atls-ui-parts/swiper'
 
 import React                   from 'react'
 import ReactCompareImage       from 'react-compare-image'
 import { FC }                  from 'react'
-import { useEffect }           from 'react'
 
 import { Condition }           from '@ui/condition'
 import { Divider }             from '@ui/divider'
@@ -25,14 +23,9 @@ import { baseContainerStyles } from './styles'
 
 const Container = styled(Box)(baseContainerStyles)
 
-const Slide: FC<SlideProps> = ({ description, price, time, image, setActiveIndex }) => {
+const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
   const swiperSlide = useSwiperSlide()
-  const swiper = useSwiper()
-
-  useEffect(() => {
-    setActiveIndex(swiper.snapIndex)
-  }, [swiper.snapIndex, setActiveIndex])
 
   return (
     <Wrapper active={swiperSlide.isActive}>
