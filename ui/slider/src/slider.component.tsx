@@ -20,6 +20,7 @@ const Slider: FC<SliderProps> = ({
     width={width}
     height={height}
     loop
+    allowTouchMove={false}
     centeredSlides
     keyboard={{
       enabled: true,

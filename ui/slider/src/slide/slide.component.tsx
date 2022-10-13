@@ -27,7 +27,7 @@ import { baseWrapperStyles }   from './wrapper'
 const Container = styled(Box)(baseContainerStyles)
 const Wrapper = styled(Layout)(baseWrapperStyles)
 
-const Slide: FC<SlideProps> = ({ children, description, price, time, image, setActiveIndex }) => {
+const Slide: FC<SlideProps> = ({ description, price, time, image, setActiveIndex }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
   const swiperSlide = useSwiperSlide()
   const swiper = useSwiper()
@@ -41,25 +41,38 @@ const Slide: FC<SlideProps> = ({ children, description, price, time, image, setA
     <Wrapper width={[335, 335, 960]} active={swiperSlide.isActive} isMobile={isMobile}>
       <Column fill>
         <Container width={['100%', '100%', 960]} height={[240, 240, 540]}>
-          <Condition match={swiperSlide.isActive}>
-            <Layout display={['flex', 'flex', 'flex']}>
-              <Box width={[425, 425, 960]} justifyContent='center' alignItems='center'>
-                <ReactCompareImage
-                  hover
-                  handle={<Handle />}
-                  leftImage={image.firstImage}
-                  rightImage={image.secondImage}
-                  rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-                  leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-                  sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
-                />
-              </Box>
-            </Layout>
-            <Layout width='100%' display={['flex', 'flex', 'none']}>
-              {children}
-            </Layout>
-          </Condition>
-          <Condition match={!swiperSlide.isActive}>{children}</Condition>
+          <Box
+            width={[425, 425, 960]}
+            display={['none', 'none', 'flex']}
+            justifyContent='center'
+            alignItems='center'
+          >
+            <ReactCompareImage
+              handle={<Handle />}
+              leftImage={image.firstImage}
+              rightImage={image.secondImage}
+              sliderPositionPercentage={0.5}
+              rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+              leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+              sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
+            />
+          </Box>
+          <Box
+            width={[425, 425, 960]}
+            display={['flex', 'flex', 'none']}
+            justifyContent='center'
+            alignItems='center'
+          >
+            <ReactCompareImage
+              handle={<Handle />}
+              leftImage={image.firstImage}
+              rightImage={image.secondImage}
+              sliderPositionPercentage={0.4}
+              rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+              leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+              sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
+            />
+          </Box>
         </Container>
         <Layout flexBasis={20} flexShrink={0} />
         <Condition match={swiperSlide.isActive}>

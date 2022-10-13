@@ -8,7 +8,6 @@ import { forwardRef }              from 'react'
 import { Button }                  from '@ui/button'
 import { ArrowLeftIcon }           from '@ui/icons'
 import { ArrowRightIcon }          from '@ui/icons'
-import { Image }                   from '@ui/image'
 import { Box }                     from '@ui/layout'
 import { Row }                     from '@ui/layout'
 import { Layout }                  from '@ui/layout'
@@ -43,7 +42,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
   const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
 
-  const sliderChildren = slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
+  const sliderChildren = slide.map(({ id, image, price, description, timeOfExecution }) => (
     <Slide
       key={id}
       setActiveIndex={setActiveIndex}
@@ -51,9 +50,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
       price={price}
       time={timeOfExecution}
       image={image}
-    >
-      <Image src={image.firstImage} alt={alt} radius={16} />
-    </Slide>
+    />
   ))
 
   const CarouselControlsExporter = ({ swiper, setSwiper }) => {
@@ -94,7 +91,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
             </Slider>
           </Row>
           <Row display={['none', 'flex', 'none']}>
-            <Slider height={345} slidesPerView={2} initialSlide={2} spaceBetween={40}>
+            <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={40}>
               <CarouselControlsExporter
                 swiper={tabletControlsSwiper}
                 setSwiper={setTabletControlsSwiper}
