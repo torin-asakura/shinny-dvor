@@ -126,7 +126,13 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
                 <ArrowLeftIcon />
               </Button>
             </Layout>
-            <Pagination activeItem={activeIndex} totalItems={sliderChildren.length} />
+            <Pagination
+              activeItem={activeIndex}
+              desktopSwiper={desktopControlsSwiper}
+              tabletSwiper={tabletControlsSwiper}
+              mobileSwiper={mobileControlsSwiper}
+              totalItems={sliderChildren.length}
+            />
             <Layout width={32} height={32}>
               <Button
                 color='transparent'
