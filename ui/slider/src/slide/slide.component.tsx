@@ -3,6 +3,8 @@ import styled                  from '@emotion/styled'
 import React                   from 'react'
 import ReactCompareImage       from 'react-compare-image'
 import { FC }                  from 'react'
+import { useEffect }           from 'react'
+import { useSwiper }           from 'swiper/react'
 import { useSwiperSlide }      from 'swiper/react'
 
 import { Condition }           from '@ui/condition'
@@ -25,10 +27,15 @@ import { baseWrapperStyles }   from './wrapper'
 const Container = styled(Box)(baseContainerStyles)
 const Wrapper = styled(Layout)(baseWrapperStyles)
 
-const Slide: FC<SlideProps> = ({ children, description, price, time, image }) => {
+const Slide: FC<SlideProps> = ({ children, description, price, time, image, setActiveIndex }) => {
   const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
   const swiperSlide = useSwiperSlide()
+  const swiper = useSwiper()
   const isMobile = useIsMobile()
+
+  useEffect(() => {
+    setActiveIndex(swiper.realIndex)
+  }, [swiper.realIndex, setActiveIndex])
 
   return (
     <Wrapper width={[335, 335, 960]} active={swiperSlide.isActive} isMobile={isMobile}>
@@ -44,6 +51,7 @@ const Slide: FC<SlideProps> = ({ children, description, price, time, image }) =>
                   rightImage={image.secondImage}
                   leftImageCss={{ width: '960px', height: '540px' }}
                   rightImageCss={{ width: '960px', height: '540px' }}
+                  sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
                 />
               </Box>
             </Layout>

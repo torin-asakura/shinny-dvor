@@ -5,16 +5,22 @@ import { useEffect }               from 'react'
 import { useState }                from 'react'
 import { forwardRef }              from 'react'
 
+import { Button }                  from '@ui/button'
+import { ArrowLeftIcon }           from '@ui/icons'
+import { ArrowRightIcon }          from '@ui/icons'
 import { Image }                   from '@ui/image'
 import { Box }                     from '@ui/layout'
 import { Row }                     from '@ui/layout'
 import { Layout }                  from '@ui/layout'
 import { Column }                  from '@ui/layout'
+import { Pagination }              from '@ui/slider'
 import { Slider }                  from '@ui/slider'
+import { Swiper as SwiperCore }    from '@ui/slider'
 import { Slide }                   from '@ui/slider'
 import { SwiperSlide }             from '@ui/slider'
 import { Text }                    from '@ui/text'
 import { extractFragment }         from '@globals/data'
+import { useSwiper }               from '@ui/slider'
 
 import { Slide as SlideInterface } from './data'
 import { WorksExamplesProps }      from './works-examples.interface'
@@ -25,6 +31,8 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
 
   const [slide, setSlide] = useState<SlideInterface[]>([])
 
+  const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
   useEffect(() => {
     setSlide([...slides])
   }, [slides])
@@ -33,10 +41,25 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
 
   const sliderChildren = slide.map(({ id, alt, image, price, description, timeOfExecution }) => (
-    <Slide key={id} description={description} price={price} time={timeOfExecution} image={image}>
+    <Slide
+      key={id}
+      setActiveIndex={setActiveIndex}
+      description={description}
+      price={price}
+      time={timeOfExecution}
+      image={image}
+    >
       <Image src={image.firstImage} alt={alt} radius={16} />
     </Slide>
   ))
+
+  const CarouselControlsExporter = ({ swiper, setSwiper }) => {
+    const swiperInstance = useSwiper()
+
+    if (!swiper) setSwiper(swiperInstance)
+
+    return null
+  }
 
   return (
     <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
@@ -58,6 +81,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           <Layout flexBasis={[32, 32, 40]} />
           <Row display={['none', 'none', 'flex']}>
             <Slider slidesPerView={1.5} initialSlide={2} spaceBetween={40}>
+              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
@@ -65,6 +89,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row display={['none', 'flex', 'none']}>
             <Slider height={345} slidesPerView={2} initialSlide={0} spaceBetween={40}>
+              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
@@ -72,10 +97,24 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row display={['flex', 'none', 'none']}>
             <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={0}>
+              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
             </Slider>
+          </Row>
+          <Row maxWidth={200} justifyContent='center'>
+            <Layout width={32} height={32}>
+              <Button color='transparent' size='ghost' onClick={() => controlsSwiper?.slidePrev()}>
+                <ArrowLeftIcon />
+              </Button>
+            </Layout>
+            <Pagination activeItem={activeIndex} totalItems={sliderChildren.length} />
+            <Layout width={32} height={32}>
+              <Button color='transparent' size='ghost' onClick={() => controlsSwiper?.slideNext()}>
+                <ArrowRightIcon />
+              </Button>
+            </Layout>
           </Row>
           <Layout flexBasis={[80, 80, 100]} />
         </Column>

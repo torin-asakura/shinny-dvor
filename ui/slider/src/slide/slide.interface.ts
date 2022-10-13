@@ -6,4 +6,5 @@ export interface SlideProps {
     firstImage: string
     secondImage: string
   }
+  setActiveIndex: (activeIndex: number) => void
 }

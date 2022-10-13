@@ -6872,6 +6872,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
+            ["@ui/button", "virtual:5c16a105225f016d4e0e5dbf173a1052b448998fb860439ae1b3ca4fb10ab62322ad1690be89a9e51457b96c327085460057126d870df5b7ee4418ca768cd926#workspace:ui/button"],\
+            ["@ui/icons", "virtual:044800f532dd10cdacf93495803a03eb95ec3e6bd3d968238e2752e9b4dd3f6ec7acafdeb9c7054bca6d0d83faeaee7b9b1299d039837f8020c1d90b78444f16#workspace:ui/icons"],\
             ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:ui/layout"],\
             ["@ui/slider", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:ui/slider"],\
@@ -6903,6 +6905,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/emotion__styled", null],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
+            ["@ui/button", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/button"],\
+            ["@ui/icons", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/icons"],\
             ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/layout"],\
             ["@ui/slider", "virtual:b35ba6360ca8a77a44c4d5ec585eee203fe146b3cd864ed5aa4c34db11a97f78de50d531bab9b230b7493dbb2e57600b0699b6a34b7885b75766746c460d3b91#workspace:ui/slider"],\
@@ -6930,6 +6934,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@globals/data", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:globals/data"],\
             ["@types/react", "npm:17.0.47"],\
             ["@types/react-dom", "npm:17.0.17"],\
+            ["@ui/button", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/button"],\
+            ["@ui/icons", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/icons"],\
             ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/layout"],\
             ["@ui/slider", "virtual:b35ba6360ca8a77a44c4d5ec585eee203fe146b3cd864ed5aa4c34db11a97f78de50d531bab9b230b7493dbb2e57600b0699b6a34b7885b75766746c460d3b91#workspace:ui/slider"],\

@@ -1,6 +1,6 @@
 import React           from 'react'
 import { FC }          from 'react'
-import { Pagination }  from 'swiper'
+import { Keyboard }    from 'swiper'
 import { Swiper }      from 'swiper/react'
 
 import { SliderProps } from './slider.interface'
@@ -21,10 +21,10 @@ const Slider: FC<SliderProps> = ({
     height={height}
     loop
     centeredSlides
-    pagination={{
-      clickable: true,
+    keyboard={{
+      enabled: true,
     }}
-    modules={[Pagination]}
+    modules={[Keyboard]}
   >
     {children}
   </Swiper>
