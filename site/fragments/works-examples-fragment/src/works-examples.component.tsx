@@ -31,8 +31,11 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
 
   const [slide, setSlide] = useState<SlideInterface[]>([])
 
-  const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
+  const [desktopControlsSwiper, setDesktopControlsSwiper] = useState<SwiperCore | null>(null)
+  const [tabletControlsSwiper, setTabletControlsSwiper] = useState<SwiperCore | null>(null)
+  const [mobileControlsSwiper, setMobileControlsSwiper] = useState<SwiperCore | null>(null)
   const [activeIndex, setActiveIndex] = useState<number>(0)
+
   useEffect(() => {
     setSlide([...slides])
   }, [slides])
@@ -81,15 +84,21 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           <Layout flexBasis={[32, 32, 40]} />
           <Row display={['none', 'none', 'flex']}>
             <Slider slidesPerView={1.5} initialSlide={2} spaceBetween={40}>
-              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
+              <CarouselControlsExporter
+                swiper={desktopControlsSwiper}
+                setSwiper={setDesktopControlsSwiper}
+              />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
             </Slider>
           </Row>
           <Row display={['none', 'flex', 'none']}>
-            <Slider height={345} slidesPerView={2} initialSlide={0} spaceBetween={40}>
-              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
+            <Slider height={345} slidesPerView={2} initialSlide={2} spaceBetween={40}>
+              <CarouselControlsExporter
+                swiper={tabletControlsSwiper}
+                setSwiper={setTabletControlsSwiper}
+              />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
@@ -97,7 +106,10 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row display={['flex', 'none', 'none']}>
             <Slider height={345} slidesPerView={1} initialSlide={2} spaceBetween={0}>
-              <CarouselControlsExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
+              <CarouselControlsExporter
+                swiper={mobileControlsSwiper}
+                setSwiper={setMobileControlsSwiper}
+              />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
@@ -105,13 +117,29 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef(({ fragmentsData }, ref
           </Row>
           <Row maxWidth={200} justifyContent='center'>
             <Layout width={32} height={32}>
-              <Button color='transparent' size='ghost' onClick={() => controlsSwiper?.slidePrev()}>
+              <Button
+                color='transparent'
+                size='ghost'
+                onClick={() => {
+                  desktopControlsSwiper?.slidePrev()
+                  mobileControlsSwiper?.slidePrev()
+                  tabletControlsSwiper?.slidePrev()
+                }}
+              >
                 <ArrowLeftIcon />
               </Button>
             </Layout>
             <Pagination activeItem={activeIndex} totalItems={sliderChildren.length} />
             <Layout width={32} height={32}>
-              <Button color='transparent' size='ghost' onClick={() => controlsSwiper?.slideNext()}>
+              <Button
+                color='transparent'
+                size='ghost'
+                onClick={() => {
+                  desktopControlsSwiper?.slideNext()
+                  mobileControlsSwiper?.slideNext()
+                  tabletControlsSwiper?.slideNext()
+                }}
+              >
                 <ArrowRightIcon />
               </Button>
             </Layout>
