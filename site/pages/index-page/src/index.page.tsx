@@ -20,7 +20,7 @@ interface Props {
 }
 
 const IndexPage: FC<Props> = ({
-  data: { contacts, posts, navigation, availableRadii, services, fragments, ui },
+  data: { contacts, posts, navigation, availableRadii, services, fragments, ui, workResults },
 }) => {
   const [active, setActive] = useState<number>(0)
 
@@ -41,7 +41,7 @@ const IndexPage: FC<Props> = ({
   })
 
   return (
-    <Column width='100%'>
+    <Column width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <Navigation
@@ -76,7 +76,11 @@ const IndexPage: FC<Props> = ({
         fragmentsData={fragments}
         {...getObserverOptions('infographics')}
       />
-      <WorksExamples fragmentsData={fragments} {...getObserverOptions('works-examples')} />
+      <WorksExamples
+        workResultsData={workResults}
+        fragmentsData={fragments}
+        {...getObserverOptions('works-examples')}
+      />
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )

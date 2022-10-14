@@ -3,7 +3,7 @@ interface ContactAddons {
   email: string
   linkFb: string
   linkVk: string
-  role: string
+  fragmentId: string
   telephone: string
   title: string
   workingHours: string
@@ -13,7 +13,7 @@ interface Fragment {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
     highlightedtext: string
   }
 }

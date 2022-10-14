@@ -9,7 +9,7 @@ const GET_FRAGMENTS = gql`
         contentAddons {
           title
           content
-          role
+          fragmentId
           highlightedtext
         }
       }

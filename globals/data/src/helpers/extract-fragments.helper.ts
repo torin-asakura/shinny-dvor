@@ -1,4 +1,4 @@
-const extractFragments = (role: string, params: string, fragments) =>
-  fragments?.filter((fragment) => fragment[params].role === role)
+const extractFragments = (id: string, params: string, fragments) =>
+  fragments?.filter((fragment) => fragment[params].fragmentId === id)
 
 export { extractFragments }

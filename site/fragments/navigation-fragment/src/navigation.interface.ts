@@ -9,14 +9,14 @@ interface NavigationData {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
   }
 }
 
 export interface AvailableRadiusData {
   contentAddons: {
     title: string
-    role: string
+    fragmentId: string
   }
 }
 
@@ -24,7 +24,7 @@ export interface Fragment {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
     highlightedtext: string
   }
 }

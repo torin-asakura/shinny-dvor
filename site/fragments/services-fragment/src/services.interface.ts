@@ -1,14 +1,14 @@
 export interface ContentAddons {
   contentAddons: {
     title: string
-    role: string
+    fragmentId: string
   }
 }
 
 export interface ServicesParams {
   title: string
   description: string
-  role: string
+  fragmentId: string
   addon: string
   variant: string
   image: {
@@ -58,7 +58,7 @@ interface Fragment {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
     highlightedtext: string
   }
 }

@@ -18,13 +18,11 @@ import { Ruble }               from '@ui/text'
 import { Handle }              from '../handle'
 import { SlideProps }          from './slide.interface'
 import { Wrapper }             from './wrapper'
-import { messages }            from '../messages'
 import { baseContainerStyles } from './styles'
 
 const Container = styled(Box)(baseContainerStyles)
 
-const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
-  const [, value, suffix] = new Intl.RelativeTimeFormat('ru').format(time, 'day').split(' ')
+const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, timeTitle }) => {
   const swiperSlide = useSwiperSlide()
 
   return (
@@ -41,11 +39,11 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
               <ReactCompareImage
                 handle={swiperSlide.isActive ? <Handle /> : null}
                 sliderLineWidth={swiperSlide.isActive ? 2 : 0}
-                leftImage={image.firstImage}
-                rightImage={image.secondImage}
+                leftImage={image.firstPhoto.sourceUrl}
+                rightImage={image.secondPhoto.sourceUrl}
                 sliderPositionPercentage={0.5}
-                rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-                leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                rightImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
+                leftImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
                 sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
               />
             </Box>
@@ -56,12 +54,12 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
               alignItems='center'
             >
               <ReactCompareImage
-                handle={<Handle />}
-                leftImage={image.firstImage}
-                rightImage={image.secondImage}
+                handle={swiperSlide.isActive ? <Handle /> : null}
+                leftImage={image.firstPhoto.sourceUrl}
+                rightImage={image.secondPhoto.sourceUrl}
                 sliderPositionPercentage={0.4}
-                rightImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
-                leftImageCss={{ objectFit: 'contain', objectPosition: 'top' }}
+                rightImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
+                leftImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
                 sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
               />
             </Box>
@@ -78,7 +76,7 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
             <Layout flexGrow={1} />
             <Layout>
               <Text fontSize='normal' color='darkGray'>
-                {messages.cost}
+                {priceTitle}
               </Text>
               <Space />
               <Text fontSize='normal' color='black' fontWeight='medium'>
@@ -90,13 +88,11 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
             <Layout flexBasis={40} />
             <Layout>
               <Text fontSize='normal' color='darkGray'>
-                {messages.time}
+                {timeTitle}
               </Text>
               <Space />
               <Text fontSize='normal' color='black' fontWeight='medium'>
-                {value}
-                <Space />
-                {suffix}
+                {time}
               </Text>
             </Layout>
           </Row>
@@ -116,7 +112,7 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
             <Row>
               <Layout>
                 <Text fontSize='normal' color='darkGray'>
-                  {messages.cost}
+                  {priceTitle}
                 </Text>
                 <Space />
                 <Text fontSize='normal' color='black' fontWeight='medium'>
@@ -128,13 +124,11 @@ const Slide: FC<SlideProps> = ({ description, price, time, image }) => {
               <Layout flexBasis={40} />
               <Layout>
                 <Text fontSize='normal' color='darkGray'>
-                  {messages.time}
+                  {timeTitle}
                 </Text>
                 <Space />
                 <Text fontSize='normal' color='black' fontWeight='medium'>
-                  {value}
-                  <Space />
-                  {suffix}
+                  {time}
                 </Text>
               </Layout>
             </Row>

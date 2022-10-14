@@ -11,7 +11,7 @@ const GET_UI = gql`
             altText
             sourceUrl
           }
-          role
+          fragmentId
         }
       }
     }

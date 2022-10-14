@@ -6461,6 +6461,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/styled-system", "npm:5.1.13"],\
             ["@ui/intersection-observer", "virtual:3ac8bd8c7755348c39a17aa6ee04b16a5f61b90e19e58c0b08fef42a5b8f06713f8aa68037d0c6b682f79bfe500251d4eff9c7ab436c5d27c0f42e322890c71c#workspace:ui/intersection-observer"],\
             ["@ui/layout", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:ui/layout"],\
+            ["@ui/utils", "virtual:6f1239df6549170dd9dc091e98c687f0fee91cfc0d2a702a97faca15c238455a344d2d94717320461c0d598a60d89939288f589562dd7577efc438f4060cf636#workspace:ui/utils"],\
             ["next", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:12.1.0"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"],\
@@ -6504,6 +6505,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-dom", "npm:17.0.17"],\
             ["@ui/intersection-observer", "virtual:fdd99aa723081aa6c94646de5997d145be3e36be4511688970cf773f3144497040a01c32fc04e73d6e766fd1e4f53d3f64a924098416d1b318cc1c9b4db95cae#workspace:ui/intersection-observer"],\
             ["@ui/layout", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#workspace:ui/layout"],\
+            ["@ui/utils", "virtual:6f1239df6549170dd9dc091e98c687f0fee91cfc0d2a702a97faca15c238455a344d2d94717320461c0d598a60d89939288f589562dd7577efc438f4060cf636#workspace:ui/utils"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"]\
           ],\
@@ -6861,6 +6863,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:5b432f025b17beb7ad142dbb837adac275d8541324275659be3784115986d3cc7ff7229ae9834620c8164b8a337d5e226945b9c90c6cefcc40dd22bc7e081bef#workspace:ui/layout"],\
             ["@ui/text", "virtual:078b2ebce147d86b07e6d526d657a582bb54db0d1caa4ac727b1b9af00348cf415ba18187220cbd69b47bec6584523e63b7afe30d0d7172a3e3d4c53b9abd224#workspace:ui/text"],\
+            ["@ui/utils", "virtual:6f1239df6549170dd9dc091e98c687f0fee91cfc0d2a702a97faca15c238455a344d2d94717320461c0d598a60d89939288f589562dd7577efc438f4060cf636#workspace:ui/utils"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"],\
             ["react-helmet", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:6.1.0"],\
@@ -6905,6 +6908,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/image", "workspace:ui/image"],\
             ["@ui/layout", "virtual:17dc14acd2f09cba54ac44497130b75920185f0852004cff8f2b001dd1d1ed33849aeefbc91f2acb505e3a69cd07ead0b19cde6af3e4a632e84e9df63fec6059#workspace:ui/layout"],\
             ["@ui/text", "virtual:83398bac818b18a948daacbc67827807ea9ab17e946d0599d938fa0546e4de14e73f78667163fb168ab53281afe2de189b77f269e17cf46e68ba9d36b6759b67#workspace:ui/text"],\
+            ["@ui/utils", "virtual:6f1239df6549170dd9dc091e98c687f0fee91cfc0d2a702a97faca15c238455a344d2d94717320461c0d598a60d89939288f589562dd7577efc438f4060cf636#workspace:ui/utils"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:17.0.2"]\
           ],\

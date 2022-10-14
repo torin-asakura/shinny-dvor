@@ -8,7 +8,7 @@ const GET_SERVICES = gql`
       nodes {
         servicesParams {
           title
-          role
+          fragmentId
         }
       }
     }

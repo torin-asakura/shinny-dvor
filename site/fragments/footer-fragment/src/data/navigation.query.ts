@@ -7,7 +7,7 @@ const GET_NAVIGATION = gql`
         contentAddons {
           title
           content
-          role
+          fragmentId
         }
       }
     }

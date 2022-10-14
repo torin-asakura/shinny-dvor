@@ -8,7 +8,7 @@ const GET_AVAILABLE_RADII = gql`
       nodes {
         contentAddons {
           title
-          role
+          fragmentId
         }
       }
     }

@@ -16,6 +16,7 @@ import { scrollTop }      from '@shared/utils'
 import { radiusVar }      from '@store/chosen-radius'
 import { serviceVar }     from '@store/services'
 import { screenVar }      from '@store/services'
+import { useHover }       from '@ui/utils'
 
 import { ItemProps }      from './item.interface'
 
@@ -31,6 +32,8 @@ const Item: FC<ItemProps> = ({
 }) => {
   const radius = useReactiveVar<string>(radiusVar)
   const cost = price[radius.toLowerCase()]
+
+  const [hover, hoverProps] = useHover()
 
   return (
     <Box
@@ -60,6 +63,7 @@ const Item: FC<ItemProps> = ({
               additionalservice,
             })
           }}
+          {...hoverProps}
         >
           <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
           <Column width='100%' alignItems='center'>
@@ -70,7 +74,13 @@ const Item: FC<ItemProps> = ({
             <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
             <Row>
               <Row width={['100%', '100%', 232]}>
-                <Text display='inline' lineHeight='grown' fontWeight='medium' fontSize='large'>
+                <Text
+                  color={hover ? 'blue' : 'black'}
+                  display='inline'
+                  lineHeight='grown'
+                  fontWeight='medium'
+                  fontSize='large'
+                >
                   {serviceName}
                   <Space />
                   {addon ? '' : radius}
@@ -80,7 +90,12 @@ const Item: FC<ItemProps> = ({
             <Layout flexBasis={8} />
             <Row>
               <Layout width='100%'>
-                <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
+                <Text
+                  color={hover ? 'blue' : 'black'}
+                  lineHeight='grown'
+                  fontWeight='medium'
+                  fontSize='large'
+                >
                   {cost}
                   <Space />
                   <Ruble />

@@ -19,14 +19,14 @@ const Selector: FC<SelectorProps> = ({
   <Box
     width={908}
     height={64}
-    bottom={-10}
-    right={180}
-    position='absolute'
+    bottom={18}
+    position='fixed'
     borderRadius='32px'
     backgroundColor='white'
     alignItems='center'
     justifyContent='center'
     boxShadow='deep'
+    zIndex={2000}
   >
     <Row>
       <Layout flexBasis={24} />

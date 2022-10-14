@@ -1,9 +1,15 @@
 export interface SlideProps {
   description: string
-  price: string
-  time: number
+  price: number
+  time: string
+  priceTitle: string
+  timeTitle: string
   image: {
-    firstImage: string
-    secondImage: string
+    firstPhoto: {
+      sourceUrl: string
+    }
+    secondPhoto: {
+      sourceUrl: string
+    }
   }
 }

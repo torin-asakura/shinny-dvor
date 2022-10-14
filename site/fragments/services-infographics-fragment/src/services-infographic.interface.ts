@@ -2,7 +2,7 @@ export interface Fragment {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
     highlightedtext: string
   }
 }
@@ -13,7 +13,7 @@ interface Ui {
       altText: string
       sourceUrl: string
     }
-    role: string
+    fragmentId: string
   }
 }
 

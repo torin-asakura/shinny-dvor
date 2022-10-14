@@ -9,7 +9,7 @@ const GET_SERVICES = gql`
         servicesParams {
           title
           description
-          role
+          fragmentId
           addon
           variant
           image {

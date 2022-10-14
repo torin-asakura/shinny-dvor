@@ -5,6 +5,7 @@ import { runContactsQuery }       from '@globals/data'
 import { runUiQuery }             from '@globals/data'
 
 import { runServicesQuery }       from './queries'
+import { runWorkResultsQuery }    from './queries'
 import { runPostsQuery }          from './queries'
 
 export const getServerSideProps = async () => {
@@ -16,6 +17,7 @@ export const getServerSideProps = async () => {
     runServicesQuery(),
     runFragmentsQuery(),
     runUiQuery(),
+    runWorkResultsQuery(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

@@ -58,7 +58,13 @@ const Hero = forwardRef((
   const linkFb = contactsObj?.linkFb
 
   return (
-    <Box minHeight={[640, 640, 800]} width='100%' justifyContent='center' ref={ref}>
+    <Box
+      minHeight={[640, 640, 800]}
+      maxWidth={['100%', '100%', 1440]}
+      width='100%'
+      justifyContent='center'
+      ref={ref}
+    >
       <Box
         backgroundColor='black'
         position='absolute'
@@ -107,11 +113,7 @@ const Hero = forwardRef((
         <Layout flexBasis={[40, 40, 48]} />
         <Divider backgroundColor='milkGray' />
         <Layout flexBasis={[20, 20, 30]} />
-        <Box
-          width='100%'
-          position='relative'
-          justifyContent={['center', 'center', 'space-between']}
-        >
+        <Box width='100%' position='relative' justifyContent={['center', 'center', 'center']}>
           <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
             <Link href='#services'>
               <Row width={150}>
@@ -128,7 +130,7 @@ const Hero = forwardRef((
             </Link>
           </Box>
           <Condition match={openSelector && !radius.length}>
-            <Box width='100%' display={['none', 'none', 'flex']}>
+            <Box width='100%' justifyContent='center' display={['none', 'none', 'flex']}>
               <Selector
                 closeTitle={closeTitle}
                 selectDiameterTitle={selectDiameterTitle}

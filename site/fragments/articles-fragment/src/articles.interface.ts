@@ -15,7 +15,7 @@ export interface Fragment {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
     highlightedtext: string
   }
 }
@@ -24,7 +24,7 @@ interface NavigationItem {
   contentAddons: {
     title: string
     content: string
-    role: string
+    fragmentId: string
   }
 }
 

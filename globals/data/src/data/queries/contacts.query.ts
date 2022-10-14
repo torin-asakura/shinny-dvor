@@ -13,7 +13,7 @@ const GET_CONTACTS = gql`
           linkVk
           telephone
           workinghours
-          role
+          fragmentId
         }
       }
     }

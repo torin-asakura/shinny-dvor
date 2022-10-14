@@ -47,8 +47,14 @@ const Services: FC<ServicesProps> = forwardRef((
   const allServicesTitle = extractFragment('contentAddons', 'all-services', fragmentsData).title
 
   return (
-    <Box width='100%' justifyContent='center' id='services' ref={ref}>
-      <Column width='100%'>
+    <Box
+      maxWidth={['100%', '100%', 1440]}
+      width='100%'
+      justifyContent='center'
+      id='services'
+      ref={ref}
+    >
+      <Column fill>
         <Layout flexBasis={[48, 48, 100]} />
         <Row>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />

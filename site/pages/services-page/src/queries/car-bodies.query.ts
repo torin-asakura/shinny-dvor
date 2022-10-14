@@ -8,7 +8,7 @@ const GET_CAR_BODIES = gql`
       nodes {
         contentAddons {
           title
-          role
+          fragmentId
         }
       }
     }

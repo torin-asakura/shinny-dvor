@@ -45,12 +45,12 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
         <Divider backgroundColor='gray' />
-        <Box width='100%'>
+        <Box maxWidth={['100%', '100%', 1440]} width='100%'>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 40]} />
             <Row justifyContent='space-between' alignItems='center'>
-              <Box width='100%' justifyContent='space-between'>
+              <Box width='100%'>
                 <FooterLogo />
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
@@ -87,7 +87,7 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Box>
         <Divider backgroundColor='gray' />
-        <Box alignItems='center' width='100%'>
+        <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
           <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 32]} />
