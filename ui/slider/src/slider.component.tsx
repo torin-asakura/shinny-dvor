@@ -29,7 +29,7 @@ const Slider: FC<SliderProps> = ({ children }) => (
       1024: {
         slidesPerView: 1.5,
         spaceBetween: 40,
-        initialSlide: 2,
+        initialSlide: 0,
       },
     }}
   >

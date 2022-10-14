@@ -29,6 +29,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   ref: any
 ) => {
   const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number>(0)
 
   const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
@@ -47,6 +48,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
           image={photos}
           priceTitle={priceTitle}
           timeTitle={timeTitle}
+          setActiveIndex={setActiveIndex}
         />
       )),
     [slides, priceTitle, timeTitle]
@@ -91,7 +93,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
               </Button>
             </Layout>
             <Pagination
-              activeItem={controlsSwiper?.activeIndex}
+              activeItem={activeIndex}
               swiper={controlsSwiper}
               totalItems={sliderChildren.length}
             />

@@ -12,4 +12,5 @@ export interface SlideProps {
       sourceUrl: string
     }
   }
+  setActiveIndex: (activeIndex: number) => void
 }

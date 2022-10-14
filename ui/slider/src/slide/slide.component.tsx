@@ -1,12 +1,13 @@
 import styled                  from '@emotion/styled'
 import { useSwiperSlide }      from '@atls-ui-parts/swiper'
+import { useSwiper }           from '@atls-ui-parts/swiper'
 
 import React                   from 'react'
 import ReactCompareImage       from 'react-compare-image'
 import { FC }                  from 'react'
+import { useEffect }           from 'react'
 
 import { Condition }           from '@ui/condition'
-import { Divider }             from '@ui/divider'
 import { Layout }              from '@ui/layout'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
@@ -22,8 +23,21 @@ import { baseContainerStyles } from './styles'
 
 const Container = styled(Box)(baseContainerStyles)
 
-const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, timeTitle }) => {
+const Slide: FC<SlideProps> = ({
+  description,
+  setActiveIndex,
+  price,
+  time,
+  image,
+  priceTitle,
+  timeTitle,
+}) => {
   const swiperSlide = useSwiperSlide()
+  const swiper = useSwiper()
+
+  useEffect(() => {
+    setActiveIndex(swiper.activeIndex)
+  }, [swiper.activeIndex, setActiveIndex])
 
   return (
     <Wrapper active={swiperSlide.isActive}>
@@ -100,14 +114,12 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, ti
         <Layout display={['flex', 'flex', 'none']}>
           <Column fill>
             <Row>
-              <Text fontSize='normal' color='darkGray'>
+              <Text lineHeight='grown' fontSize='normal' color='darkGray'>
                 {description}
               </Text>
             </Row>
             <Layout flexBasis={16} />
-            <Row>
-              <Divider color='lightGray' />
-            </Row>
+            <Box width='100%' backgroundColor='lightGray' height={1} />
             <Layout flexBasis={16} />
             <Row>
               <Layout>
@@ -122,7 +134,7 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, ti
                 </Text>
               </Layout>
               <Layout flexBasis={40} />
-              <Layout>
+              <Layout width='100%' justifyContent='flex-end'>
                 <Text fontSize='normal' color='darkGray'>
                   {timeTitle}
                 </Text>
