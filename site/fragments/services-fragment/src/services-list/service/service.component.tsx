@@ -62,7 +62,7 @@ const Service: FC<ServiceProps> = ({
               <Text
                 fontWeight='medium'
                 fontSize='xl'
-                color={hover ? 'blue' : 'black'}
+                color={hover && isSizeChosen ? 'blue' : 'black'}
                 opacity={isSizeChosen ? 1 : 0.3}
               >
                 {title}
@@ -76,7 +76,7 @@ const Service: FC<ServiceProps> = ({
             </Layout>
           </Column>
           <Column width={200} display={['none', 'none', 'flex']}>
-            <Condition match={hover as boolean}>
+            <Condition match={(hover as boolean) && isSizeChosen}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>
                   <Text fontWeight='medium'>
