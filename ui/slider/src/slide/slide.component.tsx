@@ -41,9 +41,9 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, ti
                 sliderLineWidth={swiperSlide.isActive ? 2 : 0}
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
-                sliderPositionPercentage={0.5}
-                rightImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
-                leftImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
+                sliderPositionPercentage={0.49}
+                rightImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
+                leftImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
                 sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
               />
             </Box>
@@ -58,8 +58,8 @@ const Slide: FC<SlideProps> = ({ description, price, time, image, priceTitle, ti
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
                 sliderPositionPercentage={0.4}
-                rightImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
-                leftImageCss={{ objectFit: 'contain', objectPosition: 'center' }}
+                rightImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
+                leftImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
                 sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
               />
             </Box>
