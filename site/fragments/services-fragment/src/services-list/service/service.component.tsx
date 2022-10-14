@@ -53,9 +53,8 @@ const Service: FC<ServiceProps> = ({
         })
         route.push('/services')
       }}
-      {...hoverProps}
     >
-      <Column fill>
+      <Column fill {...hoverProps}>
         <Layout flexBasis={30} />
         <Row>
           <Column fill>

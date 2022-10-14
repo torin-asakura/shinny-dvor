@@ -94,6 +94,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-generators/button@npm:0.0.10":
+  version: 0.0.10
+  resolution: "@atls-ui-generators/button@npm:0.0.10"
+  dependencies:
+    "@atls-ui-generators/utils": 0.0.4
+    "@atls/config-prettier": ^0.0.5
+    "@atls/prettier-plugin": ^0.0.5
+    "@babel/standalone": ^7.19.5
+    camelcase: ^6.3.0
+    commander: ^9.4.1
+    prettier: ^2.5.1
+  bin:
+    generate-styles: dist/generator.js
+  checksum: 2e766aed620f3694d303133a7563c07997a82e5cbe14b609841f2c81abe0d5b4577cbc1af9bf21aec9241476d78c15d9121372385f9ef8e4344bb8b00ba5fd76
+  languageName: node
+  linkType: hard
+
+"@atls-ui-generators/utils@npm:0.0.4":
+  version: 0.0.4
+  resolution: "@atls-ui-generators/utils@npm:0.0.4"
+  dependencies:
+    "@atls/config-prettier": ^0.0.5
+    "@atls/prettier-plugin": ^0.0.5
+    camelcase: ^6.3.0
+    prettier: ^2.5.1
+  checksum: 32c1692bf0406bf093776ab1d4a2d90a9923c001d0d6db428ea2a31bfe54db554df74fa7d7d981a7ea6505fe9860afada3ade47b934c002040557f0a6582ffaf
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/button@npm:^0.0.4":
   version: 0.0.4
   resolution: "@atls-ui-parts/button@npm:0.0.4"
@@ -375,6 +404,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/config-prettier@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@atls/config-prettier@npm:0.0.5"
+  dependencies:
+    prettier: ^2.6.2
+  checksum: f501e0d241c344ea52660d3521b785ce92594a969e04ecd829ef63b535acc6385182c5c87ba6bc92cf6e67569bf5f7dc88908b148e74230e4824ffbcc656c69f
+  languageName: node
+  linkType: hard
+
 "@atls/config-typescript@npm:0.0.1":
   version: 0.0.1
   resolution: "@atls/config-typescript@npm:0.0.1"
@@ -455,6 +493,21 @@ __metadata:
     prettier: ^2.5.1
     sort-package-json: ^1.54.0
   checksum: 46616fca2b6a6dc2444b1ff31e3ad473b15f39d79ecaa12e81bbe4feaa324168fb8c8b47d9d1a38cf3a8ce9d77150a004267960c0149e6ee325e34cb8fe8e650
+  languageName: node
+  linkType: hard
+
+"@atls/prettier-plugin@npm:^0.0.5":
+  version: 0.0.5
+  resolution: "@atls/prettier-plugin@npm:0.0.5"
+  dependencies:
+    globby: ^11.0.4
+    import-sort: ^6.0.0
+    import-sort-parser: ^6.0.0
+    import-sort-parser-typescript: ^6.0.0
+    import-sort-style: ^6.0.0
+    prettier: ^2.6.2
+    sort-package-json: ^1.57.0
+  checksum: 0d7d1f0be08ccb398d1d13ca9d4b345cd118268f25d685a0ca17255ac44d6c5d71e1b7d2f7a4ab3aebecf5c0f7d4d609accf4ae7c14b5af57046ca29c6c6fb0b
   languageName: node
   linkType: hard
 
@@ -1069,6 +1122,13 @@ __metadata:
   dependencies:
     regenerator-runtime: ^0.13.4
   checksum: b96e67280efe581c6147b4fe984dfe08a8fbea048934a092f3cbf4dcf61725f6b221cb0c879b6e6e98671f83a104c9e8cfbd24c683e5ebcc886a731aa8984ad0
+  languageName: node
+  linkType: hard
+
+"@babel/standalone@npm:^7.19.5":
+  version: 7.19.5
+  resolution: "@babel/standalone@npm:7.19.5"
+  checksum: ad254382c25ce8fab80b37b29fb8b097c09b78748795630ef28920f1696d92a81879eb70abd96925397c72879bb8cb0e38f86fdf2da2d9ba3a97787b09c22ed1
   languageName: node
   linkType: hard
 
@@ -3542,6 +3602,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
+    "@atls-ui-generators/button": 0.0.10
     "@atls-ui-parts/button": ^0.0.4
     "@atls-ui-parts/styles": ^0.0.1
     "@emotion/react": ^11.4.1
@@ -3549,6 +3610,7 @@ __metadata:
     "@types/styled-system": ^5
     "@ui/condition": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
     styled-system: ^5.1.5
@@ -5334,6 +5396,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"camelcase@npm:^6.3.0":
+  version: 6.3.0
+  resolution: "camelcase@npm:6.3.0"
+  checksum: 8c96818a9076434998511251dcb2761a94817ea17dbdc37f47ac080bd088fc62c7369429a19e2178b993497132c8cbcf5cc1f44ba963e76782ba469c0474938d
+  languageName: node
+  linkType: hard
+
 "caniuse-lite@npm:^1.0.30001280":
   version: 1.0.30001282
   resolution: "caniuse-lite@npm:1.0.30001282"
@@ -5548,6 +5617,13 @@ __metadata:
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
+  languageName: node
+  linkType: hard
+
+"commander@npm:^9.4.1":
+  version: 9.4.1
+  resolution: "commander@npm:9.4.1"
+  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
   languageName: node
   linkType: hard
 
@@ -8865,6 +8941,15 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"prettier@npm:^2.6.2":
+  version: 2.7.1
+  resolution: "prettier@npm:2.7.1"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 55a4409182260866ab31284d929b3cb961e5fdb91fe0d2e099dac92eaecec890f36e524b4c19e6ceae839c99c6d7195817579cdffc8e2c80da0cb794463a748b
+  languageName: node
+  linkType: hard
+
 "pretty-bytes@npm:^5.1.0":
   version: 5.6.0
   resolution: "pretty-bytes@npm:5.6.0"
@@ -9651,6 +9736,22 @@ fsevents@^2.3.2:
   bin:
     sort-package-json: cli.js
   checksum: 042a6ce7a41f3ecb1f7861d97cb3ce550ea007bdd482414370da2104c53897f1e618923409fe416fbb48d3d9502be3d23072d8a7ac88c2e4d5c321247adb418f
+  languageName: node
+  linkType: hard
+
+"sort-package-json@npm:^1.57.0":
+  version: 1.57.0
+  resolution: "sort-package-json@npm:1.57.0"
+  dependencies:
+    detect-indent: ^6.0.0
+    detect-newline: 3.1.0
+    git-hooks-list: 1.0.3
+    globby: 10.0.0
+    is-plain-obj: 2.1.0
+    sort-object-keys: ^1.1.3
+  bin:
+    sort-package-json: cli.js
+  checksum: 15758ba6b1033ae136863eabd4b8c8a28e79dd68b71327f6803c2ea740dc149dc9ad708b006d07ee9de56b6dc7cadb7c697801ad50c01348aa91022c6ff6e21d
   languageName: node
   linkType: hard
 
