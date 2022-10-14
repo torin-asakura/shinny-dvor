@@ -2,6 +2,9 @@
   "name": "@ui/button",
   "version": "0.0.1",
   "main": "src/index.ts",
+  "scripts": {
+    "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
+  },
   "dependencies": {
     "@atls-ui-generators/button": "0.0.10",
     "@atls-ui-parts/button": "^0.0.4",
