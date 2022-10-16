@@ -13,7 +13,7 @@ export interface ContentAddons {
   }
 }
 
-export interface BookingProps {
+export interface InitialProps {
   fragmentsData: ExtendedContentAddons[]
   availableRadiiData: ContentAddons[]
   carBodiesData: ContentAddons[]

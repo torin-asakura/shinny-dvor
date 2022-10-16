@@ -71,7 +71,7 @@ const Service: FC<ServiceProps> = ({ fragmentsData, carBodiesData }) => {
   ]
 
   return (
-    <Box width='100%' marginTop={[80, 80, 104]}>
+    <Box width='100%' maxWidth={['100%', '100%', 1440]} marginTop={[80, 80, 104]}>
       <Row>
         <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
         <Column width='100%'>

@@ -34,4 +34,6 @@ export interface NavigationProps {
   navigationData: NavigationData[]
   availableRadiiData: AvailableRadiusData[]
   fragmentsData: Fragment[]
+  carBodiesData: any
+  servicesData: any
 }

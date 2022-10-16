@@ -15,12 +15,28 @@ import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { useIntersectionObserver } from '@ui/intersection-observer'
 
+import { Seo }                     from './seo.component'
+
 interface Props {
+  ogCover: string
+  SEO: any
   data: any
 }
 
 const IndexPage: FC<Props> = ({
-  data: { contacts, posts, navigation, availableRadii, services, fragments, ui, workResults },
+  SEO,
+  ogCover,
+  data: {
+    contacts,
+    posts,
+    navigation,
+    availableRadii,
+    services,
+    fragments,
+    ui,
+    workResults,
+    carBodies,
+  },
 }) => {
   const [active, setActive] = useState<number>(0)
 
@@ -44,17 +60,22 @@ const IndexPage: FC<Props> = ({
     <Column width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
+          <Seo ogCover={ogCover} SEO={SEO} />
           <Navigation
             active={active}
             navigationData={navigation}
             availableRadiiData={availableRadii}
             fragmentsData={fragments}
+            carBodiesData={carBodies}
+            servicesData={services}
           />
           <Hero
             fragmentsData={fragments}
             uiData={ui}
             contactsData={contacts}
             availableRadiiData={availableRadii}
+            carBodiesData={carBodies}
+            servicesData={services}
             {...getObserverOptions('hero')}
           />
         </Column>

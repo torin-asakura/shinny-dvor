@@ -1,7 +1,6 @@
 import { useReactiveVar } from '@apollo/client'
 
 import React              from 'react'
-import { FC }             from 'react'
 
 import { Screen }         from '@store/booking'
 import { INITIAL }        from '@store/booking'
@@ -14,61 +13,60 @@ import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Layout }         from '@ui/layout'
 import { Box }            from '@ui/layout'
-import { NextLink }       from '@ui/link'
 import { Logo }           from '@ui/logo'
 import { screenVar }      from '@store/booking'
 
-import { Booking }        from './booking'
+import { Initial }        from './initial'
 import { Invalid }        from './invalid'
 import { Success }        from './success'
 
-interface Props {
-  data: any
-}
-
-const BookingPage: FC<Props> = ({ data: { fragments, availableRadii, carBodies, services } }) => {
+const Booking = ({
+  setVisible,
+  fragmentsData,
+  availableRadiiData,
+  carBodiesData,
+  servicesData,
+}: any) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
-    <Row justifyContent='space-between'>
+    <Row justifyContent='space-between' height='100%'>
       <Layout flexBasis={[21, 21, 32]} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[24, 24, 28]} />
+        <Layout flexBasis={[24, 24, 28]} flexShrink={0} />
         <Box width='100%' justifyContent='space-between' alignItems='center'>
           <Layout>
             <Logo />
           </Layout>
           <Layout>
-            <NextLink path='/'>
-              <Button size='ghost' color='transparent'>
-                <Box
-                  width={[40, 40, 48]}
-                  height={[40, 40, 48]}
-                  justifyContent='center'
-                  alignItems='center'
-                  backgroundColor='lightGray'
-                  borderRadius='default'
-                >
-                  <CloseIcon width={24} height={24} />
-                </Box>
-              </Button>
-            </NextLink>
+            <Button size='ghost' color='transparent' onClick={() => setVisible(false)}>
+              <Box
+                width={[40, 40, 48]}
+                height={[40, 40, 48]}
+                justifyContent='center'
+                alignItems='center'
+                backgroundColor='lightGray'
+                borderRadius='default'
+              >
+                <CloseIcon width={24} height={24} />
+              </Box>
+            </Button>
           </Layout>
         </Box>
         <Box width={['100%', '100%', 720]}>
           <Condition match={screen === INITIAL}>
-            <Booking
-              fragmentsData={fragments}
-              availableRadiiData={availableRadii}
-              carBodiesData={carBodies}
-              servicesData={services}
+            <Initial
+              fragmentsData={fragmentsData}
+              availableRadiiData={availableRadiiData}
+              carBodiesData={carBodiesData}
+              servicesData={servicesData}
             />
           </Condition>
           <Condition match={screen === SUCCESS}>
-            <Success fragmentsData={fragments} />
+            <Success setVisible={setVisible} fragmentsData={fragmentsData} />
           </Condition>
           <Condition match={screen === INVALID}>
-            <Invalid fragmentsData={fragments} />
+            <Invalid fragmentsData={fragmentsData} />
           </Condition>
         </Box>
       </Column>
@@ -77,4 +75,4 @@ const BookingPage: FC<Props> = ({ data: { fragments, availableRadii, carBodies, 
   )
 }
 
-export default BookingPage
+export { Booking }

@@ -19,10 +19,10 @@ import { screenVar }        from '@store/booking'
 import { activeCarBodyVar } from '@store/booking'
 import { activeRadiusVar }  from '@store/booking'
 
-import { BookingProps }     from './booking.interface'
-import { RadioList }        from './radio-list'
+import { RadioList }        from '../radio-list'
+import { InitialProps }     from './initial.interface'
 
-const Booking: FC<BookingProps> = ({
+const Initial: FC<InitialProps> = ({
   fragmentsData,
   availableRadiiData,
   carBodiesData,
@@ -137,4 +137,4 @@ const Booking: FC<BookingProps> = ({
   )
 }
 
-export { Booking }
+export { Initial }

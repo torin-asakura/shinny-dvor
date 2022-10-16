@@ -1,5 +1,5 @@
 {
-  "name": "@site/booking-page",
+  "name": "@site/booking-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
@@ -32,8 +32,6 @@
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-helmet": "*",
-    "styled-system": "*"
+    "react-dom": "*"
   }
 }

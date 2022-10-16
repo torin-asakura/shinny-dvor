@@ -450,6 +450,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls/next-document-with-gtag@npm:^0.0.4":
+  version: 0.0.4
+  resolution: "@atls/next-document-with-gtag@npm:0.0.4"
+  peerDependencies:
+    next: "*"
+    react: ^16.12.0
+  checksum: 7a4f668e625b92fb530ccf5c57dc5f9a537af4bae37060b8c993e873d2c36bc94a86c8fd2652e89c386ebc11c04ba848dcc1e92f8d9215280217f22c3084090b
+  languageName: node
+  linkType: hard
+
 "@atls/next-document-with-helmet@npm:^0.2.64":
   version: 0.2.66
   resolution: "@atls/next-document-with-helmet@npm:0.2.66"
@@ -478,6 +488,17 @@ __metadata:
     next: ^9.1.2
     react: ^16.12.0
   checksum: 94e71712599d678d990dd38bb5449e78f531e56ab293670043e1dbe9e4251c0e6b41bc8556ddfd6b647699464e355cb5875ca16c67ad8990fc05c5d73941912a
+  languageName: node
+  linkType: hard
+
+"@atls/next-sitemap-generator@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@atls/next-sitemap-generator@npm:0.0.3"
+  dependencies:
+    xml-js: ^1.6.11
+  bin:
+    gen-sitemap: ./dist/index.js
+  checksum: da29e4f51905379797c19c921c61e0800de07ac63cb66a4c02dda6a7c11a40063ab13a4c5abadcaea08f8abcdbc952b87a9aec74b9a9b7b272cc6534518831ca
   languageName: node
   linkType: hard
 
@@ -1225,6 +1246,7 @@ __metadata:
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
+    "@atls/next-document-with-gtag": ^0.0.4
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
@@ -1273,6 +1295,7 @@ __metadata:
     "@ui/layout": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -1950,6 +1973,7 @@ __metadata:
     "@emotion/react": ^11.6.0
     "@emotion/styled": ^11.6.0
     "@globals/data": "workspace:0.0.1"
+    "@site/booking-fragment": "workspace:0.0.1"
     "@store/actions": "workspace:0.0.1"
     "@store/booking": "workspace:0.0.1"
     "@store/chosen-radius": "workspace:0.0.1"
@@ -1961,6 +1985,7 @@ __metadata:
     "@ui/divider": "workspace:0.0.1"
     "@ui/drawer": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
+    "@ui/layer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/logo": "workspace:0.0.1"
@@ -2518,15 +2543,16 @@ __metadata:
     "@atls/next-app-with-emotion": ^0.2.67
     "@atls/next-app-with-helmet": ^0.2.64
     "@atls/next-config-with-pnp-workspaces": ^0.0.1
+    "@atls/next-document-with-gtag": ^0.0.4
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
+    "@atls/next-sitemap-generator": ^0.0.3
     "@emotion/cache": ^11.4.0
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@globals/data": "workspace:0.0.1"
-    "@site/booking-page": "workspace:0.0.1"
     "@site/contacts-page": "workspace:0.0.1"
     "@site/index-page": "workspace:0.0.1"
     "@site/services-page": "workspace:0.0.1"
@@ -2553,9 +2579,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/booking-page@workspace:0.0.1, @site/booking-page@workspace:site/pages/booking-page":
+"@site/booking-fragment@workspace:0.0.1, @site/booking-fragment@workspace:site/fragments/booking-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/booking-page@workspace:site/pages/booking-page"
+  resolution: "@site/booking-fragment@workspace:site/fragments/booking-fragment"
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.7.0
@@ -2584,8 +2610,6 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
-    react-helmet: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -2608,11 +2632,13 @@ __metadata:
     "@ui/text": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
     react: "*"
     react-dom: "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
@@ -2623,6 +2649,7 @@ __metadata:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
     "@globals/data": "workspace:0.0.1"
+    "@site/booking-fragment": "workspace:0.0.1"
     "@store/actions": "workspace:0.0.1"
     "@store/booking": "workspace:0.0.1"
     "@store/chosen-radius": "workspace:0.0.1"
@@ -2633,6 +2660,7 @@ __metadata:
     "@ui/divider": "workspace:0.0.1"
     "@ui/icons": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
+    "@ui/layer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
     "@ui/social-links": "workspace:0.0.1"
@@ -2669,6 +2697,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2795,6 +2824,7 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-helmet: ^6.1.0
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -3826,6 +3856,32 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/layer@workspace:0.0.1, @ui/layer@workspace:ui/layer":
+  version: 0.0.0-use.local
+  resolution: "@ui/layer@workspace:ui/layer"
+  dependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.9.3
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    framer-motion: ^4.1.17
+    global: 4.4.0
+    nanoid: ^3.1.25
+    react: ^17
+    react-dom: ^17
+    react-scrolllock: 5.0.1
+    styled-system: 5.1.5
+    styled-tools: ^1.7.2
+  peerDependencies:
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -8397,6 +8453,15 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.1.25":
+  version: 3.3.4
+  resolution: "nanoid@npm:3.3.4"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 2fddd6dee994b7676f008d3ffa4ab16035a754f4bb586c61df5a22cf8c8c94017aadd360368f47d653829e0569a92b129979152ff97af23a558331e47e37cd9c
+  languageName: node
+  linkType: hard
+
 "nanoid@npm:^3.1.30":
   version: 3.3.1
   resolution: "nanoid@npm:3.3.1"
@@ -9283,7 +9348,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"react-scrolllock@npm:^5.0.1":
+"react-scrolllock@npm:5.0.1, react-scrolllock@npm:^5.0.1":
   version: 5.0.1
   resolution: "react-scrolllock@npm:5.0.1"
   dependencies:
@@ -9523,6 +9588,13 @@ fsevents@^2.3.2:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
+  languageName: node
+  linkType: hard
+
+"sax@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "sax@npm:1.2.4"
+  checksum: d3df7d32b897a2c2f28e941f732c71ba90e27c24f62ee918bd4d9a8cfb3553f2f81e5493c7f0be94a11c1911b643a9108f231dd6f60df3fa9586b5d2e3e9e1fe
   languageName: node
   linkType: hard
 
@@ -10685,6 +10757,17 @@ fsevents@^2.3.2:
     imurmurhash: ^0.1.4
     signal-exit: ^3.0.7
   checksum: 8f780232533ca6223c63c9b9c01c4386ca8c625ebe5017a9ed17d037aec19462ae17109e0aa155bff5966ee4ae7a27b67a99f55caf3f32ffd84155e9da3929fc
+  languageName: node
+  linkType: hard
+
+"xml-js@npm:^1.6.11":
+  version: 1.6.11
+  resolution: "xml-js@npm:1.6.11"
+  dependencies:
+    sax: ^1.2.4
+  bin:
+    xml-js: ./bin/cli.js
+  checksum: 24a55479919413687105fc2d8ab05e613ebedb1c1bc12258a108e07cff5ef793779297db854800a4edf0281303ebd1f177bc4a588442f5344e62b3dddda26c2b
   languageName: node
   linkType: hard
 

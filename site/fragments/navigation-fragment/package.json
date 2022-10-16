@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@globals/data": "workspace:0.0.1",
+    "@site/booking-fragment": "workspace:0.0.1",
     "@store/actions": "workspace:0.0.1",
     "@store/booking": "workspace:0.0.1",
     "@store/chosen-radius": "workspace:0.0.1",
@@ -14,6 +15,7 @@
     "@ui/divider": "workspace:0.0.1",
     "@ui/drawer": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
+    "@ui/layer": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/link": "workspace:0.0.1",
     "@ui/logo": "workspace:0.0.1",

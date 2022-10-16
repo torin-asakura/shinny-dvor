@@ -17,12 +17,17 @@ import { radiusVar }       from '@store/chosen-radius'
 import { screenVar }       from '@store/services'
 
 import { AllServices }     from './all-services'
+import { Seo }             from './seo.component'
 
 interface Props {
+  ogCover: string
+  SEO: any
   data: any
 }
 
 const ServicesPage: FC<Props> = ({
+  SEO,
+  ogCover,
   data: { fragments, contacts, posts, navigation, availableRadii, services, carBodies },
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
@@ -35,11 +40,14 @@ const ServicesPage: FC<Props> = ({
 
   return (
     <Column width='100%' alignItems='center'>
+      <Seo SEO={SEO} ogCover={ogCover} />
       <Navigation
         active={2}
         navigationData={navigation}
         availableRadiiData={availableRadii}
         fragmentsData={fragments}
+        carBodiesData={carBodies}
+        servicesData={services}
       />
       <Condition match={screen === ALL_SERVICES}>
         <AllServices fragmentsData={fragments} serviceData={services} />

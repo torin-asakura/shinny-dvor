@@ -37,7 +37,7 @@ const Mobile: FC = ({ children }) => {
     children,
     slidesPerView: 2,
     spaceBetween: 290,
-    centered: false,
+    centered: true,
     height: 333,
     width: 355,
     loop: true,

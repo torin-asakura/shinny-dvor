@@ -8,6 +8,7 @@ export const baseMenuStyles: styleFn = ({ triggerBounds }) => ({
   outline: 'none',
   padding: 0,
   width: triggerBounds ? triggerBounds.width : 'auto',
+  zIndex: 9999,
 })
 
 export const shapeMenuStyles: styleFn = ({ theme }) => ({

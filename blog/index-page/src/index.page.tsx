@@ -14,22 +14,31 @@ import { Condition }      from '@ui/condition'
 import { Column }         from '@ui/layout'
 import { screenVar }      from '@store/articles'
 
+import { Seo }            from './seo.component'
+
 interface Props {
+  ogCover: string
+  SEO: any
   data: any
 }
 
 const IndexPage: FC<Props> = ({
-  data: { contacts, posts, navigation, availableRadii, fragments },
+  ogCover,
+  SEO,
+  data: { contacts, posts, navigation, availableRadii, fragments, carBodies, services },
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
   return (
     <Column width='100%' alignItems='center'>
+      <Seo ogCover={ogCover} SEO={SEO} />
       <Navigation
         active={2}
         availableRadiiData={availableRadii}
         navigationData={navigation}
         fragmentsData={fragments}
+        carBodiesData={carBodies}
+        servicesData={services}
       />
       <Condition match={screen === ALL_ARTICLES}>
         <AllArticles fragmentsData={fragments} navigationData={navigation} postsData={posts} />

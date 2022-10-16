@@ -12,9 +12,9 @@ import { setChosenRadius }     from '@store/actions'
 import { AvailableRadiiProps } from './available-radii.interface'
 
 const AvailableRadii: FC<AvailableRadiiProps> = ({ radii, title }) => (
-  <Box width='100%' height={[186, 186, 162]} borderRadius='little' boxShadow='deep'>
+  <Box width='100%' borderRadius='little' boxShadow='deep'>
     <Row>
-      <Layout flexBasis={[20, 20, 32]} />
+      <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />
         <Layout>
@@ -23,25 +23,28 @@ const AvailableRadii: FC<AvailableRadiiProps> = ({ radii, title }) => (
           </Text>
         </Layout>
         <Layout flexBasis={[16, 16, 24]} />
-        <Row height={[108, 108, 48]} flexWrap='wrap'>
+        <Row flexWrap='wrap'>
           {radii.map(({ contentAddons: { title: radius } }) => (
-            <>
-              <Box width={48} height={48}>
-                <Button size='normal' color='radius' onClick={() => setChosenRadius(radius)}>
-                  <Layout>
-                    <Text fontSize='small' fontWeight='medium'>
-                      {radius}
-                    </Text>
-                  </Layout>
-                </Button>
-              </Box>
-              <Layout flexBasis={[12, 12, 16]} />
-            </>
+            <Column height='auto'>
+              <Row>
+                <Box width={[60, 60, 64]} height={48}>
+                  <Button size='normal' color='radius' onClick={() => setChosenRadius(radius)}>
+                    <Layout>
+                      <Text fontSize='small' fontWeight='medium'>
+                        {radius}
+                      </Text>
+                    </Layout>
+                  </Button>
+                </Box>
+                <Layout flexBasis={[12, 12, 16]} flexShrink={0} />
+              </Row>
+              <Layout flexBasis={[12, 12, 16]} flexShrink={0} />
+            </Column>
           ))}
         </Row>
-        <Layout flexBasis={[20, 20, 32]} />
+        <Layout flexBasis={[8, 8, 16]} />
       </Column>
-      <Layout flexBasis={[20, 20, 32]} />
+      <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
     </Row>
   </Box>
 )

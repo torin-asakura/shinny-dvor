@@ -14,6 +14,7 @@
     "@atls/next-app-with-emotion": "^0.2.67",
     "@atls/next-app-with-helmet": "^0.2.64",
     "@atls/next-config-with-pnp-workspaces": "^0.0.1",
+    "@atls/next-document-with-gtag": "^0.0.4",
     "@atls/next-document-with-helmet": "^0.2.64",
     "@atls/next-document-with-icons": "^0.0.2",
     "@atls/next-document-with-opengraph": "^0.0.2",
@@ -34,8 +35,8 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "@atls/next-sitemap-generator": "^0.0.3",
     "@globals/data": "workspace:0.0.1",
-    "@site/booking-page": "workspace:0.0.1",
     "@site/contacts-page": "workspace:0.0.1",
     "@site/index-page": "workspace:0.0.1",
     "@site/services-page": "workspace:0.0.1",
