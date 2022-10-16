@@ -32,7 +32,7 @@ export const getServerSideProps = async ({ res }) => {
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
   if (seoData) {
-    SEO = seoData.pageBy.seo
+    SEO = seoData.pages.nodes[0].seo
   } else SEO = {}
 
   const queryPromises: Array<Promise<any>> = [

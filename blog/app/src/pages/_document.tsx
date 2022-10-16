@@ -14,43 +14,43 @@ const client = new ApolloClient({
 })
 
 const withIcons = () => (TargetComponent) =>
-class WithIcons extends TargetComponent {
-  static async getInitialProps(context) {
-    const props = await super.getInitialProps(context)
+  class WithIcons extends TargetComponent {
+    static async getInitialProps(context) {
+      const props = await super.getInitialProps(context)
 
-    const faviconResponse = await client.query({
-      query: gql`
+      const faviconResponse = await client.query({
+        query: gql`
           query GetFavicon {
-              mediaItemBy(uri: "/favicon/") {
-                  sourceUrl
-              }
+            mediaItemBy(uri: "/favicon/") {
+              sourceUrl
+            }
           }
-      `,
-    })
+        `,
+      })
 
-    const appleTouchIconResponse = await client.query({
-      query: gql`
+      const appleTouchIconResponse = await client.query({
+        query: gql`
           query GetFavicon {
-              mediaItemBy(uri: "/apple_touch_icon/") {
-                  sourceUrl
-              }
+            mediaItemBy(uri: "/apple_touch_icon/") {
+              sourceUrl
+            }
           }
-      `,
-    })
+        `,
+      })
 
-    props.head.push(
-      <link rel='apple-touch-icon' href={appleTouchIconResponse.data.mediaItemBy?.sourceUrl} />,
-      <link rel='icon' type='image/png' href={faviconResponse.data.mediaItemBy?.sourceUrl} />
-    )
+      props.head.push(
+        <link rel='apple-touch-icon' href={appleTouchIconResponse.data.mediaItemBy?.sourceUrl} />,
+        <link rel='icon' type='image/png' href={faviconResponse.data.mediaItemBy?.sourceUrl} />
+      )
 
-    return props
+      return props
+    }
+
+    static renderDocument(...args) {
+      // @ts-ignore
+      return Document.renderDocument(...args)
+    }
   }
-
-  static renderDocument(...args) {
-    // @ts-ignore
-    return Document.renderDocument(...args)
-  }
-}
 
 const withProviders = compose(
   withIcons(),
