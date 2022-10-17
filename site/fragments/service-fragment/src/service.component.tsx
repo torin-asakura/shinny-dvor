@@ -30,6 +30,7 @@ import { WorkExamplesCarousel } from './carousel'
 import { ReturnButton }         from './return-button'
 import { ServiceProps }         from './service.interface'
 import { WorkExample }          from './work-example'
+import { useSubmit }            from './data'
 
 const Service: FC<ServiceProps> = ({ fragmentsData, carBodiesData }) => {
   const carBodyList = extractFragments('car-body-item', 'contentAddons', carBodiesData)
@@ -69,6 +70,21 @@ const Service: FC<ServiceProps> = ({ fragmentsData, carBodiesData }) => {
       price,
     },
   ]
+
+  const [submit] = useSubmit()
+
+  const submitForm = () => {
+    if (serviceName && radius && onCarBody && price) {
+      submit({
+        variables: {
+          serviceName,
+          radius,
+          carBody: onCarBody,
+          price: price.toString(),
+        },
+      })
+    }
+  }
 
   return (
     <Box width='100%' maxWidth={['100%', '100%', 1440]} marginTop={[80, 80, 104]}>
@@ -199,7 +215,12 @@ const Service: FC<ServiceProps> = ({ fragmentsData, carBodiesData }) => {
           </Condition>
           <Layout flexBasis={32} />
           <Box width='100%' height={48}>
-            <Button onClick={() => screenVar(ALL_SERVICES)}>
+            <Button
+              onClick={() => {
+                submitForm()
+                screenVar(ALL_SERVICES)
+              }}
+            >
               <Text fontWeight='medium'>
                 {signUp}
                 <Space />

@@ -181,10 +181,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui/map"\
       },\
       {\
-        "name": "@ui/popover",\
-        "reference": "workspace:ui/popover"\
-      },\
-      {\
         "name": "@ui/radio",\
         "reference": "workspace:ui/radio"\
       },\
@@ -272,7 +268,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@ui/link", ["virtual:6e9bda6b0bc3b89806cb12be1fcfcd5cc40dcedf2a3b55f0cbd81e8814f40b591b7f4c0d839bc4075b756802880588523bf3e41d6b85b56d75b822a199e83a3a#workspace:ui/link", "virtual:6f1239df6549170dd9dc091e98c687f0fee91cfc0d2a702a97faca15c238455a344d2d94717320461c0d598a60d89939288f589562dd7577efc438f4060cf636#workspace:ui/link", "virtual:83398bac818b18a948daacbc67827807ea9ab17e946d0599d938fa0546e4de14e73f78667163fb168ab53281afe2de189b77f269e17cf46e68ba9d36b6759b67#workspace:ui/link", "virtual:9579beb22fabedc4259c1608ea789c98d9dfb66dd2e17d2c28d5fdb84a6a7f13aa697621c59d40c13951593348d148b06be3ce5031d47b5fb1c3914dbd625cb2#workspace:ui/link", "virtual:98accc2fe2bc8269c2b578976bd2199b8b30ed7c7bc2fe002754fbe879ee911d4c29f1c6176dc4627d29fa589a5115074a987c186ea764e5a079028ea9f64153#workspace:ui/link", "virtual:adde54b5ce3f1c077a8e5653d42004fd1f9cfa7df7f6c7b5d4b3beb1790a49696ecaafb610be212a27f82ccc688e58b57606ae00830b5692e382baa8b0b7de7a#workspace:ui/link", "virtual:c07b5cc00f758ae53b55fe9e75ab8d6f414cbd9552c463f8d2f507bb8a2346434582115960744a348d26c0dc464b18b7927e46a8395ec61bff9b23bdff4a384e#workspace:ui/link", "virtual:dfe5ea59a86cf6171e7e0525c8bcd808e6d635efc429e628ff79add3b9274ee101514f99bc200ffa8a6244240aae977443b6ca6598b592948c0f7eb69a381129#workspace:ui/link", "virtual:f8f6d227d74f9e2df72a1d73b9784476cc485bfc4b32c40332828f1e74294ddf1dbef327e2c3ced751687db35cafbb84455b944ae104e582eb5e6df8ba76eba9#workspace:ui/link", "workspace:ui/link"]],\
       ["@ui/logo", ["virtual:405417095cc699e8836a61b0dfe513328365540db40411b34bb161ca194030684d52b879f4ca33d41afdba9c4786a7f4505220b4a6190b2ce531d7744d2928ed#workspace:ui/logo", "virtual:adde54b5ce3f1c077a8e5653d42004fd1f9cfa7df7f6c7b5d4b3beb1790a49696ecaafb610be212a27f82ccc688e58b57606ae00830b5692e382baa8b0b7de7a#workspace:ui/logo", "virtual:d363584680e3a8fdfbbab27519935e1eb5c39ad53f2902a96afea1715250a8a7165960bbc07a91a0772e9eee68fc119d16627f719d8bddb422b0311a8f4245a9#workspace:ui/logo", "virtual:dfe5ea59a86cf6171e7e0525c8bcd808e6d635efc429e628ff79add3b9274ee101514f99bc200ffa8a6244240aae977443b6ca6598b592948c0f7eb69a381129#workspace:ui/logo", "workspace:ui/logo"]],\
       ["@ui/map", ["virtual:6716b11b67a49aa360e7067d416e5c0499ca0ad9930e278de263e3dd474536c9a9a7c3d59feb4cbafc01a017ed1ee6645260789f7d4fe18a4d3359185c63d0f8#workspace:ui/map", "workspace:ui/map"]],\
-      ["@ui/popover", ["workspace:ui/popover"]],\
       ["@ui/radio", ["virtual:3d43e05b9114ba93c95d186058ec86007818f43382e216a95580e753927003e981c83137f849141948074ee3335ce5594d391cf7bc7a1819ed2c9482ffa8580e#workspace:ui/radio", "virtual:9579beb22fabedc4259c1608ea789c98d9dfb66dd2e17d2c28d5fdb84a6a7f13aa697621c59d40c13951593348d148b06be3ce5031d47b5fb1c3914dbd625cb2#workspace:ui/radio", "virtual:c98d40405fb57778b555aa8896a8d0a8e2b2724012c5553815c5dcc44c3482c6c891ef05b98176f74adbe72c9dfa2b03f9a2243efb782f992f479058de13835b#workspace:ui/radio", "workspace:ui/radio"]],\
       ["@ui/scrollspy", ["workspace:ui/scrollspy"]],\
       ["@ui/select", ["virtual:3d43e05b9114ba93c95d186058ec86007818f43382e216a95580e753927003e981c83137f849141948074ee3335ce5594d391cf7bc7a1819ed2c9482ffa8580e#workspace:ui/select", "virtual:c98d40405fb57778b555aa8896a8d0a8e2b2724012c5553815c5dcc44c3482c6c891ef05b98176f74adbe72c9dfa2b03f9a2243efb782f992f479058de13835b#workspace:ui/select", "workspace:ui/select"]],\
@@ -11973,15 +11968,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:c537f9fd5ad2d7919199b28e3f642b5d6cd6389b82816e10f849d38362b8bec64c8195241bc49723a553ac15a48ec8c11636da2bfb08ae1c3b22642c273d945a#workspace:ui/layout"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:17.0.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
-      ["@ui/popover", [\
-        ["workspace:ui/popover", {\
-          "packageLocation": "./ui/popover/",\
-          "packageDependencies": [\
-            ["@ui/popover", "workspace:ui/popover"]\
           ],\
           "linkType": "SOFT"\
         }]\

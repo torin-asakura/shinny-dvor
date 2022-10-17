@@ -3967,18 +3967,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/popover@workspace:ui/popover":
-  version: 0.0.0-use.local
-  resolution: "@ui/popover@workspace:ui/popover"
-  peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
 "@ui/radio@workspace:0.0.1, @ui/radio@workspace:ui/radio":
   version: 0.0.0-use.local
   resolution: "@ui/radio@workspace:ui/radio"

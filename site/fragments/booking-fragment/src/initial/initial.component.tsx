@@ -2,8 +2,10 @@ import { useReactiveVar }   from '@apollo/client'
 
 import React                from 'react'
 import { FC }               from 'react'
+import { useEffect }        from 'react'
 import { useState }         from 'react'
 
+import { INVALID }          from '@store/booking'
 import { SUCCESS }          from '@store/booking'
 import { Button }           from '@ui/button'
 import { Divider }          from '@ui/divider'
@@ -21,6 +23,7 @@ import { activeRadiusVar }  from '@store/booking'
 
 import { RadioList }        from '../radio-list'
 import { InitialProps }     from './initial.interface'
+import { useSubmit }        from '../data'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -28,9 +31,6 @@ const Initial: FC<InitialProps> = ({
   carBodiesData,
   servicesData,
 }) => {
-  // TODO write correct conditions for updateStatus
-  const updateStatus = () => screenVar(SUCCESS)
-
   const activeRadius = useReactiveVar<boolean>(activeRadiusVar)
   const activeCarBody = useReactiveVar<boolean>(activeCarBodyVar)
 
@@ -61,6 +61,29 @@ const Initial: FC<InitialProps> = ({
 
   const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
   const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
+
+  const [submit, data] = useSubmit()
+
+  const submitForm = () => {
+    if (selectedRadius && selectedCarBody && selectedRepairTypes.length) {
+      submit({
+        variables: {
+          diameter: selectedRadius,
+          carBody: selectedCarBody,
+          typeRepair: selectedRepairTypes.join(', '),
+          comment,
+        },
+      })
+    }
+  }
+
+  const updateStatus = (success) => (success ? screenVar(SUCCESS) : screenVar(INVALID))
+
+  useEffect(() => {
+    if (data) {
+      updateStatus(data.submitForm.success)
+    }
+  }, [data, submit])
 
   return (
     <Column width='100%'>
@@ -127,7 +150,7 @@ const Initial: FC<InitialProps> = ({
       <Box width='100%'>
         <Button
           disabled={!activeRadius || !activeCarBody || !selectedRepairTypes.length}
-          onClick={updateStatus}
+          onClick={submitForm}
         >
           {signUpTitle}
         </Button>
