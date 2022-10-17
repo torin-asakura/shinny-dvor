@@ -6,6 +6,7 @@
     "@globals/data": "workspace:0.0.1",
     "@store/actions": "workspace:0.0.1",
     "@store/booking": "workspace:0.0.1",
+    "@store/services": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/divider": "workspace:0.0.1",

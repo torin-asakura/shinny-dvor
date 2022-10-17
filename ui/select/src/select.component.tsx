@@ -14,8 +14,17 @@ import { Menu }                            from './menu'
 import { MenuItem }                        from './menu-item'
 import { SelectProps }                     from './select.interface'
 
-const Select: FC<SelectProps> = ({ items, value, onChange, onSelect, placeholder }) => {
-  const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection()
+const Select: FC<SelectProps> = ({
+  items,
+  selectedDefault,
+  value,
+  onChange,
+  onSelect,
+  placeholder,
+}) => {
+  const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection({
+    initialSelectedItems: selectedDefault !== undefined ? [selectedDefault] : [],
+  })
 
   if (onSelect) {
     onSelect(selectedItems)

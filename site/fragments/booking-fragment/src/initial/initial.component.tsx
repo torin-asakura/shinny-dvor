@@ -1,29 +1,32 @@
-import { useReactiveVar }   from '@apollo/client'
+import { useReactiveVar }      from '@apollo/client'
 
-import React                from 'react'
-import { FC }               from 'react'
-import { useEffect }        from 'react'
-import { useState }         from 'react'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { useCallback }         from 'react'
+import { useEffect }           from 'react'
+import { useState }            from 'react'
 
-import { INVALID }          from '@store/booking'
-import { SUCCESS }          from '@store/booking'
-import { Button }           from '@ui/button'
-import { Divider }          from '@ui/divider'
-import { Input }            from '@ui/input'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Box }              from '@ui/layout'
-import { Select }           from '@ui/select'
-import { Text }             from '@ui/text'
-import { extractFragment }  from '@globals/data'
-import { extractFragments } from '@globals/data'
-import { screenVar }        from '@store/booking'
-import { activeCarBodyVar } from '@store/booking'
-import { activeRadiusVar }  from '@store/booking'
+import { INVALID }             from '@store/booking'
+import { SUCCESS }             from '@store/booking'
+import { CarBody }             from '@store/services'
+import { Service as IService } from '@store/services'
+import { Button }              from '@ui/button'
+import { Divider }             from '@ui/divider'
+import { Input }               from '@ui/input'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Box }                 from '@ui/layout'
+import { Select }              from '@ui/select'
+import { Text }                from '@ui/text'
+import { extractFragment }     from '@globals/data'
+import { extractFragments }    from '@globals/data'
+import { screenVar }           from '@store/booking'
+import { carBodyVar }          from '@store/services'
+import { serviceVar }          from '@store/services'
 
-import { RadioList }        from '../radio-list'
-import { InitialProps }     from './initial.interface'
-import { useSubmit }        from '../data'
+import { RadioList }           from '../radio-list'
+import { InitialProps }        from './initial.interface'
+import { useSubmit }           from '../data'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -31,12 +34,14 @@ const Initial: FC<InitialProps> = ({
   carBodiesData,
   servicesData,
 }) => {
-  const activeRadius = useReactiveVar<boolean>(activeRadiusVar)
-  const activeCarBody = useReactiveVar<boolean>(activeCarBodyVar)
+  const service = useReactiveVar<IService>(serviceVar)
+  const carBody = useReactiveVar<CarBody>(carBodyVar)
 
+  const [name, setName] = useState<string>('')
+  const [phone, setPhone] = useState<string>('')
   const [comment, setComment] = useState<string>('')
-  const [selectedRadius, setSelectedRadius] = useState<string>('')
-  const [selectedCarBody, setSelectedCarBody] = useState<string>('')
+  const [selectedRadius, setSelectedRadius] = useState<string>(service.radius || '')
+  const [selectedCarBody, setSelectedCarBody] = useState<string>(carBody || '')
   const [selectedRepairTypes, setSelectedRepairTypes] = useState<string[]>([])
 
   const signUpTitle = extractFragment('contentAddons', 'sign-up', fragmentsData).title
@@ -52,6 +57,16 @@ const Initial: FC<InitialProps> = ({
     'comment',
     fragmentsData
   )
+  const { title: yourName, content: yourNamePlaceholder } = extractFragment(
+    'contentAddons',
+    'your-username',
+    fragmentsData
+  )
+  const { title: yourPhone, content: yourPhonePlaceholder } = extractFragment(
+    'contentAddons',
+    'your-phone',
+    fragmentsData
+  )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
   const radiiItems = radii.map((item) => item.contentAddons.title)
@@ -62,12 +77,21 @@ const Initial: FC<InitialProps> = ({
   const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
   const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
 
+  const isFormFilled =
+    !name.trim() ||
+    !phone.trim() ||
+    !selectedRadius ||
+    !selectedCarBody ||
+    !selectedRepairTypes.length
+
   const [submit, data] = useSubmit()
 
   const submitForm = () => {
     if (selectedRadius && selectedCarBody && selectedRepairTypes.length) {
       submit({
         variables: {
+          name,
+          phone,
           diameter: selectedRadius,
           carBody: selectedCarBody,
           typeRepair: selectedRepairTypes.join(', '),
@@ -77,13 +101,22 @@ const Initial: FC<InitialProps> = ({
     }
   }
 
-  const updateStatus = (success) => (success ? screenVar(SUCCESS) : screenVar(INVALID))
+  const updateStatus = useCallback(
+    (success) => {
+      if (success) {
+        screenVar(SUCCESS)
+        carBodyVar('')
+        serviceVar({ ...service, radius: '', serviceName: '' })
+      } else screenVar(INVALID)
+    },
+    [service]
+  )
 
   useEffect(() => {
     if (data) {
       updateStatus(data.submitForm.success)
     }
-  }, [data, submit])
+  }, [data, submit, updateStatus])
 
   return (
     <Column width='100%'>
@@ -93,6 +126,42 @@ const Initial: FC<InitialProps> = ({
           {signUpTitle}
         </Text>
       </Layout>
+      <Layout flexBasis={32} />
+      <Box width='100%' flexDirection={['column', 'column', 'row']}>
+        <Column fill>
+          <Layout>
+            <Text lineHeight='grown' color='darkGray'>
+              {yourName}
+            </Text>
+          </Layout>
+          <Layout flexBasis={12} />
+          <Layout>
+            <Input
+              maxLength={12}
+              value={name}
+              onChange={setName}
+              placeholder={yourNamePlaceholder}
+            />
+          </Layout>
+        </Column>
+        <Layout flexBasis={32} flexShrink={0} />
+        <Column fill>
+          <Layout>
+            <Text lineHeight='grown' color='darkGray'>
+              {yourPhone}
+            </Text>
+          </Layout>
+          <Layout flexBasis={12} />
+          <Layout>
+            <Input
+              maxLength={12}
+              value={phone}
+              onChange={setPhone}
+              placeholder={yourPhonePlaceholder}
+            />
+          </Layout>
+        </Column>
+      </Box>
       <Layout flexBasis={32} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
@@ -133,6 +202,7 @@ const Initial: FC<InitialProps> = ({
         value={selectedRepairTypes}
         placeholder={repairTypePlaceholder}
         onSelect={setSelectedRepairTypes}
+        selectedDefault={service.serviceName?.length ? service.serviceName : undefined}
       />
       <Layout flexBasis={12} />
       <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
@@ -148,10 +218,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
-        <Button
-          disabled={!activeRadius || !activeCarBody || !selectedRepairTypes.length}
-          onClick={submitForm}
-        >
+        <Button disabled={isFormFilled} onClick={submitForm}>
           {signUpTitle}
         </Button>
       </Box>

@@ -53,7 +53,12 @@ const ServicesPage: FC<Props> = ({
         <AllServices fragmentsData={fragments} serviceData={services} />
       </Condition>
       <Condition match={screen === SERVICE}>
-        <Service fragmentsData={fragments} carBodiesData={carBodies} />
+        <Service
+          servicesData={services}
+          availableRadiiData={availableRadii}
+          fragmentsData={fragments}
+          carBodiesData={carBodies}
+        />
         <Articles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
       </Condition>
       <Footer fragmentsData={fragments} contactsData={contacts} />

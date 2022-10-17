@@ -2,17 +2,19 @@ interface Fragment {
   title: string
   content: string
   highlightedtext: string
-  role: string
+  fragmentId: string
 }
 
-interface CarBody {
+interface ContentAddons {
   contentAddons: {
     title: string
-    role: string
+    fragmentId: string
   }
 }
 
 export interface ServiceProps {
   fragmentsData: Fragment[]
-  carBodiesData: CarBody[]
+  carBodiesData: ContentAddons[]
+  servicesData: any
+  availableRadiiData: ContentAddons[]
 }
