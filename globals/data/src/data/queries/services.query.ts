@@ -2,6 +2,11 @@ import { gql }       from '@apollo/client'
 
 import { getClient } from '@globals/data'
 
+import { useSchema } from './schema.query'
+
+const schema = useSchema()
+console.log(schema)
+
 const GET_SERVICES = gql`
   query GetServices {
     services {

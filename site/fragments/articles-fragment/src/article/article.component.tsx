@@ -4,6 +4,7 @@ import DOMPurify           from 'dompurify'
 import React               from 'react'
 import plural              from 'plural-ru'
 import { FC }              from 'react'
+import { useIntl }         from 'react-intl'
 
 import { PostId }          from '@store/articles'
 import { Divider }         from '@ui/divider'
@@ -21,10 +22,10 @@ import { postIdVar }       from '@store/articles'
 import { ArticleProps }    from './article.interface'
 import { ReturnButton }    from './return-button'
 import { usePostById }     from '../data'
-import { messages }        from '../messages'
 
 const Article: FC<ArticleProps> = ({ fragmentsData }) => {
   const postId = useReactiveVar<PostId>(postIdVar)
+  const { formatMessage } = useIntl()
 
   // TODO fetch views
   const views = 200
@@ -72,9 +73,9 @@ const Article: FC<ArticleProps> = ({ fragmentsData }) => {
                       <Space />
                       {plural(
                         views,
-                        messages.views.view,
-                        messages.views.viewed,
-                        messages.views.views
+                        formatMessage({ id: 'article.view', defaultMessage: 'просмотр' }),
+                        formatMessage({ id: 'article.viewed', defaultMessage: 'просмотра' }),
+                        formatMessage({ id: 'article.views', defaultMessage: 'просмотров' })
                       )}
                     </Text>
                   </Layout>

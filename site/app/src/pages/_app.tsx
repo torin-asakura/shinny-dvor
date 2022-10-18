@@ -1,6 +1,7 @@
 import { ApolloProvider } from '@apollo/client'
 
 import React              from 'react'
+import { IntlProvider }   from 'react-intl'
 
 import { ThemeProvider }  from '@ui/theme'
 import { getClient }      from '@globals/data'
@@ -10,9 +11,11 @@ const Bare = ({ Component, pageProps, props }) => {
 
   return (
     <ApolloProvider client={client}>
-      <ThemeProvider>
-        <Component {...props} {...pageProps} />
-      </ThemeProvider>
+      <IntlProvider locale='ru' defaultLocale='ru'>
+        <ThemeProvider>
+          <Component {...props} {...pageProps} />
+        </ThemeProvider>
+      </IntlProvider>
     </ApolloProvider>
   )
 }

@@ -7,9 +7,9 @@ import { runFragmentsQuery }      from '@globals/data'
 import { runContactsQuery }       from '@globals/data'
 import { runUiQuery }             from '@globals/data'
 import { setCacheHeader }         from '@globals/data'
+import { runServicesQuery }       from '@globals/data'
 
 import { GET_INDEX_SEO }          from './queries'
-import { runServicesQuery }       from './queries'
 import { runWorkResultsQuery }    from './queries'
 import { runPostsQuery }          from './queries'
 

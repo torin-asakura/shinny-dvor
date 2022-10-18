@@ -1,23 +1,23 @@
-import React            from 'react'
-import { FC }           from 'react'
-import { useRouter }    from 'next/router'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
+import { useRouter }        from 'next/router'
 
-import { SERVICE }      from '@store/services'
-import { Button }       from '@ui/button'
-import { Condition }    from '@ui/condition'
-import { Divider }      from '@ui/divider'
-import { Column }       from '@ui/layout'
-import { Layout }       from '@ui/layout'
-import { Row }          from '@ui/layout'
-import { Ruble }        from '@ui/text'
-import { Space }        from '@ui/text'
-import { Text }         from '@ui/text'
-import { screenVar }    from '@store/services'
-import { serviceVar }   from '@store/services'
-import { useHover }     from '@ui/utils'
+import { SERVICE }          from '@store/services'
+import { Button }           from '@ui/button'
+import { Condition }        from '@ui/condition'
+import { Divider }          from '@ui/divider'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Ruble }            from '@ui/text'
+import { Space }            from '@ui/text'
+import { Text }             from '@ui/text'
+import { screenVar }        from '@store/services'
+import { serviceVar }       from '@store/services'
+import { useHover }         from '@ui/utils'
 
-import { ServiceProps } from './service.interface'
-import { messages }     from '../../messages'
+import { ServiceProps }     from './service.interface'
 
 const Service: FC<ServiceProps> = ({
   radius,
@@ -84,7 +84,7 @@ const Service: FC<ServiceProps> = ({
                     <Space />
                     <Ruble />
                     <Space />
-                    {messages.per}
+                    <FormattedMessage id='service.per' defaultMessage='за' />
                     <Space />
                     {radius}
                   </Text>
