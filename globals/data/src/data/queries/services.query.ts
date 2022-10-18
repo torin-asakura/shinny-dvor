@@ -1,11 +1,13 @@
 import { gql }       from '@apollo/client'
 
-import { getClient } from '@globals/data'
+import { getClient } from '../../helpers'
+import { getSchema } from './schema.query'
 
-import { useSchema } from './schema.query'
+const getRadii = async () => {
+  const { schema } = await getSchema()
 
-const schema = useSchema()
-console.log(schema)
+  return schema.fields.filter((radius) => radius.name.length <= 3).map((radius) => radius.name)
+}
 
 const GET_SERVICES = gql`
   query GetServices {
@@ -38,16 +40,7 @@ const GET_SERVICES = gql`
             }
           }
           price {
-            r12
-            r13
-            r14
-            r15
-            r16
-            r17
-            r18
-            r19
-            r20
-            r21
+              ${getRadii().then((resp) => resp)}
           }
           additionalservice {
             title
