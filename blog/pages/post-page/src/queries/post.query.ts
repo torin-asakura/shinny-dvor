@@ -3,8 +3,8 @@ import { gql }       from '@apollo/client'
 import { getClient } from '@globals/data'
 
 export const GET_POST_BY_ID = gql`
-  query GetPostById($id: ID!) {
-    post(id: $id) {
+  query GetPostBy($uri: String!) {
+    postBy(uri: $uri) {
       content
       date
       title
@@ -18,21 +18,21 @@ export const GET_POST_BY_ID = gql`
   }
 `
 
-const runPostQuery = async (id) => {
+const runPostQuery = async (uri) => {
   const client = getClient()
 
   const { data } = await client.query({
     query: GET_POST_BY_ID,
-    variables: { id },
+    variables: { uri },
   })
 
   if (data) {
     return {
-      post: data.post,
+      postBy: data.postBy,
     }
   }
 
-  return { post: [] }
+  return { postBy: [] }
 }
 
 export { runPostQuery }

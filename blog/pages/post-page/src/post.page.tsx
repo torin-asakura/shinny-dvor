@@ -6,14 +6,24 @@ import { Footer }     from '@fragments/footer-fragment'
 import { Navigation } from '@fragments/navigation-fragment'
 import { Column }     from '@ui/layout'
 
+import { Seo }        from './seo.component'
+
 interface Props {
   data: any
+  ogCover: string
+  SEO: {
+    title: string
+    metaDesc: string
+  }
 }
 
 const PostPage: FC<Props> = ({
-  data: { contacts, post, navigation, availableRadii, fragments, carBodies, services },
+  ogCover,
+  SEO,
+  data: { contacts, postBy, navigation, availableRadii, fragments, carBodies, services },
 }) => (
   <Column width='100%' alignItems='center'>
+    <Seo ogCover={ogCover} SEO={SEO} />
     <Navigation
       active={2}
       availableRadiiData={availableRadii}
@@ -22,7 +32,7 @@ const PostPage: FC<Props> = ({
       carBodiesData={carBodies}
       servicesData={services}
     />
-    <Article postData={post} fragmentsData={fragments} />
+    <Article postData={postBy} fragmentsData={fragments} />
     <Footer fragmentsData={fragments} contactsData={contacts} />
   </Column>
 )

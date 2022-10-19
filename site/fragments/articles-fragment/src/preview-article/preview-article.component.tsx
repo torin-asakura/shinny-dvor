@@ -1,7 +1,6 @@
 import React                   from 'react'
 import { FC }                  from 'react'
 
-import { ARTICLE }             from '@store/articles'
 import { ImageBlock }          from '@ui/image'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
@@ -11,24 +10,15 @@ import { Text }                from '@ui/text'
 import { TextEllipsis }        from '@ui/text'
 import { formattedDate }       from '@shared/utils'
 import { normalizeString }     from '@shared/utils'
-import { screenVar }           from '@store/articles'
-import { postIdVar }           from '@store/articles'
 import { useHover }            from '@ui/utils'
 
 import { PreviewArticleProps } from './preview-article.interface'
 
-const PreviewArticle: FC<PreviewArticleProps> = ({ id, title, date, excerpt, featuredImage }) => {
+const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, featuredImage }) => {
   const [hover, hoverProps] = useHover()
 
   return (
-    <Column
-      fill
-      onClick={() => {
-        postIdVar(id)
-        screenVar(ARTICLE)
-      }}
-      {...hoverProps}
-    >
+    <Column fill {...hoverProps}>
       <Box width={[300, 300, 405]} height={[200, 260, 260]} backgroundColor='gray'>
         <ImageBlock src={featuredImage?.node.mediaItemUrl} alt={featuredImage?.node.altText} />
       </Box>

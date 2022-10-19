@@ -8,10 +8,10 @@ import { runContactsQuery }       from '@globals/data'
 import { runUiQuery }             from '@globals/data'
 import { setCacheHeader }         from '@globals/data'
 import { runServicesQuery }       from '@globals/data'
+import { runPostsQuery }          from '@globals/data'
 
 import { GET_INDEX_SEO }          from './queries'
 import { runWorkResultsQuery }    from './queries'
-import { runPostsQuery }          from './queries'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()

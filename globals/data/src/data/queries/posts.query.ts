@@ -6,7 +6,7 @@ const GET_POSTS = gql`
   query GetPosts {
     posts {
       nodes {
-        id
+        uri
         title
         date
         excerpt

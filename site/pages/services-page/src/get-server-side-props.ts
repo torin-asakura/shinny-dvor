@@ -5,11 +5,11 @@ import { setCacheHeader }         from '@globals/data'
 import { runNavigationQuery }     from '@globals/data'
 import { runContactsQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
+import { runPostsQuery }          from '@globals/data'
 
 import { GET_SERVICES_SEO }       from './queries'
 import { runCarBodiesQuery }      from './queries'
 import { runServicesQuery }       from './queries'
-import { runPostsQuery }          from './queries'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()

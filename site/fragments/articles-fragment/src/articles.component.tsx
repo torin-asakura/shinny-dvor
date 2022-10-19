@@ -52,10 +52,9 @@ const Articles: FC<ArticlesProps> = forwardRef((
           <Layout flexBasis={[32, 32, 48]} />
           <Row overflow='hidden'>
             <Carousel>
-              {postsData.slice(0, 3).map(({ id, title, date, excerpt, featuredImage }) => (
-                <NextLink key={id} path={linkBlog.contentAddons.content}>
+              {postsData.slice(0, 3).map(({ uri, title, date, excerpt, featuredImage }) => (
+                <NextLink key={uri} path={`${linkBlog.contentAddons.content}/${uri}`}>
                   <PreviewArticle
-                    id={id}
                     title={title}
                     date={date}
                     excerpt={excerpt}

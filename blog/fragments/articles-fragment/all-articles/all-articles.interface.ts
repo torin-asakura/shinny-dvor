@@ -1,6 +1,6 @@
 export interface Post {
   date: string
-  id: string
+  uri: string
   excerpt: string
   title: string
   featuredImage: {

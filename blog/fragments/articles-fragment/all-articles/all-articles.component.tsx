@@ -6,7 +6,7 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { Link }             from '@ui/link'
+import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { TextEllipsis }     from '@ui/text'
 import { extractFragment }  from '@globals/data'
@@ -29,8 +29,8 @@ const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
           </Text>
         </Layout>
         <Row justifyContent='space-between' flexWrap='wrap'>
-          {postsData.map(({ id, title, date, excerpt, featuredImage }) => (
-            <Link key={id} href={id}>
+          {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
+            <NextLink key={uri} path={uri}>
               <Box
                 width={['100%', '100%', 405]}
                 // @ts-ignore
@@ -70,7 +70,7 @@ const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
                   </Box>
                 </Column>
               </Box>
-            </Link>
+            </NextLink>
           ))}
         </Row>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />

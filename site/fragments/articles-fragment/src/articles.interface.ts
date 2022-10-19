@@ -1,6 +1,6 @@
 export interface Article {
   date: string
-  id: string
+  uri: string
   excerpt: string
   title: string
   featuredImage: {

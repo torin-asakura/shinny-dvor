@@ -7,9 +7,9 @@ import { runServicesQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
 import { runContactsQuery }       from '@globals/data'
 import { runNavigationQuery }     from '@globals/data'
+import { runPostsQuery }          from '@globals/data'
 
 import { GET_BLOG_SEO }           from './queries'
-import { runPostsQuery }          from './queries'
 
 export const getServerSideProps = async ({ res }) => {
   const client = getClient()
