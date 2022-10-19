@@ -1251,6 +1251,7 @@ __metadata:
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
     "@blog/index-page": "workspace:0.0.1"
+    "@blog/post-page": "workspace:0.0.1"
     "@emotion/cache": ^11.4.0
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
@@ -1280,12 +1281,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/index-page@workspace:0.0.1, @blog/index-page@workspace:blog/index-page":
+"@blog/index-page@workspace:0.0.1, @blog/index-page@workspace:blog/pages/index-page":
   version: 0.0.0-use.local
-  resolution: "@blog/index-page@workspace:blog/index-page"
+  resolution: "@blog/index-page@workspace:blog/pages/index-page"
   dependencies:
     "@apollo/client": ^3.6.9
-    "@fragments/articles-fragment": "workspace:0.0.1"
+    "@fragments/blog-articles-fragment": "workspace:0.0.1"
+    "@fragments/footer-fragment": "workspace:0.0.1"
+    "@fragments/navigation-fragment": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@store/articles": "workspace:0.0.1"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-helmet: ^6.1.0
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-helmet: "*"
+    react-intl: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@blog/post-page@workspace:0.0.1, @blog/post-page@workspace:blog/pages/post-page":
+  version: 0.0.0-use.local
+  resolution: "@blog/post-page@workspace:blog/pages/post-page"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@fragments/blog-articles-fragment": "workspace:0.0.1"
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
     "@globals/data": "workspace:0.0.1"
@@ -1972,6 +2003,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fragments/all-services-fragment@workspace:0.0.1, @fragments/all-services-fragment@workspace:site/fragments/all-services-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/all-services-fragment@workspace:site/fragments/all-services-fragment"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@store/chosen-radius": "workspace:0.0.1"
+    "@store/services": "workspace:0.0.1"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/articles-fragment@workspace:0.0.1, @fragments/articles-fragment@workspace:site/fragments/articles-fragment":
   version: 0.0.0-use.local
   resolution: "@fragments/articles-fragment@workspace:site/fragments/articles-fragment"
@@ -2008,6 +2068,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/blog-articles-fragment@workspace:0.0.1, @fragments/blog-articles-fragment@workspace:blog/fragments/articles-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/blog-articles-fragment@workspace:blog/fragments/articles-fragment"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@emotion/react": ^11.6.0
+    "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@store/articles": "workspace:0.0.1"
+    "@types/dompurify": ^2
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/button": "workspace:0.0.1"
+    "@ui/carousel": "workspace:0.0.1"
+    "@ui/condition": "workspace:0.0.1"
+    "@ui/divider": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/image": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
+    "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
+    plural-ru: ^2.0.2
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-intl: 5.24.3
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/contacts-fragment@workspace:0.0.1, @fragments/contacts-fragment@workspace:site/fragments/contacts-fragment":
   version: 0.0.0-use.local
   resolution: "@fragments/contacts-fragment@workspace:site/fragments/contacts-fragment"
@@ -2033,9 +2130,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/footer-fragment@workspace:0.0.1, @fragments/footer-fragment@workspace:site/fragments/footer-fragment":
+"@fragments/footer-fragment@workspace:0.0.1, @fragments/footer-fragment@workspace:fragments/footer-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/footer-fragment@workspace:site/fragments/footer-fragment"
+  resolution: "@fragments/footer-fragment@workspace:fragments/footer-fragment"
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
@@ -2061,9 +2158,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@fragments/navigation-fragment@workspace:0.0.1, @fragments/navigation-fragment@workspace:site/fragments/navigation-fragment":
+"@fragments/navigation-fragment@workspace:0.0.1, @fragments/navigation-fragment@workspace:fragments/navigation-fragment":
   version: 0.0.0-use.local
-  resolution: "@fragments/navigation-fragment@workspace:site/fragments/navigation-fragment"
+  resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
   dependencies:
     "@apollo/client": ^3.6.9
     "@emotion/react": ^11.6.0
@@ -2909,7 +3006,7 @@ __metadata:
   resolution: "@site/services-page@workspace:site/pages/services-page"
   dependencies:
     "@apollo/client": ^3.6.9
-    "@faker-js/faker": ^7.3.0
+    "@fragments/all-services-fragment": "workspace:0.0.1"
     "@fragments/articles-fragment": "workspace:0.0.1"
     "@fragments/footer-fragment": "workspace:0.0.1"
     "@fragments/navigation-fragment": "workspace:0.0.1"
@@ -2921,11 +3018,7 @@ __metadata:
     "@types/react": ^17
     "@types/react-dom": ^17
     "@ui/condition": "workspace:0.0.1"
-    "@ui/divider": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
@@ -4102,21 +4195,6 @@ __metadata:
     "@emotion/react": "*"
     "@emotion/styled": "*"
     react: "*"
-  languageName: unknown
-  linkType: soft
-
-"@ui/scrollspy@workspace:ui/scrollspy":
-  version: 0.0.0-use.local
-  resolution: "@ui/scrollspy@workspace:ui/scrollspy"
-  dependencies:
-    "@types/styled-system": ^5
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    styled-system: ^5.1.5
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 

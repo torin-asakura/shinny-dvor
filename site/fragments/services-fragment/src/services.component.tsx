@@ -23,7 +23,7 @@ import { AvailableRadiiTile } from './available-radii'
 import { ChosenRadius }       from './chosen-radius'
 import { ServicesList }       from './services-list'
 import { ServicesProps }      from './services.interface'
-import { SizeButtonCard }     from './size-button-card/size-button-card.component'
+import { SizeButtonCard }     from './size-button-card'
 
 const Services: FC<ServicesProps> = forwardRef((
   { fragmentsData, availableRadiiData, servicesData },

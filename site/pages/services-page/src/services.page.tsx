@@ -4,6 +4,7 @@ import React               from 'react'
 import { FC }              from 'react'
 import { useLayoutEffect } from 'react'
 
+import { AllServices }     from '@fragments/all-services-fragment'
 import { Articles }        from '@fragments/articles-fragment'
 import { Footer }          from '@fragments/footer-fragment'
 import { Navigation }      from '@fragments/navigation-fragment'
@@ -16,7 +17,6 @@ import { Column }          from '@ui/layout'
 import { radiusVar }       from '@store/chosen-radius'
 import { screenVar }       from '@store/services'
 
-import { AllServices }     from './all-services'
 import { Seo }             from './seo.component'
 
 interface Props {

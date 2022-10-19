@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@blog/index-page": "workspace:0.0.1",
+    "@blog/post-page": "workspace:0.0.1",
     "@globals/data": "workspace:0.0.1",
     "@types/events": "^3",
     "@types/express": "^4",

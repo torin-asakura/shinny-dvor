@@ -1,11 +1,13 @@
-export interface ServiceProps {
-  radius: string
-  isSizeChosen: boolean
-  title: string
+export interface ItemProps {
+  serviceName: string
+  addon: string
   description: string
   variant: string
-  addon: string
   price: any
+  image: {
+    sourceUrl: string
+    altText: string
+  }
   workexamples: {
     firstexample: {
       image: {

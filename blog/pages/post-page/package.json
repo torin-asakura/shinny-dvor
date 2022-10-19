@@ -1,17 +1,13 @@
 {
-  "name": "@site/services-page",
+  "name": "@blog/post-page",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/all-services-fragment": "workspace:0.0.1",
-    "@fragments/articles-fragment": "workspace:0.0.1",
+    "@fragments/blog-articles-fragment": "workspace:0.0.1",
     "@fragments/footer-fragment": "workspace:0.0.1",
     "@fragments/navigation-fragment": "workspace:0.0.1",
     "@globals/data": "workspace:0.0.1",
-    "@shared/utils": "workspace:0.0.1",
-    "@site/service-fragment": "workspace:0.0.1",
-    "@store/chosen-radius": "workspace:0.0.1",
-    "@store/services": "workspace:0.0.1",
+    "@store/articles": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "react": "^17.0.2",
@@ -21,7 +17,8 @@
     "@apollo/client": "^3.6.9",
     "@types/react": "^17",
     "@types/react-dom": "^17",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-intl": "5.24.3"
   },
   "peerDependencies": {
     "@apollo/client": "*",
@@ -30,6 +27,7 @@
     "react": "*",
     "react-dom": "*",
     "react-helmet": "*",
+    "react-intl": "*",
     "styled-system": "*"
   }
 }
