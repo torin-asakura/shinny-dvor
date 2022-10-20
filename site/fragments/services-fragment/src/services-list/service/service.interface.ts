@@ -1,4 +1,5 @@
 export interface ServiceProps {
+  uri: string
   radius: string
   isSizeChosen: boolean
   title: string

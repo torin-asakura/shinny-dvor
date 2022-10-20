@@ -17,6 +17,7 @@ const runServicesQuery = async () => {
         query GetServices {
             services {
                 nodes {
+                    uri
                     servicesParams {
                         title
                         description

@@ -14,15 +14,19 @@ const ServicesList: FC<ItemProps> = ({ isSizeChosen, services }) => {
   return (
     <>
       {services.map(({
-        title,
-        description,
-        variant,
-        addon,
-        price,
-        workexamples,
-        additionalservice,
+        uri,
+        servicesParams: {
+          title,
+          description,
+          variant,
+          addon,
+          price,
+          workexamples,
+          additionalservice,
+        },
       }) => (
         <Service
+          uri={uri}
           radius={radius}
           isSizeChosen={isSizeChosen}
           title={title}

@@ -4,9 +4,10 @@ import React               from 'react'
 import { FC }              from 'react'
 import { useLayoutEffect } from 'react'
 
-import { AllServices }     from '@fragments/all-services-fragment'
+import { Articles }        from '@fragments/articles-fragment'
 import { Footer }          from '@fragments/footer-fragment'
 import { Navigation }      from '@fragments/navigation-fragment'
+import { Service }         from '@site/service-fragment'
 import { Column }          from '@ui/layout'
 import { radiusVar }       from '@store/chosen-radius'
 
@@ -18,10 +19,10 @@ interface Props {
   data: any
 }
 
-const ServicesPage: FC<Props> = ({
+const ServicePage: FC<Props> = ({
   SEO,
   ogCover,
-  data: { fragments, contacts, navigation, availableRadii, services, carBodies },
+  data: { fragments, contacts, posts, navigation, availableRadii, services, carBodies },
 }) => {
   const radius = useReactiveVar<string>(radiusVar)
 
@@ -41,9 +42,15 @@ const ServicesPage: FC<Props> = ({
         carBodiesData={carBodies}
         servicesData={services}
       />
-      <AllServices fragmentsData={fragments} servicesData={services} />
+      <Service
+        servicesData={services}
+        availableRadiiData={availableRadii}
+        fragmentsData={fragments}
+        carBodiesData={carBodies}
+      />
+      <Articles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )
 }
-export default ServicesPage
+export default ServicePage

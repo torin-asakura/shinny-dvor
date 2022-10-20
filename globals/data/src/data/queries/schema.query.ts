@@ -1,6 +1,6 @@
 import { gql }       from '@apollo/client'
 
-import { getClient } from '../../helpers'
+import { getClient } from '@globals/data'
 
 const GET_SCHEMA = gql`
   query GetSchema {

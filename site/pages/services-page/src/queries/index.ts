@@ -1,3 +1,1 @@
-export * from './services.query'
-export * from './car-bodies.query'
 export * from './seo.query'

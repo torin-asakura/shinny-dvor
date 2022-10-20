@@ -2016,14 +2016,17 @@ __metadata:
     "@ui/divider": "workspace:0.0.1"
     "@ui/image": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     "@ui/utils": "workspace:0.0.1"
+    next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -2744,6 +2747,7 @@ __metadata:
     "@globals/data": "workspace:0.0.1"
     "@site/contacts-page": "workspace:0.0.1"
     "@site/index-page": "workspace:0.0.1"
+    "@site/service-page": "workspace:0.0.1"
     "@site/services-page": "workspace:0.0.1"
     "@types/events": ^3
     "@types/express": ^4
@@ -2924,16 +2928,48 @@ __metadata:
     "@ui/image": "workspace:0.0.1"
     "@ui/layer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
+    "@ui/link": "workspace:0.0.1"
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
+    next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/service-page@workspace:0.0.1, @site/service-page@workspace:site/pages/service-page":
+  version: 0.0.0-use.local
+  resolution: "@site/service-page@workspace:site/pages/service-page"
+  dependencies:
+    "@apollo/client": ^3.6.9
+    "@fragments/articles-fragment": "workspace:0.0.1"
+    "@fragments/footer-fragment": "workspace:0.0.1"
+    "@fragments/navigation-fragment": "workspace:0.0.1"
+    "@globals/data": "workspace:0.0.1"
+    "@shared/utils": "workspace:0.0.1"
+    "@site/service-fragment": "workspace:0.0.1"
+    "@store/chosen-radius": "workspace:0.0.1"
+    "@types/react": ^17
+    "@types/react-dom": ^17
+    "@ui/layout": "workspace:0.0.1"
+    react: ^17.0.2
+    react-dom: ^17.0.2
+    react-helmet: ^6.1.0
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-helmet: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 

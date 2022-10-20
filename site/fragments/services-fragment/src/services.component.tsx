@@ -39,7 +39,6 @@ const Services: FC<ServicesProps> = forwardRef((
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
   const services = extractFragments('service-item', 'servicesParams', servicesData)
-  const serviceItems = services.map((item) => item.servicesParams)
 
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'select-needed-radius', fragmentsData).title
@@ -132,7 +131,7 @@ const Services: FC<ServicesProps> = forwardRef((
                     <Divider backgroundColor='gray' />
                   </Layout>
                 </Condition>
-                <ServicesList services={serviceItems} isSizeChosen={isSizeChosen} />
+                <ServicesList services={services} isSizeChosen={isSizeChosen} />
               </Column>
             </Column>
           </Box>

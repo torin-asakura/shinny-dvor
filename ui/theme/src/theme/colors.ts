@@ -167,6 +167,28 @@ const colors = {
         border: 'transparent',
       },
     },
+    blueText: {
+      default: {
+        background: 'transparent',
+        font: 'rgba(37, 44, 50, 1)',
+        border: 'transparent',
+      },
+      hover: {
+        background: 'transparent',
+        font: 'rgba(48, 100, 235, 1)',
+        border: 'transparent',
+      },
+      pressed: {
+        background: 'transparent',
+        font: 'rgba(38, 89, 220, 1)',
+        border: 'transparent',
+      },
+      disabled: {
+        background: 'transparent',
+        font: 'rgba(37, 44, 50, 1)',
+        border: 'transparent',
+      },
+    },
     transparent: {
       default: {
         background: 'transparent',

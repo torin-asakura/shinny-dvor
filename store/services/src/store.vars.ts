@@ -1,11 +1,8 @@
-import { makeVar }      from '@apollo/client'
+import { makeVar } from '@apollo/client'
 
-import { ALL_SERVICES } from './store.constants'
-import { CarBody }      from './store.interfaces'
-import { Screen }       from './store.interfaces'
-import { Service }      from './store.interfaces'
+import { CarBody } from './store.interfaces'
+import { Service } from './store.interfaces'
 
-export const screenVar = makeVar<Screen>(ALL_SERVICES)
 export const carBodyVar = makeVar<CarBody>('')
 export const serviceVar = makeVar<Service>({
   radius: '',

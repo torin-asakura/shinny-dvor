@@ -172,6 +172,30 @@ const appearanceGreyDisabledStyles = createAppearanceStyles({
   borderColor: prop('theme.colors.button.grey.disabled.border'),
 })
 
+const appearanceBlueTextDefaultStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueText.default.font'),
+  backgroundColor: prop('theme.colors.button.blueText.default.background'),
+  borderColor: prop('theme.colors.button.blueText.default.border'),
+})
+
+const appearanceBlueTextHoverStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueText.hover.font'),
+  backgroundColor: prop('theme.colors.button.blueText.hover.background'),
+  borderColor: prop('theme.colors.button.blueText.hover.border'),
+})
+
+const appearanceBlueTextPressedStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueText.pressed.font'),
+  backgroundColor: prop('theme.colors.button.blueText.pressed.background'),
+  borderColor: prop('theme.colors.button.blueText.pressed.border'),
+})
+
+const appearanceBlueTextDisabledStyles = createAppearanceStyles({
+  fontColor: prop('theme.colors.button.blueText.disabled.font'),
+  backgroundColor: prop('theme.colors.button.blueText.disabled.background'),
+  borderColor: prop('theme.colors.button.blueText.disabled.border'),
+})
+
 const appearanceTransparentDefaultStyles = createAppearanceStyles({
   fontColor: prop('theme.colors.button.transparent.default.font'),
   backgroundColor: prop('theme.colors.button.transparent.default.background'),
@@ -266,6 +290,15 @@ const appearanceStyles = switchProp(prop('color', 'primary'), {
       prop('pressed', false),
       appearanceGreyPressedStyles,
       ifProp(prop('hover', false), appearanceGreyHoverStyles, appearanceGreyDefaultStyles)
+    )
+  ),
+  blueText: ifProp(
+    prop('disabled', false),
+    appearanceBlueTextDisabledStyles,
+    ifProp(
+      prop('pressed', false),
+      appearanceBlueTextPressedStyles,
+      ifProp(prop('hover', false), appearanceBlueTextHoverStyles, appearanceBlueTextDefaultStyles)
     )
   ),
   transparent: ifProp(

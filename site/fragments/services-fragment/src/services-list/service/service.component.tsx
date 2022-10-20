@@ -3,7 +3,6 @@ import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useRouter }        from 'next/router'
 
-import { SERVICE }          from '@store/services'
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
 import { Divider }          from '@ui/divider'
@@ -13,13 +12,13 @@ import { Row }              from '@ui/layout'
 import { Ruble }            from '@ui/text'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
-import { screenVar }        from '@store/services'
 import { serviceVar }       from '@store/services'
 import { useHover }         from '@ui/utils'
 
 import { ServiceProps }     from './service.interface'
 
 const Service: FC<ServiceProps> = ({
+  uri,
   radius,
   isSizeChosen,
   title,
@@ -40,7 +39,6 @@ const Service: FC<ServiceProps> = ({
       color='transparent'
       disabled={!isSizeChosen}
       onClick={() => {
-        screenVar(SERVICE)
         serviceVar({
           radius,
           serviceName: title,
@@ -51,7 +49,7 @@ const Service: FC<ServiceProps> = ({
           workexamples,
           additionalservice,
         })
-        route.push('/services')
+        route.push(uri)
       }}
     >
       <Column fill {...hoverProps}>

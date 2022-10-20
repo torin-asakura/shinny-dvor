@@ -1,4 +1,3 @@
-export type Screen = 'all-services' | 'service'
 export type CarBody = string
 export type Service = {
   radius: string

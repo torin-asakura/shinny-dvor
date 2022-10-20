@@ -6,35 +6,38 @@ export interface ContentAddons {
 }
 
 export interface ServicesParams {
-  title: string
-  description: string
-  fragmentId: string
-  addon: string
-  variant: string
-  image: {
-    altText: string
-    sourceUrl: string
-  }
-  price: any
-  workexamples: {
-    firstexample: {
-      image: {
-        altText: string
-        sourceUrl: string
-      }
-      title: string
-    }
-    secondexample: {
-      image: {
-        altText: string
-        sourceUrl: string
-      }
-      title: string
-    }
-  }
-  additionalservice: {
+  uri: string
+  servicesParams: {
     title: string
-    price: number
+    description: string
+    fragmentId: string
+    addon: string
+    variant: string
+    image: {
+      altText: string
+      sourceUrl: string
+    }
+    price: any
+    workexamples: {
+      firstexample: {
+        image: {
+          altText: string
+          sourceUrl: string
+        }
+        title: string
+      }
+      secondexample: {
+        image: {
+          altText: string
+          sourceUrl: string
+        }
+        title: string
+      }
+    }
+    additionalservice: {
+      title: string
+      price: number
+    }
   }
 }
 

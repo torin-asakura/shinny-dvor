@@ -1,4 +1,5 @@
 export interface ItemProps {
+  uri: string
   serviceName: string
   addon: string
   description: string

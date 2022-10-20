@@ -12,11 +12,10 @@ import { extractFragments } from '@globals/data'
 import { Item }             from '../item'
 import { AllServicesProps } from './all-services.interface'
 
-const AllServices: FC<AllServicesProps> = ({ fragmentsData, serviceData }) => {
+const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
 
-  const services = extractFragments('service-item', 'servicesParams', serviceData)
-  const serviceItems = services.map((item) => item.servicesParams)
+  const services = extractFragments('service-item', 'servicesParams', servicesData)
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
@@ -30,18 +29,22 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, serviceData }) => {
         </Layout>
         <Layout flexBasis={[12, 12, 16]} />
         <Row flexWrap='wrap'>
-          {serviceItems.map(({
-            title: serviceName,
-            price,
-            image,
-            addon,
-            description,
-            variant,
-            workexamples,
-            additionalservice,
+          {services.map(({
+            uri,
+            servicesParams: {
+              title: serviceName,
+              price,
+              image,
+              addon,
+              description,
+              variant,
+              workexamples,
+              additionalservice,
+            },
           }) => (
             <Item
               key={title}
+              uri={uri}
               serviceName={serviceName}
               price={price}
               image={image}
