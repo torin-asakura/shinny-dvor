@@ -1,19 +1,16 @@
 import React                from 'react'
 import { FC }               from 'react'
 
-import { ImageBlock }       from '@ui/image'
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
-import { TextEllipsis }     from '@ui/text'
 import { extractFragment }  from '@globals/data'
-import { normalizeString }  from '@shared/utils'
-import { formattedDate }    from '@shared/utils'
 
 import { AllArticlesProps } from './all-articles.interface'
+import { Article }          from './article'
 
 const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
   const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title
@@ -31,45 +28,7 @@ const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
         <Row justifyContent='space-between' flexWrap='wrap'>
           {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
             <NextLink key={uri} path={uri}>
-              <Box
-                width={['100%', '100%', 405]}
-                // @ts-ignore
-                cursor='pointer'
-              >
-                <Column width='100%'>
-                  <Layout flexBasis={[32, 32, 48]} />
-                  <Box width='100%' height={[224, 224, 260]}>
-                    <ImageBlock
-                      src={featuredImage.node.mediaItemUrl}
-                      alt={featuredImage.node.altText}
-                    />
-                  </Box>
-                  <Layout flexBasis={24} />
-                  <Layout>
-                    <Text fontSise='large' lineHeight='grown'>
-                      {formattedDate(date)}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={8} />
-                  <Layout>
-                    <Text lineHeight='grown' fontWeight='medium' fontSize='large'>
-                      {title}
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={8} />
-                  <Box height={52}>
-                    <TextEllipsis
-                      color='darkGray'
-                      overflow='hidden'
-                      text-overflow='ellipsis'
-                      lineHeight='medium'
-                      lineClamp={2}
-                    >
-                      {normalizeString(excerpt)}
-                    </TextEllipsis>
-                  </Box>
-                </Column>
-              </Box>
+              <Article title={title} date={date} excerpt={excerpt} featuredImage={featuredImage} />
             </NextLink>
           ))}
         </Row>

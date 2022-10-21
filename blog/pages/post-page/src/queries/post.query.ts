@@ -5,9 +5,11 @@ import { getClient } from '@globals/data'
 export const GET_POST = gql`
   query GetPostBy($uri: String!) {
     postBy(uri: $uri) {
+      postId
       content
       date
       title
+      viewCount
       featuredImage {
         node {
           altText

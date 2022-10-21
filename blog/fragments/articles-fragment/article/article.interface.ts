@@ -8,9 +8,11 @@ interface Fragment {
 }
 
 interface Post {
+  postId: number
   content: string
   title: string
   date: string
+  viewCount: number
   featuredImage: {
     node: {
       mediaItemUrl: string

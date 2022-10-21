@@ -1,31 +1,46 @@
-import React               from 'react'
-import plural              from 'plural-ru'
-import { FC }              from 'react'
-import { useIntl }         from 'react-intl'
+import React                  from 'react'
+import plural                 from 'plural-ru'
+import { FC }                 from 'react'
+import { useEffect }          from 'react'
+import { useIntl }            from 'react-intl'
 
-import { Divider }         from '@ui/divider'
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Text }            from '@ui/text'
-import { Space }           from '@ui/text'
-import { extractFragment } from '@globals/data'
-import { formattedDate }   from '@shared/utils'
+import { Divider }            from '@ui/divider'
+import { ImageBlock }         from '@ui/image'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { Text }               from '@ui/text'
+import { Space }              from '@ui/text'
+import { extractFragment }    from '@globals/data'
+import { usePostViewCounter } from '@globals/data'
+import { formattedDate }      from '@shared/utils'
 
-import { ArticleProps }    from './article.interface'
-import { ReturnButton }    from './return-button'
+import { ArticleProps }       from './article.interface'
+import { ReturnButton }       from './return-button'
 
 const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
   const { formatMessage } = useIntl()
 
-  // TODO fetch views
-  const views = 200
-
-  const { content, title, date, featuredImage } = postData
+  const { postId, content, title, date, featuredImage, viewCount } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
+
+  const [submit] = usePostViewCounter()
+
+  const incrementViewCounter = (post_id) => {
+    submit({
+      variables: {
+        post_id,
+      },
+    })
+  }
+
+  useEffect(() => {
+    incrementViewCounter(postId)
+
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <Column width='100%' height='auto' marginTop={[80, 80, 104]}>
@@ -62,10 +77,10 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
                 <Row>
                   <Layout>
                     <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
-                      {views}
+                      {viewCount}
                       <Space />
                       {plural(
-                        views,
+                        viewCount,
                         formatMessage({ id: 'article.view', defaultMessage: 'просмотр' }),
                         formatMessage({ id: 'article.viewed', defaultMessage: 'просмотра' }),
                         formatMessage({ id: 'article.views', defaultMessage: 'просмотров' })
