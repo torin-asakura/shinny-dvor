@@ -29,19 +29,7 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
         </Layout>
         <Layout flexBasis={[12, 12, 16]} />
         <Row flexWrap='wrap'>
-          {services.map(({
-            uri,
-            servicesParams: {
-              title: serviceName,
-              price,
-              image,
-              addon,
-              description,
-              variant,
-              workexamples,
-              additionalservice,
-            },
-          }) => (
+          {services.map(({ uri, servicesParams: { title: serviceName, price, image, addon } }) => (
             <Item
               key={title}
               uri={uri}
@@ -49,10 +37,6 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
               price={price}
               image={image}
               addon={addon}
-              description={description}
-              variant={variant}
-              workexamples={workexamples}
-              additionalservice={additionalservice}
             />
           ))}
         </Row>

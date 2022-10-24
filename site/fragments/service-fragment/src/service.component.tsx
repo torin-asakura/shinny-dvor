@@ -1,11 +1,8 @@
-import { useReactiveVar }       from '@apollo/client'
-
 import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
 
 import { Booking }              from '@site/booking-fragment'
-import { Service as IService }  from '@store/services'
 import { Accordion }            from '@ui/accordion'
 import { Button }               from '@ui/button'
 import { Condition }            from '@ui/condition'
@@ -23,7 +20,6 @@ import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { extractFragments }     from '@globals/data'
 import { carBodyVar }           from '@store/services'
-import { serviceVar }           from '@store/services'
 
 import { AdditionalService }    from './additional-service'
 import { CarBodiesCarousel }    from './carousel'
@@ -37,6 +33,7 @@ const Service: FC<ServiceProps> = ({
   availableRadiiData,
   fragmentsData,
   carBodiesData,
+  serviceData,
 }) => {
   const carBodyList = extractFragments('car-body-item', 'contentAddons', carBodiesData)
   const carBodies = carBodyList.map(({ contentAddons }) => contentAddons.title)
@@ -45,17 +42,6 @@ const Service: FC<ServiceProps> = ({
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
   const [isAdditionalService, setIsAdditionalService] = useState<boolean>(true)
 
-  const {
-    price,
-    radius,
-    serviceName,
-    addon,
-    description,
-    variant,
-    workexamples,
-    additionalservice,
-  } = useReactiveVar<IService>(serviceVar)
-
   const { title: goBack } = extractFragment('contentAddons', 'all-services', fragmentsData)
   const { title: signUp } = extractFragment('contentAddons', 'sign-up', fragmentsData)
   const { title: workExamplesTitle } = extractFragment(
@@ -63,6 +49,20 @@ const Service: FC<ServiceProps> = ({
     'work-examples-title',
     fragmentsData
   )
+
+  const {
+    servicesParams: {
+      price,
+      title: serviceName,
+      addon,
+      description,
+      variant,
+      workexamples,
+      additionalservice,
+    },
+  } = serviceData
+
+  const defaultPrice = price[Object.keys(price)[1]]?.passenger
 
   const workExamplesData = [
     {
@@ -105,13 +105,10 @@ const Service: FC<ServiceProps> = ({
                 display='inline'
               >
                 {serviceName}
-                <Space />
-                {radius}
               </Text>
             </Layout>
-            <Layout flexBasis={8} />
             <Condition match={variant === 'primary' || variant === 'tertiary'}>
-              <Layout flexBasis={24} />
+              <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
                   {carBodies.map((item) => (
@@ -121,6 +118,7 @@ const Service: FC<ServiceProps> = ({
                   ))}
                 </Switch>
               </Layout>
+              <Layout flexBasis={24} />
               <Layout display={['flex', 'flex', 'none']}>
                 <CarBodiesCarousel>
                   {carBodies.map((item) => (
@@ -153,17 +151,31 @@ const Service: FC<ServiceProps> = ({
               </Layout>
               <Layout flexBasis={24} />
             </Condition>
-            <Layout>
-              <Text fontSize='xl' fontWeight='medium'>
-                {price}
+            <Condition match={variant === 'secondary'}>
+              <Layout flexBasis={24} />
+              <Divider backgroundColor='gray' />
+              <Layout flexBasis={24} />
+            </Condition>
+            <Row>
+              <Text fontSize={['xl', 'giant', 'giant']} fontWeight='medium'>
+                {defaultPrice}
                 <Space />
                 <Ruble />
               </Text>
-              <Space />
-              <Text color='darkGray' fontSize='xl' fontWeight='medium'>
-                {addon}
-              </Text>
-            </Layout>
+              <Layout flexBasis={24} />
+              <Column justifyContent='center'>
+                <Condition match={addon}>
+                  <Box
+                    height={28}
+                    backgroundColor='lightGray'
+                    padding='4px 7px'
+                    borderRadius='normal'
+                  >
+                    <Text color='darkGray'>{addon}</Text>
+                  </Box>
+                </Condition>
+              </Column>
+            </Row>
             <Layout flexBasis={24} />
             <Divider backgroundColor='gray' />
             <Layout flexBasis={24} />
@@ -182,7 +194,7 @@ const Service: FC<ServiceProps> = ({
                 <Accordion text={workExamplesTitle}>
                   {workExamplesData?.map(({ image, title, price: cost }, index) => (
                     <>
-                      <WorkExample image={image} title={title} price={cost} />
+                      <WorkExample image={image} title={title} price={defaultPrice} />
                       <Condition match={index === 0}>
                         <Layout flexBasis={16} flexShrink={0} />
                       </Condition>
@@ -195,7 +207,7 @@ const Service: FC<ServiceProps> = ({
                   <WorkExamplesCarousel>
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <>
-                        <WorkExample image={image} title={title} price={cost} />
+                        <WorkExample image={image} title={title} price={defaultPrice} />
                         <Condition match={index === 0}>
                           <Layout flexBasis={32} flexShrink={0} />
                         </Condition>
@@ -225,7 +237,7 @@ const Service: FC<ServiceProps> = ({
                 <Text fontWeight='medium'>
                   {signUp}
                   <Space />
-                  {price}
+                  {defaultPrice}
                   <Space />
                   <Ruble />
                 </Text>

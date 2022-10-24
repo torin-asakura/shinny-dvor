@@ -1,5 +1,3 @@
-import { useReactiveVar }  from '@apollo/client'
-
 import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
@@ -7,7 +5,6 @@ import { forwardRef }      from 'react'
 import { Booking }         from '@site/booking-fragment'
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
-import { Condition }       from '@ui/condition'
 import { Divider }         from '@ui/divider'
 import { ArrowDownIcon }   from '@ui/icons'
 import { ImageBlock }      from '@ui/image'
@@ -21,29 +18,18 @@ import { SocialLinksDark } from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
-import { radiusVar }       from '@store/chosen-radius'
-
-import { Selector }        from './selector'
 
 const Hero = forwardRef((
   { uiData, fragmentsData, contactsData, availableRadiiData, carBodiesData, servicesData }: any,
   ref: any
 ) => {
-  const [openSelector, setOpenSelector] = useState<boolean>(true)
   const [visible, setVisible] = useState<boolean>(false)
-  const radius = useReactiveVar<string>(radiusVar)
 
   const leadObj = extractFragment('contentAddons', 'hero-title', fragmentsData)
   const ctaObj = extractFragment('contentAddons', 'sign-up', fragmentsData)
   const anchorObj = extractFragment('contentAddons', 'our-services', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const backgroundObj = extractFragment('contentAddons', 'hero', uiData)
-  const closeTitle = extractFragment('contentAddons', 'close', fragmentsData).title
-  const selectDiameterTitle = extractFragment(
-    'contentAddons',
-    'select-diameter',
-    fragmentsData
-  ).title
 
   const title = new Map([
     ['title', leadObj?.title],
@@ -146,16 +132,6 @@ const Hero = forwardRef((
                 </Row>
               </Link>
             </Box>
-            <Condition match={openSelector && !radius.length}>
-              <Box width='100%' justifyContent='center' display={['none', 'none', 'flex']}>
-                <Selector
-                  closeTitle={closeTitle}
-                  selectDiameterTitle={selectDiameterTitle}
-                  radii={availableRadiiData}
-                  setOpenSelector={setOpenSelector}
-                />
-              </Box>
-            </Condition>
             <Box width='100%' alignItems='center'>
               <Box width='100%' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
                 <Link href={`tel:${phone}`}>

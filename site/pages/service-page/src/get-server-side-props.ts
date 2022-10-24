@@ -7,10 +7,10 @@ import { runContactsQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
 import { runPostsQuery }          from '@globals/data'
 import { runCarBodiesQuery }      from '@globals/data'
+import { runServiceQuery }        from '@globals/data'
 import { runServicesQuery }       from '@globals/data'
 
 import { GET_SERVICE_SEO }        from './queries'
-import { runServiceQuery }        from './queries'
 
 export const getServerSideProps = async ({ params, res }) => {
   const client = getClient()

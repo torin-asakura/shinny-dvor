@@ -12,43 +12,21 @@ import { Row }              from '@ui/layout'
 import { Ruble }            from '@ui/text'
 import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
-import { serviceVar }       from '@store/services'
 import { useHover }         from '@ui/utils'
 
 import { ServiceProps }     from './service.interface'
 
-const Service: FC<ServiceProps> = ({
-  uri,
-  radius,
-  isSizeChosen,
-  title,
-  description,
-  variant,
-  addon,
-  price,
-  workexamples,
-  additionalservice,
-}) => {
+const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
   const route = useRouter()
-
   const [hover, hoverProps] = useHover()
+
+  const cost = price[Object.keys(price)[1]]?.passenger
 
   return (
     <Button
       size='ghost'
       color='transparent'
-      disabled={!isSizeChosen}
       onClick={() => {
-        serviceVar({
-          radius,
-          serviceName: title,
-          price: price[radius.toLowerCase()],
-          addon,
-          description,
-          variant,
-          workexamples,
-          additionalservice,
-        })
         route.push(uri)
       }}
     >
@@ -57,34 +35,25 @@ const Service: FC<ServiceProps> = ({
         <Row>
           <Column fill>
             <Layout>
-              <Text
-                fontWeight='medium'
-                fontSize='xl'
-                color={hover && isSizeChosen ? 'blue' : 'black'}
-                opacity={isSizeChosen ? 1 : 0.3}
-              >
+              <Text fontWeight='medium' fontSize='xl' color={hover ? 'blue' : 'black'}>
                 {title}
               </Text>
             </Layout>
             <Layout flexBasis={8} />
             <Layout>
-              <Text color='darkGray' opacity={isSizeChosen ? 1 : 0.3}>
-                {description}
-              </Text>
+              <Text color='darkGray'>{description}</Text>
             </Layout>
           </Column>
           <Column width={200} display={['none', 'none', 'flex']}>
-            <Condition match={(hover as boolean) && isSizeChosen}>
+            <Condition match={hover as boolean}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>
                   <Text fontWeight='medium'>
-                    {price[radius.toLowerCase()]}
+                    <FormattedMessage id='service.by' defaultMessage='от' />
+                    <Space />
+                    {cost}
                     <Space />
                     <Ruble />
-                    <Space />
-                    <FormattedMessage id='service.per' defaultMessage='за' />
-                    <Space />
-                    {radius}
                   </Text>
                 </Row>
               </Button>

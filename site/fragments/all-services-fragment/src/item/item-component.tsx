@@ -1,43 +1,29 @@
-import { useReactiveVar } from '@apollo/client'
+import React          from 'react'
+import { FC }         from 'react'
 
-import React              from 'react'
-import { FC }             from 'react'
+import { Condition }  from '@ui/condition'
+import { ImageBlock } from '@ui/image'
+import { Box }        from '@ui/layout'
+import { Row }        from '@ui/layout'
+import { Column }     from '@ui/layout'
+import { Layout }     from '@ui/layout'
+import { NextLink }   from '@ui/link'
+import { Text }       from '@ui/text'
+import { Ruble }      from '@ui/text'
+import { Space }      from '@ui/text'
+import { useHover }   from '@ui/utils'
 
-import { ImageBlock }     from '@ui/image'
-import { Box }            from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Column }         from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { NextLink }       from '@ui/link'
-import { Text }           from '@ui/text'
-import { Ruble }          from '@ui/text'
-import { Space }          from '@ui/text'
-import { radiusVar }      from '@store/chosen-radius'
-import { serviceVar }     from '@store/services'
-import { useHover }       from '@ui/utils'
+import { ItemProps }  from './item.interface'
 
-import { ItemProps }      from './item.interface'
-
-const Item: FC<ItemProps> = ({
-  uri,
-  serviceName,
-  price,
-  image,
-  addon,
-  description,
-  variant,
-  workexamples,
-  additionalservice,
-}) => {
-  const radius = useReactiveVar<string>(radiusVar)
-  const cost = price[radius.toLowerCase()]
+const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
+  const cost = price[Object.keys(price)[1]]?.passenger
 
   const [hover, hoverProps] = useHover()
 
   return (
     <Box
       minWidth={['100%', '100%', 296]}
-      height={[332, 332, 420]}
+      minHeight={[332, 332, 420]}
       marginRight={32}
       // @ts-ignore
       cursor='pointer'
@@ -47,20 +33,8 @@ const Item: FC<ItemProps> = ({
         <NextLink path={uri}>
           <Box
             width='100%'
-            height={[312, 312, 388]}
+            minHeight={[312, 312, 388]}
             backgroundColor='transparentGray'
-            onClick={() => {
-              serviceVar({
-                radius,
-                serviceName,
-                price: cost,
-                addon,
-                description,
-                variant,
-                workexamples,
-                additionalservice,
-              })
-            }}
             {...hoverProps}
           >
             <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
@@ -80,30 +54,30 @@ const Item: FC<ItemProps> = ({
                     fontSize='large'
                   >
                     {serviceName}
-                    <Space />
-                    {addon ? '' : radius}
                   </Text>
                 </Row>
               </Row>
               <Layout flexBasis={8} />
-              <Row>
-                <Layout width='100%'>
-                  <Text
-                    color={hover ? 'blue' : 'black'}
-                    lineHeight='grown'
-                    fontWeight='medium'
-                    fontSize='large'
-                  >
-                    {cost}
-                    <Space />
-                    <Ruble />
-                  </Text>
-                  <Layout flexBasis={8} />
-                  <Text lineHeight='grown' color='darkGray' fontWeight='medium' fontSize='large'>
-                    {addon}
-                  </Text>
-                </Layout>
-              </Row>
+              <Layout width='100%'>
+                <Text
+                  color={hover ? 'blue' : 'black'}
+                  lineHeight='grown'
+                  fontWeight='medium'
+                  fontSize='large'
+                >
+                  {cost}
+                  <Space />
+                  <Ruble />
+                </Text>
+                <Layout flexBasis={8} />
+                <Condition match={!!addon.length}>
+                  <Box backgroundColor='lightGray' padding='4px 7px' borderRadius='normal'>
+                    <Text lineHeight='grown' color='darkGray' fontSize='atom'>
+                      {addon}
+                    </Text>
+                  </Box>
+                </Condition>
+              </Layout>
               <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
             </Column>
             <Layout flexBasis={[24, 24, 32]} flexShrink={0} />

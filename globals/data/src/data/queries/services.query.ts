@@ -6,7 +6,24 @@ import { getSchema } from './schema.query'
 const getRadii = async () => {
   const { schema } = await getSchema()
 
-  return schema.fields.filter((radius) => radius.name.length <= 3).map((radius) => radius.name)
+  const filteredService = schema.fields
+    .filter((radius) => radius.name.length <= 3)
+    .map((radius) => ({
+      radius: radius.name,
+      body: radius.type.fields
+        .map((field) => field.name)
+        .filter((name) => name !== 'fieldGroupName'),
+    }))
+
+  const services = filteredService.reduce(
+    (result, { radius, body }) => ({
+      ...result,
+      [radius]: `${radius} { ${body} }`,
+    }),
+    {}
+  )
+
+  return Object.values(services)
 }
 
 const runServicesQuery = async () => {

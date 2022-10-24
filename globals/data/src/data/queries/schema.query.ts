@@ -9,6 +9,11 @@ const GET_SCHEMA = gql`
         name
         fields {
           name
+          type {
+            fields {
+              name
+            }
+          }
         }
       }
     }

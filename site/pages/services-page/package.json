@@ -10,7 +10,6 @@
     "@globals/data": "workspace:0.0.1",
     "@shared/utils": "workspace:0.0.1",
     "@site/service-fragment": "workspace:0.0.1",
-    "@store/chosen-radius": "workspace:0.0.1",
     "@store/services": "workspace:0.0.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",

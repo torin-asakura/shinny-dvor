@@ -9,7 +9,6 @@
     "@globals/data": "workspace:0.0.1",
     "@shared/utils": "workspace:0.0.1",
     "@site/service-fragment": "workspace:0.0.1",
-    "@store/chosen-radius": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

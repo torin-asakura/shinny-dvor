@@ -1,45 +1,15 @@
-import { useReactiveVar } from '@apollo/client'
+import React         from 'react'
+import { FC }        from 'react'
 
-import React              from 'react'
-import { FC }             from 'react'
+import { Service }   from './service'
+import { ItemProps } from './services-list.interface'
 
-import { radiusVar }      from '@store/chosen-radius'
-
-import { Service }        from './service'
-import { ItemProps }      from './services-list.interface'
-
-const ServicesList: FC<ItemProps> = ({ isSizeChosen, services }) => {
-  const radius = useReactiveVar<string>(radiusVar)
-
-  return (
-    <>
-      {services.map(({
-        uri,
-        servicesParams: {
-          title,
-          description,
-          variant,
-          addon,
-          price,
-          workexamples,
-          additionalservice,
-        },
-      }) => (
-        <Service
-          uri={uri}
-          radius={radius}
-          isSizeChosen={isSizeChosen}
-          title={title}
-          description={description}
-          variant={variant}
-          addon={addon}
-          price={price}
-          workexamples={workexamples}
-          additionalservice={additionalservice}
-        />
-      ))}
-    </>
-  )
-}
+const ServicesList: FC<ItemProps> = ({ services }) => (
+  <>
+    {services.map(({ uri, servicesParams: { title, description, price } }) => (
+      <Service uri={uri} title={title} description={description} price={price} />
+    ))}
+  </>
+)
 
 export { ServicesList }

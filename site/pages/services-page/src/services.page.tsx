@@ -1,16 +1,12 @@
-import { useReactiveVar }  from '@apollo/client'
+import React           from 'react'
+import { FC }          from 'react'
 
-import React               from 'react'
-import { FC }              from 'react'
-import { useLayoutEffect } from 'react'
+import { AllServices } from '@fragments/all-services-fragment'
+import { Footer }      from '@fragments/footer-fragment'
+import { Navigation }  from '@fragments/navigation-fragment'
+import { Column }      from '@ui/layout'
 
-import { AllServices }     from '@fragments/all-services-fragment'
-import { Footer }          from '@fragments/footer-fragment'
-import { Navigation }      from '@fragments/navigation-fragment'
-import { Column }          from '@ui/layout'
-import { radiusVar }       from '@store/chosen-radius'
-
-import { Seo }             from './seo.component'
+import { Seo }         from './seo.component'
 
 interface Props {
   ogCover: string
@@ -22,28 +18,20 @@ const ServicesPage: FC<Props> = ({
   SEO,
   ogCover,
   data: { fragments, contacts, navigation, availableRadii, services, carBodies },
-}) => {
-  const radius = useReactiveVar<string>(radiusVar)
+}) => (
+  <Column width='100%' alignItems='center'>
+    <Seo SEO={SEO} ogCover={ogCover} />
+    <Navigation
+      active={2}
+      navigationData={navigation}
+      availableRadiiData={availableRadii}
+      fragmentsData={fragments}
+      carBodiesData={carBodies}
+      servicesData={services}
+    />
+    <AllServices fragmentsData={fragments} servicesData={services} />
+    <Footer fragmentsData={fragments} contactsData={contacts} />
+  </Column>
+)
 
-  useLayoutEffect(() => {
-    if (!radius.length) radiusVar('R12')
-    if (radius.length) radiusVar(radius)
-  }, [radius])
-
-  return (
-    <Column width='100%' alignItems='center'>
-      <Seo SEO={SEO} ogCover={ogCover} />
-      <Navigation
-        active={2}
-        navigationData={navigation}
-        availableRadiiData={availableRadii}
-        fragmentsData={fragments}
-        carBodiesData={carBodies}
-        servicesData={services}
-      />
-      <AllServices fragmentsData={fragments} servicesData={services} />
-      <Footer fragmentsData={fragments} contactsData={contacts} />
-    </Column>
-  )
-}
 export default ServicesPage

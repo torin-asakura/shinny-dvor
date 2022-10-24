@@ -1,4 +1,5 @@
 export const fontSizes = {
+  atom: 13,
   small: 14,
   normal: 16,
   big: 18,
