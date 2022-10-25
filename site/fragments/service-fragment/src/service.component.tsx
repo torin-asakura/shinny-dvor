@@ -69,8 +69,6 @@ const Service: FC<ServiceProps> = ({
     fragmentsData
   )
 
-  const defaultPrice = price[Object.keys(price)[1]]?.passenger
-
   const workExamplesData = [
     {
       image: workexamples.firstexample.image,
@@ -90,7 +88,8 @@ const Service: FC<ServiceProps> = ({
     // eslint-disable-next-line
   }, [onCarBody])
 
-  const pricer = price[radius]?.[carBody]
+  const defaultPrice = price[Object.keys(price)[1]]?.passenger
+  const servicePrice = price[radius]?.[carBody]
 
   return (
     <>
@@ -182,7 +181,7 @@ const Service: FC<ServiceProps> = ({
             </Condition>
             <Row>
               <Text fontSize={['xl', 'giant', 'giant']} fontWeight='medium'>
-                {pricer !== undefined ? pricer : defaultPrice}
+                {servicePrice !== undefined ? servicePrice : defaultPrice}
                 <Space />
                 <Ruble />
               </Text>
@@ -268,7 +267,7 @@ const Service: FC<ServiceProps> = ({
                 <Text fontWeight='medium'>
                   {signUp}
                   <Space />
-                  {pricer !== undefined ? pricer : defaultPrice}
+                  {servicePrice !== undefined ? servicePrice : defaultPrice}
                   <Space />
                   <Ruble />
                 </Text>
