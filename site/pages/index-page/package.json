@@ -1,0 +1,38 @@
+{
+  "name": "@site/index-page",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@fragments/articles-fragment": "workspace:0.0.1",
+    "@fragments/footer-fragment": "workspace:0.0.1",
+    "@fragments/navigation-fragment": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
+    "@site/hero-fragment": "workspace:0.0.1",
+    "@site/services-fragment": "workspace:0.0.1",
+    "@site/services-infographics-fragment": "workspace:0.0.1",
+    "@site/works-examples-fragment": "workspace:0.0.1",
+    "@ui/intersection-observer": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.6.9",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "react-helmet": "^6.1.0",
+    "react-intl": "5.24.3"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-helmet": "*",
+    "react-intl": "*",
+    "styled-system": "*"
+  }
+}

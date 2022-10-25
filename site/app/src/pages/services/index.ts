@@ -1,1 +1,1 @@
-export { default } from '@site/services-page'
+export { default, getServerSideProps } from '@site/services-page'

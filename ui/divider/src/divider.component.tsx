@@ -1,12 +1,15 @@
-import React            from 'react'
-import { FC }           from 'react'
+import styled    from '@emotion/styled'
 
-import { Box }          from '@ui/layout'
+import { color } from 'styled-system'
 
-import { DividerProps } from './divider.interface'
+import { Box }   from '@ui/layout'
 
-const Divider: FC<DividerProps> = ({ weight = 1, color = 'white' }) => (
-  <Box height={weight} width='100%' backgroundColor={color} />
+const Divider = styled(Box)(
+  ({ weight = 1, direction = 'horizontal' }) => ({
+    width: direction === 'horizontal' ? '100%' : weight,
+    height: direction === 'vertical' ? '100%' : weight,
+  }),
+  color
 )
 
 export { Divider }

@@ -20,6 +20,11 @@ export const GlobalStyles = () => (
         display: flex;
         flex-direction: column;
       }
+       .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     `}
   />
 )

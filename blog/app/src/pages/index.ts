@@ -1,1 +1,1 @@
-export { default } from '@blog/index-page'
+export { default, getServerSideProps } from '@blog/index-page'

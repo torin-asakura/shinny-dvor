@@ -6,4 +6,5 @@ export interface SelectProps extends Omit<InputHTMLAttributes<any>, 'onChange'> 
   onChange?: (item: string) => void
   onSelect?: any
   placeholder?: string
+  selectedDefault?: string
 }

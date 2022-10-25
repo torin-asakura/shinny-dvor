@@ -29,7 +29,7 @@ export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputPr
         <RawInput ref={ref} {...props} disabled={disabled} value={value} onChange={changeValue} />
       </InputElement>
       <Layout flexBasis={16} />
-      <Divider color={value !== '' ? 'primaryBlue' : 'gray'} />
+      <Divider backgroundColor={value !== '' ? 'primaryBlue' : 'gray'} />
     </Column>
   )
 }

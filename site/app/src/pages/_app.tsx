@@ -1,31 +1,21 @@
-import '@splidejs/splide/dist/css/splide.min.css'
-
-import { ApolloClient }   from '@apollo/client'
-import { InMemoryCache }  from '@apollo/client'
 import { ApolloProvider } from '@apollo/client'
-import { withHelmet }     from '@atls/next-app-with-helmet'
 
-import App                from 'next/app'
 import React              from 'react'
-import compose            from 'recompose/compose'
+import { IntlProvider }   from 'react-intl'
 
 import { ThemeProvider }  from '@ui/theme'
-
-export const withProviders = compose(withHelmet())
+import { getClient }      from '@globals/data'
 
 const Bare = ({ Component, pageProps, props }) => {
-  const client = new ApolloClient({
-    uri: process.env.WP_ENDPOINT || '',
-    cache: new InMemoryCache(),
-  })
-
-  const Composed = withProviders(App)
+  const client = getClient()
 
   return (
     <ApolloProvider client={client}>
-      <ThemeProvider>
-        <Composed Component={Component} {...pageProps} {...props} />
-      </ThemeProvider>
+      <IntlProvider locale='ru' defaultLocale='ru'>
+        <ThemeProvider>
+          <Component {...props} {...pageProps} />
+        </ThemeProvider>
+      </IntlProvider>
     </ApolloProvider>
   )
 }

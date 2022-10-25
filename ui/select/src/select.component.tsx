@@ -9,19 +9,29 @@ import { DropDownIcon }                    from '@ui/icons'
 import { Layout }                          from '@ui/layout'
 import { Text }                            from '@ui/text'
 
+import { ArrowContainer }                  from './arrow-container'
 import { Button }                          from './button'
 import { Menu }                            from './menu'
 import { MenuItem }                        from './menu-item'
 import { SelectProps }                     from './select.interface'
 
-const Select: FC<SelectProps> = ({ items, value, onChange, onSelect, placeholder }) => {
-  const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection()
+const Select: FC<SelectProps> = ({
+  items,
+  selectedDefault,
+  value,
+  onChange,
+  onSelect,
+  placeholder,
+}) => {
+  const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection({
+    initialSelectedItems: selectedDefault !== undefined ? [selectedDefault] : [],
+  })
 
   if (onSelect) {
     onSelect(selectedItems)
   }
 
-  const { buttonProps, menuProps, renderMenu, selectedItem } = useSelect({
+  const { buttonProps, menuProps, renderMenu, selectedItem, isOpen } = useSelect({
     items,
     onChange,
     stateReducer: (state, actionAndChanges) => {
@@ -47,11 +57,11 @@ const Select: FC<SelectProps> = ({ items, value, onChange, onSelect, placeholder
   return (
     <>
       <Button isSelected={!!selectedItem} value={value} {...buttonProps}>
-        <Text>{value?.join(', ') || selectedItem || placeholder}</Text>
+        <Text textAlign='start'>{value?.join(', ') || selectedItem || placeholder}</Text>
         <Layout flexGrow={1} />
-        <Layout>
+        <ArrowContainer isOpen={isOpen}>
           <DropDownIcon width={16} height={16} />
-        </Layout>
+        </ArrowContainer>
       </Button>
       {renderMenu(
         <Menu {...menuProps}>

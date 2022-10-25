@@ -34,7 +34,7 @@ const Card: FC<CardProps> = ({ children, container, backdrop = false }) => {
         </Condition>
         <Container {...cardProps}>
           <Layout flexBasis={20} flexShrink={0} />
-          <Column>
+          <Column fill>
             <Layout flexBasis={20} />
             {container}
             <Layout flexBasis={20} />
