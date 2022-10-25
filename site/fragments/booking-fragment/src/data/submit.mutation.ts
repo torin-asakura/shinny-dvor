@@ -7,6 +7,7 @@ const SUBMIT_FORM = gql`
     $diameter: String!
     $carBody: String!
     $typeRepair: String!
+    $additionalService: String!
     $comment: String!
   ) {
     submitForm(
@@ -19,6 +20,7 @@ const SUBMIT_FORM = gql`
           { id: 11, value: $carBody }
           { id: 12, value: $typeRepair }
           { id: 13, value: $comment }
+          { id: 22, value: $additionalService }
         ]
       }
     ) {

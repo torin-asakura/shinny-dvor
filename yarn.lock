@@ -2021,6 +2021,7 @@ __metadata:
     next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: 5.24.3
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2028,6 +2029,7 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+    react-intl: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -2794,6 +2796,7 @@ __metadata:
     "@ui/logo": "workspace:0.0.1"
     "@ui/radio": "workspace:0.0.1"
     "@ui/select": "workspace:0.0.1"
+    "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     react: ^17.0.2
     react-dom: ^17.0.2
@@ -2926,11 +2929,13 @@ __metadata:
     "@ui/layer": "workspace:0.0.1"
     "@ui/layout": "workspace:0.0.1"
     "@ui/link": "workspace:0.0.1"
+    "@ui/radio": "workspace:0.0.1"
     "@ui/switch": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: 12.1.0
     react: ^17.0.2
     react-dom: ^17.0.2
+    react-intl: 5.24.3
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2938,6 +2943,7 @@ __metadata:
     next: "*"
     react: "*"
     react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -2958,6 +2964,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
+    react-intl: 5.24.3
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2965,6 +2972,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-helmet: "*"
+    react-intl: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft
@@ -3048,6 +3056,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-helmet: ^6.1.0
+    react-intl: 5.24.3
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -3055,6 +3064,7 @@ __metadata:
     react: "*"
     react-dom: "*"
     react-helmet: "*"
+    react-intl: "*"
     styled-system: "*"
   languageName: unknown
   linkType: soft

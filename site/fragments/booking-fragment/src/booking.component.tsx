@@ -26,6 +26,7 @@ const Booking = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
+  additionalService,
 }: any) => {
   const screen = useReactiveVar<Screen>(screenVar)
 
@@ -60,6 +61,7 @@ const Booking = ({
               availableRadiiData={availableRadiiData}
               carBodiesData={carBodiesData}
               servicesData={servicesData}
+              additionalService={additionalService}
             />
           </Condition>
           <Condition match={screen === SUCCESS}>

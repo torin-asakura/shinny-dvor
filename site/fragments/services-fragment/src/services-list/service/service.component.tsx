@@ -41,10 +41,18 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             </Layout>
             <Layout flexBasis={8} />
             <Layout>
-              <Text color='darkGray'>{description}</Text>
+              <Column>
+                {description.split('|n|').map((item) => (
+                  <Layout maxWidth={500}>
+                    <Text whiteSpace='auto' wordWrap='break-word' lineHeight='medium'>
+                      {item}
+                    </Text>
+                  </Layout>
+                ))}
+              </Column>
             </Layout>
           </Column>
-          <Column width={200} display={['none', 'none', 'flex']}>
+          <Column justifyContent='center' width={200} display={['none', 'none', 'flex']}>
             <Condition match={hover as boolean}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>

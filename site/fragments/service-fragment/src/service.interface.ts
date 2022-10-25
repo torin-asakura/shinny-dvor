@@ -19,3 +19,12 @@ export interface ServiceProps {
   serviceData: any
   availableRadiiData: ContentAddons[]
 }
+
+// eslint-disable-next-line no-shadow
+export enum CarBodies {
+  PASSENGER = 'passenger',
+  JEEP = 'jeep',
+  COMMERCIAL = 'commercial',
+  MINIVAN = 'minivan',
+  MINIBUS = 'minibus',
+}

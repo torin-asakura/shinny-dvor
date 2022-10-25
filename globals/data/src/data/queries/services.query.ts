@@ -41,6 +41,7 @@ const runServicesQuery = async () => {
                         fragmentId
                         addon
                         variant
+                        averagePrice
                         image {
                             altText
                             sourceUrl

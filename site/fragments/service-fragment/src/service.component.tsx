@@ -1,5 +1,6 @@
 import React                    from 'react'
 import { FC }                   from 'react'
+import { useEffect }            from 'react'
 import { useState }             from 'react'
 
 import { Booking }              from '@site/booking-fragment'
@@ -18,15 +19,16 @@ import { Ruble }                from '@ui/text'
 import { Space }                from '@ui/text'
 import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
-import { extractFragments }     from '@globals/data'
-import { carBodyVar }           from '@store/services'
+import { serviceVar }           from '@store/services'
 
 import { AdditionalService }    from './additional-service'
 import { CarBodiesCarousel }    from './carousel'
 import { WorkExamplesCarousel } from './carousel'
+import { Radii }                from './radii'
 import { ReturnButton }         from './return-button'
 import { ServiceProps }         from './service.interface'
 import { WorkExample }          from './work-example'
+import { carBodyConverter }     from './helpers'
 
 const Service: FC<ServiceProps> = ({
   servicesData,
@@ -35,11 +37,28 @@ const Service: FC<ServiceProps> = ({
   carBodiesData,
   serviceData,
 }) => {
-  const carBodyList = extractFragments('car-body-item', 'contentAddons', carBodiesData)
-  const carBodies = carBodyList.map(({ contentAddons }) => contentAddons.title)
+  const {
+    servicesParams: {
+      price,
+      title: serviceName,
+      bodies: carBodies,
+      addon,
+      description,
+      variant,
+      workexamples,
+      additionalservice,
+    },
+  } = serviceData
+  const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
+  const carBody = carBodyConverter(onCarBody)
+
+  const availableRadii = Object.entries(price)
+    .filter((item: any) => item[1]?.[carBody] !== null)
+    .map((item) => item[0])
+    .filter((item) => item.length < 4)
 
   const [visible, setVisible] = useState<boolean>(false)
-  const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
+  const [radius, setRadius] = useState<string>(availableRadii[0])
   const [isAdditionalService, setIsAdditionalService] = useState<boolean>(true)
 
   const { title: goBack } = extractFragment('contentAddons', 'all-services', fragmentsData)
@@ -49,18 +68,6 @@ const Service: FC<ServiceProps> = ({
     'work-examples-title',
     fragmentsData
   )
-
-  const {
-    servicesParams: {
-      price,
-      title: serviceName,
-      addon,
-      description,
-      variant,
-      workexamples,
-      additionalservice,
-    },
-  } = serviceData
 
   const defaultPrice = price[Object.keys(price)[1]]?.passenger
 
@@ -77,6 +84,14 @@ const Service: FC<ServiceProps> = ({
     },
   ]
 
+  useEffect(() => {
+    if (!availableRadii.includes(radius)) setRadius(availableRadii[0])
+
+    // eslint-disable-next-line
+  }, [onCarBody])
+
+  const pricer = price[radius]?.[carBody]
+
   return (
     <>
       <Layer scroll visible={visible} onClose={() => setVisible(true)}>
@@ -86,6 +101,7 @@ const Service: FC<ServiceProps> = ({
           availableRadiiData={availableRadiiData}
           carBodiesData={carBodiesData}
           servicesData={servicesData}
+          additionalService={isAdditionalService ? additionalservice.title : ''}
         />
       </Layer>
       <Box width='100%' maxWidth={['100%', '100%', 1440]} marginTop={[80, 80, 104]}>
@@ -119,7 +135,13 @@ const Service: FC<ServiceProps> = ({
                 </Switch>
               </Layout>
               <Layout flexBasis={24} />
-              <Layout display={['flex', 'flex', 'none']}>
+              <Box
+                height={48}
+                alignItems='center'
+                borderRadius='default'
+                backgroundColor='fillGray'
+                display={['flex', 'flex', 'none']}
+              >
                 <CarBodiesCarousel>
                   {carBodies.map((item) => (
                     <Box
@@ -148,7 +170,9 @@ const Service: FC<ServiceProps> = ({
                     </Box>
                   ))}
                 </CarBodiesCarousel>
-              </Layout>
+              </Box>
+              <Layout flexBasis={24} />
+              <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
               <Layout flexBasis={24} />
             </Condition>
             <Condition match={variant === 'secondary'}>
@@ -158,7 +182,7 @@ const Service: FC<ServiceProps> = ({
             </Condition>
             <Row>
               <Text fontSize={['xl', 'giant', 'giant']} fontWeight='medium'>
-                {defaultPrice}
+                {pricer !== undefined ? pricer : defaultPrice}
                 <Space />
                 <Ruble />
               </Text>
@@ -192,14 +216,21 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={24} />
               <Row display={['none', 'none', 'flex']}>
                 <Accordion text={workExamplesTitle}>
-                  {workExamplesData?.map(({ image, title, price: cost }, index) => (
-                    <>
-                      <WorkExample image={image} title={title} price={defaultPrice} />
-                      <Condition match={index === 0}>
-                        <Layout flexBasis={16} flexShrink={0} />
-                      </Condition>
-                    </>
-                  ))}
+                  <Box
+                    width='100%'
+                    justifyContent='center'
+                    borderRadius='little'
+                    backgroundColor='lightGray'
+                  >
+                    {workExamplesData?.map(({ image, title, price: cost }, index) => (
+                      <>
+                        <WorkExample image={image} title={title} price={defaultPrice} />
+                        <Condition match={index === 0}>
+                          <Layout flexBasis={16} flexShrink={0} />
+                        </Condition>
+                      </>
+                    ))}
+                  </Box>
                 </Accordion>
               </Row>
               <Row display={['flex', 'flex', 'none']}>
@@ -217,7 +248,7 @@ const Service: FC<ServiceProps> = ({
                 </Accordion>
               </Row>
             </Condition>
-            <Condition match={variant === 'primary'}>
+            <Condition match={variant === 'primary' && additionalservice.title !== null}>
               <Layout flexBasis={24} />
               <AdditionalService
                 isAdditionalService={isAdditionalService}
@@ -231,13 +262,13 @@ const Service: FC<ServiceProps> = ({
               <Button
                 onClick={() => {
                   setVisible(true)
-                  carBodyVar(onCarBody)
+                  serviceVar({ radius, carBody: onCarBody, serviceName })
                 }}
               >
                 <Text fontWeight='medium'>
                   {signUp}
                   <Space />
-                  {defaultPrice}
+                  {pricer !== undefined ? pricer : defaultPrice}
                   <Space />
                   <Ruble />
                 </Text>

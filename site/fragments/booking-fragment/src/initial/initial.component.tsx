@@ -8,7 +8,6 @@ import { useState }            from 'react'
 
 import { INVALID }             from '@store/booking'
 import { SUCCESS }             from '@store/booking'
-import { CarBody }             from '@store/services'
 import { Service as IService } from '@store/services'
 import { Button }              from '@ui/button'
 import { Divider }             from '@ui/divider'
@@ -17,11 +16,12 @@ import { Column }              from '@ui/layout'
 import { Layout }              from '@ui/layout'
 import { Box }                 from '@ui/layout'
 import { Select }              from '@ui/select'
+import { Switch }              from '@ui/switch'
+import { Item }                from '@ui/switch'
 import { Text }                from '@ui/text'
 import { extractFragment }     from '@globals/data'
 import { extractFragments }    from '@globals/data'
 import { screenVar }           from '@store/booking'
-import { carBodyVar }          from '@store/services'
 import { serviceVar }          from '@store/services'
 
 import { RadioList }           from '../radio-list'
@@ -33,15 +33,18 @@ const Initial: FC<InitialProps> = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
+  additionalService,
 }) => {
   const service = useReactiveVar<IService>(serviceVar)
-  const carBody = useReactiveVar<CarBody>(carBodyVar)
+
+  const carBodies = extractFragments('car-body-item', 'contentAddons', carBodiesData)
+  const carBodyItems = carBodies.map((item) => item.contentAddons.title)
 
   const [name, setName] = useState<string>('')
   const [phone, setPhone] = useState<string>('')
   const [comment, setComment] = useState<string>('')
   const [selectedRadius, setSelectedRadius] = useState<string>(service.radius || '')
-  const [selectedCarBody, setSelectedCarBody] = useState<string>(carBody || '')
+  const [selectedCarBody, setSelectedCarBody] = useState<string>(service.carBody || carBodyItems[0])
   const [selectedRepairTypes, setSelectedRepairTypes] = useState<string[]>([])
 
   const signUpTitle = extractFragment('contentAddons', 'sign-up', fragmentsData).title
@@ -69,10 +72,7 @@ const Initial: FC<InitialProps> = ({
   )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
-  const radiiItems = radii.map((item) => item.contentAddons.title)
-
-  const carBodies = extractFragments('car-body-item', 'contentAddons', carBodiesData)
-  const carBodyItems = carBodies.map((item) => item.contentAddons.title)
+  const radiiItems = radii.map((item) => item.contentAddons.title.toLowerCase())
 
   const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
   const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
@@ -95,6 +95,7 @@ const Initial: FC<InitialProps> = ({
           diameter: selectedRadius,
           carBody: selectedCarBody,
           typeRepair: selectedRepairTypes.join(', '),
+          additionalService: typeof additionalService === 'string' ? additionalService : '',
           comment,
         },
       })
@@ -105,7 +106,6 @@ const Initial: FC<InitialProps> = ({
     (success) => {
       if (success) {
         screenVar(SUCCESS)
-        carBodyVar('')
         serviceVar({ ...service, radius: '', serviceName: '' })
       } else screenVar(INVALID)
     },
@@ -165,6 +165,30 @@ const Initial: FC<InitialProps> = ({
       <Layout flexBasis={32} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
+          {carBodyTitle}
+        </Text>
+      </Layout>
+      <Layout flexBasis={16} />
+      <Layout display={['none', 'none', 'flex']}>
+        <Switch active={selectedCarBody}>
+          {carBodyItems.map((item) => (
+            <Item value={item} onSelect={setSelectedCarBody}>
+              {item}
+            </Item>
+          ))}
+        </Switch>
+      </Layout>
+      <Layout display={['flex', 'flex', 'none']}>
+        <RadioList
+          items={carBodyItems}
+          selectedItem={selectedCarBody}
+          setSelectedItem={setSelectedCarBody}
+          width={161}
+        />
+      </Layout>
+      <Layout flexBasis={20} />
+      <Layout>
+        <Text lineHeight='grown' color='darkGray'>
           {wheelDiameterTitle}
         </Text>
       </Layout>
@@ -173,22 +197,8 @@ const Initial: FC<InitialProps> = ({
         items={radiiItems}
         selectedItem={selectedRadius}
         setSelectedItem={setSelectedRadius}
+        textTransform='uppercase'
         width={['18%', '8%', '8%']}
-        id='radius'
-      />
-      <Layout flexBasis={20} />
-      <Layout>
-        <Text lineHeight='grown' color='darkGray'>
-          {carBodyTitle}
-        </Text>
-      </Layout>
-      <Layout flexBasis={16} />
-      <RadioList
-        items={carBodyItems}
-        selectedItem={selectedCarBody}
-        setSelectedItem={setSelectedCarBody}
-        width={161}
-        id='carBody'
       />
       <Layout flexBasis={20} />
       <Layout>

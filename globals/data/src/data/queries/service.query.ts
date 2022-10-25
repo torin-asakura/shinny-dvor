@@ -39,6 +39,7 @@ const runServiceQuery = async (uri) => {
                     fragmentId
                     addon
                     variant
+                    bodies
                     image {
                         altText
                         sourceUrl

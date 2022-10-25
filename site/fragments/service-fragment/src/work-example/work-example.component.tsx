@@ -13,23 +13,24 @@ import { Ruble }            from '@ui/text'
 import { WorkExampleProps } from './work-example.interface'
 
 const WorkExample: FC<WorkExampleProps> = ({ image, title, price }) => (
-  <Row width={[300, 300, 405]} height={[282, 282, 382]}>
+  <Row width={[300, 300, 385]} height={[282, 282, 430]}>
     <Column fill height='auto'>
-      <Box width={[300, 300, 405]} height={320} borderRadius='mini' overflow='hidden'>
+      <Layout flexBasis={[0, 0, 24]} />
+      <Box width={[300, 300, 385]} height={[230, 230, 320]} borderRadius='mini' overflow='hidden'>
         <ImageBlock
           src={image ? image!.sourceUrl : ''}
           alt={image ? image!.altText : ''}
           width={405}
-          height={320}
+          height='100%'
         />
       </Box>
-      <Layout flexBasis={16} />
+      <Layout flexBasis={16} flexShrink={0} />
       <Layout>
         <Text fontWeight='medium' fontSize='normal' color='text.primary'>
           {title}
         </Text>
       </Layout>
-      <Layout flexBasis={8} />
+      <Layout flexBasis={8} flexShrink={0} />
       <Layout>
         <Text fontWeight='medium' fontSize='normal' color='text.primary'>
           {price}

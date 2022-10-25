@@ -11,6 +11,7 @@ const colors = {
   black: 'rgba(37, 44, 50, 1)',
   blue: 'rgba(48, 100, 235, 1)',
   darkBlue: 'rgba(38, 89, 220, 1)',
+  lightBlue: 'rgba(69, 121, 255, 0.15)',
   primaryBlue: 'rgba(69, 121, 255, 1)',
   button: {
     primary: {

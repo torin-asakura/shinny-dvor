@@ -14,6 +14,7 @@ export interface ContentAddons {
 }
 
 export interface InitialProps {
+  additionalService?: string
   fragmentsData: ExtendedContentAddons[]
   availableRadiiData: ContentAddons[]
   carBodiesData: ContentAddons[]

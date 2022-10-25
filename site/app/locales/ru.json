@@ -1,3 +1,9 @@
 {
-  "service.by": "от"
+  "service.by": "от",
+  "service.passenger": "Легковой",
+  "service.jeep": "Джип",
+  "service.commercial": "Коммерческий",
+  "service.minivan": "Минивэн",
+  "service.minibus": "Микроавтобус",
+  "all_services.average_price": "в среднем"
 }

@@ -1,21 +1,22 @@
-import React          from 'react'
-import { FC }         from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { FormattedMessage } from 'react-intl'
 
-import { Condition }  from '@ui/condition'
-import { ImageBlock } from '@ui/image'
-import { Box }        from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { NextLink }   from '@ui/link'
-import { Text }       from '@ui/text'
-import { Ruble }      from '@ui/text'
-import { Space }      from '@ui/text'
-import { useHover }   from '@ui/utils'
+import { Condition }        from '@ui/condition'
+import { ImageBlock }       from '@ui/image'
+import { Box }              from '@ui/layout'
+import { Row }              from '@ui/layout'
+import { Column }           from '@ui/layout'
+import { Layout }           from '@ui/layout'
+import { NextLink }         from '@ui/link'
+import { Text }             from '@ui/text'
+import { Ruble }            from '@ui/text'
+import { Space }            from '@ui/text'
+import { useHover }         from '@ui/utils'
 
-import { ItemProps }  from './item.interface'
+import { ItemProps }        from './item.interface'
 
-const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
+const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, addon }) => {
   const cost = price[Object.keys(price)[1]]?.passenger
 
   const [hover, hoverProps] = useHover()
@@ -23,7 +24,6 @@ const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
   return (
     <Box
       minWidth={['100%', '100%', 296]}
-      minHeight={[332, 332, 420]}
       marginRight={32}
       // @ts-ignore
       cursor='pointer'
@@ -33,10 +33,27 @@ const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
         <NextLink path={uri}>
           <Box
             width='100%'
-            minHeight={[312, 312, 388]}
+            minHeight={[312, 312, 414]}
             backgroundColor='transparentGray'
+            position='relative'
             {...hoverProps}
           >
+            <Box
+              backgroundColor='lightBlue'
+              padding='4px 6px'
+              borderRadius='leftSide'
+              position='absolute'
+              top={16}
+              right={0}
+            >
+              <Text fontSize='atom' color='primaryBlue'>
+                <FormattedMessage id='all_services.average_price' defaultMessage='в среднем' />
+                <Space />
+                {averagePrice}
+                <Space />
+                <Ruble />
+              </Text>
+            </Box>
             <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
             <Column width='100%' alignItems='center'>
               <Layout flexBasis={32} flexShrink={0} />
@@ -45,7 +62,7 @@ const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
               </Box>
               <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
               <Row>
-                <Row width={['100%', '100%', 232]}>
+                <Row width={['100%', '100%', 232]} height={52}>
                   <Text
                     color={hover ? 'blue' : 'black'}
                     display='inline'
@@ -70,7 +87,7 @@ const Item: FC<ItemProps> = ({ uri, serviceName, price, image, addon }) => {
                   <Ruble />
                 </Text>
                 <Layout flexBasis={8} />
-                <Condition match={!!addon.length}>
+                <Condition match={!!addon}>
                   <Box backgroundColor='lightGray' padding='4px 7px' borderRadius='normal'>
                     <Text lineHeight='grown' color='darkGray' fontSize='atom'>
                       {addon}

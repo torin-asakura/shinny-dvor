@@ -9,6 +9,7 @@ import { DropDownIcon }                    from '@ui/icons'
 import { Layout }                          from '@ui/layout'
 import { Text }                            from '@ui/text'
 
+import { ArrowContainer }                  from './arrow-container'
 import { Button }                          from './button'
 import { Menu }                            from './menu'
 import { MenuItem }                        from './menu-item'
@@ -30,7 +31,7 @@ const Select: FC<SelectProps> = ({
     onSelect(selectedItems)
   }
 
-  const { buttonProps, menuProps, renderMenu, selectedItem } = useSelect({
+  const { buttonProps, menuProps, renderMenu, selectedItem, isOpen } = useSelect({
     items,
     onChange,
     stateReducer: (state, actionAndChanges) => {
@@ -58,9 +59,9 @@ const Select: FC<SelectProps> = ({
       <Button isSelected={!!selectedItem} value={value} {...buttonProps}>
         <Text textAlign='start'>{value?.join(', ') || selectedItem || placeholder}</Text>
         <Layout flexGrow={1} />
-        <Layout>
+        <ArrowContainer isOpen={isOpen}>
           <DropDownIcon width={16} height={16} />
-        </Layout>
+        </ArrowContainer>
       </Button>
       {renderMenu(
         <Menu {...menuProps}>

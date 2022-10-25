@@ -5,9 +5,10 @@ export interface Service {
     role: string
   }
   servicesParams: {
-    role: string
-    price: number
+    fragmentId: string
+    price: any
     description: string
+    averagePrice: number
     title: string
     addon: string
     image: {

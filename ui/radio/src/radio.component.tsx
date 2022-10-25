@@ -14,7 +14,7 @@ import { Container }                   from './container'
 import { RadioProps }                  from './radio.interface'
 import { getCheckColor }               from './helper'
 
-const Radio: FC<RadioProps> = ({ children, checked }) => {
+const Radio: FC<RadioProps> = ({ children, checked, textTransform = 'lowercase' }) => {
   const [hover, hoverProps] = useHover()
   const RadioStyled = styled.div<{ checked: boolean }>(createCheckBaseStyles())
   const Checkmark = styled.div(
@@ -28,7 +28,7 @@ const Radio: FC<RadioProps> = ({ children, checked }) => {
     <Column width='100%'>
       <Container checked={checked} {...hoverProps}>
         <Checkmark>
-          <Text fontSize='small' fontWeight='medium'>
+          <Text textTransform={textTransform} fontSize='small' fontWeight='medium'>
             {children}
           </Text>
         </Checkmark>

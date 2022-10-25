@@ -24,8 +24,8 @@ const Mobile: FC = ({ children }) => {
     slidesPerView: 2,
     spaceBetween: 260,
     centered: true,
-    height: 333,
-    width: 330,
+    height: 282,
+    width: 340,
     loop: false,
   })
 
