@@ -578,45 +578,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@atlantis-lab/prettier-config", [\
-        ["npm:0.1.12", {\
-          "packageLocation": "./.yarn/cache/@atlantis-lab-prettier-config-npm-0.1.12-8b53e2b0e4-15b4311ae2.zip/node_modules/@atlantis-lab/prettier-config/",\
-          "packageDependencies": [\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/prettier-plugin-import-sort", "virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@atlantis-lab/prettier-plugin-import-sort", [\
-        ["npm:0.1.12", {\
-          "packageLocation": "./.yarn/cache/@atlantis-lab-prettier-plugin-import-sort-npm-0.1.12-9e4c22beb5-ce0b726361.zip/node_modules/@atlantis-lab/prettier-plugin-import-sort/",\
-          "packageDependencies": [\
-            ["@atlantis-lab/prettier-plugin-import-sort", "npm:0.1.12"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12", {\
-          "packageLocation": "./.yarn/__virtual__/@atlantis-lab-prettier-plugin-import-sort-virtual-1e9db2816d/0/cache/@atlantis-lab-prettier-plugin-import-sort-npm-0.1.12-9e4c22beb5-ce0b726361.zip/node_modules/@atlantis-lab/prettier-plugin-import-sort/",\
-          "packageDependencies": [\
-            ["@atlantis-lab/prettier-plugin-import-sort", "virtual:8b53e2b0e4cef7e7387fad8660224788223feebd97be4dff952dfb4b0cb329169436b70b71c97479dec2caccc7539a0f8d70e827d9cc764427fc470f90ee0ccb#npm:0.1.12"],\
-            ["@types/globby", null],\
-            ["@types/prettier", null],\
-            ["globby", null],\
-            ["import-sort", "npm:6.0.0"],\
-            ["import-sort-parser-typescript", "npm:6.0.0"],\
-            ["import-sort-style", "npm:6.0.0"],\
-            ["prettier", null]\
-          ],\
-          "packagePeers": [\
-            "@types/globby",\
-            "@types/prettier",\
-            "globby",\
-            "prettier"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@atls-ui-generators/button", [\
         ["npm:0.0.10", {\
           "packageLocation": "./.yarn/cache/@atls-ui-generators-button-npm-0.0.10-894245f825-2e766aed62.zip/node_modules/@atls-ui-generators/button/",\
@@ -2649,14 +2610,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls/config-prettier", [\
-        ["npm:0.0.3", {\
-          "packageLocation": "./.yarn/cache/@atls-config-prettier-npm-0.0.3-01e1cecba3-413e3c3b4d.zip/node_modules/@atls/config-prettier/",\
-          "packageDependencies": [\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["prettier", "npm:2.6.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.0.5", {\
           "packageLocation": "./.yarn/cache/@atls-config-prettier-npm-0.0.5-0a66208dbc-f501e0d241.zip/node_modules/@atls/config-prettier/",\
           "packageDependencies": [\
@@ -2867,20 +2820,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@atls/prettier-plugin", [\
-        ["npm:0.0.3", {\
-          "packageLocation": "./.yarn/cache/@atls-prettier-plugin-npm-0.0.3-59a3f50b61-46616fca2b.zip/node_modules/@atls/prettier-plugin/",\
-          "packageDependencies": [\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
-            ["globby", "npm:11.1.0"],\
-            ["import-sort", "npm:6.0.0"],\
-            ["import-sort-parser", "npm:6.0.0"],\
-            ["import-sort-parser-typescript", "npm:6.0.0"],\
-            ["import-sort-style", "npm:6.0.0"],\
-            ["prettier", "npm:2.6.0"],\
-            ["sort-package-json", "npm:1.54.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:0.0.5", {\
           "packageLocation": "./.yarn/cache/@atls-prettier-plugin-npm-0.0.5-f00f897d1d-0d7d1f0be0.zip/node_modules/@atls/prettier-plugin/",\
           "packageDependencies": [\
@@ -10635,22 +10574,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-e98e041274/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:5c9fd0375b336f73fbfb2d1a6d3398eaa3cffa614916c5e95239a595aa475be93f3430a5fc927615379d572fe458372f681240a4c53dfc240b17e3a1f7180981#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.6.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10666,22 +10599,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-bbefcf126c/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:61cf820853ba6cea0139411f61989d03055403ea0ca7b766dfbcdf36f7fe972e6a2ee63ff4e8de5d1737b2e24152b17a8cdb463feace4be99512e43f81b6ad7d#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:61cf820853ba6cea0139411f61989d03055403ea0ca7b766dfbcdf36f7fe972e6a2ee63ff4e8de5d1737b2e24152b17a8cdb463feace4be99512e43f81b6ad7d#npm:11.10.4"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10697,22 +10624,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-9cd48aab69/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:955952d4d195eca6ed4c4581e97abbc344de4954e0b8c74c6d4e7f6781789bd1da843ba4d1719e3893b5a45fc146e0aa677de731cefc45ec863414bc0626c074#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10728,22 +10649,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-06a6e67c2f/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:9d11f0be6497410ce27727247af9edf814dfce34783ae0f223a005f88c4a32fde1adf4b0c92c6eda81a862d7784e98b4daab329a8a639af41d483cae0cff58f6#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10758,22 +10673,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-2f921450ff/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:a9f5e8784a19aa3fffdbd68039ce362b6b7d0846dd637574af66d1419ae020895a3ce8ea2f8dc9bb18971daef5635afb1757e20162f35038d80d116b744b2fb5#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", null],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10789,22 +10698,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-d29a6557ec/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:b5fc5ffd008374ccc232709e6b2eff226b23c8379830a3b2c4967b736a12940b29c793408cf1bcacff3e6830717b858329be775c96fa415791aa6dfe72ba95b7#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.6.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10819,22 +10722,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/@ui-icons-virtual-aa175adc0b/1/ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "virtual:fa129203905a6c04f32e20529edbe25a956960567987648dee62378b71981432182bdd1a583c96eefa771d590d0ce1f32c942636953d2c767bae58b587fb7761#workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:fa129203905a6c04f32e20529edbe25a956960567987648dee62378b71981432182bdd1a583c96eefa771d590d0ce1f32c942636953d2c767bae58b587fb7761#npm:11.10.4"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10850,19 +10747,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./ui/icons/",\
           "packageDependencies": [\
             ["@ui/icons", "workspace:ui/icons"],\
-            ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
             ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
-            ["@atls/config-prettier", "npm:0.0.3"],\
-            ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@types/glob", "npm:7.2.0"],\
-            ["@types/prettier", "npm:2.4.2"],\
             ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
-            ["prettier", "npm:2.5.1"],\
-            ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"]\
+            ["react", "npm:17.0.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -19935,13 +19826,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier", [\
-        ["npm:2.5.1", {\
-          "packageLocation": "./.yarn/cache/prettier-npm-2.5.1-58b195b509-21b9408476.zip/node_modules/prettier/",\
-          "packageDependencies": [\
-            ["prettier", "npm:2.5.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:2.6.0", {\
           "packageLocation": "./.yarn/cache/prettier-npm-2.6.0-fb29989f51-3e527ad622.zip/node_modules/prettier/",\
           "packageDependencies": [\
@@ -21170,19 +21054,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["sort-package-json", [\
-        ["npm:1.54.0", {\
-          "packageLocation": "./.yarn/cache/sort-package-json-npm-1.54.0-cd789e7109-042a6ce7a4.zip/node_modules/sort-package-json/",\
-          "packageDependencies": [\
-            ["sort-package-json", "npm:1.54.0"],\
-            ["detect-indent", "npm:6.1.0"],\
-            ["detect-newline", "npm:3.1.0"],\
-            ["git-hooks-list", "npm:1.0.3"],\
-            ["globby", "npm:10.0.0"],\
-            ["is-plain-obj", "npm:2.1.0"],\
-            ["sort-object-keys", "npm:1.1.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:1.57.0", {\
           "packageLocation": "./.yarn/cache/sort-package-json-npm-1.57.0-e9381da2ff-15758ba6b1.zip/node_modules/sort-package-json/",\
           "packageDependencies": [\

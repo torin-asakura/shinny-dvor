@@ -64,29 +64,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atlantis-lab/prettier-config@npm:^0.1.12":
-  version: 0.1.12
-  resolution: "@atlantis-lab/prettier-config@npm:0.1.12"
-  dependencies:
-    "@atlantis-lab/prettier-plugin-import-sort": 0.1.12
-  checksum: 15b4311ae243c27f71a48bf0dbe5319ac41c407ce88405865beb7a77af1557d9f1111a14af701234fe9c4552142cc10cf0bfde657f58ed2793e14575e67a6a9b
-  languageName: node
-  linkType: hard
-
-"@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12":
-  version: 0.1.12
-  resolution: "@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12"
-  dependencies:
-    import-sort: ^6.0.0
-    import-sort-parser-typescript: ^6.0.0
-    import-sort-style: ^6.0.0
-  peerDependencies:
-    globby: "*"
-    prettier: "*"
-  checksum: ce0b726361b4f0027793505b866aac02b968df3bd76623ecc1c3a663cf377869cbc8eb15d894f9d0e280131086208f49bfcd1dc819dbe10736becf9142c3ac37
-  languageName: node
-  linkType: hard
-
 "@atls-ui-generators/button@npm:0.0.10":
   version: 0.0.10
   resolution: "@atls-ui-generators/button@npm:0.0.10"
@@ -408,15 +385,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/config-prettier@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@atls/config-prettier@npm:0.0.3"
-  dependencies:
-    prettier: ^2.5.1
-  checksum: 413e3c3b4decd474452a4a5ef70855ecc48704b639eae2072748478101fef7b0104327539c25226f36168931c1ad05e58a7f41d9f005592eab378bbc692fa568
-  languageName: node
-  linkType: hard
-
 "@atls/config-prettier@npm:^0.0.5":
   version: 0.0.5
   resolution: "@atls/config-prettier@npm:0.0.5"
@@ -512,21 +480,6 @@ __metadata:
   bin:
     gen-sitemap: ./dist/index.js
   checksum: da29e4f51905379797c19c921c61e0800de07ac63cb66a4c02dda6a7c11a40063ab13a4c5abadcaea08f8abcdbc952b87a9aec74b9a9b7b272cc6534518831ca
-  languageName: node
-  linkType: hard
-
-"@atls/prettier-plugin@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@atls/prettier-plugin@npm:0.0.3"
-  dependencies:
-    globby: ^11.0.4
-    import-sort: ^6.0.0
-    import-sort-parser: ^6.0.0
-    import-sort-parser-typescript: ^6.0.0
-    import-sort-style: ^6.0.0
-    prettier: ^2.5.1
-    sort-package-json: ^1.54.0
-  checksum: 46616fca2b6a6dc2444b1ff31e3ad473b15f39d79ecaa12e81bbe4feaa324168fb8c8b47d9d1a38cf3a8ce9d77150a004267960c0149e6ee325e34cb8fe8e650
   languageName: node
   linkType: hard
 
@@ -3672,7 +3625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2, @types/prettier@npm:^2.1.5":
+"@types/prettier@npm:^2.1.5":
   version: 2.4.2
   resolution: "@types/prettier@npm:2.4.2"
   checksum: 76e230b2d11028af11fe12e09b2d5b10b03738e9abf819ae6ebb0f78cac13d39f860755ce05ac3855b608222518d956628f5d00322dc206cc6d1f2d8d1519f1e
@@ -4015,19 +3968,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
-    "@atlantis-lab/prettier-config": ^0.1.12
     "@atls-ui-generators/icons": ^0.0.2
-    "@atls/config-prettier": ^0.0.3
-    "@atls/prettier-plugin": ^0.0.3
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
     "@types/glob": ^7
-    "@types/prettier": ^2
     glob: ^8.0.3
     glob-promise: 3.4.0
-    prettier: 2.5.1
     react: ^17.0.2
-    remove: ^0.1.5
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -9231,15 +9178,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
-  languageName: node
-  linkType: hard
-
 "prettier@npm:^2.5.1":
   version: 2.6.0
   resolution: "prettier@npm:2.6.0"
@@ -10059,22 +9997,6 @@ fsevents@^2.3.2:
   version: 1.1.3
   resolution: "sort-object-keys@npm:1.1.3"
   checksum: abea944d6722a1710a1aa6e4f9509da085d93d5fc0db23947cb411eedc7731f80022ce8fa68ed83a53dd2ac7441fcf72a3f38c09b3d9bbc4ff80546aa2e151ad
-  languageName: node
-  linkType: hard
-
-"sort-package-json@npm:^1.54.0":
-  version: 1.54.0
-  resolution: "sort-package-json@npm:1.54.0"
-  dependencies:
-    detect-indent: ^6.0.0
-    detect-newline: 3.1.0
-    git-hooks-list: 1.0.3
-    globby: 10.0.0
-    is-plain-obj: 2.1.0
-    sort-object-keys: ^1.1.3
-  bin:
-    sort-package-json: cli.js
-  checksum: 042a6ce7a41f3ecb1f7861d97cb3ce550ea007bdd482414370da2104c53897f1e618923409fe416fbb48d3d9502be3d23072d8a7ac88c2e4d5c321247adb418f
   languageName: node
   linkType: hard
 
