@@ -43,11 +43,16 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             <Layout>
               <Column>
                 {description.split('|n|').map((item) => (
-                  <Layout maxWidth={500}>
-                    <Text whiteSpace='auto' wordWrap='break-word' lineHeight='medium'>
+                  <Row flexWrap='wrap' maxWidth={['100%', '100%', 500]}>
+                    <Text
+                      textAlign='start'
+                      whiteSpace='normal'
+                      wordWrap='break-word'
+                      lineHeight='medium'
+                    >
                       {item}
                     </Text>
-                  </Layout>
+                  </Row>
                 ))}
               </Column>
             </Layout>

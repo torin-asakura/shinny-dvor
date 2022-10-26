@@ -39,7 +39,7 @@ const Services: FC<ServicesProps> = forwardRef((
         <Row>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Box width='100%' justifyContent='space-between'>
-            <Column display={['none', 'none', 'flex']} minWidth={400}>
+            <Column display={['none', 'none', 'flex']} minWidth={['100%', '100%', 400]}>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
                   {title}
