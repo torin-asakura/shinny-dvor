@@ -17,7 +17,7 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const route = useRouter()
 
   return (
-    <Button color='grey' size='ghost' onClick={() => route.back()} {...hoverProps}>
+    <Button color='grey' size='ghost' onClick={() => route.replace('/')} {...hoverProps}>
       <Box width={102} alignItems='center'>
         <Layout>
           <BackIcon width={12} height={24} color={hover ? 'white' : 'charcoal'} />

@@ -14,19 +14,13 @@
  * />
  * */
 
-const getReplacement = (...themeProps) =>
-  (color) => ({
-    [color]: `{(theme.colors${themeProps.reduce(
-      (str, prop) => `${str}.${prop}`,
-      ''
-    )}[props.color || 0] || props.color) || "${color}"}`,
-  })
+import { getColorReplacement } from '@atls-ui-generators/icons'
 
 export const replacements = {
-  LogoIcon: getReplacement()('#252C32'),
-  WheelIcon: getReplacement()('#252C32'),
-  VkIcon: getReplacement()('#252C32'),
-  FacebookIcon: getReplacement()('#252C32'),
-  MenuIcon: getReplacement()('white'),
-  BackIcon: getReplacement()('#252C32'),
+  LogoIcon: getColorReplacement({ color: '#252C32' }),
+  WheelIcon: getColorReplacement({ color: '#252C32' }),
+  VkIcon: getColorReplacement({ color: '#252C32' }),
+  FacebookIcon: getColorReplacement({ color: '#252C32' }),
+  MenuIcon: getColorReplacement({ color: 'white' }),
+  BackIcon: getColorReplacement({ color: '#252C32' }),
 }

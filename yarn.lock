@@ -64,36 +64,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atlantis-lab/prettier-config@npm:^0.1.12":
-  version: 0.1.12
-  resolution: "@atlantis-lab/prettier-config@npm:0.1.12"
-  dependencies:
-    "@atlantis-lab/prettier-plugin-import-sort": 0.1.12
-  checksum: 15b4311ae243c27f71a48bf0dbe5319ac41c407ce88405865beb7a77af1557d9f1111a14af701234fe9c4552142cc10cf0bfde657f58ed2793e14575e67a6a9b
-  languageName: node
-  linkType: hard
-
-"@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12":
-  version: 0.1.12
-  resolution: "@atlantis-lab/prettier-plugin-import-sort@npm:0.1.12"
-  dependencies:
-    import-sort: ^6.0.0
-    import-sort-parser-typescript: ^6.0.0
-    import-sort-style: ^6.0.0
-  peerDependencies:
-    globby: "*"
-    prettier: "*"
-  checksum: ce0b726361b4f0027793505b866aac02b968df3bd76623ecc1c3a663cf377869cbc8eb15d894f9d0e280131086208f49bfcd1dc819dbe10736becf9142c3ac37
-  languageName: node
-  linkType: hard
-
-"@atlantis-lab/tsconfig@npm:^0.1.12":
-  version: 0.1.12
-  resolution: "@atlantis-lab/tsconfig@npm:0.1.12"
-  checksum: 9f27b5e167b3a6277a4ca899a924b9d71900aedd5d1819b596a525d795ef312714dc1f7fe15b6acb340eeff040ae42961170fa19c3d192f32838c6acf495043b
-  languageName: node
-  linkType: hard
-
 "@atls-ui-generators/button@npm:0.0.10":
   version: 0.0.10
   resolution: "@atls-ui-generators/button@npm:0.0.10"
@@ -108,6 +78,26 @@ __metadata:
   bin:
     generate-styles: dist/generator.js
   checksum: 2e766aed620f3694d303133a7563c07997a82e5cbe14b609841f2c81abe0d5b4577cbc1af9bf21aec9241476d78c15d9121372385f9ef8e4344bb8b00ba5fd76
+  languageName: node
+  linkType: hard
+
+"@atls-ui-generators/icons@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@atls-ui-generators/icons@npm:0.0.2"
+  dependencies:
+    "@atls-ui-generators/utils": 0.0.4
+    "@atls/config-prettier": ^0.0.5
+    "@atls/prettier-plugin": ^0.0.5
+    "@babel/standalone": ^7.19.5
+    "@svgr/core": 5.5.0
+    camelcase: ^6.3.0
+    commander: ^9.4.1
+    fs-extra-promise: ^1.0.1
+    glob-promise: ^5.0.0
+    prettier: ^2.5.1
+  bin:
+    generate-icons: dist/generator.js
+  checksum: df7b389cbc2e8ea9256087b3fad51ecd0b4af45cdbb5ae793909301ab4173dfe1c24074bde6e1aa8f977b2a0706d9d864adec38399949013af7cdf91f73859be
   languageName: node
   linkType: hard
 
@@ -395,15 +385,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/config-prettier@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@atls/config-prettier@npm:0.0.3"
-  dependencies:
-    prettier: ^2.5.1
-  checksum: 413e3c3b4decd474452a4a5ef70855ecc48704b639eae2072748478101fef7b0104327539c25226f36168931c1ad05e58a7f41d9f005592eab378bbc692fa568
-  languageName: node
-  linkType: hard
-
 "@atls/config-prettier@npm:^0.0.5":
   version: 0.0.5
   resolution: "@atls/config-prettier@npm:0.0.5"
@@ -499,21 +480,6 @@ __metadata:
   bin:
     gen-sitemap: ./dist/index.js
   checksum: da29e4f51905379797c19c921c61e0800de07ac63cb66a4c02dda6a7c11a40063ab13a4c5abadcaea08f8abcdbc952b87a9aec74b9a9b7b272cc6534518831ca
-  languageName: node
-  linkType: hard
-
-"@atls/prettier-plugin@npm:^0.0.3":
-  version: 0.0.3
-  resolution: "@atls/prettier-plugin@npm:0.0.3"
-  dependencies:
-    globby: ^11.0.4
-    import-sort: ^6.0.0
-    import-sort-parser: ^6.0.0
-    import-sort-parser-typescript: ^6.0.0
-    import-sort-style: ^6.0.0
-    prettier: ^2.5.1
-    sort-package-json: ^1.54.0
-  checksum: 46616fca2b6a6dc2444b1ff31e3ad473b15f39d79ecaa12e81bbe4feaa324168fb8c8b47d9d1a38cf3a8ce9d77150a004267960c0149e6ee325e34cb8fe8e650
   languageName: node
   linkType: hard
 
@@ -3530,7 +3496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:*, @types/glob@npm:^7, @types/glob@npm:^7.1.1":
+"@types/glob@npm:*, @types/glob@npm:^7, @types/glob@npm:^7.1.1, @types/glob@npm:^7.2.0":
   version: 7.2.0
   resolution: "@types/glob@npm:7.2.0"
   dependencies:
@@ -3659,7 +3625,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2, @types/prettier@npm:^2.1.5":
+"@types/prettier@npm:^2.1.5":
   version: 2.4.2
   resolution: "@types/prettier@npm:2.4.2"
   checksum: 76e230b2d11028af11fe12e09b2d5b10b03738e9abf819ae6ebb0f78cac13d39f860755ce05ac3855b608222518d956628f5d00322dc206cc6d1f2d8d1519f1e
@@ -4002,23 +3968,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
-    "@atlantis-lab/prettier-config": ^0.1.12
-    "@atlantis-lab/tsconfig": ^0.1.12
-    "@atls/config-prettier": ^0.0.3
-    "@atls/prettier-plugin": ^0.0.3
+    "@atls-ui-generators/icons": ^0.0.2
     "@emotion/react": ^11.4.1
     "@emotion/styled": ^11.3.0
-    "@svgr/core": 5.5.0
     "@types/glob": ^7
-    "@types/prettier": ^2
-    camelcase: 6.0.0
-    fs-extra-promise: 1.0.1
-    glob: ^7.1.7
+    glob: ^8.0.3
     glob-promise: 3.4.0
-    prettier: 2.5.1
     react: ^17.0.2
-    remove: ^0.1.5
-    ts-node: 8.10.2
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
@@ -5264,13 +5220,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"arg@npm:^4.1.0":
-  version: 4.1.3
-  resolution: "arg@npm:4.1.3"
-  checksum: 544af8dd3f60546d3e4aff084d451b96961d2267d668670199692f8d054f0415d86fc5497d0e641e91546f0aa920e7c29e5250e99fc89f5552a34b5d93b77f43
-  languageName: node
-  linkType: hard
-
 "argparse@npm:^1.0.7":
   version: 1.0.10
   resolution: "argparse@npm:1.0.10"
@@ -5473,6 +5422,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"brace-expansion@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "brace-expansion@npm:2.0.1"
+  dependencies:
+    balanced-match: ^1.0.0
+  checksum: a61e7cd2e8a8505e9f0036b3b6108ba5e926b4b55089eeb5550cd04a471fe216c96d4fe7e4c7f995c728c554ae20ddfc4244cad10aef255e72b62930afd233d1
+  languageName: node
+  linkType: hard
+
 "braces@npm:^3.0.1":
   version: 3.0.2
   resolution: "braces@npm:3.0.2"
@@ -5622,13 +5580,6 @@ __metadata:
   version: 3.1.0
   resolution: "callsites@npm:3.1.0"
   checksum: 072d17b6abb459c2ba96598918b55868af677154bec7e73d222ef95a8fdb9bbf7dae96a8421085cdad8cd190d86653b5b6dc55a4484f2e5b2e27d5e0c3fc15b3
-  languageName: node
-  linkType: hard
-
-"camelcase@npm:6.0.0":
-  version: 6.0.0
-  resolution: "camelcase@npm:6.0.0"
-  checksum: 28f42db097786fb9edb4a80af6cfa67331a9120e00323aaac925f0520797e79eaef9fd771c62b0403468bfd596e528e426863176ae8bb992d086dc991deabebb
   languageName: node
   linkType: hard
 
@@ -6849,7 +6800,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra-promise@npm:1.0.1":
+"fs-extra-promise@npm:^1.0.1":
   version: 1.0.1
   resolution: "fs-extra-promise@npm:1.0.1"
   dependencies:
@@ -7031,6 +6982,17 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"glob-promise@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "glob-promise@npm:5.0.0"
+  dependencies:
+    "@types/glob": ^7.2.0
+  peerDependencies:
+    glob: ^8.0.3
+  checksum: 2c48c52fda2df4d08d17b330f8a018046dbf00d7d97531fbad36cb0e8fbf9ff7a0ea1acd6c90f03813212447db1ffa1480d6049b26e675d81c1fa01685f8a3e1
+  languageName: node
+  linkType: hard
+
 "glob-to-regexp@npm:^0.4.1":
   version: 0.4.1
   resolution: "glob-to-regexp@npm:0.4.1"
@@ -7038,7 +7000,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.7":
+"glob@npm:^7.1.3, glob@npm:^7.1.4":
   version: 7.2.0
   resolution: "glob@npm:7.2.0"
   dependencies:
@@ -7049,6 +7011,19 @@ fsevents@^2.3.2:
     once: ^1.3.0
     path-is-absolute: ^1.0.0
   checksum: 78a8ea942331f08ed2e055cb5b9e40fe6f46f579d7fd3d694f3412fe5db23223d29b7fee1575440202e9a7ff9a72ab106a39fee39934c7bedafe5e5f8ae20134
+  languageName: node
+  linkType: hard
+
+"glob@npm:^8.0.3":
+  version: 8.0.3
+  resolution: "glob@npm:8.0.3"
+  dependencies:
+    fs.realpath: ^1.0.0
+    inflight: ^1.0.4
+    inherits: 2
+    minimatch: ^5.0.1
+    once: ^1.3.0
+  checksum: 50bcdea19d8e79d8de5f460b1939ffc2b3299eac28deb502093fdca22a78efebc03e66bf54f0abc3d3d07d8134d19a32850288b7440d77e072aa55f9d33b18c5
   languageName: node
   linkType: hard
 
@@ -8369,7 +8344,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"make-error@npm:1.x, make-error@npm:^1.1.1":
+"make-error@npm:1.x":
   version: 1.3.6
   resolution: "make-error@npm:1.3.6"
   checksum: b86e5e0e25f7f777b77fabd8e2cbf15737972869d852a22b7e73c17623928fccb826d8e46b9951501d3f20e51ad74ba8c59ed584f610526a48f8ccf88aaec402
@@ -8524,6 +8499,15 @@ fsevents@^2.3.2:
   dependencies:
     brace-expansion: ^1.1.7
   checksum: c154e566406683e7bcb746e000b84d74465b3a832c45d59912b9b55cd50dee66e5c4b1e5566dba26154040e51672f9aa450a9aef0c97cfc7336b78b7afb9540a
+  languageName: node
+  linkType: hard
+
+"minimatch@npm:^5.0.1":
+  version: 5.1.0
+  resolution: "minimatch@npm:5.1.0"
+  dependencies:
+    brace-expansion: ^2.0.1
+  checksum: 15ce53d31a06361e8b7a629501b5c75491bc2b59712d53e802b1987121d91b433d73fcc5be92974fde66b2b51d8fb28d75a9ae900d249feb792bb1ba2a4f0a90
   languageName: node
   linkType: hard
 
@@ -9191,15 +9175,6 @@ fsevents@^2.3.2:
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
   checksum: cd192ec0d0a8e4c6da3bb80e4f62afe336df3f76271ac6deb0e6a36187133b6073a19e9727a1ff108cd8b9982e4768850d413baa71214dd80c7979617dca827a
-  languageName: node
-  linkType: hard
-
-"prettier@npm:2.5.1":
-  version: 2.5.1
-  resolution: "prettier@npm:2.5.1"
-  bin:
-    prettier: bin-prettier.js
-  checksum: 21b9408476ea1c544b0e45d51ceb94a84789ff92095abb710942d780c862d0daebdb29972d47f6b4d0f7ebbfb0ffbf56cc2cfa3e3e9d1cca54864af185b15b66
   languageName: node
   linkType: hard
 
@@ -10025,22 +10000,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"sort-package-json@npm:^1.54.0":
-  version: 1.54.0
-  resolution: "sort-package-json@npm:1.54.0"
-  dependencies:
-    detect-indent: ^6.0.0
-    detect-newline: 3.1.0
-    git-hooks-list: 1.0.3
-    globby: 10.0.0
-    is-plain-obj: 2.1.0
-    sort-object-keys: ^1.1.3
-  bin:
-    sort-package-json: cli.js
-  checksum: 042a6ce7a41f3ecb1f7861d97cb3ce550ea007bdd482414370da2104c53897f1e618923409fe416fbb48d3d9502be3d23072d8a7ac88c2e4d5c321247adb418f
-  languageName: node
-  linkType: hard
-
 "sort-package-json@npm:^1.57.0":
   version: 1.57.0
   resolution: "sort-package-json@npm:1.57.0"
@@ -10074,7 +10033,7 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"source-map-support@npm:^0.5.17, source-map-support@npm:~0.5.20":
+"source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
   dependencies:
@@ -10653,26 +10612,6 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
-"ts-node@npm:8.10.2":
-  version: 8.10.2
-  resolution: "ts-node@npm:8.10.2"
-  dependencies:
-    arg: ^4.1.0
-    diff: ^4.0.1
-    make-error: ^1.1.1
-    source-map-support: ^0.5.17
-    yn: 3.1.1
-  peerDependencies:
-    typescript: ">=2.7"
-  bin:
-    ts-node: dist/bin.js
-    ts-node-script: dist/bin-script.js
-    ts-node-transpile-only: dist/bin-transpile.js
-    ts-script: dist/bin-script-deprecated.js
-  checksum: 480adb076fdab6dbabd726c6056d651ddc567feda0d3e4770d809c01d000715a0f61f80be0e4a92ef87b7f4a494b79d9595d62de4a3931d740122ae26f0e10d8
-  languageName: node
-  linkType: hard
-
 "tslib@npm:^1.13.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -11019,13 +10958,6 @@ fsevents@^2.3.2:
   version: 21.0.1
   resolution: "yargs-parser@npm:21.0.1"
   checksum: c3ea2ed12cad0377ce3096b3f138df8267edf7b1aa7d710cd502fe16af417bafe4443dd71b28158c22fcd1be5dfd0e86319597e47badf42ff83815485887323a
-  languageName: node
-  linkType: hard
-
-"yn@npm:3.1.1":
-  version: 3.1.1
-  resolution: "yn@npm:3.1.1"
-  checksum: 2c487b0e149e746ef48cda9f8bad10fc83693cd69d7f9dcd8be4214e985de33a29c9e24f3c0d6bcf2288427040a8947406ab27f7af67ee9456e6b84854f02dd6
   languageName: node
   linkType: hard
 
