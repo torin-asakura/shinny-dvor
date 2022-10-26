@@ -617,15 +617,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@atlantis-lab/tsconfig", [\
-        ["npm:0.1.12", {\
-          "packageLocation": "./.yarn/cache/@atlantis-lab-tsconfig-npm-0.1.12-19f68cd86e-9f27b5e167.zip/node_modules/@atlantis-lab/tsconfig/",\
-          "packageDependencies": [\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["@atls-ui-generators/button", [\
         ["npm:0.0.10", {\
           "packageLocation": "./.yarn/cache/@atls-ui-generators-button-npm-0.0.10-894245f825-2e766aed62.zip/node_modules/@atls-ui-generators/button/",\
@@ -638,6 +629,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["camelcase", "npm:6.3.0"],\
             ["commander", "npm:9.4.1"],\
             ["prettier", "npm:2.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@atls-ui-generators/icons", [\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/@atls-ui-generators-icons-npm-0.0.2-712d65b27b-df7b389cbc.zip/node_modules/@atls-ui-generators/icons/",\
+          "packageDependencies": [\
+            ["@atls-ui-generators/icons", "npm:0.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2", {\
+          "packageLocation": "./.yarn/__virtual__/@atls-ui-generators-icons-virtual-e1965c393f/0/cache/@atls-ui-generators-icons-npm-0.0.2-712d65b27b-df7b389cbc.zip/node_modules/@atls-ui-generators/icons/",\
+          "packageDependencies": [\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
+            ["@atls-ui-generators/utils", "npm:0.0.4"],\
+            ["@atls/config-prettier", "npm:0.0.5"],\
+            ["@atls/prettier-plugin", "npm:0.0.5"],\
+            ["@babel/standalone", "npm:7.19.5"],\
+            ["@svgr/core", "npm:5.5.0"],\
+            ["@types/glob", "npm:7.2.0"],\
+            ["camelcase", "npm:6.3.0"],\
+            ["commander", "npm:9.4.1"],\
+            ["fs-extra-promise", "npm:1.0.1"],\
+            ["glob", "npm:8.0.3"],\
+            ["glob-promise", "virtual:e1965c393f88ece40ef9ec122cd53e3f05cdcfde9400b76d9c20544724818b4e523ae094df9174306689eb0e5da9cd5589ca25b81779b899b7461459571a3595#npm:5.0.0"],\
+            ["prettier", "npm:2.6.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/glob",\
+            "glob"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -10613,25 +10636,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:5c9fd0375b336f73fbfb2d1a6d3398eaa3cffa614916c5e95239a595aa475be93f3430a5fc927615379d572fe458372f681240a4c53dfc240b17e3a1f7180981#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10648,25 +10667,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:61cf820853ba6cea0139411f61989d03055403ea0ca7b766dfbcdf36f7fe972e6a2ee63ff4e8de5d1737b2e24152b17a8cdb463feace4be99512e43f81b6ad7d#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:61cf820853ba6cea0139411f61989d03055403ea0ca7b766dfbcdf36f7fe972e6a2ee63ff4e8de5d1737b2e24152b17a8cdb463feace4be99512e43f81b6ad7d#npm:11.10.4"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10683,25 +10698,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:955952d4d195eca6ed4c4581e97abbc344de4954e0b8c74c6d4e7f6781789bd1da843ba4d1719e3893b5a45fc146e0aa677de731cefc45ec863414bc0626c074#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10718,25 +10729,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:9d11f0be6497410ce27727247af9edf814dfce34783ae0f223a005f88c4a32fde1adf4b0c92c6eda81a862d7784e98b4daab329a8a639af41d483cae0cff58f6#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
             ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10752,25 +10759,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:a9f5e8784a19aa3fffdbd68039ce362b6b7d0846dd637574af66d1419ae020895a3ce8ea2f8dc9bb18971daef5635afb1757e20162f35038d80d116b744b2fb5#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", null],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10787,25 +10790,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:b5fc5ffd008374ccc232709e6b2eff226b23c8379830a3b2c4967b736a12940b29c793408cf1bcacff3e6830717b858329be775c96fa415791aa6dfe72ba95b7#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10821,25 +10820,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "virtual:fa129203905a6c04f32e20529edbe25a956960567987648dee62378b71981432182bdd1a583c96eefa771d590d0ce1f32c942636953d2c767bae58b587fb7761#workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:ba9451eafa6797a4ed8653648f251c0d1a49d95c4bd08eb64bd5261429081ba08aa7d48e632b2ef51292b4eb893fd2ae922a8b3e6c07397e060a2403359c914c#npm:11.7.0"],\
             ["@emotion/styled", "virtual:fa129203905a6c04f32e20529edbe25a956960567987648dee62378b71981432182bdd1a583c96eefa771d590d0ce1f32c942636953d2c767bae58b587fb7761#npm:11.10.4"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/emotion__react", null],\
             ["@types/emotion__styled", null],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
             ["@types/react", "npm:17.0.47"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "packagePeers": [\
             "@emotion/react",\
@@ -10856,22 +10851,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@ui/icons", "workspace:ui/icons"],\
             ["@atlantis-lab/prettier-config", "npm:0.1.12"],\
-            ["@atlantis-lab/tsconfig", "npm:0.1.12"],\
+            ["@atls-ui-generators/icons", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:0.0.2"],\
             ["@atls/config-prettier", "npm:0.0.3"],\
             ["@atls/prettier-plugin", "npm:0.0.3"],\
             ["@emotion/react", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
             ["@emotion/styled", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:11.6.0"],\
-            ["@svgr/core", "npm:5.5.0"],\
             ["@types/glob", "npm:7.2.0"],\
             ["@types/prettier", "npm:2.4.2"],\
-            ["camelcase", "npm:6.0.0"],\
-            ["fs-extra-promise", "npm:1.0.1"],\
-            ["glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"],\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["prettier", "npm:2.5.1"],\
             ["react", "npm:17.0.2"],\
-            ["remove", "npm:0.1.5"],\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"]\
+            ["remove", "npm:0.1.5"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -15171,15 +15162,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["arg", [\
-        ["npm:4.1.3", {\
-          "packageLocation": "./.yarn/cache/arg-npm-4.1.3-1748b966a8-544af8dd3f.zip/node_modules/arg/",\
-          "packageDependencies": [\
-            ["arg", "npm:4.1.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["argparse", [\
         ["npm:1.0.10", {\
           "packageLocation": "./.yarn/cache/argparse-npm-1.0.10-528934e59d-7ca6e45583.zip/node_modules/argparse/",\
@@ -15459,6 +15441,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["concat-map", "npm:0.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.0.1", {\
+          "packageLocation": "./.yarn/cache/brace-expansion-npm-2.0.1-17aa2616f9-a61e7cd2e8.zip/node_modules/brace-expansion/",\
+          "packageDependencies": [\
+            ["brace-expansion", "npm:2.0.1"],\
+            ["balanced-match", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["braces", [\
@@ -15631,13 +15621,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/camelcase-npm-5.3.1-5db8af62c5-e6effce26b.zip/node_modules/camelcase/",\
           "packageDependencies": [\
             ["camelcase", "npm:5.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:6.0.0", {\
-          "packageLocation": "./.yarn/cache/camelcase-npm-6.0.0-9f3e9c28c5-28f42db097.zip/node_modules/camelcase/",\
-          "packageDependencies": [\
-            ["camelcase", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -17409,6 +17392,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["path-is-absolute", "npm:1.0.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:8.0.3", {\
+          "packageLocation": "./.yarn/cache/glob-npm-8.0.3-750f909025-50bcdea19d.zip/node_modules/glob/",\
+          "packageDependencies": [\
+            ["glob", "npm:8.0.3"],\
+            ["fs.realpath", "npm:1.0.0"],\
+            ["inflight", "npm:1.0.6"],\
+            ["inherits", "npm:2.0.4"],\
+            ["minimatch", "npm:5.1.0"],\
+            ["once", "npm:1.4.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["glob-parent", [\
@@ -17437,12 +17432,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:5.0.0", {\
+          "packageLocation": "./.yarn/cache/glob-promise-npm-5.0.0-91cf9ab35f-2c48c52fda.zip/node_modules/glob-promise/",\
+          "packageDependencies": [\
+            ["glob-promise", "npm:5.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0", {\
           "packageLocation": "./.yarn/__virtual__/glob-promise-virtual-7a604954ba/0/cache/glob-promise-npm-3.4.0-39b66535be-84a2c076e7.zip/node_modules/glob-promise/",\
           "packageDependencies": [\
             ["glob-promise", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:3.4.0"],\
             ["@types/glob", "npm:7.2.0"],\
-            ["glob", "npm:7.2.0"]\
+            ["glob", "npm:8.0.3"]\
+          ],\
+          "packagePeers": [\
+            "@types/glob",\
+            "glob"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:e1965c393f88ece40ef9ec122cd53e3f05cdcfde9400b76d9c20544724818b4e523ae094df9174306689eb0e5da9cd5589ca25b81779b899b7461459571a3595#npm:5.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/glob-promise-virtual-e793931476/0/cache/glob-promise-npm-5.0.0-91cf9ab35f-2c48c52fda.zip/node_modules/glob-promise/",\
+          "packageDependencies": [\
+            ["glob-promise", "virtual:e1965c393f88ece40ef9ec122cd53e3f05cdcfde9400b76d9c20544724818b4e523ae094df9174306689eb0e5da9cd5589ca25b81779b899b7461459571a3595#npm:5.0.0"],\
+            ["@types/glob", "npm:7.2.0"],\
+            ["glob", "npm:8.0.3"]\
           ],\
           "packagePeers": [\
             "@types/glob",\
@@ -19134,6 +19149,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["minimatch", "npm:3.1.2"],\
             ["brace-expansion", "npm:1.1.11"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:5.1.0", {\
+          "packageLocation": "./.yarn/cache/minimatch-npm-5.1.0-34f6240621-15ce53d31a.zip/node_modules/minimatch/",\
+          "packageDependencies": [\
+            ["minimatch", "npm:5.1.0"],\
+            ["brace-expansion", "npm:2.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -21943,33 +21966,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["ts-node", [\
-        ["npm:8.10.2", {\
-          "packageLocation": "./.yarn/cache/ts-node-npm-8.10.2-b4fe5a56b0-480adb076f.zip/node_modules/ts-node/",\
-          "packageDependencies": [\
-            ["ts-node", "npm:8.10.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }],\
-        ["virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2", {\
-          "packageLocation": "./.yarn/__virtual__/ts-node-virtual-a6797f561e/0/cache/ts-node-npm-8.10.2-b4fe5a56b0-480adb076f.zip/node_modules/ts-node/",\
-          "packageDependencies": [\
-            ["ts-node", "virtual:06a6e67c2f60b8ceb602fc465e90225927d17e7318e7232fc7125a68aa43a4a05396b7d16dc8c08be755f7f4578025f0c7fcf7f85be5f28330a1d1bda86c0bae#npm:8.10.2"],\
-            ["@types/typescript", null],\
-            ["arg", "npm:4.1.3"],\
-            ["diff", "npm:4.0.2"],\
-            ["make-error", "npm:1.3.6"],\
-            ["source-map-support", "npm:0.5.21"],\
-            ["typescript", null],\
-            ["yn", "npm:3.1.1"]\
-          ],\
-          "packagePeers": [\
-            "@types/typescript",\
-            "typescript"\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["tslib", [\
         ["npm:1.14.1", {\
           "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",\
@@ -22394,15 +22390,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/yargs-parser-npm-21.0.1-b778fd3462-c3ea2ed12c.zip/node_modules/yargs-parser/",\
           "packageDependencies": [\
             ["yargs-parser", "npm:21.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["yn", [\
-        ["npm:3.1.1", {\
-          "packageLocation": "./.yarn/cache/yn-npm-3.1.1-8ad4259784-2c487b0e14.zip/node_modules/yn/",\
-          "packageDependencies": [\
-            ["yn", "npm:3.1.1"]\
           ],\
           "linkType": "HARD"\
         }]\

@@ -11,7 +11,7 @@
     "fragments/**/*"
   ],
   "scripts": {
-    "postinstall": "yarn workspace @ui/icons build"
+    "postinstall": "yarn workspace @ui/icons generate-icons"
   },
   "resolutions": {
     "@apollo/client": "^3.6.9",
