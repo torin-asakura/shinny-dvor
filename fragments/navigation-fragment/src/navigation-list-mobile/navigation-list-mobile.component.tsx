@@ -13,18 +13,21 @@ import { NavigationListMobileProps } from './navigation-list-mobile.interface'
 import { getColor }                  from '../helpers'
 import { getColorBackground }        from '../helpers'
 
-const NavigationListMobile: FC<NavigationListMobileProps> = ({ active, navigation }) => {
+const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, navigation }) => {
   const router = useRouter()
 
   return (
-    <Box backgroundColor={getColorBackground(active!)} style={{ transition: '.2s' }}>
+    <Box backgroundColor={getColorBackground(active!, scrollY)} style={{ transition: '.2s' }}>
       <Layout flexBasis={20} flexShrink={0} />
       <Column fill>
         {navigation.map(({ contentAddons: { title, content } }, index) => (
           <React.Fragment key={title}>
             <Row>
               <NextNavLink path={content}>
-                <Text color={router.route === '/' ? getColor(active) : ''} fontWeight='medium'>
+                <Text
+                  color={router.route === '/' ? getColor(active, scrollY) : ''}
+                  fontWeight='medium'
+                >
                   {title}
                 </Text>
               </NextNavLink>

@@ -19,6 +19,12 @@ interface Post {
       altText: string
     }
   }
+  contentAddons: {
+    image: {
+      altText: string
+      mediaItemUrl: string
+    }
+  }
 }
 
 export interface ArticleProps {

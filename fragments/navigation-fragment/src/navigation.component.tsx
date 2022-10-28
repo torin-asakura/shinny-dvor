@@ -31,12 +31,14 @@ const Navigation: FC<NavigationProps> = ({
   fragmentsData,
   carBodiesData,
   servicesData,
+  scrollY,
 }) => {
   const [visible, setVisible] = useState<boolean>(false)
   const [drawer, setDrawer] = useState<boolean>(false)
 
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
   const signUp = extractFragment('contentAddons', 'booking', navigationData)
+  const mainPage = extractFragment('contentAddons', 'main', navigationData)
 
   return (
     <>
@@ -47,6 +49,7 @@ const Navigation: FC<NavigationProps> = ({
           availableRadiiData={availableRadiiData}
           carBodiesData={carBodiesData}
           servicesData={servicesData}
+          navigationData={navigationData}
         />
       </Layer>
       <Box
@@ -55,7 +58,7 @@ const Navigation: FC<NavigationProps> = ({
         height={[80, 80, 104]}
         position='fixed'
         justifyContent='center'
-        backgroundColor={getColorBackground(active!)}
+        backgroundColor={getColorBackground(active!, scrollY)}
         style={{ transition: '.2s' }}
       >
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
@@ -65,21 +68,25 @@ const Navigation: FC<NavigationProps> = ({
             <Row justifyContent='space-between'>
               <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
                 <Button size='ghost' color='transparent' onClick={() => setDrawer(!drawer)}>
-                  <MenuIcon width={24} height={24} color={getColor(active!)} />
+                  <MenuIcon width={24} height={24} color={getColor(active!, scrollY)} />
                 </Button>
                 <Drawer active={drawer} onClose={() => setDrawer(false)}>
-                  <NavigationListMobile active={active} navigation={navigationItems} />
+                  <NavigationListMobile
+                    scrollY={scrollY}
+                    active={active}
+                    navigation={navigationItems}
+                  />
                 </Drawer>
                 <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
                 <Layout>
-                  <Logo color={getColor(active!)} />
+                  <Logo path={mainPage.content} color={getColor(active!, scrollY)} />
                 </Layout>
               </Box>
               <Layout display={['none', 'none', 'flex']}>
-                <Logo color={getColor(active!)} />
+                <Logo path={mainPage.content} color={getColor(active!, scrollY)} />
               </Layout>
               <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
-                <NavigationList active={active} navigation={navigationItems} />
+                <NavigationList scrollY={scrollY} active={active} navigation={navigationItems} />
               </Box>
               <Box width={[176, 176, 201]} zIndex={1}>
                 <Layout flexGrow={1} />

@@ -16,6 +16,12 @@ export const GET_POST = gql`
           mediaItemUrl
         }
       }
+      contentAddons {
+        image {
+          altText
+          mediaItemUrl
+        }
+      }
     }
   }
 `

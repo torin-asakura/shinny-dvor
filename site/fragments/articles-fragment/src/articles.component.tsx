@@ -36,9 +36,9 @@ const Articles: FC<ArticlesProps> = forwardRef((
       justifyContent='center'
       ref={ref}
     >
-      <Box minWidth={['100%', '100%', '1440px']} justifyContent='space-between'>
+      <Box width='100%' maxWidth={['100%', '100%', 1440]} justifyContent='space-between'>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
-        <Column fill>
+        <Column fill overflow='hidden'>
           <Layout flexBasis={[64, 64, 100]} />
           <Layout>
             <Text

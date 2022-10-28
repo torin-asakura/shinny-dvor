@@ -1,24 +1,26 @@
-import { useReactiveVar } from '@apollo/client'
+import { useReactiveVar }  from '@apollo/client'
 
-import React              from 'react'
+import React               from 'react'
 
-import { Screen }         from '@store/booking'
-import { INITIAL }        from '@store/booking'
-import { SUCCESS }        from '@store/booking'
-import { INVALID }        from '@store/booking'
-import { Button }         from '@ui/button'
-import { Condition }      from '@ui/condition'
-import { CloseIcon }      from '@ui/icons'
-import { Column }         from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Layout }         from '@ui/layout'
-import { Box }            from '@ui/layout'
-import { Logo }           from '@ui/logo'
-import { screenVar }      from '@store/booking'
+import { Screen }          from '@store/booking'
+import { INITIAL }         from '@store/booking'
+import { SUCCESS }         from '@store/booking'
+import { INVALID }         from '@store/booking'
+import { Button }          from '@ui/button'
+import { Condition }       from '@ui/condition'
+import { CloseIcon }       from '@ui/icons'
+import { Column }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Box }             from '@ui/layout'
+import { Logo }            from '@ui/logo'
+import { extractFragment } from '@globals/data'
+import { screenVar }       from '@store/booking'
+import { useHover }        from '@ui/utils'
 
-import { Initial }        from './initial'
-import { Invalid }        from './invalid'
-import { Success }        from './success'
+import { Initial }         from './initial'
+import { Invalid }         from './invalid'
+import { Success }         from './success'
 
 const Booking = ({
   setVisible,
@@ -26,9 +28,13 @@ const Booking = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
+  navigationData,
   additionalService,
 }: any) => {
   const screen = useReactiveVar<Screen>(screenVar)
+  const [hover, hoverProps] = useHover()
+
+  const mainPage = extractFragment('contentAddons', 'main', navigationData)
 
   return (
     <Row justifyContent='space-between' height='100%'>
@@ -37,19 +43,18 @@ const Booking = ({
         <Layout flexBasis={[24, 24, 28]} flexShrink={0} />
         <Box width='100%' justifyContent='space-between' alignItems='center'>
           <Layout>
-            <Logo />
+            <Logo path={mainPage.content} />
           </Layout>
           <Layout>
-            <Button size='ghost' color='transparent' onClick={() => setVisible(false)}>
+            <Button size='normal' color='radius' onClick={() => setVisible(false)}>
               <Box
-                width={[40, 40, 48]}
-                height={[40, 40, 48]}
+                width={46}
+                height={46}
                 justifyContent='center'
                 alignItems='center'
-                backgroundColor='lightGray'
-                borderRadius='default'
+                {...hoverProps}
               >
-                <CloseIcon width={24} height={24} />
+                <CloseIcon color={hover ? 'white' : 'black'} width={24} height={24} />
               </Box>
             </Button>
           </Layout>

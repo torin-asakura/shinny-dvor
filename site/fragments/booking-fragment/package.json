@@ -4,6 +4,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:0.0.1",
+    "@shared/utils": "workspace:0.0.1",
     "@store/actions": "workspace:0.0.1",
     "@store/booking": "workspace:0.0.1",
     "@store/services": "workspace:0.0.1",
@@ -19,6 +20,7 @@
     "@ui/select": "workspace:0.0.1",
     "@ui/switch": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

@@ -22,6 +22,7 @@ const Select: FC<SelectProps> = ({
   onChange,
   onSelect,
   placeholder,
+  setIsOpen,
 }) => {
   const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection({
     initialSelectedItems: selectedDefault !== undefined ? [selectedDefault] : [],
@@ -53,6 +54,9 @@ const Select: FC<SelectProps> = ({
       }
     },
   })
+
+  if (isOpen && setIsOpen) setIsOpen(true)
+  if (!isOpen && setIsOpen) setIsOpen(false)
 
   return (
     <>

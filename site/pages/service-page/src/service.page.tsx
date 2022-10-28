@@ -36,6 +36,7 @@ const ServicePage: FC<Props> = ({
       fragmentsData={fragments}
       carBodiesData={carBodies}
       serviceData={serviceBy}
+      navigationData={navigation}
     />
     <Articles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
     <Footer fragmentsData={fragments} contactsData={contacts} />

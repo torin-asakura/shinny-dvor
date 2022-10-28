@@ -36,6 +36,7 @@ const Service: FC<ServiceProps> = ({
   fragmentsData,
   carBodiesData,
   serviceData,
+  navigationData,
 }) => {
   const {
     servicesParams: {
@@ -100,6 +101,7 @@ const Service: FC<ServiceProps> = ({
           availableRadiiData={availableRadiiData}
           carBodiesData={carBodiesData}
           servicesData={servicesData}
+          navigationData={navigationData}
           additionalService={isAdditionalService ? additionalservice.title : ''}
         />
       </Layer>
@@ -127,7 +129,7 @@ const Service: FC<ServiceProps> = ({
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
                   {carBodies.map((item) => (
-                    <Item value={item} onSelect={setOnCarBody}>
+                    <Item key={item} value={item} onSelect={setOnCarBody}>
                       {item}
                     </Item>
                   ))}
@@ -144,6 +146,7 @@ const Service: FC<ServiceProps> = ({
                 <CarBodiesCarousel>
                   {carBodies.map((item) => (
                     <Box
+                      key={item}
                       width='100%'
                       height='100%'
                       alignItems='center'
@@ -170,8 +173,9 @@ const Service: FC<ServiceProps> = ({
                   ))}
                 </CarBodiesCarousel>
               </Box>
-              <Layout flexBasis={24} />
-              <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
+              <Layout>
+                <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
+              </Layout>
               <Layout flexBasis={24} />
             </Condition>
             <Condition match={variant === 'secondary'}>
@@ -191,7 +195,7 @@ const Service: FC<ServiceProps> = ({
                   <Box
                     height={28}
                     backgroundColor='lightGray'
-                    padding='4px 7px'
+                    padding='6px 10px'
                     borderRadius='normal'
                   >
                     <Text color='darkGray'>{addon}</Text>
@@ -205,7 +209,9 @@ const Service: FC<ServiceProps> = ({
             <Layout>
               <Column fill>
                 {description.split('|n|').map((item) => (
-                  <Text lineHeight='medium'>{item}</Text>
+                  <Text key={item} lineHeight='medium'>
+                    {item}
+                  </Text>
                 ))}
               </Column>
             </Layout>
@@ -222,12 +228,12 @@ const Service: FC<ServiceProps> = ({
                     backgroundColor='lightGray'
                   >
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
-                      <>
+                      <React.Fragment key={title}>
                         <WorkExample image={image} title={title} price={defaultPrice} />
                         <Condition match={index === 0}>
                           <Layout flexBasis={16} flexShrink={0} />
                         </Condition>
-                      </>
+                      </React.Fragment>
                     ))}
                   </Box>
                 </Accordion>
@@ -236,12 +242,12 @@ const Service: FC<ServiceProps> = ({
                 <Accordion text={workExamplesTitle}>
                   <WorkExamplesCarousel>
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
-                      <>
+                      <React.Fragment key={title}>
                         <WorkExample image={image} title={title} price={defaultPrice} />
                         <Condition match={index === 0}>
                           <Layout flexBasis={32} flexShrink={0} />
                         </Condition>
-                      </>
+                      </React.Fragment>
                     ))}
                   </WorkExamplesCarousel>
                 </Accordion>

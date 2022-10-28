@@ -21,6 +21,7 @@ import { Item }                from '@ui/switch'
 import { Text }                from '@ui/text'
 import { extractFragment }     from '@globals/data'
 import { extractFragments }    from '@globals/data'
+import { doNothing }           from '@shared/utils'
 import { screenVar }           from '@store/booking'
 import { serviceVar }          from '@store/services'
 
@@ -46,6 +47,7 @@ const Initial: FC<InitialProps> = ({
   const [selectedRadius, setSelectedRadius] = useState<string>(service.radius || '')
   const [selectedCarBody, setSelectedCarBody] = useState<string>(service.carBody || carBodyItems[0])
   const [selectedRepairTypes, setSelectedRepairTypes] = useState<string[]>([])
+  const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const signUpTitle = extractFragment('contentAddons', 'sign-up', fragmentsData).title
   const wheelDiameterTitle = extractFragment('contentAddons', 'wheel-diameter', fragmentsData).title
@@ -118,6 +120,24 @@ const Initial: FC<InitialProps> = ({
     }
   }, [data, submit, updateStatus])
 
+  const handleKeyPress = (event) => {
+    const correctChars = ['+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+    if (correctChars.indexOf(event.key) === -1) {
+      event.preventDefault()
+    }
+  }
+
+  const validatePhone = (value: string) => {
+    if (value.length > 12 && value.startsWith('+7', 0)) {
+      doNothing()
+    } else if (value.length >= 12 && !value.startsWith('+7', 0)) {
+      doNothing()
+    } else {
+      setPhone(value)
+    }
+  }
+
   return (
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
@@ -154,10 +174,10 @@ const Initial: FC<InitialProps> = ({
           <Layout flexBasis={12} />
           <Layout>
             <Input
-              maxLength={12}
               value={phone}
-              onChange={setPhone}
+              onChange={(value) => validatePhone(value)}
               placeholder={yourPhonePlaceholder}
+              onKeyPress={handleKeyPress}
             />
           </Layout>
         </Column>
@@ -212,6 +232,7 @@ const Initial: FC<InitialProps> = ({
         value={selectedRepairTypes}
         placeholder={repairTypePlaceholder}
         onSelect={setSelectedRepairTypes}
+        setIsOpen={setIsOpen}
         selectedDefault={service.serviceName?.length ? service.serviceName : undefined}
       />
       <Layout flexBasis={12} />
@@ -232,7 +253,7 @@ const Initial: FC<InitialProps> = ({
           {signUpTitle}
         </Button>
       </Box>
-      <Layout flexBasis={[48, 48, 128]} />
+      <Layout flexBasis={[isOpen ? 200 : 48, isOpen ? 200 : 48, isOpen ? 228 : 128]} />
     </Column>
   )
 }

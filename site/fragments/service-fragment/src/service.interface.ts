@@ -17,6 +17,7 @@ export interface ServiceProps {
   carBodiesData: ContentAddons[]
   servicesData: any
   serviceData: any
+  navigationData: any
   availableRadiiData: ContentAddons[]
 }
 

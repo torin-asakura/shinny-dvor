@@ -7,8 +7,8 @@ import { NextLink }  from '@ui/link'
 
 import { LogoProps } from './logo.interface'
 
-const Logo: FC<LogoProps> = ({ ...props }) => (
-  <NextLink path='/'>
+const Logo: FC<LogoProps> = ({ path, ...props }) => (
+  <NextLink path={path}>
     <Box display={['flex', 'flex', 'none']}>
       <LogoIcon width={48} height={32} {...props} />
     </Box>

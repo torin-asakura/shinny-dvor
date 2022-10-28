@@ -14,9 +14,10 @@ const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
     <Layout flexBasis={[20, 20, 24]} flexShrink={0} />
     <Column fill>
       <Layout flexBasis={24} />
-      <Row justifyContent='flex-start' flexWrap='wrap'>
+      <Row justifyContent='space-between' flexWrap='wrap'>
         {items.map((title) => (
           <Box
+            key={title}
             minWidth={[61, 61, 73]}
             onClick={() => {
               setSelectedItem(title)

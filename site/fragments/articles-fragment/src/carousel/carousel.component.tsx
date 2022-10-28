@@ -48,7 +48,7 @@ const Mobile: FC = ({ children }) => {
 
 const Carousel: FC = ({ children }) => (
   <>
-    <Layout display={['none', 'none', 'flex']}>
+    <Layout overflow='hidden' display={['none', 'none', 'flex']}>
       <Desktop>{children}</Desktop>
     </Layout>
     <Layout display={['none', 'flex', 'none']}>

@@ -35,11 +35,11 @@ const Services: FC<ServicesProps> = forwardRef((
       ref={ref}
     >
       <Column fill>
-        <Layout flexBasis={[48, 48, 100]} />
+        <Layout flexBasis={[48, 48, 120]} />
         <Row>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Box width='100%' justifyContent='space-between'>
-            <Column display={['none', 'none', 'flex']} minWidth={['100%', '100%', 400]}>
+            <Column display={['none', 'none', 'flex']} width='100%' maxWidth={[335, '100%', 400]}>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
                   {title}
@@ -95,7 +95,7 @@ const Services: FC<ServicesProps> = forwardRef((
           </Box>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Row>
-        <Layout flexBasis={[48, 48, 100]} />
+        <Layout flexBasis={[48, 48, 120]} />
       </Column>
     </Box>
   )

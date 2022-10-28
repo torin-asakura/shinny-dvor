@@ -5,8 +5,10 @@ import { FooterLogoIcon } from '@ui/icons'
 import { Box }            from '@ui/layout'
 import { NextLink }       from '@ui/link'
 
-const FooterLogo: FC = () => (
-  <NextLink path='/'>
+import { LogoProps }      from './logo.interface'
+
+const FooterLogo: FC<LogoProps> = ({ path }) => (
+  <NextLink path={path}>
     <Box display={['flex', 'flex', 'none']}>
       <FooterLogoIcon width={148} height={48} />
     </Box>

@@ -7,7 +7,7 @@ import { ItemProps } from './services-list.interface'
 const ServicesList: FC<ItemProps> = ({ services }) => (
   <>
     {services.map(({ uri, servicesParams: { title, description, price } }) => (
-      <Service uri={uri} title={title} description={description} price={price} />
+      <Service key={uri} uri={uri} title={title} description={description} price={price} />
     ))}
   </>
 )

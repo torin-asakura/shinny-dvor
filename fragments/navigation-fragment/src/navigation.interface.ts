@@ -31,6 +31,7 @@ export interface Fragment {
 
 export interface NavigationProps {
   active: number
+  scrollY?: number
   navigationData: NavigationData[]
   availableRadiiData: AvailableRadiusData[]
   fragmentsData: Fragment[]
