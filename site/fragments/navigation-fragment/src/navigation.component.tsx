@@ -2,7 +2,7 @@ import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
 
-import { Booking }              from '@site/booking-fragment'
+import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
 import { Button }               from '@ui/button'
 import { Drawer }               from '@ui/drawer'
@@ -36,9 +36,8 @@ const Navigation: FC<NavigationProps> = ({
   const [visible, setVisible] = useState<boolean>(false)
   const [drawer, setDrawer] = useState<boolean>(false)
 
-  const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
-  const signUp = extractFragment('contentAddons', 'booking', navigationData)
-  const mainPage = extractFragment('contentAddons', 'main', navigationData)
+  const navigationIndexItems = extractFragments('nav-item', 'contentAddons', navigationData)
+  const signUp = extractFragment('contentAddons', 'sign-up', fragmentsData)
 
   return (
     <>
@@ -74,19 +73,23 @@ const Navigation: FC<NavigationProps> = ({
                   <NavigationListMobile
                     scrollY={scrollY}
                     active={active}
-                    navigation={navigationItems}
+                    navigation={navigationIndexItems}
                   />
                 </Drawer>
                 <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
                 <Layout>
-                  <Logo path={mainPage.content} color={getColor(active!, scrollY)} />
+                  <Logo path='/' color={getColor(active!, scrollY)} />
                 </Layout>
               </Box>
               <Layout display={['none', 'none', 'flex']}>
-                <Logo path={mainPage.content} color={getColor(active!, scrollY)} />
+                <Logo path='/' color={getColor(active!, scrollY)} />
               </Layout>
               <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
-                <NavigationList scrollY={scrollY} active={active} navigation={navigationItems} />
+                <NavigationList
+                  scrollY={scrollY}
+                  active={active}
+                  navigation={navigationIndexItems}
+                />
               </Box>
               <Box width={[176, 176, 201]} zIndex={1}>
                 <Layout flexGrow={1} />

@@ -2,7 +2,7 @@ import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
 
-import { Booking }         from '@site/booking-fragment'
+import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
 import { Divider }         from '@ui/divider'

@@ -1,5 +1,5 @@
 {
-  "name": "@site/booking-fragment",
+  "name": "@fragments/booking-fragment",
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {

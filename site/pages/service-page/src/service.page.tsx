@@ -1,9 +1,9 @@
 import React          from 'react'
 import { FC }         from 'react'
 
-import { Articles }   from '@fragments/articles-fragment'
-import { Footer }     from '@fragments/footer-fragment'
-import { Navigation } from '@fragments/navigation-fragment'
+import { Articles }   from '@site/articles-fragment'
+import { Footer }     from '@site/footer-fragment'
+import { Navigation } from '@site/navigation-fragment'
 import { Service }    from '@site/service-fragment'
 import { Column }     from '@ui/layout'
 

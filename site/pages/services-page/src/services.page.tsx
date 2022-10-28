@@ -1,9 +1,9 @@
 import React           from 'react'
 import { FC }          from 'react'
 
-import { AllServices } from '@fragments/all-services-fragment'
-import { Footer }      from '@fragments/footer-fragment'
-import { Navigation }  from '@fragments/navigation-fragment'
+import { AllServices } from '@site/all-services-fragment'
+import { Footer }      from '@site/footer-fragment'
+import { Navigation }  from '@site/navigation-fragment'
 import { Column }      from '@ui/layout'
 
 import { Seo }         from './seo.component'

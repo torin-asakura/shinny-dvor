@@ -3,7 +3,7 @@ import { FC }                   from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
-import { Booking }              from '@site/booking-fragment'
+import { Booking }              from '@fragments/booking-fragment'
 import { Accordion }            from '@ui/accordion'
 import { Button }               from '@ui/button'
 import { Condition }            from '@ui/condition'
