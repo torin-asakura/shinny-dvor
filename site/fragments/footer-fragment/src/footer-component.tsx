@@ -27,7 +27,6 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
-  const mainPage = extractFragment('contentAddons', 'main', navigation)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
@@ -52,7 +51,7 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Row justifyContent='space-between' alignItems='center'>
               <Box width='100%'>
-                <FooterLogo path={mainPage?.content} />
+                <FooterLogo path='/' />
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>

@@ -5,9 +5,8 @@ import { Box }                       from '@ui/layout'
 import { Row }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Column }                    from '@ui/layout'
-import { NextNavLink }               from '@ui/link'
-import { Text }                      from '@ui/text'
 
+import { Item }                      from './item'
 import { NavigationListMobileProps } from './navigation-list-mobile.interface'
 
 const NavigationListMobile: FC<NavigationListMobileProps> = ({ navigation }) => (
@@ -17,9 +16,7 @@ const NavigationListMobile: FC<NavigationListMobileProps> = ({ navigation }) => 
       {navigation.map(({ contentAddons: { title, content } }, index) => (
         <React.Fragment key={title}>
           <Row>
-            <NextNavLink path={content}>
-              <Text fontWeight='medium'>{title}</Text>
-            </NextNavLink>
+            <Item content={content} title={title} />
           </Row>
           <Layout flexBasis={navigation.length - 1 !== index ? 24 : 0} />
         </React.Fragment>

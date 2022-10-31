@@ -107,7 +107,7 @@ const Service: FC<ServiceProps> = ({
       </Layer>
       <Box width='100%' maxWidth={['100%', '100%', 1440]} marginTop={[80, 80, 104]}>
         <Row>
-          <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 299]} flexShrink={[0, 0, 1]} />
           <Column width='100%'>
             <Layout flexBasis={[20, 20, 32]} />
             <Box width={102}>
@@ -173,6 +173,7 @@ const Service: FC<ServiceProps> = ({
                   ))}
                 </CarBodiesCarousel>
               </Box>
+              <Layout flexBasis={[24, 24, 0]} />
               <Layout>
                 <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
               </Layout>
@@ -260,7 +261,6 @@ const Service: FC<ServiceProps> = ({
                 setIsAdditionalService={setIsAdditionalService}
                 additionalservice={additionalservice}
               />
-              <Layout flexBasis={24} />
             </Condition>
             <Layout flexBasis={32} />
             <Box width='100%' height={48}>
@@ -281,7 +281,7 @@ const Service: FC<ServiceProps> = ({
             </Box>
             <Layout flexBasis={[65, 65, 120]} />
           </Column>
-          <Layout flexBasis={[20, 20, 299]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 299]} flexShrink={[0, 0, 1]} />
         </Row>
       </Box>
     </>

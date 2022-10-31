@@ -7,13 +7,14 @@ import React                 from 'react'
 
 import { Text }              from '@ui/text'
 
-const BaseLink = styled(Text.withComponent('a'))<{ active: boolean }>(createBaseStyles(), ({
-  active,
-}) => ({
-  color: active ? 'blue' : 'black',
-  borderBottom: active ? '2px solid blue' : '',
-  paddingBottom: active ? '6px' : '',
-}))
+const BaseLink = styled(Text.withComponent('a'))<{ active: boolean; theme: any }>(
+  createBaseStyles(),
+  ({ active, theme }) => ({
+    color: active ? theme.colors.darkBlue : theme.colors.black,
+    borderBottom: active ? theme.borders.blue : '',
+    paddingBottom: active ? '8px' : '',
+  })
+)
 
 export const Link = (props) => <BaseLink {...props} />
 

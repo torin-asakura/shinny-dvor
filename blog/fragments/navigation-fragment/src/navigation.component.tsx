@@ -64,7 +64,7 @@ const Navigation: FC<NavigationProps> = ({
             <Row justifyContent='space-between'>
               <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
                 <Button size='ghost' color='transparent' onClick={() => setDrawer(!drawer)}>
-                  <MenuIcon width={24} height={24} />
+                  <MenuIcon color='black' width={24} height={24} />
                 </Button>
                 <Drawer active={drawer} onClose={() => setDrawer(false)}>
                   <NavigationListMobile navigation={navigationBlogItems} />
