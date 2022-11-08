@@ -4230,6 +4230,10 @@ __metadata:
   resolution: "@ui/progress-bar@workspace:ui/progress-bar"
   dependencies:
     "@badrap/bar-of-progress": ^0.2.2
+    "@emotion/css": ^11.9.0
+    "@ui/theme": "workspace:0.0.1"
+  peerDependencies:
+    "@emotion/css": "*"
   languageName: unknown
   linkType: soft
 
