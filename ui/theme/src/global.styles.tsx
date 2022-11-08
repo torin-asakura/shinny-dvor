@@ -25,6 +25,9 @@ export const GlobalStyles = () => (
         justify-content: center;
         align-items: center;
       }
+      .bar-of-progress {
+         z-index: 9999;
+      }
     `}
   />
 )

@@ -1196,6 +1196,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@badrap/bar-of-progress@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "@badrap/bar-of-progress@npm:0.2.2"
+  checksum: 9b0d7c276213024d7444414d90228e56622964e34d4c3eaa4db524b37442f3b6a4b55e6fcb9c1446550c8166ac619ebf5000689fbc797fe509b0aeceb5513c67
+  languageName: node
+  linkType: hard
+
 "@bcoe/v8-coverage@npm:^0.2.3":
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
@@ -1216,6 +1223,7 @@ __metadata:
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
+    "@badrap/bar-of-progress": ^0.2.2
     "@blog/index-page": "workspace:0.0.1"
     "@blog/post-page": "workspace:0.0.1"
     "@emotion/cache": ^11.4.0
@@ -2687,6 +2695,7 @@ __metadata:
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
     "@atls/next-sitemap-generator": ^0.0.3
+    "@badrap/bar-of-progress": ^0.2.2
     "@emotion/cache": ^11.4.0
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
