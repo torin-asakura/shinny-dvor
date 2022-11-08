@@ -1,4 +1,3 @@
-import ProgressBar        from '@badrap/bar-of-progress'
 import { ApolloProvider } from '@apollo/client'
 
 import Router             from 'next/router'
@@ -7,17 +6,11 @@ import { IntlProvider }   from 'react-intl'
 
 import { ThemeProvider }  from '@ui/theme'
 import { getClient }      from '@globals/data'
+import { progressBar }    from '@ui/progress-bar'
 
-const progress = new ProgressBar({
-  size: 6,
-  color: '#4579ff',
-  className: 'bar-of-progress',
-  delay: 100,
-})
-
-Router.events.on('routeChangeStart', progress.start)
-Router.events.on('routeChangeComplete', progress.finish)
-Router.events.on('routeChangeError', progress.finish)
+Router.events.on('routeChangeStart', progressBar.start)
+Router.events.on('routeChangeComplete', progressBar.finish)
+Router.events.on('routeChangeError', progressBar.finish)
 
 const Bare = ({ Component, pageProps, props }) => {
   const client = getClient()

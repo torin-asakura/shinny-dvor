@@ -1,3 +1,5 @@
+import * as theme from './theme'
+
 import { Global } from '@emotion/react'
 import { css }    from '@emotion/react'
 
@@ -27,6 +29,8 @@ export const GlobalStyles = () => (
       }
       .bar-of-progress {
          z-index: 9999;
+         height: 6px !important;
+         background-color: ${theme.colors.primaryBlue} !important;
       }
     `}
   />

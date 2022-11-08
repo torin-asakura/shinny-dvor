@@ -197,6 +197,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:ui/map"\
       },\
       {\
+        "name": "@ui/progress-bar",\
+        "reference": "workspace:ui/progress-bar"\
+      },\
+      {\
         "name": "@ui/radio",\
         "reference": "workspace:ui/radio"\
       },\
@@ -284,6 +288,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@ui/link", ["virtual:2c17edd7c3742a7a169db44b49999407be23a7b2d5c259f48fe7ce887ee96e53aee341e9b4acdf2bdcb1a94341afcde511e9f2d8e669c3c122c2c4b8658db887#workspace:ui/link", "virtual:8cd8343106a6d396776ce8c4f9f53cacc787566292bc013566947704af3101d225a7339958c60c5ef038a660dafbd4b3a68504604a9d5310d9ce4a96722023da#workspace:ui/link", "virtual:9d11f0be6497410ce27727247af9edf814dfce34783ae0f223a005f88c4a32fde1adf4b0c92c6eda81a862d7784e98b4daab329a8a639af41d483cae0cff58f6#workspace:ui/link", "virtual:b21621238b4c46fc87e07ec571acb9e9424700f71181de44ed77046a36093496e894c0e877623da126c84c4edefb56a025d0369deb604cd5505e9573357d0f41#workspace:ui/link", "virtual:b5fc5ffd008374ccc232709e6b2eff226b23c8379830a3b2c4967b736a12940b29c793408cf1bcacff3e6830717b858329be775c96fa415791aa6dfe72ba95b7#workspace:ui/link", "virtual:bd880f1013d1728150162d115751c8f73c923402d874ab079de73f91a4dc6d12cef2a1d9eb0da01be74b4314a1b32d5043334d5a53958e7508c9f6671cdc01f4#workspace:ui/link", "virtual:c07b5cc00f758ae53b55fe9e75ab8d6f414cbd9552c463f8d2f507bb8a2346434582115960744a348d26c0dc464b18b7927e46a8395ec61bff9b23bdff4a384e#workspace:ui/link", "virtual:e232398c59f49d98dcaf6d06707be596e993203baceabfdc6cc9052bedd75d259f6cd3a903e1d722d8cc4579a50ac4907da64a5c66ad01319d3d52ecb0056b4b#workspace:ui/link", "virtual:e7d97de127d4aa614eb967cc9023d58936d8e34a8bd890010f970d1970d79e7de431c403c801719454f4955cbc9dccf659915370c694b6f49a79b94f18874fb5#workspace:ui/link", "virtual:f574e10cf115467c3b48c0f5c97b5e4e56a235a86a8c568b4bcdd0ec001a1614010b3b5fee0d7817a65fb44c57238f5c9018884eb0a0775aee13075afbb08a26#workspace:ui/link", "virtual:febbb8f1ff03a33cf2e4cd53363b6ef45ffdae8fb4ffdafbf5df06a2397cb873795646f78bf139fd14c93eac7248e016e0fbacd6f5b7994446962b899c1f27bc#workspace:ui/link", "workspace:ui/link"]],\
       ["@ui/logo", ["virtual:2c17edd7c3742a7a169db44b49999407be23a7b2d5c259f48fe7ce887ee96e53aee341e9b4acdf2bdcb1a94341afcde511e9f2d8e669c3c122c2c4b8658db887#workspace:ui/logo", "virtual:b21621238b4c46fc87e07ec571acb9e9424700f71181de44ed77046a36093496e894c0e877623da126c84c4edefb56a025d0369deb604cd5505e9573357d0f41#workspace:ui/logo", "virtual:f574e10cf115467c3b48c0f5c97b5e4e56a235a86a8c568b4bcdd0ec001a1614010b3b5fee0d7817a65fb44c57238f5c9018884eb0a0775aee13075afbb08a26#workspace:ui/logo", "virtual:f97b06d198c175eb8b3908b461ccd81262ea86542fda19d6dea1fe29cfb59c62c02136433e293a3463b0759ff48da900135aeca4c3947fe6f88852be016b6b1e#workspace:ui/logo", "workspace:ui/logo"]],\
       ["@ui/map", ["virtual:80892d716d9fd6108f03c570ae1ae249251aaca9a46f64f26cf421557ae1fc35a5554495bcc10131d2c0fc696591335f12772daacff9357e7f747899ffc80a64#workspace:ui/map", "workspace:ui/map"]],\
+      ["@ui/progress-bar", ["workspace:ui/progress-bar"]],\
       ["@ui/radio", ["virtual:4ee580164e5501dbe6fdddb7662b342b77f59c0c9a857bc39ca3b6a7e1f57f940004191717471e6f5789c829603cfe53f828a8dfd9a8215c3056c6d7723bcb19#workspace:ui/radio", "virtual:67357924c00abb3dabdb821056f3541c038270160046e23d4f0c7e107b259224dec8975142e55ec7d01b91eb422fc6512830ef3debd56fa718293ee36c5197ad#workspace:ui/radio", "virtual:caae72b77ece6bbb7f2f82ea3965b1d731952a227ae53928fa928fdddfeda6aa712f013c805326008bfcd6e331c088ed23e7dab71d4948bb53430d64628f8862#workspace:ui/radio", "workspace:ui/radio"]],\
       ["@ui/select", ["virtual:4ee580164e5501dbe6fdddb7662b342b77f59c0c9a857bc39ca3b6a7e1f57f940004191717471e6f5789c829603cfe53f828a8dfd9a8215c3056c6d7723bcb19#workspace:ui/select", "virtual:caae72b77ece6bbb7f2f82ea3965b1d731952a227ae53928fa928fdddfeda6aa712f013c805326008bfcd6e331c088ed23e7dab71d4948bb53430d64628f8862#workspace:ui/select", "workspace:ui/select"]],\
       ["@ui/slider", ["virtual:b35ba6360ca8a77a44c4d5ec585eee203fe146b3cd864ed5aa4c34db11a97f78de50d531bab9b230b7493dbb2e57600b0699b6a34b7885b75766746c460d3b91#workspace:ui/slider", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:ui/slider", "workspace:ui/slider"]],\
@@ -4052,7 +4057,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/next-document-with-helmet", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.2.66"],\
             ["@atls/next-document-with-icons", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.0.2"],\
             ["@atls/next-document-with-opengraph", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.0.2"],\
-            ["@badrap/bar-of-progress", "npm:0.2.2"],\
             ["@blog/index-page", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:blog/pages/index-page"],\
             ["@blog/post-page", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:blog/pages/post-page"],\
             ["@emotion/cache", "npm:11.6.0"],\
@@ -4068,6 +4072,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-helmet", "npm:6.1.4"],\
             ["@types/recompose", "npm:0.30.9"],\
             ["@types/styled-system", "npm:5.1.13"],\
+            ["@ui/progress-bar", "workspace:ui/progress-bar"],\
             ["@ui/theme", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:ui/theme"],\
             ["events", "npm:3.3.0"],\
             ["express", "npm:4.17.1"],\
@@ -6697,7 +6702,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@atls/next-document-with-icons", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.0.2"],\
             ["@atls/next-document-with-opengraph", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.0.2"],\
             ["@atls/next-sitemap-generator", "npm:0.0.3"],\
-            ["@badrap/bar-of-progress", "npm:0.2.2"],\
             ["@emotion/cache", "npm:11.6.0"],\
             ["@emotion/css", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.9.0"],\
             ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.6.0"],\
@@ -6715,6 +6719,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/react-helmet", "npm:6.1.4"],\
             ["@types/recompose", "npm:0.30.9"],\
             ["@types/styled-system", "npm:5.1.13"],\
+            ["@ui/progress-bar", "workspace:ui/progress-bar"],\
             ["@ui/theme", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:ui/theme"],\
             ["events", "npm:3.3.0"],\
             ["express", "npm:4.17.1"],\
@@ -12831,6 +12836,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@ui/layout", "virtual:c537f9fd5ad2d7919199b28e3f642b5d6cd6389b82816e10f849d38362b8bec64c8195241bc49723a553ac15a48ec8c11636da2bfb08ae1c3b22642c273d945a#workspace:ui/layout"],\
             ["react", "npm:17.0.2"],\
             ["react-dom", "virtual:2feb9cc9c125883d3a6b04f32f2a84354799208a4ed521d0c3f302e72125a16d693884f557876b86c9ead87c08d5a3eb6329abe93af10ea8b33ac31410df4ce1#npm:17.0.2"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["@ui/progress-bar", [\
+        ["workspace:ui/progress-bar", {\
+          "packageLocation": "./ui/progress-bar/",\
+          "packageDependencies": [\
+            ["@ui/progress-bar", "workspace:ui/progress-bar"],\
+            ["@badrap/bar-of-progress", "npm:0.2.2"]\
           ],\
           "linkType": "SOFT"\
         }]\

@@ -1223,7 +1223,6 @@ __metadata:
     "@atls/next-document-with-helmet": ^0.2.64
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
-    "@badrap/bar-of-progress": ^0.2.2
     "@blog/index-page": "workspace:0.0.1"
     "@blog/post-page": "workspace:0.0.1"
     "@emotion/cache": ^11.4.0
@@ -1239,6 +1238,7 @@ __metadata:
     "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@types/styled-system": ^5
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     events: ^3.3.0
     express: ^4.17.1
@@ -2695,7 +2695,6 @@ __metadata:
     "@atls/next-document-with-icons": ^0.0.2
     "@atls/next-document-with-opengraph": ^0.0.2
     "@atls/next-sitemap-generator": ^0.0.3
-    "@badrap/bar-of-progress": ^0.2.2
     "@emotion/cache": ^11.4.0
     "@emotion/css": ^11.9.0
     "@emotion/react": ^11.4.1
@@ -2713,6 +2712,7 @@ __metadata:
     "@types/react-helmet": ^6
     "@types/recompose": ^0
     "@types/styled-system": ^5
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/theme": "workspace:0.0.1"
     events: ^3.3.0
     express: ^4.17.1
@@ -4222,6 +4222,14 @@ __metadata:
   peerDependencies:
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/progress-bar@workspace:0.0.1, @ui/progress-bar@workspace:ui/progress-bar":
+  version: 0.0.0-use.local
+  resolution: "@ui/progress-bar@workspace:ui/progress-bar"
+  dependencies:
+    "@badrap/bar-of-progress": ^0.2.2
   languageName: unknown
   linkType: soft
 
