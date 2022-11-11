@@ -2,7 +2,7 @@ import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
 
-import { Booking }         from '@site/booking-fragment'
+import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
 import { Divider }         from '@ui/divider'
@@ -20,7 +20,15 @@ import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
 const Hero = forwardRef((
-  { uiData, fragmentsData, contactsData, availableRadiiData, carBodiesData, servicesData }: any,
+  {
+    uiData,
+    fragmentsData,
+    contactsData,
+    availableRadiiData,
+    carBodiesData,
+    servicesData,
+    navigationData,
+  }: any,
   ref: any
 ) => {
   const [visible, setVisible] = useState<boolean>(false)
@@ -54,22 +62,17 @@ const Hero = forwardRef((
           availableRadiiData={availableRadiiData}
           carBodiesData={carBodiesData}
           servicesData={servicesData}
+          navigationData={navigationData}
         />
       </Layer>
       <Box
-        minHeight={[640, 640, 800]}
         maxWidth={['100%', '100%', 1440]}
         width='100%'
+        height='100vh'
         justifyContent='center'
         ref={ref}
       >
-        <Box
-          backgroundColor='black'
-          position='absolute'
-          width='100%'
-          height={[640, 640, 800]}
-          zIndex='-1'
-        >
+        <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock
             src={backgroundImage.get('url')}
             alt={backgroundImage.get('altText')}
@@ -79,7 +82,7 @@ const Hero = forwardRef((
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         <Column width='100%'>
           <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
-          <Column width={[335, 335, 900]} height={[240, 240, 201]}>
+          <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
             <Row>
               <Text
                 fontSize={['giant', 'giant', 'extra']}
@@ -102,7 +105,7 @@ const Hero = forwardRef((
               </Text>
             </Row>
           </Column>
-          <Layout flexBasis={32} />
+          <Layout flexBasis={32} flexShrink={0} />
           <Layout width={['100%', '100%', '180px']}>
             <Button
               onClick={() => {
@@ -113,10 +116,10 @@ const Hero = forwardRef((
               {CTA}
             </Button>
           </Layout>
-          <Layout flexBasis={[40, 40, 48]} />
+          <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
           <Divider backgroundColor='milkGray' />
-          <Layout flexBasis={[20, 20, 30]} />
-          <Box width='100%' position='relative' justifyContent={['center', 'center', 'center']}>
+          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
+          <Box width='100%'>
             <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
               <Link href='#services'>
                 <Row width={150}>
@@ -132,21 +135,21 @@ const Hero = forwardRef((
                 </Row>
               </Link>
             </Box>
-            <Box width='100%' alignItems='center'>
-              <Box width='100%' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
+            <Row alignItems='center' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
+              <Box justifyContent={['flex-start', 'flex-start', 'flex-end']}>
                 <Link href={`tel:${phone}`}>
                   <Text color='white' fontWeight='medium'>
                     {phone}
                   </Text>
                 </Link>
               </Box>
-              <Layout flexBasis={32} flexShrink={0} display={['none', 'none', 'flex']} />
-              <Box justifyContent='flex-end'>
+              <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
+              <Box width={96} justifyContent='flex-end'>
                 <SocialLinksDark linkVk={linkVk} linkFb={linkFb} />
               </Box>
-            </Box>
+            </Row>
           </Box>
-          <Layout flexBasis={[20, 20, 30]} />
+          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
         </Column>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Box>

@@ -1,6 +1,7 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { motion }           from 'framer-motion'
 
 import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'
@@ -16,17 +17,21 @@ import { useHover }         from '@ui/utils'
 
 import { ItemProps }        from './item.interface'
 
+const BoxContainer = Box.withComponent(motion.div)
+
 const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, addon }) => {
   const cost = price[Object.keys(price)[1]]?.passenger
 
   const [hover, hoverProps] = useHover()
 
   return (
-    <Box
+    <BoxContainer
       minWidth={['100%', '100%', 296]}
       marginRight={32}
       // @ts-ignore
       cursor='pointer'
+      whileHover={{ translateY: -10 }}
+      transition={{ duration: 0.15, ease: 'linear' }}
     >
       <Column minWidth={['100%', '100%', 296]}>
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
@@ -101,7 +106,7 @@ const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, add
           </Box>
         </NextLink>
       </Column>
-    </Box>
+    </BoxContainer>
   )
 }
 export { Item }

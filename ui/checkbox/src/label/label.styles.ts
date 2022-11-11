@@ -5,7 +5,7 @@ import { createLabelPositionStyles }   from '@atls-ui-parts/checkbox'
 import { styleFn }                     from 'styled-system'
 
 export const positionStyles: styleFn = createLabelPositionStyles({
-  margin: '10px',
+  margin: '24px',
 })
 
 export const appearanceStyles: styleFn = createLabelAppearanceStyles({

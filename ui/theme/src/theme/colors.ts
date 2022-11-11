@@ -1,4 +1,5 @@
 const colors = {
+  mask: 'radial-gradient(circle, white 100%, black 100%)',
   white: 'rgba(255, 255, 255, 1)',
   gray: 'rgba(37, 44, 50, 0.12)',
   lightGray: 'rgba(37, 44, 50, 0.06)',
@@ -62,44 +63,44 @@ const colors = {
       default: {
         background: 'rgba(37, 44, 50, 0.06)',
         font: 'rgba(37, 44, 50, 1)',
-        border: 'rgba(37, 44, 50, 0.06)',
+        border: 'transparent',
       },
       hover: {
         background: 'rgba(48, 100, 235, 1)',
         font: 'rgba(255, 255, 255, 1)',
-        border: 'rgba(48, 100, 235, 1)',
+        border: 'transparent',
       },
       pressed: {
         background: 'rgba(38, 89, 220, 1)',
         font: 'rgba(255, 255, 255, 1)',
-        border: 'rgba(38, 89, 220, 1)',
+        border: 'transparent',
       },
       disabled: {
         background: 'rgba(37, 44, 50, 0.06)',
         font: 'rgba(197, 200, 203, 1)',
-        border: 'rgba(37, 44, 50, 0.06)',
+        border: 'transparent',
       },
     },
     darkSocial: {
       default: {
         background: 'rgba(255, 255, 255, 0.2)',
         font: 'rgba(255, 255, 255, 1)',
-        border: 'rgba(255, 255, 255, 0.2)',
+        border: 'transparent',
       },
       hover: {
         background: 'rgba(255, 255, 255, 0.3)',
         font: 'rgba(255, 255, 255, 1)',
-        border: 'rgba(255, 255, 255, 0.3)',
+        border: 'transparent',
       },
       pressed: {
         background: 'rgba(255, 255, 255, 0.4)',
         font: 'rgba(255, 255, 255, 1)',
-        border: 'rgba(255, 255, 255, 0.4)',
+        border: 'transparent',
       },
       disabled: {
         background: 'rgba(255, 255, 255, 0.1)',
         font: 'rgba(197, 200, 203, 1)',
-        border: 'rgba(255, 255, 255, 0.1)',
+        border: 'transparent',
       },
     },
     lightWheel: {

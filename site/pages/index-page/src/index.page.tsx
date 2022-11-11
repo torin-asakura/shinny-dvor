@@ -4,10 +4,10 @@ import { useRef }                  from 'react'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
 
-import { Articles }                from '@fragments/articles-fragment'
-import { Footer }                  from '@fragments/footer-fragment'
-import { Navigation }              from '@fragments/navigation-fragment'
+import { Articles }                from '@site/articles-fragment'
+import { Footer }                  from '@site/footer-fragment'
 import { Hero }                    from '@site/hero-fragment'
+import { Navigation }              from '@site/navigation-fragment'
 import { Services }                from '@site/services-fragment'
 import { ServicesInfographics }    from '@site/services-infographics-fragment'
 import { WorksExamples }           from '@site/works-examples-fragment'
@@ -56,8 +56,24 @@ const IndexPage: FC<Props> = ({
     }
   })
 
+  const headerRef = useRef<HTMLDivElement | null>(null)
+
+  const [scrollY, setScrollY] = useState<number>(0)
+
+  const scrollHandler = () => {
+    const y = headerRef!.current!.getBoundingClientRect()
+
+    setScrollY(y.y)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler, false)
+
+    return () => window.removeEventListener('scroll', scrollHandler, false)
+  }, [])
+
   return (
-    <Column width='100%' alignItems='center'>
+    <Column width='100%' alignItems='center' ref={headerRef}>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <Seo ogCover={ogCover} SEO={SEO} />
@@ -68,6 +84,7 @@ const IndexPage: FC<Props> = ({
             fragmentsData={fragments}
             carBodiesData={carBodies}
             servicesData={services}
+            scrollY={scrollY}
           />
           <Hero
             fragmentsData={fragments}
@@ -76,6 +93,7 @@ const IndexPage: FC<Props> = ({
             availableRadiiData={availableRadii}
             carBodiesData={carBodies}
             servicesData={services}
+            navigationData={navigation}
             {...getObserverOptions('hero')}
           />
         </Column>

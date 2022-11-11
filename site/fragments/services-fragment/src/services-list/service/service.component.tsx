@@ -31,19 +31,25 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
       }}
     >
       <Column fill {...hoverProps}>
-        <Layout flexBasis={30} />
+        <Layout flexBasis={[24, 24, 30]} />
         <Row>
           <Column fill>
             <Layout>
-              <Text fontWeight='medium' fontSize='xl' color={hover ? 'blue' : 'black'}>
+              <Text
+                textAlign='start'
+                whiteSpace='normal'
+                fontWeight='medium'
+                fontSize='xl'
+                color={hover ? 'blue' : 'black'}
+              >
                 {title}
               </Text>
             </Layout>
-            <Layout flexBasis={8} />
+            <Layout flexBasis={[4, 4, 8]} />
             <Layout>
               <Column>
                 {description.split('|n|').map((item) => (
-                  <Row flexWrap='wrap' maxWidth={['100%', '100%', 500]}>
+                  <Row key={item} flexWrap='wrap' maxWidth={['100%', '100%', 500]}>
                     <Text
                       textAlign='start'
                       whiteSpace='normal'
@@ -73,7 +79,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             </Condition>
           </Column>
         </Row>
-        <Layout flexBasis={30} />
+        <Layout flexBasis={[24, 24, 30]} />
         <Divider backgroundColor='gray' />
       </Column>
     </Button>

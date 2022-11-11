@@ -14,19 +14,22 @@ const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
     <Layout flexBasis={[20, 20, 24]} flexShrink={0} />
     <Column fill>
       <Layout flexBasis={24} />
-      <Row justifyContent='flex-start' flexWrap='wrap'>
-        {items.map((title) => (
-          <Box
-            minWidth={[61, 61, 73]}
-            onClick={() => {
-              setSelectedItem(title)
-            }}
-          >
-            <Radio checked={selectedItem === title} textTransform='uppercase'>
-              {title}
-            </Radio>
-            <Layout flexBasis={[12, 12, 12]} flexShrink={0} />
-          </Box>
+      <Row flexWrap='wrap'>
+        {items.map((title, index) => (
+          <React.Fragment key={title}>
+            <Box
+              minWidth={61}
+              flexGrow={[0, 0, 1]}
+              onClick={() => {
+                setSelectedItem(title)
+              }}
+            >
+              <Radio checked={selectedItem === title} textTransform='uppercase'>
+                {title}
+              </Radio>
+            </Box>
+            <Layout flexBasis={[12, 12, items.length - 1 === index ? 0 : 12]} flexShrink={0} />
+          </React.Fragment>
         ))}
       </Row>
       <Layout flexBasis={12} />

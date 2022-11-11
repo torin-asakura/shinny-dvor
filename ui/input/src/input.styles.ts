@@ -17,3 +17,7 @@ export const appearanceStyles = createAppearanceStyles({
   fontColor: 'black',
   backgroundColor: 'white',
 })
+
+export const additionalAppearanceStyles: styleFn = ({ theme }) => ({
+  lineHeight: theme.lineHeights.medium,
+})

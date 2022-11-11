@@ -23,4 +23,5 @@ export const replacements = {
   FacebookIcon: getColorReplacement({ color: '#252C32' }),
   MenuIcon: getColorReplacement({ color: 'white' }),
   BackIcon: getColorReplacement({ color: '#252C32' }),
+  CloseIcon: getColorReplacement({ color: '#252C32' }),
 }

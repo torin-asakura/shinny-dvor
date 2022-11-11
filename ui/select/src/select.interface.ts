@@ -7,4 +7,5 @@ export interface SelectProps extends Omit<InputHTMLAttributes<any>, 'onChange'> 
   onSelect?: any
   placeholder?: string
   selectedDefault?: string
+  setIsOpen?: (isOpen: boolean) => any
 }

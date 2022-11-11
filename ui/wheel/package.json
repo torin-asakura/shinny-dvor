@@ -4,7 +4,9 @@
   "license": "BSD-3-Clause",
   "main": "src/index.ts",
   "dependencies": {
+    "@ui/button": "workspace:0.0.1",
     "@ui/card": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
     "@ui/image": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",

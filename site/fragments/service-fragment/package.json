@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.6.0",
+    "@fragments/booking-fragment": "workspace:0.0.1",
     "@globals/data": "workspace:0.0.1",
-    "@site/booking-fragment": "workspace:0.0.1",
     "@store/services": "workspace:0.0.1",
     "@ui/accordion": "workspace:0.0.1",
     "@ui/button": "workspace:0.0.1",

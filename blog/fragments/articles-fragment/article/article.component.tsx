@@ -22,7 +22,7 @@ import { ReturnButton }       from './return-button'
 const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
   const { formatMessage } = useIntl()
 
-  const { postId, content, title, date, featuredImage, viewCount } = postData
+  const { postId, content, title, date, viewCount, contentAddons } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
@@ -54,8 +54,8 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
         >
           <ImageBlock
             width='100%'
-            src={featuredImage?.node.mediaItemUrl}
-            alt={featuredImage?.node.altText}
+            src={contentAddons?.image.mediaItemUrl}
+            alt={contentAddons?.image.altText}
             style={{ opacity: 0.5 }}
           />
         </Box>

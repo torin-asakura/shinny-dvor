@@ -1,0 +1,42 @@
+{
+  "name": "@fragments/blog-navigation-fragment",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@fragments/booking-fragment": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
+    "@store/actions": "workspace:0.0.1",
+    "@store/booking": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/card": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
+    "@ui/drawer": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/layer": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
+    "@ui/logo": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "@ui/theme": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.6.9",
+    "@emotion/styled": "^11.6.0",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "next": "12.1.0"
+  },
+  "peerDependencies": {
+    "@apollo/client": "*",
+    "@emotion/react": "*",
+    "@emotion/styled": "*",
+    "next": "*",
+    "react": "*",
+    "react-dom": "*"
+  }
+}
