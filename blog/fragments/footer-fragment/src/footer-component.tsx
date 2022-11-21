@@ -59,9 +59,7 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
                     {navigationItems.map(({ contentAddons: { title, content } }) => (
                       <NextLink key={title} path={content}>
                         <Layout>
-                          <Text color='black' fontWeight='medium'>
-                            {title}
-                          </Text>
+                          <Text fontWeight='medium'>{title}</Text>
                         </Layout>
                       </NextLink>
                     ))}
@@ -76,9 +74,7 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
                 {navigationItems.map(({ contentAddons: { title, content } }) => (
                   <NextLink key={title} path={content}>
                     <Layout>
-                      <Text color='black' fontWeight='medium'>
-                        {title}
-                      </Text>
+                      <Text fontWeight='medium'>{title}</Text>
                     </Layout>
                   </NextLink>
                 ))}

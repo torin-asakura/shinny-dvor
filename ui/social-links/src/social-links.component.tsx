@@ -17,24 +17,32 @@ const SocialLinks: FC<SocialLinksProps> = ({ linkVk, linkFb }) => {
 
   return (
     <Box width='100%' justifyContent='flex-end'>
-      <Link href={linkVk} target='_blank'>
-        <Box width={48} height={48} {...hoverVkProps}>
-          <Button color='radius'>
-            <Layout>
-              <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
-            </Layout>
-          </Button>
-        </Box>
+      <Link href={linkVk} width={48} target='_blank'>
+        <Button color='radius'>
+          <Layout
+            alignItems='center'
+            justifyContent='center'
+            width={48}
+            height={48}
+            {...hoverVkProps}
+          >
+            <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
+          </Layout>
+        </Button>
       </Link>
       <Layout flexBasis={16} flexShrink={0} />
-      <Link href={linkFb} target='_blank'>
-        <Box width={48} height={48} {...hoverFbProps}>
-          <Button color='radius'>
-            <Layout>
-              <FacebookIcon width={28} height={28} color={hoverFb ? 'white' : 'black'} />
-            </Layout>
-          </Button>
-        </Box>
+      <Link href={linkFb} width={48} target='_blank'>
+        <Button width={48} height={48} color='radius'>
+          <Layout
+            alignItems='center'
+            justifyContent='center'
+            width={48}
+            height={48}
+            {...hoverFbProps}
+          >
+            <FacebookIcon width={28} height={28} color={hoverFb ? 'white' : 'black'} />
+          </Layout>
+        </Button>
       </Link>
     </Box>
   )

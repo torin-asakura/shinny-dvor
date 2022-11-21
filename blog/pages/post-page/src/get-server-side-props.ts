@@ -18,7 +18,7 @@ export const getServerSideProps = async ({ params, res }) => {
 
   const { uri } = params
 
-  setCacheHeader(res, 3600, 300)
+  setCacheHeader(res, 86400, 43200)
 
   const { data: seoData } = await client.query({
     query: GET_POST_SEO,

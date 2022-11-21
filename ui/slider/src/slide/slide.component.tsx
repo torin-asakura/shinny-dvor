@@ -51,7 +51,8 @@ const Slide: FC<SlideProps> = ({
               alignItems='center'
             >
               <ReactCompareImage
-                handle={swiperSlide.isActive ? <Handle /> : null}
+                // eslint-disable-next-line
+                handle={swiperSlide.isActive ? <Handle /> : <React.Fragment />}
                 sliderLineWidth={swiperSlide.isActive ? 2 : 0}
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
@@ -60,6 +61,9 @@ const Slide: FC<SlideProps> = ({
                 leftImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
                 sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
               />
+              <Condition match={!swiperSlide.isActive}>
+                <Box width='100%' height='100%' position='absolute' />
+              </Condition>
             </Box>
             <Box
               width={425}
@@ -68,7 +72,7 @@ const Slide: FC<SlideProps> = ({
               alignItems='center'
             >
               <ReactCompareImage
-                handle={swiperSlide.isActive ? <Handle /> : null}
+                handle={<Handle />}
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
                 sliderPositionPercentage={0.4}

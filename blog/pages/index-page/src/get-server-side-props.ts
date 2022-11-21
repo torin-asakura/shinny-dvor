@@ -16,7 +16,7 @@ export const getServerSideProps = async ({ res }) => {
 
   let SEO
 
-  setCacheHeader(res, 3600, 300)
+  setCacheHeader(res, 86400, 43200)
 
   const { data: seoData } = await client.query({
     query: GET_BLOG_SEO,
