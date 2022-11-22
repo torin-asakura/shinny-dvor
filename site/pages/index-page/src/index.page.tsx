@@ -60,6 +60,24 @@ const IndexPage: FC<Props> = ({
 
   const [scrollY, setScrollY] = useState<number>(0)
 
+  const throttle = (func, ms) => {
+    let locked = false
+
+    return function worker() {
+      if (locked) return
+
+      const context = this
+      const args = arguments // eslint-disable-line
+
+      locked = true
+
+      setTimeout(() => {
+        func.apply(context, args)
+        locked = false
+      }, ms)
+    }
+  }
+
   const scrollHandler = () => {
     const y = headerRef!.current!.getBoundingClientRect()
 
@@ -67,9 +85,9 @@ const IndexPage: FC<Props> = ({
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', scrollHandler, false)
+    window.addEventListener('scroll', throttle(scrollHandler, 200), { passive: true })
 
-    return () => window.removeEventListener('scroll', scrollHandler, false)
+    return () => window.removeEventListener('scroll', throttle(scrollHandler, 200))
   }, [])
 
   return (
