@@ -1,5 +1,4 @@
 import React                       from 'react'
-import { FC }                      from 'react'
 import { useRef }                  from 'react'
 import { useEffect }               from 'react'
 import { useState }                from 'react'
@@ -16,28 +15,25 @@ import { Column }                  from '@ui/layout'
 import { useIntersectionObserver } from '@ui/intersection-observer'
 
 import { Seo }                     from './seo.component'
+import { getData }                 from './data'
+import { getSeo }                  from './data'
 
-interface Props {
-  ogCover: string
-  SEO: any
-  data: any
-}
+const IndexPage = async () => {
+  const { SEO, ogCover } = await getSeo()
+  const {
+    data: {
+      contacts,
+      ui,
+      navigation,
+      availableRadii,
+      fragments,
+      carBodies,
+      services,
+      posts,
+      workResults,
+    },
+  } = await getData()
 
-const IndexPage: FC<Props> = ({
-  SEO,
-  ogCover,
-  data: {
-    contacts,
-    posts,
-    navigation,
-    availableRadii,
-    services,
-    fragments,
-    ui,
-    workResults,
-    carBodies,
-  },
-}) => {
   const [active, setActive] = useState<number>(0)
 
   const isLoaded = useRef<boolean>(false)
