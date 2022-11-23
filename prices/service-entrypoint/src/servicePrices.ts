@@ -1,8 +1,8 @@
+import cron           from 'node-cron'
 import fetch          from 'node-fetch'
 import { existsSync } from 'fs'
 import { mkdirSync }  from 'fs'
 import { writeFile }  from 'fs'
-import cron from 'node-cron'
 
 const servicePrices = async () => {
   const API_URL = 'https://api.aqsi.ru/pub/v2/'
