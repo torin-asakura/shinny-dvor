@@ -1,5 +1,5 @@
 {
-  "include": ["site/**/*", "ui/**/*", "blog/**/*"],
+  "include": ["site/**/*", "ui/**/*", "blog/**/*", "core/**/*"],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,

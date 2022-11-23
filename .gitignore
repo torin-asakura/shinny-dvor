@@ -73,3 +73,6 @@ credentials.json
 # Exclude all wp themes except current one
 wp-content/themes
 wp-content/themes/!misik!/
+
+# generated files
+core/service-prices/src/result
