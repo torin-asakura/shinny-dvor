@@ -45,16 +45,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:blog/pages/post-page"\
       },\
       {\
-        "name": "@core/service-prices",\
-        "reference": "workspace:core/service-prices"\
-      },\
-      {\
         "name": "@fragments/booking-fragment",\
         "reference": "workspace:fragments/booking-fragment"\
       },\
       {\
         "name": "@globals/data",\
         "reference": "workspace:globals/data"\
+      },\
+      {\
+        "name": "@prices/service-entrypoint",\
+        "reference": "workspace:prices/service-entrypoint"\
       },\
       {\
         "name": "@shared/utils",\
@@ -251,12 +251,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["@blog/app", ["workspace:blog/app"]],\
       ["@blog/index-page", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:blog/pages/index-page", "workspace:blog/pages/index-page"]],\
       ["@blog/post-page", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:blog/pages/post-page", "workspace:blog/pages/post-page"]],\
-      ["@core/service-prices", ["workspace:core/service-prices"]],\
       ["@fragments/blog-articles-fragment", ["virtual:10336f971de40ae7ec5bf6138d2a01746df3707f7ab91c34033b731dbf091099c771b279b0887e781ecd7c8977197c6af4964f338765731b1a5368a42f751c95#workspace:blog/fragments/articles-fragment", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:blog/fragments/articles-fragment", "workspace:blog/fragments/articles-fragment"]],\
       ["@fragments/blog-footer-fragment", ["virtual:10336f971de40ae7ec5bf6138d2a01746df3707f7ab91c34033b731dbf091099c771b279b0887e781ecd7c8977197c6af4964f338765731b1a5368a42f751c95#workspace:blog/fragments/footer-fragment", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:blog/fragments/footer-fragment", "workspace:blog/fragments/footer-fragment"]],\
       ["@fragments/blog-navigation-fragment", ["virtual:10336f971de40ae7ec5bf6138d2a01746df3707f7ab91c34033b731dbf091099c771b279b0887e781ecd7c8977197c6af4964f338765731b1a5368a42f751c95#workspace:blog/fragments/navigation-fragment", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:blog/fragments/navigation-fragment", "workspace:blog/fragments/navigation-fragment"]],\
       ["@fragments/booking-fragment", ["virtual:624b1cc16eab66e8c0265bb209e76d7e98cb1ac2e6287693907de623e5406552d9f6fd5c0cf6f73df6e389466795d6711d712eef2861ab80e38dd33ca4f4de8a#workspace:fragments/booking-fragment", "virtual:b21621238b4c46fc87e07ec571acb9e9424700f71181de44ed77046a36093496e894c0e877623da126c84c4edefb56a025d0369deb604cd5505e9573357d0f41#workspace:fragments/booking-fragment", "virtual:e232398c59f49d98dcaf6d06707be596e993203baceabfdc6cc9052bedd75d259f6cd3a903e1d722d8cc4579a50ac4907da64a5c66ad01319d3d52ecb0056b4b#workspace:fragments/booking-fragment", "workspace:fragments/booking-fragment"]],\
       ["@globals/data", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/data", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:globals/data", "virtual:b5fc5ffd008374ccc232709e6b2eff226b23c8379830a3b2c4967b736a12940b29c793408cf1bcacff3e6830717b858329be775c96fa415791aa6dfe72ba95b7#workspace:globals/data", "workspace:globals/data"]],\
+      ["@prices/service-entrypoint", ["workspace:prices/service-entrypoint"]],\
       ["@shared/utils", ["workspace:shared/utils"]],\
       ["@site/all-services-fragment", ["virtual:2610a174c4d29ac784e76cecba27b42be4ae9e87c805598162f01492cee00300c43c2cfda4f583113f382b73b2cf8884b964bfc2f76543cac01326ced6c72a6b#workspace:site/fragments/all-services-fragment", "virtual:b4945c6b49bd2f2b4cc579ba4289af79cd8ec4cbb311678c1e81b05f53a2b091751094b1ae45c1a7aa2293fc730c42c3d0b31847cedd4fa89303f8ff61ff5f66#workspace:site/fragments/all-services-fragment", "workspace:site/fragments/all-services-fragment"]],\
       ["@site/app", ["workspace:site/app"]],\
@@ -4251,20 +4251,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["@core/service-prices", [\
-        ["workspace:core/service-prices", {\
-          "packageLocation": "./core/service-prices/",\
-          "packageDependencies": [\
-            ["@core/service-prices", "workspace:core/service-prices"],\
-            ["@types/node", "npm:16.11.10"],\
-            ["commander", "npm:9.4.1"],\
-            ["dotenv", "npm:16.0.3"],\
-            ["node-fetch", "npm:3.3.0"],\
-            ["npmlog", "npm:6.0.2"]\
-          ],\
-          "linkType": "SOFT"\
-        }]\
-      ]],\
       ["@emotion/babel-plugin", [\
         ["npm:11.10.2", {\
           "packageLocation": "./.yarn/cache/@emotion-babel-plugin-npm-11.10.2-5ade7f379a-7f9e84b3c0.zip/node_modules/@emotion/babel-plugin/",\
@@ -6526,6 +6512,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rimraf", "npm:3.0.2"]\
           ],\
           "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@prices/service-entrypoint", [\
+        ["workspace:prices/service-entrypoint", {\
+          "packageLocation": "./prices/service-entrypoint/",\
+          "packageDependencies": [\
+            ["@prices/service-entrypoint", "workspace:prices/service-entrypoint"],\
+            ["@types/node", "npm:16.11.10"],\
+            ["dotenv", "npm:16.0.3"],\
+            ["node-fetch", "npm:3.3.0"]\
+          ],\
+          "linkType": "SOFT"\
         }]\
       ]],\
       ["@shared/utils", [\
@@ -15605,15 +15603,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["readable-stream", "npm:3.6.0"]\
           ],\
           "linkType": "HARD"\
-        }],\
-        ["npm:3.0.1", {\
-          "packageLocation": "./.yarn/cache/are-we-there-yet-npm-3.0.1-3395b1512f-52590c2486.zip/node_modules/are-we-there-yet/",\
-          "packageDependencies": [\
-            ["are-we-there-yet", "npm:3.0.1"],\
-            ["delegates", "npm:1.0.0"],\
-            ["readable-stream", "npm:3.6.0"]\
-          ],\
-          "linkType": "HARD"\
         }]\
       ]],\
       ["argparse", [\
@@ -17788,21 +17777,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["console-control-strings", "npm:1.1.0"],\
             ["has-unicode", "npm:2.0.1"],\
             ["signal-exit", "npm:3.0.6"],\
-            ["string-width", "npm:4.2.3"],\
-            ["strip-ansi", "npm:6.0.1"],\
-            ["wide-align", "npm:1.1.5"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:4.0.4", {\
-          "packageLocation": "./.yarn/cache/gauge-npm-4.0.4-8f878385e9-788b6bfe52.zip/node_modules/gauge/",\
-          "packageDependencies": [\
-            ["gauge", "npm:4.0.4"],\
-            ["aproba", "npm:2.0.0"],\
-            ["color-support", "npm:1.1.3"],\
-            ["console-control-strings", "npm:1.1.0"],\
-            ["has-unicode", "npm:2.0.1"],\
-            ["signal-exit", "npm:3.0.7"],\
             ["string-width", "npm:4.2.3"],\
             ["strip-ansi", "npm:6.0.1"],\
             ["wide-align", "npm:1.1.5"]\
@@ -20097,17 +20071,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["are-we-there-yet", "npm:2.0.0"],\
             ["console-control-strings", "npm:1.1.0"],\
             ["gauge", "npm:4.0.0"],\
-            ["set-blocking", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:6.0.2", {\
-          "packageLocation": "./.yarn/cache/npmlog-npm-6.0.2-e0e69455c7-ae238cd264.zip/node_modules/npmlog/",\
-          "packageDependencies": [\
-            ["npmlog", "npm:6.0.2"],\
-            ["are-we-there-yet", "npm:3.0.1"],\
-            ["console-control-strings", "npm:1.1.0"],\
-            ["gauge", "npm:4.0.4"],\
             ["set-blocking", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\

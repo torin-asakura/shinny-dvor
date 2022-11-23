@@ -25,9 +25,10 @@ const servicePrices = async () => {
 
   const data = JSON.stringify(formattedGoodsData, null, 2)
 
-  if (!existsSync(`./core/service-prices/src/result`)) mkdirSync(`./core/service-prices/src/result`)
+  if (!existsSync(`./prices/service-entrypoint/src/result`))
+    mkdirSync(`./prices/service-entrypoint/src/result`)
 
-  writeFile('./core/service-prices/src/result/goods_list.json', data, (err) => {
+  writeFile('./prices/service-entrypoint/src/result/goods_list.json', data, (err) => {
     if (err) throw err
 
     // eslint-disable-next-line
