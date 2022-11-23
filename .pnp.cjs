@@ -6520,7 +6520,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@prices/service-entrypoint", "workspace:prices/service-entrypoint"],\
             ["@types/node", "npm:16.11.10"],\
-            ["dotenv", "npm:16.0.3"],\
+            ["@types/node-cron", "npm:3.0.6"],\
+            ["node-cron", "npm:3.0.2"],\
             ["node-fetch", "npm:3.3.0"]\
           ],\
           "linkType": "SOFT"\
@@ -8985,6 +8986,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-16.11.10-6a434088fa-9c79419c5c.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:16.11.10"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/node-cron", [\
+        ["npm:3.0.6", {\
+          "packageLocation": "./.yarn/cache/@types-node-cron-npm-3.0.6-c7dd989f1a-dfddb32f3a.zip/node_modules/@types/node-cron/",\
+          "packageDependencies": [\
+            ["@types/node-cron", "npm:3.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -16749,15 +16759,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["dotenv", [\
-        ["npm:16.0.3", {\
-          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.3-4cc29121dc-afcf03f373.zip/node_modules/dotenv/",\
-          "packageDependencies": [\
-            ["dotenv", "npm:16.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["downshift", [\
         ["npm:6.1.7", {\
           "packageLocation": "./.yarn/cache/downshift-npm-6.1.7-22c05c4fb9-0904ed8f28.zip/node_modules/downshift/",\
@@ -19940,6 +19941,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["node-cron", [\
+        ["npm:3.0.2", {\
+          "packageLocation": "./.yarn/cache/node-cron-npm-3.0.2-5ee1c1c226-dd21585c0d.zip/node_modules/node-cron/",\
+          "packageDependencies": [\
+            ["node-cron", "npm:3.0.2"],\
+            ["uuid", "npm:8.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["node-domexception", [\
         ["npm:1.0.0", {\
           "packageLocation": "./.yarn/cache/node-domexception-npm-1.0.0-e1e813b76f-ee1d37dd2a.zip/node_modules/node-domexception/",\
@@ -22659,6 +22670,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/utils-merge-npm-1.0.1-363bbdfbca-c810954932.zip/node_modules/utils-merge/",\
           "packageDependencies": [\
             ["utils-merge", "npm:1.0.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["uuid", [\
+        ["npm:8.3.2", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:8.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\

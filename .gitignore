@@ -75,4 +75,4 @@ wp-content/themes
 wp-content/themes/!misik!/
 
 # generated files
-core/service-prices/src/result
+prices/service-entrypoint/src/result

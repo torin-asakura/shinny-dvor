@@ -2609,7 +2609,8 @@ __metadata:
   resolution: "@prices/service-entrypoint@workspace:prices/service-entrypoint"
   dependencies:
     "@types/node": 16.13
-    dotenv: 16.0.3
+    "@types/node-cron": ^3
+    node-cron: ^3.0.2
     node-fetch: ^3.3.0
   languageName: unknown
   linkType: soft
@@ -3699,6 +3700,13 @@ __metadata:
   version: 3.0.5
   resolution: "@types/minimatch@npm:3.0.5"
   checksum: c41d136f67231c3131cf1d4ca0b06687f4a322918a3a5adddc87ce90ed9dbd175a3610adee36b106ae68c0b92c637c35e02b58c8a56c424f71d30993ea220b92
+  languageName: node
+  linkType: hard
+
+"@types/node-cron@npm:^3":
+  version: 3.0.6
+  resolution: "@types/node-cron@npm:3.0.6"
+  checksum: dfddb32f3a84e80413d78ff1bd7b0760765a3876929c54d3f35e0fe9d3365d19a32db38290c1d585de4dc35ab3e67dbe93faf440d8c524a520d5b96a8aa07404
   languageName: node
   linkType: hard
 
@@ -6245,13 +6253,6 @@ __metadata:
   version: 2.3.8
   resolution: "dompurify@npm:2.3.8"
   checksum: dc7b32ee57a03fe5166a850071200897cc13fa069287a709e3b2138052d73ec09a87026b9e28c8d2f254a74eaa52ef30644e98e54294c30acbca2a53f1bbc5f4
-  languageName: node
-  linkType: hard
-
-"dotenv@npm:16.0.3":
-  version: 16.0.3
-  resolution: "dotenv@npm:16.0.3"
-  checksum: afcf03f373d7a6d62c7e9afea6328e62851d627a4e73f2e12d0a8deae1cd375892004f3021883f8aec85932cd2834b091f568ced92b4774625b321db83b827f8
   languageName: node
   linkType: hard
 
@@ -8898,6 +8899,15 @@ fsevents@^2.3.2:
   languageName: node
   linkType: hard
 
+"node-cron@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "node-cron@npm:3.0.2"
+  dependencies:
+    uuid: 8.3.2
+  checksum: dd21585c0d4069a0752022dad9b8380a4393c4783ec78355ffa99ff32b018c3743a35d4ebf9d7c7863949e94e302b440f58c884eb4960e71c7260d817e2d3f25
+  languageName: node
+  linkType: hard
+
 "node-domexception@npm:^1.0.0":
   version: 1.0.0
   resolution: "node-domexception@npm:1.0.0"
@@ -10933,6 +10943,15 @@ fsevents@^2.3.2:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
+  languageName: node
+  linkType: hard
+
+"uuid@npm:8.3.2":
+  version: 8.3.2
+  resolution: "uuid@npm:8.3.2"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 5575a8a75c13120e2f10e6ddc801b2c7ed7d8f3c8ac22c7ed0c7b2ba6383ec0abda88c905085d630e251719e0777045ae3236f04c812184b7c765f63a70e58df
   languageName: node
   linkType: hard
 

@@ -1,11 +1,8 @@
-import * as dotenv    from 'dotenv'
-
 import fetch          from 'node-fetch'
 import { existsSync } from 'fs'
 import { mkdirSync }  from 'fs'
 import { writeFile }  from 'fs'
-
-dotenv.config()
+import cron from 'node-cron'
 
 const servicePrices = async () => {
   const API_URL = 'https://api.aqsi.ru/pub/v2/'
@@ -36,6 +33,10 @@ const servicePrices = async () => {
   })
 }
 
-servicePrices()
+const task = cron.schedule('0 0 * * 0', () => {
+  servicePrices()
+})
+
+task.start()
 
 export { servicePrices }
