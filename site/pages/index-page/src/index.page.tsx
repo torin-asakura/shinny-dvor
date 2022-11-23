@@ -18,7 +18,7 @@ import { Seo }                     from './seo.component'
 import { getData }                 from './data'
 import { getSeo }                  from './data'
 
-const IndexPage = async () => {
+const Page = async () => {
   const { SEO, ogCover } = await getSeo()
   const {
     data: {
@@ -139,4 +139,4 @@ const IndexPage = async () => {
   )
 }
 
-export default IndexPage
+export default Page

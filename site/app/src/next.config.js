@@ -5,5 +5,6 @@ module.exports = {
     workerThreads: true,
     esmExternals: 'loose',
     outputStandalone: true,
+    appDir: true
   },
 }
