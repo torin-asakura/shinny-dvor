@@ -1,10 +1,14 @@
+import { Logger }     from '@atls/logger'
+
 import cron           from 'node-cron'
 import fetch          from 'node-fetch'
 import { existsSync } from 'fs'
 import { mkdirSync }  from 'fs'
 import { writeFile }  from 'fs'
 
-const servicePrices = async () => {
+const bootstrap = async () => {
+  const logger = new Logger('Prices')
+
   const API_URL = 'https://api.aqsi.ru/pub/v2/'
   const GOODS_LIST = 'Goods/list'
 
@@ -28,15 +32,12 @@ const servicePrices = async () => {
   writeFile('./prices/service-entrypoint/src/result/goods_list.json', data, (err) => {
     if (err) throw err
 
-    // eslint-disable-next-line
-    console.log('Goods data written successfully')
+    logger.info('goods data written successfully')
   })
 }
 
 const task = cron.schedule('0 0 * * 0', () => {
-  servicePrices()
+  bootstrap()
 })
 
 task.start()
-
-export { servicePrices }

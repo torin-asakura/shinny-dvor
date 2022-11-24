@@ -1,1 +1,1 @@
-export * from './servicePrices'
+import './bootstrap'

@@ -17,6 +17,7 @@
     "node-fetch": "^3.3.0"
   },
   "devDependencies": {
+    "@atls/logger": "^0.0.1",
     "@types/node": "16.13",
     "@types/node-cron": "^3"
   }
