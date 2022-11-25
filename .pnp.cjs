@@ -6529,11 +6529,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./prices/service-entrypoint/",\
           "packageDependencies": [\
             ["@prices/service-entrypoint", "workspace:prices/service-entrypoint"],\
+            ["@atls/config-prettier", "npm:0.0.5"],\
             ["@atls/logger", "npm:0.0.1"],\
+            ["@atls/prettier-plugin", "npm:0.0.5"],\
             ["@types/node", "npm:16.11.10"],\
             ["@types/node-cron", "npm:3.0.6"],\
+            ["@types/prettier", "npm:2.7.1"],\
             ["node-cron", "npm:3.0.2"],\
-            ["node-fetch", "npm:3.3.0"]\
+            ["node-fetch", "npm:3.3.0"],\
+            ["prettier", "npm:2.8.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -9024,6 +9028,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-prettier-npm-2.4.2-290f200354-76e230b2d1.zip/node_modules/@types/prettier/",\
           "packageDependencies": [\
             ["@types/prettier", "npm:2.4.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.7.1", {\
+          "packageLocation": "./.yarn/cache/@types-prettier-npm-2.7.1-d46ada27e6-5e3f58e229.zip/node_modules/@types/prettier/",\
+          "packageDependencies": [\
+            ["@types/prettier", "npm:2.7.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -20530,6 +20541,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/prettier-npm-2.7.1-d1f40f5e1a-55a4409182.zip/node_modules/prettier/",\
           "packageDependencies": [\
             ["prettier", "npm:2.7.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:2.8.0", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.0-746e3df53e-72004ce0cc.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.8.0"]\
           ],\
           "linkType": "HARD"\
         }]\
