@@ -1,5 +1,6 @@
 import { writeFileSync } from 'fs'
 
+import { imagesData }    from '../images-data'
 import { goods }         from '../result'
 import { goodsCategory } from '../result'
 
@@ -23,6 +24,14 @@ const generateXml = () => {
         <price>${price}</price>
         <currencyId>RUB</currencyId>
         <categoryId>${group_id}</categoryId>
+        <picture>${imagesData
+          .map((item) => {
+            if (item.id === id) return item.url
+
+            return ''
+          })
+          .join('')}</picture>
+        <description>${name}</description>
       </offer>`
       )
       .join('')}

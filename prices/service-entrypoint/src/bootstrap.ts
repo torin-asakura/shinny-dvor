@@ -24,20 +24,40 @@ const bootstrap = async () => {
   const goodsData: any = await goodsResponse.json()
   const goodsCategoryData: any = await goodsCategoryResponse.json()
 
-  const formattedGoodsCategoryData = goodsCategoryData
-    .map((category) => category.children.map(({ id, name }) => ({ id, name })))
-    .filter((item) => item.length)
+  const queryPromises: Array<Promise<any>> = [...Array(goodsData.pages)].map(async (_, index) => {
+    const data = await fetchData(`${API_URL}${GOODS_LIST}?pageNumber=${index}`)
+
+    return data.json()
+  })
+
+  const retrievedData = await Promise.all(queryPromises)
+
+  const formattedGoodsData = retrievedData
+    .map((item) =>
+      item.rows.map(({ id, group_id, name, price }) => ({
+        id,
+        group_id,
+        name,
+        price,
+      })))
     .flat()
 
-  const formattedGoodsData = goodsData.rows.map(({ id, group_id, name, price }) => ({
-    id,
-    group_id,
-    name,
-    price,
-  }))
+  const formattedGoodsCategoryData = goodsCategoryData
+    .filter((item) => !item.children.length)
+    .map(({ id, name }) => ({ id, name }))
+    .flat()
 
-  const jsonGoodsData = JSON.stringify(formattedGoodsData, null, 2) || ''
-  const jsonGoodsCategoryData = JSON.stringify(formattedGoodsCategoryData, null, 2) || ''
+  const formattedGoodsCategoryDataDeep = goodsCategoryData
+    .filter((category) => category.children.length)
+    .map((item) => item.children.map(({ id, name }) => ({ id, name })))
+    .flat()
+
+  const jsonGoodsData = JSON.stringify(formattedGoodsData, null, 2)
+  const jsonGoodsCategoryData = JSON.stringify(
+    [...formattedGoodsCategoryData, ...formattedGoodsCategoryDataDeep],
+    null,
+    2
+  )
 
   const indexFile = pretty(`
      export { default as goods } from './goods_list.json'
