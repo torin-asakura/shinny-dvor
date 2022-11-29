@@ -1196,6 +1196,10 @@ const imagesData: ImageData[] = [
     id: '184a701b-87ed-4504-9ddf-7b0afcbae1b0',
     url: 'https://wp.shdvor.pro/wp-content/uploads/2022/11/datchiki.jpeg',
   },
+  {
+    id: 'b4863325-08e3-434f-982c-b5d91b73cb3a',
+    url: 'https://wp.shdvor.pro/wp-content/uploads/2022/11/plug.jpg',
+  },
 ]
 
 export { imagesData }

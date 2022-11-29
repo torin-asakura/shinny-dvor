@@ -1,30 +1,30 @@
-import { Logger }         from '@atls/logger'
+import { Logger }              from '@atls/logger'
 
-import cron               from 'node-cron'
-import { existsSync }     from 'fs'
-import { mkdirSync }      from 'fs'
-import { writeFile }      from 'fs'
-import { writeFileSync }  from 'fs'
+import cron                    from 'node-cron'
+import { existsSync }          from 'fs'
+import { mkdirSync }           from 'fs'
+import { writeFile }           from 'fs'
+import { writeFileSync }       from 'fs'
 
-import { GOODS_CATEGORY } from './http'
-import { GOODS_LIST }     from './http'
-import { generateXml }    from './generator'
-import { fetchData }      from './http'
-import { pretty }         from './utils'
+import { API_URL }             from './http'
+import { GOODS_CATEGORY_PATH } from './http'
+import { GOODS_LIST_PATH }     from './http'
+import { generateXml }         from './generator'
+import { fetchData }           from './http'
 
 const bootstrap = async () => {
   const logger = new Logger('Prices')
 
   const path = './prices/service-entrypoint/src/result'
 
-  const goodsResponse = await fetchData(`${process.env.API_URL}${GOODS_LIST}`)
-  const goodsCategoryResponse = await fetchData(`${process.env.API_URL}${GOODS_CATEGORY}`)
+  const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
+  const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
   const goodsData: any = await goodsResponse.json()
   const goodsCategoryData: any = await goodsCategoryResponse.json()
 
   const queryPromises: Array<Promise<any>> = [...Array(goodsData.pages)].map(async (_, index) => {
-    const data = await fetchData(`${process.env.API_URL}${GOODS_LIST}?pageNumber=${index}`)
+    const data = await fetchData(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`)
 
     return data.json()
   })
@@ -58,10 +58,9 @@ const bootstrap = async () => {
     2
   )
 
-  const indexFile = pretty(`
-     export { default as goods } from './goods_list.json'
-     export { default as goodsCategory } from './goods_category.json'   
-  `)
+  const indexFile = `export { default as goods } from './goods_list.json'
+export { default as goodsCategory } from './goods_category.json'
+`
 
   if (!existsSync(`${path}`)) mkdirSync(`${path}`)
 
