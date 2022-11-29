@@ -1,10 +1,4 @@
-import { Logger }              from '@atls/logger'
-
 import cron                    from 'node-cron'
-import { existsSync }          from 'fs'
-import { mkdirSync }           from 'fs'
-import { writeFile }           from 'fs'
-import { writeFileSync }       from 'fs'
 
 import { API_URL }             from './http'
 import { GOODS_CATEGORY_PATH } from './http'
@@ -13,17 +7,16 @@ import { generateXml }         from './generator'
 import { fetchData }           from './http'
 
 const bootstrap = async () => {
-  const logger = new Logger('Prices')
-
-  const path = './prices/service-entrypoint/src/result'
-
   const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
   const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
-  const goodsData: any = await goodsResponse.json()
-  const goodsCategoryData: any = await goodsCategoryResponse.json()
+  const jsonGoodsData: any = await goodsResponse.json()
+  const jsonGoodsCategoryData: any = await goodsCategoryResponse.json()
 
-  const queryPromises: Array<Promise<any>> = [...Array(goodsData.pages)].map(async (_, index) => {
+  const queryPromises: Array<Promise<any>> = [...Array(jsonGoodsData.pages)].map(async (
+    _,
+    index
+  ) => {
     const data = await fetchData(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`)
 
     return data.json()
@@ -41,44 +34,20 @@ const bootstrap = async () => {
       })))
     .flat()
 
-  const formattedGoodsCategoryData = goodsCategoryData
+  const formattedGoodsCategoryData = jsonGoodsCategoryData
     .filter((item) => !item.children.length)
     .map(({ id, name }) => ({ id, name }))
     .flat()
 
-  const formattedGoodsCategoryDataDeep = goodsCategoryData
+  const formattedGoodsCategoryDataDeep = jsonGoodsCategoryData
     .filter((category) => category.children.length)
     .map((item) => item.children.map(({ id, name }) => ({ id, name })))
     .flat()
 
-  const jsonGoodsData = JSON.stringify(formattedGoodsData, null, 2)
-  const jsonGoodsCategoryData = JSON.stringify(
-    [...formattedGoodsCategoryData, ...formattedGoodsCategoryDataDeep],
-    null,
-    2
-  )
+  const goodsData = formattedGoodsData
+  const goodsCategoryData = [...formattedGoodsCategoryData, ...formattedGoodsCategoryDataDeep]
 
-  const indexFile = `export { default as goods } from './goods_list.json'
-export { default as goodsCategory } from './goods_category.json'
-`
-
-  if (!existsSync(`${path}`)) mkdirSync(`${path}`)
-
-  writeFile(`${path}/goods_category.json`, jsonGoodsCategoryData, (err) => {
-    if (err) throw err
-
-    logger.info('goods category data written successfully')
-  })
-
-  writeFile(`${path}/goods_list.json`, jsonGoodsData, (err) => {
-    if (err) throw err
-
-    logger.info('goods data written successfully')
-  })
-
-  writeFileSync(`${path}/index.ts`, indexFile)
-
-  if (formattedGoodsCategoryData.length && formattedGoodsData.length) generateXml()
+  if (goodsData.length && goodsCategoryData.length) generateXml(goodsData, goodsCategoryData)
 }
 
 const task = cron.schedule('0 0 * * 0', () => {

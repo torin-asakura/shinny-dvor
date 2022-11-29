@@ -1,19 +1,21 @@
-import { writeFileSync } from 'fs'
-import { js2xml }        from 'xml-js'
+import { Logger }     from '@atls/logger'
 
-import { imagesData }    from '../images-data'
-import { goods }         from '../result'
-import { goodsCategory } from '../result'
+import { writeFile }  from 'fs'
+import { js2xml }     from 'xml-js'
 
-const generateXml = () => {
-  const category = goodsCategory.map(({ id, name }) => ({
+import { imagesData } from '../images-data'
+
+const generateXml = (goodsData, goodsCategoryData) => {
+  const logger = new Logger('XML-Generator')
+
+  const category = goodsCategoryData.map(({ id, name }) => ({
     _attributes: {
       id,
     },
     _text: name,
   }))
 
-  const offer = goods.map(({ id, group_id, name, price }) => ({
+  const offer = goodsData.map(({ id, group_id, name, price }) => ({
     _attributes: {
       id,
     },
@@ -67,7 +69,11 @@ const generateXml = () => {
 
   const xml = js2xml(YML, { compact: true, spaces: 2 })
 
-  writeFileSync('./prices/service-entrypoint/src/result/prices.xml', xml)
+  writeFile(`./prices/service-entrypoint/src/result/prices.xml`, xml, (err) => {
+    if (err) throw err
+
+    logger.info('xml file written successfully')
+  })
 }
 
 export { generateXml }
