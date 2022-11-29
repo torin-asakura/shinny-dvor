@@ -6,7 +6,6 @@ import { mkdirSync }      from 'fs'
 import { writeFile }      from 'fs'
 import { writeFileSync }  from 'fs'
 
-import { API_URL }        from './http'
 import { GOODS_CATEGORY } from './http'
 import { GOODS_LIST }     from './http'
 import { generateXml }    from './generator'
@@ -18,14 +17,14 @@ const bootstrap = async () => {
 
   const path = './prices/service-entrypoint/src/result'
 
-  const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST}`)
-  const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY}`)
+  const goodsResponse = await fetchData(`${process.env.API_URL}${GOODS_LIST}`)
+  const goodsCategoryResponse = await fetchData(`${process.env.API_URL}${GOODS_CATEGORY}`)
 
   const goodsData: any = await goodsResponse.json()
   const goodsCategoryData: any = await goodsCategoryResponse.json()
 
   const queryPromises: Array<Promise<any>> = [...Array(goodsData.pages)].map(async (_, index) => {
-    const data = await fetchData(`${API_URL}${GOODS_LIST}?pageNumber=${index}`)
+    const data = await fetchData(`${process.env.API_URL}${GOODS_LIST}?pageNumber=${index}`)
 
     return data.json()
   })
