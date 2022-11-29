@@ -8,7 +8,8 @@
     "store/**/*",
     "shared/**/*",
     "globals/**/*",
-    "fragments/**/*"
+    "fragments/**/*",
+    "prices/**/*"
   ],
   "scripts": {
     "postinstall": "yarn workspace @ui/icons generate-icons"
