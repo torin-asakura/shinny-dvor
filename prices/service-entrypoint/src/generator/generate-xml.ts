@@ -78,8 +78,8 @@ const generateXml = (goodsData, goodsCategoryData) => {
 
   s3.upload(
     {
-      Bucket: 'shdvor',
-      Key: `prices-${Date.now()}.xml`,
+      Bucket: process.env.BUCKET_NAME || '',
+      Key: `prices-${new Date().toISOString()}.xml`,
       Body: xml,
     },
     (err, data) => {
