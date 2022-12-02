@@ -1,6 +1,6 @@
 import { Logger }     from '@atls/logger'
 
-import { writeFile }  from 'fs'
+import AWS            from 'aws-sdk'
 import { js2xml }     from 'xml-js'
 
 import { imagesData } from '../images-data'
@@ -69,11 +69,25 @@ const generateXml = (goodsData, goodsCategoryData) => {
 
   const xml = js2xml(YML, { compact: true, spaces: 2 })
 
-  writeFile(`./prices/service-entrypoint/src/result/prices.xml`, xml, (err) => {
-    if (err) throw err
-
-    logger.info('xml file written successfully')
+  const s3 = new AWS.S3({
+    endpoint: process.env.FILES_STORAGE_HOST,
+    region: process.env.FILES_STORAGE_REGION,
+    accessKeyId: process.env.YC_SA_KEY_ID,
+    secretAccessKey: process.env.YC_SA_SECRET_KEY,
   })
+
+  s3.upload(
+    {
+      Bucket: process.env.BUCKET_NAME || '',
+      Key: `prices-${new Date().toISOString()}.xml`,
+      Body: xml,
+    },
+    (err, data) => {
+      if (err) throw err
+
+      logger.info(`File uploaded on ${data.Location}`)
+    }
+  )
 }
 
 export { generateXml }
