@@ -8,9 +8,11 @@ import { GOODS_LIST_PATH }     from './http'
 import { generateXml }         from './generator'
 import { fetchData }           from './http'
 
-const logger = new Logger('Cron')
+const logger = new Logger('Bootstrap')
 
 const bootstrap = async () => {
+  logger.info('initializing')
+
   const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
   const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
@@ -49,9 +51,13 @@ const bootstrap = async () => {
 }
 
 const task = cron.schedule('0 0 * * 0', () => {
+  logger.info('task started')
+
   bootstrap()
 
   logger.info('task completed')
 })
 
 task.start()
+
+bootstrap()
