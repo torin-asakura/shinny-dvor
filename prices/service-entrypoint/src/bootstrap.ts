@@ -1,3 +1,5 @@
+import { Logger }              from '@atls/logger'
+
 import cron                    from 'node-cron'
 
 import { API_URL }             from './http'
@@ -6,21 +8,19 @@ import { GOODS_LIST_PATH }     from './http'
 import { generateXml }         from './generator'
 import { fetchData }           from './http'
 
+const logger = new Logger('Bootstrap')
+
 const bootstrap = async () => {
+  logger.info('initializing')
+
   const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
   const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
-  const jsonGoodsData: any = await goodsResponse.json()
-  const jsonGoodsCategoryData: any = await goodsCategoryResponse.json()
+  const jsonGoodsData: any = await goodsResponse
+  const jsonGoodsCategoryData: any = await goodsCategoryResponse
 
-  const queryPromises: Array<Promise<any>> = [...Array(jsonGoodsData.pages)].map(async (
-    _,
-    index
-  ) => {
-    const data = await fetchData(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`)
-
-    return data.json()
-  })
+  const queryPromises: Array<Promise<any>> = [...Array(jsonGoodsData.pages)].map(async (_, index) =>
+    fetchData(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`))
 
   const retrievedData = await Promise.all(queryPromises)
 
@@ -51,7 +51,13 @@ const bootstrap = async () => {
 }
 
 const task = cron.schedule('0 0 * * 0', () => {
+  logger.info('task started')
+
   bootstrap()
+
+  logger.info('task completed')
 })
 
 task.start()
+
+bootstrap()

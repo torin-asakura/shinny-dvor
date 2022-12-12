@@ -83,7 +83,7 @@ const generateXml = (goodsData, goodsCategoryData) => {
       Body: xml,
     },
     (err, data) => {
-      if (err) throw err
+      if (err) logger.error(err)
 
       logger.info(`File uploaded on ${data.Location}`)
     }
