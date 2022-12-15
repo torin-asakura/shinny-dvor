@@ -3,8 +3,8 @@ import { Logger }              from '@atls/logger'
 import cron                    from 'node-cron'
 
 import { API_URL }             from './http'
-import { GOODS_CATEGORY_PATH } from './http'
 import { GOODS_LIST_PATH }     from './http'
+import { GOODS_CATEGORY_PATH } from './http'
 import { generateXml }         from './generator'
 import { fetchData }           from './http'
 
