@@ -17,7 +17,7 @@ const Bare = ({ Component, pageProps, props }) => {
 
   return (
     <ApolloProvider client={client}>
-      <IntlProvider locale='ru' defaultLocale='ru'>
+      <IntlProvider defaultLocale='ru' locale='ru'>
         <ThemeProvider>
           <Component {...props} {...pageProps} />
         </ThemeProvider>
