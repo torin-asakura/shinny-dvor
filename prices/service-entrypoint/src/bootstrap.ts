@@ -1,3 +1,5 @@
+import * as Sentry             from '@sentry/node'
+
 import { Logger }              from '@atls/logger'
 
 import cron                    from 'node-cron'
@@ -9,6 +11,11 @@ import { generateXml }         from './generator'
 import { fetchData }           from './http'
 
 const logger = new Logger('Bootstrap')
+
+const sentryDsn =
+  process.env.SENTRY_DSN ?? 'https://aeae54efe3df4eac9f5ccebb4aa67476@logger.atls.tech/4'
+
+if (process.env.NODE_ENV === 'production') Sentry.init({ dsn: sentryDsn })
 
 const bootstrap = async () => {
   logger.info('initializing')
