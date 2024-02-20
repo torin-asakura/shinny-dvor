@@ -10808,24 +10808,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"root-workspace-0b6124@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "root-workspace-0b6124@workspace:."
-  dependencies:
-    "@atls/code-service": "npm:^0.0.16"
-    "@atls/config-jest": "npm:^0.0.5"
-    "@jest/core": "npm:^28.1.2"
-    "@types/eslint": "npm:^8"
-    "@types/jest": "npm:^28.1.3"
-    "@types/node": "npm:16"
-    "@types/react": "npm:^17.0.15"
-    "@types/react-dom": "npm:^17.0.9"
-    eslint: "npm:8.18.0"
-    husky: "npm:^8.0.1"
-    typescript: "npm:4.4.4"
-  languageName: unknown
-  linkType: soft
-
 "run-parallel@npm:^1.1.9":
   version: 1.2.0
   resolution: "run-parallel@npm:1.2.0"
@@ -10983,6 +10965,24 @@ __metadata:
   checksum: 258b73c50ddf040f724cc0fb0549b3ed611629696545d6000db89023fb71f780d06f63b66ba2b56f3c29e83c29462fd3941083e4714bcdd033dcf27562b32baa
   languageName: node
   linkType: hard
+
+"shdvor@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "shdvor@workspace:."
+  dependencies:
+    "@atls/code-service": "npm:^0.0.16"
+    "@atls/config-jest": "npm:^0.0.5"
+    "@jest/core": "npm:^28.1.2"
+    "@types/eslint": "npm:^8"
+    "@types/jest": "npm:^28.1.3"
+    "@types/node": "npm:16"
+    "@types/react": "npm:^17.0.15"
+    "@types/react-dom": "npm:^17.0.9"
+    eslint: "npm:8.18.0"
+    husky: "npm:^8.0.1"
+    typescript: "npm:4.4.4"
+  languageName: unknown
+  linkType: soft
 
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
