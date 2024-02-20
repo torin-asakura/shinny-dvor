@@ -6924,6 +6924,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@sentry/nextjs", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#npm:7.101.1"],\
           ["@rollup/plugin-commonjs", "virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:24.0.0"],\
+          ["@sentry-internal/tracing", "npm:7.102.0"],\
           ["@sentry/core", "npm:7.101.1"],\
           ["@sentry/integrations", "npm:7.101.1"],\
           ["@sentry/node", "npm:7.101.1"],\
@@ -6931,7 +6932,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/types", "npm:7.101.1"],\
           ["@sentry/utils", "npm:7.101.1"],\
           ["@sentry/vercel-edge", "npm:7.101.1"],\
-          ["@sentry/webpack-plugin", "npm:1.21.0"],\
+          ["@sentry/webpack-plugin", "virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:1.21.0"],\
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/webpack", null],\
@@ -6958,6 +6959,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@sentry/nextjs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:7.102.0"],\
           ["@rollup/plugin-commonjs", "virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:24.0.0"],\
+          ["@sentry-internal/tracing", "npm:7.102.0"],\
           ["@sentry/core", "npm:7.102.0"],\
           ["@sentry/integrations", "npm:7.102.0"],\
           ["@sentry/node", "npm:7.102.0"],\
@@ -6965,7 +6967,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/types", "npm:7.102.0"],\
           ["@sentry/utils", "npm:7.102.0"],\
           ["@sentry/vercel-edge", "npm:7.102.0"],\
-          ["@sentry/webpack-plugin", "npm:1.21.0"],\
+          ["@sentry/webpack-plugin", "virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:1.21.0"],\
           ["@types/next", null],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/webpack", null],\
@@ -7150,9 +7152,22 @@ const RAW_RUNTIME_STATE =
       ["npm:1.21.0", {\
         "packageLocation": "./.yarn/cache/@sentry-webpack-plugin-npm-1.21.0-0d5f07e5b7-9420d93499.zip/node_modules/@sentry/webpack-plugin/",\
         "packageDependencies": [\
-          ["@sentry/webpack-plugin", "npm:1.21.0"],\
+          ["@sentry/webpack-plugin", "npm:1.21.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:1.21.0", {\
+        "packageLocation": "./.yarn/__virtual__/@sentry-webpack-plugin-virtual-a3ccee2ad3/0/cache/@sentry-webpack-plugin-npm-1.21.0-0d5f07e5b7-9420d93499.zip/node_modules/@sentry/webpack-plugin/",\
+        "packageDependencies": [\
+          ["@sentry/webpack-plugin", "virtual:8c25c037360b79b0b8fc4d9f44a7c0b9d8516357c5caba6db1bdf3e311ed9f200b2165d354bb100bd0618942f29ee757732aea9b504417911ca1ae74fc663ec6#npm:1.21.0"],\
           ["@sentry/cli", "npm:1.77.3"],\
+          ["@types/webpack", null],\
+          ["webpack", null],\
           ["webpack-sources", "npm:3.2.3"]\
+        ],\
+        "packagePeers": [\
+          "@types/webpack",\
+          "webpack"\
         ],\
         "linkType": "HARD"\
       }]\
