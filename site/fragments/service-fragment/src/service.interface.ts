@@ -21,7 +21,6 @@ export interface ServiceProps {
   availableRadiiData: ContentAddons[]
 }
 
-// eslint-disable-next-line no-shadow
 export enum CarBodies {
   PASSENGER = 'passenger',
   JEEP = 'jeep',

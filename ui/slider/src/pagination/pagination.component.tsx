@@ -28,7 +28,7 @@ const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => 
   return (
     <Row height={32} justifyContent='center' alignItems='center'>
       {[...new Array(totalItems)].map((_, index) => (
-        <React.Fragment key={index}>
+        <React.Fragment key={`${index + 1}-key`}>
           <TransitionBox
             minWidth={calculatedActiveItem === index ? 22 : 10}
             height={10}
