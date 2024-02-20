@@ -76,7 +76,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
             <Slider>
               <SwiperInstanceExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
               {Children.map(sliderChildren, (child) => (
-                <SwiperSlide>{child}</SwiperSlide>
+                <SwiperSlide key={sliderChildren.key}>{child}</SwiperSlide>
               ))}
             </Slider>
           </Row>

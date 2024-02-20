@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/layout": "^0.0.3"
+    "@atls-ui-parts/layout": "0.0.15"
   },
   "devDependencies": {
     "@emotion/react": "^11.4.1",

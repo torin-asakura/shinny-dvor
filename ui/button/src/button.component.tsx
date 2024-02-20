@@ -20,7 +20,7 @@ export const Button: FC<ButtonProps> = ({ children, ...props }) => {
 
   return (
     <ButtonElement
-      fill
+      $fill
       hover={hover}
       pressed={pressed}
       onMouseDown={() => setPressed(true)}

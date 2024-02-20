@@ -17,6 +17,7 @@ const bootstrap = async () => {
   const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
   const jsonGoodsData: any = await goodsResponse
+
   const jsonGoodsCategoryData: any = await goodsCategoryResponse
 
   const queryPromises: Array<Promise<any>> = [...Array(jsonGoodsData.pages)].map(async (_, index) =>
