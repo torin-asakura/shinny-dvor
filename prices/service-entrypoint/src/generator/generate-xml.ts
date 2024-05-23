@@ -88,6 +88,19 @@ const generateXml = (goodsData, goodsCategoryData) => {
       logger.info(`File uploaded on ${data.Location}`)
     }
   )
+
+  s3.upload(
+    {
+      Bucket: process.env.BUCKET_NAME || '',
+      Key: `prices-latest.xml`,
+      Body: xml,
+    },
+    (err, data) => {
+      if (err) logger.error(err)
+
+      logger.info(`Latest file uploaded on ${data.Location}`)
+    }
+  )
 }
 
 export { generateXml }
