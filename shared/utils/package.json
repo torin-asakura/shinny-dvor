@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "main": "src/index.ts",
   "dependencies": {
-    "luxon": "^2.4.0"
+    "luxon": "^2.5.2"
   },
   "devDependencies": {
-    "@types/luxon": "^2"
+    "@types/luxon": "^2.4.0"
   }
 }

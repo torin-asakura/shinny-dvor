@@ -4,7 +4,7 @@ import { useState }    from 'react'
 
 import { Button }      from '@ui/button'
 import { Card }        from '@ui/card'
-import { CloseIcon }   from '@ui/icons/src'
+import { CloseIcon }   from '@ui/icons'
 import { Box }         from '@ui/layout'
 import { Layout }      from '@ui/layout'
 import { Column }      from '@ui/layout'

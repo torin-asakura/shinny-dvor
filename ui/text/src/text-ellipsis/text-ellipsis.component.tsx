@@ -1,6 +1,6 @@
 import styled   from '@emotion/styled'
 
-import { Text } from '../index'
+import { Text } from '../index.js'
 
 const TextEllipsis = styled(Text)(({ lineClamp }) => ({
   display: '-webkit-box',
