@@ -23,7 +23,7 @@
     "@emotion/css": "^11.13.0",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
-    "@sentry/nextjs": "7.118.0",
+    "@sentry/nextjs": "8.23.0",
     "events": "^3.3.0",
     "express": "^4.19.2",
     "graphql": "^15.9.0",
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@atls/next-sitemap-generator": "^0.0.3",
     "@globals/data": "workspace:0.0.1",
+    "@sentry/utils": "8.23.0",
     "@site/contacts-page": "workspace:0.0.1",
     "@site/index-page": "workspace:0.0.1",
     "@site/service-page": "workspace:0.0.1",
