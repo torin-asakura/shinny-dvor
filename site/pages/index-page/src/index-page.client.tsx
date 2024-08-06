@@ -17,7 +17,7 @@ import { Box }                     from '@ui/layout'
 import { Column }                  from '@ui/layout'
 import { useIntersectionObserver } from '@ui/intersection-observer'
 
-// import { Seo }                     from './seo.component'
+import { Seo }                     from './seo.component.js'
 
 interface Props {
   ogCover: string
@@ -25,36 +25,41 @@ interface Props {
   data: any
 }
 
-const IndexPage: FC<Props> = ({
-  SEO,
-  ogCover,
-  data: {
-    contacts,
-    posts,
-    navigation,
-    availableRadii,
-    services,
-    fragments,
-    ui,
-    workResults,
-    carBodies,
-  },
-}) => {
+// TODO interfaces
+export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
+  const {
+    SEO,
+    ogCover,
+    data: {
+      contacts,
+      posts,
+      navigation,
+      availableRadii,
+      services,
+      fragments,
+      ui,
+      workResults,
+      carBodies,
+    },
+  } = props
+
   const [active, setActive] = useState<number>(0)
+  const headerRef = useRef<HTMLDivElement | null>(null)
+  const [scrollY, setScrollY] = useState<number>(0)
+
   const isLoaded = useRef<boolean>(false)
   useEffect(() => {
     setTimeout(() => {
       isLoaded.current = true
     }, 200)
   }, [])
+
   const { getObserverOptions } = useIntersectionObserver((id) => {
     const order = ['hero', 'services', 'articles', 'infographics', 'works-examples']
     if (isLoaded.current) {
       setActive(order.indexOf(id))
     }
   })
-  const headerRef = useRef<HTMLDivElement | null>(null)
-  const [scrollY, setScrollY] = useState<number>(0)
 
   const scrollHandler = () => {
     const y = headerRef!.current!.getBoundingClientRect()
@@ -119,5 +124,3 @@ const IndexPage: FC<Props> = ({
     </Column>
   )
 }
-
-export default IndexPage

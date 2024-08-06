@@ -1,3 +1,5 @@
+// TODO to globals/data
+
 import React  from 'react'
 import Helmet from 'react-helmet'
 

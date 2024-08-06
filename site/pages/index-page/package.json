@@ -1,9 +1,10 @@
 {
   "name": "@site/index-page",
   "version": "0.0.1",
+  "type": "module",
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/data": "workspace:0.0.1",
+    "@globals/data": "workspace:*",
     "@site/articles-fragment": "workspace:0.0.1",
     "@site/footer-fragment": "workspace:0.0.1",
     "@site/hero-fragment": "workspace:0.0.1",
@@ -13,9 +14,7 @@
     "@site/works-examples-fragment": "workspace:0.0.1",
     "@ui/intersection-observer": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1",
-    "react": "18.3.1",
-    "react-dom": "^18.3.1"
+    "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.11.2",
