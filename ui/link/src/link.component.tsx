@@ -4,6 +4,7 @@ import { createNextLink }          from '@atls-ui-parts/link'
 import { createNextNavLink }       from '@atls-ui-parts/link'
 
 import React                       from 'react'
+import { default as BaseNextLink } from 'next/link'
 
 import { Text }                    from '@ui/text'
 
@@ -29,11 +30,16 @@ export const NavLink = styled(Link)(
 )
 
 export const NextLink = (props) => {
-  const NextLinkRenderer = createNextLink(BaseLink)
-  return <NextLinkRenderer {...props} />
+  // const NextLinkRenderer = createNextLink(BaseLink)
+  // return <NextLinkRenderer {...props} />
+  return <BaseNextLink {...props} href='' />
 }
 
+// TODO to use it with app router
+// needs to change 'next/router' to 'next/navigation' package
 export const NextNavLink = (props) => {
-  const NextNavLinkRenderer = createNextNavLink(NavLink)
-  return <NextNavLinkRenderer {...props} />
+  // const NextNavLinkRenderer = createNextNavLink(NavLink)
+  // return <NextNavLinkRenderer {...props} />
+
+  return <BaseNextLink {...props} href='' />
 }
