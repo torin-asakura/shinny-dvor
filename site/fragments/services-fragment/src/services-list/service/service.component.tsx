@@ -1,7 +1,6 @@
 import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
-import { useRouter }        from 'next/router'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
@@ -15,9 +14,10 @@ import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { ServiceProps }     from './service.interface'
+// import { useRouter }        from 'next/navigation'
 
 const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
-  const route = useRouter()
+  // const router = useRouter()
   const [hover, hoverProps] = useHover()
 
   const cost = price[Object.keys(price)[1]]?.passenger
@@ -27,7 +27,8 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
       size='ghost'
       color='transparent'
       onClick={() => {
-        route.push(uri)
+        console.log('button click')
+        // router.push(uri)
       }}
     >
       <Column fill {...hoverProps}>

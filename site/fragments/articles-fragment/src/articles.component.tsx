@@ -6,6 +6,7 @@ import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Layout }           from '@ui/layout'
+// TODO it package uses old next router variant
 import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { extractFragment }  from '@globals/data'

@@ -15,20 +15,22 @@
     "@ui/link": "workspace:0.0.1",
     "@ui/radio": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1",
-    "react": "18.3.1",
-    "react-dom": "^18.3.1"
+    "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.11.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "^18.3.1",
     "react-intl": "5.25.1"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

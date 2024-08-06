@@ -1,6 +1,6 @@
 import React                 from 'react'
 import { FC }                from 'react'
-import { useRouter }         from 'next/router'
+import { useRouter }         from 'next/navigation'
 import { useState }          from 'react'
 
 import { Button }            from '@ui/button'
@@ -14,7 +14,8 @@ import { ReturnButtonProps } from './return-button.interface'
 const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [onHover, setOnHover] = useState(false)
 
-  const route = useRouter()
+  // TODO change it to link
+  const router = useRouter()
 
   return (
     <Button color='blueText' size='ghost'>
@@ -23,7 +24,7 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
         alignItems='center'
         onMouseOver={() => setOnHover(true)}
         onMouseLeave={() => setOnHover(false)}
-        onClick={() => route.replace('/services')}
+        onClick={() => router.replace('/services')}
       >
         <Layout>
           <BackIcon width={12} height={24} color={onHover ? 'blue' : 'black'} />
