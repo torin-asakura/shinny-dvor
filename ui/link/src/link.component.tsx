@@ -7,9 +7,9 @@ import { Text }                    from '@ui/text'
 
 import { createNextLink }          from './hooks/index.js'
 import { createNextNavLink }       from './hooks/index.js'
-import { activeNavLinkStyles }     from './next-nav-link.styles'
-import { appearanceNavLinkStyles } from './next-nav-link.styles'
-import { defaultNavLinkStyles }    from './next-nav-link.styles'
+import { activeNavLinkStyles }     from './next-nav-link.styles.js'
+import { appearanceNavLinkStyles } from './next-nav-link.styles.js'
+import { defaultNavLinkStyles }    from './next-nav-link.styles.js'
 
 const BaseLink = styled(Text.withComponent('a'))<{ active: boolean; theme: any }>(
   createBaseStyles(),

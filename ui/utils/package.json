@@ -2,6 +2,10 @@
   "name": "@ui/utils",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "react-laag": "^2.0.5"

@@ -1,6 +1,11 @@
 {
   "name": "@site/service-fragment",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@emotion/react": "^11.13.0",

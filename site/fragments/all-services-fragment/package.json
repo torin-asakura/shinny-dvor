@@ -1,6 +1,10 @@
 {
   "name": "@site/all-services-fragment",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:0.0.1",

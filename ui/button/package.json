@@ -1,6 +1,11 @@
 {
   "name": "@ui/button",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "scripts": {
     "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"

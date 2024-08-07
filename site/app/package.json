@@ -1,7 +1,11 @@
 {
   "name": "@site/app",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
