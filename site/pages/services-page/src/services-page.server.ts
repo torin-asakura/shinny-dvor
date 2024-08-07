@@ -7,23 +7,21 @@ import { runContactsQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
 import { runPostsQuery }          from '@globals/data'
 import { runCarBodiesQuery }      from '@globals/data'
-import { runServiceQuery }        from '@globals/data'
 import { runServicesQuery }       from '@globals/data'
 
-import { GET_SERVICE_SEO }        from './queries'
+import { GET_SERVICES_SEO }       from './queries'
 
-export const getServerSideProps = async ({ params, res }) => {
+// TODO interfaces
+export const ServicesPageServer = async () => {
   const client = getClient()
 
   let SEO
 
-  const { uri } = params
-
-  setCacheHeader(res, 3600, 300)
+  // TODO just do it
+  // setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
-    query: GET_SERVICE_SEO,
-    variables: { uri },
+    query: GET_SERVICES_SEO,
   })
 
   const { data: previewData } = await client.query({
@@ -36,7 +34,7 @@ export const getServerSideProps = async ({ params, res }) => {
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
   if (seoData) {
-    SEO = seoData.serviceBy.seo
+    SEO = seoData.pages.nodes[0].seo
   } else SEO = {}
 
   const queryPromises: Array<Promise<any>> = [
@@ -47,12 +45,11 @@ export const getServerSideProps = async ({ params, res }) => {
     runServicesQuery(),
     runFragmentsQuery(),
     runCarBodiesQuery(),
-    runServiceQuery(uri),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  return { props: { SEO, ogCover, data } }
+  return { SEO, ogCover, data }
 }

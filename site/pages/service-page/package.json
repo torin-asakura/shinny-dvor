@@ -1,6 +1,7 @@
 {
   "name": "@site/service-page",
   "version": "0.0.1",
+  "type": "module",
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:0.0.1",
@@ -9,14 +10,14 @@
     "@site/footer-fragment": "workspace:0.0.1",
     "@site/navigation-fragment": "workspace:0.0.1",
     "@site/service-fragment": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@ui/layout": "workspace:0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.11.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-intl": "5.25.1"
   },

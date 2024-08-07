@@ -1,3 +1,5 @@
+'use client'
+
 import React           from 'react'
 import { FC }          from 'react'
 
@@ -14,7 +16,9 @@ interface Props {
   data: any
 }
 
-const ServicesPage: FC<Props> = ({
+// TODO interfaces
+// TODO выровнять контейнер по центру при уменьшии vw
+export const ServicesPageClient: FC<ServicesPageClientProps> = ({
   SEO,
   ogCover,
   data: { fragments, contacts, navigation, availableRadii, services, carBodies },
@@ -33,5 +37,3 @@ const ServicesPage: FC<Props> = ({
     <Footer fragmentsData={fragments} contactsData={contacts} />
   </Column>
 )
-
-export default ServicesPage
