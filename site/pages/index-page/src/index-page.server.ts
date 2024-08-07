@@ -13,7 +13,7 @@ import { runPostsQuery }          from '@globals/data'
 import { GET_INDEX_SEO }          from './queries'
 import { runWorkResultsQuery }    from './queries'
 
-// TODO may be get index page data ? ? ?
+// TODO may be rename to get-index-page-data ? ? ?
 export const IndexPageServer = async () => {
   const client = getClient()
 
