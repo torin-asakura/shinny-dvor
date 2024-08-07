@@ -1,3 +1,6 @@
+// TODO этот компонент есть и на индексе или это разные компоненты?
+// проверь
+
 import React  from 'react'
 import Helmet from 'react-helmet'
 

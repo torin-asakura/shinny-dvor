@@ -1,3 +1,5 @@
+'use client'
+
 import React          from 'react'
 import { FC }         from 'react'
 
@@ -14,7 +16,8 @@ interface Props {
   data: any
 }
 
-const ContactsPage: FC<Props> = ({
+// TODO interfaces
+export const ContactsPageClient: FC<ContactsPageClientProps> = ({
   ogCover,
   SEO,
   data: { fragments, contacts, navigation, availableRadii, carBodies, services },
@@ -33,5 +36,3 @@ const ContactsPage: FC<Props> = ({
     <Footer fragmentsData={fragments} contactsData={contacts} />
   </Column>
 )
-
-export default ContactsPage

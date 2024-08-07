@@ -10,12 +10,14 @@ import { runServicesQuery }       from '@globals/data'
 
 import { GET_CONTACTS_SEO }       from './queries'
 
-export const getServerSideProps = async ({ res }) => {
+export const ContactsPageServer = async () => {
   const client = getClient()
 
   let SEO
 
-  setCacheHeader(res, 3600, 300)
+  // TODO change it
+  // res - is layout income response
+  // setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
     query: GET_CONTACTS_SEO,
@@ -47,5 +49,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  return { props: { ogCover, SEO, data } }
+  return { ogCover, SEO, data }
 }
