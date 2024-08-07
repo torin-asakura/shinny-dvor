@@ -2,9 +2,9 @@ import React           from 'react'
 import { FC }          from 'react'
 import { motion }      from 'framer-motion'
 
-import { Backdrop }    from './backdrop'
-import { DrawerProps } from './drawer.interface'
-import { Renderer }    from './renderer'
+import { Backdrop }    from './backdrop/index.js'
+import { DrawerProps } from './drawer.interface.js'
+import { Renderer }    from './renderer/index.js'
 
 const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => (
   <Renderer active={active}>

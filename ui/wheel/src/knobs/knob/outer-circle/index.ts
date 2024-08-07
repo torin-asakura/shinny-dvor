@@ -1,1 +1,1 @@
-export * from './outer-circle.component'
+export * from './outer-circle.component.js'

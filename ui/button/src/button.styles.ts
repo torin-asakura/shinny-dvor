@@ -1,5 +1,5 @@
-import { getBaseStyles }  from './styles'
-import { getShapeStyles } from './styles'
+import { getBaseStyles }  from './styles/index.js'
+import { getShapeStyles } from './styles/index.js'
 
 export const baseStyles = getBaseStyles()
 

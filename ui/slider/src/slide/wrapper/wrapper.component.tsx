@@ -5,7 +5,7 @@ import React                 from 'react'
 import { Layout }            from '@ui/layout'
 import { Box }               from '@ui/layout'
 
-import { baseWrapperStyles } from './wrapper.styles'
+import { baseWrapperStyles } from './wrapper.styles.js'
 
 const DesktopWrapper = styled(Box)(baseWrapperStyles)
 

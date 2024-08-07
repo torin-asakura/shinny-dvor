@@ -21,11 +21,11 @@
     "@ui/utils": "workspace:0.0.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.2",
+    "@apollo/client": "^3.11.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "react-helmet": "^6.1.0",
-    "react-intl": "5.25.1"
+    "react-intl": "6.6.8"
   },
   "peerDependencies": {
     "@apollo/client": "*",

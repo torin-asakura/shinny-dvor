@@ -1,9 +1,9 @@
 import React          from 'react'
 import { FC }         from 'react'
 
-import { Container }  from './container'
-import { Knob }       from './knob'
-import { KnobsProps } from './knobs.interface'
+import { Container }  from './container/index.js'
+import { Knob }       from './knob/index.js'
+import { KnobsProps } from './knobs.interface.js'
 
 const Knobs: FC<KnobsProps> = ({ titles }) => (
   <Container>

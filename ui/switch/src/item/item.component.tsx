@@ -5,8 +5,8 @@ import { Button }    from '@ui/button'
 import { Box }       from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { ItemProps } from './item.interface'
-import { useActive } from '../context'
+import { ItemProps } from './item.interface.js'
+import { useActive } from '../context/index.js'
 
 const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
   const active = useActive()

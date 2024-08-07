@@ -9,8 +9,8 @@ import { Column }         from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Text }           from '@ui/text'
 
-import { MenuItemProps }  from './menu-item.interface'
-import { baseItemStyles } from './menu-item.styles'
+import { MenuItemProps }  from './menu-item.interface.js'
+import { baseItemStyles } from './menu-item.styles.js'
 
 const Container = styled.li(baseItemStyles)
 

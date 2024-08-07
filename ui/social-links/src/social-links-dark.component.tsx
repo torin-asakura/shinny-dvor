@@ -8,7 +8,7 @@ import { Box }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
 import { Link }             from '@ui/link'
 
-import { SocialLinksProps } from './social-links.interface'
+import { SocialLinksProps } from './social-links.interface.js'
 
 const SocialLinksDark: FC<SocialLinksProps> = ({ linkVk, linkFb }) => (
   <Box width='100%' justifyContent='flex-end'>

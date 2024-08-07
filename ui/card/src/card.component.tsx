@@ -2,9 +2,9 @@ import React         from 'react'
 import { FC }        from 'react'
 import { motion }    from 'framer-motion'
 
-import { Backdrop }  from './backdrop'
-import { CardProps } from './card.interface'
-import { Renderer }  from './renderer'
+import { Backdrop }  from './backdrop/index.js'
+import { CardProps } from './card.interface.js'
+import { Renderer }  from './renderer/index.js'
 
 const Card: FC<CardProps> = ({ children, active, onClose }) => (
   <Renderer active={active}>

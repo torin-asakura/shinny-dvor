@@ -1,7 +1,7 @@
 import styled         from '@emotion/styled'
 
-import { ImageProps } from './image.interface'
-import { baseStyles } from './image.styles'
+import { ImageProps } from './image.interface.js'
+import { baseStyles } from './image.styles.js'
 
 const Image = styled.img<ImageProps>(baseStyles)
 

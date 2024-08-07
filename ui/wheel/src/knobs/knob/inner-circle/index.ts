@@ -1,1 +1,1 @@
-export * from './inner-circle.component'
+export * from './inner-circle.component.js'

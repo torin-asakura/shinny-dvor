@@ -1,2 +1,2 @@
 export * from '@atls-ui-parts/link'
-export * from './link.component'
+export * from './link.component.js'

@@ -3,8 +3,8 @@ import { FC }         from 'react'
 
 import { ImageBlock } from '@ui/image'
 
-import { Container }  from './container'
-import { ImageProps } from './image.interface'
+import { Container }  from './container/index.js'
+import { ImageProps } from './image.interface.js'
 
 const Image: FC<ImageProps> = ({ wheelImg }) => (
   <Container>

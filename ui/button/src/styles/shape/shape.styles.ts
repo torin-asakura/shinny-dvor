@@ -2,10 +2,10 @@ import { styleFn }             from 'styled-system'
 import { switchProp }          from 'styled-tools'
 import { prop }                from 'styled-tools'
 
-import { getNormalSizeStyles } from './abstract'
-import { getSmallSizeStyles }  from './abstract'
-import { getGhostStyles }      from './abstract'
-import { getLargeSizeStyles }  from './abstract'
+import { getNormalSizeStyles } from './abstract/index.js'
+import { getSmallSizeStyles }  from './abstract/index.js'
+import { getGhostStyles }      from './abstract/index.js'
+import { getLargeSizeStyles }  from './abstract/index.js'
 
 const getShapeStyles = (theme): styleFn => {
   const normalSizeStyles = getNormalSizeStyles(theme)

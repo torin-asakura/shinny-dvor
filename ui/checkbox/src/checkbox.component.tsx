@@ -8,10 +8,10 @@ import { FC }                          from 'react'
 
 import { CheckIcon }                   from '@ui/icons'
 
-import { CheckboxProps }               from '../checkbox.interface'
-import { Box }                         from './box'
-import { Container }                   from './container'
-import { Label }                       from './label'
+import { CheckboxProps }               from './checkbox.interface.js'
+import { Box }                         from './box/index.js'
+import { Container }                   from './container/index.js'
+import { Label }                       from './label/index.js'
 
 const doNothing = (...args) => {
   // do nothing

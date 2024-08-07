@@ -13,10 +13,10 @@ import { Text }        from '@ui/text'
 import { useHover }    from '@ui/utils'
 import { usePopover }  from '@ui/utils'
 
-import { Container }   from './container'
-import { InnerCircle } from './inner-circle'
-import { KnobProps }   from './knob.interface'
-import { OuterCircle } from './outer-circle'
+import { Container }   from './container/index.js'
+import { InnerCircle } from './inner-circle/index.js'
+import { KnobProps }   from './knob.interface.js'
+import { OuterCircle } from './outer-circle/index.js'
 
 const Knob: FC<KnobProps> = ({ text, ...props }) => {
   const [hover, hoverProps] = useHover()

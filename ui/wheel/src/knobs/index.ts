@@ -1,1 +1,1 @@
-export * from './knobs.component'
+export * from './knobs.component.js'

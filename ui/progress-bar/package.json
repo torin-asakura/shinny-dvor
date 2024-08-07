@@ -8,13 +8,14 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@badrap/bar-of-progress": "^0.2.2"
-  },
-  "devDependencies": {
-    "@emotion/css": "^11.13.0",
     "@ui/theme": "workspace:0.0.1"
   },
+  "devDependencies": {
+    "@badrap/bar-of-progress": "0.2.2",
+    "@emotion/css": "11.13.0"
+  },
   "peerDependencies": {
+    "@badrap/bar-of-progress": "*",
     "@emotion/css": "*"
   }
 }

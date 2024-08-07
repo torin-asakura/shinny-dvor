@@ -47,6 +47,8 @@ export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
   const headerRef = useRef<HTMLDivElement | null>(null)
   const [scrollY, setScrollY] = useState<number>(0)
 
+	// TODO all logic to hook
+
   const isLoaded = useRef<boolean>(false)
   useEffect(() => {
     setTimeout(() => {

@@ -3,8 +3,8 @@ import { FC }             from 'react'
 
 import { Box }            from '@ui/layout'
 
-import { ActiveProvider } from './context'
-import { SwitchProps }    from './switch.interface'
+import { ActiveProvider } from './context/index.js'
+import { SwitchProps }    from './switch.interface.js'
 
 const Switch: FC<SwitchProps> = ({ active, children }) => (
   <ActiveProvider value={active}>

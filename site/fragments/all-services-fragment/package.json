@@ -17,17 +17,17 @@
     "@ui/link": "workspace:0.0.1",
     "@ui/text": "workspace:0.0.1",
     "@ui/utils": "workspace:0.0.1",
-    "framer-motion": "4.1.7",
+    "framer-motion": "11.3.22",
     "react": "18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.2",
+    "@apollo/client": "^3.11.3",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "react-intl": "5.25.1"
+    "react-intl": "6.6.8"
   },
   "peerDependencies": {
     "@apollo/client": "*",

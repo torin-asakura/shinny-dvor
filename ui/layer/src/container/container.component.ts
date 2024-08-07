@@ -5,8 +5,8 @@ import { position }       from 'styled-system'
 import { flexbox }        from 'styled-system'
 import { color }          from 'styled-system'
 
-import { ContainerProps } from './container.interface'
-import { baseStyles }     from './container.styles'
+import { ContainerProps } from './container.interface.js'
+import { baseStyles }     from './container.styles.js'
 
 const Container = styled(motion.div)<ContainerProps>(baseStyles, flexbox, position, color)
 

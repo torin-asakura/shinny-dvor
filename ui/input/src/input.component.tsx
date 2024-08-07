@@ -10,11 +10,11 @@ import { Divider }                     from '@ui/divider'
 import { Layout }                      from '@ui/layout'
 import { Column }                      from '@ui/layout'
 
-import { InputProps }                  from './input.interfaces'
-import { baseStyles }                  from './input.styles'
-import { shapeStyles }                 from './input.styles'
-import { additionalAppearanceStyles }  from './input.styles'
-import { appearanceStyles }            from './input.styles'
+import { InputProps }                  from './input.interfaces.js'
+import { baseStyles }                  from './input.styles.js'
+import { shapeStyles }                 from './input.styles.js'
+import { additionalAppearanceStyles }  from './input.styles.js'
+import { appearanceStyles }            from './input.styles.js'
 
 export const InputElement = styled.div<any>(baseStyles, shapeStyles, appearanceStyles)
 const RawInput = styled(RawInputElement)(additionalAppearanceStyles)

@@ -1,5 +1,6 @@
 import React            from 'react'
 import ScrollLock       from 'react-scrolllock'
+// TODO what is it?:
 import document         from 'global/document'
 import { FC }           from 'react'
 import { useAnimation } from 'framer-motion'
@@ -9,8 +10,8 @@ import { useCallback }  from 'react'
 
 import { Box }          from '@ui/layout'
 
-import { Container }    from './container'
-import { LayerProps }   from './layer.interface'
+import { Container }    from './container/index.js'
+import { LayerProps }   from './layer.interface.js'
 
 export const Layer: FC<LayerProps> = ({
   children,

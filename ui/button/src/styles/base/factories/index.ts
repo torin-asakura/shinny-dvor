@@ -1,2 +1,2 @@
-export * from './create-text-styles'
-export * from './create-transition-styles'
+export * from './create-text-styles.js'
+export * from './create-transition-styles.js'

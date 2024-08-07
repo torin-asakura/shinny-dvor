@@ -7,10 +7,10 @@ import { useState }         from 'react'
 
 import { useHover }         from '@ui/utils'
 
-import { ButtonProps }      from './button.interface'
-import { baseStyles }       from './button.styles'
-import { shapeStyles }      from './button.styles'
-import { appearanceStyles } from './styles'
+import { ButtonProps }      from './button.interface.js'
+import { baseStyles }       from './button.styles.js'
+import { shapeStyles }      from './button.styles.js'
+import { appearanceStyles } from './styles/index.js'
 
 export const ButtonElement = styled('button')<any>(baseStyles, shapeStyles, appearanceStyles)
 

@@ -4,7 +4,7 @@ import React           from 'react'
 import { FC }          from 'react'
 import { Keyboard }    from 'swiper'
 
-import { SliderProps } from './slider.interface'
+import { SliderProps } from './slider.interface.js'
 
 const Slider: FC<SliderProps> = ({ children }) => (
   <Swiper

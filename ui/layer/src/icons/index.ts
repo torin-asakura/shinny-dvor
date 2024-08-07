@@ -1,1 +1,1 @@
-export * from './cross.icon'
+export * from './cross.icon.js'

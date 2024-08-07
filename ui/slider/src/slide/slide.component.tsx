@@ -16,10 +16,10 @@ import { Text }                from '@ui/text'
 import { Space }               from '@ui/text'
 import { Ruble }               from '@ui/text'
 
-import { Handle }              from '../handle'
-import { SlideProps }          from './slide.interface'
-import { Wrapper }             from './wrapper'
-import { baseContainerStyles } from './styles'
+import { Handle }              from '../handle/index.js'
+import { SlideProps }          from './slide.interface.js'
+import { Wrapper }             from './wrapper/index.js'
+import { baseContainerStyles } from './styles/index.js'
 
 const Container = styled(Box)(baseContainerStyles)
 

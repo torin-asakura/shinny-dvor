@@ -5,7 +5,7 @@ import { LogoIcon }  from '@ui/icons'
 import { Box }       from '@ui/layout'
 import { NextLink }  from '@ui/link'
 
-import { LogoProps } from './logo.interface'
+import { LogoProps } from './logo.interface.js'
 
 const Logo: FC<LogoProps> = ({ path, ...props }) => (
   <NextLink path={path}>

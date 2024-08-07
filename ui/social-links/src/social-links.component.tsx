@@ -9,7 +9,7 @@ import { Layout }           from '@ui/layout'
 import { Link }             from '@ui/link'
 import { useHover }         from '@ui/utils'
 
-import { SocialLinksProps } from './social-links.interface'
+import { SocialLinksProps } from './social-links.interface.js'
 
 const SocialLinks: FC<SocialLinksProps> = ({ linkVk, linkFb }) => {
   const [hoverVk, hoverVkProps] = useHover()

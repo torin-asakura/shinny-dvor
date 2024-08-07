@@ -1,7 +1,7 @@
 import React        from 'react'
 import { FC }       from 'react'
 
-import { MapProps } from './map.interface'
+import { MapProps } from './map.interface.js'
 
 const Map: FC<MapProps> = ({ width, height }) => (
   <iframe

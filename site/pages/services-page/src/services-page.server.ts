@@ -1,13 +1,14 @@
 import { GET_PREVIEW }            from '@globals/data'
-import { getClient }              from '@globals/data'
+		import { getClient }              from '@globals/data'
 import { runAvailableRadiiQuery } from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
 import { runNavigationQuery }     from '@globals/data'
 import { runContactsQuery }       from '@globals/data'
 import { runFragmentsQuery }      from '@globals/data'
 import { runPostsQuery }          from '@globals/data'
 import { runCarBodiesQuery }      from '@globals/data'
 import { runServicesQuery }       from '@globals/data'
+
+import { setCacheHeader }         from '@globals/data'
 
 import { GET_SERVICES_SEO }       from './queries'
 

@@ -8,8 +8,8 @@ import { Box }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
 
-import { PaginationProps }           from './pagination.interface'
-import { transitionContainerStyles } from './styles'
+import { PaginationProps }           from './pagination.interface.js'
+import { transitionContainerStyles } from './styles/index.js'
 
 const TransitionBox = styled(Box)(transitionContainerStyles)
 
