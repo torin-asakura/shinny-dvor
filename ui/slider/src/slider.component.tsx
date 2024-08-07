@@ -1,12 +1,13 @@
-import { Swiper }      from '@atls-ui-parts/swiper'
+import { Swiper }            from '@atls-ui-parts/swiper'
 
-import React           from 'react'
-import { FC }          from 'react'
-import { Keyboard }    from 'swiper'
+import React                 from 'react'
+import { PropsWithChildren } from 'react'
+import { FC }                from 'react'
+import { Keyboard }          from 'swiper/modules'
 
-import { SliderProps } from './slider.interface.js'
+import { SliderProps }       from './slider.interface.js'
 
-const Slider: FC<SliderProps> = ({ children }) => (
+export const Slider: FC<PropsWithChildren<SliderProps>> = ({ children }) => (
   <Swiper
     loop
     allowTouchMove={false}
@@ -36,5 +37,3 @@ const Slider: FC<SliderProps> = ({ children }) => (
     {children}
   </Swiper>
 )
-
-export { Slider }
