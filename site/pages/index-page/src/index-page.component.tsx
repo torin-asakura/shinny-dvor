@@ -1,8 +1,7 @@
-
 import React               from 'react'
 import { FC }              from 'react'
 
-		import { IndexPageClient } from './index-page.client.js'
+import { IndexPageClient } from './index-page.client.js'
 import { IndexPageServer } from './index-page.server.js'
 
 // TODO interface
