@@ -1,48 +1,9 @@
-// TODO move this directive deeper:
-'use client'
+import { RootLayout as BaseRootLayout } from '@site/root-layout-fragment'
 
-import { ApolloProvider }  from '@apollo/client'
+import React                            from 'react'
 
-import React               from 'react'
-import { Suspense }        from 'react'
-import { IntlProvider }    from 'react-intl'
-import { usePathname }     from 'next/navigation'
-import { useSearchParams } from 'next/navigation'
-import { useEffect }       from 'react'
+import messages                         from '../../locales/ru.json'
 
-import { ThemeProvider }   from '@ui/theme'
-import { getClient }       from '@globals/data'
-import { progressBar }     from '@ui/progress-bar'
+const RootLayout = ({ children }) => <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
 
-export function NavigationEvents() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
-
-  useEffect(() => {
-    progressBar.finish()
-  }, [pathname, searchParams])
-  return null
-}
-
-const Bare = ({ children }) => {
-  const client = getClient()
-
-  return (
-    <html>
-      <body>
-        <ApolloProvider client={client}>
-          <IntlProvider locale='ru' defaultLocale='ru'>
-            <ThemeProvider>
-              {children}
-              <Suspense fallback={null}>
-                <NavigationEvents />
-              </Suspense>
-            </ThemeProvider>
-          </IntlProvider>
-        </ApolloProvider>
-      </body>
-    </html>
-  )
-}
-
-export default Bare
+export default RootLayout

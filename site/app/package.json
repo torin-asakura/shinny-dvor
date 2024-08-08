@@ -47,6 +47,7 @@
     "@sentry/utils": "8.24.0",
     "@site/contacts-page": "workspace:0.0.1",
     "@site/index-page": "workspace:0.0.1",
+    "@site/root-layout-fragment": "workspace:*",
     "@site/service-page": "workspace:0.0.1",
     "@site/services-page": "workspace:0.0.1",
     "@types/events": "^3.0.3",
