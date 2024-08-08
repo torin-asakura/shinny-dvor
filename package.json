@@ -28,7 +28,7 @@
     "@atls/code-runtime": "1.0.0",
     "@atls/prettier-plugin": "0.0.8",
     "@jest/core": "^29.7.0",
-    "@types/eslint": "8.57.0",
+    "@types/eslint": "8.56.10",
     "@types/jest": "^29.5.12",
     "@types/node": "22.1.0",
     "@types/react": "^18.3.3",
