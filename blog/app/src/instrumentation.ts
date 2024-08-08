@@ -4,6 +4,7 @@
 
 import * as Sentry from '@sentry/nextjs'
 
+export const register = () => {}
 Sentry.init({
   dsn: 'https://aeae54efe3df4eac9f5ccebb4aa67476@logger.atls.tech/4',
 
