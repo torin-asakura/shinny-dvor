@@ -16,8 +16,8 @@ import { extractFragment }    from '@globals/data'
 import { usePostViewCounter } from '@globals/data'
 import { formattedDate }      from '@shared/utils'
 
-import { ArticleProps }       from './article.interface'
-import { ReturnButton }       from './return-button'
+import { ArticleProps }       from './article.interface.js'
+import { ReturnButton }       from './return-button/index.js'
 
 const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
   const { formatMessage } = useIntl()

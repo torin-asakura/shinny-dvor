@@ -9,7 +9,7 @@ import { Layout }            from '@ui/layout'
 import { Text }              from '@ui/text'
 import { useHover }          from '@ui/utils'
 
-import { ReturnButtonProps } from './return-button.interface'
+import { ReturnButtonProps } from './return-button.interface.js'
 
 const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [hover, hoverProps] = useHover()

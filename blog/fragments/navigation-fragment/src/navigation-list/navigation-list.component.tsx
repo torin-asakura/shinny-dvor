@@ -4,8 +4,8 @@ import { FC }                  from 'react'
 import { Box }                 from '@ui/layout'
 import { Layout }              from '@ui/layout'
 
-import { Item }                from './item'
-import { NavigationListProps } from './navigation-list.interface'
+import { Item }                from './item/index.js'
+import { NavigationListProps } from './navigation-list.interface.js'
 
 const NavigationList: FC<NavigationListProps> = ({ navigation }) => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>

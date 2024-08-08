@@ -6,8 +6,8 @@ import { Row }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Column }                    from '@ui/layout'
 
-import { Item }                      from './item'
-import { NavigationListMobileProps } from './navigation-list-mobile.interface'
+import { Item }                      from './item/index.js'
+import { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
 
 const NavigationListMobile: FC<NavigationListMobileProps> = ({ navigation }) => (
   <Box backgroundColor='white' style={{ transition: '.2s' }}>

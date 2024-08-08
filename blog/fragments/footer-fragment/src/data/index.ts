@@ -1,1 +1,1 @@
-export * from './use-navigation.hook'
+export * from './use-navigation.hook.js'

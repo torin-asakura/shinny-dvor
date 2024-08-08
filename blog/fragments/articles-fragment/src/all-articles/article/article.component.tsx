@@ -11,7 +11,7 @@ import { normalizeString } from '@shared/utils'
 import { formattedDate }   from '@shared/utils'
 import { useHover }        from '@ui/utils'
 
-import { ArticleProps }    from './article.interface'
+import { ArticleProps }    from './article.interface.js'
 
 const Article: FC<ArticleProps> = ({ featuredImage, date, title, excerpt }) => {
   const [hover, hoverProps] = useHover()

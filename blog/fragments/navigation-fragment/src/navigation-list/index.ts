@@ -1,2 +1,2 @@
-export * from './navigation-list.component'
-export * from './navigation-list.interface'
+export * from './navigation-list.component.js'
+export * from './navigation-list.interface.js'

@@ -16,9 +16,9 @@ import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 import { normalizeString }  from '@shared/utils'
 
-import { FooterProps }      from './footer.interface'
-import { useNavigation }    from './data'
-import { stringSeparator }  from './helpers'
+import { FooterProps }      from './footer.interface.js'
+import { useNavigation }    from './data/index.js'
+import { stringSeparator }  from './helpers/index.js'
 
 const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const navigation = useNavigation()

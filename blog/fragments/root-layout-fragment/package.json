@@ -1,5 +1,5 @@
 {
-  "name": "@blog/articles-fragment",
+  "name": "@blog/root-layout-fragment",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "type": "module",
@@ -9,26 +9,16 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:*",
-    "@shared/utils": "workspace:*",
-    "@ui/button": "workspace:*",
-    "@ui/carousel": "workspace:*",
-    "@ui/condition": "workspace:*",
-    "@ui/divider": "workspace:*",
-    "@ui/icons": "workspace:*",
-    "@ui/image": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/link": "workspace:*",
-    "@ui/text": "workspace:*",
-    "@ui/utils": "workspace:*"
+    "@ui/progress-bar": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",
     "@emotion/react": "11.13.0",
-    "@types/dompurify": "3.0.5",
+    "@emotion/styled": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "next": "14.2.5",
-    "plural-ru": "2.0.2",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-intl": "6.6.8"
@@ -36,6 +26,7 @@
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
+    "@emotion/styled": "*",
     "next": "*",
     "react": "*",
     "react-dom": "*",

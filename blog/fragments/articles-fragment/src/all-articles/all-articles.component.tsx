@@ -9,8 +9,8 @@ import { NextLink }         from '@ui/link'
 import { Text }             from '@ui/text'
 import { extractFragment }  from '@globals/data'
 
-import { AllArticlesProps } from './all-articles.interface'
-import { Article }          from './article'
+import { AllArticlesProps } from './all-articles.interface.js'
+import { Article }          from './article/index.js'
 
 const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
   const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title

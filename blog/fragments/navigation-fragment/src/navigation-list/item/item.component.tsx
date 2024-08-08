@@ -6,7 +6,7 @@ import { Layout }      from '@ui/layout'
 import { NextNavLink } from '@ui/link'
 import { Text }        from '@ui/text'
 
-import { ItemProps }   from './item.interface'
+import { ItemProps }   from './item.interface.js'
 
 const Item: FC<ItemProps> = ({ content, title }) => (
   <Column>
