@@ -33,7 +33,7 @@ export const RootLayout = ({ children, messages }) => {
     <html>
       <body>
         <ApolloProvider client={client}>
-          <IntlProvider message={messages} locale='ru' defaultLocale='ru'>
+          <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
             <ThemeProvider>
               {children}
               <Suspense fallback={null}>
