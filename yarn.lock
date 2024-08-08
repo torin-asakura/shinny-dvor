@@ -2901,6 +2901,7 @@ __metadata:
     "@sentry/utils": "npm:8.24.0"
     "@site/contacts-page": "workspace:0.0.1"
     "@site/index-page": "workspace:0.0.1"
+    "@site/root-layout-fragment": "workspace:*"
     "@site/service-page": "workspace:0.0.1"
     "@site/services-page": "workspace:0.0.1"
     "@types/events": "npm:^3.0.3"
@@ -3143,6 +3144,31 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/root-layout-fragment@workspace:*, @site/root-layout-fragment@workspace:site/fragments/root-layout-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/root-layout-fragment@workspace:site/fragments/root-layout-fragment"
+  dependencies:
+    "@apollo/client": "npm:^3.11.3"
+    "@emotion/react": "npm:^11.13.0"
+    "@globals/data": "workspace:0.0.1"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/progress-bar": "workspace:0.0.1"
+    "@ui/theme": "workspace:0.0.1"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -3984,13 +4010,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:^9.6.0":
-  version: 9.6.0
-  resolution: "@types/eslint@npm:9.6.0"
+"@types/eslint@npm:8.56.10":
+  version: 8.56.10
+  resolution: "@types/eslint@npm:8.56.10"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
-  checksum: 10/39fc797c671ec9c9184802b4974748cf45ee1b11d7aaaaede44426abcafd07ec7c18eb090e8f5b3387b51637ce3fdf54499472d8dd58a928f0d005cbacb573b4
+  checksum: 10/0cdd914b944ebba51c35827d3ef95bc3e16eb82b4c2741f6437fa57cdb00a4407c77f89c220afe9e4c9566982ec8a0fb9b97c956ac3bd4623a3b6af32eed8424
   languageName: node
   linkType: hard
 
@@ -4831,6 +4857,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/progress-bar": "workspace:0.0.1"
     "@ui/text": "workspace:0.0.1"
     next: "npm:14.2.5"
     react: "npm:18.3.1"
@@ -11861,7 +11888,7 @@ __metadata:
     "@atls/code-runtime": "npm:1.0.0"
     "@atls/prettier-plugin": "npm:0.0.8"
     "@jest/core": "npm:^29.7.0"
-    "@types/eslint": "npm:^9.6.0"
+    "@types/eslint": "npm:8.56.10"
     "@types/jest": "npm:^29.5.12"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:^18.3.3"
