@@ -11,12 +11,15 @@ import { runPostsQuery }          from '@globals/data'
 
 import { GET_BLOG_SEO }           from './queries'
 
-export const getServerSideProps = async ({ res }) => {
+// export const IndexPageServer = async ({ res }) => {
+export const IndexPageServer = async () => {
   const client = getClient()
 
   let SEO
 
-  setCacheHeader(res, 3600, 300)
+  // TODO set cache header
+  // on `site` too
+  // setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
     query: GET_BLOG_SEO,
@@ -49,5 +52,5 @@ export const getServerSideProps = async ({ res }) => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  return { props: { ogCover, SEO, data } }
+  return { ogCover, SEO, data }
 }

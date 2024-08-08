@@ -8,20 +8,20 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/blog-articles-fragment": "workspace:0.0.1",
-    "@fragments/blog-footer-fragment": "workspace:0.0.1",
-    "@fragments/blog-navigation-fragment": "workspace:0.0.1",
-    "@globals/data": "workspace:0.0.1",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "react": "18.3.1",
-    "react-dom": "^18.3.1"
+    "@blog/articles-fragment": "workspace:*",
+    "@blog/footer-fragment": "workspace:*",
+    "@blog/navigation-fragment": "workspace:*",
+    "@globals/data": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.3",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react-helmet": "^6.1.0",
+    "@apollo/client": "3.11.3",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "6.1.0",
     "react-intl": "6.6.8"
   },
   "peerDependencies": {

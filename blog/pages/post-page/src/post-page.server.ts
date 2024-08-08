@@ -11,14 +11,16 @@ import { runNavigationQuery }     from '@globals/data'
 import { GET_POST_SEO }           from './queries'
 import { runPostQuery }           from './queries'
 
-export const getServerSideProps = async ({ params, res }) => {
+// export const getServerSideProps = async ({ params, res }) => {
+export const PostPageServer = async ({ params }) => {
   const client = getClient()
 
   let SEO
 
   const { uri } = params
 
-  setCacheHeader(res, 3600, 300)
+  // TODO do it
+  // setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({
     query: GET_POST_SEO,
@@ -52,5 +54,5 @@ export const getServerSideProps = async ({ params, res }) => {
 
   const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
-  return { props: { ogCover, SEO, data } }
+  return { ogCover, SEO, data }
 }

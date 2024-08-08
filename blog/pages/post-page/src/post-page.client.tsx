@@ -1,12 +1,14 @@
+'use client'
+
 import React          from 'react'
 import { FC }         from 'react'
 
-import { Article }    from '@fragments/blog-articles-fragment'
-import { Footer }     from '@fragments/blog-footer-fragment'
-import { Navigation } from '@fragments/blog-navigation-fragment'
+import { Article }    from '@blog/articles-fragment'
+import { Footer }     from '@blog/footer-fragment'
+import { Navigation } from '@blog/navigation-fragment'
 import { Column }     from '@ui/layout'
 
-import { Seo }        from './seo.component'
+import { Seo }        from './seo.component.js'
 
 interface Props {
   data: any
@@ -17,7 +19,8 @@ interface Props {
   }
 }
 
-const PostPage: FC<Props> = ({
+// TODO interfaces
+export const PostPageClient: FC<Props> = ({
   ogCover,
   SEO,
   data: { contacts, postBy, navigation, availableRadii, fragments, carBodies, services },
@@ -35,5 +38,3 @@ const PostPage: FC<Props> = ({
     <Footer fragmentsData={fragments} contactsData={contacts} />
   </Column>
 )
-
-export default PostPage
