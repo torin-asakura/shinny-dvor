@@ -8,18 +8,18 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@globals/data": "workspace:0.0.1",
-    "@ui/image": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/wheel": "workspace:0.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "@globals/data": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/wheel": "workspace:*"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.3",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
+    "@apollo/client": "3.11.3",
+    "@emotion/react": "11.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "@apollo/client": "*",

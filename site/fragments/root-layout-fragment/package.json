@@ -7,14 +7,16 @@
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
+  "dependencies": {
+    "@globals/data": "workspace:*",
+    "@ui/progress-bar": "workspace:*",
+    "@ui/theme": "workspace:*"
+  },
   "devDependencies": {
-    "@apollo/client": "^3.11.3",
-    "@emotion/react": "^11.13.0",
-    "@globals/data": "workspace:0.0.1",
+    "@apollo/client": "3.11.3",
+    "@emotion/react": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@ui/progress-bar": "workspace:0.0.1",
-    "@ui/theme": "workspace:0.0.1",
     "next": "14.2.5",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -24,6 +26,7 @@
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*",
     "react-intl": "*"

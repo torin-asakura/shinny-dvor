@@ -9,22 +9,24 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:*",
-    "@site/articles-fragment": "workspace:0.0.1",
-    "@site/footer-fragment": "workspace:0.0.1",
-    "@site/hero-fragment": "workspace:0.0.1",
-    "@site/navigation-fragment": "workspace:0.0.1",
-    "@site/services-fragment": "workspace:0.0.1",
-    "@site/services-infographics-fragment": "workspace:0.0.1",
-    "@site/works-examples-fragment": "workspace:0.0.1",
-    "@ui/intersection-observer": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@site/articles-fragment": "workspace:*",
+    "@site/footer-fragment": "workspace:*",
+    "@site/hero-fragment": "workspace:*",
+    "@site/navigation-fragment": "workspace:*",
+    "@site/services-fragment": "workspace:*",
+    "@site/services-infographics-fragment": "workspace:*",
+    "@site/works-examples-fragment": "workspace:*",
+    "@ui/intersection-observer": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@apollo/client": "^3.11.3",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "react-helmet": "^6.1.0",
+    "@apollo/client": "3.11.3",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "6.1.0",
     "react-intl": "6.6.8"
   },
   "peerDependencies": {

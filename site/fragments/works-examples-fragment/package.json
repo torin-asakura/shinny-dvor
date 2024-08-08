@@ -8,22 +8,22 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.13.0",
-    "@globals/data": "workspace:0.0.1",
-    "@ui/button": "workspace:0.0.1",
-    "@ui/icons": "workspace:0.0.1",
-    "@ui/image": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/slider": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "swiper": "^11.1.9"
+    "@globals/data": "workspace:*",
+    "@ui/button": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/slider": "workspace:*",
+    "@ui/text": "workspace:*"
   },
   "devDependencies": {
-    "@faker-js/faker": "^8.4.1",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0"
+    "@emotion/react": "11.13.0",
+    "@faker-js/faker": "8.4.1",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "swiper": "11.1.9"
   },
   "peerDependencies": {
     "@emotion/react": "*",

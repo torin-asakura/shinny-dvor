@@ -16,6 +16,8 @@ import { ArticlesProps }    from './articles.interface'
 import { Carousel }         from './carousel'
 import { PreviewArticle }   from './preview-article'
 
+// TODO plural-ru what is a pachage? 5yrs
+
 const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },
   ref: any
