@@ -22,6 +22,13 @@
 - [ ] лезут карточки друг на друга на слайдере внизу страницы главной
 - [ ] blog - не смотрел
 
+- [ ] TODO's
+- [ ] yarn check
+
+---
+
+### packages
+
 - 100% usable, **dont touch**:
 - [ ] `@sentry/nextjs`
 
@@ -59,7 +66,5 @@
 - [ ] `@atls/next-document-with-gtag`
 - [ ] `recompose`
 - [ ] `@apollo/react-ssr`
-
-update:
 
 - [ ] express - как они используется с `next.js`?
