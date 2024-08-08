@@ -47,7 +47,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/react-ssr@npm:4.0.0, @apollo/react-ssr@npm:^4.0.0":
+"@apollo/react-ssr@npm:^4.0.0":
   version: 4.0.0
   resolution: "@apollo/react-ssr@npm:4.0.0"
   dependencies:
@@ -419,7 +419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-app-with-emotion@npm:0.2.68, @atls/next-app-with-emotion@npm:^0.2.68":
+"@atls/next-app-with-emotion@npm:^0.2.68":
   version: 0.2.68
   resolution: "@atls/next-app-with-emotion@npm:0.2.68"
   peerDependencies:
@@ -431,7 +431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-app-with-helmet@npm:0.2.65, @atls/next-app-with-helmet@npm:^0.2.65":
+"@atls/next-app-with-helmet@npm:^0.2.65":
   version: 0.2.65
   resolution: "@atls/next-app-with-helmet@npm:0.2.65"
   peerDependencies:
@@ -442,7 +442,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-config-with-pnp-workspaces@npm:0.0.2, @atls/next-config-with-pnp-workspaces@npm:^0.0.2":
+"@atls/next-config-with-pnp-workspaces@npm:^0.0.2":
   version: 0.0.2
   resolution: "@atls/next-config-with-pnp-workspaces@npm:0.0.2"
   peerDependencies:
@@ -473,7 +473,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-icons@npm:0.1.1, @atls/next-document-with-icons@npm:^0.1.1":
+"@atls/next-document-with-icons@npm:^0.1.1":
   version: 0.1.1
   resolution: "@atls/next-document-with-icons@npm:0.1.1"
   peerDependencies:
@@ -483,7 +483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/next-document-with-opengraph@npm:0.1.1, @atls/next-document-with-opengraph@npm:^0.1.1":
+"@atls/next-document-with-opengraph@npm:^0.1.1":
   version: 0.1.1
   resolution: "@atls/next-document-with-opengraph@npm:0.1.1"
   peerDependencies:
@@ -1047,7 +1047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:11.13.1, @emotion/cache@npm:^11.13.0, @emotion/cache@npm:^11.13.1":
+"@emotion/cache@npm:^11.13.0, @emotion/cache@npm:^11.13.1":
   version: 11.13.1
   resolution: "@emotion/cache@npm:11.13.1"
   dependencies:
@@ -2883,27 +2883,17 @@ __metadata:
   resolution: "@site/app@workspace:site/app"
   dependencies:
     "@apollo/client": "npm:3.11.3"
-    "@apollo/react-ssr": "npm:4.0.0"
-    "@atls/next-app-with-emotion": "npm:0.2.68"
-    "@atls/next-app-with-helmet": "npm:0.2.65"
-    "@atls/next-config-with-pnp-workspaces": "npm:0.0.2"
     "@atls/next-document-with-gtag": "npm:0.1.1"
     "@atls/next-document-with-helmet": "npm:0.3.1"
-    "@atls/next-document-with-icons": "npm:0.1.1"
-    "@atls/next-document-with-opengraph": "npm:0.1.1"
     "@atls/next-sitemap-generator": "npm:^0.0.4"
-    "@emotion/cache": "npm:11.13.1"
-    "@emotion/css": "npm:11.13.0"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
-    "@globals/data": "workspace:0.0.1"
+    "@globals/data": "workspace:*"
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/utils": "npm:8.24.0"
-    "@site/contacts-page": "workspace:0.0.1"
-    "@site/index-page": "workspace:0.0.1"
+    "@site/contacts-page": "workspace:*"
+    "@site/index-page": "workspace:*"
     "@site/root-layout-fragment": "workspace:*"
-    "@site/service-page": "workspace:0.0.1"
-    "@site/services-page": "workspace:0.0.1"
+    "@site/service-page": "workspace:*"
+    "@site/services-page": "workspace:*"
     "@types/events": "npm:^3.0.3"
     "@types/express": "npm:^4.17.21"
     "@types/node": "npm:22.1.0"
@@ -2912,19 +2902,14 @@ __metadata:
     "@types/react-helmet": "npm:^6.1.11"
     "@types/recompose": "npm:^0.30.15"
     "@types/styled-system": "npm:^5.1.22"
-    "@ui/progress-bar": "workspace:0.0.1"
-    "@ui/theme": "workspace:0.0.1"
-    events: "npm:3.3.0"
+    "@ui/progress-bar": "workspace:*"
+    "@ui/theme": "workspace:*"
     express: "npm:4.19.2"
     graphql: "npm:16.9.0"
     next: "npm:14.2.5"
-    next-compose-plugins: "npm:2.2.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    react-helmet: "npm:6.1.0"
-    react-intl: "npm:6.6.8"
     recompose: "npm:0.30.0"
-    styled-system: "npm:^5.1.5"
     typescript: "npm:5.2.2"
   languageName: unknown
   linkType: soft
@@ -2989,7 +2974,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/contacts-page@workspace:0.0.1, @site/contacts-page@workspace:site/pages/contacts-page":
+"@site/contacts-page@workspace:*, @site/contacts-page@workspace:site/pages/contacts-page":
   version: 0.0.0-use.local
   resolution: "@site/contacts-page@workspace:site/pages/contacts-page"
   dependencies:
@@ -3078,7 +3063,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/index-page@workspace:0.0.1, @site/index-page@workspace:site/pages/index-page":
+"@site/index-page@workspace:*, @site/index-page@workspace:site/pages/index-page":
   version: 0.0.0-use.local
   resolution: "@site/index-page@workspace:site/pages/index-page"
   dependencies:
@@ -3212,7 +3197,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/service-page@workspace:0.0.1, @site/service-page@workspace:site/pages/service-page":
+"@site/service-page@workspace:*, @site/service-page@workspace:site/pages/service-page":
   version: 0.0.0-use.local
   resolution: "@site/service-page@workspace:site/pages/service-page"
   dependencies:
@@ -3300,7 +3285,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/services-page@workspace:0.0.1, @site/services-page@workspace:site/pages/services-page":
+"@site/services-page@workspace:*, @site/services-page@workspace:site/pages/services-page":
   version: 0.0.0-use.local
   resolution: "@site/services-page@workspace:site/pages/services-page"
   dependencies:
@@ -4914,7 +4899,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/progress-bar@workspace:0.0.1, @ui/progress-bar@workspace:ui/progress-bar":
+"@ui/progress-bar@workspace:*, @ui/progress-bar@workspace:0.0.1, @ui/progress-bar@workspace:ui/progress-bar":
   version: 0.0.0-use.local
   resolution: "@ui/progress-bar@workspace:ui/progress-bar"
   dependencies:
@@ -5106,7 +5091,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/theme@workspace:0.0.1, @ui/theme@workspace:ui/theme":
+"@ui/theme@workspace:*, @ui/theme@workspace:0.0.1, @ui/theme@workspace:ui/theme":
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
@@ -7552,7 +7537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"events@npm:3.3.0, events@npm:^3.2.0, events@npm:^3.3.0":
+"events@npm:^3.2.0, events@npm:^3.3.0":
   version: 3.3.0
   resolution: "events@npm:3.3.0"
   checksum: 10/a3d47e285e28d324d7180f1e493961a2bbb4cad6412090e4dec114f4db1f5b560c7696ee8e758f55e23913ede856e3689cd3aa9ae13c56b5d8314cd3b3ddd1be
@@ -10257,7 +10242,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-compose-plugins@npm:2.2.1, next-compose-plugins@npm:^2.2.1":
+"next-compose-plugins@npm:^2.2.1":
   version: 2.2.1
   resolution: "next-compose-plugins@npm:2.2.1"
   checksum: 10/e3c8b26617534d5eee06338c5d17779af1775830174e3640a56dc63ffcedfd6260c9dc0638b6d83ea24349c06cffe19b09b0831227ec0009f3f580332d0129a8
@@ -11293,7 +11278,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-helmet@npm:6.1.0, react-helmet@npm:^6.1.0":
+"react-helmet@npm:^6.1.0":
   version: 6.1.0
   resolution: "react-helmet@npm:6.1.0"
   dependencies:
