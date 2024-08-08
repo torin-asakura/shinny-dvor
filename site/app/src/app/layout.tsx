@@ -1,36 +1,43 @@
 // TODO move this directive deeper:
 'use client'
 
-import { ApolloProvider } from '@apollo/client'
+import { ApolloProvider }  from '@apollo/client'
 
-import Router             from 'next/navigation'
-import React              from 'react'
-import { IntlProvider }   from 'react-intl'
+import React               from 'react'
+import { Suspense }        from 'react'
+import { IntlProvider }    from 'react-intl'
+import { usePathname }     from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
+import { useEffect }       from 'react'
 
-import { ThemeProvider }  from '@ui/theme'
-import { getClient }      from '@globals/data'
+import { ThemeProvider }   from '@ui/theme'
+import { getClient }       from '@globals/data'
+import { progressBar }     from '@ui/progress-bar'
 
-// import { progressBar }    from '@ui/progress-bar'
+export function NavigationEvents() {
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
-// TODO router
-// Router.events.on('routeChangeStart', progressBar.start)
-// Router.events.on('routeChangeComplete', progressBar.finish)
-// Router.events.on('routeChangeError', progressBar.finish)
-
-// TODO to root layout
+  useEffect(() => {
+    progressBar.finish()
+  }, [pathname, searchParams])
+  return null
+}
 
 const Bare = ({ children }) => {
   const client = getClient()
-
-  // было внутри. чтоэто такое вообще?
-  // <Component {...props} {...pageProps} />
 
   return (
     <html>
       <body>
         <ApolloProvider client={client}>
           <IntlProvider locale='ru' defaultLocale='ru'>
-            <ThemeProvider>{children}</ThemeProvider>
+            <ThemeProvider>
+              {children}
+              <Suspense fallback={null}>
+                <NavigationEvents />
+              </Suspense>
+            </ThemeProvider>
           </IntlProvider>
         </ApolloProvider>
       </body>

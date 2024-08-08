@@ -4,6 +4,8 @@ import React                          from 'react'
 import { useRouter }                  from 'next/navigation'
 import { usePathname }                from 'next/navigation'
 
+import { progressBar }                from '@ui/progress-bar'
+
 // TODO interface
 export const createNextNavLink: CreateNextNavLinkType = (Link, pathProp = 'path') => {
   const router = useRouter()
@@ -15,7 +17,7 @@ export const createNextNavLink: CreateNextNavLinkType = (Link, pathProp = 'path'
       active={pathname === props[pathProp]}
       onClick={(event: Event) => {
         event.preventDefault()
-
+        progressBar.start()
         if (router) {
           router.push(props[pathProp])
         }
