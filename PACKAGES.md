@@ -9,6 +9,7 @@
     "react-dom": "18.3.1",
 
     "react-laag": "2.0.5",
+    "react-intl": "6.6.8",
 
     "@types/styled-system": "5.1.22",
     "styled-system": "5.1.5",
@@ -16,3 +17,4 @@
 
     "@types/glob": "8.1.0",
     "framer-motion": "11.3.2",
+    "dompurify": "3.1.6",
