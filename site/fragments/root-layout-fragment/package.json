@@ -9,6 +9,7 @@
   "main": "src/index.ts",
   "dependencies": {
     "@globals/data": "workspace:*",
+    "@ui/gtag": "workspace:*",
     "@ui/progress-bar": "workspace:*",
     "@ui/theme": "workspace:*"
   },
