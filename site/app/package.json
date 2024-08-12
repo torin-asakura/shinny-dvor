@@ -22,6 +22,7 @@
     "@sentry/react": "8.24.0",
     "@sentry/utils": "8.24.0",
     "@site/contacts-page": "workspace:*",
+    "@site/global-error-fragment": "workspace:*",
     "@site/index-page": "workspace:*",
     "@site/root-layout-fragment": "workspace:*",
     "@site/service-page": "workspace:*",
