@@ -1,6 +1,7 @@
 'use client'
 
 import { ApolloProvider }  from '@apollo/client'
+import { Gtag }            from '@ui/gtag'
 
 import React               from 'react'
 import { Suspense }        from 'react'
@@ -25,7 +26,7 @@ export function NavigationEvents() {
 }
 
 // TODO interface
-export const RootLayout = ({ children, messages }) => {
+export const RootLayout = ({ children, messages, gaTrackingId }) => {
   const client = getClient()
 
   return (
@@ -41,6 +42,7 @@ export const RootLayout = ({ children, messages }) => {
             </ThemeProvider>
           </IntlProvider>
         </ApolloProvider>
+        <Gtag gaTrackingId={gaTrackingId} />
       </body>
     </html>
   )

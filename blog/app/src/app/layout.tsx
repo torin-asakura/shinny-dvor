@@ -4,7 +4,13 @@ import { RootLayout as BaseRootLayout } from '@blog/root-layout-fragment'
 
 import messages                         from '../../locales/ru.json'
 
-const RootLayout = ({ children }) => <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
+const gaTrackingId = process.env.GA_TRACKING_ID
+
+const RootLayout = ({ children }) => (
+  <BaseRootLayout messages={messages} gaTrackingId={gaTrackingId}>
+    {children}
+  </BaseRootLayout>
+)
 
 export { generateMetadata } from '@blog/root-layout-fragment'
 
