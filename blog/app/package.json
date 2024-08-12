@@ -24,6 +24,7 @@
     "@sentry/nextjs": "8.24.0",
     "@sentry/react": "8.24.0",
     "@sentry/utils": "8.24.0",
+    "@site/global-error-fragment": "workspace:*",
     "@types/express": "4.17.21",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
