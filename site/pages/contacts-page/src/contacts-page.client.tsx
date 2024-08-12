@@ -8,7 +8,7 @@ import { Footer }     from '@site/footer-fragment'
 import { Navigation } from '@site/navigation-fragment'
 import { Column }     from '@ui/layout'
 
-import { Seo }        from './seo.component'
+import { Seo }        from './seo.component.js'
 
 interface Props {
   ogCover: string
