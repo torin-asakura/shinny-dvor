@@ -1,6 +1,7 @@
 import React                  from 'react'
-import plural                 from 'plural-ru'
 import { FC }                 from 'react'
+import { FormattedPlural }    from 'react-intl'
+import { FormattedMessage }   from 'react-intl'
 import { useEffect }          from 'react'
 import { useIntl }            from 'react-intl'
 
@@ -79,12 +80,14 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
                     <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
                       {viewCount}
                       <Space />
-                      {plural(
-                        viewCount,
-                        formatMessage({ id: 'article.view', defaultMessage: 'просмотр' }),
-                        formatMessage({ id: 'article.viewed', defaultMessage: 'просмотра' }),
-                        formatMessage({ id: 'article.views', defaultMessage: 'просмотров' })
-                      )}
+                      <FormattedPlural
+                        value={viewCount}
+                        zero={<FormattedMessage id='article.views' />}
+                        one={<FormattedMessage id='article.view' />}
+                        two={<FormattedMessage id='article.viewed' />}
+                        few={<FormattedMessage id='article.views' />}
+                        many={<FormattedMessage id='article.views' />}
+                      />
                     </Text>
                   </Layout>
                   <Layout flexBasis={24} />
