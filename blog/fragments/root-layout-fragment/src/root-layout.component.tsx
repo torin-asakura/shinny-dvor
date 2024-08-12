@@ -1,32 +1,20 @@
 'use client'
 
-import { ApolloProvider }  from '@apollo/client'
-import { Gtag }            from '@ui/gtag'
+import { ApolloProvider }   from '@apollo/client'
 
-import React               from 'react'
-import { Suspense }        from 'react'
-import { IntlProvider }    from 'react-intl'
-import { usePathname }     from 'next/navigation'
-import { useSearchParams } from 'next/navigation'
-import { useEffect }       from 'react'
+import React                from 'react'
+import { FC }               from 'react'
+import { Suspense }         from 'react'
+import { IntlProvider }     from 'react-intl'
 
-import { ThemeProvider }   from '@ui/theme'
-import { getClient }       from '@globals/data'
-import { progressBar }     from '@ui/progress-bar'
+import { Gtag }             from '@ui/gtag'
+import { ThemeProvider }    from '@ui/theme'
+import { getClient }        from '@globals/data'
 
-// TODO move to hooks
-export function NavigationEvents() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+import { NavigationEvents } from './hooks/index.js'
+import { RootLayoutProps }  from './root-layout.interfaces.js'
 
-  useEffect(() => {
-    progressBar.finish()
-  }, [pathname, searchParams])
-  return null
-}
-
-// TODO interface
-export const RootLayout = ({ children, messages, gaTrackingId }) => {
+export const RootLayout: FC<RootLayoutProps> = ({ children, messages, gaTrackingId }) => {
   const client = getClient()
 
   return (
