@@ -1,18 +1,18 @@
 ### миграция `_document` to `app-router`
 
 - [x] интеграция `icons` in `site`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
-- [ ] интеграция `gtag` in `site`
-- [ ] интеграция `helmet` in`site`
+- [x] интеграция `gtag` in `site`
+- [x] интеграция `helmet` in`site`
 
 - [x] интеграция `icons` in `blog`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
 - [ ] проверить ^
-- [ ] интеграция `gtag` in `blog`
-- [ ] интеграция `helmet` in`blog`
+- [x] интеграция `gtag` in `blog`
+- [x] интеграция `helmet` in`blog`
 
 ### миграция `_error` to `app-router`
 
-- [ ] перенести `_error` from `site`
-- [ ] перенести `_error` from `blog`
+- [x] перенести `_error` from `site`
+- [x] перенести `_error` from `blog`
 
 ### layout fixes:
 
