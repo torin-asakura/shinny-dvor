@@ -866,6 +866,7 @@ __metadata:
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
     "@sentry/utils": "npm:8.24.0"
+    "@site/global-error-fragment": "workspace:*"
     "@types/express": "npm:4.17.21"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
@@ -902,7 +903,6 @@ __metadata:
     "@ui/text": "workspace:*"
     "@ui/utils": "workspace:*"
     next: "npm:14.2.5"
-    plural-ru: "npm:2.0.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -938,6 +938,24 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@blog/global-error-fragment@workspace:blog/fragments/global-error-fragment":
+  version: 0.0.0-use.local
+  resolution: "@blog/global-error-fragment@workspace:blog/fragments/global-error-fragment"
+  dependencies:
+    "@sentry/nextjs": "npm:8.24.0"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@sentry/nextjs": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -1048,6 +1066,7 @@ __metadata:
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/gtag": "workspace:*"
     "@ui/progress-bar": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.2.5"
@@ -2828,6 +2847,7 @@ __metadata:
     "@sentry/react": "npm:8.24.0"
     "@sentry/utils": "npm:8.24.0"
     "@site/contacts-page": "workspace:*"
+    "@site/global-error-fragment": "workspace:*"
     "@site/index-page": "workspace:*"
     "@site/root-layout-fragment": "workspace:*"
     "@site/service-page": "workspace:*"
@@ -2868,7 +2888,6 @@ __metadata:
     "@ui/text": "workspace:*"
     "@ui/utils": "workspace:*"
     dompurify: "npm:3.1.6"
-    plural-ru: "npm:2.0.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
@@ -2955,6 +2974,24 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/global-error-fragment@workspace:*, @site/global-error-fragment@workspace:site/fragments/global-error-fragment":
+  version: 0.0.0-use.local
+  resolution: "@site/global-error-fragment@workspace:site/fragments/global-error-fragment"
+  dependencies:
+    "@sentry/nextjs": "npm:8.24.0"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@sentry/nextjs": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -3073,6 +3110,7 @@ __metadata:
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/gtag": "workspace:*"
     "@ui/progress-bar": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.2.5"
@@ -4596,6 +4634,22 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/gtag@workspace:*, @ui/gtag@workspace:ui/gtag":
+  version: 0.0.0-use.local
+  resolution: "@ui/gtag@workspace:ui/gtag"
+  dependencies:
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    next: "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -10787,13 +10841,6 @@ __metadata:
   version: 4.0.5
   resolution: "pirates@npm:4.0.5"
   checksum: 10/3728bae0cf6c18c3d25f5449ee8c5bc1a6a83bca688abe0e1654ce8c069bfd408170397cef133ed9ec8b0faeb4093c5c728d0e72ab7b3385256cd87008c40364
-  languageName: node
-  linkType: hard
-
-"plural-ru@npm:2.0.2":
-  version: 2.0.2
-  resolution: "plural-ru@npm:2.0.2"
-  checksum: 10/6739590014ce4343aaa4c22fc74bd5b2b468bde889be9b2124ec55257e4b5f1ebb9f1a0ff1a2a0744b29979322ede30d0456302de5210c25525dd349b3c05252
   languageName: node
   linkType: hard
 
