@@ -14,7 +14,6 @@ import { ReturnButtonProps } from './return-button.interface'
 const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [onHover, setOnHover] = useState(false)
 
-  // TODO change it to link
   const router = useRouter()
 
   return (
