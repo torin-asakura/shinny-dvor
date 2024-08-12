@@ -1,24 +1,25 @@
-import { GET_PREVIEW }            from '@globals/data'
-import { getClient }              from '@globals/data'
-import { runAvailableRadiiQuery } from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { runCarBodiesQuery }      from '@globals/data'
-import { runServicesQuery }       from '@globals/data'
-import { runFragmentsQuery }      from '@globals/data'
-import { runContactsQuery }       from '@globals/data'
-import { runNavigationQuery }     from '@globals/data'
-import { runPostsQuery }          from '@globals/data'
+import type { IndexPageServerProps } from './index-page.interfaces.js'
 
-import { GET_BLOG_SEO }           from './queries'
+import { GET_PREVIEW }               from '@globals/data'
+import { getClient }                 from '@globals/data'
+import { runAvailableRadiiQuery }    from '@globals/data'
+import { setCacheHeader }            from '@globals/data'
+import { runCarBodiesQuery }         from '@globals/data'
+import { runServicesQuery }          from '@globals/data'
+import { runFragmentsQuery }         from '@globals/data'
+import { runContactsQuery }          from '@globals/data'
+import { runNavigationQuery }        from '@globals/data'
+import { runPostsQuery }             from '@globals/data'
 
-// export const IndexPageServer = async ({ res }) => {
-export const IndexPageServer = async () => {
+import { SEOInt }                    from './index-page.interfaces.js'
+import { GET_BLOG_SEO }              from './queries/index.js'
+
+export const IndexPageServer: IndexPageServerProps = async () => {
   const client = getClient()
 
-  let SEO
+  let SEO: SEOInt
 
-  // TODO set cache header
-  // on `site` too
+  // TODO set cache
   // setCacheHeader(res, 3600, 300)
 
   const { data: seoData } = await client.query({

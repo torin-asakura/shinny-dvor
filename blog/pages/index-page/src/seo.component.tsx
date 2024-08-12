@@ -1,7 +1,9 @@
 import React  from 'react'
 import Helmet from 'react-helmet'
+import { FC } from 'react'
 
-const Seo = ({ ogCover, SEO }) => {
+// TODO interface
+export const Seo = ({ ogCover, SEO }) => {
   const { title } = SEO
 
   return (
@@ -47,4 +49,3 @@ const Seo = ({ ogCover, SEO }) => {
     />
   )
 }
-export { Seo }
