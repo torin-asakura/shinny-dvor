@@ -1,26 +1,24 @@
-- packages:
-- [x] прогресс загрузки страницы
-- [x] перенести рутовый лейаут во фрагмент
-- [x] проверить, используются ли пакеты из `site ентрипоинта` где-нибдуь
-- [x] проверить, используются ли пакеты из `blog ентрипоинта` где-нибдуь
-- [x] проверь версии пакетов в `site fragments`
-- [x] проверь версии пакетов в `site pages`
-- [x] перенести `blog` на `app-router`
+### миграция `_document` to `app-router`
 
-- миграция `_document&_error` to `app-router`
-- есть инфа в доках
-- [ ] перенести `_document` from `site`
+- [x] интеграция `icons` in `site`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
+- [ ] интеграция `gtag` in `site`
+- [ ] интеграция `helmet` in`site`
+
+- [x] интеграция `icons` in `blog`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
+- [ ] проверить ^
+- [ ] интеграция `gtag` in `blog`
+- [ ] интеграция `helmet` in`blog`
+
+### миграция `_error` to `app-router`
+
 - [ ] перенести `_error` from `site`
-- [ ] перенести `_document` from `blog`
 - [ ] перенести `_error` from `blog`
-- [x] проверь версии пакетов в `blog fragments`
-- [x] проверь версии пакетов в `blog pages`
-- [x] индикация активной страницы (см. `useRouter`, для `app` используется другой метод)
 
-- layout fixes:
+### layout fixes:
+
 - [ ] горизонтальный скролл
 - [ ] лезут карточки друг на друга на слайдере внизу страницы главной
-- [ ] blog - не смотрел
+- [x] blog
 
 - [ ] TODO's
 - [ ] yarn check
@@ -28,6 +26,18 @@
 ---
 
 ### packages
+
+- [x] прогресс загрузки страницы
+- [x] перенести рутовый лейаут во фрагмент
+- [x] проверить, используются ли пакеты из `site ентрипоинта` где-нибдуь
+- [x] проверь версии пакетов в `site fragments`
+- [x] проверь версии пакетов в `site pages`
+
+- [x] проверить, используются ли пакеты из `blog ентрипоинта` где-нибдуь
+- [x] перенести `blog` на `app-router`
+- [x] проверь версии пакетов в `blog fragments`
+- [x] проверь версии пакетов в `blog pages`
+- [x] индикация активной страницы (см. `useRouter`, для `app` используется другой метод)
 
 - 100% usable, **dont touch**:
 - [ ] `@sentry/nextjs`
