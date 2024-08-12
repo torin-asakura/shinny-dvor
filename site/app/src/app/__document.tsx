@@ -13,6 +13,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
+// https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function
 const withIcons = () => (TargetComponent) =>
   class WithIcons extends TargetComponent {
     static async getInitialProps(context) {
