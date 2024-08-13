@@ -21,9 +21,6 @@ export const PostPageServer: PostPageServerProps = async ({ params }) => {
 
   const { uri } = params
 
-  // TODO do it
-  // setCacheHeader(res, 3600, 300)
-
   const { data: seoData } = await client.query({
     query: GET_POST_SEO,
     variables: { uri },

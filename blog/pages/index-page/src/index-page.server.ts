@@ -19,9 +19,6 @@ export const IndexPageServer: IndexPageServerProps = async () => {
 
   let SEO: SEOInt
 
-  // TODO set cache
-  // setCacheHeader(res, 3600, 300)
-
   const { data: seoData } = await client.query({
     query: GET_BLOG_SEO,
   })
