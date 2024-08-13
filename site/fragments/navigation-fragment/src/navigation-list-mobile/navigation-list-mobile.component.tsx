@@ -5,9 +5,9 @@ import { Box }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Column }                    from '@ui/layout'
 
-import { Item }                      from './item'
-import { NavigationListMobileProps } from './navigation-list-mobile.interface'
-import { getColorBackground }        from '../helpers'
+import { Item }                      from './item/index.js'
+import { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
+import { getColorBackground }        from '../helpers/index.js'
 
 const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, navigation }) => (
   <Box backgroundColor={getColorBackground(active!, scrollY)} style={{ transition: '.2s' }}>

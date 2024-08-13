@@ -1,9 +1,16 @@
-import React                from 'react'
+import type { RootLayoutProps }   from './root-layout.interfaces.js'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { RootLayoutClient } from './root-layout.client.js'
+import React                      from 'react'
 
-// TODO interface
-export const RootLayout = ({ children, messages, gaTrackingId }) => {
+import { RootLayoutClient }       from './root-layout.client.js'
+
+export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = ({
+  children,
+  messages,
+  gaTrackingId,
+}) => {
   return (
     <html>
       <body>

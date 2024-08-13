@@ -1,2 +1,2 @@
-export * from './work-examples-carousel.component'
-export * from './car-bodies-carousel.component'
+export * from './work-examples-carousel.component.js'
+export * from './car-bodies-carousel.component.js'

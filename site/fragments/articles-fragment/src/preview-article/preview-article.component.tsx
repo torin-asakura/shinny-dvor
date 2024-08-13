@@ -12,7 +12,7 @@ import { formattedDate }       from '@shared/utils'
 import { normalizeString }     from '@shared/utils'
 import { useHover }            from '@ui/utils'
 
-import { PreviewArticleProps } from './preview-article.interface'
+import { PreviewArticleProps } from './preview-article.interface.js'
 
 const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, featuredImage }) => {
   const [hover, hoverProps] = useHover()

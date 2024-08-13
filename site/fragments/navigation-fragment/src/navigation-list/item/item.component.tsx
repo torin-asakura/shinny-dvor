@@ -6,8 +6,8 @@ import { Layout }      from '@ui/layout'
 import { NextNavLink } from '@ui/link'
 import { Text }        from '@ui/text'
 
-import { ItemProps }   from './item.interface'
-import { getColor }    from '../../helpers'
+import { ItemProps }   from './item.interface.js'
+import { getColor }    from '../../helpers/index.js'
 
 const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Column>

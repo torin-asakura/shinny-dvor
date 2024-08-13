@@ -11,9 +11,9 @@ import { Text }             from '@ui/text'
 import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 
-import { ArticlesProps }    from './articles.interface'
-import { Carousel }         from './carousel'
-import { PreviewArticle }   from './preview-article'
+import { ArticlesProps }    from './articles.interface.js'
+import { Carousel }         from './carousel/index.js'
+import { PreviewArticle }   from './preview-article/index.js'
 
 const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },

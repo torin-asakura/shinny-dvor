@@ -9,7 +9,7 @@ import { Text }                   from '@ui/text'
 import { Ruble }                  from '@ui/text'
 import { Space }                  from '@ui/text'
 
-import { AdditionalServiceProps } from './additional-service.interface'
+import { AdditionalServiceProps } from './additional-service.interface.js'
 
 const AdditionalService: FC<AdditionalServiceProps> = ({
   isAdditionalService,

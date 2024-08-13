@@ -1,2 +1,2 @@
-export * from './get-color'
-export * from './get-color-background'
+export * from './get-color.js'
+export * from './get-color-background.js'

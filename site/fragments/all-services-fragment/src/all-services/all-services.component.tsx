@@ -9,8 +9,8 @@ import { Text }             from '@ui/text'
 import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 
-import { Item }             from '../item'
-import { AllServicesProps } from './all-services.interface'
+import { Item }             from '../item/index.js'
+import { AllServicesProps } from './all-services.interface.js'
 
 const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)

@@ -6,7 +6,7 @@ import { Box }       from '@ui/layout'
 import { Layout }    from '@ui/layout'
 import { Text }      from '@ui/text'
 
-import { ItemProps } from './car-body-item.interface'
+import { ItemProps } from './car-body-item.interface.js'
 
 const CarBodyItem: FC<ItemProps> = ({ item }) => (
   <Box borderRadius='small' justifyContent='space-between' alignItems='center'>

@@ -1,6 +1,6 @@
 import React                 from 'react'
 import { FC }                from 'react'
-import { useRouter }         from 'next/navigation'
+import { useRouter }         from 'next/navigation.js'
 import { useState }          from 'react'
 
 import { Button }            from '@ui/button'
@@ -9,7 +9,7 @@ import { Box }               from '@ui/layout'
 import { Layout }            from '@ui/layout'
 import { Text }              from '@ui/text'
 
-import { ReturnButtonProps } from './return-button.interface'
+import { ReturnButtonProps } from './return-button.interface.js'
 
 const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [onHover, setOnHover] = useState(false)

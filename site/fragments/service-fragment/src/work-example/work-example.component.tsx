@@ -10,7 +10,7 @@ import { Text }             from '@ui/text'
 import { Space }            from '@ui/text'
 import { Ruble }            from '@ui/text'
 
-import { WorkExampleProps } from './work-example.interface'
+import { WorkExampleProps } from './work-example.interface.js'
 
 const WorkExample: FC<WorkExampleProps> = ({ image, title, price }) => (
   <Row width={[300, 300, 385]} height={[282, 282, 430]}>

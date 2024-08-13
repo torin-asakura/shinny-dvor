@@ -15,7 +15,7 @@ import { Ruble }            from '@ui/text'
 import { Space }            from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { ItemProps }        from './item.interface'
+import { ItemProps }        from './item.interface.js'
 
 const BoxContainer = Box.withComponent(motion.div)
 

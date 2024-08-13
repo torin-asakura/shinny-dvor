@@ -21,14 +21,14 @@ import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { serviceVar }           from '@store/services'
 
-import { AdditionalService }    from './additional-service'
-import { CarBodiesCarousel }    from './carousel'
-import { WorkExamplesCarousel } from './carousel'
-import { Radii }                from './radii'
-import { ReturnButton }         from './return-button'
-import { ServiceProps }         from './service.interface'
-import { WorkExample }          from './work-example'
-import { carBodyConverter }     from './helpers'
+import { AdditionalService }    from './additional-service/index.js'
+import { CarBodiesCarousel }    from './carousel/index.js'
+import { WorkExamplesCarousel } from './carousel/index.js'
+import { Radii }                from './radii/index.js'
+import { ReturnButton }         from './return-button/index.js'
+import { ServiceProps }         from './service.interface.js'
+import { WorkExample }          from './work-example/index.js'
+import { carBodyConverter }     from './helpers/index.js'
 
 const Service: FC<ServiceProps> = ({
   servicesData,

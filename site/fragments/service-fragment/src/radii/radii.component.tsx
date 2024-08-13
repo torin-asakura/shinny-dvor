@@ -7,7 +7,7 @@ import { Layout }     from '@ui/layout'
 import { Row }        from '@ui/layout'
 import { Radio }      from '@ui/radio'
 
-import { RadiiProps } from './radii.interface'
+import { RadiiProps } from './radii.interface.js'
 
 const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
   <Box width='100%' border='grey' borderRadius='little'>

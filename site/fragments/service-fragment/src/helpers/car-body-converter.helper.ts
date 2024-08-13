@@ -1,6 +1,6 @@
 import { useIntl }   from 'react-intl'
 
-import { CarBodies } from '../service.interface'
+import { CarBodies } from '../service.interface.js'
 
 const carBodyConverter = (carBody: string): string => {
   // eslint-disable-next-line

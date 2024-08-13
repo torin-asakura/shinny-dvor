@@ -18,11 +18,11 @@ import { extractFragment }      from '@globals/data'
 import { extractFragments }     from '@globals/data'
 import { screenVar }            from '@store/booking'
 
-import { NavigationList }       from './navigation-list'
-import { NavigationListMobile } from './navigation-list-mobile'
-import { NavigationProps }      from './navigation.interface'
-import { getColor }             from './helpers'
-import { getColorBackground }   from './helpers'
+import { NavigationListMobile } from './navigation-list-mobile/index.js'
+import { NavigationList }       from './navigation-list/index.js'
+import { NavigationProps }      from './navigation.interface.js'
+import { getColor }             from './helpers/index.js'
+import { getColorBackground }   from './helpers/index.js'
 
 const Navigation: FC<NavigationProps> = ({
   active,

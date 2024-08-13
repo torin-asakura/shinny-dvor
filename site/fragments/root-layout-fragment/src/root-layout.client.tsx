@@ -1,33 +1,26 @@
-// TODO move this directive deeper:
 'use client'
 
-import { ApolloProvider }  from '@apollo/client'
-import { Gtag }            from '@ui/gtag'
+import type { RootLayoutClientProps } from './root-layout.interfaces.js'
+import type { FC }                    from 'react'
+import type { PropsWithChildren }     from 'react'
 
-import React               from 'react'
-import { Suspense }        from 'react'
-import { IntlProvider }    from 'react-intl'
-import { usePathname }     from 'next/navigation'
-import { useSearchParams } from 'next/navigation'
-import { useEffect }       from 'react'
+import { ApolloProvider }             from '@apollo/client'
 
-import { ThemeProvider }   from '@ui/theme'
-import { getClient }       from '@globals/data'
-import { progressBar }     from '@ui/progress-bar'
+import React                          from 'react'
+import { Suspense }                   from 'react'
+import { IntlProvider }               from 'react-intl'
 
-// TODO move to hooks
-export function NavigationEvents() {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
+import { Gtag }                       from '@ui/gtag'
+import { ThemeProvider }              from '@ui/theme'
+import { getClient }                  from '@globals/data'
 
-  useEffect(() => {
-    progressBar.finish()
-  }, [pathname, searchParams])
-  return null
-}
+import { NavigationEvents }           from './index.js'
 
-// TODO interface
-export const RootLayoutClient = ({ children, messages, gaTrackingId }) => {
+export const RootLayoutClient: FC<PropsWithChildren<RootLayoutClientProps>> = ({
+  children,
+  messages,
+  gaTrackingId,
+}) => {
   const client = getClient()
 
   return (
