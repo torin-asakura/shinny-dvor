@@ -15,3 +15,4 @@ const RootLayout = ({ children }) => (
 export { generateMetadata } from '@blog/root-layout-fragment'
 
 export default RootLayout
+export const revalidate = 3600
