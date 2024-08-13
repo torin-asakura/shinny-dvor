@@ -15,3 +15,4 @@ const RootLayout = ({ children }) => (
 )
 
 export default RootLayout
+export const revalidate = 3600
