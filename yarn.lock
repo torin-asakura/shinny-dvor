@@ -916,7 +916,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/footer-fragment@workspace:*, @blog/footer-fragment@workspace:blog/fragments/footer-fragment":
+"@blog/footer-fragment@workspace:*, @blog/footer-fragment@workspace:blog/fragments/footer-fragment, @blog/footer-fragment@workspaces:*":
   version: 0.0.0-use.local
   resolution: "@blog/footer-fragment@workspace:blog/fragments/footer-fragment"
   dependencies:
@@ -1496,6 +1496,7 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@apollo/client": "npm:^3.11.3"
+    "@blog/footer-fragment": "workspaces:*"
     graphql: "npm:^16.9.0"
     react: "npm:18.3.1"
   peerDependencies:
@@ -7362,7 +7363,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.57.0, eslint@npm:^8.44.0":
+"eslint@npm:^8.44.0":
   version: 8.57.0
   resolution: "eslint@npm:8.57.0"
   dependencies:
@@ -8426,15 +8427,6 @@ __metadata:
   dependencies:
     ms: "npm:^2.0.0"
   checksum: 10/9c7a74a2827f9294c009266c82031030eae811ca87b0da3dceb8d6071b9bde22c9f3daef0469c3c533cc67a97d8a167cd9fc0389350e5f415f61a79b171ded16
-  languageName: node
-  linkType: hard
-
-"husky@npm:9.1.4":
-  version: 9.1.4
-  resolution: "husky@npm:9.1.4"
-  bin:
-    husky: bin.js
-  checksum: 10/c43aa7cbf98246d4f347bc3da807049555b5003af7c6e1658c5cea44a9743b4d0683c72973a4fe02a4ccceb81031a664ecaa7a1a86efe4d37a80a0af17c988ea
   languageName: node
   linkType: hard
 
@@ -11825,9 +11817,6 @@ __metadata:
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
-    eslint: "npm:8.57.0"
-    husky: "npm:9.1.4"
-    prettier: "npm:3.1.1"
     typescript: "npm:5.2.2"
   languageName: unknown
   linkType: soft
