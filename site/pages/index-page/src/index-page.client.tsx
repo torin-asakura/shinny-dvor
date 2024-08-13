@@ -2,10 +2,10 @@
 
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 
-import React                         from 'react'
 import { FC }                        from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
+import React                         from 'react'
 
 import { Articles }                  from '@site/articles-fragment'
 import { Footer }                    from '@site/footer-fragment'

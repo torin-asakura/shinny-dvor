@@ -1,5 +1,6 @@
-import type { SeoProps } from './contacts-page.interfaces.js'
 import type { FC }       from 'react'
+
+import type { SeoProps } from './contacts-page.interfaces.js'
 
 import React             from 'react'
 import Helmet            from 'react-helmet'
