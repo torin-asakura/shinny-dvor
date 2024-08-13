@@ -1,5 +1,5 @@
-import React                from 'react'
 import { FC }               from 'react'
+import React                from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'

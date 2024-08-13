@@ -1,6 +1,6 @@
-import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import React                from 'react'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'
@@ -14,6 +14,7 @@ import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
 import { ServiceProps }     from './service.interface'
+
 // import { useRouter }        from 'next/navigation'
 
 const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {

@@ -1,5 +1,5 @@
-import React           from 'react'
 import { FC }          from 'react'
+import React           from 'react'
 
 import { Layout }      from '@ui/layout'
 import { useCarousel } from '@ui/carousel'

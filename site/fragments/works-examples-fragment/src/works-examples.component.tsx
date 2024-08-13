@@ -1,10 +1,10 @@
-import React                      from 'react'
 import { Children }               from 'react'
 import { FC }                     from 'react'
 import { Swiper as SwiperCore }   from 'swiper'
 import { useState }               from 'react'
 import { forwardRef }             from 'react'
 import { useMemo }                from 'react'
+import React                      from 'react'
 
 import { Button }                 from '@ui/button'
 import { ArrowLeftIcon }          from '@ui/icons'

@@ -1,14 +1,14 @@
 'use client'
 
-import type { RootLayoutClientProps } from './root-layout.interfaces.js'
 import type { FC }                    from 'react'
 import type { PropsWithChildren }     from 'react'
 
-import { ApolloProvider }             from '@apollo/client'
+import type { RootLayoutClientProps } from './root-layout.interfaces.js'
 
-import React                          from 'react'
+import { ApolloProvider }             from '@apollo/client'
 import { Suspense }                   from 'react'
 import { IntlProvider }               from 'react-intl'
+import React                          from 'react'
 
 import { Gtag }                       from '@ui/gtag'
 import { ThemeProvider }              from '@ui/theme'

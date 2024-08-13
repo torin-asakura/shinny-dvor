@@ -1,6 +1,7 @@
-import type { RootLayoutProps }   from './root-layout.interfaces.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
+
+import type { RootLayoutProps }   from './root-layout.interfaces.js'
 
 import React                      from 'react'
 
