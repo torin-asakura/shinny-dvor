@@ -1,7 +1,6 @@
 import { Logger }     from '@atls/logger'
-
-import AWS            from 'aws-sdk'
 import { js2xml }     from 'xml-js'
+import AWS            from 'aws-sdk'
 
 import { imagesData } from '../images-data'
 
