@@ -1,11 +1,11 @@
-import React                  from 'react'
-import { FC }                 from 'react'
+import type { ServicesPageProps } from './services-page.interface.js'
 
-import { ServicesPageClient } from './services-page.client.js'
-import { ServicesPageServer } from './services-page.server.js'
+import React                      from 'react'
 
-// TODO interface
-const ServicesPage: FC<ServicesPageProps> = async () => {
+import { ServicesPageClient }     from './services-page.client.js'
+import { ServicesPageServer }     from './services-page.server.js'
+
+const ServicesPage: ServicesPageProps = async () => {
   const servicesPageData = await ServicesPageServer()
   return <ServicesPageClient {...servicesPageData} />
 }

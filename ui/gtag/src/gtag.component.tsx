@@ -1,9 +1,10 @@
-import Script from 'next/script'
-import React  from 'react'
-import { FC } from 'react'
+import type { GtagProps } from './gtag.interfaces.js'
+import type { FC }        from 'react'
 
-// TODO interfaces
-export const Gtag: FC<any> = ({ gaTrackingId = 'GTM-TPXQGZP' }) => {
+import Script             from 'next/script'
+import React              from 'react'
+
+export const Gtag: FC<GtagProps> = ({ gaTrackingId = 'GTM-TPXQGZP' }) => {
   const gtagRawString = `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

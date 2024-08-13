@@ -1,19 +1,22 @@
-import { GET_PREVIEW }            from '@globals/data'
-import { getClient }              from '@globals/data'
-import { runAvailableRadiiQuery } from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { runContactsQuery }       from '@globals/data'
-import { runNavigationQuery }     from '@globals/data'
-import { runCarBodiesQuery }      from '@globals/data'
-import { runFragmentsQuery }      from '@globals/data'
-import { runServicesQuery }       from '@globals/data'
+import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
+import type { SEOInt }                  from '@globals/data'
 
-import { GET_CONTACTS_SEO }       from './queries'
+import { GET_PREVIEW }                  from '@globals/data'
+import { getClient }                    from '@globals/data'
+import { runAvailableRadiiQuery }       from '@globals/data'
+import { setCacheHeader }               from '@globals/data'
+import { runContactsQuery }             from '@globals/data'
+import { runNavigationQuery }           from '@globals/data'
+import { runCarBodiesQuery }            from '@globals/data'
+import { runFragmentsQuery }            from '@globals/data'
+import { runServicesQuery }             from '@globals/data'
 
-export const ContactsPageServer = async () => {
+import { GET_CONTACTS_SEO }             from './queries/index.js'
+
+export const ContactsPageServer: ContactsPageServerProps = async () => {
   const client = getClient()
 
-  let SEO
+  let SEO: SEOInt
 
   // TODO change it
   // res - is layout income response

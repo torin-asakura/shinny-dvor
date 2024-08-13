@@ -1,11 +1,11 @@
-import React              from 'react'
-import { FC }             from 'react'
+import type { PostPageProps } from './post-page.interfaces.js'
 
-import { PostPageClient } from './post-page.client.js'
-import { PostPageServer } from './post-page.server.js'
+import React                  from 'react'
 
-// TODO interface
-const PostPage: FC<PostPageProps> = async ({ params }) => {
+import { PostPageClient }     from './post-page.client.js'
+import { PostPageServer }     from './post-page.server.js'
+
+const PostPage: PostPageProps = async ({ params }) => {
   const postPageData = await PostPageServer({ params })
   return <PostPageClient {...postPageData} />
 }

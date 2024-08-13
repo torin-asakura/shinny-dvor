@@ -1,11 +1,11 @@
-import React               from 'react'
-import { FC }              from 'react'
+import type { IndexPageProps } from './index-page.interfaces.js'
 
-import { IndexPageClient } from './index-page.client.js'
-import { IndexPageServer } from './index-page.server.js'
+import React                   from 'react'
 
-// TODO interface
-const IndexPage: FC<IndexPageProps> = async () => {
+import { IndexPageClient }     from './index-page.client.js'
+import { IndexPageServer }     from './index-page.server.js'
+
+const IndexPage: IndexPageProps = async () => {
   const indexPageData = await IndexPageServer()
   return <IndexPageClient {...indexPageData} />
 }

@@ -1,38 +1,35 @@
 'use client'
 
-import React          from 'react'
-import { FC }         from 'react'
+import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 
-import { Contacts }   from '@site/contacts-fragment'
-import { Footer }     from '@site/footer-fragment'
-import { Navigation } from '@site/navigation-fragment'
-import { Column }     from '@ui/layout'
+import React                            from 'react'
+import { FC }                           from 'react'
 
-import { Seo }        from './seo.component.js'
+import { Contacts }                     from '@site/contacts-fragment'
+import { Footer }                       from '@site/footer-fragment'
+import { Navigation }                   from '@site/navigation-fragment'
+import { Column }                       from '@ui/layout'
 
-interface Props {
-  ogCover: string
-  SEO: any
-  data: any
+import { Seo }                          from './seo.component.js'
+
+export const ContactsPageClient: FC<ContactsPageClientProps> = (props) => {
+  const { ogCover, SEO, data } = props
+
+  const { fragments, contacts, navigation, availableRadii, carBodies, services } = data
+
+  return (
+    <Column width='100%' alignItems='center'>
+      <Seo ogCover={ogCover} SEO={SEO} />
+      <Navigation
+        active={2}
+        navigationData={navigation}
+        availableRadiiData={availableRadii}
+        fragmentsData={fragments}
+        carBodiesData={carBodies}
+        servicesData={services}
+      />
+      <Contacts fragmentsData={fragments} contactsData={contacts} />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
+    </Column>
+  )
 }
-
-// TODO interfaces
-export const ContactsPageClient: FC<ContactsPageClientProps> = ({
-  ogCover,
-  SEO,
-  data: { fragments, contacts, navigation, availableRadii, carBodies, services },
-}) => (
-  <Column width='100%' alignItems='center'>
-    <Seo ogCover={ogCover} SEO={SEO} />
-    <Navigation
-      active={2}
-      navigationData={navigation}
-      availableRadiiData={availableRadii}
-      fragmentsData={fragments}
-      carBodiesData={carBodies}
-      servicesData={services}
-    />
-    <Contacts fragmentsData={fragments} contactsData={contacts} />
-    <Footer fragmentsData={fragments} contactsData={contacts} />
-  </Column>
-)

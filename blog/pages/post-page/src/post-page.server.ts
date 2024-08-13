@@ -1,21 +1,23 @@
-import { GET_PREVIEW }            from '@globals/data'
-import { getClient }              from '@globals/data'
-import { runAvailableRadiiQuery } from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { runCarBodiesQuery }      from '@globals/data'
-import { runServicesQuery }       from '@globals/data'
-import { runFragmentsQuery }      from '@globals/data'
-import { runContactsQuery }       from '@globals/data'
-import { runNavigationQuery }     from '@globals/data'
+import type { PostPageServerProps } from './post-page.interfaces.js'
+import type { SEOInt }              from '@globals/data'
 
-import { GET_POST_SEO }           from './queries'
-import { runPostQuery }           from './queries'
+import { GET_PREVIEW }              from '@globals/data'
+import { getClient }                from '@globals/data'
+import { runAvailableRadiiQuery }   from '@globals/data'
+import { setCacheHeader }           from '@globals/data'
+import { runCarBodiesQuery }        from '@globals/data'
+import { runServicesQuery }         from '@globals/data'
+import { runFragmentsQuery }        from '@globals/data'
+import { runContactsQuery }         from '@globals/data'
+import { runNavigationQuery }       from '@globals/data'
 
-// export const getServerSideProps = async ({ params, res }) => {
-export const PostPageServer = async ({ params }) => {
+import { GET_POST_SEO }             from './queries/index.js'
+import { runPostQuery }             from './queries/index.js'
+
+export const PostPageServer: PostPageServerProps = async ({ params }) => {
   const client = getClient()
 
-  let SEO
+  let SEO: SEOInt
 
   const { uri } = params
 

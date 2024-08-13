@@ -1,26 +1,19 @@
 'use client'
 
-import React          from 'react'
-import { FC }         from 'react'
+import type { ServicePageClientProps } from './service-page.interfaces.js'
+import type { FC }                     from 'react'
 
-import { Articles }   from '@site/articles-fragment'
-import { Footer }     from '@site/footer-fragment'
-import { Navigation } from '@site/navigation-fragment'
-import { Service }    from '@site/service-fragment'
-import { Column }     from '@ui/layout'
+import React                           from 'react'
 
-import { Seo }        from './seo.component'
+import { Articles }                    from '@site/articles-fragment'
+import { Footer }                      from '@site/footer-fragment'
+import { Navigation }                  from '@site/navigation-fragment'
+import { Service }                     from '@site/service-fragment'
+import { Column }                      from '@ui/layout'
 
-interface Props {
-  ogCover: string
-  SEO: any
-  data: any
-}
+import { Seo }                         from './seo.component.js'
 
-// TODO interface
 export const ServicePageClient: FC<ServicePageClientProps> = (props) => {
-  console.log('service page client')
-
   const {
     SEO,
     ogCover,

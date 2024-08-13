@@ -1,22 +1,24 @@
-import { GET_PREVIEW }            from '@globals/data'
-import { getClient }              from '@globals/data'
-import { runAvailableRadiiQuery } from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { runNavigationQuery }     from '@globals/data'
-import { runContactsQuery }       from '@globals/data'
-import { runFragmentsQuery }      from '@globals/data'
-import { runPostsQuery }          from '@globals/data'
-import { runCarBodiesQuery }      from '@globals/data'
-import { runServiceQuery }        from '@globals/data'
-import { runServicesQuery }       from '@globals/data'
+import type { ServicePageServerProps } from './service-page.interfaces.js'
+import type { SEOInt }                 from '@globals/data'
 
-import { GET_SERVICE_SEO }        from './queries'
+import { GET_PREVIEW }                 from '@globals/data'
+import { getClient }                   from '@globals/data'
+import { runAvailableRadiiQuery }      from '@globals/data'
+import { setCacheHeader }              from '@globals/data'
+import { runNavigationQuery }          from '@globals/data'
+import { runContactsQuery }            from '@globals/data'
+import { runFragmentsQuery }           from '@globals/data'
+import { runPostsQuery }               from '@globals/data'
+import { runCarBodiesQuery }           from '@globals/data'
+import { runServiceQuery }             from '@globals/data'
+import { runServicesQuery }            from '@globals/data'
 
-// TODO interface
-export const ServicePageServer = async ({ params, res }) => {
+import { GET_SERVICE_SEO }             from './queries/index.js'
+
+export const ServicePageServer: ServicePageServerProps = async ({ params }) => {
   const client = getClient()
 
-  let SEO
+  let SEO: SEOInt
 
   const { uri } = params
 

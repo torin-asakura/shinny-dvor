@@ -1,39 +1,36 @@
 'use client'
 
-import React           from 'react'
-import { FC }          from 'react'
+import type { ServicesPageClientProps } from './services-page.interface.js'
 
-import { AllServices } from '@site/all-services-fragment'
-import { Footer }      from '@site/footer-fragment'
-import { Navigation }  from '@site/navigation-fragment'
-import { Column }      from '@ui/layout'
+import React                            from 'react'
+import { FC }                           from 'react'
 
-import { Seo }         from './seo.component'
+import { AllServices }                  from '@site/all-services-fragment'
+import { Footer }                       from '@site/footer-fragment'
+import { Navigation }                   from '@site/navigation-fragment'
+import { Column }                       from '@ui/layout'
 
-interface Props {
-  ogCover: string
-  SEO: any
-  data: any
-}
+import { Seo }                          from './seo.component.js'
 
-// TODO interfaces
 // TODO выровнять контейнер по центру при уменьшии vw
-export const ServicesPageClient: FC<ServicesPageClientProps> = ({
-  SEO,
-  ogCover,
-  data: { fragments, contacts, navigation, availableRadii, services, carBodies },
-}) => (
-  <Column width='100%' alignItems='center'>
-    <Seo SEO={SEO} ogCover={ogCover} />
-    <Navigation
-      active={2}
-      navigationData={navigation}
-      availableRadiiData={availableRadii}
-      fragmentsData={fragments}
-      carBodiesData={carBodies}
-      servicesData={services}
-    />
-    <AllServices fragmentsData={fragments} servicesData={services} />
-    <Footer fragmentsData={fragments} contactsData={contacts} />
-  </Column>
-)
+export const ServicesPageClient: FC<ServicesPageClientProps> = (props) => {
+  const { SEO, ogCover, data } = props
+
+  const { fragments, contacts, navigation, availableRadii, services, carBodies } = data
+
+  return (
+    <Column width='100%' alignItems='center'>
+      <Seo SEO={SEO} ogCover={ogCover} />
+      <Navigation
+        active={2}
+        navigationData={navigation}
+        availableRadiiData={availableRadii}
+        fragmentsData={fragments}
+        carBodiesData={carBodies}
+        servicesData={services}
+      />
+      <AllServices fragmentsData={fragments} servicesData={services} />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
+    </Column>
+  )
+}

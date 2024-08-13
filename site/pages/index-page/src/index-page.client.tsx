@@ -1,78 +1,47 @@
 'use client'
 
-import React                       from 'react'
-import { FC }                      from 'react'
-import { useRef }                  from 'react'
-import { useEffect }               from 'react'
-import { useState }                from 'react'
+import type { IndexPageClientProps } from './index-page.interfaces.js'
 
-import { Articles }                from '@site/articles-fragment'
-import { Footer }                  from '@site/footer-fragment'
-import { Hero }                    from '@site/hero-fragment'
-import { Navigation }              from '@site/navigation-fragment'
-import { Services }                from '@site/services-fragment'
-import { ServicesInfographics }    from '@site/services-infographics-fragment'
-import { WorksExamples }           from '@site/works-examples-fragment'
-import { Box }                     from '@ui/layout'
-import { Column }                  from '@ui/layout'
-import { useIntersectionObserver } from '@ui/intersection-observer'
+import React                         from 'react'
+import { FC }                        from 'react'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
 
-import { Seo }                     from './seo.component.js'
+import { Articles }                  from '@site/articles-fragment'
+import { Footer }                    from '@site/footer-fragment'
+import { Hero }                      from '@site/hero-fragment'
+import { Navigation }                from '@site/navigation-fragment'
+import { Services }                  from '@site/services-fragment'
+import { ServicesInfographics }      from '@site/services-infographics-fragment'
+import { WorksExamples }             from '@site/works-examples-fragment'
+import { Box }                       from '@ui/layout'
+import { Column }                    from '@ui/layout'
 
-interface Props {
-  ogCover: string
-  SEO: any
-  data: any
-}
+import { Seo }                       from './seo.component.js'
+import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
-// TODO interfaces
 export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
+  const { SEO, ogCover, data } = props
+
   const {
-    SEO,
-    ogCover,
-    data: {
-      contacts,
-      posts,
-      navigation,
-      availableRadii,
-      services,
-      fragments,
-      ui,
-      workResults,
-      carBodies,
-    },
-  } = props
+    contacts,
+    posts,
+    navigation,
+    availableRadii,
+    services,
+    fragments,
+    ui,
+    workResults,
+    carBodies,
+  } = data
+
+  const headerRef = useRef<HTMLDivElement | null>(null)
+  const isLoaded = useRef<boolean>(false)
 
   const [active, setActive] = useState<number>(0)
-  const headerRef = useRef<HTMLDivElement | null>(null)
   const [scrollY, setScrollY] = useState<number>(0)
 
-	// TODO all logic to hook
-
-  const isLoaded = useRef<boolean>(false)
-  useEffect(() => {
-    setTimeout(() => {
-      isLoaded.current = true
-    }, 200)
-  }, [])
-
-  const { getObserverOptions } = useIntersectionObserver((id) => {
-    const order = ['hero', 'services', 'articles', 'infographics', 'works-examples']
-    if (isLoaded.current) {
-      setActive(order.indexOf(id))
-    }
-  })
-
-  const scrollHandler = () => {
-    const y = headerRef!.current!.getBoundingClientRect()
-
-    setScrollY(y.y)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollHandler, false)
-    return () => window.removeEventListener('scroll', scrollHandler, false)
-  }, [])
+  const { getObserverOptions } = useIndexPageClient({ isLoaded, setActive, headerRef, setScrollY })
 
   return (
     <Column width='100%' alignItems='center' ref={headerRef}>

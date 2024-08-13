@@ -6,12 +6,12 @@ export interface SeoProps {
   SEO: SEOInt
 }
 
-export interface IndexPageClientProps {
+export interface ContactsPageClientProps {
   ogCover: string
   SEO: SEOInt
   data: DataInt
 }
 
-export type IndexPageProps = () => Promise<JSX.Element>
+export type ContactsPageProps = () => Promise<JSX.Element>
 
-export type IndexPageServerProps = () => Promise<IndexPageClientProps>
+export type ContactsPageServerProps = () => Promise<ContactsPageClientProps>

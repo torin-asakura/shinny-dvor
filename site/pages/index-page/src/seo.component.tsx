@@ -1,9 +1,10 @@
-// TODO to globals/data
+import type { SeoProps } from './index-page.interfaces.js'
+import type { FC }       from 'react'
 
-import React  from 'react'
-import Helmet from 'react-helmet'
+import React             from 'react'
+import Helmet            from 'react-helmet'
 
-const Seo = ({ ogCover, SEO }) => {
+const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
   const { title } = SEO
 
   return (

@@ -1,25 +1,25 @@
-import { GET_PREVIEW }            from '@globals/data'
-import { runCarBodiesQuery }      from '@globals/data'
-import { getClient }              from '@globals/data'
-import { runAvailableRadiiQuery } from '@globals/data'
-import { runNavigationQuery }     from '@globals/data'
-import { runFragmentsQuery }      from '@globals/data'
-import { runContactsQuery }       from '@globals/data'
-import { runUiQuery }             from '@globals/data'
-import { setCacheHeader }         from '@globals/data'
-import { runServicesQuery }       from '@globals/data'
-import { runPostsQuery }          from '@globals/data'
+import type { IndexPageServerProps } from './index-page.interfaces.js'
+import type { SEOInt }               from '@globals/data'
 
-import { GET_INDEX_SEO }          from './queries'
-import { runWorkResultsQuery }    from './queries'
+import { GET_PREVIEW }               from '@globals/data'
+import { runCarBodiesQuery }         from '@globals/data'
+import { getClient }                 from '@globals/data'
+import { runAvailableRadiiQuery }    from '@globals/data'
+import { runNavigationQuery }        from '@globals/data'
+import { runFragmentsQuery }         from '@globals/data'
+import { runContactsQuery }          from '@globals/data'
+import { runUiQuery }                from '@globals/data'
+import { setCacheHeader }            from '@globals/data'
+import { runServicesQuery }          from '@globals/data'
+import { runPostsQuery }             from '@globals/data'
 
-// TODO may be rename to get-index-page-data ? ? ?
-export const IndexPageServer = async () => {
+import { GET_INDEX_SEO }             from './queries/index.js'
+import { runWorkResultsQuery }       from './queries/index.js'
+
+export const IndexPageServer: IndexPageServerProps = async () => {
   const client = getClient()
 
-  // TODO в этой директории есть seo.component.
-  // 	они случайно не дублируют функционал?
-  let SEO
+  let SEO: SEOInt
 
   // TODO change it
   // res - is layout income response
