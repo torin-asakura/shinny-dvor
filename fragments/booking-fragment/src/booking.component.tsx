@@ -1,5 +1,4 @@
 import { useReactiveVar }  from '@apollo/client'
-
 import React               from 'react'
 
 import { Screen }          from '@store/booking'
