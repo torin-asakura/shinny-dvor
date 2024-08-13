@@ -340,9 +340,6 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.11.10"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.17"],\
-          ["eslint", "npm:8.57.0"],\
-          ["husky", "npm:9.1.4"],\
-          ["prettier", "npm:3.1.1"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -15563,15 +15560,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["husky", [\
-      ["npm:9.1.4", {\
-        "packageLocation": "./.yarn/cache/husky-npm-9.1.4-45a26bd693-c43aa7cbf9.zip/node_modules/husky/",\
-        "packageDependencies": [\
-          ["husky", "npm:9.1.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["iconv-lite", [\
       ["npm:0.4.24", {\
         "packageLocation": "./.yarn/cache/iconv-lite-npm-0.4.24-c5c4ac6695-6d3a2dac6e.zip/node_modules/iconv-lite/",\
@@ -19506,9 +19494,6 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:16.11.10"],\
           ["@types/react", "npm:17.0.47"],\
           ["@types/react-dom", "npm:17.0.17"],\
-          ["eslint", "npm:8.57.0"],\
-          ["husky", "npm:9.1.4"],\
-          ["prettier", "npm:3.1.1"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
