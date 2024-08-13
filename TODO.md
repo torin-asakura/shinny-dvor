@@ -72,9 +72,9 @@
 - используется в `site/document` - что такое `document`
 - эти пакеты не трогал,
 - [ ] нужно вынести в отдельный фрагмент
-- [ ] `@atls/next-document-with-helmet`
-- [ ] `@atls/next-document-with-gtag`
+- [x] `@atls/next-document-with-helmet`
+- [x] `@atls/next-document-with-gtag`
 - [ ] `recompose`
 - [ ] `@apollo/react-ssr`
 
-- [ ] express - как они используется с `next.js`?
+- [ ] express - как он используется с `next.js`?
