@@ -1,7 +1,7 @@
 import type { ContactAddons } from '@blog/footer-fragment'
 import type { Fragment }      from '@blog/footer-fragment'
 
-// TODO
+// TODO typecheck needed
 export interface DataInt {
   contacts: ContactAddons[]
   posts: any
