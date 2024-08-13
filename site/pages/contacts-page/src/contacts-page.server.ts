@@ -18,10 +18,6 @@ export const ContactsPageServer: ContactsPageServerProps = async () => {
 
   let SEO: SEOInt
 
-  // TODO change it
-  // res - is layout income response
-  // setCacheHeader(res, 3600, 300)
-
   const { data: seoData } = await client.query({
     query: GET_CONTACTS_SEO,
   })

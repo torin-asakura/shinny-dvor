@@ -5,7 +5,6 @@ import React                      from 'react'
 import { ContactsPageClient }     from './contacts-page.client.js'
 import { ContactsPageServer }     from './contacts-page.server.js'
 
-// TODO width over 100vw, horizontal scroll - fix it
 const ContactsPage: ContactsPageProps = async () => {
   const contactsPageData = await ContactsPageServer()
   return <ContactsPageClient {...contactsPageData} />

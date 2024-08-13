@@ -22,9 +22,6 @@ export const ServicePageServer: ServicePageServerProps = async ({ params }) => {
 
   const { uri } = params
 
-  // TODO
-  // setCacheHeader(res, 3600, 300)
-
   const { data: seoData } = await client.query({
     query: GET_SERVICE_SEO,
     variables: { uri },

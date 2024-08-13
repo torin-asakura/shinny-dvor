@@ -12,7 +12,6 @@ import { Column }                       from '@ui/layout'
 
 import { Seo }                          from './seo.component.js'
 
-// TODO выровнять контейнер по центру при уменьшии vw
 export const ServicesPageClient: FC<ServicesPageClientProps> = (props) => {
   const { SEO, ogCover, data } = props
 

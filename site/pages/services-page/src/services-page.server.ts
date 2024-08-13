@@ -19,9 +19,6 @@ export const ServicesPageServer: ServicesPageServerProps = async () => {
 
   let SEO: SEOInt
 
-  // TODO just do it
-  // setCacheHeader(res, 3600, 300)
-
   const { data: seoData } = await client.query({
     query: GET_SERVICES_SEO,
   })
