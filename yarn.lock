@@ -859,6 +859,7 @@ __metadata:
     "@apollo/client": "npm:3.11.3"
     "@atls/next-document-with-gtag": "npm:0.1.1"
     "@atls/next-document-with-helmet": "npm:0.3.1"
+    "@blog/global-error-fragment": "workspace:*"
     "@blog/index-page": "workspace:*"
     "@blog/post-page": "workspace:*"
     "@blog/root-layout-fragment": "workspace:*"
@@ -866,7 +867,6 @@ __metadata:
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
     "@sentry/utils": "npm:8.24.0"
-    "@site/global-error-fragment": "workspace:*"
     "@types/express": "npm:4.17.21"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
@@ -916,7 +916,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/footer-fragment@workspace:*, @blog/footer-fragment@workspace:blog/fragments/footer-fragment":
+"@blog/footer-fragment@workspace:*, @blog/footer-fragment@workspace:blog/fragments/footer-fragment, @blog/footer-fragment@workspaces:*":
   version: 0.0.0-use.local
   resolution: "@blog/footer-fragment@workspace:blog/fragments/footer-fragment"
   dependencies:
@@ -943,7 +943,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/global-error-fragment@workspace:blog/fragments/global-error-fragment":
+"@blog/global-error-fragment@workspace:*, @blog/global-error-fragment@workspace:blog/fragments/global-error-fragment":
   version: 0.0.0-use.local
   resolution: "@blog/global-error-fragment@workspace:blog/fragments/global-error-fragment"
   dependencies:
@@ -1496,6 +1496,7 @@ __metadata:
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
     "@apollo/client": "npm:^3.11.3"
+    "@blog/footer-fragment": "workspaces:*"
     graphql: "npm:^16.9.0"
     react: "npm:18.3.1"
   peerDependencies:
