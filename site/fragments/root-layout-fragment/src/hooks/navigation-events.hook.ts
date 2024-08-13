@@ -1,3 +1,5 @@
+'use client'
+
 import { usePathname }     from 'next/navigation.js'
 import { useSearchParams } from 'next/navigation.js'
 import { useEffect }       from 'react'
@@ -11,5 +13,6 @@ export const NavigationEvents = () => {
   useEffect(() => {
     progressBar.finish()
   }, [pathname, searchParams])
+
   return null
 }
