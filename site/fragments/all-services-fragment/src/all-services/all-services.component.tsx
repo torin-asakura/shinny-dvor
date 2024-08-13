@@ -22,13 +22,11 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />
-        <Layout>
-          <Text fontWeight='bold' fontSize={['giant', 'giant', 'extra']}>
-            {title}
-          </Text>
-        </Layout>
+        <Text fontWeight='bold' fontSize={['giant', 'giant', 'extra']}>
+          {title}
+        </Text>
         <Layout flexBasis={[12, 12, 16]} />
-        <Row flexWrap='wrap'>
+        <Row flexWrap='wrap' style={{ gap: 32 }}>
           {services.map(({
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
