@@ -1,6 +1,6 @@
-// TODO move it to locales
+// TODO не нахожу использование. удалить после чека, если не будет ошибок
 
-export const messages = {
-  cost: 'Стоимость',
-  time: 'Время',
-}
+// export const messages = {
+//   cost: 'Стоимость',
+//   time: 'Время',
+// }

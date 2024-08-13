@@ -1,7 +1,7 @@
 import React            from 'react'
 import ScrollLock       from 'react-scrolllock'
 // TODO what is it?:
-import document         from 'global/document'
+// import document         from 'global/document'
 import { FC }           from 'react'
 import { useAnimation } from 'framer-motion'
 import { nanoid }       from 'nanoid'
