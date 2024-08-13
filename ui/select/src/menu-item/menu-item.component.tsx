@@ -1,7 +1,6 @@
 import styled             from '@emotion/styled'
-
-import React              from 'react'
 import { FC }             from 'react'
+import React              from 'react'
 
 import { Checkbox }       from '@ui/checkbox'
 import { Layout }         from '@ui/layout'

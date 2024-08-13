@@ -1,6 +1,6 @@
-import React           from 'react'
 import { FC }          from 'react'
 import { motion }      from 'framer-motion'
+import React           from 'react'
 
 import { Backdrop }    from './backdrop/index.js'
 import { DrawerProps } from './drawer.interface.js'

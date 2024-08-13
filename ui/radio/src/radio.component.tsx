@@ -1,9 +1,8 @@
-import styled                          from '@emotion/styled'
 import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
-
-import React                           from 'react'
+import styled                          from '@emotion/styled'
 import { FC }                          from 'react'
+import React                           from 'react'
 
 import { Layout }                      from '@ui/layout'
 import { Column }                      from '@ui/layout'

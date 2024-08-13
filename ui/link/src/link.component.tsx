@@ -1,6 +1,5 @@
-import styled                      from '@emotion/styled'
 import { createBaseStyles }        from '@atls-ui-parts/link'
-
+import styled                      from '@emotion/styled'
 import React                       from 'react'
 
 import { Text }                    from '@ui/text'

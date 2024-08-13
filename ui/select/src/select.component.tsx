@@ -1,9 +1,8 @@
 import { useSelect }                       from '@atls-ui-parts/select'
-
-import React                               from 'react'
 import { FC }                              from 'react'
 import { useMultipleSelection }            from 'downshift'
 import { useSelect as useDownshiftSelect } from 'downshift'
+import React                               from 'react'
 
 import { DropDownIcon }                    from '@ui/icons'
 import { Layout }                          from '@ui/layout'

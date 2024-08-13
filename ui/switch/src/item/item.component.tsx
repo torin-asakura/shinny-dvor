@@ -1,5 +1,5 @@
-import React         from 'react'
 import { FC }        from 'react'
+import React         from 'react'
 
 import { Button }    from '@ui/button'
 import { Box }       from '@ui/layout'

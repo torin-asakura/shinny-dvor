@@ -1,5 +1,4 @@
 import { createShapeStyles } from '@atls-ui-parts/button'
-
 import { styleFn }           from 'styled-system'
 
 const getGhostStyles = (): styleFn => {

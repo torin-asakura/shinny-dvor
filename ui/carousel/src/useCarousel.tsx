@@ -1,9 +1,8 @@
 import { useAddonNavigation }             from '@atls-ui-parts/carousel'
 import { useCarousel as useCarouselBase } from '@atls-ui-parts/carousel'
-
-import React                              from 'react'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
+import React                              from 'react'
 
 import { UseCarouselOptions }             from './carousel.interface.js'
 import { Container }                      from './container/index.js'

@@ -1,5 +1,5 @@
-import React          from 'react'
 import { FC }         from 'react'
+import React          from 'react'
 
 import { Container }  from './container/index.js'
 import { Image }      from './image/index.js'

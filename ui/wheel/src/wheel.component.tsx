@@ -1,5 +1,5 @@
-import React                   from 'react'
 import { FC }                  from 'react'
+import React                   from 'react'
 
 import { Knobs }               from './knobs/index.js'
 import { Wheel as Background } from './wheel/index.js'

@@ -1,5 +1,5 @@
-import React         from 'react'
 import { FC }        from 'react'
+import React         from 'react'
 
 import { LogoIcon }  from '@ui/icons'
 import { Box }       from '@ui/layout'

@@ -1,11 +1,10 @@
-import styled                  from '@emotion/styled'
 import { useSwiperSlide }      from '@atls-ui-parts/swiper'
 import { useSwiper }           from '@atls-ui-parts/swiper'
-
-import React                   from 'react'
-import ReactCompareImage       from 'react-compare-image'
+import styled                  from '@emotion/styled'
 import { FC }                  from 'react'
 import { useEffect }           from 'react'
+import React                   from 'react'
+import ReactCompareImage       from 'react-compare-image'
 
 import { Condition }           from '@ui/condition'
 import { Layout }              from '@ui/layout'

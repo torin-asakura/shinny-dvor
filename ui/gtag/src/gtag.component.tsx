@@ -1,5 +1,6 @@
-import type { GtagProps } from './gtag.interfaces.js'
 import type { FC }        from 'react'
+
+import type { GtagProps } from './gtag.interfaces.js'
 
 import Script             from 'next/script'
 import React              from 'react'

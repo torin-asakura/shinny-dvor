@@ -1,9 +1,9 @@
-import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { Children }        from 'react'
 import { useState }        from 'react'
 import { useEffect }       from 'react'
 import { createPortal }    from 'react-dom'
+import React               from 'react'
 
 const Renderer = ({ children, active }) => {
   const [doc, setDoc] = useState<any>(null)

@@ -2,7 +2,6 @@ import { CSSObject }              from '@emotion/css'
 import { createBaseStyles }       from '@atls-ui-parts/button'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
-
 import { styleFn }                from 'styled-system'
 
 export const baseStyles = createBaseStyles()
