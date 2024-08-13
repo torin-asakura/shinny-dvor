@@ -1,9 +1,9 @@
-import React                  from 'react'
 import { FC }                 from 'react'
 import { FormattedPlural }    from 'react-intl'
 import { FormattedMessage }   from 'react-intl'
 import { useEffect }          from 'react'
 import { useIntl }            from 'react-intl'
+import React                  from 'react'
 
 import { Divider }            from '@ui/divider'
 import { ImageBlock }         from '@ui/image'

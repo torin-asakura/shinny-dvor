@@ -1,8 +1,8 @@
 import type { SeoProps } from './index-page.interfaces.js'
 
+import { FC }            from 'react'
 import React             from 'react'
 import Helmet            from 'react-helmet'
-import { FC }            from 'react'
 
 export const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
   const { title } = SEO
