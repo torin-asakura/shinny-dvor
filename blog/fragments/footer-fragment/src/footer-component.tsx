@@ -56,7 +56,11 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                    {navigationItems.map(({ contentAddons: { title, content } }) => (
+                    {navigationItems.map(({
+                      contentAddons: { title, content },
+                    }: {
+                      contentAddons: { title: string; content: string }
+                    }) => (
                       <NextLink key={title} path={content}>
                         <Layout>
                           <Text color='black' fontWeight='medium'>
@@ -73,7 +77,11 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
               <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                {navigationItems.map(({ contentAddons: { title, content } }) => (
+                {navigationItems.map(({
+                  contentAddons: { title, content },
+                }: {
+                  contentAddons: { title: string; content: string }
+                }) => (
                   <NextLink key={title} path={content}>
                     <Layout>
                       <Text color='black' fontWeight='medium'>
