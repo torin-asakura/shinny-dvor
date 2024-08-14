@@ -18,3 +18,8 @@ export type ServicePageServerProps = ({
 }: {
   params: ParamsType
 }) => Promise<ServicePageClientProps>
+
+export interface SeoProps {
+  ogCover: string
+  SEO: SEOInt
+}

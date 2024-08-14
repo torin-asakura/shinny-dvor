@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import NextError     from 'next/error'
 import React         from 'react'
 
-export default function GlobalError(contextData) {
+export default function GlobalError(contextData: any) {
   const { error }: { error: Error & { digest?: string } } = contextData
 
   useEffect(() => {

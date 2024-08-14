@@ -1,5 +1,6 @@
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
+import { useRouter }        from 'next/navigation'
 import React                from 'react'
 
 import { Button }           from '@ui/button'
@@ -13,12 +14,10 @@ import { Space }            from '@ui/text'
 import { Text }             from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { ServiceProps }     from './service.interface'
-
-// import { useRouter }        from 'next/navigation'
+import { ServiceProps }     from './service.interface.js'
 
 const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
-  // const router = useRouter()
+  const router = useRouter()
   const [hover, hoverProps] = useHover()
 
   const cost = price[Object.keys(price)[1]]?.passenger
@@ -29,7 +28,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
       color='transparent'
       onClick={() => {
         console.log('button click')
-        // router.push(uri)
+        router.push(uri)
       }}
     >
       <Column fill {...hoverProps}>
@@ -50,7 +49,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             <Layout flexBasis={[4, 4, 8]} />
             <Layout>
               <Column>
-                {description.split('|n|').map((item) => (
+                {description.split('|n|').map((item: string) => (
                   <Row key={item} flexWrap='wrap' maxWidth={['100%', '100%', 500]}>
                     <Text
                       textAlign='start'

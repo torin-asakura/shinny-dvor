@@ -1,3 +1,5 @@
+import type { SlideProps }        from '@ui/slider'
+
 import { Children }               from 'react'
 import { FC }                     from 'react'
 import { Swiper as SwiperCore }   from 'swiper'
@@ -22,9 +24,9 @@ import { Text }                   from '@ui/text'
 import { extractFragment }        from '@globals/data'
 import { extractFragments }       from '@globals/data'
 
-import { WorksExamplesProps }     from './works-examples.interface'
+import { WorksExamplesProps }     from './works-examples.interface.js'
 
-const WorksExamples: FC<WorksExamplesProps> = forwardRef((
+export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   { fragmentsData, workResultsData },
   ref: any
 ) => {
@@ -39,7 +41,17 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
 
   const sliderChildren = useMemo(
     () =>
-      slides.map(({ workResultParams: { fragmentId, photos, price, description, time } }) => (
+      slides.map(({
+        workResultParams: { fragmentId, photos, price, description, time },
+      }: {
+        workResultParams: {
+          fragmentId: string
+          photos: SlideProps['image']
+          price: SlideProps['price']
+          description: SlideProps['description']
+          time: SlideProps['time']
+        }
+      }) => (
         <Slide
           key={fragmentId}
           description={description}
@@ -61,7 +73,7 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
         <Column width='100%' alignItems='center'>
           <Layout flexBasis={[20, 20, 100]} />
           <Layout>
-            <Text fontWeight='small' fontSize='giant' lignHeight='grown'>
+            <Text fontWeight='small' fontSize='giant' lineHeight='grown'>
               {title}
             </Text>
           </Layout>
@@ -116,5 +128,3 @@ const WorksExamples: FC<WorksExamplesProps> = forwardRef((
     </Box>
   )
 })
-
-export { WorksExamples }

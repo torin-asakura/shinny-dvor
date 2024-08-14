@@ -20,7 +20,7 @@ export interface Fragment {
   }
 }
 
-interface NavigationItem {
+export interface NavigationItem {
   contentAddons: {
     title: string
     content: string

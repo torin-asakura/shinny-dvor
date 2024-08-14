@@ -1,8 +1,8 @@
 import { FC }        from 'react'
 import React         from 'react'
 
-import { Service }   from './service'
-import { ItemProps } from './services-list.interface'
+import { Service }   from './service/index.js'
+import { ItemProps } from './services-list.interface.js'
 
 const ServicesList: FC<ItemProps> = ({ services }) => (
   <>

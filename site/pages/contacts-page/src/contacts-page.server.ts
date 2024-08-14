@@ -1,5 +1,6 @@
-import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
 import type { SEOInt }                  from '@globals/data'
+
+import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
 
 import { GET_PREVIEW }                  from '@globals/data'
 import { getClient }                    from '@globals/data'

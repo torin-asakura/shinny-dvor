@@ -1,5 +1,6 @@
-import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
+
+import type { ContactsInformationProps } from './contacts-information.interface.js'
 
 import React                             from 'react'
 

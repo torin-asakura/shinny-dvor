@@ -2,8 +2,8 @@
 
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 
-import React                            from 'react'
 import { FC }                           from 'react'
+import React                            from 'react'
 
 import { Contacts }                     from '@site/contacts-fragment'
 import { Footer }                       from '@site/footer-fragment'

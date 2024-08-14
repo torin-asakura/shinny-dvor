@@ -1,5 +1,7 @@
-import React                from 'react'
+import type { ItemProps }   from '../item/index.js'
+
 import { FC }               from 'react'
+import React                from 'react'
 
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -30,6 +32,15 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
           {services.map(({
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
+          }: {
+            uri: ItemProps['uri']
+            servicesParams: {
+              title: ItemProps['serviceName']
+              averagePrice: ItemProps['averagePrice']
+              price: ItemProps['price']
+              image: ItemProps['image']
+              addon: ItemProps['addon']
+            }
           }) => (
             <Item
               key={title}

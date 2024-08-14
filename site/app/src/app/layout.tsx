@@ -6,7 +6,7 @@ import messages                         from '../../locales/ru.json'
 
 export { generateMetadata } from '@site/root-layout-fragment'
 
-const gaTrackingId = process.env.GA_TRACKING_ID
+const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'
 
 const RootLayout = ({ children }) => (
   <BaseRootLayout messages={messages} gaTrackingId={gaTrackingId}>

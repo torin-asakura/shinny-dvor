@@ -1,5 +1,6 @@
-import type { IndexPageServerProps } from './index-page.interfaces.js'
 import type { SEOInt }               from '@globals/data'
+
+import type { IndexPageServerProps } from './index-page.interfaces.js'
 
 import { GET_PREVIEW }               from '@globals/data'
 import { runCarBodiesQuery }         from '@globals/data'

@@ -1,19 +1,21 @@
-import { FC }               from 'react'
-import { forwardRef }       from 'react'
-import React                from 'react'
+import type { ArticlesProps }  from './articles.interface.js'
+import type { NavigationItem } from './articles.interface.js'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
-import { extractFragment }  from '@globals/data'
-import { extractFragments } from '@globals/data'
+import { FC }                  from 'react'
+import { forwardRef }          from 'react'
+import React                   from 'react'
 
-import { ArticlesProps }    from './articles.interface.js'
-import { Carousel }         from './carousel/index.js'
-import { PreviewArticle }   from './preview-article/index.js'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { NextLink }            from '@ui/link'
+import { Text }                from '@ui/text'
+import { extractFragment }     from '@globals/data'
+import { extractFragments }    from '@globals/data'
+
+import { Carousel }            from './carousel/index.js'
+import { PreviewArticle }      from './preview-article/index.js'
 
 const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },
@@ -26,7 +28,10 @@ const Articles: FC<ArticlesProps> = forwardRef((
   ).title
 
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
-  const linkBlog = navigationItems.filter(({ contentAddons }) => contentAddons.title === 'Блог')[0]
+  const linkBlog = navigationItems.filter(
+    ({ contentAddons }: { contentAddons: NavigationItem['contentAddons'] }) =>
+      contentAddons.title === 'Блог'
+  )[0]
 
   return (
     <Box

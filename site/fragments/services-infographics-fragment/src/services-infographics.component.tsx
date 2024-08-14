@@ -7,7 +7,7 @@ import { Box }                       from '@ui/layout'
 import { Wheel }                     from '@ui/wheel'
 import { extractFragment }           from '@globals/data'
 
-import { ServicesInfographicsProps } from './services-infographic.interface'
+import { ServicesInfographicsProps } from './services-infographic.interface.js'
 
 const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   { fragmentsData, uiData },

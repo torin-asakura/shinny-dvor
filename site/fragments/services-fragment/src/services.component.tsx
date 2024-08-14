@@ -13,8 +13,8 @@ import { Text }             from '@ui/text'
 import { extractFragments } from '@globals/data'
 import { extractFragment }  from '@globals/data'
 
-import { ServicesList }     from './services-list'
-import { ServicesProps }    from './services.interface'
+import { ServicesList }     from './services-list/index.js'
+import { ServicesProps }    from './services.interface.js'
 
 const Services: FC<ServicesProps> = forwardRef((
   { fragmentsData, availableRadiiData, servicesData },
@@ -41,13 +41,13 @@ const Services: FC<ServicesProps> = forwardRef((
           <Box width='100%' justifyContent='space-between'>
             <Column display={['none', 'none', 'flex']} width='100%' maxWidth={[335, '100%', 400]}>
               <Layout>
-                <Text fontWeight='medium' fontSize='giant' lignHeight='grown'>
+                <Text fontWeight='medium' fontSize='giant' lineHeight='grown'>
                   {title}
                 </Text>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
-                <Text lignHeight='grown'>{subTitle}</Text>
+                <Text lineHeight='grown'>{subTitle}</Text>
                 <Layout flexBasis={24} />
               </Layout>
               <Layout flexBasis={24} />
@@ -71,7 +71,7 @@ const Services: FC<ServicesProps> = forwardRef((
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
-                  <Text lignHeight='grown'>{subTitle}</Text>
+                  <Text lineHeight='grown'>{subTitle}</Text>
                 </Layout>
                 <Layout flexBasis={24} />
                 <Row>

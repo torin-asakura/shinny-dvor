@@ -1,11 +1,13 @@
-import { FC }          from 'react'
-import React           from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { useCarousel } from '@ui/carousel'
+import React                      from 'react'
 
-const Tablet: FC = ({ children }) => {
+import { Box }                    from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { useCarousel }            from '@ui/carousel'
+
+const Tablet: FC<PropsWithChildren> = ({ children }) => {
   const { carousel } = useCarousel({
     children,
     slidesPerView: 3,
@@ -19,7 +21,7 @@ const Tablet: FC = ({ children }) => {
   return carousel
 }
 
-const Mobile: FC = ({ children }) => {
+const Mobile: FC<PropsWithChildren> = ({ children }) => {
   const { carousel } = useCarousel({
     children,
     slidesPerView: 3,
@@ -33,7 +35,7 @@ const Mobile: FC = ({ children }) => {
   return carousel
 }
 
-const CarBodiesCarousel: FC = ({ children }) => (
+export const CarBodiesCarousel: FC<PropsWithChildren> = ({ children }) => (
   <>
     <Layout display={['none', 'flex', 'none']}>
       <Tablet>{children}</Tablet>
@@ -43,5 +45,3 @@ const CarBodiesCarousel: FC = ({ children }) => (
     </Box>
   </>
 )
-
-export { CarBodiesCarousel }

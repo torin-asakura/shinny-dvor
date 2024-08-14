@@ -1,7 +1,7 @@
-import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
+import React                from 'react'
 
 import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'

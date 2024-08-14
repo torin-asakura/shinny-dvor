@@ -50,6 +50,7 @@ const Service: FC<ServiceProps> = ({
       additionalservice,
     },
   } = serviceData
+
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
   const carBody = carBodyConverter(onCarBody)
 
@@ -128,7 +129,7 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
-                  {carBodies.map((item) => (
+                  {carBodies.map((item: string) => (
                     <Item key={item} value={item} onSelect={setOnCarBody}>
                       {item}
                     </Item>
@@ -144,7 +145,7 @@ const Service: FC<ServiceProps> = ({
                 display={['flex', 'flex', 'none']}
               >
                 <CarBodiesCarousel>
-                  {carBodies.map((item) => (
+                  {carBodies.map((item: string) => (
                     <Box
                       key={item}
                       width='100%'
