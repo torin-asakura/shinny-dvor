@@ -1,7 +1,7 @@
-import { CSSObject } from '@emotion/css'
+import { css } from '@emotion/css'
 
-export const baseContainerStyles: CSSObject = {
+export const baseContainerStyles = css({
   position: 'absolute',
   top: 0,
   left: 0,
-}
+})

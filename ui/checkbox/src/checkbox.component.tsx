@@ -7,35 +7,32 @@ import React                           from 'react'
 
 import { CheckIcon }                   from '@ui/icons'
 
-import { CheckboxProps }               from './checkbox.interface.js'
 import { Box }                         from './box/index.js'
+import { CheckboxProps }               from './checkbox.interface.js'
 import { Container }                   from './container/index.js'
 import { Label }                       from './label/index.js'
 
-const doNothing = (...args) => {
+const doNothing = () => {
   // do nothing
 }
 
-const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = (newState) => doNothing() }) => {
-  const Checkmark = styled.div(
-    createCheckBaseStyles(),
-    createCheckAppearanceStyles({
-      color: 'white',
-    }),
-    createCheckShapeStyles({
-      size: 20,
-    })
-  )
-  return (
-    <Container onClick={() => onCheck(!active)}>
-      <Box checked={active}>
-        <Checkmark>
-          <CheckIcon width={17} height={18} />
-        </Checkmark>
-      </Box>
-      <Label>{children}</Label>
-    </Container>
-  )
-}
+const Checkmark = styled.div(
+  createCheckBaseStyles(),
+  createCheckAppearanceStyles({
+    color: 'white',
+  }),
+  createCheckShapeStyles({
+    size: 20,
+  })
+)
 
-export { Checkbox }
+export const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = () => doNothing() }) => (
+  <Container onClick={() => onCheck(!active)}>
+    <Box checked={active}>
+      <Checkmark>
+        <CheckIcon width={17} height={18} />
+      </Checkmark>
+    </Box>
+    <Label>{children}</Label>
+  </Container>
+)

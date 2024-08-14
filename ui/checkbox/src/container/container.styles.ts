@@ -1,5 +1,6 @@
+import type { styleFn }              from 'styled-system'
+
 import { createContainerBaseStyles } from '@atls-ui-parts/checkbox'
-import { styleFn }                   from 'styled-system'
 
 export const baseStyles: styleFn = createContainerBaseStyles()
 

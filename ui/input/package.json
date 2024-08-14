@@ -9,8 +9,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@atls-ui-parts/input": "0.1.1",
-    "@ui/divider": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/divider": "workspace:*",
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@emotion/styled": "11.13.0",

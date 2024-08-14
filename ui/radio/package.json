@@ -8,17 +8,18 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/checkbox": "0.1.1",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/condition": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
+    "@atls-ui-parts/checkbox": "0.1.1",
     "@emotion/react": "11.13.0",
     "@emotion/styled": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
+    "@types/styled-system": "5.1.22",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "styled-system": "5.1.5",

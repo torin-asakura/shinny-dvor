@@ -39,7 +39,6 @@
     "framer-motion": "*",
     "react": "*",
     "react-before-after-slider": "*",
-    "react-compare-image": "*",
     "react-dom": "*",
     "styled-system": "*",
     "swiper": "*"

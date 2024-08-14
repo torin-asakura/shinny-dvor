@@ -1,14 +1,17 @@
-import { FC }        from 'react'
-import React         from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Button }    from '@ui/button'
-import { Box }       from '@ui/layout'
-import { Text }      from '@ui/text'
+import type { ItemProps }         from './item.interface.js'
 
-import { ItemProps } from './item.interface.js'
-import { useActive } from '../context/index.js'
+import React                      from 'react'
 
-const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
+import { Button }                 from '@ui/button'
+import { Box }                    from '@ui/layout'
+import { Text }                   from '@ui/text'
+
+import { useActive }              from '../context/index.js'
+
+export const Item: FC<PropsWithChildren<ItemProps>> = ({ children, onSelect, value }) => {
   const active = useActive()
   if (!active) {
     throw new Error('Switch: Missing <Switch> component for <Item>')
@@ -37,4 +40,3 @@ const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
     </Box>
   )
 }
-export { Item }

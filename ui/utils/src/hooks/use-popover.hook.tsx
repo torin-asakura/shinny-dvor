@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import { useLayer } from 'react-laag'
+import type { UsePopoverType } from './use-popover.interface.js'
+import type { SetTriggerType } from './use-popover.interface.js'
 
-const usePopover = (placement, offset = 9, trigger = 'click') => {
+import { useState }            from 'react'
+import { useLayer }            from 'react-laag'
+
+const usePopover: UsePopoverType = (placement, offset = 9, trigger = 'click') => {
   const [isOpen, setOpen] = useState<boolean>(false)
-
   const close = () => setOpen(false)
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
@@ -15,7 +17,7 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
     triggerOffset: offset,
   })
 
-  const setTrigger = (value) => {
+  const setTrigger: SetTriggerType = (value) => {
     if (value === 'click') {
       return { ...triggerProps, onClick: () => setOpen(!isOpen) }
     }
@@ -30,7 +32,7 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
     return false
   }
 
-  const render = (children) => renderLayer(isOpen && children)
+  const render = (children: JSX.Element) => renderLayer(isOpen && children)
 
   return {
     triggerProps: setTrigger(trigger),

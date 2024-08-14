@@ -1,3 +1,5 @@
+import type { ThemeType }      from '@ui/theme'
+
 import { styleFn }             from 'styled-system'
 import { switchProp }          from 'styled-tools'
 import { prop }                from 'styled-tools'
@@ -7,7 +9,7 @@ import { getSmallSizeStyles }  from './abstract/index.js'
 import { getGhostStyles }      from './abstract/index.js'
 import { getLargeSizeStyles }  from './abstract/index.js'
 
-const getShapeStyles = (theme): styleFn => {
+const getShapeStyles = (theme: ThemeType): styleFn => {
   const normalSizeStyles = getNormalSizeStyles(theme)
   const smallSizeStyles = getSmallSizeStyles(theme)
   const ghostStyles = getGhostStyles()

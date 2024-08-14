@@ -1,4 +1,6 @@
-import { CSSObject }              from '@emotion/css'
+import type { ThemeType }         from '@ui/theme'
+
+import { CSSObject }              from '@emotion/react'
 import { createBaseStyles }       from '@atls-ui-parts/button'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 import { createShapeStyles }      from '@atls-ui-parts/button'
@@ -13,13 +15,20 @@ export const baseSelectStyles: CSSObject = {
 }
 
 export const appearanceStyles = createAppearanceStyles({
-  fontColor: ({ theme, isSelected, value }) =>
-    isSelected || value.length ? theme.colors.black : theme.colors.steel,
-  backgroundColor: ({ theme }) => theme.colors.white,
+  fontColor: ({
+    theme,
+    isSelected,
+    value,
+  }: {
+    theme: ThemeType
+    isSelected: boolean
+    value: string
+  }) => (isSelected || value.length ? theme.colors.black : theme.colors.steel),
+  backgroundColor: ({ theme }: { theme: any }) => theme.colors.white,
   borderColor: 'transparent',
 })
 
-export const shapeStyles = ({ theme }): styleFn =>
+export const shapeStyles: styleFn = ({ theme }) =>
   createShapeStyles({
     size: 26,
     paddingRatio: 0,

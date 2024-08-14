@@ -5,7 +5,7 @@ import type { GtagProps } from './gtag.interfaces.js'
 import Script             from 'next/script'
 import React              from 'react'
 
-export const Gtag: FC<GtagProps> = ({ gaTrackingId = 'GTM-TPXQGZP' }) => {
+export const Gtag: FC<GtagProps> = ({ gaTrackingId }) => {
   const gtagRawString = `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

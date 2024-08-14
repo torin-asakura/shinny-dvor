@@ -1,9 +1,10 @@
+import type { styleFn }           from 'styled-system'
+
 import { createBaseStyles }       from '@atls-ui-parts/input'
 import { createShapeStyles }      from '@atls-ui-parts/input'
 import { createAppearanceStyles } from '@atls-ui-parts/input'
-import { styleFn }                from 'styled-system'
 
-export const shapeStyles = ({ theme }): styleFn =>
+export const shapeStyles: styleFn = ({ theme }) =>
   createShapeStyles({
     fontFamily: theme.fonts.primary,
     fontWeight: 400,
@@ -11,7 +12,9 @@ export const shapeStyles = ({ theme }): styleFn =>
     fontSize: 16,
     paddingRatio: 0,
   })
+
 export const baseStyles = createBaseStyles()
+
 export const appearanceStyles = createAppearanceStyles({
   fontColor: 'black',
   backgroundColor: 'white',
