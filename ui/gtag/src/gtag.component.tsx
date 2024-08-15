@@ -1,9 +1,11 @@
-import type { FC }        from 'react'
+import type { FC }               from 'react'
 
-import type { GtagProps } from './gtag.interfaces.js'
+import type { GtagProps }        from './gtag.interfaces.js'
 
-import Script             from 'next/script'
-import React              from 'react'
+import { default as BaseScript } from 'next/script'
+import React                     from 'react'
+
+const Script = BaseScript as unknown as FC<any>
 
 export const Gtag: FC<GtagProps> = ({ gaTrackingId }) => {
   const gtagRawString = `

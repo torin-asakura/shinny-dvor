@@ -1,19 +1,21 @@
-import type { KeyboardEvent } from 'react'
-import type { MouseEvent }    from 'react'
+import type { KeyboardEvent }        from 'react'
+import type { MouseEvent }           from 'react'
+import type { FC }                   from 'react'
 
-import { FC }                 from 'react'
-import { useAnimation }       from 'framer-motion'
-import { nanoid }             from 'nanoid'
-import { useEffect }          from 'react'
-import { useCallback }        from 'react'
-import React                  from 'react'
-import ScrollLock             from 'react-scrolllock'
-import document               from 'global/document'
+import { default as BaseScrollLock } from 'react-scrolllock'
+import { useAnimation }              from 'framer-motion'
+import { nanoid }                    from 'nanoid'
+import { useEffect }                 from 'react'
+import { useCallback }               from 'react'
+import React                         from 'react'
+import document                      from 'global/document'
 
-import { Box }                from '@ui/layout'
+import { Box }                       from '@ui/layout'
 
-import { Container }          from './container/index.js'
-import { LayerProps }         from './layer.interface.js'
+import { Container }                 from './container/index.js'
+import { LayerProps }                from './layer.interface.js'
+
+const ScrollLock = BaseScrollLock as unknown as FC<any>
 
 export const Layer: FC<LayerProps> = ({
   children,
