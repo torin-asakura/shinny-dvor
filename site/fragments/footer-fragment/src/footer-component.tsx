@@ -1,4 +1,7 @@
-import { FC }               from 'react'
+import type { FC }          from 'react'
+
+import type { FooterProps } from './footer.interface.js'
+
 import React                from 'react'
 
 import { Divider }          from '@ui/divider'
@@ -16,7 +19,6 @@ import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 import { normalizeString }  from '@shared/utils'
 
-import { FooterProps }      from './footer.interface.js'
 import { useNavigation }    from './data/index.js'
 import { stringSeparator }  from './helpers/index.js'
 
@@ -73,7 +75,11 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
               <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                {navigationItems.map(({ contentAddons: { title, content } }) => (
+                {navigationItems.map(({
+                  contentAddons: { title, content },
+                }: {
+                  contentAddons: { title: string; content: string }
+                }) => (
                   <NextLink key={title} path={content}>
                     <Layout>
                       <Text color='black' fontWeight='medium'>

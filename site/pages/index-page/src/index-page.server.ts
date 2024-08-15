@@ -10,7 +10,6 @@ import { runNavigationQuery }        from '@globals/data'
 import { runFragmentsQuery }         from '@globals/data'
 import { runContactsQuery }          from '@globals/data'
 import { runUiQuery }                from '@globals/data'
-import { setCacheHeader }            from '@globals/data'
 import { runServicesQuery }          from '@globals/data'
 import { runPostsQuery }             from '@globals/data'
 

@@ -210,7 +210,7 @@ const Service: FC<ServiceProps> = ({
             <Layout flexBasis={24} />
             <Layout>
               <Column fill>
-                {description.split('|n|').map((item) => (
+                {description.split('|n|').map((item: string) => (
                   <Text key={item} lineHeight='medium'>
                     {item}
                   </Text>

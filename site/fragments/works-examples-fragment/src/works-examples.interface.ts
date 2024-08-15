@@ -1,8 +1,10 @@
-interface ContentAddons {
-  title: string
-  content: string
-  fragmentId: string
-  highlightedtext: string
+interface Fragment {
+  contentAddons: {
+    title: string
+    content: string
+    fragmentId: string
+    highlightedtext: string
+  }
 }
 
 interface WorkResult {
@@ -23,6 +25,6 @@ interface WorkResult {
 }
 
 export interface WorksExamplesProps {
-  fragmentsData: ContentAddons[]
+  fragmentsData: Fragment[]
   workResultsData: WorkResult[]
 }

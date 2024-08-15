@@ -1,5 +1,5 @@
-import { FC }                  from 'react'
 import React                   from 'react'
+import { FC }                  from 'react'
 
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
@@ -32,11 +32,14 @@ const Contacts: FC<ContactsProps> = (props) => {
         </Column>
         <Layout flexBasis={[20, 20, 80]} />
       </Row>
-      <Row>
-        <Layout flexBasis={[20, 20, 80]} />
+      <Row
+        padding={[20, 20, 80]}
+        paddingTop='0 !important'
+        paddingBottom='0 !important'
+        justifyContent='space-between'
+      >
         <ContactsInformation contactsData={contactsInformationData} />
         <MapComponent />
-        <Layout flexBasis={[20, 20, 80]} />
       </Row>
       <Layout flexBasis={[24, 24, 0]} />
       <Box width='100%' height={270} display={['flex', 'flex', 'none']}>

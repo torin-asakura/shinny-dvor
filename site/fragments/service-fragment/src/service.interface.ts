@@ -1,8 +1,10 @@
 interface Fragment {
-  title: string
-  content: string
-  highlightedtext: string
-  fragmentId: string
+  contentAddons: {
+    title: string
+    content: string
+    highlightedtext: string
+    fragmentId: string
+  }
 }
 
 interface ContentAddons {
