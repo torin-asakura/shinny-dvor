@@ -21,15 +21,13 @@ import { ArticleProps }       from './article.interface.js'
 import { ReturnButton }       from './return-button/index.js'
 
 const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
-  const { formatMessage } = useIntl()
-
   const { postId, content, title, date, viewCount, contentAddons } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   const [submit] = usePostViewCounter()
 
-  const incrementViewCounter = (post_id) => {
+  const incrementViewCounter = (post_id: number) => {
     submit({
       variables: {
         post_id,
@@ -87,6 +85,7 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
                         two={<FormattedMessage id='article.viewed' />}
                         few={<FormattedMessage id='article.views' />}
                         many={<FormattedMessage id='article.views' />}
+                        other={<FormattedMessage id='article.views' />}
                       />
                     </Text>
                   </Layout>

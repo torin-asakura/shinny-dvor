@@ -1,11 +1,9 @@
-import type { SEOInt }              from '@globals/data'
-
 import type { PostPageServerProps } from './post-page.interfaces.js'
+import type { SEOInt }              from '@globals/data'
 
 import { GET_PREVIEW }              from '@globals/data'
 import { getClient }                from '@globals/data'
 import { runAvailableRadiiQuery }   from '@globals/data'
-import { setCacheHeader }           from '@globals/data'
 import { runCarBodiesQuery }        from '@globals/data'
 import { runServicesQuery }         from '@globals/data'
 import { runFragmentsQuery }        from '@globals/data'
