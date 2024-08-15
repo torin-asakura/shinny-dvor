@@ -1,5 +1,8 @@
+import type { ReactiveVar }    from '@apollo/client'
+import type { KeyboardEvent }  from 'react'
+import type { FC }             from 'react'
+
 import { useReactiveVar }      from '@apollo/client'
-import { FC }                  from 'react'
 import { useCallback }         from 'react'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
@@ -24,9 +27,9 @@ import { doNothing }           from '@shared/utils'
 import { screenVar }           from '@store/booking'
 import { serviceVar }          from '@store/services'
 
-import { RadioList }           from '../radio-list'
-import { InitialProps }        from './initial.interface'
-import { useSubmit }           from '../data'
+import { RadioList }           from '../radio-list/index.js'
+import { InitialProps }        from './initial.interface.js'
+import { useSubmit }           from '../data/index.js'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -119,7 +122,7 @@ const Initial: FC<InitialProps> = ({
     }
   }, [data, submit, updateStatus])
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: KeyboardEvent<HTMLElement>) => {
     const correctChars = ['+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
     if (correctChars.indexOf(event.key) === -1) {

@@ -10,7 +10,7 @@ import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
-import { InvalidProps }    from './invalid.interface'
+import { InvalidProps }    from './invalid.interface.js'
 
 const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(

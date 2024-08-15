@@ -5,7 +5,7 @@ import { Box }            from '@ui/layout'
 import { Row }            from '@ui/layout'
 import { Radio }          from '@ui/radio'
 
-import { RadioListProps } from './radio-list.interface'
+import { RadioListProps } from './radio-list.interface.js'
 
 const RadioList: FC<RadioListProps> = ({
   items,
