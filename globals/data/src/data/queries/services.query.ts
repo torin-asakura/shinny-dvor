@@ -1,7 +1,7 @@
 import { gql }       from '@apollo/client'
 
-import { getClient } from '../../helpers'
-import { getSchema } from './schema.query'
+import { getClient } from '../../helpers/index.js'
+import { getSchema } from './schema.query.js'
 
 const getRadii = async () => {
   const { schema } = await getSchema()
