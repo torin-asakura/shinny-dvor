@@ -1,2 +1,2 @@
-export * from './post.query.js'
-export * from './seo.query.js'
+export * from './post.query'
+export * from './seo.query'

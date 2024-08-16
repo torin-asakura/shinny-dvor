@@ -1,2 +1,1 @@
-export * from './footer-component.js'
-export * from './footer.interface.js'
+export * from './footer-component'

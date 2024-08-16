@@ -1,1 +1,2 @@
-export { default } from './post-page.component.js'
+export { default } from './post.page'
+export * from './get-server-side-props'

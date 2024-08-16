@@ -1,1 +1,1 @@
-export * from './string-separator.helper.js'
+export * from './string-separator.helper'

@@ -26,7 +26,7 @@ export const GET_POST = gql`
   }
 `
 
-const runPostQuery = async (uri: string) => {
+const runPostQuery = async (uri) => {
   const client = getClient()
 
   const { data } = await client.query({

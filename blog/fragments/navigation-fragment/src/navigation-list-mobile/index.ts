@@ -1,1 +1,1 @@
-export * from './navigation-list-mobile.component.js'
+export * from './navigation-list-mobile.component'

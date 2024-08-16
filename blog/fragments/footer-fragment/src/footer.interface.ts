@@ -1,4 +1,4 @@
-export interface ContactAddons {
+interface ContactAddons {
   address: string
   email: string
   linkFb: string

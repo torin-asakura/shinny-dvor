@@ -1,29 +1,23 @@
 {
   "name": "@blog/post-page",
   "version": "0.0.1",
-  "license": "BSD-3-Clause",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
-    "@blog/articles-fragment": "workspace:*",
-    "@blog/footer-fragment": "workspace:*",
-    "@blog/navigation-fragment": "workspace:*",
-    "@globals/data": "workspace:*",
-    "@ui/condition": "workspace:*",
-    "@ui/layout": "workspace:*"
+    "@fragments/blog-articles-fragment": "workspace:0.0.1",
+    "@fragments/blog-footer-fragment": "workspace:0.0.1",
+    "@fragments/blog-navigation-fragment": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@apollo/client": "3.11.3",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "@types/react-helmet": "6.1.11",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet": "6.1.0",
-    "react-intl": "6.6.8"
+    "@apollo/client": "^3.6.9",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "react-helmet": "^6.1.0",
+    "react-intl": "5.24.3"
   },
   "peerDependencies": {
     "@apollo/client": "*",
