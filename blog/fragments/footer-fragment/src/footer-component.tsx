@@ -1,5 +1,5 @@
-import React                from 'react'
 import { FC }               from 'react'
+import React                from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -16,9 +16,9 @@ import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 import { normalizeString }  from '@shared/utils'
 
-import { FooterProps }      from './footer.interface'
-import { useNavigation }    from './data'
-import { stringSeparator }  from './helpers'
+import { FooterProps }      from './footer.interface.js'
+import { useNavigation }    from './data/index.js'
+import { stringSeparator }  from './helpers/index.js'
 
 const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const navigation = useNavigation()
@@ -56,7 +56,11 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                    {navigationItems.map(({ contentAddons: { title, content } }) => (
+                    {navigationItems.map(({
+                      contentAddons: { title, content },
+                    }: {
+                      contentAddons: { title: string; content: string }
+                    }) => (
                       <NextLink key={title} path={content}>
                         <Layout>
                           <Text color='black' fontWeight='medium'>
@@ -73,7 +77,11 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
               <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                {navigationItems.map(({ contentAddons: { title, content } }) => (
+                {navigationItems.map(({
+                  contentAddons: { title, content },
+                }: {
+                  contentAddons: { title: string; content: string }
+                }) => (
                   <NextLink key={title} path={content}>
                     <Layout>
                       <Text color='black' fontWeight='medium'>

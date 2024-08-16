@@ -1,6 +1,6 @@
-import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
+import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -18,9 +18,9 @@ import { extractFragment }      from '@globals/data'
 import { extractFragments }     from '@globals/data'
 import { screenVar }            from '@store/booking'
 
-import { NavigationList }       from './navigation-list'
-import { NavigationListMobile } from './navigation-list-mobile'
-import { NavigationProps }      from './navigation.interface'
+import { NavigationListMobile } from './navigation-list-mobile/index.js'
+import { NavigationList }       from './navigation-list/index.js'
+import { NavigationProps }      from './navigation.interface.js'
 
 const Navigation: FC<NavigationProps> = ({
   navigationData,
