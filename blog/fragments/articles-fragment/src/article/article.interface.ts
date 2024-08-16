@@ -1,9 +1,14 @@
+interface ImageInt {
+  mediaItemUrl: string
+  altText: string
+}
+
 interface Fragment {
   contentAddons: {
     title: string
     content: string
     fragmentId: string
-    highlightedtext: string
+    highlightedText: string
   }
 }
 
@@ -14,16 +19,10 @@ interface Post {
   date: string
   viewCount: number
   featuredImage: {
-    node: {
-      mediaItemUrl: string
-      altText: string
-    }
+    node: ImageInt
   }
   contentAddons: {
-    image: {
-      altText: string
-      mediaItemUrl: string
-    }
+    image: ImageInt
   }
 }
 
