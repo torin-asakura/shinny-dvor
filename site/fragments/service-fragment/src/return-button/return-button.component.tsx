@@ -1,7 +1,8 @@
-import { FC }                from 'react'
-import { useRouter }         from 'next/navigation.js'
-import { useState }          from 'react'
 import React                 from 'react'
+import { FC }                from 'react'
+// @ts-ignore:next-line
+import { useRouter }         from 'next/navigation'
+import { useState }          from 'react'
 
 import { Button }            from '@ui/button'
 import { BackIcon }          from '@ui/icons'

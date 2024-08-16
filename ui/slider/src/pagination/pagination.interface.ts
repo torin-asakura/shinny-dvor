@@ -1,3 +1,4 @@
+// @ts-ignore:next-line
 import { Swiper } from 'swiper'
 
 export interface PaginationProps {

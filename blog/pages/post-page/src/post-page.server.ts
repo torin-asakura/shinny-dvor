@@ -1,5 +1,6 @@
-import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { SEOInt }              from '@globals/data'
+
+import type { PostPageServerProps } from './post-page.interfaces.js'
 
 import { GET_PREVIEW }              from '@globals/data'
 import { getClient }                from '@globals/data'

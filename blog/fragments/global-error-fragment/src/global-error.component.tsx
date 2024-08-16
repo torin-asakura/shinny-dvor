@@ -1,9 +1,11 @@
 'use client'
 
 import * as Sentry   from '@sentry/nextjs'
-import { useEffect } from 'react'
+
+// @ts-ignore:next-line
 import NextError     from 'next/error'
 import React         from 'react'
+import { useEffect } from 'react'
 
 export default function GlobalError(contextData: any) {
   const { error }: { error: Error & { digest?: string } } = contextData
