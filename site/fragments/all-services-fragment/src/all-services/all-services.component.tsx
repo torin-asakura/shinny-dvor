@@ -1,7 +1,7 @@
 import type { ItemProps }   from '../item/index.js'
 
-import { FC }               from 'react'
 import React                from 'react'
+import { FC }               from 'react'
 
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -28,6 +28,7 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
           {title}
         </Text>
         <Layout flexBasis={[12, 12, 16]} />
+        <Layout flexBasis={32} />
         <Row flexWrap='wrap' style={{ gap: 32 }}>
           {services.map(({
             uri,
