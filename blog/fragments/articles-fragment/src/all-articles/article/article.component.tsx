@@ -1,5 +1,6 @@
-import { FC }              from 'react'
 import React               from 'react'
+import { FC }              from 'react'
+import { memo }            from 'react'
 
 import { ImageBlock }      from '@ui/image'
 import { Box }             from '@ui/layout'
@@ -13,7 +14,7 @@ import { useHover }        from '@ui/utils'
 
 import { ArticleProps }    from './article.interface.js'
 
-const Article: FC<ArticleProps> = ({ featuredImage, date, title, excerpt }) => {
+const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt }) => {
   const [hover, hoverProps] = useHover()
 
   return (
@@ -59,6 +60,6 @@ const Article: FC<ArticleProps> = ({ featuredImage, date, title, excerpt }) => {
       </Column>
     </Box>
   )
-}
+})
 
 export { Article }

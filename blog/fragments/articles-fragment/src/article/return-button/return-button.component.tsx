@@ -1,6 +1,8 @@
-import { FC }                from 'react'
-import { useRouter }         from 'next/navigation'
 import React                 from 'react'
+import { FC }                from 'react'
+// @ts-ignore:next-line
+import { useRouter }         from 'next/navigation'
+import { memo }              from 'react'
 
 import { Button }            from '@ui/button'
 import { BackIcon }          from '@ui/icons'
@@ -11,7 +13,7 @@ import { useHover }          from '@ui/utils'
 
 import { ReturnButtonProps } from './return-button.interface.js'
 
-const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
+const ReturnButton: FC<ReturnButtonProps> = memo(({ title }) => {
   const [hover, hoverProps] = useHover()
 
   const router = useRouter()
@@ -29,6 +31,6 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
       </Box>
     </Button>
   )
-}
+})
 
 export { ReturnButton }

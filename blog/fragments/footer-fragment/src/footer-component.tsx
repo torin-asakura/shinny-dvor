@@ -1,5 +1,6 @@
-import { FC }               from 'react'
 import React                from 'react'
+import { FC }               from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -20,7 +21,7 @@ import { FooterProps }      from './footer.interface.js'
 import { useNavigation }    from './data/index.js'
 import { stringSeparator }  from './helpers/index.js'
 
-const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
+const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
   const navigation = useNavigation()
 
   const byObj = extractFragment('contentAddons', 'by', fragmentsData)
@@ -209,6 +210,6 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
       </Column>
     </Box>
   )
-}
+})
 
 export { Footer }

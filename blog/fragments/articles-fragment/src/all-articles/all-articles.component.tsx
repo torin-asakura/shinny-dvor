@@ -1,5 +1,6 @@
-import { FC }               from 'react'
 import React                from 'react'
+import { FC }               from 'react'
+import { memo }             from 'react'
 
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'
@@ -12,7 +13,7 @@ import { extractFragment }  from '@globals/data'
 import { AllArticlesProps } from './all-articles.interface.js'
 import { Article }          from './article/index.js'
 
-const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
+const AllArticles: FC<AllArticlesProps> = memo(({ fragmentsData, postsData }) => {
   const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   return (
@@ -37,6 +38,6 @@ const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
     </Box>
   )
-}
+})
 
 export { AllArticles }
