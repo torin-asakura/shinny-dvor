@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@blog/footer-fragment": "workspaces:*"
+    "@fragments/footer-fragment": "workspaces:*"
   },
   "devDependencies": {
     "@apollo/client": "^3.11.3",
