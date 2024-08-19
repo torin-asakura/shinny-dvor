@@ -1,8 +1,8 @@
 import type { SeoProps }         from './index-page.interfaces.js'
 
+import React                     from 'react'
 import { FC }                    from 'react'
 import { default as BaseHelmet } from 'react-helmet'
-import React                     from 'react'
 
 const Helmet = BaseHelmet as unknown as FC<any>
 

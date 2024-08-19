@@ -1,7 +1,7 @@
 import type { ItemProps }   from '../item/index.js'
 
-import React                from 'react'
 import { FC }               from 'react'
+import React                from 'react'
 
 import { Box }              from '@ui/layout'
 import { Row }              from '@ui/layout'

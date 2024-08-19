@@ -1,7 +1,7 @@
-import React                from 'react'
 import { FC }               from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useRouter }        from 'next/navigation'
+import React                from 'react'
 
 import { Button }           from '@ui/button'
 import { Condition }        from '@ui/condition'

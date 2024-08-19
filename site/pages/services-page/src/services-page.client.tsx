@@ -2,12 +2,11 @@
 
 import type { ServicesPageClientProps } from './services-page.interface.js'
 
+import { FC }                           from 'react'
+import React                            from 'react'
+
 import { Footer }                       from '@fragments/footer-fragment'
 import { Navigation }                   from '@fragments/navigation-fragment'
-
-import React                            from 'react'
-import { FC }                           from 'react'
-
 import { AllServices }                  from '@site/all-services-fragment'
 import { Column }                       from '@ui/layout'
 

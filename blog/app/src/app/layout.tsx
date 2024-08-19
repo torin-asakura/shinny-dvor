@@ -1,9 +1,9 @@
 import type { FC }                      from 'react'
 import type { PropsWithChildren }       from 'react'
 
-import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
-
 import React                            from 'react'
+
+import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
 
 import messages                         from '../../locales/ru.json'
 

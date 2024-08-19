@@ -1,9 +1,10 @@
-import type { GtagProps }        from './gtag.interfaces.js'
 import type { FC }               from 'react'
 
-import React                     from 'react'
+import type { GtagProps }        from './gtag.interfaces.js'
+
 // @ts-ignore:next-line
 import { default as BaseScript } from 'next/script'
+import React                     from 'react'
 
 const Script = BaseScript as unknown as FC<any>
 

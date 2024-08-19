@@ -1,13 +1,13 @@
 'use client'
 
-import type { PostPageClientProps } from './post-page.interfaces.js'
 import type { FC }                  from 'react'
 
-import { Footer }                   from '@fragments/footer-fragment'
-import { Navigation }               from '@fragments/navigation-fragment'
+import type { PostPageClientProps } from './post-page.interfaces.js'
 
 import React                        from 'react'
 
+import { Footer }                   from '@fragments/footer-fragment'
+import { Navigation }               from '@fragments/navigation-fragment'
 import { Article }                  from '@blog/articles-fragment'
 import { Column }                   from '@ui/layout'
 

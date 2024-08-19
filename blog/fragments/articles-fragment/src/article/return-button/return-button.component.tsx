@@ -1,8 +1,8 @@
-import React                 from 'react'
 import { FC }                from 'react'
 // @ts-ignore:next-line
 import { useRouter }         from 'next/navigation'
 import { memo }              from 'react'
+import React                 from 'react'
 
 import { Button }            from '@ui/button'
 import { BackIcon }          from '@ui/icons'

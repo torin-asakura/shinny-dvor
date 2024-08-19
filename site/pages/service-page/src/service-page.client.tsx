@@ -1,13 +1,13 @@
 'use client'
 
-import type { ServicePageClientProps } from './service-page.interfaces.js'
 import type { FC }                     from 'react'
 
-import { Footer }                      from '@fragments/footer-fragment'
-import { Navigation }                  from '@fragments/navigation-fragment'
+import type { ServicePageClientProps } from './service-page.interfaces.js'
 
 import React                           from 'react'
 
+import { Footer }                      from '@fragments/footer-fragment'
+import { Navigation }                  from '@fragments/navigation-fragment'
 import { Articles }                    from '@site/articles-fragment'
 import { Service }                     from '@site/service-fragment'
 import { Column }                      from '@ui/layout'
