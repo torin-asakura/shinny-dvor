@@ -1,18 +1,18 @@
-import { FC }              from 'react'
-import { memo }            from 'react'
-import React               from 'react'
+import type { ArticleProps } from './article.interface.js'
+import type { FC }           from 'react'
 
-import { ImageBlock }      from '@ui/image'
-import { Box }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Text }            from '@ui/text'
-import { TextEllipsis }    from '@ui/text'
-import { normalizeString } from '@shared/utils'
-import { formattedDate }   from '@shared/utils'
-import { useHover }        from '@ui/utils'
+import React                 from 'react'
+import { memo }              from 'react'
 
-import { ArticleProps }    from './article.interface.js'
+import { ImageBlock }        from '@ui/image'
+import { Box }               from '@ui/layout'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Text }              from '@ui/text'
+import { TextEllipsis }      from '@ui/text'
+import { normalizeString }   from '@shared/utils'
+import { formattedDate }     from '@shared/utils'
+import { useHover }          from '@ui/utils'
 
 const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt }) => {
   const [hover, hoverProps] = useHover()
@@ -20,7 +20,7 @@ const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt })
   return (
     <Box
       width={['100%', '100%', 405]}
-      // @ts-ignore
+      // @ts-expect-error
       cursor='pointer'
     >
       <Column width='100%' {...hoverProps}>

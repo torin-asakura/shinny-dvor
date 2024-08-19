@@ -1,6 +1,6 @@
 import type { ThemeType }      from '@ui/theme'
+import type { styleFn }        from 'styled-system'
 
-import { styleFn }             from 'styled-system'
 import { switchProp }          from 'styled-tools'
 import { prop }                from 'styled-tools'
 

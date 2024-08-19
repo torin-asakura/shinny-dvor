@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/react'
+import type { CSSObject } from '@emotion/react'
 
 export const baseContainerStyles: CSSObject = {
   position: 'absolute',

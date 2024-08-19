@@ -14,7 +14,7 @@ export const useIndexPageClient: UseIndexPageClientType = ({
     setTimeout(() => {
       isLoaded.current = true
     }, 200)
-  }, [])
+  }, [isLoaded])
 
   const { getObserverOptions } = useIntersectionObserver((id) => {
     const order = ['hero', 'services', 'articles', 'infographics', 'works-examples']
@@ -32,7 +32,7 @@ export const useIndexPageClient: UseIndexPageClientType = ({
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler, false)
     return () => window.removeEventListener('scroll', scrollHandler, false)
-  }, [])
+  }, [scrollHandler])
 
   return { getObserverOptions }
 }

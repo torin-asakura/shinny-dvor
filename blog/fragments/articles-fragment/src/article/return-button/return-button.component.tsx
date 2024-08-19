@@ -1,17 +1,18 @@
-import { FC }                from 'react'
+import type { FC }                from 'react'
+
+import type { ReturnButtonProps } from './return-button.interface.js'
+
 // @ts-ignore:next-line
-import { useRouter }         from 'next/navigation'
-import { memo }              from 'react'
-import React                 from 'react'
+import { useRouter }              from 'next/navigation'
+import { memo }                   from 'react'
+import React                      from 'react'
 
-import { Button }            from '@ui/button'
-import { BackIcon }          from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Text }              from '@ui/text'
-import { useHover }          from '@ui/utils'
-
-import { ReturnButtonProps } from './return-button.interface.js'
+import { Button }                 from '@ui/button'
+import { BackIcon }               from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Text }                   from '@ui/text'
+import { useHover }               from '@ui/utils'
 
 const ReturnButton: FC<ReturnButtonProps> = memo(({ title }) => {
   const [hover, hoverProps] = useHover()

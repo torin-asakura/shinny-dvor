@@ -41,6 +41,6 @@ export interface Fragment {
 }
 
 export interface AllServicesProps {
-  servicesData: Service[]
-  fragmentsData: Fragment[]
+  servicesData: Array<Service>
+  fragmentsData: Array<Fragment>
 }

@@ -1,22 +1,24 @@
-import { FC }          from 'react'
-import { useState }    from 'react'
-import React           from 'react'
+import type { FC }        from 'react'
 
-import { Button }      from '@ui/button'
-import { Card }        from '@ui/card'
-import { CloseIcon }   from '@ui/icons'
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Text }        from '@ui/text'
-import { useHover }    from '@ui/utils'
-import { usePopover }  from '@ui/utils'
+import type { KnobProps } from './knob.interface.js'
 
-import { Container }   from './container/index.js'
-import { InnerCircle } from './inner-circle/index.js'
-import { KnobProps }   from './knob.interface.js'
-import { OuterCircle } from './outer-circle/index.js'
+import { useState }       from 'react'
+import React              from 'react'
+
+import { Button }         from '@ui/button'
+import { Card }           from '@ui/card'
+import { CloseIcon }      from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useHover }       from '@ui/utils'
+import { usePopover }     from '@ui/utils'
+
+import { Container }      from './container/index.js'
+import { InnerCircle }    from './inner-circle/index.js'
+import { OuterCircle }    from './outer-circle/index.js'
 
 const Knob: FC<KnobProps> = ({ text, ...props }) => {
   const [hover, hoverProps] = useHover()

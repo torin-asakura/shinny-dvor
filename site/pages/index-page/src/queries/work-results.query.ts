@@ -25,7 +25,7 @@ const GET_WORK_RESULTS = gql`
   }
 `
 
-const runWorkResultsQuery = async () => {
+export const runWorkResultsQuery = async () => {
   const client = getClient()
 
   const { data } = await client.query({
@@ -40,5 +40,3 @@ const runWorkResultsQuery = async () => {
 
   return { workResults: [] }
 }
-
-export { runWorkResultsQuery }

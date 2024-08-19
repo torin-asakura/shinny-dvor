@@ -1,5 +1,6 @@
-import type { FragmentInt }   from './fragment.interface.js'
 import type { ContactAddons } from '@fragments/footer-fragment'
+
+import type { FragmentInt }   from './fragment.interface.js'
 
 // TODO typecheck needed
 export interface DataInt {

@@ -1,8 +1,9 @@
-import type { SeoProps }         from './post-page.interfaces.js'
 import type { FC }               from 'react'
 
-import React                     from 'react'
+import type { SeoProps }         from './post-page.interfaces.js'
+
 import { default as BaseHelmet } from 'react-helmet'
+import React                     from 'react'
 
 const Helmet = BaseHelmet as unknown as FC<any>
 

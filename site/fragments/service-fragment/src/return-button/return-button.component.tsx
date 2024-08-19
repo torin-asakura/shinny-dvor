@@ -1,16 +1,16 @@
-import { FC }                from 'react'
-// @ts-ignore:next-line
-import { useRouter }         from 'next/navigation'
-import { useState }          from 'react'
-import React                 from 'react'
+import type { ReturnButtonProps } from './return-button.interface.js'
+import type { FC }                from 'react'
 
-import { Button }            from '@ui/button'
-import { BackIcon }          from '@ui/icons'
-import { Box }               from '@ui/layout'
-import { Layout }            from '@ui/layout'
-import { Text }              from '@ui/text'
+import React                      from 'react'
+// @ts-expect-error
+import { useRouter }              from 'next/navigation'
+import { useState }               from 'react'
 
-import { ReturnButtonProps } from './return-button.interface.js'
+import { Button }                 from '@ui/button'
+import { BackIcon }               from '@ui/icons'
+import { Box }                    from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Text }                   from '@ui/text'
 
 const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
   const [onHover, setOnHover] = useState(false)
@@ -24,7 +24,7 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
         alignItems='center'
         onMouseOver={() => setOnHover(true)}
         onMouseLeave={() => setOnHover(false)}
-        onClick={() => router.replace('/services')}
+        onClick={(): void => router.replace('/services')}
       >
         <Layout>
           <BackIcon width={12} height={24} color={onHover ? 'blue' : 'black'} />
