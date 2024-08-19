@@ -31,9 +31,6 @@ export const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) =>
   const navigationItems = extractFragments('blog-nav-item', 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
-  console.log(navigationItems)
-  console.log(mainPage)
-
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
   const address = contactsObj?.address

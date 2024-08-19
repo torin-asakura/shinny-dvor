@@ -1,6 +1,8 @@
+import type { NavigationProps } from './navigation.interface.js'
+
+import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
-import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -20,7 +22,6 @@ import { screenVar }            from '@store/booking'
 
 import { NavigationListMobile } from './navigation-list-mobile/index.js'
 import { NavigationList }       from './navigation-list/index.js'
-import { NavigationProps }      from './navigation.interface.js'
 
 const Navigation: FC<NavigationProps> = ({
   navigationData,

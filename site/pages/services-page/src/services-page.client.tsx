@@ -3,12 +3,12 @@
 import type { ServicesPageClientProps } from './services-page.interface.js'
 
 import { Footer }                       from '@fragments/footer-fragment'
+import { Navigation }                   from '@fragments/navigation-fragment'
 
 import React                            from 'react'
 import { FC }                           from 'react'
 
 import { AllServices }                  from '@site/all-services-fragment'
-import { Navigation }                   from '@site/navigation-fragment'
 import { Column }                       from '@ui/layout'
 
 import { Seo }                          from './seo.component.js'

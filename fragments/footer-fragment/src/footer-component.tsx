@@ -22,17 +22,18 @@ import { normalizeString }  from '@shared/utils'
 import { useNavigation }    from './data/index.js'
 import { stringSeparator }  from './helpers/index.js'
 
-export const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
+export const Footer: FC<FooterProps> = memo(({
+  contactsData,
+  fragmentsData,
+  navigationItemsType = 'nav-item',
+}) => {
   const navigation = useNavigation()
 
   const byObj = extractFragment('contentAddons', 'by', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
-  const navigationItems = extractFragments('blog-nav-item', 'contentAddons', navigation)
+  const navigationItems = extractFragments(navigationItemsType, 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
-
-  console.log(navigationItems)
-  console.log(mainPage)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone

@@ -3,12 +3,12 @@
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 
 import { Footer }                       from '@fragments/footer-fragment'
+import { Navigation }                   from '@fragments/navigation-fragment'
 
 import React                            from 'react'
 import { FC }                           from 'react'
 
 import { Contacts }                     from '@site/contacts-fragment'
-import { Navigation }                   from '@site/navigation-fragment'
 import { Column }                       from '@ui/layout'
 
 import { Seo }                          from './seo.component.js'

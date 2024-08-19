@@ -3,6 +3,7 @@
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 
 import { Footer }                    from '@fragments/footer-fragment'
+import { Navigation }                from '@fragments/navigation-fragment'
 
 import React                         from 'react'
 import { FC }                        from 'react'
@@ -11,7 +12,6 @@ import { useState }                  from 'react'
 
 import { Articles }                  from '@site/articles-fragment'
 import { Hero }                      from '@site/hero-fragment'
-import { Navigation }                from '@site/navigation-fragment'
 import { Services }                  from '@site/services-fragment'
 import { ServicesInfographics }      from '@site/services-infographics-fragment'
 import { WorksExamples }             from '@site/works-examples-fragment'

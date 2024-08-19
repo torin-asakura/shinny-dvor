@@ -30,9 +30,6 @@ const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
-  console.log(navigationItems)
-  console.log(mainPage)
-
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
   const address = contactsObj?.address

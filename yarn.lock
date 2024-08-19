@@ -1031,8 +1031,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
-    "@blog/navigation-fragment": "workspace:*"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -1055,9 +1055,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/navigation-fragment@workspace:*, @blog/navigation-fragment@workspace:blog/fragments/navigation-fragment":
+"@blog/navigation-fragment@workspace:blog/fragments/_navigation-fragment":
   version: 0.0.0-use.local
-  resolution: "@blog/navigation-fragment@workspace:blog/fragments/navigation-fragment"
+  resolution: "@blog/navigation-fragment@workspace:blog/fragments/_navigation-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
@@ -1098,8 +1098,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
-    "@blog/navigation-fragment": "workspace:*"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -1566,6 +1566,43 @@ __metadata:
     "@ui/logo": "workspace:*"
     "@ui/social-links": "workspace:*"
     "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/navigation-fragment@workspace:*, @fragments/navigation-fragment@workspace:fragments/navigation-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
+  dependencies:
+    "@apollo/client": "npm:3.11.3"
+    "@emotion/react": "npm:^11.13.0"
+    "@emotion/styled": "npm:11.13.0"
+    "@fragments/booking-fragment": "workspace:*"
+    "@globals/data": "workspace:*"
+    "@store/actions": "workspace:*"
+    "@store/booking": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/button": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/drawer": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layer": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/link": "workspace:*"
+    "@ui/logo": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
@@ -3017,10 +3054,10 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/contacts-fragment": "workspace:*"
-    "@site/navigation-fragment": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-helmet": "npm:6.1.11"
@@ -3124,10 +3161,10 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@site/articles-fragment": "workspace:*"
     "@site/hero-fragment": "workspace:*"
-    "@site/navigation-fragment": "workspace:*"
     "@site/services-fragment": "workspace:*"
     "@site/services-infographics-fragment": "workspace:*"
     "@site/works-examples-fragment": "workspace:*"
@@ -3153,9 +3190,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/navigation-fragment@workspace:*, @site/navigation-fragment@workspace:site/fragments/navigation-fragment":
+"@site/navigation-fragment@workspace:site/fragments/_navigation-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/navigation-fragment@workspace:site/fragments/navigation-fragment"
+  resolution: "@site/navigation-fragment@workspace:site/fragments/_navigation-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:^11.13.0"
@@ -3263,10 +3300,10 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/articles-fragment": "workspace:*"
-    "@site/navigation-fragment": "workspace:*"
     "@site/service-fragment": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -3352,11 +3389,11 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@fragments/footer-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/all-services-fragment": "workspace:*"
     "@site/articles-fragment": "workspace:*"
-    "@site/navigation-fragment": "workspace:*"
     "@site/service-fragment": "workspace:*"
     "@store/services": "workspace:*"
     "@types/react": "npm:18.3.3"
