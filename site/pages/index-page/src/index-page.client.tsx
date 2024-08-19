@@ -2,13 +2,14 @@
 
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 
+import { Footer }                    from '@fragments/footer-fragment'
+
+import React                         from 'react'
 import { FC }                        from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
-import React                         from 'react'
 
 import { Articles }                  from '@site/articles-fragment'
-import { Footer }                    from '@site/footer-fragment'
 import { Hero }                      from '@site/hero-fragment'
 import { Navigation }                from '@site/navigation-fragment'
 import { Services }                  from '@site/services-fragment'

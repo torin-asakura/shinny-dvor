@@ -2,11 +2,12 @@
 
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 
-import { FC }                           from 'react'
+import { Footer }                       from '@fragments/footer-fragment'
+
 import React                            from 'react'
+import { FC }                           from 'react'
 
 import { Contacts }                     from '@site/contacts-fragment'
-import { Footer }                       from '@site/footer-fragment'
 import { Navigation }                   from '@site/navigation-fragment'
 import { Column }                       from '@ui/layout'
 

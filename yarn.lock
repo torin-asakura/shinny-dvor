@@ -980,9 +980,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/footer-fragment@workspace:*, @blog/footer-fragment@workspace:blog/fragments/footer-fragment, @blog/footer-fragment@workspaces:*":
+"@blog/footer-fragment@workspace:blog/fragments/_footer-fragment, @blog/footer-fragment@workspaces:*":
   version: 0.0.0-use.local
-  resolution: "@blog/footer-fragment@workspace:blog/fragments/footer-fragment"
+  resolution: "@blog/footer-fragment@workspace:blog/fragments/_footer-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
@@ -1031,8 +1031,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
-    "@blog/footer-fragment": "workspace:*"
     "@blog/navigation-fragment": "workspace:*"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -1098,8 +1098,8 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
-    "@blog/footer-fragment": "workspace:*"
     "@blog/navigation-fragment": "workspace:*"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -1541,6 +1541,33 @@ __metadata:
     "@ui/utils": "workspace:0.0.1"
     react: "npm:18.3.1"
     react-dom: "npm:^18.3.1"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/footer-fragment@workspace:*, @fragments/footer-fragment@workspace:fragments/footer-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/footer-fragment@workspace:fragments/footer-fragment"
+  dependencies:
+    "@apollo/client": "npm:3.11.3"
+    "@emotion/react": "npm:11.13.0"
+    "@globals/data": "workspace:*"
+    "@shared/utils": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/divider": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/link": "workspace:*"
+    "@ui/logo": "workspace:*"
+    "@ui/social-links": "workspace:*"
+    "@ui/text": "workspace:*"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2989,10 +3016,10 @@ __metadata:
   resolution: "@site/contacts-page@workspace:site/pages/contacts-page"
   dependencies:
     "@apollo/client": "npm:3.11.3"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/contacts-fragment": "workspace:*"
-    "@site/footer-fragment": "workspace:*"
     "@site/navigation-fragment": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -3013,9 +3040,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/footer-fragment@workspace:*, @site/footer-fragment@workspace:site/fragments/footer-fragment":
+"@site/footer-fragment@workspace:site/fragments/_footer-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/footer-fragment@workspace:site/fragments/footer-fragment"
+  resolution: "@site/footer-fragment@workspace:site/fragments/_footer-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
@@ -3096,9 +3123,9 @@ __metadata:
   resolution: "@site/index-page@workspace:site/pages/index-page"
   dependencies:
     "@apollo/client": "npm:3.11.3"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@site/articles-fragment": "workspace:*"
-    "@site/footer-fragment": "workspace:*"
     "@site/hero-fragment": "workspace:*"
     "@site/navigation-fragment": "workspace:*"
     "@site/services-fragment": "workspace:*"
@@ -3235,10 +3262,10 @@ __metadata:
   resolution: "@site/service-page@workspace:site/pages/service-page"
   dependencies:
     "@apollo/client": "npm:3.11.3"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/articles-fragment": "workspace:*"
-    "@site/footer-fragment": "workspace:*"
     "@site/navigation-fragment": "workspace:*"
     "@site/service-fragment": "workspace:*"
     "@types/react": "npm:18.3.3"
@@ -3324,11 +3351,11 @@ __metadata:
   resolution: "@site/services-page@workspace:site/pages/services-page"
   dependencies:
     "@apollo/client": "npm:3.11.3"
+    "@fragments/footer-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/all-services-fragment": "workspace:*"
     "@site/articles-fragment": "workspace:*"
-    "@site/footer-fragment": "workspace:*"
     "@site/navigation-fragment": "workspace:*"
     "@site/service-fragment": "workspace:*"
     "@store/services": "workspace:*"

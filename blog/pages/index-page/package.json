@@ -9,8 +9,8 @@
   "main": "src/index.ts",
   "dependencies": {
     "@blog/articles-fragment": "workspace:*",
-    "@blog/footer-fragment": "workspace:*",
     "@blog/navigation-fragment": "workspace:*",
+    "@fragments/footer-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/layout": "workspace:*"

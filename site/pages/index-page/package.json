@@ -8,9 +8,9 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/footer-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/articles-fragment": "workspace:*",
-    "@site/footer-fragment": "workspace:*",
     "@site/hero-fragment": "workspace:*",
     "@site/navigation-fragment": "workspace:*",
     "@site/services-fragment": "workspace:*",

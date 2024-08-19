@@ -1,6 +1,7 @@
+import type { FooterProps } from './footer.interface.js'
+import type { FC }          from 'react'
+
 import React                from 'react'
-import { FC }               from 'react'
-import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -17,18 +18,20 @@ import { extractFragment }  from '@globals/data'
 import { extractFragments } from '@globals/data'
 import { normalizeString }  from '@shared/utils'
 
-import { FooterProps }      from './footer.interface.js'
 import { useNavigation }    from './data/index.js'
 import { stringSeparator }  from './helpers/index.js'
 
-const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
+const Footer: FC<FooterProps> = ({ contactsData, fragmentsData }) => {
   const navigation = useNavigation()
 
   const byObj = extractFragment('contentAddons', 'by', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
-  const navigationItems = extractFragments('blog-nav-item', 'contentAddons', navigation)
+  const navigationItems = extractFragments('nav-item', 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
+
+  console.log(navigationItems)
+  console.log(mainPage)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
@@ -36,6 +39,7 @@ const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
   const workingHours = contactsObj?.workinghours
   const linkVk = contactsObj?.linkVk
   const linkFb = contactsObj?.linkFb
+
   const by = new Map()
   by.set('title', byObj?.title)
   by.set('content', byObj?.highlightedtext)
@@ -53,15 +57,11 @@ const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
             <Layout flexBasis={[24, 24, 40]} />
             <Row justifyContent='space-between' alignItems='center'>
               <Box width='100%'>
-                <FooterLogo path={mainPage?.content} />
+                <FooterLogo path='/' />
                 <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
                   <Layout flexBasis={60} />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                    {navigationItems.map(({
-                      contentAddons: { title, content },
-                    }: {
-                      contentAddons: { title: string; content: string }
-                    }) => (
+                    {navigationItems.map(({ contentAddons: { title, content } }) => (
                       <NextLink key={title} path={content}>
                         <Layout>
                           <Text color='black' fontWeight='medium'>
@@ -210,6 +210,6 @@ const Footer: FC<FooterProps> = memo(({ contactsData, fragmentsData }) => {
       </Column>
     </Box>
   )
-})
+}
 
 export { Footer }

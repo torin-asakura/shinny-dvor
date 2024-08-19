@@ -8,10 +8,10 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/footer-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@shared/utils": "workspace:*",
     "@site/articles-fragment": "workspace:*",
-    "@site/footer-fragment": "workspace:*",
     "@site/navigation-fragment": "workspace:*",
     "@site/service-fragment": "workspace:*",
     "@ui/layout": "workspace:*"
