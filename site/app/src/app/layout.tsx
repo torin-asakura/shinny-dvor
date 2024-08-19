@@ -1,13 +1,13 @@
 import type { FC }                      from 'react'
 import type { PropsWithChildren }       from 'react'
 
-import React                            from 'react'
+import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
 
-import { RootLayout as BaseRootLayout } from '@site/root-layout-fragment'
+import React                            from 'react'
 
 import messages                         from '../../locales/ru.json'
 
-export { generateMetadata } from '@site/root-layout-fragment'
+export { generateMetadata } from '@fragments/root-layout-fragment'
 
 const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'
 

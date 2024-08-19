@@ -1,3 +1,3 @@
 'use client'
 
-export { default } from '@blog/global-error-fragment'
+export { default } from '@fragments/global-error-fragment'

@@ -925,10 +925,10 @@ __metadata:
     "@apollo/client": "npm:3.11.3"
     "@atls/next-document-with-gtag": "npm:0.1.1"
     "@atls/next-document-with-helmet": "npm:0.3.1"
-    "@blog/global-error-fragment": "workspace:*"
     "@blog/index-page": "workspace:*"
     "@blog/post-page": "workspace:*"
-    "@blog/root-layout-fragment": "workspace:*"
+    "@fragments/global-error-fragment": "workspace:*"
+    "@fragments/root-layout-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
@@ -1007,9 +1007,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/global-error-fragment@workspace:*, @blog/global-error-fragment@workspace:blog/fragments/global-error-fragment":
+"@blog/global-error-fragment@workspace:blog/fragments/_global-error-fragment":
   version: 0.0.0-use.local
-  resolution: "@blog/global-error-fragment@workspace:blog/fragments/global-error-fragment"
+  resolution: "@blog/global-error-fragment@workspace:blog/fragments/_global-error-fragment"
   dependencies:
     "@sentry/nextjs": "npm:8.24.0"
     "@types/react": "npm:18.3.3"
@@ -1122,9 +1122,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@blog/root-layout-fragment@workspace:*, @blog/root-layout-fragment@workspace:blog/fragments/root-layout-fragment":
+"@blog/root-layout-fragment@workspace:blog/fragments/_root-layout-fragment":
   version: 0.0.0-use.local
-  resolution: "@blog/root-layout-fragment@workspace:blog/fragments/root-layout-fragment"
+  resolution: "@blog/root-layout-fragment@workspace:blog/fragments/_root-layout-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
@@ -1577,6 +1577,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@fragments/global-error-fragment@workspace:*, @fragments/global-error-fragment@workspace:fragments/global-error-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/global-error-fragment@workspace:fragments/global-error-fragment"
+  dependencies:
+    "@sentry/nextjs": "npm:8.24.0"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+  peerDependencies:
+    "@sentry/nextjs": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
 "@fragments/navigation-fragment@workspace:*, @fragments/navigation-fragment@workspace:fragments/navigation-fragment":
   version: 0.0.0-use.local
   resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
@@ -1611,6 +1629,34 @@ __metadata:
     "@emotion/styled": "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@fragments/root-layout-fragment@workspace:*, @fragments/root-layout-fragment@workspace:fragments/root-layout-fragment":
+  version: 0.0.0-use.local
+  resolution: "@fragments/root-layout-fragment@workspace:fragments/root-layout-fragment"
+  dependencies:
+    "@apollo/client": "npm:3.11.3"
+    "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
+    "@globals/data": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@ui/gtag": "workspace:*"
+    "@ui/progress-bar": "workspace:*"
+    "@ui/theme": "workspace:*"
+    next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@apollo/client": "*"
+    "@emotion/react": "*"
+    "@emotion/styled": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 
@@ -2968,14 +3014,14 @@ __metadata:
     "@apollo/client": "npm:3.11.3"
     "@atls/next-document-with-gtag": "npm:0.1.1"
     "@atls/next-document-with-helmet": "npm:0.3.1"
+    "@fragments/global-error-fragment": "workspace:*"
+    "@fragments/root-layout-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
     "@sentry/utils": "npm:8.24.0"
     "@site/contacts-page": "workspace:*"
-    "@site/global-error-fragment": "workspace:*"
     "@site/index-page": "workspace:*"
-    "@site/root-layout-fragment": "workspace:*"
     "@site/service-page": "workspace:*"
     "@site/services-page": "workspace:*"
     "@types/node": "npm:22.1.0"
@@ -3104,9 +3150,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/global-error-fragment@workspace:*, @site/global-error-fragment@workspace:site/fragments/global-error-fragment":
+"@site/global-error-fragment@workspace:site/fragments/_global-error-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/global-error-fragment@workspace:site/fragments/global-error-fragment"
+  resolution: "@site/global-error-fragment@workspace:site/fragments/_global-error-fragment"
   dependencies:
     "@sentry/nextjs": "npm:8.24.0"
     "@types/react": "npm:18.3.3"
@@ -3227,9 +3273,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@site/root-layout-fragment@workspace:*, @site/root-layout-fragment@workspace:site/fragments/root-layout-fragment":
+"@site/root-layout-fragment@workspace:site/fragments/_root-layout-fragment":
   version: 0.0.0-use.local
-  resolution: "@site/root-layout-fragment@workspace:site/fragments/root-layout-fragment"
+  resolution: "@site/root-layout-fragment@workspace:site/fragments/_root-layout-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
