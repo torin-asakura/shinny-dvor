@@ -2,6 +2,6 @@ import { useContext } from 'react'
 
 import { Context }    from './context.js'
 
-const useActive = () => useContext(Context)
+const useActive = (): string => useContext(Context)
 
 export { useActive }

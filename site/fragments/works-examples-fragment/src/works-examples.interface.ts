@@ -25,6 +25,6 @@ interface WorkResult {
 }
 
 export interface WorksExamplesProps {
-  fragmentsData: Fragment[]
-  workResultsData: WorkResult[]
+  fragmentsData: Array<Fragment>
+  workResultsData: Array<WorkResult>
 }

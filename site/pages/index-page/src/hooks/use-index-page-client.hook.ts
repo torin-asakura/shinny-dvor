@@ -23,15 +23,16 @@ export const useIndexPageClient: UseIndexPageClientType = ({
     }
   })
 
-  const scrollHandler = () => {
+  const scrollHandler = (): void => {
     const y = headerRef!.current!.getBoundingClientRect()
-
     setScrollY(y.y)
   }
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler, false)
-    return () => window.removeEventListener('scroll', scrollHandler, false)
+    return () => {
+      window.removeEventListener('scroll', scrollHandler, false)
+    }
   }, [scrollHandler])
 
   return { getObserverOptions }

@@ -6,15 +6,16 @@ import { createTextStyles }       from './factories/index.js'
 import { createTransitionStyles } from './factories/index.js'
 
 const getBaseStyles = (): styleFn => {
-  const baseStyles = createBaseStyles()
+  const baseStyles: () => styleFn = createBaseStyles()
   const textStyles = createTextStyles()
   const transitionStyles = createTransitionStyles('.1s')
 
-  return () => ({
-    ...baseStyles(),
-    ...textStyles(),
-    ...transitionStyles(),
-  })
+  return () =>
+    ({
+      ...baseStyles(),
+      ...textStyles(),
+      ...transitionStyles(),
+    }) as Record<string, string>
 }
 
 export { getBaseStyles }

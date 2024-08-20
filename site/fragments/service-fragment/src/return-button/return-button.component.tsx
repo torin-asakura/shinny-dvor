@@ -2,8 +2,7 @@ import type { ReturnButtonProps } from './return-button.interface.js'
 import type { FC }                from 'react'
 
 import React                      from 'react'
-// @ts-expect-error
-import { useRouter }              from 'next/navigation'
+import { useRouter }              from 'next/navigation.js'
 import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
@@ -17,14 +16,26 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
 
   const router = useRouter()
 
+  const handlerMouseOver = (): void => {
+    setOnHover(true)
+  }
+
+  const handlerMouseLeave = (): void => {
+    setOnHover(false)
+  }
+
+  const handlerClick = (): void => {
+    router.replace('/services')
+  }
+
   return (
     <Button color='blueText' size='ghost'>
       <Box
         width={102}
         alignItems='center'
-        onMouseOver={() => setOnHover(true)}
-        onMouseLeave={() => setOnHover(false)}
-        onClick={(): void => router.replace('/services')}
+        onMouseOver={handlerMouseOver}
+        onMouseLeave={handlerMouseLeave}
+        onClick={handlerClick}
       >
         <Layout>
           <BackIcon width={12} height={24} color={onHover ? 'blue' : 'black'} />

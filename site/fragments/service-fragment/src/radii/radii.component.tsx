@@ -1,6 +1,5 @@
-import type { FC }         from 'react'
-
 import type { RadiiProps } from './radii.interface.js'
+import type { FC }         from 'react'
 
 import React               from 'react'
 
@@ -21,7 +20,7 @@ const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
             <Box
               minWidth={61}
               flexGrow={[0, 0, 1]}
-              onClick={() => {
+              onClick={(): void => {
                 setSelectedItem(title)
               }}
             >

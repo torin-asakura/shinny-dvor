@@ -21,6 +21,6 @@ interface Fragment {
 }
 
 export interface AllArticlesProps {
-  fragmentsData: Fragment[]
-  postsData: Post[]
+  fragmentsData: Array<Fragment>
+  postsData: Array<Post>
 }

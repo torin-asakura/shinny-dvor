@@ -9697,6 +9697,7 @@ const RAW_RUNTIME_STATE =
           ["@types/styled-tools", null],\
           ["@ui/button", "virtual:b1a1d1432afb956a602edbab8b6ae19cdcf289b9a6879aa15ed01baeb57cebe5533ae24e92af0fd547dc3f7681003608c21541fb8f5c7b4c56eac07d84580125#workspace:ui/button"],\
           ["@ui/layout", "virtual:e03a5869bbfca61cd1ef7ab8793bd5d702f240d231a9cda69ecd5b5c53fd83f496ef2375005a2664b99e941afad0f6bfda91ed5a4c124654f7c84f0583ed19e6#workspace:ui/layout"],\
+          ["@ui/theme", "virtual:00f8051cec0a545477e9af847ec972799362b59f0329907b9bf6daa5f9318202151f95b402c955338e2288ab7424c82410b1127faf4fd9f6b6904dcd8b9fd52a#workspace:ui/theme"],\
           ["framer-motion", "virtual:d7d5308d9a9c7b64740f918d13d935738e9b9469fa5cd7c2a77cf9ea8eccef5c1ee6ea59f6651af73405b455c983afd9453407ca4f5bd0c2c46110e617db7175#npm:11.3.22"],\
           ["global", "npm:4.4.0"],\
           ["nanoid", "npm:5.0.7"],\
@@ -9741,6 +9742,7 @@ const RAW_RUNTIME_STATE =
           ["@types/styled-tools", null],\
           ["@ui/button", "virtual:b1a1d1432afb956a602edbab8b6ae19cdcf289b9a6879aa15ed01baeb57cebe5533ae24e92af0fd547dc3f7681003608c21541fb8f5c7b4c56eac07d84580125#workspace:ui/button"],\
           ["@ui/layout", "virtual:e03a5869bbfca61cd1ef7ab8793bd5d702f240d231a9cda69ecd5b5c53fd83f496ef2375005a2664b99e941afad0f6bfda91ed5a4c124654f7c84f0583ed19e6#workspace:ui/layout"],\
+          ["@ui/theme", "virtual:00f8051cec0a545477e9af847ec972799362b59f0329907b9bf6daa5f9318202151f95b402c955338e2288ab7424c82410b1127faf4fd9f6b6904dcd8b9fd52a#workspace:ui/theme"],\
           ["framer-motion", "virtual:d7d5308d9a9c7b64740f918d13d935738e9b9469fa5cd7c2a77cf9ea8eccef5c1ee6ea59f6651af73405b455c983afd9453407ca4f5bd0c2c46110e617db7175#npm:11.3.22"],\
           ["global", "npm:4.4.0"],\
           ["nanoid", "npm:5.0.7"],\
@@ -9777,6 +9779,7 @@ const RAW_RUNTIME_STATE =
           ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/button", "virtual:b1a1d1432afb956a602edbab8b6ae19cdcf289b9a6879aa15ed01baeb57cebe5533ae24e92af0fd547dc3f7681003608c21541fb8f5c7b4c56eac07d84580125#workspace:ui/button"],\
           ["@ui/layout", "virtual:e03a5869bbfca61cd1ef7ab8793bd5d702f240d231a9cda69ecd5b5c53fd83f496ef2375005a2664b99e941afad0f6bfda91ed5a4c124654f7c84f0583ed19e6#workspace:ui/layout"],\
+          ["@ui/theme", "virtual:00f8051cec0a545477e9af847ec972799362b59f0329907b9bf6daa5f9318202151f95b402c955338e2288ab7424c82410b1127faf4fd9f6b6904dcd8b9fd52a#workspace:ui/theme"],\
           ["framer-motion", "virtual:d7d5308d9a9c7b64740f918d13d935738e9b9469fa5cd7c2a77cf9ea8eccef5c1ee6ea59f6651af73405b455c983afd9453407ca4f5bd0c2c46110e617db7175#npm:11.3.22"],\
           ["global", "npm:4.4.0"],\
           ["nanoid", "npm:5.0.7"],\

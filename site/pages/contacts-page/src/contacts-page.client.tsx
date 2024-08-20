@@ -1,8 +1,8 @@
 'use client'
 
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
+import type { FC }                      from 'react'
 
-import { FC }                           from 'react'
 import React                            from 'react'
 
 import { Footer }                       from '@fragments/footer-fragment'

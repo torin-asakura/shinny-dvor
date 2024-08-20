@@ -14,7 +14,7 @@ import { normalizeString }   from '@shared/utils'
 import { formattedDate }     from '@shared/utils'
 import { useHover }          from '@ui/utils'
 
-const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt }) => {
+const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt }: ArticleProps) => {
   const [hover, hoverProps] = useHover()
 
   return (

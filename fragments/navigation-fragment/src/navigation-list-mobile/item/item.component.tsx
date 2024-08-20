@@ -1,12 +1,13 @@
-import { FC }          from 'react'
-import React           from 'react'
+import type { ItemProps } from './item.interface.js'
+import type { FC }        from 'react'
 
-import { Row }         from '@ui/layout'
-import { NextNavLink } from '@ui/link'
-import { Text }        from '@ui/text'
+import React              from 'react'
 
-import { ItemProps }   from './item.interface.js'
-import { getColor }    from '../../helpers/index.js'
+import { Row }            from '@ui/layout'
+import { NextNavLink }    from '@ui/link'
+import { Text }           from '@ui/text'
+
+import { getColor }       from '../../helpers/index.js'
 
 const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Row>

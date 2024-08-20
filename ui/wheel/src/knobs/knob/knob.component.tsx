@@ -1,9 +1,8 @@
+import type { KnobProps } from './knob.interface.js'
 import type { FC }        from 'react'
 
-import type { KnobProps } from './knob.interface.js'
-
-import { useState }       from 'react'
 import React              from 'react'
+import { useState }       from 'react'
 
 import { Button }         from '@ui/button'
 import { Card }           from '@ui/card'
@@ -57,7 +56,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
       </Layout>
       <Layout display={['flex', 'flex', 'none']}>
         <Layout
-          onClick={() => {
+          onClick={(): void => {
             setCard(!card)
             setActive(!active)
           }}
@@ -68,7 +67,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
         </Layout>
         <Card
           active={card}
-          onClose={() => {
+          onClose={(): void => {
             setCard(false)
             setActive(false)
           }}
@@ -86,7 +85,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
                   <Button
                     color='transparent'
                     size='ghost'
-                    onClick={() => {
+                    onClick={(): void => {
                       setActive(false)
                       setCard(false)
                     }}

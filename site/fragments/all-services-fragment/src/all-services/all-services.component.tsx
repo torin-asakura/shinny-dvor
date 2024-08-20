@@ -1,7 +1,6 @@
-import type { FC }               from 'react'
-
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -15,7 +14,7 @@ import { extractFragments }      from '@globals/data'
 
 import { Item }                  from '../item/index.js'
 
-const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
+export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
 
   const services = extractFragments('service-item', 'servicesParams', servicesData)
@@ -61,5 +60,3 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
     </Box>
   )
 }
-
-export { AllServices }

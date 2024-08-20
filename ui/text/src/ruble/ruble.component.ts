@@ -1,4 +1,5 @@
 import styled            from '@emotion/styled'
+
 import { createElement } from 'react'
 import { color }         from 'styled-system'
 
@@ -9,4 +10,4 @@ const Span = styled.span(
   color
 )
 
-export const Ruble = () => createElement(Span, {}, '\u20BD')
+export const Ruble = (): JSX.Element => createElement(Span, {}, '\u20BD')

@@ -1,30 +1,29 @@
-import type { SlideProps }         from '@ui/slider'
-import type { FC }                 from 'react'
+import type { WorksExamplesProps }   from './works-examples.interface.js'
+import type { SlideProps }           from '@ui/slider'
+import type { FC }                   from 'react'
+import type { Swiper as SwiperCore } from 'swiper'
 
-import type { WorksExamplesProps } from './works-examples.interface.js'
+import React                         from 'react'
+import { Children }                  from 'react'
+import { useState }                  from 'react'
+import { forwardRef }                from 'react'
+import { useMemo }                   from 'react'
 
-import { Children }                from 'react'
-import { Swiper as SwiperCore }    from 'swiper'
-import { useState }                from 'react'
-import { forwardRef }              from 'react'
-import { useMemo }                 from 'react'
-import React                       from 'react'
-
-import { Button }                  from '@ui/button'
-import { ArrowLeftIcon }           from '@ui/icons'
-import { ArrowRightIcon }          from '@ui/icons'
-import { Box }                     from '@ui/layout'
-import { Row }                     from '@ui/layout'
-import { Layout }                  from '@ui/layout'
-import { Column }                  from '@ui/layout'
-import { Pagination }              from '@ui/slider'
-import { Slider }                  from '@ui/slider'
-import { SwiperInstanceExporter }  from '@ui/slider'
-import { Slide }                   from '@ui/slider'
-import { SwiperSlide }             from '@ui/slider'
-import { Text }                    from '@ui/text'
-import { extractFragment }         from '@globals/data'
-import { extractFragments }        from '@globals/data'
+import { Button }                    from '@ui/button'
+import { ArrowLeftIcon }             from '@ui/icons'
+import { ArrowRightIcon }            from '@ui/icons'
+import { Box }                       from '@ui/layout'
+import { Row }                       from '@ui/layout'
+import { Layout }                    from '@ui/layout'
+import { Column }                    from '@ui/layout'
+import { Pagination }                from '@ui/slider'
+import { Slider }                    from '@ui/slider'
+import { SwiperInstanceExporter }    from '@ui/slider'
+import { Slide }                     from '@ui/slider'
+import { SwiperSlide }               from '@ui/slider'
+import { Text }                      from '@ui/text'
+import { extractFragment }           from '@globals/data'
+import { extractFragments }          from '@globals/data'
 
 export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   { fragmentsData, workResultsData },
@@ -67,7 +66,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   )
 
   return (
-    <Box width='100%' height={[609, 609, 976]} backgroundColor='fillGray' ref={ref}>
+    <Box ref={ref} width='100%' height={[609, 609, 976]} backgroundColor='fillGray'>
       <Row justifyContent='center' alignItems='center' overflow='hidden'>
         <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
         <Column width='100%' alignItems='center'>
@@ -97,7 +96,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
               <Button
                 color='transparent'
                 size='ghost'
-                onClick={() => {
+                onClick={(): void => {
                   controlsSwiper?.slidePrev()
                 }}
               >
@@ -113,7 +112,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
               <Button
                 color='transparent'
                 size='ghost'
-                onClick={() => {
+                onClick={(): void => {
                   controlsSwiper?.slideNext()
                 }}
               >

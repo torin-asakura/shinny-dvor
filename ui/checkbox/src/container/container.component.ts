@@ -1,10 +1,11 @@
-import styled             from '@emotion/styled'
+import type { ContainerProps } from './container.interface.js'
 
-import { Box }            from '@ui/layout'
+import styled                  from '@emotion/styled'
 
-import { ContainerProps } from './container.interface.js'
-import { baseStyles }     from './container.styles.js'
-import { shapeStyles }    from './container.styles.js'
+import { Box }                 from '@ui/layout'
+
+import { baseStyles }          from './container.styles.js'
+import { shapeStyles }         from './container.styles.js'
 
 const Container = styled(Box)<ContainerProps>(baseStyles, shapeStyles)
 

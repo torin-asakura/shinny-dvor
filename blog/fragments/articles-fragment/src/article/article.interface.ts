@@ -27,6 +27,6 @@ interface Post {
 }
 
 export interface ArticleProps {
-  fragmentsData: Fragment[]
+  fragmentsData: Array<Fragment>
   postData: Post
 }

@@ -1,11 +1,13 @@
+import type { SlideProps }                  from './slide.interface.js'
 import type { FC }                          from 'react'
 
+import styled                               from '@emotion/styled'
 import { useSwiperSlide }                   from '@atls-ui-parts/swiper'
 import { useSwiper }                        from '@atls-ui-parts/swiper'
-import styled                               from '@emotion/styled'
+
+import React                                from 'react'
 import { default as BaseReactCompareImage } from 'react-compare-image'
 import { useEffect }                        from 'react'
-import React                                from 'react'
 
 import { Condition }                        from '@ui/condition'
 import { Layout }                           from '@ui/layout'
@@ -17,7 +19,6 @@ import { Space }                            from '@ui/text'
 import { Ruble }                            from '@ui/text'
 
 import { Handle }                           from '../handle/index.js'
-import { SlideProps }                       from './slide.interface.js'
 import { Wrapper }                          from './wrapper/index.js'
 import { baseContainerStyles }              from './styles/index.js'
 

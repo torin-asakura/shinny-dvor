@@ -1,6 +1,5 @@
-import type { FC }               from 'react'
-
 import type { WorkExampleProps } from './work-example.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -13,17 +12,12 @@ import { Text }                  from '@ui/text'
 import { Space }                 from '@ui/text'
 import { Ruble }                 from '@ui/text'
 
-const WorkExample: FC<WorkExampleProps> = ({ image, title, price }) => (
+const WorkExample: FC<WorkExampleProps> = ({ image, title, price }: WorkExampleProps) => (
   <Row width={[300, 300, 385]} height={[282, 282, 430]}>
     <Column fill height='auto'>
       <Layout flexBasis={[0, 0, 24]} />
       <Box width={[300, 300, 385]} height={[230, 230, 320]} borderRadius='mini' overflow='hidden'>
-        <ImageBlock
-          src={image ? image!.sourceUrl : ''}
-          alt={image ? image!.altText : ''}
-          width={405}
-          height='100%'
-        />
+        <ImageBlock src={image.sourceUrl} alt={image.altText} width={405} height='100%' />
       </Box>
       <Layout flexBasis={16} flexShrink={0} />
       <Layout>
