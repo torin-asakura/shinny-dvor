@@ -1,4 +1,6 @@
-import { FC }                  from 'react'
+import type { ContactsProps }  from './contacts.interface.js'
+import type { FC }             from 'react'
+
 import React                   from 'react'
 
 import { Box }                 from '@ui/layout'
@@ -9,7 +11,6 @@ import { Map }                 from '@ui/map'
 import { Text }                from '@ui/text'
 
 import { ContactsInformation } from './contacts-information/index.js'
-import { ContactsProps }       from './contacts.interface.js'
 import { MapComponent }        from './map/index.js'
 import { useContacts }         from './hooks/index.js'
 

@@ -1,4 +1,4 @@
-const doNothing = () => {
+const doNothing = (): void => {
   // do nothing
 }
 

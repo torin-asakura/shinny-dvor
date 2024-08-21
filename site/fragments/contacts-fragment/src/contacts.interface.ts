@@ -19,8 +19,8 @@ interface Fragment {
 }
 
 export interface ContactsProps {
-  contactsData: ContactAddons[]
-  fragmentsData: Fragment[]
+  contactsData: Array<ContactAddons>
+  fragmentsData: Array<Fragment>
 }
 
 export type ContactsDataType = {

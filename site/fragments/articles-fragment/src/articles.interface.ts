@@ -29,7 +29,7 @@ export interface NavigationItem {
 }
 
 export interface ArticlesProps {
-  postsData: Article[]
-  fragmentsData: Fragment[]
-  navigationData: NavigationItem[]
+  postsData: Array<Article>
+  fragmentsData: Array<Fragment>
+  navigationData: Array<NavigationItem>
 }

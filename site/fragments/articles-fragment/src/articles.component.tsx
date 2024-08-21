@@ -1,9 +1,9 @@
 import type { ArticlesProps }  from './articles.interface.js'
 import type { NavigationItem } from './articles.interface.js'
+import type { FC }             from 'react'
 
-import { FC }                  from 'react'
-import { forwardRef }          from 'react'
 import React                   from 'react'
+import { forwardRef }          from 'react'
 
 import { Box }                 from '@ui/layout'
 import { Row }                 from '@ui/layout'
@@ -35,11 +35,11 @@ const Articles: FC<ArticlesProps> = forwardRef((
 
   return (
     <Box
+      ref={ref}
       width='100%'
       height={[569, 569, 693]}
       backgroundColor='fillGray'
       justifyContent='center'
-      ref={ref}
     >
       <Box width='100%' maxWidth={['100%', '100%', 1440]} justifyContent='space-between'>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
