@@ -52,43 +52,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:^3.11.3":
-  version: 3.11.4
-  resolution: "@apollo/client@npm:3.11.4"
-  dependencies:
-    "@graphql-typed-document-node/core": "npm:^3.1.1"
-    "@wry/caches": "npm:^1.0.0"
-    "@wry/equality": "npm:^0.5.6"
-    "@wry/trie": "npm:^0.5.0"
-    graphql-tag: "npm:^2.12.6"
-    hoist-non-react-statics: "npm:^3.3.2"
-    optimism: "npm:^0.18.0"
-    prop-types: "npm:^15.7.2"
-    rehackt: "npm:^0.1.0"
-    response-iterator: "npm:^0.2.6"
-    symbol-observable: "npm:^4.0.0"
-    ts-invariant: "npm:^0.10.3"
-    tslib: "npm:^2.3.0"
-    zen-observable-ts: "npm:^1.2.5"
-  peerDependencies:
-    graphql: ^15.0.0 || ^16.0.0
-    graphql-ws: ^5.5.5
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || >=19.0.0-rc <19.0.0
-    subscriptions-transport-ws: ^0.9.0 || ^0.11.0
-  peerDependenciesMeta:
-    graphql-ws:
-      optional: true
-    react:
-      optional: true
-    react-dom:
-      optional: true
-    subscriptions-transport-ws:
-      optional: true
-  checksum: 10/fe6e8e0125510867e7f3863ebd8383f425276167f313d661d93855171fec93b0fd812f3cc0326d1a0dbf91c6edf36de427af195c767f432f6d5baa3e82374354
-  languageName: node
-  linkType: hard
-
 "@atls-ui-generators/button@npm:0.0.22":
   version: 0.0.22
   resolution: "@atls-ui-generators/button@npm:0.0.22"
@@ -189,7 +152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/checkbox@npm:0.1.1, @atls-ui-parts/checkbox@npm:^0.1.1":
+"@atls-ui-parts/checkbox@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/checkbox@npm:0.1.1"
   dependencies:
@@ -929,6 +892,7 @@ __metadata:
     "@blog/post-page": "workspace:*"
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
+    "@globals/configs": "workspace:*"
     "@globals/data": "workspace:*"
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
@@ -1171,7 +1135,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.13.0, @emotion/react@npm:^11.13.0":
+"@emotion/react@npm:11.13.0":
   version: 11.13.0
   resolution: "@emotion/react@npm:11.13.0"
   dependencies:
@@ -1212,7 +1176,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:11.13.0, @emotion/styled@npm:^11.13.0":
+"@emotion/styled@npm:11.13.0":
   version: 11.13.0
   resolution: "@emotion/styled@npm:11.13.0"
   dependencies:
@@ -1406,16 +1370,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@fragments/booking-fragment@workspace:fragments/booking-fragment"
   dependencies:
-    "@apollo/client": "npm:^3.11.3"
-    "@emotion/react": "npm:^11.13.0"
-    "@emotion/styled": "npm:^11.13.0"
+    "@apollo/client": "npm:3.11.3"
+    "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
     "@globals/data": "workspace:0.0.1"
     "@shared/utils": "workspace:0.0.1"
     "@store/actions": "workspace:0.0.1"
     "@store/booking": "workspace:0.0.1"
     "@store/services": "workspace:0.0.1"
-    "@types/react": "npm:^18.3.3"
-    "@types/react-dom": "npm:^18.3.0"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/button": "workspace:0.0.1"
     "@ui/condition": "workspace:0.0.1"
     "@ui/divider": "workspace:0.0.1"
@@ -1490,7 +1454,7 @@ __metadata:
   resolution: "@fragments/navigation-fragment@workspace:fragments/navigation-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
-    "@emotion/react": "npm:^11.13.0"
+    "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@fragments/booking-fragment": "workspace:*"
     "@globals/data": "workspace:*"
@@ -1550,13 +1514,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@globals/configs@workspace:*, @globals/configs@workspace:globals/configs":
+  version: 0.0.0-use.local
+  resolution: "@globals/configs@workspace:globals/configs"
+  dependencies:
+    "@sentry/nextjs": "npm:8.24.0"
+    next: "npm:14.2.5"
+  peerDependencies:
+    next: "*"
+  languageName: unknown
+  linkType: soft
+
 "@globals/data@workspace:*, @globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
-    "@apollo/client": "npm:^3.11.3"
+    "@apollo/client": "npm:3.11.3"
     "@fragments/footer-fragment": "workspaces:*"
-    graphql: "npm:^16.9.0"
+    graphql: "npm:16.9.0"
     react: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
@@ -2869,8 +2844,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
   dependencies:
-    "@types/luxon": "npm:^3.4.2"
-    luxon: "npm:^3.5.0"
+    "@types/luxon": "npm:3.4.2"
+    luxon: "npm:3.5.0"
   languageName: unknown
   linkType: soft
 
@@ -2943,6 +2918,7 @@ __metadata:
     "@atls/next-document-with-helmet": "npm:0.3.1"
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
+    "@globals/configs": "workspace:*"
     "@globals/data": "workspace:*"
     "@sentry/nextjs": "npm:8.24.0"
     "@sentry/react": "npm:8.24.0"
@@ -3004,7 +2980,7 @@ __metadata:
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:^18.3.0"
+    "@types/react-dom": "npm:18.3.0"
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/link": "workspace:*"
@@ -3055,7 +3031,7 @@ __metadata:
   resolution: "@site/hero-fragment@workspace:site/fragments/hero-fragment"
   dependencies:
     "@apollo/client": "npm:3.11.3"
-    "@emotion/react": "npm:^11.13.0"
+    "@emotion/react": "npm:11.13.0"
     "@fragments/booking-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@store/actions": "workspace:*"
@@ -3311,7 +3287,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/actions@workspace:store/actions"
   dependencies:
-    "@apollo/client": "npm:^3.11.3"
+    "@apollo/client": "npm:3.11.3"
     "@store/booking": "workspace:0.0.1"
     react: "npm:18.3.1"
   peerDependencies:
@@ -3324,7 +3300,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/booking@workspace:store/booking"
   dependencies:
-    "@apollo/client": "npm:^3.11.3"
+    "@apollo/client": "npm:3.11.3"
     react: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
@@ -3336,7 +3312,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@store/services@workspace:store/services"
   dependencies:
-    "@apollo/client": "npm:^3.11.3"
+    "@apollo/client": "npm:3.11.3"
     react: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
@@ -4038,7 +4014,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/luxon@npm:^3.4.2":
+"@types/luxon@npm:3.4.2":
   version: 3.4.2
   resolution: "@types/luxon@npm:3.4.2"
   checksum: 10/fd89566e3026559f2bc4ddcc1e70a2c16161905ed50be9473ec0cfbbbe919165041408c4f6e06c4bcf095445535052e2c099087c76b1b38e368127e618fc968d
@@ -4131,7 +4107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.3.0, @types/react-dom@npm:^18.3.0":
+"@types/react-dom@npm:18.3.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
   dependencies:
@@ -4471,7 +4447,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
-    "@atls-ui-parts/checkbox": "npm:^0.1.1"
+    "@atls-ui-parts/checkbox": "npm:0.1.1"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -4500,7 +4476,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
-    "@types/react": "npm:^18.3.3"
+    "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     framer-motion: "npm:11.3.22"
     react: "npm:18.3.1"
@@ -4527,7 +4503,7 @@ __metadata:
     "@types/styled-system": "npm:5.1.22"
     "@ui/layout": "workspace:0.0.1"
     react: "npm:18.3.1"
-    react-dom: "npm:^18.3.1"
+    react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
@@ -7906,7 +7882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.9.0, graphql@npm:^16.9.0":
+"graphql@npm:16.9.0":
   version: 16.9.0
   resolution: "graphql@npm:16.9.0"
   checksum: 10/5833f82bb6c31bec120bbf9cd400eda873e1bb7ef5c17974fa262cd82dc68728fda5d4cb859dc8aaa4c4fe4f6fe1103a9c47efc01a12c02ae5cb581d8e4029e2
@@ -9456,7 +9432,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"luxon@npm:^3.5.0":
+"luxon@npm:3.5.0":
   version: 3.5.0
   resolution: "luxon@npm:3.5.0"
   checksum: 10/48f86e6c1c96815139f8559456a3354a276ba79bcef0ae0d4f2172f7652f3ba2be2237b0e103b8ea0b79b47715354ac9fac04eb1db3485dcc72d5110491dd47f
