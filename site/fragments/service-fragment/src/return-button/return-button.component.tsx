@@ -3,6 +3,7 @@ import type { FC }                from 'react'
 
 import React                      from 'react'
 import { useRouter }              from 'next/navigation.js'
+import { memo }                   from 'react'
 import { useState }               from 'react'
 
 import { Button }                 from '@ui/button'
@@ -11,7 +12,7 @@ import { Box }                    from '@ui/layout'
 import { Layout }                 from '@ui/layout'
 import { Text }                   from '@ui/text'
 
-const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
+const ReturnButton: FC<ReturnButtonProps> = memo(({ title }) => {
   const [onHover, setOnHover] = useState(false)
 
   const router = useRouter()
@@ -47,6 +48,6 @@ const ReturnButton: FC<ReturnButtonProps> = ({ title }) => {
       </Box>
     </Button>
   )
-}
+})
 
 export { ReturnButton }

@@ -2,6 +2,7 @@ import type { ContactsProps }  from './contacts.interface.js'
 import type { FC }             from 'react'
 
 import React                   from 'react'
+import { memo }                from 'react'
 
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
@@ -14,7 +15,7 @@ import { ContactsInformation } from './contacts-information/index.js'
 import { MapComponent }        from './map/index.js'
 import { useContacts }         from './hooks/index.js'
 
-const Contacts: FC<ContactsProps> = (props) => {
+const Contacts: FC<ContactsProps> = memo((props) => {
   const contactsInformationData = useContacts(props)
   const { contactsTitle } = contactsInformationData
 
@@ -49,6 +50,6 @@ const Contacts: FC<ContactsProps> = (props) => {
       <Layout flexBasis={[0, 0, 80]} />
     </Column>
   )
-}
+})
 
 export { Contacts }

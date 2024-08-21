@@ -1,38 +1,31 @@
-import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
-import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
-import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'
-import styled                          from '@emotion/styled'
-import { FC }                          from 'react'
-import React                           from 'react'
+import type { CheckboxProps } from './checkbox.interface.js'
+import type { FC }            from 'react'
 
-import { CheckIcon }                   from '@ui/icons'
+import React                  from 'react'
+import { memo }               from 'react'
 
-import { Box }                         from './box/index.js'
-import { CheckboxProps }               from './checkbox.interface.js'
-import { Container }                   from './container/index.js'
-import { Label }                       from './label/index.js'
+import { CheckIcon }          from '@ui/icons'
 
-const doNothing = () => {
-  // do nothing
-}
+import { Box }                from './box/index.js'
+import { Checkmark }          from './checkmark/index.js'
+import { Container }          from './container/index.js'
+import { Label }              from './label/index.js'
 
-const Checkmark = styled.div(
-  createCheckBaseStyles(),
-  createCheckAppearanceStyles({
-    color: 'white',
-  }),
-  createCheckShapeStyles({
-    size: 20,
-  })
-)
+export const Checkbox: FC<CheckboxProps> = memo(({ children, active, onCheck }) => {
+  const handleClick = () => {
+    if (onCheck) {
+      onCheck(!active)
+    }
+  }
 
-export const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = () => doNothing() }) => (
-  <Container onClick={() => onCheck(!active)}>
-    <Box checked={active}>
-      <Checkmark>
-        <CheckIcon width={17} height={18} />
-      </Checkmark>
-    </Box>
-    <Label>{children}</Label>
-  </Container>
-)
+  return (
+    <Container onClick={handleClick}>
+      <Box checked={active}>
+        <Checkmark>
+          <CheckIcon width={17} height={18} />
+        </Checkmark>
+      </Box>
+      <Label>{children}</Label>
+    </Container>
+  )
+})

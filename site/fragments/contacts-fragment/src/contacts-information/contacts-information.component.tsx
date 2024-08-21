@@ -1,8 +1,8 @@
+import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
 
-import type { ContactsInformationProps } from './contacts-information.interface.js'
-
 import React                             from 'react'
+import { memo }                          from 'react'
 
 import { Layout }                        from '@ui/layout'
 import { Column }                        from '@ui/layout'
@@ -12,7 +12,7 @@ import { Link }                          from '@ui/link'
 import { SocialLinks }                   from '@ui/social-links'
 import { Text }                          from '@ui/text'
 
-export const ContactsInformation: FC<ContactsInformationProps> = (props) => {
+export const ContactsInformation: FC<ContactsInformationProps> = memo((props) => {
   const { contactsData } = props
 
   const {
@@ -76,4 +76,4 @@ export const ContactsInformation: FC<ContactsInformationProps> = (props) => {
       </Box>
     </Column>
   )
-}
+})

@@ -4,6 +4,7 @@ import type { FC }            from 'react'
 import React                  from 'react'
 import { FormattedPlural }    from 'react-intl'
 import { FormattedMessage }   from 'react-intl'
+import { memo }               from 'react'
 import { useEffect }          from 'react'
 
 import { Divider }            from '@ui/divider'
@@ -20,7 +21,7 @@ import { formattedDate }      from '@shared/utils'
 
 import { ReturnButton }       from './return-button/index.js'
 
-const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
+const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
   const { postId, content, title, date, viewCount, contentAddons } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
@@ -121,6 +122,6 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
       </Row>
     </Column>
   )
-}
+})
 
 export { Article }
