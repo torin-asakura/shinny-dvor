@@ -1,1 +1,1 @@
-export { default } from './global-error.component.js'
+export * from './global-error.component.js'

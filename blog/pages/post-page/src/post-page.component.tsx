@@ -5,9 +5,7 @@ import React                  from 'react'
 import { PostPageClient }     from './post-page.client.js'
 import { PostPageServer }     from './post-page.server.js'
 
-const PostPage: PostPageProps = async ({ params }) => {
+export const PostPage: PostPageProps = async ({ params }) => {
   const postPageData = await PostPageServer({ params })
   return <PostPageClient {...postPageData} />
 }
-
-export default PostPage
