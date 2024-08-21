@@ -8,7 +8,6 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.13.0",
     "@fragments/booking-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@store/actions": "workspace:*",
@@ -26,6 +25,7 @@
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",
+    "@emotion/react": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "react": "18.3.1",

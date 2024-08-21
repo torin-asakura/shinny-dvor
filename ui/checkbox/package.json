@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/checkbox": "^0.1.1",
+    "@atls-ui-parts/checkbox": "0.1.1",
     "@ui/condition": "workspace:0.0.1",
     "@ui/icons": "workspace:0.0.1",
     "@ui/layout": "workspace:0.0.1",
