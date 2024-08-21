@@ -5,7 +5,7 @@ const doNothing = (): void => {
   // do nothing
 }
 
-const useIntersectionObserver = (onIntersection: (id: string) => void = doNothing): void => {
+const useIntersectionObserver = (onIntersection: (id: string) => void = doNothing) => {
   const observers: Map<string, { ref: any }> = new Map()
 
   const getObserverOptions = (id: string): { ref: any } => {
