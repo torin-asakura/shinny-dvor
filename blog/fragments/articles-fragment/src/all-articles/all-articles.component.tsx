@@ -1,18 +1,20 @@
-import { FC }               from 'react'
-import React                from 'react'
+import type { AllArticlesProps } from './all-articles.interface.js'
+import type { FC }               from 'react'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
-import { extractFragment }  from '@globals/data'
+import React                     from 'react'
+import { memo }                  from 'react'
 
-import { AllArticlesProps } from './all-articles.interface.js'
-import { Article }          from './article/index.js'
+import { Box }                   from '@ui/layout'
+import { Row }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { NextLink }              from '@ui/link'
+import { Text }                  from '@ui/text'
+import { extractFragment }       from '@globals/data'
 
-const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
+import { Article }               from './article/index.js'
+
+const AllArticles: FC<AllArticlesProps> = memo(({ fragmentsData, postsData }: AllArticlesProps) => {
   const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   return (
@@ -37,6 +39,6 @@ const AllArticles: FC<AllArticlesProps> = ({ fragmentsData, postsData }) => {
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
     </Box>
   )
-}
+})
 
 export { AllArticles }

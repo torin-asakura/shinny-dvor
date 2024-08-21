@@ -2,24 +2,35 @@
   "name": "@ui/radio",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/checkbox": "^0.0.3",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@ui/condition": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "react": "^17.0.2"
+    "@atls-ui-parts/checkbox": "0.1.1",
+    "@emotion/react": "11.13.0",
+    "@emotion/styled": "11.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/styled-system": "5.1.22",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "react": "*"
+    "react": "*",
+    "react-dom": "*",
+    "styled-system": "*",
+    "styled-tools": "*"
   }
 }

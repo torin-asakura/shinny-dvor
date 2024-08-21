@@ -1,17 +1,24 @@
-import React         from 'react'
-import { FC }        from 'react'
+import type { ItemProps }         from './item.interface.js'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Button }    from '@ui/button'
-import { Box }       from '@ui/layout'
-import { Text }      from '@ui/text'
+import React                      from 'react'
 
-import { ItemProps } from './item.interface'
-import { useActive } from '../context'
+import { Button }                 from '@ui/button'
+import { Box }                    from '@ui/layout'
+import { Text }                   from '@ui/text'
 
-const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
+import { useActive }              from '../context/index.js'
+
+export const Item: FC<PropsWithChildren<ItemProps>> = ({ children, onSelect, value }) => {
   const active = useActive()
+
   if (!active) {
     throw new Error('Switch: Missing <Switch> component for <Item>')
+  }
+
+  const handleClick = (): void => {
+    onSelect(value)
   }
 
   return (
@@ -21,15 +28,9 @@ const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
       alignItems='center'
       justifyContent='center'
       borderRadius='small'
-      backgroundColor={active === value ? 'primaryBlue' : undefined}
+      backgroundColor={active === value ? 'primaryBlue' : ''}
     >
-      <Button
-        color='transparent'
-        size='small'
-        height='100%'
-        width='100%'
-        onClick={() => onSelect(value)}
-      >
+      <Button color='transparent' size='small' height='100%' width='100%' onClick={handleClick}>
         <Text color={active === value ? 'white' : 'black'} fontWeight='bold' fontSize='small'>
           {children}
         </Text>
@@ -37,4 +38,3 @@ const Item: FC<ItemProps> = ({ children, onSelect, value }) => {
     </Box>
   )
 }
-export { Item }

@@ -1,19 +1,21 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { forwardRef }       from 'react'
+import type { ArticlesProps }  from './articles.interface.js'
+import type { NavigationItem } from './articles.interface.js'
+import type { FC }             from 'react'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
-import { Text }             from '@ui/text'
-import { extractFragment }  from '@globals/data'
-import { extractFragments } from '@globals/data'
+import React                   from 'react'
+import { forwardRef }          from 'react'
 
-import { ArticlesProps }    from './articles.interface'
-import { Carousel }         from './carousel'
-import { PreviewArticle }   from './preview-article'
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { NextLink }            from '@ui/link'
+import { Text }                from '@ui/text'
+import { extractFragment }     from '@globals/data'
+import { extractFragments }    from '@globals/data'
+
+import { Carousel }            from './carousel/index.js'
+import { PreviewArticle }      from './preview-article/index.js'
 
 const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },
@@ -26,15 +28,18 @@ const Articles: FC<ArticlesProps> = forwardRef((
   ).title
 
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
-  const linkBlog = navigationItems.filter(({ contentAddons }) => contentAddons.title === 'Блог')[0]
+  const linkBlog = navigationItems.filter(
+    ({ contentAddons }: { contentAddons: NavigationItem['contentAddons'] }) =>
+      contentAddons.title === 'Блог'
+  )[0]
 
   return (
     <Box
+      ref={ref}
       width='100%'
       height={[569, 569, 693]}
       backgroundColor='fillGray'
       justifyContent='center'
-      ref={ref}
     >
       <Box width='100%' maxWidth={['100%', '100%', 1440]} justifyContent='space-between'>
         <Layout flexBasis={[20, 20, 80]} flexShrink={0} />

@@ -10,13 +10,15 @@ import { Column }                      from '@ui/layout'
 import { Text }                        from '@ui/text'
 import { useHover }                    from '@ui/utils'
 
-import { Container }                   from './container'
-import { RadioProps }                  from './radio.interface'
-import { getCheckColor }               from './helper'
+import { Container }                   from './container/index.js'
+import { RadioProps }                  from './radio.interface.js'
+import { getCheckColor }               from './helper/index.js'
 
 const Radio: FC<RadioProps> = ({ children, checked, textTransform = 'lowercase' }) => {
   const [hover, hoverProps] = useHover()
+
   const RadioStyled = styled.div<{ checked: boolean }>(createCheckBaseStyles())
+
   const Checkmark = styled.div(
     createCheckBaseStyles(),
     createCheckAppearanceStyles({

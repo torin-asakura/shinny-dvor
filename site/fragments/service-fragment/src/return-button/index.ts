@@ -1,1 +1,1 @@
-export * from './return-button.component'
+export * from './return-button.component.js'

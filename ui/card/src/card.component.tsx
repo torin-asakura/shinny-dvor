@@ -1,12 +1,15 @@
-import React         from 'react'
-import { FC }        from 'react'
-import { motion }    from 'framer-motion'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Backdrop }  from './backdrop'
-import { CardProps } from './card.interface'
-import { Renderer }  from './renderer'
+import type { CardProps }         from './card.interface.js'
 
-const Card: FC<CardProps> = ({ children, active, onClose }) => (
+import { motion }                 from 'framer-motion'
+import React                      from 'react'
+
+import { Backdrop }               from './backdrop/index.js'
+import { Renderer }               from './renderer/index.js'
+
+const Card: FC<PropsWithChildren<CardProps>> = ({ children, active, onClose }) => (
   <Renderer active={active}>
     <motion.div
       style={{ position: 'fixed', left: 0, bottom: 0, width: '100%', height: '100%', zIndex: 800 }}

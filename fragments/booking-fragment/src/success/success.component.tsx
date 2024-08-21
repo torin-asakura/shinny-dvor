@@ -1,5 +1,5 @@
-import React               from 'react'
 import { FC }              from 'react'
+import React               from 'react'
 
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
@@ -11,7 +11,7 @@ import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
-import { SuccessProps }    from './success.interface'
+import { SuccessProps }    from './success.interface.js'
 
 const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(

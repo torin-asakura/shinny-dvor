@@ -1,1 +1,1 @@
-export * from './use-submit.hook'
+export * from './use-submit.hook.js'

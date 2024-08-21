@@ -1,3 +1,1 @@
-export interface SliderProps {
-  children: any
-}
+export interface SliderProps {}

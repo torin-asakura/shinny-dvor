@@ -26,7 +26,7 @@ const getRadii = async () => {
   return Object.values(services)
 }
 
-const runServiceQuery = async (uri) => {
+const runServiceQuery = async (uri: string) => {
   const client = getClient()
 
   const { data } = await client.query({

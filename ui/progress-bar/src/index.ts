@@ -1,2 +1,2 @@
-export * from './progress-bar'
-export * from './styles'
+export * from './progress-bar.js'
+export * from './styles/index.js'

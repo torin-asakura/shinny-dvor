@@ -1,8 +1,9 @@
+import type { ThemeType }    from '@ui/theme'
+import type { styleFn }      from 'styled-system'
+
 import { createShapeStyles } from '@atls-ui-parts/button'
 
-import { styleFn }           from 'styled-system'
-
-const getLargeSizeStyles = (theme): styleFn => {
+const getLargeSizeStyles = (theme: ThemeType): styleFn => {
   const largeSizeStyles = createShapeStyles({
     size: 56,
     fontSize: 16,

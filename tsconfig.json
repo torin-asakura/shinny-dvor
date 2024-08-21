@@ -1,5 +1,15 @@
 {
-  "include": ["site/**/*", "ui/**/*", "blog/**/*", "prices/**/*"],
+  "include": [
+    "project.types.d.ts",
+    "site/**/*",
+    "ui/**/*",
+    "blog/**/*",
+    "prices/**/*",
+    "store/**/*",
+    "shared/**/*",
+    "globals/**/*",
+    "fragments/**/*"
+  ],
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
@@ -9,12 +19,12 @@
     "forceConsistentCasingInFileNames": true,
     "importHelpers": false,
     "isolatedModules": false,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "pretty": true,
@@ -22,7 +32,9 @@
     "resolveJsonModule": true,
     "strict": true,
     "sourceMap": false,
-    "target": "es2019",
-    "jsx": "react"
+    "target": "ES2022",
+    "jsx": "react",
+    "strictPropertyInitialization": false,
+    "outDir": "./dist"
   }
 }

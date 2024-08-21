@@ -2,15 +2,23 @@
   "name": "@ui/intersection-observer",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "devDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
-    "react": "^17.0.2"
+    "@emotion/react": "11.13.0",
+    "@emotion/styled": "11.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "react": "*"
+    "react": "*",
+    "react-dom": "*"
   }
 }

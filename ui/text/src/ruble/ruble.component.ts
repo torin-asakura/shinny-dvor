@@ -10,4 +10,4 @@ const Span = styled.span(
   color
 )
 
-export const Ruble = () => createElement(Span, {}, '\u20BD')
+export const Ruble = (): JSX.Element => createElement(Span, {}, '\u20BD')

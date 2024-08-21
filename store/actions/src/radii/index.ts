@@ -1,1 +1,1 @@
-export * from './validate-button.action'
+export * from './validate-button.action.js'

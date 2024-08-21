@@ -1,2 +1,2 @@
-export * from './switch.component'
-export * from './item'
+export * from './switch.component.js'
+export * from './item/index.js'

@@ -1,8 +1,10 @@
 interface Fragment {
-  title: string
-  content: string
-  highlightedtext: string
-  fragmentId: string
+  contentAddons: {
+    title: string
+    content: string
+    highlightedtext: string
+    fragmentId: string
+  }
 }
 
 interface ContentAddons {
@@ -13,12 +15,12 @@ interface ContentAddons {
 }
 
 export interface ServiceProps {
-  fragmentsData: Fragment[]
-  carBodiesData: ContentAddons[]
+  fragmentsData: Array<Fragment>
+  carBodiesData: Array<ContentAddons>
   servicesData: any
   serviceData: any
   navigationData: any
-  availableRadiiData: ContentAddons[]
+  availableRadiiData: Array<ContentAddons>
 }
 
 export enum CarBodies {

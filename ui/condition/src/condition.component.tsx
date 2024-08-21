@@ -1,8 +1,11 @@
-import React               from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { motion }          from 'framer-motion'
+import React               from 'react'
 
-import { ConditionProps }  from './condition.interface'
+import { ConditionProps }  from './condition.interface.js'
+
+// what is a remove package?
+// 12 yrs old
 
 const Condition = ({
   match,

@@ -1,2 +1,2 @@
-export * from './queries'
-export * from './mutations'
+export * from './queries/index.js'
+export * from './mutations/index.js'

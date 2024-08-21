@@ -1,2 +1,2 @@
 export * from '@atls-ui-parts/image'
-export * from './image.component'
+export * from './image.component.js'

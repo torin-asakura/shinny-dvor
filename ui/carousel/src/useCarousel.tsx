@@ -5,10 +5,10 @@ import React                              from 'react'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
 
-import { UseCarouselOptions }             from './carousel.interface'
-import { Container }                      from './container'
-import { Slide }                          from './slide'
-import { Wrapper }                        from './wrapper'
+import { UseCarouselOptions }             from './carousel.interface.js'
+import { Container }                      from './container/index.js'
+import { Slide }                          from './slide/index.js'
+import { Wrapper }                        from './wrapper/index.js'
 
 export const useCarousel = ({
   children,

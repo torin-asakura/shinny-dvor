@@ -1,3 +1,3 @@
-export * from './appearance'
-export * from './base'
-export * from './shape'
+export * from './appearance/index.js'
+export * from './base/index.js'
+export * from './shape/index.js'

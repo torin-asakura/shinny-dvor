@@ -1,1 +1,1 @@
-export * from './handle.component'
+export * from './handle.component.js'

@@ -7,7 +7,7 @@ import React                     from 'react'
 
 const Helmet = BaseHelmet as unknown as FC<any>
 
-const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
+export const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
   const { title } = SEO
 
   return (
@@ -53,4 +53,3 @@ const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
     />
   )
 }
-export { Seo }

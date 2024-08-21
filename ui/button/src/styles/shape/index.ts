@@ -1,1 +1,1 @@
-export * from './shape.styles'
+export * from './shape.styles.js'

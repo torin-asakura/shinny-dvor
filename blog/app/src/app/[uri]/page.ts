@@ -1,2 +1,2 @@
-export { default } from '@blog/post-page'
-export const revalidate = 3600
+export { PostPage as default } from '@blog/post-page'
+export { revalidate } from '@blog/post-page'

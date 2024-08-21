@@ -1,1 +1,1 @@
-export * from './getCheckColor'
+export * from './get-check-color.js'

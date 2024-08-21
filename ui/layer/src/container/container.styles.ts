@@ -1,3 +1,3 @@
-import { createBaseStyles } from './base'
+import { createBaseStyles } from './base/index.js'
 
 export const baseStyles = createBaseStyles()

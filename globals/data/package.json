@@ -1,11 +1,19 @@
 {
   "name": "@globals/data",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
+  "dependencies": {
+    "@fragments/footer-fragment": "workspaces:*"
+  },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "graphql": "^15.5.1",
-    "react": "^17.0.2"
+    "@apollo/client": "^3.11.3",
+    "graphql": "^16.9.0",
+    "react": "18.3.1"
   },
   "peerDependencies": {
     "@apollo/client": "*",

@@ -1,26 +1,29 @@
+import type { LinkProps }          from './link.interfaces.js'
+import type { BaseLinkProps }      from './link.interfaces.js'
+
 import styled                      from '@emotion/styled'
 import { createBaseStyles }        from '@atls-ui-parts/link'
-import { createNextLink }          from '@atls-ui-parts/link'
-import { createNextNavLink }       from '@atls-ui-parts/link'
 
 import React                       from 'react'
 
 import { Text }                    from '@ui/text'
 
-import { activeNavLinkStyles }     from './next-nav-link.styles'
-import { appearanceNavLinkStyles } from './next-nav-link.styles'
-import { defaultNavLinkStyles }    from './next-nav-link.styles'
+import { useNextNavLink }          from './hooks/index.js'
+import { useNextLink }             from './hooks/index.js'
+import { activeNavLinkStyles }     from './next-nav-link.styles.js'
+import { appearanceNavLinkStyles } from './next-nav-link.styles.js'
+import { defaultNavLinkStyles }    from './next-nav-link.styles.js'
 
-const BaseLink = styled(Text.withComponent('a'))<{ active: boolean; theme: any }>(
-  createBaseStyles(),
-  ({ active, theme }) => ({
-    color: active ? theme.colors.darkBlue : theme.colors.black,
-    borderBottom: active ? theme.borders.blue : '',
-    paddingBottom: active ? '8px' : '',
-  })
-)
+const BaseLink = styled(Text.withComponent('a'))<BaseLinkProps>(createBaseStyles(), ({
+  active,
+  theme,
+}) => ({
+  color: active ? theme.colors.darkBlue : theme.colors.black,
+  borderBottom: active ? theme.borders.blue : '',
+  paddingBottom: active ? '8px' : '',
+}))
 
-export const Link = (props) => <BaseLink {...props} />
+export const Link: LinkProps = (props) => <BaseLink {...props} />
 
 export const NavLink = styled(Link)(
   appearanceNavLinkStyles,
@@ -28,12 +31,12 @@ export const NavLink = styled(Link)(
   activeNavLinkStyles
 )
 
-export const NextLink = (props) => {
-  const NextLinkRenderer = createNextLink(BaseLink)
+export const NextLink: LinkProps = (props) => {
+  const NextLinkRenderer = useNextLink(BaseLink)
   return <NextLinkRenderer {...props} />
 }
 
-export const NextNavLink = (props) => {
-  const NextNavLinkRenderer = createNextNavLink(NavLink)
+export const NextNavLink: LinkProps = (props) => {
+  const NextNavLinkRenderer = useNextNavLink(NavLink)
   return <NextNavLinkRenderer {...props} />
 }

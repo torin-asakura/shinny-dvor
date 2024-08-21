@@ -16,11 +16,11 @@ interface Fragment {
     title: string
     content: string
     fragmentId: string
-    highlightedtext: string
+    highlightedText: string
   }
 }
 
 export interface AllArticlesProps {
-  fragmentsData: Fragment[]
-  postsData: Post[]
+  fragmentsData: Array<Fragment>
+  postsData: Array<Post>
 }

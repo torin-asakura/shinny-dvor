@@ -1,10 +1,15 @@
-import { useState } from 'react'
-import { useLayer } from 'react-laag'
+import type { UsePopoverType } from './use-popover.interface.js'
+import type { SetTriggerType } from './use-popover.interface.js'
 
-const usePopover = (placement, offset = 9, trigger = 'click') => {
-  const [isOpen, setOpen] = useState<boolean>(false)
+import { useState }            from 'react'
+import { useLayer }            from 'react-laag'
 
-  const close = () => setOpen(false)
+const usePopover: UsePopoverType = (placement, offset = 9, trigger = 'click') => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const close = (): void => {
+    setIsOpen(false)
+  }
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
     isOpen,
@@ -15,22 +20,36 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
     triggerOffset: offset,
   })
 
-  const setTrigger = (value) => {
-    if (value === 'click') {
-      return { ...triggerProps, onClick: () => setOpen(!isOpen) }
+  const setTrigger: SetTriggerType = (value) => {
+    const handleClick = (): void => {
+      setIsOpen(!isOpen)
     }
+
+    const handleMouseEnter = (): void => {
+      setIsOpen(true)
+    }
+
+    const handlerMouseLeave = (): void => {
+      setIsOpen(false)
+    }
+
+    if (value === 'click') {
+      return { ...triggerProps, onClick: handleClick }
+    }
+
     if (value === 'hover') {
       return {
         ...triggerProps,
-        onMouseEnter: () => setOpen(true),
-        onMouseLeave: () => setOpen(false),
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handlerMouseLeave,
       }
     }
 
     return false
   }
 
-  const render = (children) => renderLayer(isOpen && children)
+  const render = (children: JSX.Element): ReturnType<typeof renderLayer> =>
+    renderLayer(isOpen && children)
 
   return {
     triggerProps: setTrigger(trigger),
@@ -43,7 +62,7 @@ const usePopover = (placement, offset = 9, trigger = 'click') => {
     },
     render,
     isOpen,
-    setOpen,
+    setOpen: setIsOpen,
   }
 }
 

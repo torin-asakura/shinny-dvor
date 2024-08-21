@@ -1,11 +1,11 @@
-import React              from 'react'
 import { FC }             from 'react'
+import React              from 'react'
 
 import { FooterLogoIcon } from '@ui/icons'
 import { Box }            from '@ui/layout'
 import { NextLink }       from '@ui/link'
 
-import { LogoProps }      from './logo.interface'
+import { LogoProps }      from './logo.interface.js'
 
 const FooterLogo: FC<LogoProps> = ({ path }) => (
   <NextLink path={path}>

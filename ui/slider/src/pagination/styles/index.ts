@@ -1,1 +1,1 @@
-export * from './transition-containter.styles'
+export * from './transition-containter.styles.js'

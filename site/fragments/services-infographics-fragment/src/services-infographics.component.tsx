@@ -1,13 +1,14 @@
-import React                         from 'react'
-import { LegacyRef }                 from 'react'
-import { FC }                        from 'react'
-import { forwardRef }                from 'react'
+import type { ServicesInfographicsProps } from './services-infographic.interface.js'
+import type { FC }                        from 'react'
+// TODO ?
+import type { LegacyRef }                 from 'react'
 
-import { Box }                       from '@ui/layout'
-import { Wheel }                     from '@ui/wheel'
-import { extractFragment }           from '@globals/data'
+import React                              from 'react'
+import { forwardRef }                     from 'react'
 
-import { ServicesInfographicsProps } from './services-infographic.interface'
+import { Box }                            from '@ui/layout'
+import { Wheel }                          from '@ui/wheel'
+import { extractFragment }                from '@globals/data'
 
 const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   { fragmentsData, uiData },
@@ -16,25 +17,33 @@ const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   const titles = new Map<string, string>()
   const wheelImg = new Map<string, string>()
 
-  titles.set('titleTop', extractFragment('contentAddons', 'info-title-top', fragmentsData).title)
-  titles.set(
-    'titleMiddle',
-    extractFragment('contentAddons', 'info-title-middle', fragmentsData).title
-  )
-  titles.set(
-    'titleBottom',
-    extractFragment('contentAddons', 'info-title-bottom', fragmentsData).title
-  )
-  wheelImg.set('altText', extractFragment('contentAddons', 'wheel', uiData).image.altText)
-  wheelImg.set('sourceUrl', extractFragment('contentAddons', 'wheel', uiData).image.sourceUrl)
+  const extractFragmentTitle = (position: string): string =>
+    extractFragment('contentAddons', position, fragmentsData).title
+
+  const titleTop = extractFragmentTitle('info-title-top')
+  const titleMiddle = extractFragmentTitle('info-title-middle')
+  const titleBottom = extractFragmentTitle('info-title-bottom')
+
+  titles.set('titleTop', titleTop)
+  titles.set('titleMiddle', titleMiddle)
+  titles.set('titleBottom', titleBottom)
+
+  const extractFragmentImageData = (dataType: string): string =>
+    extractFragment('contentAddons', 'wheel', uiData).image[dataType]
+
+  const whellImgAltText = extractFragmentImageData('altText')
+  const whellImgSourceUrl = extractFragmentImageData('sourceUrl')
+
+  wheelImg.set('altText', whellImgAltText)
+  wheelImg.set('sourceUrl', whellImgSourceUrl)
 
   return (
     <Box
+      ref={ref}
       width='100%'
       minHeight={[640, 640, 800]}
       justifyContent='center'
       alignItems='center'
-      ref={ref}
     >
       <Box width={[335, 335, 440]} height={[335, 335, 440]} position='relative'>
         <Wheel titles={titles} wheelImg={wheelImg} />

@@ -1,1 +1,1 @@
-export * from './all-services.component'
+export * from './all-services.component.js'
