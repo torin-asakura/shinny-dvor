@@ -1,14 +1,16 @@
+interface FeaturedImageInt {
+    node: {
+      altText: string
+      mediaItemUrl: string
+    }
+}
+
 export interface Post {
   date: string
   uri: string
   excerpt: string
   title: string
-  featuredImage: {
-    node: {
-      altText: string
-      mediaItemUrl: string
-    }
-  }
+  featuredImage: FeaturedImageInt
 }
 
 interface Fragment {

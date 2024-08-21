@@ -1,3 +1,11 @@
+interface FeaturedImageInt {
+  node: ImageInt
+}
+
+interface ContentAddonsInt {
+  image: ImageInt
+}
+
 interface ImageInt {
   mediaItemUrl: string
   altText: string
@@ -18,12 +26,8 @@ interface Post {
   title: string
   date: string
   viewCount: number
-  featuredImage: {
-    node: ImageInt
-  }
-  contentAddons: {
-    image: ImageInt
-  }
+  featuredImage: FeaturedImageInt
+  contentAddons: ContentAddonsInt
 }
 
 export interface ArticleProps {

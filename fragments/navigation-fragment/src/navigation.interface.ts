@@ -1,5 +1,3 @@
-import type { ContentAddonsInt } from '@globals/data'
-
 export interface NavigationItem {
   contentAddons: {
     title: string
