@@ -1,20 +1,20 @@
-import type { ItemProps }   from '../item/index.js'
+import type { ItemProps }        from '../item/index.js'
+import type { AllServicesProps } from './all-services.interface.js'
+import type { FC }               from 'react'
 
-import React                from 'react'
-import { FC }               from 'react'
+import React                     from 'react'
 
-import { Box }              from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Text }             from '@ui/text'
-import { extractFragment }  from '@globals/data'
-import { extractFragments } from '@globals/data'
+import { Box }                   from '@ui/layout'
+import { Row }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Text }                  from '@ui/text'
+import { extractFragment }       from '@globals/data'
+import { extractFragments }      from '@globals/data'
 
-import { Item }             from '../item/index.js'
-import { AllServicesProps } from './all-services.interface.js'
+import { Item }                  from '../item/index.js'
 
-const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
+export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
 
   const services = extractFragments('service-item', 'servicesParams', servicesData)
@@ -60,5 +60,3 @@ const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData }) => {
     </Box>
   )
 }
-
-export { AllServices }

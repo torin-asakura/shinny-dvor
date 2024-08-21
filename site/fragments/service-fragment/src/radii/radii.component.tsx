@@ -1,13 +1,13 @@
-import { FC }         from 'react'
-import React          from 'react'
+import type { RadiiProps } from './radii.interface.js'
+import type { FC }         from 'react'
 
-import { Box }        from '@ui/layout'
-import { Column }     from '@ui/layout'
-import { Layout }     from '@ui/layout'
-import { Row }        from '@ui/layout'
-import { Radio }      from '@ui/radio'
+import React               from 'react'
 
-import { RadiiProps } from './radii.interface.js'
+import { Box }             from '@ui/layout'
+import { Column }          from '@ui/layout'
+import { Layout }          from '@ui/layout'
+import { Row }             from '@ui/layout'
+import { Radio }           from '@ui/radio'
 
 const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
   <Box width='100%' border='grey' borderRadius='little'>
@@ -20,7 +20,7 @@ const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
             <Box
               minWidth={61}
               flexGrow={[0, 0, 1]}
-              onClick={() => {
+              onClick={(): void => {
                 setSelectedItem(title)
               }}
             >

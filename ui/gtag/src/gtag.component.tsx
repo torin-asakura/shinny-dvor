@@ -4,10 +4,11 @@ import type { FC }               from 'react'
 import React                     from 'react'
 // @ts-ignore:next-line
 import { default as BaseScript } from 'next/script'
+import { memo }                  from 'react'
 
 const Script = BaseScript as unknown as FC<any>
 
-export const Gtag: FC<GtagProps> = ({ gaTrackingId }) => {
+export const Gtag: FC<GtagProps> = memo(({ gaTrackingId }) => {
   const gtagRawString = `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,4 +25,4 @@ export const Gtag: FC<GtagProps> = ({ gaTrackingId }) => {
       }}
     />
   )
-}
+})

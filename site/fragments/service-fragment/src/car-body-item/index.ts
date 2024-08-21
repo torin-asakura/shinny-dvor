@@ -1,1 +1,1 @@
-export * from './car-body-item.js'
+export * from './car-body-item.component.js'

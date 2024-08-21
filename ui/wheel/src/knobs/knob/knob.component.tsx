@@ -1,22 +1,23 @@
-import { FC }          from 'react'
-import { useState }    from 'react'
-import React           from 'react'
+import type { KnobProps } from './knob.interface.js'
+import type { FC }        from 'react'
 
-import { Button }      from '@ui/button'
-import { Card }        from '@ui/card'
-import { CloseIcon }   from '@ui/icons'
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Text }        from '@ui/text'
-import { useHover }    from '@ui/utils'
-import { usePopover }  from '@ui/utils'
+import React              from 'react'
+import { useState }       from 'react'
 
-import { Container }   from './container/index.js'
-import { InnerCircle } from './inner-circle/index.js'
-import { KnobProps }   from './knob.interface.js'
-import { OuterCircle } from './outer-circle/index.js'
+import { Button }         from '@ui/button'
+import { Card }           from '@ui/card'
+import { CloseIcon }      from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { Layout }         from '@ui/layout'
+import { Column }         from '@ui/layout'
+import { Row }            from '@ui/layout'
+import { Text }           from '@ui/text'
+import { useHover }       from '@ui/utils'
+import { usePopover }     from '@ui/utils'
+
+import { Container }      from './container/index.js'
+import { InnerCircle }    from './inner-circle/index.js'
+import { OuterCircle }    from './outer-circle/index.js'
 
 const Knob: FC<KnobProps> = ({ text, ...props }) => {
   const [hover, hoverProps] = useHover()
@@ -55,7 +56,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
       </Layout>
       <Layout display={['flex', 'flex', 'none']}>
         <Layout
-          onClick={() => {
+          onClick={(): void => {
             setCard(!card)
             setActive(!active)
           }}
@@ -66,7 +67,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
         </Layout>
         <Card
           active={card}
-          onClose={() => {
+          onClose={(): void => {
             setCard(false)
             setActive(false)
           }}
@@ -84,7 +85,7 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
                   <Button
                     color='transparent'
                     size='ghost'
-                    onClick={() => {
+                    onClick={(): void => {
                       setActive(false)
                       setCard(false)
                     }}

@@ -1,7 +1,7 @@
 import { useRef }    from 'react'
 import { useEffect } from 'react'
 
-const doNothing = () => {
+const doNothing = (): void => {
   // do nothing
 }
 
@@ -44,7 +44,7 @@ const useIntersectionObserver = (onIntersection: (id: string) => void = doNothin
               new IntersectionObserver(
                 (entries) => {
                   if (entries && isExecutionAllowed) {
-                    onIntersection((entries[0].target as any).observerId)
+                    onIntersection((entries[0].target as any).observerId as string)
                   }
                 },
                 { threshold: observerThreshold }

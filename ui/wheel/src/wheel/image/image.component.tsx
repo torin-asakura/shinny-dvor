@@ -1,10 +1,12 @@
-import { FC }         from 'react'
-import React          from 'react'
+import type { FC }         from 'react'
 
-import { ImageBlock } from '@ui/image'
+import type { ImageProps } from './image.interface.js'
 
-import { Container }  from './container/index.js'
-import { ImageProps } from './image.interface.js'
+import React               from 'react'
+
+import { ImageBlock }      from '@ui/image'
+
+import { Container }       from './container/index.js'
 
 const Image: FC<ImageProps> = ({ wheelImg }) => (
   <Container>

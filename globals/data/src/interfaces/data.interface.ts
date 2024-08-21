@@ -1,15 +1,14 @@
-import type { ContactAddons } from '@blog/footer-fragment'
-
 import type { FragmentInt }   from './fragment.interface.js'
+import type { ContactAddons } from '@fragments/footer-fragment'
 
 // TODO typecheck needed
 export interface DataInt {
-  contacts: ContactAddons[]
+  contacts: Array<ContactAddons>
   posts: any
   postBy: any
   navigation: any
   availableRadii: any
-  fragments: FragmentInt[]
+  fragments: Array<FragmentInt>
   ui: any
   serviceBy: any
   workResults: any

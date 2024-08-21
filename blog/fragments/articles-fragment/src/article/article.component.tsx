@@ -1,9 +1,11 @@
-import { FC }                 from 'react'
+import type { ArticleProps }  from './article.interface.js'
+import type { FC }            from 'react'
+
+import React                  from 'react'
 import { FormattedPlural }    from 'react-intl'
 import { FormattedMessage }   from 'react-intl'
+import { memo }               from 'react'
 import { useEffect }          from 'react'
-import { useIntl }            from 'react-intl'
-import React                  from 'react'
 
 import { Divider }            from '@ui/divider'
 import { ImageBlock }         from '@ui/image'
@@ -17,17 +19,16 @@ import { extractFragment }    from '@globals/data'
 import { usePostViewCounter } from '@globals/data'
 import { formattedDate }      from '@shared/utils'
 
-import { ArticleProps }       from './article.interface.js'
 import { ReturnButton }       from './return-button/index.js'
 
-const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
+const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
   const { postId, content, title, date, viewCount, contentAddons } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   const [submit] = usePostViewCounter()
 
-  const incrementViewCounter = (post_id: number) => {
+  const incrementViewCounter = (post_id: number): void => {
     submit({
       variables: {
         post_id,
@@ -37,7 +38,6 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
 
   useEffect(() => {
     incrementViewCounter(postId)
-
     // eslint-disable-next-line
   }, [])
 
@@ -122,6 +122,6 @@ const Article: FC<ArticleProps> = ({ fragmentsData, postData }) => {
       </Row>
     </Column>
   )
-}
+})
 
 export { Article }

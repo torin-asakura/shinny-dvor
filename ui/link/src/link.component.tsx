@@ -1,14 +1,15 @@
 import type { LinkProps }          from './link.interfaces.js'
 import type { BaseLinkProps }      from './link.interfaces.js'
 
-import { createBaseStyles }        from '@atls-ui-parts/link'
 import styled                      from '@emotion/styled'
+import { createBaseStyles }        from '@atls-ui-parts/link'
+
 import React                       from 'react'
 
 import { Text }                    from '@ui/text'
 
-import { createNextLink }          from './hooks/index.js'
-import { createNextNavLink }       from './hooks/index.js'
+import { useNextNavLink }          from './hooks/index.js'
+import { useNextLink }             from './hooks/index.js'
 import { activeNavLinkStyles }     from './next-nav-link.styles.js'
 import { appearanceNavLinkStyles } from './next-nav-link.styles.js'
 import { defaultNavLinkStyles }    from './next-nav-link.styles.js'
@@ -31,11 +32,11 @@ export const NavLink = styled(Link)(
 )
 
 export const NextLink: LinkProps = (props) => {
-  const NextLinkRenderer = createNextLink(BaseLink)
+  const NextLinkRenderer = useNextLink(BaseLink)
   return <NextLinkRenderer {...props} />
 }
 
 export const NextNavLink: LinkProps = (props) => {
-  const NextNavLinkRenderer = createNextNavLink(NavLink)
+  const NextNavLinkRenderer = useNextNavLink(NavLink)
   return <NextNavLinkRenderer {...props} />
 }

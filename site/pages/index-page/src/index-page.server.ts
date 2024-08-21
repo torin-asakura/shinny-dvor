@@ -1,6 +1,5 @@
-import type { SEOInt }               from '@globals/data'
-
 import type { IndexPageServerProps } from './index-page.interfaces.js'
+import type { SEOInt }               from '@globals/data'
 
 import { GET_PREVIEW }               from '@globals/data'
 import { runCarBodiesQuery }         from '@globals/data'
@@ -12,9 +11,9 @@ import { runContactsQuery }          from '@globals/data'
 import { runUiQuery }                from '@globals/data'
 import { runServicesQuery }          from '@globals/data'
 import { runPostsQuery }             from '@globals/data'
+import { runWorkResultsQuery }       from '@globals/data'
 
 import { GET_INDEX_SEO }             from './queries/index.js'
-import { runWorkResultsQuery }       from './queries/index.js'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
   const client = getClient()

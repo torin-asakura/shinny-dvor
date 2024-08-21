@@ -8,11 +8,11 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@fragments/footer-fragment": "workspace:*",
+    "@fragments/navigation-fragment": "workspace:*",
     "@globals/data": "workspace:*",
     "@shared/utils": "workspace:*",
     "@site/contacts-fragment": "workspace:*",
-    "@site/footer-fragment": "workspace:*",
-    "@site/navigation-fragment": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/link": "workspace:*",

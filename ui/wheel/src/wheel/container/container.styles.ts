@@ -1,4 +1,4 @@
-import { CSSObject } from '@emotion/styled'
+import type { CSSObject } from '@emotion/styled'
 
 export const baseContainerStyles: CSSObject = {
   position: 'relative',

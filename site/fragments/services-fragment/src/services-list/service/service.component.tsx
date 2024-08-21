@@ -1,20 +1,21 @@
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useRouter }        from 'next/navigation'
-import React                from 'react'
+import type { FC }           from 'react'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Ruble }            from '@ui/text'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import type { ServiceProps } from './service.interface.js'
 
-import { ServiceProps }     from './service.interface.js'
+import { FormattedMessage }  from 'react-intl'
+import { useRouter }         from 'next/navigation.js'
+import React                 from 'react'
+
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { Divider }           from '@ui/divider'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Ruble }             from '@ui/text'
+import { Space }             from '@ui/text'
+import { Text }              from '@ui/text'
+import { useHover }          from '@ui/utils'
 
 const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
   const router = useRouter()
@@ -26,8 +27,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
     <Button
       size='ghost'
       color='transparent'
-      onClick={() => {
-        console.log('button click')
+      onClick={(): void => {
         router.push(uri)
       }}
     >
@@ -65,7 +65,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             </Layout>
           </Column>
           <Column justifyContent='center' width={200} display={['none', 'none', 'flex']}>
-            <Condition match={hover as boolean}>
+            <Condition match={Boolean(hover)}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>
                   <Text fontWeight='medium'>

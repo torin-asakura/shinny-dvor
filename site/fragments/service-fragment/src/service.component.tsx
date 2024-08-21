@@ -1,7 +1,9 @@
-import { FC }                   from 'react'
+import type { ServiceProps }    from './service.interface.js'
+import type { FC }              from 'react'
+
+import React                    from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
-import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { Accordion }            from '@ui/accordion'
@@ -26,7 +28,6 @@ import { CarBodiesCarousel }    from './carousel/index.js'
 import { WorkExamplesCarousel } from './carousel/index.js'
 import { Radii }                from './radii/index.js'
 import { ReturnButton }         from './return-button/index.js'
-import { ServiceProps }         from './service.interface.js'
 import { WorkExample }          from './work-example/index.js'
 import { carBodyConverter }     from './helpers/index.js'
 

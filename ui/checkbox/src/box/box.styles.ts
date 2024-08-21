@@ -1,7 +1,8 @@
+import type { styleFn }              from 'styled-system'
+
 import { createBoxBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createBoxAppearanceStyles } from '@atls-ui-parts/checkbox'
 import { createBoxShapeStyles }      from '@atls-ui-parts/checkbox'
-import { styleFn }                   from 'styled-system'
 
 export const baseStyles: styleFn = createBoxBaseStyles()
 

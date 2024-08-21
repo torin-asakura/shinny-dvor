@@ -5,8 +5,11 @@ import { useState }            from 'react'
 import { useLayer }            from 'react-laag'
 
 const usePopover: UsePopoverType = (placement, offset = 9, trigger = 'click') => {
-  const [isOpen, setOpen] = useState<boolean>(false)
-  const close = () => setOpen(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const close = (): void => {
+    setIsOpen(false)
+  }
 
   const { layerProps, triggerProps, renderLayer } = useLayer({
     isOpen,
@@ -18,21 +21,35 @@ const usePopover: UsePopoverType = (placement, offset = 9, trigger = 'click') =>
   })
 
   const setTrigger: SetTriggerType = (value) => {
-    if (value === 'click') {
-      return { ...triggerProps, onClick: () => setOpen(!isOpen) }
+    const handleClick = (): void => {
+      setIsOpen(!isOpen)
     }
+
+    const handleMouseEnter = (): void => {
+      setIsOpen(true)
+    }
+
+    const handlerMouseLeave = (): void => {
+      setIsOpen(false)
+    }
+
+    if (value === 'click') {
+      return { ...triggerProps, onClick: handleClick }
+    }
+
     if (value === 'hover') {
       return {
         ...triggerProps,
-        onMouseEnter: () => setOpen(true),
-        onMouseLeave: () => setOpen(false),
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handlerMouseLeave,
       }
     }
 
     return false
   }
 
-  const render = (children: JSX.Element) => renderLayer(isOpen && children)
+  const render = (children: JSX.Element): ReturnType<typeof renderLayer> =>
+    renderLayer(isOpen && children)
 
   return {
     triggerProps: setTrigger(trigger),
@@ -45,7 +62,7 @@ const usePopover: UsePopoverType = (placement, offset = 9, trigger = 'click') =>
     },
     render,
     isOpen,
-    setOpen,
+    setOpen: setIsOpen,
   }
 }
 

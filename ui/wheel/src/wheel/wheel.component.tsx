@@ -1,11 +1,13 @@
-import { FC }         from 'react'
-import React          from 'react'
+import type { WheelImg }          from '../wheel.interface.js'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
 
-import { Container }  from './container/index.js'
-import { Image }      from './image/index.js'
-import { WheelProps } from './wheel.interface.js'
+import React                      from 'react'
 
-const Wheel: FC<WheelProps> = ({ children, wheelImg }) => (
+import { Container }              from './container/index.js'
+import { Image }                  from './image/index.js'
+
+const Wheel: FC<PropsWithChildren<WheelImg>> = ({ children, wheelImg }) => (
   <Container>
     <Image wheelImg={wheelImg} />
     {children}

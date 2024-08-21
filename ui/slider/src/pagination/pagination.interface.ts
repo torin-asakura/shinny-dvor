@@ -1,5 +1,5 @@
-// @ts-ignore:next-line
-import { Swiper } from 'swiper'
+// @ts-expect-error
+import type { Swiper } from 'swiper'
 
 export interface PaginationProps {
   activeItem?: number

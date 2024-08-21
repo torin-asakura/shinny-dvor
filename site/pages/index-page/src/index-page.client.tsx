@@ -1,16 +1,16 @@
 'use client'
 
 import type { IndexPageClientProps } from './index-page.interfaces.js'
+import type { FC }                   from 'react'
 
-import { FC }                        from 'react'
+import React                         from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
-import React                         from 'react'
 
+import { Footer }                    from '@fragments/footer-fragment'
+import { Navigation }                from '@fragments/navigation-fragment'
 import { Articles }                  from '@site/articles-fragment'
-import { Footer }                    from '@site/footer-fragment'
 import { Hero }                      from '@site/hero-fragment'
-import { Navigation }                from '@site/navigation-fragment'
 import { Services }                  from '@site/services-fragment'
 import { ServicesInfographics }      from '@site/services-infographics-fragment'
 import { WorksExamples }             from '@site/works-examples-fragment'
@@ -44,7 +44,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
   const { getObserverOptions } = useIndexPageClient({ isLoaded, setActive, headerRef, setScrollY })
 
   return (
-    <Column width='100%' alignItems='center' ref={headerRef}>
+    <Column ref={headerRef} width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <Seo ogCover={ogCover} SEO={SEO} />

@@ -4,7 +4,7 @@ import type { PLACEMENT_TYPES } from 'react-laag'
 import type { TriggerProps }    from 'react-laag'
 import type { LayerProps }      from 'react-laag'
 
-export type ArrayElement<A> = A extends readonly (infer T)[] ? T : never
+export type ArrayElement<A> = A extends ReadonlyArray<infer T> ? T : never
 
 type PlacementType = ArrayElement<typeof PLACEMENT_TYPES>
 

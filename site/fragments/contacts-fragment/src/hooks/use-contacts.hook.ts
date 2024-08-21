@@ -1,8 +1,8 @@
-import type { ContactsProps } from '../contacts.interface.js'
+import type { UseContactsType } from './use-contacts.interface.js'
 
-import { extractFragment }    from '@globals/data'
+import { extractFragment }      from '@globals/data'
 
-export const useContacts = (props: ContactsProps) => {
+export const useContacts: UseContactsType = (props) => {
   const { contactsData, fragmentsData } = props
 
   const contactsTitle = extractFragment('contentAddons', 'contacts', fragmentsData).title

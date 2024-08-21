@@ -2,6 +2,6 @@ export interface ContentAddonsInt {
   title: string
   content: string
   role?: string
-  highlightedtext: string
+  highlightedText: string
   fragmentId: string
 }

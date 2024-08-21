@@ -3,19 +3,14 @@ import type { PropsWithChildren }       from 'react'
 
 import React                            from 'react'
 
-import { RootLayout as BaseRootLayout } from '@blog/root-layout-fragment'
+import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
 
 import messages                         from '../../locales/ru.json'
 
-const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'
-
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
-  <BaseRootLayout messages={messages} gaTrackingId={gaTrackingId}>
-    {children}
-  </BaseRootLayout>
+  <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
 )
 
-export { generateMetadata } from '@blog/root-layout-fragment'
-
+export { generateMetadata } from '@fragments/root-layout-fragment'
+export { revalidate } from '@fragments/root-layout-fragment'
 export default RootLayout
-export const revalidate = 3600

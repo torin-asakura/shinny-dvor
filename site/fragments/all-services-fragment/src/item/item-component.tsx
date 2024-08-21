@@ -1,4 +1,7 @@
-import { FC }               from 'react'
+import type { FC }          from 'react'
+
+import type { ItemProps }   from './item.interface.js'
+
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
 import React                from 'react'
@@ -15,8 +18,6 @@ import { Ruble }            from '@ui/text'
 import { Space }            from '@ui/text'
 import { useHover }         from '@ui/utils'
 
-import { ItemProps }        from './item.interface.js'
-
 const BoxContainer = Box.withComponent(motion.div)
 
 const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, addon }) => {
@@ -27,7 +28,7 @@ const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, add
   return (
     <BoxContainer
       minWidth={['100%', '100%', 296]}
-      // @ts-ignore
+      // @ts-expect-error
       cursor='pointer'
       whileHover={{ translateY: -10 }}
       transition={{ duration: 0.15, ease: 'linear' }}
