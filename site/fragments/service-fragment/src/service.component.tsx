@@ -1,7 +1,5 @@
-import type { ServiceProps }    from './service.interface.js'
-import type { FC }              from 'react'
-
 import React                    from 'react'
+import { FC }                   from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
@@ -23,13 +21,14 @@ import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { serviceVar }           from '@store/services'
 
-import { AdditionalService }    from './additional-service/index.js'
-import { CarBodiesCarousel }    from './carousel/index.js'
-import { WorkExamplesCarousel } from './carousel/index.js'
-import { Radii }                from './radii/index.js'
-import { ReturnButton }         from './return-button/index.js'
-import { WorkExample }          from './work-example/index.js'
-import { carBodyConverter }     from './helpers/index.js'
+import { AdditionalService }    from './additional-service'
+import { CarBodiesCarousel }    from './carousel'
+import { WorkExamplesCarousel } from './carousel'
+import { Radii }                from './radii'
+import { ReturnButton }         from './return-button'
+import { ServiceProps }         from './service.interface'
+import { WorkExample }          from './work-example'
+import { carBodyConverter }     from './helpers'
 
 const Service: FC<ServiceProps> = ({
   servicesData,
@@ -51,7 +50,6 @@ const Service: FC<ServiceProps> = ({
       additionalservice,
     },
   } = serviceData
-
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
   const carBody = carBodyConverter(onCarBody)
 
@@ -130,7 +128,7 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
-                  {carBodies.map((item: string) => (
+                  {carBodies.map((item) => (
                     <Item key={item} value={item} onSelect={setOnCarBody}>
                       {item}
                     </Item>
@@ -146,7 +144,7 @@ const Service: FC<ServiceProps> = ({
                 display={['flex', 'flex', 'none']}
               >
                 <CarBodiesCarousel>
-                  {carBodies.map((item: string) => (
+                  {carBodies.map((item) => (
                     <Box
                       key={item}
                       width='100%'
@@ -211,7 +209,7 @@ const Service: FC<ServiceProps> = ({
             <Layout flexBasis={24} />
             <Layout>
               <Column fill>
-                {description.split('|n|').map((item: string) => (
+                {description.split('|n|').map((item) => (
                   <Text key={item} lineHeight='medium'>
                     {item}
                   </Text>

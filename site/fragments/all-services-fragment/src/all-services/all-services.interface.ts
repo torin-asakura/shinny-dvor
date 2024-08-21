@@ -1,7 +1,9 @@
-import type { ContentAddonsInt } from '@globals/data'
-
 export interface Service {
-  contentAddons: ContentAddonsInt
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+  }
   servicesParams: {
     fragmentId: string
     price: any
@@ -37,10 +39,15 @@ export interface Service {
 }
 
 export interface Fragment {
-  contentAddons: ContentAddonsInt
+  contentAddons: {
+    title: string
+    content: string
+    role: string
+    highlightedtext: string
+  }
 }
 
 export interface AllServicesProps {
-  servicesData: Array<Service>
-  fragmentsData: Array<Fragment>
+  servicesData: Service[]
+  fragmentsData: Fragment[]
 }

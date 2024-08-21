@@ -1,1 +1,1 @@
-export * from './hero.component.js'
+export * from './hero.component'

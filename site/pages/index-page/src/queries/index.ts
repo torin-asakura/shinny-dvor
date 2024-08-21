@@ -1,1 +1,2 @@
-export * from './seo.query.js'
+export * from './work-results.query'
+export * from './seo.query'

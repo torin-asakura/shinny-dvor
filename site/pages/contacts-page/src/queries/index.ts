@@ -1,1 +1,1 @@
-export * from './seo.query.js'
+export * from './seo.query'
