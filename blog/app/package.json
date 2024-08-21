@@ -21,6 +21,7 @@
     "@blog/post-page": "workspace:*",
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
+    "@globals/configs": "workspace:*",
     "@globals/data": "workspace:*",
     "@sentry/nextjs": "8.24.0",
     "@sentry/react": "8.24.0",
