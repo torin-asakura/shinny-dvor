@@ -309,21 +309,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls/code-runtime@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@atls/code-runtime@npm:1.0.0"
+"@atls/code-runtime@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@atls/code-runtime@npm:1.1.0"
   dependencies:
     "@atls/config-eslint": "npm:1.0.0"
     "@atls/config-jest": "npm:1.0.0"
-    "@jest/core": "npm:^29.6.1"
-    "@svgr/core": "npm:^8.0.0"
-    "@svgr/plugin-jsx": "npm:^8.0.1"
-    eslint: "npm:^8.44.0"
-    node-loader: "npm:^2.0.0"
-    ts-loader: "npm:^9.4.4"
-    typescript: "npm:5.2.2"
-    webpack: "npm:^5.88.1"
-  checksum: 10/50dcf05f0294c8ee26a69046bf4c20e89258587bfa0f200a968b61c17e16e01d7b3eeb0bef08064723445588a5a0c052ef727cc9bf1eec61f7f9f6a6ffbf4fdb
+    "@jest/core": "npm:29.7.0"
+    "@svgr/core": "npm:8.1.0"
+    "@svgr/plugin-jsx": "npm:8.1.0"
+    eslint: "npm:8.57.0"
+    node-loader: "npm:2.0.0"
+    null-loader: "npm:4.0.1"
+    ts-loader: "npm:9.5.1"
+    typescript: "npm:5.4.2"
+    webpack: "npm:5.93.0"
+  checksum: 10/e57043cb06401f3401653b795c7da44d47fa608a2af3b8a856c602924cb9cf26001ad0a762b514c23b6853247468fabdb1caed462a003c7bbbad377324cd7616
   languageName: node
   linkType: hard
 
@@ -1621,7 +1622,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jest/core@npm:29.7.0, @jest/core@npm:^29.6.1":
+"@jest/core@npm:29.7.0":
   version: 29.7.0
   resolution: "@jest/core@npm:29.7.0"
   dependencies:
@@ -3609,7 +3610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/core@npm:^8.0.0":
+"@svgr/core@npm:8.1.0":
   version: 8.1.0
   resolution: "@svgr/core@npm:8.1.0"
   dependencies:
@@ -3641,19 +3642,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/plugin-jsx@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/plugin-jsx@npm:5.5.0"
-  dependencies:
-    "@babel/core": "npm:^7.12.3"
-    "@svgr/babel-preset": "npm:^5.5.0"
-    "@svgr/hast-util-to-babel-ast": "npm:^5.5.0"
-    svg-parser: "npm:^2.0.2"
-  checksum: 10/e053f8dd6bfcd72377b432dd5b1db3c89d503d29839639a87f85b597a680d0b69e33a4db376f5a1074a89615f7157cd36f63f94bdb4083a0fd5bbe918c7fcb9b
-  languageName: node
-  linkType: hard
-
-"@svgr/plugin-jsx@npm:^8.0.1":
+"@svgr/plugin-jsx@npm:8.1.0":
   version: 8.1.0
   resolution: "@svgr/plugin-jsx@npm:8.1.0"
   dependencies:
@@ -3664,6 +3653,18 @@ __metadata:
   peerDependencies:
     "@svgr/core": "*"
   checksum: 10/0418a9780753d3544912ee2dad5d2cf8d12e1ba74df8053651b3886aeda54d5f0f7d2dece0af5e0d838332c4f139a57f0dabaa3ca1afa4d1a765efce6a7656f2
+  languageName: node
+  linkType: hard
+
+"@svgr/plugin-jsx@npm:^5.5.0":
+  version: 5.5.0
+  resolution: "@svgr/plugin-jsx@npm:5.5.0"
+  dependencies:
+    "@babel/core": "npm:^7.12.3"
+    "@svgr/babel-preset": "npm:^5.5.0"
+    "@svgr/hast-util-to-babel-ast": "npm:^5.5.0"
+    svg-parser: "npm:^2.0.2"
+  checksum: 10/e053f8dd6bfcd72377b432dd5b1db3c89d503d29839639a87f85b597a680d0b69e33a4db376f5a1074a89615f7157cd36f63f94bdb4083a0fd5bbe918c7fcb9b
   languageName: node
   linkType: hard
 
@@ -9925,7 +9926,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-loader@npm:^2.0.0":
+"node-loader@npm:2.0.0":
   version: 2.0.0
   resolution: "node-loader@npm:2.0.0"
   dependencies:
@@ -9967,6 +9968,18 @@ __metadata:
   dependencies:
     path-key: "npm:^3.0.0"
   checksum: 10/5374c0cea4b0bbfdfae62da7bbdf1e1558d338335f4cacf2515c282ff358ff27b2ecb91ffa5330a8b14390ac66a1e146e10700440c1ab868208430f56b5f4d23
+  languageName: node
+  linkType: hard
+
+"null-loader@npm:4.0.1":
+  version: 4.0.1
+  resolution: "null-loader@npm:4.0.1"
+  dependencies:
+    loader-utils: "npm:^2.0.0"
+    schema-utils: "npm:^3.0.0"
+  peerDependencies:
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 10/eeb4c4dd2f8f41e46f5665e4500359109e95ec1028a178a60e0161984906572da7dd87644bcc3cb29f0125d77e2b2508fb4f3813cfb1c6604a15865beb4b987b
   languageName: node
   linkType: hard
 
@@ -11175,7 +11188,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
+"schema-utils@npm:^3.0.0, schema-utils@npm:^3.1.1, schema-utils@npm:^3.2.0":
   version: 3.3.0
   resolution: "schema-utils@npm:3.3.0"
   dependencies:
@@ -11260,7 +11273,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "shdvor@workspace:."
   dependencies:
-    "@atls/code-runtime": "npm:1.0.0"
+    "@atls/code-runtime": "npm:1.1.0"
     "@atls/prettier-plugin": "npm:0.0.8"
     "@jest/core": "npm:29.7.0"
     "@types/eslint": "npm:8.56.10"
@@ -11997,7 +12010,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^9.4.4":
+"ts-loader@npm:9.5.1":
   version: 9.5.1
   resolution: "ts-loader@npm:9.5.1"
   dependencies:
@@ -12163,6 +12176,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:5.4.2":
+  version: 5.4.2
+  resolution: "typescript@npm:5.4.2"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10/f8cfdc630ab1672f004e9561eb2916935b2d267792d07ce93e97fc601c7a65191af32033d5e9c0169b7dc37da7db9bf320f7432bc84527cb7697effaa4e4559d
+  languageName: node
+  linkType: hard
+
 "typescript@npm:^3.2.4":
   version: 3.9.10
   resolution: "typescript@npm:3.9.10"
@@ -12180,6 +12203,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>":
+  version: 5.4.2
+  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10/f5f9a4133c2670761f0166eae5b3bafbc4a3fc24f0f42a93c9c893d9e9d6e66ea066969c5e7483fa66b4ae0e99125592553f3b92fd3599484de8be13b0615176
   languageName: node
   linkType: hard
 
@@ -12420,7 +12453,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5, webpack@npm:^5.88.1":
+"webpack@npm:5.93.0, webpack@npm:^5":
   version: 5.93.0
   resolution: "webpack@npm:5.93.0"
   dependencies:
