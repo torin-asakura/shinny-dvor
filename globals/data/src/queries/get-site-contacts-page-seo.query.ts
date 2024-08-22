@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-export const GET_CONTACTS_SEO = gql`
+const GET_SITE_CONTACTS_PAGE_SEO = gql`
   query GetContactsSeo {
     pageBy(uri: "/contacts") {
       seo {
@@ -10,3 +10,5 @@ export const GET_CONTACTS_SEO = gql`
     }
   }
 `
+
+export { GET_SITE_CONTACTS_PAGE_SEO }

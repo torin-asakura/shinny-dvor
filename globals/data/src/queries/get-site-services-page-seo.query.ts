@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-const GET_SERVICES_SEO = gql`
+const GET_SITE_SERVICES_PAGE_SEO = gql`
   query GetServicesSeo {
     pages(where: { name: "services" }) {
       nodes {
@@ -13,4 +13,4 @@ const GET_SERVICES_SEO = gql`
   }
 `
 
-export { GET_SERVICES_SEO }
+export { GET_SITE_SERVICES_PAGE_SEO }

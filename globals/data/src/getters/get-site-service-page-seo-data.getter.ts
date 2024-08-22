@@ -1,10 +1,10 @@
-import { GET_SERVICE_SEO } from '@globals/data'
-import { getClient }       from '@globals/data'
+import { GET_SITE_SERVICE_PAGE_SEO } from '@globals/data'
+import { getClient }                 from '@globals/data'
 
 const getSiteServicePageSeoData = async ({ uri }: { uri: string }) => {
   const client = getClient()
   const { data: seoData } = await client.query({
-    query: GET_SERVICE_SEO,
+    query: GET_SITE_SERVICE_PAGE_SEO,
     variables: { uri },
   })
 

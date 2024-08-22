@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-export const GET_BLOG_SEO = gql`
+const GET_BLOG_INDEX_PAGE_SEO = gql`
   query GetBlogSeo {
     pageBy(uri: "/blog") {
       seo {
@@ -10,3 +10,5 @@ export const GET_BLOG_SEO = gql`
     }
   }
 `
+
+export { GET_BLOG_INDEX_PAGE_SEO }
