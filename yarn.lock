@@ -1374,28 +1374,28 @@ __metadata:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
-    "@globals/data": "workspace:0.0.1"
-    "@shared/utils": "workspace:0.0.1"
-    "@store/actions": "workspace:0.0.1"
-    "@store/booking": "workspace:0.0.1"
-    "@store/services": "workspace:0.0.1"
+    "@globals/data": "workspace:*"
+    "@shared/utils": "workspace:*"
+    "@store/actions": "workspace:*"
+    "@store/booking": "workspace:*"
+    "@store/services": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/divider": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/input": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/logo": "workspace:0.0.1"
-    "@ui/radio": "workspace:0.0.1"
-    "@ui/select": "workspace:0.0.1"
-    "@ui/switch": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/input": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/link": "workspace:*"
+    "@ui/logo": "workspace:*"
+    "@ui/radio": "workspace:*"
+    "@ui/select": "workspace:*"
+    "@ui/switch": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
-    react-dom: "npm:^18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -1526,7 +1526,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@globals/data@workspace:*, @globals/data@workspace:0.0.1, @globals/data@workspace:globals/data":
+"@globals/data@workspace:*, @globals/data@workspace:globals/data":
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
   dependencies:
@@ -2841,7 +2841,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@shared/utils@workspace:*, @shared/utils@workspace:0.0.1, @shared/utils@workspace:shared/utils":
+"@shared/utils@workspace:*, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
   dependencies:
@@ -3284,7 +3284,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@store/actions@workspace:*, @store/actions@workspace:0.0.1, @store/actions@workspace:store/actions":
+"@store/actions@workspace:*, @store/actions@workspace:store/actions":
   version: 0.0.0-use.local
   resolution: "@store/actions@workspace:store/actions"
   dependencies:
@@ -3309,7 +3309,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@store/services@workspace:*, @store/services@workspace:0.0.1, @store/services@workspace:store/services":
+"@store/services@workspace:*, @store/services@workspace:store/services":
   version: 0.0.0-use.local
   resolution: "@store/services@workspace:store/services"
   dependencies:
@@ -4598,7 +4598,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/input@workspace:0.0.1, @ui/input@workspace:ui/input":
+"@ui/input@workspace:*, @ui/input@workspace:ui/input":
   version: 0.0.0-use.local
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
@@ -4779,7 +4779,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/radio@workspace:*, @ui/radio@workspace:0.0.1, @ui/radio@workspace:ui/radio":
+"@ui/radio@workspace:*, @ui/radio@workspace:ui/radio":
   version: 0.0.0-use.local
   resolution: "@ui/radio@workspace:ui/radio"
   dependencies:
@@ -4807,7 +4807,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/select@workspace:0.0.1, @ui/select@workspace:ui/select":
+"@ui/select@workspace:*, @ui/select@workspace:ui/select":
   version: 0.0.0-use.local
   resolution: "@ui/select@workspace:ui/select"
   dependencies:
@@ -4911,7 +4911,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/switch@workspace:*, @ui/switch@workspace:0.0.1, @ui/switch@workspace:ui/switch":
+"@ui/switch@workspace:*, @ui/switch@workspace:ui/switch":
   version: 0.0.0-use.local
   resolution: "@ui/switch@workspace:ui/switch"
   dependencies:
