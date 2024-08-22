@@ -1,7 +1,6 @@
 import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { SEOInt }              from '@globals/data'
 
-import { runGetBlogPostSeoQuery }   from '@globals/data'
 import { runAvailableRadiiQuery }   from '@globals/data'
 import { runCarBodiesQuery }        from '@globals/data'
 import { runServicesQuery }         from '@globals/data'
@@ -9,15 +8,16 @@ import { runFragmentsQuery }        from '@globals/data'
 import { runContactsQuery }         from '@globals/data'
 import { runNavigationQuery }       from '@globals/data'
 import { runPostQuery }             from '@globals/data'
-import { runGetPreviewQuery }        from '@globals/data'
+import { getBlogPostPageSeoData }   from '@globals/data/getters'
+import { getPagePreviewData }       from '@globals/data/getters'
 
 export const PostPageServer: PostPageServerProps = async ({ params }) => {
   let SEO: SEOInt
 
   const { uri } = params
 
-  const seoData = await runGetBlogPostSeoQuery({ uri })
-  const previewData = await runGetPreviewQuery()
+  const seoData = await getBlogPostPageSeoData({ uri })
+  const previewData = await getPagePreviewData()
 
   if (seoData) {
     SEO = seoData.postBy.seo
@@ -32,7 +32,7 @@ export const PostPageServer: PostPageServerProps = async ({ params }) => {
     runNavigationQuery(),
     runAvailableRadiiQuery(),
     runFragmentsQuery(),
-    runPostQuery(uri),
+    runPostQuery({ uri }),
     runCarBodiesQuery(),
     runServicesQuery(),
   ]

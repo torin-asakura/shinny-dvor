@@ -1,7 +1,7 @@
 import { GET_SERVICES_SEO } from '@globals/data'
 import { getClient }        from '@globals/data'
 
-const runGetSiteServicesPageSeoQuery = async () => {
+const getSiterServicesPageSeoData = async () => {
   const client = getClient()
 
   const { data: seoData } = await client.query({
@@ -11,4 +11,4 @@ const runGetSiteServicesPageSeoQuery = async () => {
   return seoData
 }
 
-export { runGetSiteServicesPageSeoQuery }
+export { getSiterServicesPageSeoData }

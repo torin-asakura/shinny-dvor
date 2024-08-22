@@ -10,14 +10,14 @@ import { runUiQuery }                from '@globals/data'
 import { runServicesQuery }          from '@globals/data'
 import { runPostsQuery }             from '@globals/data'
 import { runWorkResultsQuery }       from '@globals/data'
-import { runGetSiteSeoQuery }        from '@globals/data'
-import { runGetPreviewQuery }        from '@globals/data'
+import { getSiteIndexPageSeoData }   from '@globals/data/getters'
+import { getPagePreviewData }        from '@globals/data/getters'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
   let SEO: SEOInt
 
-  const seoData = await runGetSiteSeoQuery()
-  const previewData = await runGetPreviewQuery()
+  const seoData = await getSiteIndexPageSeoData()
+  const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 

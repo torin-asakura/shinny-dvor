@@ -1,21 +1,21 @@
-import type { ServicesPageServerProps }   from './services-page.interface.js'
-import type { SEOInt }                    from '@globals/data'
+import type { ServicesPageServerProps } from './services-page.interface.js'
+import type { SEOInt }                  from '@globals/data'
 
-import { runAvailableRadiiQuery }         from '@globals/data'
-import { runNavigationQuery }             from '@globals/data'
-import { runContactsQuery }               from '@globals/data'
-import { runFragmentsQuery }              from '@globals/data'
-import { runPostsQuery }                  from '@globals/data'
-import { runCarBodiesQuery }              from '@globals/data'
-import { runServicesQuery }               from '@globals/data'
-import { runGetSiteServicesPageSeoQuery } from '@globals/data'
-import { runGetPreviewQuery }             from '@globals/data'
+import { runAvailableRadiiQuery }       from '@globals/data'
+import { runNavigationQuery }           from '@globals/data'
+import { runContactsQuery }             from '@globals/data'
+import { runFragmentsQuery }            from '@globals/data'
+import { runPostsQuery }                from '@globals/data'
+import { runCarBodiesQuery }            from '@globals/data'
+import { runServicesQuery }             from '@globals/data'
+import { getSiterServicesPageSeoData }  from '@globals/data/getters'
+import { getPagePreviewData }           from '@globals/data/getters'
 
 export const ServicesPageServer: ServicesPageServerProps = async () => {
   let SEO: SEOInt
 
-  const seoData = await runGetSiteServicesPageSeoQuery()
-  const previewData = await runGetPreviewQuery()
+  const seoData = await getSiterServicesPageSeoData()
+  const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 

@@ -8,14 +8,14 @@ import { runFragmentsQuery }         from '@globals/data'
 import { runContactsQuery }          from '@globals/data'
 import { runNavigationQuery }        from '@globals/data'
 import { runPostsQuery }             from '@globals/data'
-import { runGetBlogSeoQuery }        from '@globals/data'
-import { runGetPreviewQuery }        from '@globals/data'
+import { getPagePreviewData }        from '@globals/data/getters'
+import { getBlogIndexPageSeoData }   from '@globals/data/getters'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
   let SEO: SEOInt
 
-  const seoData = await runGetBlogSeoQuery()
-  const previewData = await runGetPreviewQuery()
+  const seoData = await getBlogIndexPageSeoData()
+  const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 

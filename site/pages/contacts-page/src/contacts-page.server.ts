@@ -7,14 +7,14 @@ import { runNavigationQuery }           from '@globals/data'
 import { runCarBodiesQuery }            from '@globals/data'
 import { runFragmentsQuery }            from '@globals/data'
 import { runServicesQuery }             from '@globals/data'
-import { runGetPreviewQuery }           from '@globals/data'
-import { rungGetSiteContactsPageQuery } from '@globals/data'
+import { getSiteContactsPageSeoData }   from '@globals/data/getters'
+import { getPagePreviewData }           from '@globals/data/getters'
 
 export const ContactsPageServer: ContactsPageServerProps = async () => {
   let SEO: SEOInt
 
-  const previewData = await runGetPreviewQuery()
-  const seoData = await rungGetSiteContactsPageQuery()
+  const previewData = await getPagePreviewData()
+  const seoData = await getSiteContactsPageSeoData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
