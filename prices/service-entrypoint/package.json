@@ -18,10 +18,10 @@
   },
   "dependencies": {
     "@sentry/node": "7.118.0",
-    "aws-sdk": "^2.1667.0",
-    "node-cron": "^3.0.3",
-    "node-fetch": "^3.3.2",
-    "xml-js": "^1.6.11"
+    "aws-sdk": "2.1667.0",
+    "node-cron": "3.0.3",
+    "node-fetch": "3.3.2",
+    "xml-js": "1.6.11"
   },
   "devDependencies": {
     "@atls/logger": "^0.0.2",
