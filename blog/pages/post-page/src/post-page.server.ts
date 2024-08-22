@@ -1,41 +1,29 @@
+import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { SEOInt }              from '@globals/data'
 
-import type { PostPageServerProps } from './post-page.interfaces.js'
-
-import { GET_PREVIEW }              from '@globals/data'
-import { getClient }                from '@globals/data'
+import { runGetBlogPostSeoQuery }   from '@globals/data'
 import { runAvailableRadiiQuery }   from '@globals/data'
 import { runCarBodiesQuery }        from '@globals/data'
 import { runServicesQuery }         from '@globals/data'
 import { runFragmentsQuery }        from '@globals/data'
 import { runContactsQuery }         from '@globals/data'
 import { runNavigationQuery }       from '@globals/data'
-
-import { GET_POST_SEO }             from './queries/index.js'
-import { runPostQuery }             from './queries/index.js'
+import { runPostQuery }             from '@globals/data'
+import { runGetPreviewQuery }        from '@globals/data'
 
 export const PostPageServer: PostPageServerProps = async ({ params }) => {
-  const client = getClient()
-
   let SEO: SEOInt
 
   const { uri } = params
 
-  const { data: seoData } = await client.query({
-    query: GET_POST_SEO,
-    variables: { uri },
-  })
+  const seoData = await runGetBlogPostSeoQuery({ uri })
+  const previewData = await runGetPreviewQuery()
 
   if (seoData) {
     SEO = seoData.postBy.seo
-  } else SEO = {}
-
-  const { data: previewData } = await client.query({
-    query: GET_PREVIEW,
-    variables: {
-      uri: '/cover/',
-    },
-  })
+  } else {
+    SEO = {}
+  }
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 

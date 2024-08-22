@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-export const GET_SERVICE_SEO = gql`
+const GET_SERVICE_SEO = gql`
   query GetServiceSeo($uri: String!) {
     serviceBy(uri: $uri) {
       seo {
@@ -10,3 +10,5 @@ export const GET_SERVICE_SEO = gql`
     }
   }
 `
+
+export { GET_SERVICE_SEO }
