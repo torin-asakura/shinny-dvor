@@ -1,6 +1,4 @@
-import { gql }       from '@apollo/client'
-
-import { getClient } from '@globals/data'
+import { gql } from "@apollo/client";
 
 const GET_FRAGMENTS = gql`
   query GetFragments {
@@ -15,22 +13,6 @@ const GET_FRAGMENTS = gql`
       }
     }
   }
-`
+`;
 
-const runFragmentsQuery = async () => {
-  const client = getClient()
-
-  const { data } = await client.query({
-    query: GET_FRAGMENTS,
-  })
-
-  if (data) {
-    return {
-      fragments: data.fragments.nodes,
-    }
-  }
-
-  return { fragments: [] }
-}
-
-export { runFragmentsQuery }
+export { GET_FRAGMENTS };

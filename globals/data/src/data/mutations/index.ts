@@ -1,1 +1,1 @@
-export * from './post-view-counter.mutation.js'
+export * from './post-view-counter.mutation'

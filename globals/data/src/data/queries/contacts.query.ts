@@ -1,6 +1,4 @@
-import { gql }       from '@apollo/client'
-
-import { getClient } from '@globals/data'
+import { gql } from "@apollo/client";
 
 const GET_CONTACTS = gql`
   query GetContacts {
@@ -18,22 +16,6 @@ const GET_CONTACTS = gql`
       }
     }
   }
-`
+`;
 
-const runContactsQuery = async () => {
-  const client = getClient()
-
-  const { data: contactsData } = await client.query({
-    query: GET_CONTACTS,
-  })
-
-  if (contactsData) {
-    return {
-      contacts: contactsData.contactItems.nodes,
-    }
-  }
-
-  return { contacts: [] }
-}
-
-export { runContactsQuery }
+export { GET_CONTACTS };

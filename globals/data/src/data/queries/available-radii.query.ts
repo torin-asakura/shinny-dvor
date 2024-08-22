@@ -1,6 +1,4 @@
-import { gql }       from '@apollo/client'
-
-import { getClient } from '@globals/data'
+import { gql } from "@apollo/client";
 
 const GET_AVAILABLE_RADII = gql`
   query GetAvailableRadii {
@@ -13,22 +11,6 @@ const GET_AVAILABLE_RADII = gql`
       }
     }
   }
-`
+`;
 
-const runAvailableRadiiQuery = async () => {
-  const client = getClient()
-
-  const { data: availableRadiiData } = await client.query({
-    query: GET_AVAILABLE_RADII,
-  })
-
-  if (availableRadiiData) {
-    return {
-      availableRadii: availableRadiiData.availableRadiusItems.nodes,
-    }
-  }
-
-  return { availableRadii: [] }
-}
-
-export { runAvailableRadiiQuery }
+export { GET_AVAILABLE_RADII };

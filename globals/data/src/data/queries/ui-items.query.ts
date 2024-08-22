@@ -1,6 +1,4 @@
-import { gql }       from '@apollo/client'
-
-import { getClient } from '@globals/data'
+import { gql } from "@apollo/client";
 
 const GET_UI = gql`
   query GetUi {
@@ -16,22 +14,6 @@ const GET_UI = gql`
       }
     }
   }
-`
+`;
 
-const runUiQuery = async () => {
-  const client = getClient()
-
-  const { data } = await client.query({
-    query: GET_UI,
-  })
-
-  if (data) {
-    return {
-      ui: data.uiItems.nodes,
-    }
-  }
-
-  return { ui: [] }
-}
-
-export { runUiQuery }
+export { GET_UI };

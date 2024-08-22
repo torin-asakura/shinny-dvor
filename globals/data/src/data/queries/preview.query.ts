@@ -1,4 +1,6 @@
-import { gql } from '@apollo/client'
+import { gql } from "@apollo/client";
+
+// TODO where hook?
 
 const GET_PREVIEW = gql`
   query GetPreview($uri: String!) {
@@ -6,6 +8,6 @@ const GET_PREVIEW = gql`
       sourceUrl
     }
   }
-`
+`;
 
-export { GET_PREVIEW }
+export { GET_PREVIEW };
