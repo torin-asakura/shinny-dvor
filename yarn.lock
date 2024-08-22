@@ -2797,10 +2797,10 @@ __metadata:
     "@sentry/node": "npm:7.118.0"
     "@types/node": "npm:22.1.0"
     "@types/node-cron": "npm:^3.0.11"
-    aws-sdk: "npm:^2.1667.0"
-    node-cron: "npm:^3.0.3"
-    node-fetch: "npm:^3.3.2"
-    xml-js: "npm:^1.6.11"
+    aws-sdk: "npm:2.1667.0"
+    node-cron: "npm:3.0.3"
+    node-fetch: "npm:3.3.2"
+    xml-js: "npm:1.6.11"
   languageName: unknown
   linkType: soft
 
@@ -6549,9 +6549,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-sdk@npm:^2.1667.0":
-  version: 2.1677.0
-  resolution: "aws-sdk@npm:2.1677.0"
+"aws-sdk@npm:2.1667.0":
+  version: 2.1667.0
+  resolution: "aws-sdk@npm:2.1667.0"
   dependencies:
     buffer: "npm:4.9.2"
     events: "npm:1.1.1"
@@ -6563,7 +6563,7 @@ __metadata:
     util: "npm:^0.12.4"
     uuid: "npm:8.0.0"
     xml2js: "npm:0.6.2"
-  checksum: 10/5ca900fa8e0993ecdfd1126a453d2321d06074cb06aadcc22170184c4a6b8896622bc7959c5f45e0ddba389b51034870af64ce2a59c0411266884122b38a88bc
+  checksum: 10/ae53cab9daa058b895db56133e7cf636edfabe632f69a6fb4b7fafaa7057ace9fe025b5b7b25fb93a92b26e9f765f6eeb5f877a15ffde2215cb3904e502d6ecb
   languageName: node
   linkType: hard
 
@@ -11232,7 +11232,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-cron@npm:^3.0.3":
+"node-cron@npm:3.0.3":
   version: 3.0.3
   resolution: "node-cron@npm:3.0.3"
   dependencies:
@@ -11245,6 +11245,17 @@ __metadata:
   version: 1.0.0
   resolution: "node-domexception@npm:1.0.0"
   checksum: 10/e332522f242348c511640c25a6fc7da4f30e09e580c70c6b13cb0be83c78c3e71c8d4665af2527e869fc96848924a4316ae7ec9014c091e2156f41739d4fa233
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:3.3.2":
+  version: 3.3.2
+  resolution: "node-fetch@npm:3.3.2"
+  dependencies:
+    data-uri-to-buffer: "npm:^4.0.0"
+    fetch-blob: "npm:^3.1.4"
+    formdata-polyfill: "npm:^4.0.10"
+  checksum: 10/24207ca8c81231c7c59151840e3fded461d67a31cf3e3b3968e12201a42f89ce4a0b5fb7079b1fa0a4655957b1ca9257553200f03a9f668b45ebad265ca5593d
   languageName: node
   linkType: hard
 
@@ -11269,17 +11280,6 @@ __metadata:
     encoding:
       optional: true
   checksum: 10/b24f8a3dc937f388192e59bcf9d0857d7b6940a2496f328381641cb616efccc9866e89ec43f2ec956bbd6c3d3ee05524ce77fe7b29ccd34692b3a16f237d6676
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:^3.3.2":
-  version: 3.3.2
-  resolution: "node-fetch@npm:3.3.2"
-  dependencies:
-    data-uri-to-buffer: "npm:^4.0.0"
-    fetch-blob: "npm:^3.1.4"
-    formdata-polyfill: "npm:^4.0.10"
-  checksum: 10/24207ca8c81231c7c59151840e3fded461d67a31cf3e3b3968e12201a42f89ce4a0b5fb7079b1fa0a4655957b1ca9257553200f03a9f668b45ebad265ca5593d
   languageName: node
   linkType: hard
 
@@ -14365,7 +14365,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"xml-js@npm:^1.6.11":
+"xml-js@npm:1.6.11, xml-js@npm:^1.6.11":
   version: 1.6.11
   resolution: "xml-js@npm:1.6.11"
   dependencies:

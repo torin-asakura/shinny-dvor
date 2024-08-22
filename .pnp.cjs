@@ -6838,7 +6838,7 @@ const RAW_RUNTIME_STATE =
           ["@sentry/node", "npm:7.118.0"],\
           ["@types/node", "npm:22.1.0"],\
           ["@types/node-cron", "npm:3.0.11"],\
-          ["aws-sdk", "npm:2.1677.0"],\
+          ["aws-sdk", "npm:2.1667.0"],\
           ["node-cron", "npm:3.0.3"],\
           ["node-fetch", "npm:3.3.2"],\
           ["xml-js", "npm:1.6.11"]\
@@ -16561,10 +16561,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["aws-sdk", [\
-      ["npm:2.1677.0", {\
-        "packageLocation": "./.yarn/unplugged/aws-sdk-npm-2.1677.0-778f94b772/node_modules/aws-sdk/",\
+      ["npm:2.1667.0", {\
+        "packageLocation": "./.yarn/unplugged/aws-sdk-npm-2.1667.0-b8c071bbb8/node_modules/aws-sdk/",\
         "packageDependencies": [\
-          ["aws-sdk", "npm:2.1677.0"],\
+          ["aws-sdk", "npm:2.1667.0"],\
           ["buffer", "npm:4.9.2"],\
           ["events", "npm:1.1.1"],\
           ["ieee754", "npm:1.1.13"],\
