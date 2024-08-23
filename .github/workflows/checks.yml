@@ -1,23 +1,12 @@
 name: Checks
 
-on: [pull_request]
+on:
+  - pull_request
 
 jobs:
   check:
-    name: Typecheck, lint
+    name: Checks
     uses: atls/shared/.github/workflows/checks.yaml@master
     permissions: write-all
     with:
-      node-version: '18'
-  release:
-    name: Release
-    uses: atls/shared/.github/workflows/release.yaml@master
-    permissions: write-all
-    with:
-      node-version: '18'
-  test:
-    name: Tests
-    uses: atls/shared/.github/workflows/tests.yaml@master
-    permissions: write-all
-    with:
-      node-version: '18'
+      node-version: '19'
