@@ -256,7 +256,7 @@ const RAW_RUNTIME_STATE =
     ["@blog/post-page", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:blog/pages/post-page", "workspace:blog/pages/post-page"]],\
     ["@fragments/booking-fragment", ["virtual:624b1cc16eab66e8c0265bb209e76d7e98cb1ac2e6287693907de623e5406552d9f6fd5c0cf6f73df6e389466795d6711d712eef2861ab80e38dd33ca4f4de8a#workspace:fragments/booking-fragment", "virtual:9935b58887febfef22f5f34399588310bfe65df0b2902e1b893948bc3fc251ebca88e67481967d492f1bbc4b60e3653516d2c3ff8349883603ced8e85335ea28#workspace:fragments/booking-fragment", "virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:fragments/booking-fragment", "virtual:e7d97555827efa87e268158ba6512022a665197c27eb97f177c9ee7b22a5a6f9d0e8fb5c66e402832e8028d4ec6b5a51a6b1e1f8d2d84de699661b25265dceb7#workspace:fragments/booking-fragment", "workspace:fragments/booking-fragment"]],\
     ["@fragments/footer-fragment", ["virtual:10336f971de40ae7ec5bf6138d2a01746df3707f7ab91c34033b731dbf091099c771b279b0887e781ecd7c8977197c6af4964f338765731b1a5368a42f751c95#workspace:fragments/footer-fragment", "virtual:1316d36633829be6354e561810872ec53a43dc7a57268e30eb85ea5e6e26a369bdc804223946860286f2674907cfb7cdccd2925497c501d929cb5bfce4de34cf#workspace:fragments/footer-fragment", "virtual:b814c88d377ed8303f57708ce9601d5aedff7d7ab2ae9076db60b35c7d58e348cc396cf78aa783c28dd02136f67dea0d1ecb639892aee3eee83ff6eca5520ec4#workspace:fragments/footer-fragment", "virtual:c6b7d9ae7dd8b609d7518733dcb9eb2d1f74cd14506750431287a22cb844a2fb9ad51ba01fe3686013be670afe565e076d6314508fac6f70f84ca2468d8caf8d#workspace:fragments/footer-fragment", "virtual:d8255fbbef4114afab2ef8fddd98d7ddcb247bc9a2cbccbc7cec268dd25b783369d138e1d9e4892c97aededebdad3ac984a3f388d5fed248219670a60f97bbd5#workspace:fragments/footer-fragment", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:fragments/footer-fragment", "workspace:fragments/footer-fragment"]],\
-    ["@fragments/global-error-fragment", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/global-error-fragment", "workspace:fragments/global-error-fragment"]],\
+    ["@fragments/global-error-fragment", ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/global-error-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/global-error-fragment", "workspace:fragments/global-error-fragment"]],\
     ["@fragments/navigation-fragment", ["virtual:10336f971de40ae7ec5bf6138d2a01746df3707f7ab91c34033b731dbf091099c771b279b0887e781ecd7c8977197c6af4964f338765731b1a5368a42f751c95#workspace:fragments/navigation-fragment", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:fragments/navigation-fragment", "workspace:fragments/navigation-fragment"]],\
     ["@fragments/root-layout-fragment", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/root-layout-fragment", "workspace:fragments/root-layout-fragment"]],\
     ["@globals/configs", ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/configs", "workspace:globals/configs"]],\
@@ -3614,6 +3614,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@fragments/global-error-fragment", [\
+      ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/global-error-fragment", {\
+        "packageLocation": "./.yarn/__virtual__/@fragments-global-error-fragment-virtual-73621e6a1f/1/fragments/global-error-fragment/",\
+        "packageDependencies": [\
+          ["@fragments/global-error-fragment", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/global-error-fragment"],\
+          ["@sentry/nextjs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:8.24.0"],\
+          ["@types/next", null],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["@types/sentry__nextjs", null],\
+          ["next", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:14.2.5"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/next",\
+          "@types/react-dom",\
+          "@types/react",\
+          "@types/sentry__nextjs",\
+          "next",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/global-error-fragment", {\
         "packageLocation": "./.yarn/__virtual__/@fragments-global-error-fragment-virtual-0e7abfb98d/1/fragments/global-error-fragment/",\
         "packageDependencies": [\
@@ -3839,7 +3863,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@globals-configs-virtual-f398d1b58b/1/globals/configs/",\
         "packageDependencies": [\
           ["@globals/configs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/configs"],\
-          ["@sentry/nextjs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:8.24.0"],\
           ["@types/next", null],\
           ["next", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:14.2.5"]\
         ],\
@@ -3853,7 +3876,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./globals/configs/",\
         "packageDependencies": [\
           ["@globals/configs", "workspace:globals/configs"],\
-          ["@sentry/nextjs", "virtual:bc18f3931a9b999a4daf56ea26fca4fd88cd4e076cd745850a518cf482c1e8dfb1e0f7c4f9b746e125f754840fd9a66621b8fb9a18e01f6dc207b883aff9226a#npm:8.24.0"],\
           ["next", "virtual:bc18f3931a9b999a4daf56ea26fca4fd88cd4e076cd745850a518cf482c1e8dfb1e0f7c4f9b746e125f754840fd9a66621b8fb9a18e01f6dc207b883aff9226a#npm:14.2.5"]\
         ],\
         "linkType": "SOFT"\
@@ -5612,39 +5634,6 @@ const RAW_RUNTIME_STATE =
           "webpack"\
         ],\
         "linkType": "HARD"\
-      }],\
-      ["virtual:bc18f3931a9b999a4daf56ea26fca4fd88cd4e076cd745850a518cf482c1e8dfb1e0f7c4f9b746e125f754840fd9a66621b8fb9a18e01f6dc207b883aff9226a#npm:8.24.0", {\
-        "packageLocation": "./.yarn/__virtual__/@sentry-nextjs-virtual-51333f02b0/0/cache/@sentry-nextjs-npm-8.24.0-2fa8644817-4257765471.zip/node_modules/@sentry/nextjs/",\
-        "packageDependencies": [\
-          ["@sentry/nextjs", "virtual:bc18f3931a9b999a4daf56ea26fca4fd88cd4e076cd745850a518cf482c1e8dfb1e0f7c4f9b746e125f754840fd9a66621b8fb9a18e01f6dc207b883aff9226a#npm:8.24.0"],\
-          ["@opentelemetry/instrumentation-http", "virtual:b307a8cce47d529de6662a82d585da3c18fac53c3ab50a6ae39fef17329596015fa0d58cd3d7e4565a0c9ea1536e566f5cdd6c28629c40e09ffa10b2060f674f#npm:0.52.1"],\
-          ["@opentelemetry/semantic-conventions", "npm:1.25.1"],\
-          ["@rollup/plugin-commonjs", "virtual:b307a8cce47d529de6662a82d585da3c18fac53c3ab50a6ae39fef17329596015fa0d58cd3d7e4565a0c9ea1536e566f5cdd6c28629c40e09ffa10b2060f674f#npm:26.0.1"],\
-          ["@sentry-internal/tracing", "npm:7.119.0"],\
-          ["@sentry/core", "npm:8.24.0"],\
-          ["@sentry/node", "npm:8.24.0"],\
-          ["@sentry/opentelemetry", "virtual:b307a8cce47d529de6662a82d585da3c18fac53c3ab50a6ae39fef17329596015fa0d58cd3d7e4565a0c9ea1536e566f5cdd6c28629c40e09ffa10b2060f674f#npm:8.24.0"],\
-          ["@sentry/react", "virtual:b307a8cce47d529de6662a82d585da3c18fac53c3ab50a6ae39fef17329596015fa0d58cd3d7e4565a0c9ea1536e566f5cdd6c28629c40e09ffa10b2060f674f#npm:8.24.0"],\
-          ["@sentry/types", "npm:8.24.0"],\
-          ["@sentry/utils", "npm:8.24.0"],\
-          ["@sentry/vercel-edge", "npm:8.24.0"],\
-          ["@sentry/webpack-plugin", "virtual:b307a8cce47d529de6662a82d585da3c18fac53c3ab50a6ae39fef17329596015fa0d58cd3d7e4565a0c9ea1536e566f5cdd6c28629c40e09ffa10b2060f674f#npm:2.20.1"],\
-          ["@types/next", null],\
-          ["@types/webpack", null],\
-          ["chalk", "npm:3.0.0"],\
-          ["next", "virtual:bc18f3931a9b999a4daf56ea26fca4fd88cd4e076cd745850a518cf482c1e8dfb1e0f7c4f9b746e125f754840fd9a66621b8fb9a18e01f6dc207b883aff9226a#npm:14.2.5"],\
-          ["resolve", "patch:resolve@npm%3A1.22.8#optional!builtin<compat/resolve>::version=1.22.8&hash=c3c19d"],\
-          ["rollup", "npm:3.29.4"],\
-          ["stacktrace-parser", "npm:0.1.10"],\
-          ["webpack", null]\
-        ],\
-        "packagePeers": [\
-          "@types/next",\
-          "@types/webpack",\
-          "next",\
-          "webpack"\
-        ],\
-        "linkType": "HARD"\
       }]\
     ]],\
     ["@sentry/node", [\
@@ -6068,13 +6057,10 @@ const RAW_RUNTIME_STATE =
           ["@apollo/client", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:3.11.3"],\
           ["@atls/next-document-with-gtag", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.1.1"],\
           ["@atls/next-document-with-helmet", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.3.1"],\
-          ["@fragments/global-error-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/global-error-fragment"],\
+          ["@fragments/global-error-fragment", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/global-error-fragment"],\
           ["@fragments/root-layout-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/root-layout-fragment"],\
           ["@globals/configs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/configs"],\
           ["@globals/data", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/data"],\
-          ["@sentry/nextjs", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:8.24.0"],\
-          ["@sentry/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:8.24.0"],\
-          ["@sentry/utils", "npm:8.24.0"],\
           ["@site/contacts-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/contacts-page"],\
           ["@site/index-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/index-page"],\
           ["@site/service-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/service-page"],\

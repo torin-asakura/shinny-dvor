@@ -1519,7 +1519,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@globals/configs@workspace:globals/configs"
   dependencies:
-    "@sentry/nextjs": "npm:8.24.0"
     next: "npm:14.2.5"
   peerDependencies:
     next: "*"
@@ -2921,9 +2920,6 @@ __metadata:
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/configs": "workspace:*"
     "@globals/data": "workspace:*"
-    "@sentry/nextjs": "npm:8.24.0"
-    "@sentry/react": "npm:8.24.0"
-    "@sentry/utils": "npm:8.24.0"
     "@site/contacts-page": "workspace:*"
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
