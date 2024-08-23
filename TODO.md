@@ -1,3 +1,7 @@
+- [ ] move sentry privates to env
+
+---
+
 ### миграция `_document` to `app-router`
 
 - [x] интеграция `icons` in `site`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
@@ -5,7 +9,7 @@
 - [x] интеграция `helmet` in`site`
 
 - [x] интеграция `icons` in `blog`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
-- [ ] проверить ^
+- [x] проверить ^
 - [x] интеграция `gtag` in `blog`
 - [x] интеграция `helmet` in`blog`
 
@@ -20,8 +24,8 @@
 - [ ] лезут карточки друг на друга на слайдере внизу страницы главной
 - [x] blog
 
-- [ ] TODO's
-- [ ] yarn check
+- [x] TODO's
+- [x] yarn check
 
 ---
 
@@ -40,7 +44,7 @@
 - [x] индикация активной страницы (см. `useRouter`, для `app` используется другой метод)
 
 - 100% usable, **dont touch**:
-- [ ] `@sentry/nextjs`
+- [x] `@sentry/nextjs`
 
 - check package versions:
 - [x] `@atls/next-document-with-gtag`
@@ -71,10 +75,10 @@
 
 - используется в `site/document` - что такое `document`
 - эти пакеты не трогал,
-- [ ] нужно вынести в отдельный фрагмент
+- [x] нужно вынести в отдельный фрагмент
 - [x] `@atls/next-document-with-helmet`
 - [x] `@atls/next-document-with-gtag`
 - [ ] `recompose`
 - [ ] `@apollo/react-ssr`
 
-- [ ] express - как он используется с `next.js`?
+- [x] express - как он используется с `next.js`? - нет, убрал
