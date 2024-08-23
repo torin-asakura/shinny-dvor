@@ -1,3 +1,4 @@
+export * from './get-page-seo-data.getter.js'
 export * from './get-page-preview-data.getter.js'
 
 export * from './get-blog-index-page-seo-data.getter.js'

@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
-const GET_BLOG_POST_PAGE_SEO = gql`
-  query GetSitePostPageSeo($uri: String!) {
+const GET_PAGE_SEO = gql`
+  query GetPageSeo($uri: String!) {
     postBy(uri: $uri) {
       seo {
         title
@@ -11,4 +11,4 @@ const GET_BLOG_POST_PAGE_SEO = gql`
   }
 `
 
-export { GET_BLOG_POST_PAGE_SEO }
+export { GET_PAGE_SEO }

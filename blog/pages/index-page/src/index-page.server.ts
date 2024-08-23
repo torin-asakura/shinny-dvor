@@ -10,11 +10,14 @@ import { runNavigationQuery }        from '@globals/data'
 import { runPostsQuery }             from '@globals/data'
 import { getPagePreviewData }        from '@globals/data/getters'
 import { getBlogIndexPageSeoData }   from '@globals/data/getters'
+import { getPageSeoData }            from '@globals/data/getters'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
   let SEO: SEOInt
 
-  const seoData = await getBlogIndexPageSeoData()
+  // const seoData = await getBlogIndexPageSeoData()
+  const seoData = await getPageSeoData({ uri: '/blog' })
+
   const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
