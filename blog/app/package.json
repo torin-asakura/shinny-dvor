@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
+    "build": "yarn next build --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
     "dev": "yarn next dev src",
     "prepack": "run build",
     "start": "node dist/index.js"
@@ -22,9 +22,6 @@
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
     "@globals/data": "workspace:*",
-    "@sentry/nextjs": "8.24.0",
-    "@sentry/react": "8.24.0",
-    "@sentry/utils": "8.24.0",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
