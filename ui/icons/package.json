@@ -7,7 +7,6 @@
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
-  "types": "module",
   "scripts": {
     "generate-icons": "generate-icons src/ -i ./icons -r replacements.ts"
   },
@@ -22,6 +21,7 @@
     "react-dom": "18.3.1"
   },
   "peerDependencies": {
+    "@atls-ui-generators/icons": "0.0.16",
     "@emotion/react": "*",
     "@emotion/styled": "*",
     "glob": "*",

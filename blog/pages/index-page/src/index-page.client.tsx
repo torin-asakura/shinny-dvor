@@ -1,12 +1,12 @@
 // move it directive to fragment level
 'use client'
 
-import { FC }             from 'react'
 import React              from 'react'
+import { FC }             from 'react'
 
+import { AllArticles }    from '@blog/articles-fragment'
 import { Footer }         from '@fragments/footer-fragment'
 import { Navigation }     from '@fragments/navigation-fragment'
-import { AllArticles }    from '@blog/articles-fragment'
 import { Column }         from '@ui/layout'
 
 import { IndexPageProps } from './index-page.interfaces.js'

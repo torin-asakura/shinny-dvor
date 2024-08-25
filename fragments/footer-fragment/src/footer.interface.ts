@@ -19,6 +19,7 @@ export interface Fragment {
 }
 
 export interface FooterProps {
+  navigationItemsType?: string
   contactsData: ContactAddons[]
   fragmentsData: Fragment[]
 }
