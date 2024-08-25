@@ -1,3 +1,5 @@
+import {}                                          from '@globals/data'
+
 import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { SEOInt }              from '@globals/data'
 
@@ -8,6 +10,8 @@ import { runFragmentsQuery }        from '@globals/data'
 import { runContactsQuery }         from '@globals/data'
 import { runNavigationQuery }       from '@globals/data'
 import { runPostQuery }             from '@globals/data'
+import { getSchemaData }            from '@globals/data'
+import { getRadiiData }             from '@globals/data'
 import { getBlogPostPageSeoData }   from '@globals/data/getters'
 import { getPagePreviewData }       from '@globals/data/getters'
 
@@ -27,14 +31,17 @@ export const PostPageServer: PostPageServerProps = async ({ params }) => {
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
+  const { schema } = await getSchemaData()
+  const radiiData = await getRadiiData(schema)
+
   const queryPromises: Array<Promise<any>> = [
+    runFragmentsQuery(),
     runContactsQuery(),
     runNavigationQuery(),
     runAvailableRadiiQuery(),
-    runFragmentsQuery(),
     runPostQuery({ uri }),
     runCarBodiesQuery(),
-    runServicesQuery(),
+    runServicesQuery({ radiiData }),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
