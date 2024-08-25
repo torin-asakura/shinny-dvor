@@ -1,6 +1,6 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
-const GET_POSTS = gql`
+const GET_BLOG_POSTS = gql`
   query GetPosts {
     posts {
       nodes {
@@ -17,6 +17,6 @@ const GET_POSTS = gql`
       }
     }
   }
-`;
+`
 
-export { GET_POSTS };
+export { GET_BLOG_POSTS }

@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-const GET_POST = gql`
+const GET_BLOG_POST = gql`
   query GetPostBy($uri: String!) {
     postBy(uri: $uri) {
       postId
@@ -24,4 +24,4 @@ const GET_POST = gql`
   }
 `
 
-export { GET_POST }
+export { GET_BLOG_POST }

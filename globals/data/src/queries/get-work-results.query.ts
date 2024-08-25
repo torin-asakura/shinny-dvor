@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
 const GET_WORK_RESULTS = gql`
-  query GetServices {
+  query GetWorkResults {
     workResultItems {
       nodes {
         workResultParams {
