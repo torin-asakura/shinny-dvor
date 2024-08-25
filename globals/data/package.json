@@ -5,7 +5,8 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./getters": "./src/getters/index.ts"
+    "./getters": "./src/getters/index.ts",
+    "./interfaces": "./src/interfaces/index.ts"
   },
   "main": "src/index.ts",
   "scripts": {
