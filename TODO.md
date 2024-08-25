@@ -1,3 +1,8 @@
+- вырезал GET_SERVICES из get-services.quer
+- смотри, как сделанно в мастере.
+- мы не используем graphql переменные, мы вставляем в строку переменные
+- изза этого не получается сегенерировать типы для этого запроса
+
 ### миграция `_document` to `app-router`
 
 - [x] интеграция `icons` in `site`; see (this)[https://nextjs.org/docs/app/api-reference/functions/generate-metadata#generatemetadata-function]
