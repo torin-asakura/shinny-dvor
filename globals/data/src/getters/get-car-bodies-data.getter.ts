@@ -1,16 +1,18 @@
-import { GET_CAR_BODIES } from '@globals/data'
-import { getClient }      from '@globals/data'
+import type { CarBodiesQueryDataType } from '@globals/data/interfaces'
+
+import { GET_CAR_BODIES }              from '@globals/data'
+import { getClient }                   from '@globals/data'
 
 const getCarBodiesData = async () => {
   const client = getClient()
 
-  const { data: carBodiesData } = await client.query({
+  const data: CarBodiesQueryDataType = await client.query({
     query: GET_CAR_BODIES,
   })
 
-  if (carBodiesData) {
+  if (data && data.carBodyItems) {
     return {
-      carBodies: carBodiesData.carBodyItems.nodes,
+      carBodies: data.carBodyItems.nodes,
     }
   }
 

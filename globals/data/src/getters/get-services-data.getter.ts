@@ -1,16 +1,18 @@
-import { GET_SERVICES } from '@globals/data'
-import { getClient }    from '@globals/data'
+import type { ServicesQueryDataType } from '@globals/data/interfaces'
+
+import { GET_SERVICES }               from '@globals/data'
+import { getClient }                  from '@globals/data'
 
 const getServicesData = async () => {
   const client = getClient()
 
-  const { data: servicesData } = await client.query({
+  const data: ServicesQueryDataType = await client.query({
     query: GET_SERVICES,
   })
 
-  if (servicesData) {
+  if (data) {
     return {
-      services: servicesData.services.nodes,
+      services: data.services.nodes,
     }
   }
 

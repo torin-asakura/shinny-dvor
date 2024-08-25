@@ -8,3 +8,6 @@ export * from './get-site-contacts-page-seo-data.getter.js'
 export * from './get-site-index-page-seo-data.getter.js'
 export * from './get-site-service-page-seo-data.getter.js'
 export * from './get-site-services-page-seo-data.getter.js'
+
+export * from './get-radii-data.getter.js'
+export * from './get-schema-data.getter.js'

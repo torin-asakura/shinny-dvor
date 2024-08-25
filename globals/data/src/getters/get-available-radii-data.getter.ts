@@ -1,16 +1,18 @@
-import { GET_AVAILABLE_RADII } from '@globals/data'
-import { getClient }           from '@globals/data'
+import type { AvailableRadiiDataType } from '@globals/data/interfaces'
+
+import { GET_AVAILABLE_RADII }         from '@globals/data'
+import { getClient }                   from '@globals/data'
 
 const getAvailableRadiiData = async () => {
   const client = getClient()
 
-  const { data: availableRadiiData } = await client.query({
+  const data: AvailableRadiiDataType = await client.query({
     query: GET_AVAILABLE_RADII,
   })
 
-  if (availableRadiiData) {
+  if (data.availableRadiusItems) {
     return {
-      availableRadii: availableRadiiData.availableRadiusItems.nodes,
+      availableRadii: data.availableRadiusItems.nodes,
     }
   }
 
