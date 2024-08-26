@@ -1,1 +1,1 @@
-export * from './useCarousel.js'
+export * from './hooks/index.js'
