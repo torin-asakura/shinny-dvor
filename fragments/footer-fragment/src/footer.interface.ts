@@ -1,3 +1,5 @@
+import type { FragmentsDataType } from '@globals/data'
+
 export interface ContactAddons {
   address: string
   email: string
@@ -9,17 +11,19 @@ export interface ContactAddons {
   workingHours: string
 }
 
-export interface Fragment {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-    highlightedtext: string
-  }
-}
+// TODO remove
+// export interface Fragment {
+//   contentAddons: {
+//     title: string
+//     content: string
+//     fragmentId: string
+//     highlightedtext: string
+//   }
+// }
 
 export interface FooterProps {
   navigationItemsType?: string
   contactsData: ContactAddons[]
-  fragmentsData: Fragment[]
+  // fragmentsData: Fragment[]
+  fragmentsData: FragmentsDataType
 }

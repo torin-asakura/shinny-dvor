@@ -1,7 +1,7 @@
 import { NavigationItem } from '../navigation.interface.js'
 
 export interface NavigationListProps {
-  active: number
+  active: number | undefined
   scrollY?: number
   navigation: NavigationItem[]
 }

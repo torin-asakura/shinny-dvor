@@ -107,7 +107,7 @@ const Initial: FC<InitialProps> = ({
   }
 
   const updateStatus = useCallback(
-    (success) => {
+    (success: IService) => {
       if (success) {
         screenVar(SUCCESS)
         serviceVar({ ...service, radius: '', serviceName: '' })
@@ -193,7 +193,7 @@ const Initial: FC<InitialProps> = ({
       <Layout flexBasis={16} />
       <Layout display={['none', 'none', 'flex']}>
         <Switch active={selectedCarBody}>
-          {carBodyItems.map((item) => (
+          {carBodyItems.map((item: string) => (
             <Item value={item} onSelect={setSelectedCarBody}>
               {item}
             </Item>
