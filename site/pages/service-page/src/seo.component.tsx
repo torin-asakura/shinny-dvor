@@ -1,7 +1,13 @@
-import React  from 'react'
-import Helmet from 'react-helmet'
+import type { FC }               from 'react'
 
-const Seo = ({ ogCover, SEO }) => {
+import type { SeoProps }         from './service-page.interfaces.js'
+
+import { default as BaseHelmet } from 'react-helmet'
+import React                     from 'react'
+
+const Helmet = BaseHelmet as unknown as FC<any>
+
+const Seo: FC<SeoProps> = ({ ogCover, SEO }) => {
   const { title } = SEO
 
   return (

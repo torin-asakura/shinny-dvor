@@ -1,23 +1,24 @@
-import React                from 'react'
-import { FC }               from 'react'
-import { FormattedMessage } from 'react-intl'
-import { useRouter }        from 'next/router'
+import type { FC }           from 'react'
 
-import { Button }           from '@ui/button'
-import { Condition }        from '@ui/condition'
-import { Divider }          from '@ui/divider'
-import { Column }           from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Row }              from '@ui/layout'
-import { Ruble }            from '@ui/text'
-import { Space }            from '@ui/text'
-import { Text }             from '@ui/text'
-import { useHover }         from '@ui/utils'
+import type { ServiceProps } from './service.interface.js'
 
-import { ServiceProps }     from './service.interface'
+import { FormattedMessage }  from 'react-intl'
+import { useRouter }         from 'next/navigation.js'
+import React                 from 'react'
+
+import { Button }            from '@ui/button'
+import { Condition }         from '@ui/condition'
+import { Divider }           from '@ui/divider'
+import { Column }            from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { Row }               from '@ui/layout'
+import { Ruble }             from '@ui/text'
+import { Space }             from '@ui/text'
+import { Text }              from '@ui/text'
+import { useHover }          from '@ui/utils'
 
 const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
-  const route = useRouter()
+  const router = useRouter()
   const [hover, hoverProps] = useHover()
 
   const cost = price[Object.keys(price)[1]]?.passenger
@@ -26,8 +27,8 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
     <Button
       size='ghost'
       color='transparent'
-      onClick={() => {
-        route.push(uri)
+      onClick={(): void => {
+        router.push(uri)
       }}
     >
       <Column fill {...hoverProps}>
@@ -48,7 +49,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             <Layout flexBasis={[4, 4, 8]} />
             <Layout>
               <Column>
-                {description.split('|n|').map((item) => (
+                {description.split('|n|').map((item: string) => (
                   <Row key={item} flexWrap='wrap' maxWidth={['100%', '100%', 500]}>
                     <Text
                       textAlign='start'
@@ -64,7 +65,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             </Layout>
           </Column>
           <Column justifyContent='center' width={200} display={['none', 'none', 'flex']}>
-            <Condition match={hover as boolean}>
+            <Condition match={Boolean(hover)}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>
                   <Text fontWeight='medium'>

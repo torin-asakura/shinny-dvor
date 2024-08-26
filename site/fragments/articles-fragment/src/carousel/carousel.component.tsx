@@ -1,8 +1,7 @@
-import React           from 'react'
-import { FC }          from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Layout }      from '@ui/layout'
-import { useCarousel } from '@ui/carousel'
+import React                      from 'react'
 
 import { Layout }                 from '@ui/layout'
 
@@ -10,7 +9,7 @@ import { DesktopCarousel }        from './desktop-carousel/index.js'
 import { MobileCarousel }         from './mobile-carousel/index.js'
 import { TabletCarousel }         from './tablet-carousel/index.js'
 
-const Carousel: FC = ({ children }) => (
+export const Carousel: FC<PropsWithChildren> = ({ children }) => (
   <>
     <Layout overflow='hidden' display={['none', 'none', 'flex']}>
       <DesktopCarousel>{children}</DesktopCarousel>
@@ -23,5 +22,3 @@ const Carousel: FC = ({ children }) => (
     </Layout>
   </>
 )
-
-export { Carousel }

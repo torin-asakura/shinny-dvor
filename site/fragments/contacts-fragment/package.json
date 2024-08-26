@@ -1,18 +1,21 @@
 {
   "name": "@site/contacts-fragment",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
-    "@globals/data": "workspace:0.0.1",
-    "@shared/utils": "workspace:0.0.1",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/link": "workspace:0.0.1",
-    "@ui/map": "workspace:0.0.1",
-    "@ui/social-links": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@globals/data": "workspace:*",
+    "@shared/utils": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/link": "workspace:*",
+    "@ui/map": "workspace:*",
+    "@ui/social-links": "workspace:*",
+    "@ui/text": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "18.3.3",

@@ -1,1 +1,1 @@
-export * from './car-body-converter.helper'
+export * from './car-body-converter.helper.js'
