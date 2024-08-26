@@ -1,12 +1,12 @@
 import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
 import type { SEOInt }                  from '@globals/data'
 
-import { runAvailableRadiiQuery }       from '@globals/data'
-import { runContactsQuery }             from '@globals/data'
-import { runNavigationQuery }           from '@globals/data'
-import { runCarBodiesQuery }            from '@globals/data'
-import { runFragmentsQuery }            from '@globals/data'
-import { runServicesQuery }             from '@globals/data'
+import { getContactsData }              from '@globals/data/getters'
+import { getNavigationData }            from '@globals/data/getters'
+import { getCarBodiesData }             from '@globals/data/getters'
+import { getFragmentsData }             from '@globals/data/getters'
+import { getServicesData }              from '@globals/data/getters'
+import { getAvailableRadiiData }        from '@globals/data/getters'
 import { getSiteContactsPageSeoData }   from '@globals/data/getters'
 import { getPagePreviewData }           from '@globals/data/getters'
 
@@ -25,12 +25,12 @@ export const ContactsPageServer: ContactsPageServerProps = async () => {
   }
 
   const queryPromises: Array<Promise<any>> = [
-    runFragmentsQuery(),
-    runContactsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runCarBodiesQuery(),
-    runServicesQuery(),
+    getFragmentsData(),
+    getContactsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getCarBodiesData(),
+    getServicesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

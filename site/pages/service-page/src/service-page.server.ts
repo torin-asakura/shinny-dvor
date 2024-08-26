@@ -1,16 +1,17 @@
-import type { ServicePageServerProps } from './service-page.interfaces.js'
-import type { SEOInt }                 from '@globals/data'
+import type { ServicePageServerProps }         from './service-page.interfaces.js'
+import type { SEOInt }                         from '@globals/data'
 
-import { runAvailableRadiiQuery }      from '@globals/data'
-import { runNavigationQuery }          from '@globals/data'
-import { runContactsQuery }            from '@globals/data'
-import { runFragmentsQuery }           from '@globals/data'
-import { runPostsQuery }               from '@globals/data'
-import { runCarBodiesQuery }           from '@globals/data'
-import { runServiceQuery }             from '@globals/data'
-import { runServicesQuery }            from '@globals/data'
-import { getSiteServicePageSeoData }   from '@globals/data/getters'
-import { getPagePreviewData }          from '@globals/data/getters'
+import { getAvailableRadiiData }               from '@globals/data/getters'
+import { getPostsData } from '@globals/data/getters'
+import { getNavigationData }                   from '@globals/data/getters'
+import { getContactsData }                     from '@globals/data/getters'
+import { getFragmentsData }                    from '@globals/data/getters'
+import { getPostData }                         from '@globals/data/getters'
+import { getCarBodiesData }                    from '@globals/data/getters'
+import { getServiceData }                      from '@globals/data/getters'
+import { getServicesData }                     from '@globals/data/getters'
+import { getSiteServicePageSeoData }           from '@globals/data/getters'
+import { getPagePreviewData }                  from '@globals/data/getters'
 
 export const ServicePageServer: ServicePageServerProps = async ({ params }) => {
   let SEO: SEOInt
@@ -29,14 +30,14 @@ export const ServicePageServer: ServicePageServerProps = async ({ params }) => {
   }
 
   const queryPromises: Array<Promise<any>> = [
-    runContactsQuery(),
-    runPostsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runServicesQuery(),
-    runFragmentsQuery(),
-    runCarBodiesQuery(),
-    runServiceQuery(uri),
+    getContactsData(),
+    getPostsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getServicesData(),
+    getFragmentsData(),
+    getCarBodiesData(),
+    getServiceData(uri),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
