@@ -18,6 +18,6 @@ export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   color?: ButtonColors
   width?: number | string | number[] | string[]
   height?: number | string | number[] | string[]
-  onMouseEnter?: MouseEventHandler<HTMLDivElement>
-  onMouseLeave?: MouseEventHandler<HTMLDivElement>
+  onMouseEnter?: MouseEventHandler<HTMLButtonElement>
+  onMouseLeave?: MouseEventHandler<HTMLButtonElement>
 }
