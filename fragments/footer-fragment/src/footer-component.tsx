@@ -1,9 +1,8 @@
+import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import type { FooterProps } from './footer.interface.js'
-
-import { memo }             from 'react'
 import React                from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
