@@ -1,8 +1,8 @@
 interface FeaturedImageInt {
-    node: {
-      altText: string
-      mediaItemUrl: string
-    }
+  node: {
+    altText: string
+    mediaItemUrl: string
+  }
 }
 
 export interface Post {

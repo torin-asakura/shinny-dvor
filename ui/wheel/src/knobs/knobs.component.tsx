@@ -1,5 +1,6 @@
-import type { KnobsProps } from './knobs.interface.js'
 import type { FC }         from 'react'
+
+import type { KnobsProps } from './knobs.interface.js'
 
 import React               from 'react'
 

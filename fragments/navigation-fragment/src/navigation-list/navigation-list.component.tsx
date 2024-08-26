@@ -1,5 +1,6 @@
-import type { NavigationListProps } from './navigation-list.interface.js'
 import type { FC }                  from 'react'
+
+import type { NavigationListProps } from './navigation-list.interface.js'
 
 import React                        from 'react'
 

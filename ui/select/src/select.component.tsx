@@ -10,8 +10,8 @@ import { Text }                            from '@ui/text'
 
 import { ArrowContainer }                  from './arrow-container/index.js'
 import { Button }                          from './button/index.js'
-import { Menu }                            from './menu/index.js'
 import { MenuItem }                        from './menu-item/index.js'
+import { Menu }                            from './menu/index.js'
 import { SelectProps }                     from './select.interface.js'
 
 const Select: FC<SelectProps> = ({

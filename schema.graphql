@@ -442,7 +442,7 @@ union ContentRevisionUnion = Page | Post
 
 "Deprecated in favor of MenuItemLinkeable Interface"
 union MenuItemObjectUnion =
-    AvailableRadiusItem
+  | AvailableRadiusItem
   | CarBodyItem
   | Category
   | ContactItem

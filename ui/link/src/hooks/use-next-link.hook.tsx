@@ -1,7 +1,7 @@
 import type { UseNextNavLinkType } from './use-next-link.interface.js'
 
-import React                       from 'react'
 import { useRouter }               from 'next/navigation.js'
+import React                       from 'react'
 
 import { progressBar }             from '@ui/progress-bar'
 

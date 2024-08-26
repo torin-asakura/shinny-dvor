@@ -1,4 +1,4 @@
-import type { CarBodiesQueryDataType } from '@globals/data/interfaces'
+import type { CarBodiesQueryDataType } from '@globals/data'
 
 import { GET_CAR_BODIES }              from '@globals/data'
 import { getClient }                   from '@globals/data'

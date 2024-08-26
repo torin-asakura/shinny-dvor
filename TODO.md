@@ -1,6 +1,7 @@
 - [ ] move sentry privates to env
 
 ---
+
 - вырезал GET_SERVICES из get-services.quer
 - смотри, как сделанно в мастере.
 - мы не используем graphql переменные, мы вставляем в строку переменные

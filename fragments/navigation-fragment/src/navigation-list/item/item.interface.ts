@@ -1,5 +1,5 @@
 export interface ItemProps {
-  active: number
+  active: number | undefined
   scrollY?: number
   content: string
   title: string

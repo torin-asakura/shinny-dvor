@@ -1,4 +1,5 @@
-import type { ContentAddonsInt } from '@globals/data'
+// TODO interface
+type ContentAddonsInt = any
 
 export interface Service {
   contentAddons: ContentAddonsInt

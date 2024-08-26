@@ -1,13 +1,14 @@
-import type { WorksExamplesProps }   from './works-examples.interface.js'
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'
 
-import React                         from 'react'
+import type { WorksExamplesProps }   from './works-examples.interface.js'
+
 import { Children }                  from 'react'
 import { useState }                  from 'react'
 import { forwardRef }                from 'react'
 import { useMemo }                   from 'react'
+import React                         from 'react'
 
 import { Button }                    from '@ui/button'
 import { ArrowLeftIcon }             from '@ui/icons'
@@ -40,17 +41,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
 
   const sliderChildren = useMemo(
     () =>
-      slides.map(({
-        workResultParams: { fragmentId, photos, price, description, time },
-      }: {
-        workResultParams: {
-          fragmentId: string
-          photos: SlideProps['image']
-          price: SlideProps['price']
-          description: SlideProps['description']
-          time: SlideProps['time']
-        }
-      }) => (
+      slides.map(({ workResultParams: { fragmentId, photos, price, description, time } }) => (
         <Slide
           key={fragmentId}
           description={description}

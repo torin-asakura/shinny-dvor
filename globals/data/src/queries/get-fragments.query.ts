@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_FRAGMENTS = gql`
   query GetFragments {
@@ -13,6 +13,6 @@ const GET_FRAGMENTS = gql`
       }
     }
   }
-`;
+`
 
-export { GET_FRAGMENTS };
+export { GET_FRAGMENTS }

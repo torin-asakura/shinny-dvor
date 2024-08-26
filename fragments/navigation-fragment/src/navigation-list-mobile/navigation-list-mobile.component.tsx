@@ -1,5 +1,6 @@
-import type { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
 import type { FC }                        from 'react'
+
+import type { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
 
 import React                              from 'react'
 

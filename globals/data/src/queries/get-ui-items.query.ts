@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_UI = gql`
   query GetUi {
@@ -14,6 +14,6 @@ const GET_UI = gql`
       }
     }
   }
-`;
+`
 
-export { GET_UI };
+export { GET_UI }

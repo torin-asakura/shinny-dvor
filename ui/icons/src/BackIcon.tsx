@@ -1,7 +1,6 @@
-import type { FC }    from 'react'
+import type { FC }   from 'react'
 
 import { useTheme }  from '@emotion/react'
-
 /* eslint-disable */
 import React         from 'react'
 

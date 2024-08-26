@@ -1,7 +1,7 @@
 import type { CreatePreventDefaultType } from './prevent-default.interface.js'
 
-import React                             from 'react'
 import { forwardRef }                    from 'react'
+import React                             from 'react'
 
 export const createPreventDefault: CreatePreventDefaultType = (Button) =>
   forwardRef(({ onClick, ...props }, ref) => (

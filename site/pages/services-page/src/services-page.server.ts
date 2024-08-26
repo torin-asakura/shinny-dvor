@@ -1,15 +1,16 @@
-import type { ServicesPageServerProps } from './services-page.interface.js'
 import type { SEOInt }                  from '@globals/data'
 
-import { getAvailableRadiiData }        from '@globals/data/getters'
-import { getNavigationData }            from '@globals/data/getters'
-import { getContactsData }              from '@globals/data/getters'
-import { getFragmentsData }             from '@globals/data/getters'
-import { getPostsData }                 from '@globals/data/getters'
-import { getCarBodiesData }             from '@globals/data/getters'
-import { getServicesData }              from '@globals/data/getters'
-import { getSiterServicesPageSeoData }  from '@globals/data/getters'
-import { getPagePreviewData }           from '@globals/data/getters'
+import type { ServicesPageServerProps } from './services-page.interface.js'
+
+import { getAvailableRadiiData }        from '@globals/data'
+import { getNavigationData }            from '@globals/data'
+import { getContactsData }              from '@globals/data'
+import { getFragmentsData }             from '@globals/data'
+import { getPostsData }                 from '@globals/data'
+import { getCarBodiesData }             from '@globals/data'
+import { getServicesData }              from '@globals/data'
+import { getSiterServicesPageSeoData }  from '@globals/data'
+import { getPagePreviewData }           from '@globals/data'
 
 export const ServicesPageServer: ServicesPageServerProps = async () => {
   let SEO: SEOInt

@@ -1,14 +1,15 @@
-import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
 import type { SEOInt }                  from '@globals/data'
 
-import { getContactsData }              from '@globals/data/getters'
-import { getNavigationData }            from '@globals/data/getters'
-import { getCarBodiesData }             from '@globals/data/getters'
-import { getFragmentsData }             from '@globals/data/getters'
-import { getServicesData }              from '@globals/data/getters'
-import { getAvailableRadiiData }        from '@globals/data/getters'
-import { getSiteContactsPageSeoData }   from '@globals/data/getters'
-import { getPagePreviewData }           from '@globals/data/getters'
+import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
+
+import { getContactsData }              from '@globals/data'
+import { getNavigationData }            from '@globals/data'
+import { getCarBodiesData }             from '@globals/data'
+import { getFragmentsData }             from '@globals/data'
+import { getServicesData }              from '@globals/data'
+import { getAvailableRadiiData }        from '@globals/data'
+import { getSiteContactsPageSeoData }   from '@globals/data'
+import { getPagePreviewData }           from '@globals/data'
 
 export const ContactsPageServer: ContactsPageServerProps = async () => {
   let SEO: SEOInt

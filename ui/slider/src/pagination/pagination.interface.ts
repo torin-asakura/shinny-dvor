@@ -1,4 +1,4 @@
-// @ts-expect-error
+// @ts-ignore:next-line
 import type { Swiper } from 'swiper'
 
 export interface PaginationProps {

@@ -1,4 +1,4 @@
-import type { ContactsQueryDataType } from '@globals/data/interfaces'
+import type { ContactsQueryDataType } from '@globals/data'
 
 import { GET_CONTACTS }               from '@globals/data'
 import { getClient }                  from '@globals/data'

@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_SCHEMA = gql`
   query GetSchema {
@@ -16,6 +16,6 @@ const GET_SCHEMA = gql`
       }
     }
   }
-`;
+`
 
-export { GET_SCHEMA };
+export { GET_SCHEMA }

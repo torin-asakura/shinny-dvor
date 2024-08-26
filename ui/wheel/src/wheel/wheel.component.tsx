@@ -1,6 +1,7 @@
-import type { WheelImg }          from '../wheel.interface.js'
 import type { PropsWithChildren } from 'react'
 import type { FC }                from 'react'
+
+import type { WheelImg }          from '../wheel.interface.js'
 
 import React                      from 'react'
 

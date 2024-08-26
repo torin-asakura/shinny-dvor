@@ -1,7 +1,6 @@
 import type { ContainerProps } from './container.interface.js'
 
 import styled                  from '@emotion/styled'
-
 import { motion }              from 'framer-motion'
 import { position }            from 'styled-system'
 import { flexbox }             from 'styled-system'

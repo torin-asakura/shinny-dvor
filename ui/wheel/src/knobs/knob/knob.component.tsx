@@ -1,8 +1,9 @@
-import type { KnobProps } from './knob.interface.js'
 import type { FC }        from 'react'
 
-import React              from 'react'
+import type { KnobProps } from './knob.interface.js'
+
 import { useState }       from 'react'
+import React              from 'react'
 
 import { Button }         from '@ui/button'
 import { Card }           from '@ui/card'

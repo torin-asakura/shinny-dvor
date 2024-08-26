@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_CAR_BODIES = gql`
   query GetCarBodies {
@@ -11,6 +11,6 @@ const GET_CAR_BODIES = gql`
       }
     }
   }
-`;
+`
 
-export { GET_CAR_BODIES };
+export { GET_CAR_BODIES }

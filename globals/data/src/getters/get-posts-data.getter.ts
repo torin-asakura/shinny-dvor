@@ -1,4 +1,4 @@
-import type { BlogPostsQueryDataType } from '@globals/data/interfaces'
+import type { BlogPostsQueryDataType } from '@globals/data'
 
 import { GET_BLOG_POSTS }              from '@globals/data'
 import { getClient }                   from '@globals/data'

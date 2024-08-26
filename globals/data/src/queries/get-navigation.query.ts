@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_NAVIGATION = gql`
   query GetNavigation {
@@ -12,6 +12,6 @@ const GET_NAVIGATION = gql`
       }
     }
   }
-`;
+`
 
-export { GET_NAVIGATION };
+export { GET_NAVIGATION }

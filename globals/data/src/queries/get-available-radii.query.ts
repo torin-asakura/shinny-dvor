@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client'
 
 const GET_AVAILABLE_RADII = gql`
   query GetAvailableRadii {
@@ -11,6 +11,6 @@ const GET_AVAILABLE_RADII = gql`
       }
     }
   }
-`;
+`
 
-export { GET_AVAILABLE_RADII };
+export { GET_AVAILABLE_RADII }

@@ -1,8 +1,8 @@
-import type { MenuItemProps } from './menu-item.interface.js'
 import type { FC }            from 'react'
 
-import styled                 from '@emotion/styled'
+import type { MenuItemProps } from './menu-item.interface.js'
 
+import styled                 from '@emotion/styled'
 import React                  from 'react'
 
 import { Checkbox }           from '@ui/checkbox'

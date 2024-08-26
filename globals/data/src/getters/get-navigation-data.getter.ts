@@ -1,4 +1,4 @@
-import type { NavigationQueryDataType } from '@globals/data/interfaces'
+import type { NavigationQueryDataType } from '@globals/data'
 
 import { GET_NAVIGATION }               from '@globals/data'
 import { getClient }                    from '@globals/data'

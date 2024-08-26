@@ -1,10 +1,10 @@
-import type { PaginationProps }      from './pagination.interface.js'
 import type { FC }                   from 'react'
 
-import styled                        from '@emotion/styled'
+import type { PaginationProps }      from './pagination.interface.js'
 
-import React                         from 'react'
+import styled                        from '@emotion/styled'
 import { useMemo }                   from 'react'
+import React                         from 'react'
 
 import { Box }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'

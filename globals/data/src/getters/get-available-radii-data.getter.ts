@@ -1,4 +1,4 @@
-import type { AvailableRadiiDataType } from '@globals/data/interfaces'
+import type { AvailableRadiiDataType } from '@globals/data'
 
 import { GET_AVAILABLE_RADII }         from '@globals/data'
 import { getClient }                   from '@globals/data'

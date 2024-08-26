@@ -246,19 +246,13 @@ interface NodeWithComments {
 "A node that supports the content editor"
 interface NodeWithContentEditor {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
 }
 
 "A node that can have an excerpt"
 interface NodeWithExcerpt {
   "The excerpt of the post."
-  excerpt(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
 }
 
 "A node that can have a featured image set"
@@ -448,7 +442,7 @@ union ContentRevisionUnion = Page | Post
 
 "Deprecated in favor of MenuItemLinkeable Interface"
 union MenuItemObjectUnion =
-    AvailableRadiusItem
+  | AvailableRadiusItem
   | CarBodyItem
   | Category
   | ContactItem
@@ -464,13 +458,9 @@ union MenuItemObjectUnion =
 "The AvailableRadiusItem type"
 type AvailableRadiusItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The id field matches the WP_Post-&gt;ID field."
-  availableRadiusItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  availableRadiusItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: AvailableRadiusItem_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -602,13 +592,9 @@ type Avatar {
 "The CarBodyItem type"
 type CarBodyItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The id field matches the WP_Post-&gt;ID field."
-  carBodyItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  carBodyItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: CarBodyItem_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -924,10 +910,7 @@ type Comment implements DatabaseIdentifier & Node {
   "Connection between the Comment type and the ContentNode type"
   commentedOn: CommentToContentNodeConnectionEdge
   "Content of the comment. This field is equivalent to WP_Comment-&gt;comment_content and the value matching the &quot;comment_content&quot; column in SQL."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The unique identifier stored in the database"
   databaseId: Int!
   "Date the comment was posted in local time. This field is equivalent to WP_Comment-&gt;date and the value matching the &quot;date&quot; column in SQL."
@@ -1023,13 +1006,9 @@ type ContactItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable 
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контактов&quot; was set to Show in GraphQL."
   contactAddons: ContactItem_Contactaddons
   "The id field matches the WP_Post-&gt;ID field."
-  contactItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  contactItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The unique resource identifier path"
@@ -1796,10 +1775,7 @@ type FormUniqueFieldSet {
 "The Fragment type"
 type Fragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: Fragment_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -1845,8 +1821,7 @@ type Fragment implements ContentNode & DatabaseIdentifier & MenuItemLinkable & N
   "Globally unique ID of the featured image assigned to the node"
   featuredImageId: ID
   "The id field matches the WP_Post-&gt;ID field."
-  fragmentId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  fragmentId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The global unique identifier for this post. This currently matches the value stored in WP_Post-&gt;guid and the guid column in the &quot;post_objects&quot; database table."
   guid: String
   "The globally unique identifier of the fragments object."
@@ -2017,10 +1992,7 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The globally unique identifier of the author of the node"
   authorId: ID
   "The caption for the resource"
-  caption(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  caption("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the HierarchicalContentNode type and the ContentNode type"
   children(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
@@ -2060,10 +2032,7 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The publishing date set in GMT."
   dateGmt: String
   "Description of the image (stored as post_content)"
-  description(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  description("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The desired slug of the post"
   desiredSlug: String
   "If a user has edited the node within the past 15 seconds, this will return the user that last edited. Null if the edit lock doesn&#039;t exist or is greater than 15 seconds"
@@ -2113,8 +2082,7 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "Details about the mediaItem"
   mediaDetails: MediaDetails
   "The id field matches the WP_Post-&gt;ID field."
-  mediaItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  mediaItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Url of the mediaItem"
   mediaItemUrl: String
   "Type of resource"
@@ -2138,19 +2106,13 @@ type MediaItem implements ContentNode & DatabaseIdentifier & HierarchicalContent
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The sizes attribute value for an image."
-  sizes(
-    "Size of the MediaItem to calculate sizes with"
-    size: MediaItemSizeEnum
-  ): String
+  sizes("Size of the MediaItem to calculate sizes with" size: MediaItemSizeEnum): String
   "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table."
   slug: String
   "Url of the mediaItem"
   sourceUrl("Size of the MediaItem to return" size: MediaItemSizeEnum): String
   "The srcset attribute specifies the URL of the image to use in different situations. It is a comma separated string of urls and their widths."
-  srcSet(
-    "Size of the MediaItem to calculate srcSet with"
-    size: MediaItemSizeEnum
-  ): String
+  srcSet("Size of the MediaItem to calculate srcSet with" size: MediaItemSizeEnum): String
   "The current status of the object"
   status: String
   "The template assigned to the node"
@@ -2297,8 +2259,7 @@ type MenuItem implements DatabaseIdentifier & Node {
   "The Menu a MenuItem is part of"
   menu: MenuItemToMenuConnectionEdge
   "WP ID of the menu item."
-  menuItemId: Int
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  menuItemId: Int @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Menu item order"
   order: Int
   "The database id of the parent menu item or null if it is the root"
@@ -2366,10 +2327,7 @@ type MenuToMenuItemConnectionEdge {
 "The NavigationItem type"
 type NavigationItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: NavigationItem_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -2435,8 +2393,7 @@ type NavigationItem implements ContentNode & DatabaseIdentifier & MenuItemLinkab
   "The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT."
   modifiedGmt: String
   "The id field matches the WP_Post-&gt;ID field."
-  navigationItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  navigationItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Connection between the NavigationItem type and the NavigationItem type"
   preview: NavigationItemToPreviewConnectionEdge
   "The database id of the preview node"
@@ -2545,10 +2502,7 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
     where: PageToCommentConnectionWhereArgs
   ): PageToCommentConnection
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The unique resource identifier path"
@@ -2622,8 +2576,7 @@ type Page implements ContentNode & DatabaseIdentifier & HierarchicalContentNode 
   "The GMT modified time for a post. If a post was recently updated the modified field will change to match the corresponding time in GMT."
   modifiedGmt: String
   "The id field matches the WP_Post-&gt;ID field."
-  pageId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  pageId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The parent of the node. The parent object can be of various types"
   parent: HierarchicalContentNodeToParentContentNodeConnectionEdge
   "Database id of the parent node"
@@ -2768,10 +2721,7 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
     where: PostToCommentConnectionWhereArgs
   ): PostToCommentConnection
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: Post_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -2811,10 +2761,7 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
     last: Int
   ): ContentNodeToEnqueuedStylesheetConnection
   "The excerpt of the post."
-  excerpt(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  excerpt("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the NodeWithFeaturedImage type and the MediaItem type"
   featuredImage: NodeWithFeaturedImageToMediaItemConnectionEdge
   "The database identifier for the featured image node assigned to the content node"
@@ -2863,8 +2810,7 @@ type Post implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node 
     where: PostToPostFormatConnectionWhereArgs
   ): PostToPostFormatConnection
   "The id field matches the WP_Post-&gt;ID field."
-  postId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  postId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Connection between the post type and the post type"
   preview: PostToPreviewConnectionEdge
   "The database id of the preview node"
@@ -3351,15 +3297,9 @@ type RootMutation {
     input: CreateNavigationItemInput!
   ): CreateNavigationItemPayload
   "The payload for the createPage mutation"
-  createPage(
-    "Input for the createPage mutation"
-    input: CreatePageInput!
-  ): CreatePagePayload
+  createPage("Input for the createPage mutation" input: CreatePageInput!): CreatePagePayload
   "The payload for the createPost mutation"
-  createPost(
-    "Input for the createPost mutation"
-    input: CreatePostInput!
-  ): CreatePostPayload
+  createPost("Input for the createPost mutation" input: CreatePostInput!): CreatePostPayload
   "The payload for the createPostFormat mutation"
   createPostFormat(
     "Input for the createPostFormat mutation"
@@ -3371,20 +3311,11 @@ type RootMutation {
     input: CreateServiceInput!
   ): CreateServicePayload
   "The payload for the createTag mutation"
-  createTag(
-    "Input for the createTag mutation"
-    input: CreateTagInput!
-  ): CreateTagPayload
+  createTag("Input for the createTag mutation" input: CreateTagInput!): CreateTagPayload
   "The payload for the createUiItem mutation"
-  createUiItem(
-    "Input for the createUiItem mutation"
-    input: CreateUiItemInput!
-  ): CreateUiItemPayload
+  createUiItem("Input for the createUiItem mutation" input: CreateUiItemInput!): CreateUiItemPayload
   "The payload for the createUser mutation"
-  createUser(
-    "Input for the createUser mutation"
-    input: CreateUserInput!
-  ): CreateUserPayload
+  createUser("Input for the createUser mutation" input: CreateUserInput!): CreateUserPayload
   "The payload for the createWorkResultItem mutation"
   createWorkResultItem(
     "Input for the createWorkResultItem mutation"
@@ -3431,15 +3362,9 @@ type RootMutation {
     input: DeleteNavigationItemInput!
   ): DeleteNavigationItemPayload
   "The payload for the deletePage mutation"
-  deletePage(
-    "Input for the deletePage mutation"
-    input: DeletePageInput!
-  ): DeletePagePayload
+  deletePage("Input for the deletePage mutation" input: DeletePageInput!): DeletePagePayload
   "The payload for the deletePost mutation"
-  deletePost(
-    "Input for the deletePost mutation"
-    input: DeletePostInput!
-  ): DeletePostPayload
+  deletePost("Input for the deletePost mutation" input: DeletePostInput!): DeletePostPayload
   "The payload for the deletePostFormat mutation"
   deletePostFormat(
     "Input for the deletePostFormat mutation"
@@ -3451,20 +3376,11 @@ type RootMutation {
     input: DeleteServiceInput!
   ): DeleteServicePayload
   "The payload for the deleteTag mutation"
-  deleteTag(
-    "Input for the deleteTag mutation"
-    input: DeleteTagInput!
-  ): DeleteTagPayload
+  deleteTag("Input for the deleteTag mutation" input: DeleteTagInput!): DeleteTagPayload
   "The payload for the deleteUiItem mutation"
-  deleteUiItem(
-    "Input for the deleteUiItem mutation"
-    input: DeleteUiItemInput!
-  ): DeleteUiItemPayload
+  deleteUiItem("Input for the deleteUiItem mutation" input: DeleteUiItemInput!): DeleteUiItemPayload
   "The payload for the deleteUser mutation"
-  deleteUser(
-    "Input for the deleteUser mutation"
-    input: DeleteUserInput!
-  ): DeleteUserPayload
+  deleteUser("Input for the deleteUser mutation" input: DeleteUserInput!): DeleteUserPayload
   "The payload for the deleteWorkResultItem mutation"
   deleteWorkResultItem(
     "Input for the deleteWorkResultItem mutation"
@@ -3478,10 +3394,7 @@ type RootMutation {
     input: IncrementCounterInput!
   ): IncrementCounterPayload
   "The payload for the registerUser mutation"
-  registerUser(
-    "Input for the registerUser mutation"
-    input: RegisterUserInput!
-  ): RegisterUserPayload
+  registerUser("Input for the registerUser mutation" input: RegisterUserInput!): RegisterUserPayload
   "The payload for the resetUserPassword mutation"
   resetUserPassword(
     "Input for the resetUserPassword mutation"
@@ -3498,10 +3411,7 @@ type RootMutation {
     input: SendPasswordResetEmailInput!
   ): SendPasswordResetEmailPayload
   "The payload for the submitForm mutation"
-  submitForm(
-    "Input for the submitForm mutation"
-    input: SubmitFormInput!
-  ): SubmitFormPayload
+  submitForm("Input for the submitForm mutation" input: SubmitFormInput!): SubmitFormPayload
   "The payload for the updateAvailableRadiusItem mutation"
   updateAvailableRadiusItem(
     "Input for the updateAvailableRadiusItem mutation"
@@ -3543,15 +3453,9 @@ type RootMutation {
     input: UpdateNavigationItemInput!
   ): UpdateNavigationItemPayload
   "The payload for the updatePage mutation"
-  updatePage(
-    "Input for the updatePage mutation"
-    input: UpdatePageInput!
-  ): UpdatePagePayload
+  updatePage("Input for the updatePage mutation" input: UpdatePageInput!): UpdatePagePayload
   "The payload for the updatePost mutation"
-  updatePost(
-    "Input for the updatePost mutation"
-    input: UpdatePostInput!
-  ): UpdatePostPayload
+  updatePost("Input for the updatePost mutation" input: UpdatePostInput!): UpdatePostPayload
   "The payload for the UpdatePostFormat mutation"
   updatePostFormat(
     "Input for the UpdatePostFormat mutation"
@@ -3568,20 +3472,11 @@ type RootMutation {
     input: UpdateSettingsInput!
   ): UpdateSettingsPayload
   "The payload for the UpdateTag mutation"
-  updateTag(
-    "Input for the UpdateTag mutation"
-    input: UpdateTagInput!
-  ): UpdateTagPayload
+  updateTag("Input for the UpdateTag mutation" input: UpdateTagInput!): UpdateTagPayload
   "The payload for the updateUiItem mutation"
-  updateUiItem(
-    "Input for the updateUiItem mutation"
-    input: UpdateUiItemInput!
-  ): UpdateUiItemPayload
+  updateUiItem("Input for the updateUiItem mutation" input: UpdateUiItemInput!): UpdateUiItemPayload
   "The payload for the updateUser mutation"
-  updateUser(
-    "Input for the updateUser mutation"
-    input: UpdateUserInput!
-  ): UpdateUserPayload
+  updateUser("Input for the updateUser mutation" input: UpdateUserInput!): UpdateUserPayload
   "The payload for the updateWorkResultItem mutation"
   updateWorkResultItem(
     "Input for the updateWorkResultItem mutation"
@@ -4246,10 +4141,7 @@ type RootQuery {
     idType: UserNodeIdTypeEnum
   ): User
   "Returns a user role"
-  userRole(
-    "The globally unique identifier of the user object."
-    id: ID!
-  ): UserRole
+  userRole("The globally unique identifier of the user object." id: ID!): UserRole
   "Connection between the RootQuery type and the UserRole type"
   userRoles(
     "Cursor used along with the \"first\" argument to reference where in the dataset to get data"
@@ -5066,10 +4958,7 @@ type SendPasswordResetEmailPayload {
 "The Service type"
 type Service implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithPageAttributes & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The unique resource identifier path"
@@ -5143,8 +5032,7 @@ type Service implements ContentNode & DatabaseIdentifier & MenuItemLinkable & No
   "The Yoast SEO data of the ContentNode"
   seo: PostTypeSEO
   "The id field matches the WP_Post-&gt;ID field."
-  serviceId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  serviceId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Added to the GraphQL Schema because the ACF Field Group &quot;Параметры услуг&quot; was set to Show in GraphQL."
   servicesParams: Service_Servicesparams
   "The uri slug for the post. This is equivalent to the WP_Post-&gt;post_name field and the post_name column in the database for the &quot;post_objects&quot; table."
@@ -5718,10 +5606,7 @@ type Theme implements Node {
 "The UiItem type"
 type UiItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Added to the GraphQL Schema because the ACF Field Group &quot;Аддоны для контента&quot; was set to Show in GraphQL."
   contentAddons: UiItem_Contentaddons
   "Connection between the ContentNode type and the ContentType type"
@@ -5803,8 +5688,7 @@ type UiItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Nod
   "The title of the post. This is currently just the raw title. An amendment to support rendered title needs to be made."
   title("Format of the field output" format: PostObjectFieldFormatEnum): String
   "The id field matches the WP_Post-&gt;ID field."
-  uiItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  uiItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "The unique resource identifier path"
   uri: String
 }
@@ -6305,10 +6189,7 @@ type WPPageInfo {
 "The WorkResultItem type"
 type WorkResultItem implements ContentNode & DatabaseIdentifier & MenuItemLinkable & Node & NodeWithContentEditor & NodeWithFeaturedImage & NodeWithTemplate & NodeWithTitle & UniformResourceIdentifiable {
   "The content of the post."
-  content(
-    "Format of the field output"
-    format: PostObjectFieldFormatEnum
-  ): String
+  content("Format of the field output" format: PostObjectFieldFormatEnum): String
   "Connection between the ContentNode type and the ContentType type"
   contentType: ContentNodeToContentTypeConnectionEdge
   "The unique resource identifier path"
@@ -6390,8 +6271,7 @@ type WorkResultItem implements ContentNode & DatabaseIdentifier & MenuItemLinkab
   "The unique resource identifier path"
   uri: String
   "The id field matches the WP_Post-&gt;ID field."
-  workResultItemId: Int!
-    @deprecated(reason: "Deprecated in favor of the databaseId field")
+  workResultItemId: Int! @deprecated(reason: "Deprecated in favor of the databaseId field")
   "Added to the GraphQL Schema because the ACF Field Group &quot;Параметры результата работы&quot; was set to Show in GraphQL."
   workResultParams: WorkResultItem_Workresultparams
 }

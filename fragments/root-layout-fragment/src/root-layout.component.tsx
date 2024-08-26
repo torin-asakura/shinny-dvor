@@ -1,13 +1,12 @@
 'use client'
 
 import { ApolloProvider }    from '@apollo/client'
-
-import React                 from 'react'
 import { FC }                from 'react'
 import { Suspense }          from 'react'
 import { PropsWithChildren } from 'react'
 import { IntlProvider }      from 'react-intl'
 import { memo }              from 'react'
+import React                 from 'react'
 
 import { Gtag }              from '@ui/gtag'
 import { ThemeProvider }     from '@ui/theme'
