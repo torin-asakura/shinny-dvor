@@ -4,16 +4,14 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./getters": "./src/getters/index.ts",
-    "./interfaces": "./src/interfaces/index.ts"
+    ".": "./src/index.ts"
   },
   "main": "src/index.ts",
   "scripts": {
     "generate": "graphql-codegen-esm --config ./src/codegen.ts"
   },
   "devDependencies": {
-    "@apollo/client": "3.6.9",
+    "@apollo/client": "3.11.4",
     "@graphql-codegen/cli": "5.0.2",
     "@graphql-codegen/client-preset": "4.2.4",
     "@graphql-codegen/typescript": "4.0.6",

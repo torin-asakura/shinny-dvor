@@ -1,17 +1,15 @@
-import type { FragmentInt }   from './fragment.interface.js'
-import type { ContactAddons } from '@fragments/footer-fragment'
+import type { FragmentsDataType } from '@globals/data'
 
-// TODO typecheck needed
-export interface DataInt {
-  contacts: Array<ContactAddons>
-  posts: any
-  postBy: any
-  navigation: any
-  availableRadii: any
-  fragments: Array<FragmentInt>
-  ui: any
-  serviceBy: any
-  workResults: any
-  carBodies: any
-  services: any
+export type DataInt = {
+  fragments: FragmentsDataType
+  postBy?: any
+  posts?: any
+  workResults?: any
+  ui?: any
+  serviceBy?: any
+  contacts?: any
+  navigation?: any
+  availableRadii?: any
+  services?: any
+  carBodies?: any
 }
