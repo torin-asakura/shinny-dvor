@@ -1,47 +1,36 @@
+import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
 import type { SEOInt }                  from '@globals/data'
 
-import type { ContactsPageServerProps } from './contacts-page.interfaces.js'
-
-import { GET_PREVIEW }                  from '@globals/data'
-import { getClient }                    from '@globals/data'
-import { runAvailableRadiiQuery }       from '@globals/data'
-import { runContactsQuery }             from '@globals/data'
-import { runNavigationQuery }           from '@globals/data'
-import { runCarBodiesQuery }            from '@globals/data'
-import { runFragmentsQuery }            from '@globals/data'
-import { runServicesQuery }             from '@globals/data'
-
-import { GET_CONTACTS_SEO }             from './queries/index.js'
+import { getContactsData }              from '@globals/data/getters'
+import { getNavigationData }            from '@globals/data/getters'
+import { getCarBodiesData }             from '@globals/data/getters'
+import { getFragmentsData }             from '@globals/data/getters'
+import { getServicesData }              from '@globals/data/getters'
+import { getAvailableRadiiData }        from '@globals/data/getters'
+import { getSiteContactsPageSeoData }   from '@globals/data/getters'
+import { getPagePreviewData }           from '@globals/data/getters'
 
 export const ContactsPageServer: ContactsPageServerProps = async () => {
-  const client = getClient()
-
   let SEO: SEOInt
 
-  const { data: seoData } = await client.query({
-    query: GET_CONTACTS_SEO,
-  })
-
-  const { data: previewData } = await client.query({
-    query: GET_PREVIEW,
-    variables: {
-      uri: '/cover/',
-    },
-  })
+  const previewData = await getPagePreviewData()
+  const seoData = await getSiteContactsPageSeoData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
   if (seoData) {
     SEO = seoData.pageBy.seo
-  } else SEO = {}
+  } else {
+    SEO = {}
+  }
 
   const queryPromises: Array<Promise<any>> = [
-    runFragmentsQuery(),
-    runContactsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runCarBodiesQuery(),
-    runServicesQuery(),
+    getFragmentsData(),
+    getContactsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getCarBodiesData(),
+    getServicesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)

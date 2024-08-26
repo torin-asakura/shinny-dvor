@@ -1,4 +1,4 @@
-import type { ExtractFragments } from './extract-fragments.interface.js'
-
-export const extractFragments: ExtractFragments = (id, params, fragments) =>
+const extractFragments = (id: string, params: string, fragments) =>
   fragments?.filter((fragment) => fragment[params].fragmentId === id)
+
+export { extractFragments }

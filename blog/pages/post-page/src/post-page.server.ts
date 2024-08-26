@@ -1,52 +1,48 @@
-import type { SEOInt }              from '@globals/data'
+import {}                                          from '@globals/data'
 
 import type { PostPageServerProps } from './post-page.interfaces.js'
+import type { SEOInt }              from '@globals/data'
 
-import { GET_PREVIEW }              from '@globals/data'
-import { getClient }                from '@globals/data'
-import { runAvailableRadiiQuery }   from '@globals/data'
-import { runCarBodiesQuery }        from '@globals/data'
-import { runServicesQuery }         from '@globals/data'
-import { runFragmentsQuery }        from '@globals/data'
-import { runContactsQuery }         from '@globals/data'
-import { runNavigationQuery }       from '@globals/data'
-
-import { GET_POST_SEO }             from './queries/index.js'
-import { runPostQuery }             from './queries/index.js'
+import { getAvailableRadiiData }    from '@globals/data'
+import { getCarBodiesData }         from '@globals/data'
+import { getServicesData }          from '@globals/data'
+import { getFragmentsData }         from '@globals/data'
+import { getContactsData }          from '@globals/data'
+import { getNavigationData }        from '@globals/data'
+import { getPostData }              from '@globals/data'
+import { getSchemaData }            from '@globals/data'
+import { getRadiiData }             from '@globals/data'
+import { getBlogPostPageSeoData }   from '@globals/data/getters'
+import { getPagePreviewData }       from '@globals/data/getters'
 
 export const PostPageServer: PostPageServerProps = async ({ params }) => {
-  const client = getClient()
-
   let SEO: SEOInt
 
   const { uri } = params
 
-  const { data: seoData } = await client.query({
-    query: GET_POST_SEO,
-    variables: { uri },
-  })
+  // TODO move it to blogindespagegetseodata getter
+  const seoData = await getBlogPostPageSeoData({ uri })
+  const previewData = await getPagePreviewData()
 
   if (seoData) {
     SEO = seoData.postBy.seo
-  } else SEO = {}
-
-  const { data: previewData } = await client.query({
-    query: GET_PREVIEW,
-    variables: {
-      uri: '/cover/',
-    },
-  })
+  } else {
+    SEO = {}
+  }
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
-  const queryPromises: Array<Promise<any>> = [
-    runContactsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runFragmentsQuery(),
-    runPostQuery(uri),
-    runCarBodiesQuery(),
-    runServicesQuery(),
+  const { schema } = await getSchemaData()
+  const radiiData = await getRadiiData(schema)
+
+  const queryPromises = [
+    getFragmentsData(),
+    getContactsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getPostData({ uri }),
+    getCarBodiesData(),
+    getServicesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
