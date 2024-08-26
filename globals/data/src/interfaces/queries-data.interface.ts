@@ -12,4 +12,6 @@ export type { GetCarBodiesQuery as CarBodiesQueryDataType } from '../__generated
 
 export type { GetServicesQuery as ServicesQueryDataType } from '../__generated__/index.js'
 
+export type { GetPostsQuery as BlogPostsQueryDataType } from '../__generated__/index.js'
+
 export type { GetSchemaQuery as SchemaQueryDataType } from '../__generated__/index.js'
