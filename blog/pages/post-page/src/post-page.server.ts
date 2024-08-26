@@ -3,13 +3,13 @@ import {}                                          from '@globals/data'
 import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { SEOInt }              from '@globals/data'
 
-import { runAvailableRadiiQuery }   from '@globals/data'
-import { runCarBodiesQuery }        from '@globals/data'
-import { runServicesQuery }         from '@globals/data'
-import { runFragmentsQuery }        from '@globals/data'
-import { runContactsQuery }         from '@globals/data'
-import { runNavigationQuery }       from '@globals/data'
-import { runPostQuery }             from '@globals/data'
+import { getAvailableRadiiData }    from '@globals/data'
+import { getCarBodiesData }         from '@globals/data'
+import { getServicesData }          from '@globals/data'
+import { getFragmentsData }         from '@globals/data'
+import { getContactsData }          from '@globals/data'
+import { getNavigationData }        from '@globals/data'
+import { getPostData }              from '@globals/data'
 import { getSchemaData }            from '@globals/data'
 import { getRadiiData }             from '@globals/data'
 import { getBlogPostPageSeoData }   from '@globals/data/getters'
@@ -20,6 +20,7 @@ export const PostPageServer: PostPageServerProps = async ({ params }) => {
 
   const { uri } = params
 
+  // TODO move it to blogindespagegetseodata getter
   const seoData = await getBlogPostPageSeoData({ uri })
   const previewData = await getPagePreviewData()
 
@@ -34,14 +35,14 @@ export const PostPageServer: PostPageServerProps = async ({ params }) => {
   const { schema } = await getSchemaData()
   const radiiData = await getRadiiData(schema)
 
-  const queryPromises: Array<Promise<any>> = [
-    runFragmentsQuery(),
-    runContactsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runPostQuery({ uri }),
-    runCarBodiesQuery(),
-    runServicesQuery({ radiiData }),
+  const queryPromises = [
+    getFragmentsData(),
+    getContactsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getPostData({ uri }),
+    getCarBodiesData(),
+    getServicesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
