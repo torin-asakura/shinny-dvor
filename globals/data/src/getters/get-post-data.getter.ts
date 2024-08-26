@@ -6,7 +6,7 @@ import { getClient }              from '@globals/data'
 const getPostData = async ({ uri }: { uri: string }) => {
   const client = getClient()
 
-  const data: PostQueryDataType = await client.query({
+  const { data }: { data: PostQueryDataType } = await client.query({
     query: GET_BLOG_POST,
     variables: { uri },
   })

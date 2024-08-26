@@ -6,7 +6,7 @@ import { getClient }                   from '@globals/data'
 const getAvailableRadiiData = async () => {
   const client = getClient()
 
-  const data: AvailableRadiiDataType = await client.query({
+  const { data }: { data: AvailableRadiiDataType } = await client.query({
     query: GET_AVAILABLE_RADII,
   })
 

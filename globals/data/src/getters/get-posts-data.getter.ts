@@ -1,16 +1,18 @@
-import { GET_POSTS } from '@globals/data'
-import { getClient } from '@globals/data'
+import type { BlogPostsQueryDataType } from '@globals/data/interfaces'
+
+import { GET_BLOG_POSTS }              from '@globals/data'
+import { getClient }                   from '@globals/data'
 
 const getPostsData = async () => {
   const client = getClient()
 
-  const { data: postsData } = await client.query({
-    query: GET_POSTS,
+  const { data }: { data: BlogPostsQueryDataType } = await client.query({
+    query: GET_BLOG_POSTS,
   })
 
-  if (postsData) {
+  if (data && data.posts) {
     return {
-      posts: postsData.posts.nodes,
+      posts: data.posts.nodes,
     }
   }
 

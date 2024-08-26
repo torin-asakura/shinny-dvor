@@ -3,14 +3,16 @@ import type { ServicesQueryDataType } from '@globals/data/interfaces'
 import { GET_SERVICES }               from '@globals/data'
 import { getClient }                  from '@globals/data'
 
+// TODO type
+// const getServicesData = async ({ radiiData }: { radiiData: any }) => {
 const getServicesData = async () => {
   const client = getClient()
 
-  const data: ServicesQueryDataType = await client.query({
+  const { data }: { data: ServicesQueryDataType } = await client.query({
     query: GET_SERVICES,
   })
 
-  if (data) {
+  if (data && data.services) {
     return {
       services: data.services.nodes,
     }

@@ -6,7 +6,7 @@ import { getClient }                  from '@globals/data'
 const getContactsData = async () => {
   const client = getClient()
 
-  const data: ContactsQueryDataType = await client.query({
+  const { data }: { data: ContactsQueryDataType } = await client.query({
     query: GET_CONTACTS,
   })
 

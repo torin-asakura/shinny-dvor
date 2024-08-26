@@ -6,7 +6,7 @@ import { getClient }                   from '@globals/data'
 const getCarBodiesData = async () => {
   const client = getClient()
 
-  const data: CarBodiesQueryDataType = await client.query({
+  const { data }: { data: CarBodiesQueryDataType } = await client.query({
     query: GET_CAR_BODIES,
   })
 
