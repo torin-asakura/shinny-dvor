@@ -1,17 +1,18 @@
-import type { IndexPageServerProps } from './index-page.interfaces.js'
 import type { SEOInt }               from '@globals/data'
 
-import { getAvailableRadiiData }     from '@globals/data/getters'
-import { getCarBodiesData }          from '@globals/data/getters'
-import { getServicesData }           from '@globals/data/getters'
-import { getFragmentsData }          from '@globals/data/getters'
-import { getContactsData }           from '@globals/data/getters'
-import { getNavigationData }         from '@globals/data/getters'
-import { getPostsData }              from '@globals/data/getters'
-import { getPagePreviewData }        from '@globals/data/getters'
-import { getBlogIndexPageSeoData }   from '@globals/data/getters'
+import type { IndexPageServerProps } from './index-page.interfaces.js'
 
-// import { getPageSeoData }            from '@globals/data/getters'
+import { getAvailableRadiiData }     from '@globals/data'
+import { getCarBodiesData }          from '@globals/data'
+import { getServicesData }           from '@globals/data'
+import { getFragmentsData }          from '@globals/data'
+import { getContactsData }           from '@globals/data'
+import { getNavigationData }         from '@globals/data'
+import { getPostsData }              from '@globals/data'
+import { getPagePreviewData }        from '@globals/data'
+import { getBlogIndexPageSeoData }   from '@globals/data'
+
+// import { getPageSeoData }            from '@globals/data'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
   let SEO: SEOInt
