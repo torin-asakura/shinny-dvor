@@ -1,49 +1,38 @@
+import type { ServicesPageServerProps } from './services-page.interface.js'
 import type { SEOInt }                  from '@globals/data'
 
-import type { ServicesPageServerProps } from './services-page.interface.js'
-
-import { GET_PREVIEW }                  from '@globals/data'
-import { getClient }                    from '@globals/data'
-import { runAvailableRadiiQuery }       from '@globals/data'
-import { runNavigationQuery }           from '@globals/data'
-import { runContactsQuery }             from '@globals/data'
-import { runFragmentsQuery }            from '@globals/data'
-import { runPostsQuery }                from '@globals/data'
-import { runCarBodiesQuery }            from '@globals/data'
-import { runServicesQuery }             from '@globals/data'
-
-import { GET_SERVICES_SEO }             from './queries/index.js'
+import { getAvailableRadiiData }        from '@globals/data/getters'
+import { getNavigationData }            from '@globals/data/getters'
+import { getContactsData }              from '@globals/data/getters'
+import { getFragmentsData }             from '@globals/data/getters'
+import { getPostsData }                 from '@globals/data/getters'
+import { getCarBodiesData }             from '@globals/data/getters'
+import { getServicesData }              from '@globals/data/getters'
+import { getSiterServicesPageSeoData }  from '@globals/data/getters'
+import { getPagePreviewData }           from '@globals/data/getters'
 
 export const ServicesPageServer: ServicesPageServerProps = async () => {
-  const client = getClient()
-
   let SEO: SEOInt
 
-  const { data: seoData } = await client.query({
-    query: GET_SERVICES_SEO,
-  })
-
-  const { data: previewData } = await client.query({
-    query: GET_PREVIEW,
-    variables: {
-      uri: '/cover/',
-    },
-  })
+  const seoData = await getSiterServicesPageSeoData()
+  const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
   if (seoData) {
     SEO = seoData.pages.nodes[0].seo
-  } else SEO = {}
+  } else {
+    SEO = {}
+  }
 
   const queryPromises: Array<Promise<any>> = [
-    runContactsQuery(),
-    runPostsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runServicesQuery(),
-    runFragmentsQuery(),
-    runCarBodiesQuery(),
+    getContactsData(),
+    getPostsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getServicesData(),
+    getFragmentsData(),
+    getCarBodiesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
