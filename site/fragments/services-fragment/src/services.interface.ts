@@ -56,7 +56,7 @@ interface Fragment {
 }
 
 export interface ServicesProps {
-  servicesData: Array<Service>
-  fragmentsData: Array<Fragment>
-  availableRadiiData: Array<ContentAddons>
+  servicesData: Service[]
+  fragmentsData: Fragment[]
+  availableRadiiData: ContentAddons[]
 }

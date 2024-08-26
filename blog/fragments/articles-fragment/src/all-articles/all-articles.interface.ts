@@ -18,7 +18,7 @@ interface Fragment {
     title: string
     content: string
     fragmentId: string
-    highlightedText: string
+    highlightedText?: string
   }
 }
 

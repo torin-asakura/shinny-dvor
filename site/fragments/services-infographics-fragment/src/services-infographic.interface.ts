@@ -18,6 +18,6 @@ interface Ui {
 }
 
 export interface ServicesInfographicsProps {
-  uiData: Array<Ui>
-  fragmentsData: Array<Fragment>
+  uiData: Ui[]
+  fragmentsData: Fragment[]
 }

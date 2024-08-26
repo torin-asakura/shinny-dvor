@@ -1,11 +1,6 @@
 {
   "name": "@site/hero-fragment",
   "version": "0.0.1",
-  "license": "BSD-3-Clause",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
     "@fragments/booking-fragment": "workspace:*",
@@ -35,6 +30,7 @@
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*"
   }

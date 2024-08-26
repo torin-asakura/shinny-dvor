@@ -30,7 +30,9 @@ export interface Fragment {
 }
 
 export interface NavigationProps {
-  active: number
+  navigationItemsType?: string
+  backgroundColor?: string
+  active?: number
   scrollY?: number
   navigationData: NavigationData[]
   availableRadiiData: AvailableRadiusData[]

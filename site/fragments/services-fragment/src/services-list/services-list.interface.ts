@@ -1,5 +1,5 @@
-import type { ServicesParams } from '../services.interface.js'
+import { ServicesParams } from '../services.interface'
 
 export interface ItemProps {
-  services: Array<ServicesParams>
+  services: ServicesParams[]
 }

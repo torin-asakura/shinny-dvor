@@ -1,1 +1,1 @@
-export * from './carousel.component.js'
+export * from './carousel.component'
