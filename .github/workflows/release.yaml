@@ -18,8 +18,8 @@ jobs:
     with:
       registryURL: 'cr.yandex'
       registryUser: 'json_key'
-      project: ${{ secrets.YCR_PROJECT_ID }}
       imageNamePrefix: 'shdvor-'
       nodeVersion: '19'
     secrets:
       registryKey: ${{ secrets.YCR_KEYFILE }}
+      project: ${{ secrets.YCR_PROJECT_ID }}
