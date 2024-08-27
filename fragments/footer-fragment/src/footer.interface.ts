@@ -1,4 +1,5 @@
 import type { FragmentsDataType } from '@globals/data'
+import type { ContactsDataType }  from '@globals/data'
 
 export interface ContactAddons {
   address: string
@@ -23,7 +24,7 @@ export interface ContactAddons {
 
 export interface FooterProps {
   navigationItemsType?: string
-  contactsData: ContactAddons[]
+  contactsData: ContactsDataType
   // fragmentsData: Fragment[]
   fragmentsData: FragmentsDataType
 }

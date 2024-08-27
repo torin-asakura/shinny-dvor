@@ -1,3 +1,8 @@
+import type { FragmentsDataType }      from '@globals/data'
+import type { AvailableRadiiDataType } from '@globals/data'
+import type { CarBodiesDataType }      from '@globals/data'
+import type { ServiceDataType }        from '@globals/data'
+
 export interface ExtendedContentAddons {
   contentAddons: {
     title: string
@@ -15,8 +20,8 @@ export interface ContentAddons {
 
 export interface InitialProps {
   additionalService?: string
-  fragmentsData: ExtendedContentAddons[]
-  availableRadiiData: ContentAddons[]
-  carBodiesData: ContentAddons[]
-  servicesData: ContentAddons[]
+  fragmentsData: FragmentsDataType
+  availableRadiiData: AvailableRadiiDataType
+  carBodiesData: CarBodiesDataType
+  servicesData: ServiceDataType
 }
