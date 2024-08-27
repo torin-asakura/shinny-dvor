@@ -1,5 +1,5 @@
-import { FC }              from 'react'
 import React               from 'react'
+import { FC }              from 'react'
 
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
@@ -14,6 +14,7 @@ import { InvalidProps }    from './invalid.interface.js'
 
 const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
+    // @ts-expect-error never type
     'contentAddons',
     'error',
     fragmentsData

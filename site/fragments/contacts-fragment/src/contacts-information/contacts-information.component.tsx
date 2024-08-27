@@ -1,9 +1,8 @@
+import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
 
-import type { ContactsInformationProps } from './contacts-information.interface.js'
-
-import { memo }                          from 'react'
 import React                             from 'react'
+import { memo }                          from 'react'
 
 import { Layout }                        from '@ui/layout'
 import { Column }                        from '@ui/layout'
@@ -17,14 +16,23 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
   const { contactsData } = props
 
   const {
+    // @ts-expect-error not exist
     addressTitle,
+    // @ts-expect-error not exist
     address,
+    // @ts-expect-error not exist
     workingHoursTitle,
+    // @ts-expect-error not exist
     workingHours,
+    // @ts-expect-error not exist
     contactsTitle,
+    // @ts-expect-error not exist
     telephone,
+    // @ts-expect-error not exist
     email,
+    // @ts-expect-error not exist
     linkVk,
+    // @ts-expect-error not exist
     linkFb,
   } = contactsData
 

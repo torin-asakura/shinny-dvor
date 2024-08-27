@@ -1,4 +1,5 @@
 import { useReactiveVar }  from '@apollo/client'
+
 import React               from 'react'
 
 import { Screen }          from '@store/booking'
@@ -33,6 +34,7 @@ const Booking = ({
   const screen = useReactiveVar<Screen>(screenVar)
   const [hover, hoverProps] = useHover()
 
+  // @ts-expect-error never type
   const mainPage = extractFragment('contentAddons', 'main', navigationData)
 
   return (

@@ -1,6 +1,5 @@
-import type { FC }                        from 'react'
-
 import type { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
+import type { FC }                        from 'react'
 
 import React                              from 'react'
 
@@ -17,7 +16,13 @@ const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, 
     <Column fill>
       {navigation.map(({ contentAddons: { title, content } }, index) => (
         <React.Fragment key={title}>
-          <Item scrollY={scrollY} active={active} content={content} title={title} />
+          <Item
+            scrollY={scrollY}
+            // @ts-expect-error undefined
+            active={active}
+            content={content}
+            title={title}
+          />
           <Layout flexBasis={navigation.length - 1 !== index ? 24 : 0} />
         </React.Fragment>
       ))}

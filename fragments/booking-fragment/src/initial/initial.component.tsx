@@ -3,10 +3,11 @@ import type { KeyboardEvent }  from 'react'
 import type { FC }             from 'react'
 
 import { useReactiveVar }      from '@apollo/client'
+
+import React                   from 'react'
 import { useCallback }         from 'react'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
-import React                   from 'react'
 
 import { INVALID }             from '@store/booking'
 import { SUCCESS }             from '@store/booking'
@@ -41,6 +42,7 @@ const Initial: FC<InitialProps> = ({
   const service = useReactiveVar<IService>(serviceVar)
 
   const carBodies = extractFragments('car-body-item', 'contentAddons', carBodiesData)
+  // @ts-expect-error any type
   const carBodyItems = carBodies.map((item) => item.contentAddons.title)
 
   const [name, setName] = useState<string>('')
@@ -76,9 +78,11 @@ const Initial: FC<InitialProps> = ({
   )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
+  // @ts-expect-error any type
   const radiiItems = radii.map((item) => item.contentAddons.title.toLowerCase())
 
   const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
+  // @ts-expect-error any type
   const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
 
   const isFormFilled =

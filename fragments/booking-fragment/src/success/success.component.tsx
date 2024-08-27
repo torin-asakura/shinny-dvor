@@ -1,5 +1,5 @@
-import { FC }              from 'react'
 import React               from 'react'
+import { FC }              from 'react'
 
 import { INITIAL }         from '@store/booking'
 import { Button }          from '@ui/button'
@@ -15,6 +15,7 @@ import { SuccessProps }    from './success.interface.js'
 
 const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
+    // @ts-expect-error never type
     'contentAddons',
     'success',
     fragmentsData

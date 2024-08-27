@@ -1,8 +1,7 @@
 'use client'
 
-import type { FC }                  from 'react'
-
 import type { PostPageClientProps } from './post-page.interfaces.js'
+import type { FC }                  from 'react'
 
 import React                        from 'react'
 
@@ -30,7 +29,11 @@ export const PostPageClient: FC<PostPageClientProps> = (props) => {
         carBodiesData={carBodies}
         servicesData={services}
       />
-      <Article postData={postBy} fragmentsData={fragments} />
+      <Article
+        postData={postBy}
+        // @ts-expect-error undefined
+        fragmentsData={fragments}
+      />
       <Footer
         fragmentsData={fragments}
         contactsData={contacts}

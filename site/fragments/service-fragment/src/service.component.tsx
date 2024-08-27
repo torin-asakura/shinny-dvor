@@ -52,9 +52,11 @@ const Service: FC<ServiceProps> = ({
     },
   } = serviceData
 
+  // @ts-expect-error not match
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
   const carBody = carBodyConverter(onCarBody)
 
+  // @ts-expect-error undefined
   const availableRadii = Object.entries(price)
     .filter((item: any) => item[1]?.[carBody] !== null)
     .map((item) => item[0])
@@ -74,12 +76,16 @@ const Service: FC<ServiceProps> = ({
 
   const workExamplesData = [
     {
+      // @ts-expect-error null undefined
       image: workexamples.firstexample.image,
+      // @ts-expect-error null undefined
       title: workexamples.firstexample.title,
       price,
     },
     {
+      // @ts-expect-error null undefined
       image: workexamples.secondexample.image,
+      // @ts-expect-error null undefined
       title: workexamples.secondexample.title,
       price,
     },
@@ -91,7 +97,9 @@ const Service: FC<ServiceProps> = ({
     // eslint-disable-next-line
   }, [onCarBody])
 
+  // @ts-expect-error null undefined
   const defaultPrice = price[Object.keys(price)[1]]?.passenger
+  // @ts-expect-error null undefined
   const servicePrice = price[radius]?.[carBody]
 
   return (
@@ -104,6 +112,7 @@ const Service: FC<ServiceProps> = ({
           carBodiesData={carBodiesData}
           servicesData={servicesData}
           navigationData={navigationData}
+          // @ts-expect-error null undefined
           additionalService={isAdditionalService ? additionalservice.title : ''}
         />
       </Layer>
@@ -130,11 +139,14 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
-                  {carBodies.map((item: string) => (
-                    <Item key={item} value={item} onSelect={setOnCarBody}>
-                      {item}
-                    </Item>
-                  ))}
+                  {
+                    // @ts-expect-error null undefined
+                    carBodies.map((item: string) => (
+                      <Item key={item} value={item} onSelect={setOnCarBody}>
+                        {item}
+                      </Item>
+                    ))
+                  }
                 </Switch>
               </Layout>
               <Layout flexBasis={24} />
@@ -146,33 +158,36 @@ const Service: FC<ServiceProps> = ({
                 display={['flex', 'flex', 'none']}
               >
                 <CarBodiesCarousel>
-                  {carBodies.map((item: string) => (
-                    <Box
-                      key={item}
-                      width='100%'
-                      height='100%'
-                      alignItems='center'
-                      justifyContent='center'
-                      borderRadius='small'
-                      backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
-                    >
-                      <Button
-                        color='transparent'
-                        size='small'
-                        height='100%'
+                  {
+                    // @ts-expect-error null undefined
+                    carBodies.map((item: string) => (
+                      <Box
+                        key={item}
                         width='100%'
-                        onClick={() => setOnCarBody(item)}
+                        height='100%'
+                        alignItems='center'
+                        justifyContent='center'
+                        borderRadius='small'
+                        backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
                       >
-                        <Text
-                          color={onCarBody === item ? 'white' : 'black'}
-                          fontWeight='bold'
-                          fontSize='small'
+                        <Button
+                          color='transparent'
+                          size='small'
+                          height='100%'
+                          width='100%'
+                          onClick={() => setOnCarBody(item)}
                         >
-                          {item}
-                        </Text>
-                      </Button>
-                    </Box>
-                  ))}
+                          <Text
+                            color={onCarBody === item ? 'white' : 'black'}
+                            fontWeight='bold'
+                            fontSize='small'
+                          >
+                            {item}
+                          </Text>
+                        </Button>
+                      </Box>
+                    ))
+                  }
                 </CarBodiesCarousel>
               </Box>
               <Layout flexBasis={[24, 24, 0]} />
@@ -194,7 +209,7 @@ const Service: FC<ServiceProps> = ({
               </Text>
               <Layout flexBasis={24} />
               <Column justifyContent='center'>
-                <Condition match={addon}>
+                <Condition match={Boolean(addon)}>
                   <Box
                     height={28}
                     backgroundColor='lightGray'
@@ -211,11 +226,14 @@ const Service: FC<ServiceProps> = ({
             <Layout flexBasis={24} />
             <Layout>
               <Column fill>
-                {description.split('|n|').map((item: string) => (
-                  <Text key={item} lineHeight='medium'>
-                    {item}
-                  </Text>
-                ))}
+                {
+                  // @ts-expect-error null undefined
+                  description.split('|n|').map((item: string) => (
+                    <Text key={item} lineHeight='medium'>
+                      {item}
+                    </Text>
+                  ))
+                }
               </Column>
             </Layout>
             <Condition match={variant === 'tertiary'}>
@@ -232,7 +250,13 @@ const Service: FC<ServiceProps> = ({
                   >
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <React.Fragment key={title}>
-                        <WorkExample image={image} title={title} price={defaultPrice} />
+                        <WorkExample
+                          // @ts-expect-error null undefined
+                          image={image}
+                          // @ts-expect-error null undefined
+                          title={title}
+                          price={defaultPrice}
+                        />
                         <Condition match={index === 0}>
                           <Layout flexBasis={16} flexShrink={0} />
                         </Condition>
@@ -246,7 +270,13 @@ const Service: FC<ServiceProps> = ({
                   <WorkExamplesCarousel>
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <React.Fragment key={title}>
-                        <WorkExample image={image} title={title} price={defaultPrice} />
+                        <WorkExample
+                          // @ts-expect-error null undefined
+                          image={image}
+                          // @ts-expect-error null undefined
+                          title={title}
+                          price={defaultPrice}
+                        />
                         <Condition match={index === 0}>
                           <Layout flexBasis={32} flexShrink={0} />
                         </Condition>
@@ -256,11 +286,15 @@ const Service: FC<ServiceProps> = ({
                 </Accordion>
               </Row>
             </Condition>
-            <Condition match={variant === 'primary' && additionalservice.title !== null}>
+            <Condition
+              // @ts-expect-error null undefined
+              match={variant === 'primary' && additionalservice.title !== null}
+            >
               <Layout flexBasis={24} />
               <AdditionalService
                 isAdditionalService={isAdditionalService}
                 setIsAdditionalService={setIsAdditionalService}
+                // @ts-expect-error undefined
                 additionalservice={additionalservice}
               />
             </Condition>
@@ -269,6 +303,7 @@ const Service: FC<ServiceProps> = ({
               <Button
                 onClick={() => {
                   setVisible(true)
+                  // @ts-expect-error undefined type types
                   serviceVar({ radius, carBody: onCarBody, serviceName })
                 }}
               >

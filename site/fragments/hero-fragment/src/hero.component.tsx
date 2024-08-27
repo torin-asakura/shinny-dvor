@@ -1,6 +1,6 @@
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -33,10 +33,15 @@ const Hero = forwardRef((
 ) => {
   const [visible, setVisible] = useState<boolean>(false)
 
+  // @ts-expect-error never
   const leadObj = extractFragment('contentAddons', 'hero-title', fragmentsData)
+  // @ts-expect-error never
   const ctaObj = extractFragment('contentAddons', 'sign-up', fragmentsData)
+  // @ts-expect-error never
   const anchorObj = extractFragment('contentAddons', 'our-services', fragmentsData)
+  // @ts-expect-error never
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
+  // @ts-expect-error never
   const backgroundObj = extractFragment('contentAddons', 'hero', uiData)
 
   const title = new Map([

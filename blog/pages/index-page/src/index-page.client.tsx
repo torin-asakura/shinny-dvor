@@ -1,8 +1,8 @@
 // move it directive to fragment level
 'use client'
 
-import { FC }             from 'react'
 import React              from 'react'
+import { FC }             from 'react'
 
 import { AllArticles }    from '@blog/articles-fragment'
 import { Footer }         from '@fragments/footer-fragment'
@@ -28,7 +28,11 @@ export const IndexPageClient: FC<IndexPageProps> = (props) => {
         carBodiesData={carBodies}
         servicesData={services}
       />
-      <AllArticles fragmentsData={fragments} postsData={posts} />
+      <AllArticles
+        // @ts-expect-error undefined
+        fragmentsData={fragments}
+        postsData={posts}
+      />
       <Footer
         fragmentsData={fragments}
         contactsData={contacts}

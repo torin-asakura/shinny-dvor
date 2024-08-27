@@ -1,4 +1,7 @@
 import type { WorksExamplesProps }   from './works-examples.interface.js'
+import type { WorkResultsDataType }  from '@globals/data'
+import type { FragmentsDataType }    from '@globals/data'
+import type { NonNullable }          from '@globals/data'
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'
@@ -32,26 +35,48 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
-  const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
-  const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
-  const priceTitle = extractFragment('contentAddons', 'price-title', fragmentsData).title
-  const timeTitle = extractFragment('contentAddons', 'time-title', fragmentsData).title
+  const title = extractFragment<FragmentsDataType>('contentAddons', 'work-examples', fragmentsData)
+    ?.title
+
+  const subTitle = extractFragment<FragmentsDataType>(
+    'contentAddons',
+    'work-examples',
+    fragmentsData
+  )?.content
+
+  const priceTitle = extractFragment<FragmentsDataType>(
+    'contentAddons',
+    'price-title',
+    fragmentsData
+  )?.title
+
+  const timeTitle = extractFragment<FragmentsDataType>('contentAddons', 'time-title', fragmentsData)
+    ?.title
+
   const slides = extractFragments('work-result-item', 'workResultParams', workResultsData)
 
   const sliderChildren = useMemo(
     () =>
-      slides.map(({ workResultParams: { fragmentId, photos, price, description, time } }) => (
-        <Slide
-          key={fragmentId}
-          description={description}
-          price={price}
-          time={time}
-          image={photos}
-          priceTitle={priceTitle}
-          timeTitle={timeTitle}
-          setActiveIndex={setActiveIndex}
-        />
-      )),
+      // @ts-expect-error any type
+      slides.map((slide) => {
+        const { workResultParams } = slide as NonNullable<typeof slide>
+        const { fragmentId, photos, price, description, time } = workResultParams as NonNullable<
+          typeof workResultParams
+        >
+
+        return (
+          <Slide
+            key={fragmentId}
+            description={description as string}
+            price={price as number}
+            time={time as string}
+            image={photos as any}
+            priceTitle={priceTitle}
+            timeTitle={timeTitle}
+            setActiveIndex={setActiveIndex}
+          />
+        )
+      }),
     [slides, priceTitle, timeTitle]
   )
 

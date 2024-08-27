@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './item.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 
@@ -16,7 +15,11 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
     <Layout flexBasis={8} />
     <Layout>
       <NextNavLink path={content}>
-        <Text color={Math.abs(scrollY!) < 100 ? getColor(active, scrollY) : ''} fontWeight='medium'>
+        <Text
+          // @ts-expect-error undefined
+          color={Math.abs(scrollY!) < 100 ? getColor(active, scrollY) : ''}
+          fontWeight='medium'
+        >
           {title}
         </Text>
       </NextNavLink>

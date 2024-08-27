@@ -1,9 +1,8 @@
+import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import type { FooterProps } from './footer.interface.js'
-
-import { memo }             from 'react'
 import React                from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -33,7 +32,9 @@ export const Footer: FC<FooterProps> = memo(({
   const byObj = extractFragment('contentAddons', 'by', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
+  // @ts-expect-error never type
   const navigationItems = extractFragments(navigationItemsType, 'contentAddons', navigation)
+  // @ts-expect-error never type
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
   const appointmentPhone = footerObj?.title

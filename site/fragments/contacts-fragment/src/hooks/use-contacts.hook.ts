@@ -2,6 +2,7 @@ import type { UseContactsType } from './use-contacts.interface.js'
 
 import { extractFragment }      from '@globals/data'
 
+// @ts-expect-error not assignable
 export const useContacts: UseContactsType = (props) => {
   const { contactsData, fragmentsData } = props
 

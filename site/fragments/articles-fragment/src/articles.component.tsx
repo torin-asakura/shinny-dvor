@@ -1,22 +1,20 @@
-import type { FC }             from 'react'
+import type { ArticlesProps } from './articles.interface.js'
+import type { FC }            from 'react'
 
-import type { ArticlesProps }  from './articles.interface.js'
-import type { NavigationItem } from './articles.interface.js'
+import React                  from 'react'
+import { forwardRef }         from 'react'
 
-import { forwardRef }          from 'react'
-import React                   from 'react'
+import { Box }                from '@ui/layout'
+import { Row }                from '@ui/layout'
+import { Column }             from '@ui/layout'
+import { Layout }             from '@ui/layout'
+import { NextLink }           from '@ui/link'
+import { Text }               from '@ui/text'
+import { extractFragment }    from '@globals/data'
+import { extractFragments }   from '@globals/data'
 
-import { Box }                 from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { NextLink }            from '@ui/link'
-import { Text }                from '@ui/text'
-import { extractFragment }     from '@globals/data'
-import { extractFragments }    from '@globals/data'
-
-import { Carousel }            from './carousel/index.js'
-import { PreviewArticle }      from './preview-article/index.js'
+import { Carousel }           from './carousel/index.js'
+import { PreviewArticle }     from './preview-article/index.js'
 
 const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },
@@ -29,10 +27,8 @@ const Articles: FC<ArticlesProps> = forwardRef((
   ).title
 
   const navigationItems = extractFragments('nav-item', 'contentAddons', navigationData)
-  const linkBlog = navigationItems.filter(
-    ({ contentAddons }: { contentAddons: NavigationItem['contentAddons'] }) =>
-      contentAddons.title === 'Блог'
-  )[0]
+  // @ts-expect-error any type
+  const linkBlog = navigationItems.filter(({ contentAddons }) => contentAddons.title === 'Блог')[0]
 
   return (
     <Box
@@ -58,16 +54,19 @@ const Articles: FC<ArticlesProps> = forwardRef((
           <Layout flexBasis={[32, 32, 48]} />
           <Row overflow='hidden'>
             <Carousel>
-              {postsData.slice(0, 3).map(({ uri, title, date, excerpt, featuredImage }) => (
-                <NextLink key={uri} path={`${linkBlog.contentAddons.content}/${uri}`}>
-                  <PreviewArticle
-                    title={title}
-                    date={date}
-                    excerpt={excerpt}
-                    featuredImage={featuredImage}
-                  />
-                </NextLink>
-              ))}
+              {
+                // @ts-expect-error null undefined
+                postsData.slice(0, 3).map(({ uri, title, date, excerpt, featuredImage }) => (
+                  <NextLink key={uri} path={`${linkBlog.contentAddons.content}/${uri}`}>
+                    <PreviewArticle
+                      title={title}
+                      date={date}
+                      excerpt={excerpt}
+                      featuredImage={featuredImage}
+                    />
+                  </NextLink>
+                ))
+              }
             </Carousel>
           </Row>
           <Layout flexBasis={[64, 64, 100]} />
