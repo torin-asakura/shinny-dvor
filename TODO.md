@@ -1,4 +1,5 @@
 - [ ] move sentry privates to env
+- [ ] check namings into globals interfaces
 
 ---
 
