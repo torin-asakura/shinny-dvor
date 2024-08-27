@@ -19,7 +19,7 @@ const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   const wheelImg = new Map<string, string>()
 
   const extractFragmentTitle = (position: string): string =>
-    extractFragment('contentAddons', position, fragmentsData).title
+    extractFragment('contentAddons', position, fragmentsData)?.title || `emtpy-${position}-string`
 
   const titleTop = extractFragmentTitle('info-title-top')
   const titleMiddle = extractFragmentTitle('info-title-middle')
@@ -30,7 +30,7 @@ const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   titles.set('titleBottom', titleBottom)
 
   const extractFragmentImageData = (dataType: string): string =>
-    extractFragment('contentAddons', 'wheel', uiData).image[dataType]
+    extractFragment('contentAddons', 'wheel', uiData)?.image[dataType]
 
   const whellImgAltText = extractFragmentImageData('altText')
   const whellImgSourceUrl = extractFragmentImageData('sourceUrl')

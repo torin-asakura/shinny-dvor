@@ -1,28 +1,33 @@
-import type { FC }            from 'react'
+import type { ServicesDataType } from '@globals/data'
+import type { FC }               from 'react'
 
-import type { ServicesProps } from './services.interface.js'
+import type { ServicesProps }    from './services.interface.js'
 
-import { forwardRef }         from 'react'
-import React                  from 'react'
+import { forwardRef }            from 'react'
+import React                     from 'react'
 
-import { Button }             from '@ui/button'
-import { Divider }            from '@ui/divider'
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { NextLink }           from '@ui/link'
-import { Text }               from '@ui/text'
-import { extractFragments }   from '@globals/data'
-import { extractFragment }    from '@globals/data'
+import { Button }                from '@ui/button'
+import { Divider }               from '@ui/divider'
+import { Box }                   from '@ui/layout'
+import { Row }                   from '@ui/layout'
+import { Column }                from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { NextLink }              from '@ui/link'
+import { Text }                  from '@ui/text'
+import { extractFragments }      from '@globals/data'
+import { extractFragment }       from '@globals/data'
 
-import { ServicesList }       from './services-list/index.js'
+import { ServicesList }          from './services-list/index.js'
 
 const Services: FC<ServicesProps> = forwardRef((
   { fragmentsData, availableRadiiData, servicesData },
   ref: any
 ) => {
-  const services = extractFragments('service-item', 'servicesParams', servicesData)
+  const services = extractFragments<ServicesDataType>(
+    'service-item',
+    'servicesParams',
+    servicesData
+  )
 
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
   const subTitle = extractFragment('contentAddons', 'select-needed-service', fragmentsData).title
