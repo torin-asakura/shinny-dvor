@@ -1,23 +1,7 @@
-export interface Fragment {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-    highlightedtext: string
-  }
-}
-
-interface Ui {
-  contentAddons: {
-    image: {
-      altText: string
-      sourceUrl: string
-    }
-    fragmentId: string
-  }
-}
+import type { UiDataType }        from '@globals/data'
+import type { FragmentsDataType } from '@globals/data'
 
 export interface ServicesInfographicsProps {
-  uiData: Array<Ui>
-  fragmentsData: Array<Fragment>
+  uiData: UiDataType
+  fragmentsData: FragmentsDataType
 }

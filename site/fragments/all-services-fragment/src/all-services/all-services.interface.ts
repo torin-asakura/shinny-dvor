@@ -1,47 +1,7 @@
-// TODO interface
-type ContentAddonsInt = any
-
-export interface Service {
-  contentAddons: ContentAddonsInt
-  servicesParams: {
-    fragmentId: string
-    price: any
-    description: string
-    averagePrice: number
-    title: string
-    addon: string
-    image: {
-      altText: string
-      sourceUrl: string
-    }
-    workexamples: {
-      firstexample: {
-        image: {
-          altText: string
-          sourceUrl: string
-        }
-        title: string
-      }
-      secondexample: {
-        image: {
-          altText: string
-          sourceUrl: string
-        }
-        title: string
-      }
-    }
-    additionalservice: {
-      title: string
-      price: string
-    }
-  }
-}
-
-export interface Fragment {
-  contentAddons: ContentAddonsInt
-}
+import type { ServicesDataType }  from '@globals/data'
+import type { FragmentsDataType } from '@globals/data'
 
 export interface AllServicesProps {
-  servicesData: Array<Service>
-  fragmentsData: Array<Fragment>
+  servicesData: ServicesDataType
+  fragmentsData: FragmentsDataType
 }
