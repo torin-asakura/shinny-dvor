@@ -8,37 +8,64 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+// const nextConfig = {
+//   images: {
+//     remotePatterns: [
+//       {
+//         protocol: 'https',
+//         hostname: '**',
+//       },
+//     ],
+//   },
+//   experimental: {
+//     // externalDir: true,
+//     // outputFileTracingRoot: join(__dirname, './src'),
+//     esmExternals: 'loose',
+//   },
+//   compiler: {
+//     styledComponents: true,
+//   },
+//   webpack: (webpackConfig, { webpack, isServer }) => {
+//     webpackConfig.plugins.push(
+//       new webpack.NormalModuleReplacementPlugin(new RegExp(/^(\.{1,2}\/)+\S*\.js$/), function (
+//         /** @type {{ request: string }} */
+//         resource
+//       ) {
+//         resource.request = resource.request.replace('.js', '')
+//       })
+//     )
+//
+//     return webpackConfig
+//   },
+//   output: 'standalone',
+// }
+
+//
+
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-  },
   experimental: {
     externalDir: true,
-    outputFileTracingRoot: join(__dirname, './src'),
+    outputFileTracingRoot: join(__dirname, './'),
     esmExternals: 'loose',
   },
   compiler: {
     styledComponents: true,
   },
-  webpack: (webpackConfig, { webpack, isServer }) => {
+  webpack: (webpackConfig, { webpack }) => {
     webpackConfig.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(new RegExp(/^(\.{1,2}\/)+\S*\.js$/), function (
+      new webpack.NormalModuleReplacementPlugin(new RegExp(/\.js$/), function (
         /** @type {{ request: string }} */
         resource
       ) {
         resource.request = resource.request.replace('.js', '')
       })
     )
-
     return webpackConfig
   },
   output: 'standalone',
 }
+
+//
 
 // const sentryConfig = withSentryConfig(nextConfig, {
 // For all available options, see:
