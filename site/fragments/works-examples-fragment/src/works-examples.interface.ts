@@ -1,28 +1,7 @@
-interface ContentAddons {
-  title: string
-  content: string
-  fragmentId: string
-  highlightedtext: string
-}
-
-interface WorkResult {
-  workResultParams: {
-    description: string
-    price: number
-    time: string
-    fragmentId: string
-    photos: {
-      firstPhoto: {
-        sourceUrl: string
-      }
-      secondPhoto: {
-        sourceUrl: string
-      }
-    }
-  }
-}
+import type { FragmentsDataType }   from '@globals/data'
+import type { WorkResultsDataType } from '@globals/data'
 
 export interface WorksExamplesProps {
-  fragmentsData: ContentAddons[]
-  workResultsData: WorkResult[]
+  fragmentsData: FragmentsDataType
+  workResultsData: WorkResultsDataType
 }

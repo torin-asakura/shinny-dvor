@@ -32,9 +32,7 @@ export const Footer: FC<FooterProps> = memo(({
   const byObj = extractFragment('contentAddons', 'by', fragmentsData)
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const footerObj = extractFragment('contentAddons', 'appointment-phone', fragmentsData)
-  // @ts-expect-error never type
   const navigationItems = extractFragments(navigationItemsType, 'contentAddons', navigation)
-  // @ts-expect-error never type
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
   const appointmentPhone = footerObj?.title

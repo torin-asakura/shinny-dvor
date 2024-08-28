@@ -1,35 +1,9 @@
-export interface Article {
-  date: string
-  uri: string
-  excerpt: string
-  title: string
-  featuredImage: {
-    node: {
-      altText: string
-      mediaItemUrl: string
-    }
-  }
-}
-
-export interface Fragment {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-    highlightedtext: string
-  }
-}
-
-interface NavigationItem {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-  }
-}
+import type { PostsDataType }      from '@globals/data'
+import type { FragmentsDataType }  from '@globals/data'
+import type { NavigationDataType } from '@globals/data'
 
 export interface ArticlesProps {
-  postsData: Article[]
-  fragmentsData: Fragment[]
-  navigationData: NavigationItem[]
+  postsData: PostsDataType
+  fragmentsData: FragmentsDataType
+  navigationData: NavigationDataType
 }

@@ -1,33 +1,26 @@
-import React               from 'react'
-import { FC }              from 'react'
+import type { ContactsProps }  from './contacts.interface.js'
+import type { FC }             from 'react'
 
-import { Box }             from '@ui/layout'
-import { Column }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { Link }            from '@ui/link'
-import { Map }             from '@ui/map'
-import { SocialLinks }     from '@ui/social-links'
-import { Text }            from '@ui/text'
-import { extractFragment } from '@globals/data'
+import React                   from 'react'
+import { memo }                from 'react'
 
-import { ContactsProps }   from './contacts.interface'
+import { Box }                 from '@ui/layout'
+import { Column }              from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Layout }              from '@ui/layout'
+import { Map }                 from '@ui/map'
+import { Text }                from '@ui/text'
 
-const Contacts: FC<ContactsProps> = ({ contactsData, fragmentsData }) => {
-  const contactsTitle = extractFragment('contentAddons', 'contacts', fragmentsData).title
-  const addressTitle = extractFragment('contentAddons', 'address', fragmentsData).title
-  const workingHoursTitle = extractFragment('contentAddons', 'working-hours', fragmentsData).title
-  const contactsObj = extractFragment('contactAddons', 'info', contactsData)
+import { ContactsInformation } from './contacts-information/index.js'
+import { MapComponent }        from './map/index.js'
+import { useContacts }         from './hooks/index.js'
 
-  const address = contactsObj?.address
-  const workingHours = contactsObj?.workinghours
-  const telephone = contactsObj?.telephone
-  const email = contactsObj?.email
-  const linkVk = contactsObj?.linkVk
-  const linkFb = contactsObj?.linkFb
+const Contacts: FC<ContactsProps> = memo((props) => {
+  const contactsInformationData = useContacts(props)
+  const { contactsTitle } = contactsInformationData
 
   return (
-    <Column width={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
+    <Column width='100%' maxWidth={1440} marginTop={[80, 80, 104]}>
       <Row>
         <Layout flexBasis={[20, 20, 80]} />
         <Column width='100%'>
@@ -41,63 +34,14 @@ const Contacts: FC<ContactsProps> = ({ contactsData, fragmentsData }) => {
         </Column>
         <Layout flexBasis={[20, 20, 80]} />
       </Row>
-      <Row>
-        <Layout flexBasis={[20, 20, 80]} />
-        <Row justifyContent='space-between'>
-          <Column width='100%' justifyContent='space-between'>
-            <Column width='100%'>
-              <Layout flexDirection='column'>
-                <Row>
-                  <Text fontWeight='medium'>{addressTitle}</Text>
-                </Row>
-                <Layout flexBasis={8} />
-                <Row>
-                  <Text fontWeight='regular'>{address}</Text>
-                </Row>
-                <Layout flexBasis={24} />
-                <Row>
-                  <Text fontWeight='medium'>{workingHoursTitle}</Text>
-                </Row>
-                <Layout flexBasis={8} />
-                <Column height='auto' maxWidth={152}>
-                  <Text fontWeight='regular' lineHeight='medium'>
-                    {workingHours.split('|n|')[0]}
-                  </Text>
-                  <Text fontWeight='regular' lineHeight='medium'>
-                    {workingHours.split('|n|')[1]}
-                  </Text>
-                </Column>
-                <Layout flexBasis={24} />
-                <Row>
-                  <Text fontWeight='medium'>{contactsTitle}</Text>
-                </Row>
-                <Layout flexBasis={8} />
-                <Column height='auto'>
-                  <Row>
-                    <Link href={`tel:${telephone}`}>
-                      <Text fontWeight='regular'>{telephone}</Text>
-                    </Link>
-                  </Row>
-                  <Layout flexBasis={10} />
-                  <Row>
-                    <Link href={`mailto:${email}`}>
-                      <Text fontWeight='regular'>{email}</Text>
-                    </Link>
-                  </Row>
-                </Column>
-              </Layout>
-            </Column>
-            <Box display={['none', 'none', 'flex']} width='110px'>
-              <SocialLinks linkVk={linkVk} linkFb={linkFb} />
-            </Box>
-          </Column>
-          <Column justifyContent='flex-end'>
-            <Box display={['none', 'none', 'flex']} width={952} height={480}>
-              <Map width='100%' height={480} />
-            </Box>
-          </Column>
-        </Row>
-        <Layout flexBasis={[20, 20, 80]} />
+      <Row
+        padding={[20, 20, 80]}
+        paddingTop='0 !important'
+        paddingBottom='0 !important'
+        justifyContent='space-between'
+      >
+        <ContactsInformation contactsData={contactsInformationData} />
+        <MapComponent />
       </Row>
       <Layout flexBasis={[24, 24, 0]} />
       <Box width='100%' height={270} display={['flex', 'flex', 'none']}>
@@ -106,6 +50,6 @@ const Contacts: FC<ContactsProps> = ({ contactsData, fragmentsData }) => {
       <Layout flexBasis={[0, 0, 80]} />
     </Column>
   )
-}
+})
 
 export { Contacts }

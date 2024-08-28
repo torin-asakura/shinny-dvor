@@ -1,24 +1,19 @@
-interface ContactAddons {
-  address: string
-  email: string
-  linkFb: string
-  linkVk: string
-  fragmentId: string
-  telephone: string
-  title: string
-  workingHours: string
-}
-
-interface Fragment {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-    highlightedtext: string
-  }
-}
+import type { ContactsDataType as GlobalContactsDataType } from '@globals/data'
+import type { FragmentsDataType }                          from '@globals/data'
 
 export interface ContactsProps {
-  contactsData: ContactAddons[]
-  fragmentsData: Fragment[]
+  contactsData: GlobalContactsDataType
+  fragmentsData: FragmentsDataType
+}
+
+export type ContactsDataType = {
+  addressTitle: string
+  address: string
+  workingHoursTitle: string
+  workingHours: string
+  contactsTitle: string
+  telephone: string
+  email: string
+  linkVk: string
+  linkFb: string
 }

@@ -1,7 +1,12 @@
 export const getColorBackground = (step: number, scrollY?: number) => {
   switch (step) {
-    case 0 && Math.abs(scrollY!):
-      return 'white'
+    case 0:
+      if (Math.abs(scrollY!) > 100) {
+        console.log('case 0', scrollY)
+        return 'white'
+      } else {
+        return 'transparent'
+      }
     case 1:
       return 'white'
     case 2:
@@ -11,6 +16,6 @@ export const getColorBackground = (step: number, scrollY?: number) => {
     case 4:
       return 'white'
     default:
-      return 'transparent'
+      return 'white'
   }
 }

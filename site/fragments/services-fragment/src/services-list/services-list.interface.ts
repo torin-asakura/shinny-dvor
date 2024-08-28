@@ -1,5 +1,5 @@
-import { ServicesParams } from '../services.interface'
+import type { ServicesParams } from '@globals/data'
 
 export interface ItemProps {
-  services: ServicesParams[]
+  services: Array<ServicesParams>
 }
