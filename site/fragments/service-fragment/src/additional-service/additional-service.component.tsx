@@ -1,15 +1,16 @@
-import React                      from 'react'
-import { FC }                     from 'react'
+import type { FC }                     from 'react'
 
-import { Checkbox }               from '@ui/checkbox'
-import { Box }                    from '@ui/layout'
-import { Column }                 from '@ui/layout'
-import { Layout }                 from '@ui/layout'
-import { Text }                   from '@ui/text'
-import { Ruble }                  from '@ui/text'
-import { Space }                  from '@ui/text'
+import type { AdditionalServiceProps } from './additional-service.interface.js'
 
-import { AdditionalServiceProps } from './additional-service.interface'
+import React                           from 'react'
+
+import { Checkbox }                    from '@ui/checkbox'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { Ruble }                       from '@ui/text'
+import { Space }                       from '@ui/text'
 
 const AdditionalService: FC<AdditionalServiceProps> = ({
   isAdditionalService,

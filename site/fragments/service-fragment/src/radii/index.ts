@@ -1,1 +1,1 @@
-export * from './radii.component'
+export * from './radii.component.js'

@@ -1,26 +1,30 @@
 {
   "name": "@site/services-infographics-fragment",
   "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
-    "@emotion/react": "^11.6.0",
-    "@globals/data": "workspace:0.0.1",
-    "@ui/image": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/wheel": "workspace:0.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "@globals/data": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/wheel": "workspace:*"
   },
   "devDependencies": {
-    "@apollo/client": "^3.6.9",
-    "@types/react": "^17",
-    "@types/react-dom": "^17"
+    "@apollo/client": "3.11.3",
+    "@emotion/react": "11.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
-    "next": "*",
     "react": "*",
     "react-dom": "*"
   }
