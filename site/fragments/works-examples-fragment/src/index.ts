@@ -1,1 +1,1 @@
-export * from './works-examples.component.js'
+export * from './works-examples.component'

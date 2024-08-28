@@ -1,39 +1,34 @@
 {
   "name": "@site/index-page",
   "version": "0.0.1",
-  "license": "BSD-3-Clause",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/footer-fragment": "workspace:*",
-    "@fragments/navigation-fragment": "workspace:*",
-    "@globals/data": "workspace:*",
-    "@site/articles-fragment": "workspace:*",
-    "@site/hero-fragment": "workspace:*",
-    "@site/services-fragment": "workspace:*",
-    "@site/services-infographics-fragment": "workspace:*",
-    "@site/works-examples-fragment": "workspace:*",
-    "@ui/intersection-observer": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/utils": "workspace:*"
+    "@globals/data": "workspace:0.0.1",
+    "@site/articles-fragment": "workspace:0.0.1",
+    "@site/footer-fragment": "workspace:0.0.1",
+    "@site/hero-fragment": "workspace:0.0.1",
+    "@site/navigation-fragment": "workspace:0.0.1",
+    "@site/services-fragment": "workspace:0.0.1",
+    "@site/services-infographics-fragment": "workspace:0.0.1",
+    "@site/works-examples-fragment": "workspace:0.0.1",
+    "@ui/intersection-observer": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/utils": "workspace:0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@apollo/client": "3.11.3",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "@types/react-helmet": "6.1.11",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-helmet": "6.1.0",
-    "react-intl": "6.6.8"
+    "@apollo/client": "^3.6.9",
+    "@types/react": "^17",
+    "@types/react-dom": "^17",
+    "react-helmet": "^6.1.0",
+    "react-intl": "5.24.3"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*",
     "react-helmet": "*",
