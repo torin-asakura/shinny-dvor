@@ -1,1 +1,2 @@
-export { default } from './service-page.component.js'
+export { default } from './service.page'
+export * from './get-server-side-props'
