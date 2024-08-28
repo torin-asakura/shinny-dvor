@@ -34,7 +34,6 @@ const Booking = ({
   const screen = useReactiveVar<Screen>(screenVar)
   const [hover, hoverProps] = useHover()
 
-  // @ts-expect-error never type
   const mainPage = extractFragment('contentAddons', 'main', navigationData)
 
   return (
