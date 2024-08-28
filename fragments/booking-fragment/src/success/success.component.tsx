@@ -15,7 +15,6 @@ import { SuccessProps }    from './success.interface.js'
 
 const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
-    // @ts-expect-error never type
     'contentAddons',
     'success',
     fragmentsData

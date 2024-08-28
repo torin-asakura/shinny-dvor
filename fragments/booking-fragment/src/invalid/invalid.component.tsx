@@ -14,7 +14,6 @@ import { InvalidProps }    from './invalid.interface.js'
 
 const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
-    // @ts-expect-error never type
     'contentAddons',
     'error',
     fragmentsData
