@@ -1,6 +1,6 @@
+import React                    from 'react'
 import { FC }                   from 'react'
 import { useState }             from 'react'
-import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -63,7 +63,7 @@ const Navigation: FC<NavigationProps> = ({
         height={[80, 80, 104]}
         position='fixed'
         justifyContent='center'
-        backgroundColor={backgroundColor || getColorBackground(active!, scrollY)}
+        backgroundColor={getColorBackground(active!, scrollY)}
         style={{ transition: '.2s' }}
       >
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
