@@ -1,11 +1,12 @@
 'use client'
 
-import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
-import React                         from 'react'
+import type { IndexPageClientProps } from './index-page.interfaces.js'
+
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
+import React                         from 'react'
 
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
