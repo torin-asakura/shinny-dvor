@@ -8,10 +8,10 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn next build src --no-lint && cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/.next/static && mv ./dist/server.js ./dist/index.js",
+    "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
     "dev": "yarn next dev src",
     "prepack": "run build",
-    "start": "node dist/index.js"
+    "start": "node dist/src/index.cjs"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",
