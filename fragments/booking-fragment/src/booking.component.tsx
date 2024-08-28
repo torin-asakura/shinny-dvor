@@ -18,9 +18,9 @@ import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 import { useHover }        from '@ui/utils'
 
-import { Initial }         from './initial'
-import { Invalid }         from './invalid'
-import { Success }         from './success'
+import { Initial }         from './initial/index.js'
+import { Invalid }         from './invalid/index.js'
+import { Success }         from './success/index.js'
 
 const Booking = ({
   setVisible,
@@ -34,6 +34,7 @@ const Booking = ({
   const screen = useReactiveVar<Screen>(screenVar)
   const [hover, hoverProps] = useHover()
 
+  // @ts-expect-error never type
   const mainPage = extractFragment('contentAddons', 'main', navigationData)
 
   return (

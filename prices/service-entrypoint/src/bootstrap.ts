@@ -1,7 +1,5 @@
 import * as Sentry             from '@sentry/node'
-
 import { Logger }              from '@atls/logger'
-
 import cron                    from 'node-cron'
 
 import { API_URL }             from './http'

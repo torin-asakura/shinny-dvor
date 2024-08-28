@@ -1,7 +1,7 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
-const createBaseStyles = (): styleFn =>
-  ({ scroll }) => ({
+export const createBaseStyles = (): styleFn =>
+  ({ scroll }: { scroll: boolean }) => ({
     width: '100%',
     height: '100%',
     position: 'fixed',
@@ -13,5 +13,3 @@ const createBaseStyles = (): styleFn =>
     bottom: 0,
     overflowY: scroll ? 'scroll' : 'unset',
   })
-
-export { createBaseStyles }

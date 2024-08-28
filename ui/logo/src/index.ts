@@ -1,2 +1,2 @@
-export * from './logo.component'
-export * from './footer-logo.component'
+export * from './logo.component.js'
+export * from './footer-logo.component.js'

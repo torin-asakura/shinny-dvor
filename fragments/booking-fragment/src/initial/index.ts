@@ -1,1 +1,1 @@
-export * from './initial.component'
+export * from './initial.component.js'

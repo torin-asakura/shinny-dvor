@@ -1,19 +1,18 @@
 import { useSelect }                       from '@atls-ui-parts/select'
-
-import React                               from 'react'
 import { FC }                              from 'react'
 import { useMultipleSelection }            from 'downshift'
 import { useSelect as useDownshiftSelect } from 'downshift'
+import React                               from 'react'
 
 import { DropDownIcon }                    from '@ui/icons'
 import { Layout }                          from '@ui/layout'
 import { Text }                            from '@ui/text'
 
-import { ArrowContainer }                  from './arrow-container'
-import { Button }                          from './button'
-import { Menu }                            from './menu'
-import { MenuItem }                        from './menu-item'
-import { SelectProps }                     from './select.interface'
+import { ArrowContainer }                  from './arrow-container/index.js'
+import { Button }                          from './button/index.js'
+import { MenuItem }                        from './menu-item/index.js'
+import { Menu }                            from './menu/index.js'
+import { SelectProps }                     from './select.interface.js'
 
 const Select: FC<SelectProps> = ({
   items,

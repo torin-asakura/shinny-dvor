@@ -1,4 +1,5 @@
 export * from '@atls-ui-parts/swiper'
-export * from './slide'
-export * from './slider.component'
-export * from './pagination'
+
+export * from './slider.component.js'
+export * from './slide/index.js'
+export * from './pagination/index.js'

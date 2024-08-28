@@ -1,16 +1,15 @@
-import styled               from '@emotion/styled'
 import { Content }          from '@atls-ui-parts/button'
-
-import React                from 'react'
+import styled               from '@emotion/styled'
 import { FC }               from 'react'
 import { useState }         from 'react'
+import React                from 'react'
 
 import { useHover }         from '@ui/utils'
 
-import { ButtonProps }      from './button.interface'
-import { baseStyles }       from './button.styles'
-import { shapeStyles }      from './button.styles'
-import { appearanceStyles } from './styles'
+import { ButtonProps }      from './button.interface.js'
+import { baseStyles }       from './button.styles.js'
+import { shapeStyles }      from './button.styles.js'
+import { appearanceStyles } from './styles/index.js'
 
 export const ButtonElement = styled('button')<any>(baseStyles, shapeStyles, appearanceStyles)
 

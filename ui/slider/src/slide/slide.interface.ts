@@ -1,6 +1,6 @@
 export interface SlideProps {
   description: string
-  price: number
+  price: string | number
   time: string
   priceTitle: string
   timeTitle: string

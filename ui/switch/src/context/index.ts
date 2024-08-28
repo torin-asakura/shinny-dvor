@@ -1,3 +1,3 @@
-export * from './context'
-export * from './provider.component'
-export * from './useActive'
+export * from './context.js'
+export * from './provider.component.js'
+export * from './use-active.js'

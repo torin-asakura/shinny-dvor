@@ -1,8 +1,8 @@
-import ProgressBar from '@badrap/bar-of-progress'
+import { default as BaseProgressBar } from '@badrap/bar-of-progress'
 
-const progressBar = new ProgressBar({
+const ProgressBar = BaseProgressBar as unknown as any
+
+export const progressBar = new ProgressBar({
   className: 'bar-of-progress',
   delay: 100,
 })
-
-export { progressBar }

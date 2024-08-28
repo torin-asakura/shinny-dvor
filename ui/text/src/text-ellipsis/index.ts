@@ -1,1 +1,1 @@
-export * from './text-ellipsis.component'
+export * from './text-ellipsis.component.js'

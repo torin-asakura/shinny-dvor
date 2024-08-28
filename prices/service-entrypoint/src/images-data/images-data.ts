@@ -3,7 +3,7 @@ interface ImageData {
   url: string
 }
 
-const imagesData: ImageData[] = [
+const imagesData: Array<ImageData> = [
   {
     id: null,
     url: 'https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r12.jpg',

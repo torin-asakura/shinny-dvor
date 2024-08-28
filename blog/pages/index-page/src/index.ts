@@ -1,2 +1,2 @@
-export { default } from './index.page'
-export * from './get-server-side-props'
+export * from './index-page.component.js'
+export * from './index-page.constants.js'

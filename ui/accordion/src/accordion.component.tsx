@@ -1,6 +1,6 @@
-import React                from 'react'
 import { FC }               from 'react'
 import { useState }         from 'react'
+import React                from 'react'
 
 import { Condition }        from '@ui/condition'
 import { DropDownIcon }     from '@ui/icons'
@@ -10,9 +10,9 @@ import { Layout }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Text }             from '@ui/text'
 
-import { AccordionProps }   from './accordion.interface'
-import { ArrowContainer }   from './arrow-container'
-import { TriggerContainer } from './trigger-container'
+import { AccordionProps }   from './accordion.interface.js'
+import { ArrowContainer }   from './arrow-container/index.js'
+import { TriggerContainer } from './trigger-container/index.js'
 
 const Accordion: FC<AccordionProps> = ({ children, text }) => {
   const [active, setActive] = useState<boolean>(false)

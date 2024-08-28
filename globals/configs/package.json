@@ -1,0 +1,16 @@
+{
+  "name": "@globals/configs",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "main": "src/index.js",
+  "devDependencies": {
+    "next": "14.2.5"
+  },
+  "peerDependencies": {
+    "next": "*"
+  }
+}

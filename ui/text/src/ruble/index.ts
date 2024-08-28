@@ -1,2 +1,1 @@
-export * from '@atls-ui-parts/text'
-export * from './ruble.component'
+export * from './ruble.component.js'

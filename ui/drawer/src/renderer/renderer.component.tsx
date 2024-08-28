@@ -1,11 +1,16 @@
-import React               from 'react'
-import { AnimatePresence } from 'framer-motion'
-import { Children }        from 'react'
-import { useState }        from 'react'
-import { useEffect }       from 'react'
-import { createPortal }    from 'react-dom'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-const Renderer = ({ children, active }) => {
+import type { RendererProps }     from './renderer.interfaces.js'
+
+import { AnimatePresence }        from 'framer-motion'
+import { Children }               from 'react'
+import { useState }               from 'react'
+import { useEffect }              from 'react'
+import { createPortal }           from 'react-dom'
+import React                      from 'react'
+
+export const Renderer: FC<PropsWithChildren<RendererProps>> = ({ children, active }) => {
   const [doc, setDoc] = useState<any>(null)
 
   useEffect(() => {
@@ -15,13 +20,11 @@ const Renderer = ({ children, active }) => {
   return doc?.body
     ? createPortal(
         <>
-          {Children.map(children, (child) => (
+          {Children.map(children as JSX.Element, (child: JSX.Element) => (
             <AnimatePresence>{active && child}</AnimatePresence>
           ))}
         </>,
-        (doc as any).body
+        doc.body
       )
     : null
 }
-
-export { Renderer }

@@ -2,24 +2,32 @@
   "name": "@ui/input",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/input": "^0.0.6",
-    "@ui/divider": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1"
+    "@atls-ui-parts/input": "0.1.1",
+    "@ui/divider": "workspace:*",
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/styled": "^11.6.0",
-    "@types/react": "^17",
-    "@types/styled-system": "^5.1.13",
-    "react": "^17.0.2",
-    "styled-system": "^5.1.5",
-    "styled-tools": "^1.7.2"
+    "@emotion/styled": "11.13.0",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "@types/styled-system": "5.1.22",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "styled-system": "5.1.5",
+    "styled-tools": "1.7.2"
   },
   "peerDependencies": {
     "@emotion/styled": "*",
     "@types/styled-system": "*",
     "react": "*",
+    "react-dom": "*",
+    "styled-system": "*",
     "styled-tools": "*"
   }
 }

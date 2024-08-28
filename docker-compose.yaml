@@ -1,15 +1,13 @@
-version: '3.8'
-
 services:
   yarn:
-    image: node:16.13
+    image: node:18
     working_dir: /workspace
     volumes:
       - ./:/workspace
     entrypoint: yarn
 
   site:
-    image: node:16.13
+    image: node:18
     volumes:
       - ./:/workspace
     working_dir: /workspace
@@ -18,7 +16,7 @@ services:
       - 3000:3000
 
   blog:
-    image: node:16.13
+    image: node:18
     volumes:
       - ./:/workspace
     working_dir: /workspace
@@ -27,7 +25,7 @@ services:
       - 3000:3000
 
   prices:
-    image: node:16.13
+    image: node:18
     volumes:
       - ./:/workspace
     working_dir: /workspace

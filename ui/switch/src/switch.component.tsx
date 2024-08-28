@@ -1,16 +1,18 @@
-import React              from 'react'
-import { FC }             from 'react'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Box }            from '@ui/layout'
+import type { SwitchProps }       from './switch.interface.js'
 
-import { ActiveProvider } from './context'
-import { SwitchProps }    from './switch.interface'
+import React                      from 'react'
 
-const Switch: FC<SwitchProps> = ({ active, children }) => (
+import { Box }                    from '@ui/layout'
+
+import { ActiveProvider }         from './context/index.js'
+
+export const Switch: FC<PropsWithChildren<SwitchProps>> = ({ active, children }) => (
   <ActiveProvider value={active}>
     <Box borderRadius='small' backgroundColor='fillGray' width='100%' height='48px' padding='4px'>
       {children}
     </Box>
   </ActiveProvider>
 )
-export { Switch }

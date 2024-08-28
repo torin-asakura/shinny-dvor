@@ -1,0 +1,44 @@
+'use client'
+
+import type { PostPageClientProps } from './post-page.interfaces.js'
+import type { FC }                  from 'react'
+
+import React                        from 'react'
+
+import { Article }                  from '@blog/articles-fragment'
+import { Footer }                   from '@fragments/footer-fragment'
+import { Navigation }               from '@fragments/navigation-fragment'
+import { Column }                   from '@ui/layout'
+
+import { Seo }                      from './seo.component.js'
+
+export const PostPageClient: FC<PostPageClientProps> = (props) => {
+  const { ogCover, SEO, data } = props
+
+  const { contacts, postBy, navigation, availableRadii, fragments, carBodies, services } = data
+
+  return (
+    <Column width='100%' alignItems='center'>
+      <Seo ogCover={ogCover} SEO={SEO} />
+      <Navigation
+        navigationItemsType='blog-nav-item'
+        backgroundColor='white'
+        availableRadiiData={availableRadii}
+        navigationData={navigation}
+        fragmentsData={fragments}
+        carBodiesData={carBodies}
+        servicesData={services}
+      />
+      <Article
+        postData={postBy}
+        // @ts-expect-error undefined
+        fragmentsData={fragments}
+      />
+      <Footer
+        fragmentsData={fragments}
+        contactsData={contacts}
+        navigationItemsType='blog-nav-item'
+      />
+    </Column>
+  )
+}

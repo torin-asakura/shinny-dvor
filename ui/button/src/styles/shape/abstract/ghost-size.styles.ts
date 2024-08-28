@@ -1,10 +1,9 @@
-import { createShapeStyles } from '@atls-ui-parts/button'
+import type { styleFn }      from 'styled-system'
 
-import { styleFn }           from 'styled-system'
+import { createShapeStyles } from '@atls-ui-parts/button'
 
 const getGhostStyles = (): styleFn => {
   const ghostStyles = createShapeStyles({
-    // @ts-ignore
     size: 'auto',
     paddingRight: 0,
     paddingLeft: 0,

@@ -1,12 +1,15 @@
-import React           from 'react'
-import { FC }          from 'react'
-import { motion }      from 'framer-motion'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { Backdrop }    from './backdrop'
-import { DrawerProps } from './drawer.interface'
-import { Renderer }    from './renderer'
+import type { DrawerProps }       from './drawer.interface.js'
 
-const Drawer: FC<DrawerProps> = ({ children, active, onClose }) => (
+import { motion }                 from 'framer-motion'
+import React                      from 'react'
+
+import { Backdrop }               from './backdrop/index.js'
+import { Renderer }               from './renderer/index.js'
+
+const Drawer: FC<PropsWithChildren<DrawerProps>> = ({ children, active, onClose }) => (
   <Renderer active={active}>
     <motion.div
       style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 800 }}

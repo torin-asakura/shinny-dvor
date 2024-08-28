@@ -1,4 +1,4 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
 export const baseOuterCircleStyles: styleFn = ({ theme, hover }) => ({
   display: 'flex',

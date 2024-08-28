@@ -1,34 +1,26 @@
-import styled                          from '@emotion/styled'
-import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
-import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
-import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'
+import type { FC }            from 'react'
 
-import React                           from 'react'
-import { FC }                          from 'react'
+import type { CheckboxProps } from './checkbox.interface.js'
 
-import { CheckIcon }                   from '@ui/icons'
+import { memo }               from 'react'
+import React                  from 'react'
 
-import { CheckboxProps }               from '../checkbox.interface'
-import { Box }                         from './box'
-import { Container }                   from './container'
-import { Label }                       from './label'
+import { CheckIcon }          from '@ui/icons'
 
-const doNothing = (...args) => {
-  // do nothing
-}
+import { Box }                from './box/index.js'
+import { Checkmark }          from './checkmark/index.js'
+import { Container }          from './container/index.js'
+import { Label }              from './label/index.js'
 
-const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = (newState) => doNothing() }) => {
-  const Checkmark = styled.div(
-    createCheckBaseStyles(),
-    createCheckAppearanceStyles({
-      color: 'white',
-    }),
-    createCheckShapeStyles({
-      size: 20,
-    })
-  )
+export const Checkbox: FC<CheckboxProps> = memo(({ children, active, onCheck }) => {
+  const handleClick = () => {
+    if (onCheck) {
+      onCheck(!active)
+    }
+  }
+
   return (
-    <Container onClick={() => onCheck(!active)}>
+    <Container onClick={handleClick}>
       <Box checked={active}>
         <Checkmark>
           <CheckIcon width={17} height={18} />
@@ -37,6 +29,4 @@ const Checkbox: FC<CheckboxProps> = ({ children, active, onCheck = (newState) =>
       <Label>{children}</Label>
     </Container>
   )
-}
-
-export { Checkbox }
+})

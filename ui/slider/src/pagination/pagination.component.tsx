@@ -1,29 +1,32 @@
-import styled                        from '@emotion/styled'
+import type { FC }                   from 'react'
 
-import React                         from 'react'
-import { FC }                        from 'react'
+import type { PaginationProps }      from './pagination.interface.js'
+
+import styled                        from '@emotion/styled'
 import { useMemo }                   from 'react'
+import React                         from 'react'
 
 import { Box }                       from '@ui/layout'
 import { Layout }                    from '@ui/layout'
 import { Row }                       from '@ui/layout'
 
-import { PaginationProps }           from './pagination.interface'
-import { transitionContainerStyles } from './styles'
+import { transitionContainerStyles } from './styles/index.js'
 
 const TransitionBox = styled(Box)(transitionContainerStyles)
 
 const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => {
   const calculatedActiveItem = useMemo(() => {
     const maxIndex = totalItems - 1
-
     if (!activeItem) return 0
-
     if (activeItem > maxIndex) {
       return activeItem - maxIndex * Math.floor(activeItem / maxIndex) - 1
     }
     return activeItem
   }, [activeItem, totalItems])
+
+  const handleClick = (index: number): void => {
+    swiper?.slideTo(index)
+  }
 
   return (
     <Row height={32} justifyContent='center' alignItems='center'>
@@ -34,10 +37,8 @@ const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => 
             height={10}
             backgroundColor={calculatedActiveItem === index ? 'primaryBlue' : 'lightGray'}
             borderRadius={50}
-            onClick={() => {
-              swiper?.slideTo(index)
-            }}
             cursor='pointer'
+            onClick={() => handleClick(index)}
           />
           <Layout flexBasis={12} flexShrink={0} />
         </React.Fragment>

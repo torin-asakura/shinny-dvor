@@ -1,27 +1,30 @@
-import styled                  from '@emotion/styled'
-import { useSwiperSlide }      from '@atls-ui-parts/swiper'
-import { useSwiper }           from '@atls-ui-parts/swiper'
+import type { FC }                          from 'react'
 
-import React                   from 'react'
-import ReactCompareImage       from 'react-compare-image'
-import { FC }                  from 'react'
-import { useEffect }           from 'react'
+import type { SlideProps }                  from './slide.interface.js'
 
-import { Condition }           from '@ui/condition'
-import { Layout }              from '@ui/layout'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { Space }               from '@ui/text'
-import { Ruble }               from '@ui/text'
+import { useSwiperSlide }                   from '@atls-ui-parts/swiper'
+import { useSwiper }                        from '@atls-ui-parts/swiper'
+import styled                               from '@emotion/styled'
+import { default as BaseReactCompareImage } from 'react-compare-image'
+import { useEffect }                        from 'react'
+import React                                from 'react'
 
-import { Handle }              from '../handle'
-import { SlideProps }          from './slide.interface'
-import { Wrapper }             from './wrapper'
-import { baseContainerStyles } from './styles'
+import { Condition }                        from '@ui/condition'
+import { Layout }                           from '@ui/layout'
+import { Box }                              from '@ui/layout'
+import { Column }                           from '@ui/layout'
+import { Row }                              from '@ui/layout'
+import { Text }                             from '@ui/text'
+import { Space }                            from '@ui/text'
+import { Ruble }                            from '@ui/text'
+
+import { Handle }                           from '../handle/index.js'
+import { Wrapper }                          from './wrapper/index.js'
+import { baseContainerStyles }              from './styles/index.js'
 
 const Container = styled(Box)(baseContainerStyles)
+
+const ReactCompareImage = BaseReactCompareImage as unknown as FC<any>
 
 const Slide: FC<SlideProps> = ({
   description,
@@ -36,8 +39,8 @@ const Slide: FC<SlideProps> = ({
   const swiper = useSwiper()
 
   useEffect(() => {
-    setActiveIndex(swiper.activeIndex)
-  }, [swiper.activeIndex, setActiveIndex])
+    setActiveIndex(swiper.realIndex)
+  }, [swiper.realIndex, setActiveIndex])
 
   return (
     <Wrapper active={swiperSlide.isActive}>

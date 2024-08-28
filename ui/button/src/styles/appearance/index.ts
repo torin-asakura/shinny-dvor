@@ -1,1 +1,1 @@
-export * from './button.appearance-styles'
+export * from './button.appearance-styles.js'

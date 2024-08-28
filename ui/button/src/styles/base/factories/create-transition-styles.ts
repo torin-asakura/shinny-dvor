@@ -1,8 +1,6 @@
-import { styleFn } from 'styled-system'
+import type { styleFn } from 'styled-system'
 
-const createTransitionStyles = (transition): styleFn =>
+export const createTransitionStyles = (transition: string): styleFn =>
   () => ({
     transition,
   })
-
-export { createTransitionStyles }

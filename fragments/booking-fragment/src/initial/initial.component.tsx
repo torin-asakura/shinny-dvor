@@ -1,7 +1,10 @@
+import type { ReactiveVar }    from '@apollo/client'
+import type { KeyboardEvent }  from 'react'
+import type { FC }             from 'react'
+
 import { useReactiveVar }      from '@apollo/client'
 
 import React                   from 'react'
-import { FC }                  from 'react'
 import { useCallback }         from 'react'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
@@ -25,9 +28,9 @@ import { doNothing }           from '@shared/utils'
 import { screenVar }           from '@store/booking'
 import { serviceVar }          from '@store/services'
 
-import { RadioList }           from '../radio-list'
-import { InitialProps }        from './initial.interface'
-import { useSubmit }           from '../data'
+import { RadioList }           from '../radio-list/index.js'
+import { InitialProps }        from './initial.interface.js'
+import { useSubmit }           from '../data/index.js'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -39,6 +42,7 @@ const Initial: FC<InitialProps> = ({
   const service = useReactiveVar<IService>(serviceVar)
 
   const carBodies = extractFragments('car-body-item', 'contentAddons', carBodiesData)
+  // @ts-expect-error any type
   const carBodyItems = carBodies.map((item) => item.contentAddons.title)
 
   const [name, setName] = useState<string>('')
@@ -74,9 +78,11 @@ const Initial: FC<InitialProps> = ({
   )
 
   const radii = extractFragments('radius', 'contentAddons', availableRadiiData)
+  // @ts-expect-error any type
   const radiiItems = radii.map((item) => item.contentAddons.title.toLowerCase())
 
   const repairTypes = extractFragments('service-item', 'servicesParams', servicesData)
+  // @ts-expect-error any type
   const repairTypeItems = repairTypes.map((item) => item.servicesParams.title)
 
   const isFormFilled =
@@ -105,7 +111,7 @@ const Initial: FC<InitialProps> = ({
   }
 
   const updateStatus = useCallback(
-    (success) => {
+    (success: IService) => {
       if (success) {
         screenVar(SUCCESS)
         serviceVar({ ...service, radius: '', serviceName: '' })
@@ -120,7 +126,7 @@ const Initial: FC<InitialProps> = ({
     }
   }, [data, submit, updateStatus])
 
-  const handleKeyPress = (event) => {
+  const handleKeyPress = (event: KeyboardEvent<HTMLElement>) => {
     const correctChars = ['+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
     if (correctChars.indexOf(event.key) === -1) {
@@ -191,7 +197,7 @@ const Initial: FC<InitialProps> = ({
       <Layout flexBasis={16} />
       <Layout display={['none', 'none', 'flex']}>
         <Switch active={selectedCarBody}>
-          {carBodyItems.map((item) => (
+          {carBodyItems.map((item: string) => (
             <Item value={item} onSelect={setSelectedCarBody}>
               {item}
             </Item>

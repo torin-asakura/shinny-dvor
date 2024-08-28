@@ -1,1 +1,1 @@
-export * from './invalid.component'
+export * from './invalid.component.js'

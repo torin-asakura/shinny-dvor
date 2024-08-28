@@ -1,15 +1,19 @@
-import styled                from '@emotion/styled'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import React                 from 'react'
+import type { WrapperProps }      from './wrapper.interfaces.js'
 
-import { Layout }            from '@ui/layout'
-import { Box }               from '@ui/layout'
+import styled                     from '@emotion/styled'
+import React                      from 'react'
 
-import { baseWrapperStyles } from './wrapper.styles'
+import { Layout }                 from '@ui/layout'
+import { Box }                    from '@ui/layout'
+
+import { baseWrapperStyles }      from './wrapper.styles.js'
 
 const DesktopWrapper = styled(Box)(baseWrapperStyles)
 
-const Wrapper = ({ children, active }) => (
+const Wrapper: FC<PropsWithChildren<WrapperProps>> = ({ children, active }) => (
   <>
     <Layout width={960} display={['none', 'none', 'flex']}>
       <DesktopWrapper active={active}>{children}</DesktopWrapper>

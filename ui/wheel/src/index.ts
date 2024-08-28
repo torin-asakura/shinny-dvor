@@ -1,1 +1,1 @@
-export * from './wheel.component'
+export * from './wheel.component.js'
