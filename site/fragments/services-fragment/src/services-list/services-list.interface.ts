@@ -1,4 +1,4 @@
-import type { ServicesParams } from '../services.interface.js'
+import type { ServicesParams } from '@globals/data'
 
 export interface ItemProps {
   services: Array<ServicesParams>
