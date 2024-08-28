@@ -1,52 +1,43 @@
-import type { IndexPageServerProps } from './index-page.interfaces.js'
 import type { SEOInt }               from '@globals/data'
 
-import { GET_PREVIEW }               from '@globals/data'
-import { runCarBodiesQuery }         from '@globals/data'
-import { getClient }                 from '@globals/data'
-import { runAvailableRadiiQuery }    from '@globals/data'
-import { runNavigationQuery }        from '@globals/data'
-import { runFragmentsQuery }         from '@globals/data'
-import { runContactsQuery }          from '@globals/data'
-import { runUiQuery }                from '@globals/data'
-import { runServicesQuery }          from '@globals/data'
-import { runPostsQuery }             from '@globals/data'
-import { runWorkResultsQuery }       from '@globals/data'
+import type { IndexPageServerProps } from './index-page.interfaces.js'
 
-import { GET_INDEX_SEO }             from './queries/index.js'
+import { getContactsData }           from '@globals/data'
+import { getServicesData }           from '@globals/data'
+import { getPostsData }              from '@globals/data'
+import { getWorkResultsData }        from '@globals/data'
+import { getUiData }                 from '@globals/data'
+import { getFragmentsData }          from '@globals/data'
+import { getNavigationData }         from '@globals/data'
+import { getAvailableRadiiData }     from '@globals/data'
+import { getCarBodiesData }          from '@globals/data'
+import { getSiteIndexPageSeoData }   from '@globals/data'
+import { getPagePreviewData }        from '@globals/data'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
-  const client = getClient()
-
   let SEO: SEOInt
 
-  const { data: seoData } = await client.query({
-    query: GET_INDEX_SEO,
-  })
-
-  const { data: previewData } = await client.query({
-    query: GET_PREVIEW,
-    variables: {
-      uri: '/cover/',
-    },
-  })
+  const seoData = await getSiteIndexPageSeoData()
+  const previewData = await getPagePreviewData()
 
   const ogCover = previewData?.mediaItemBy.sourceUrl
 
   if (seoData) {
     SEO = seoData.pageBy.seo
-  } else SEO = {}
+  } else {
+    SEO = {}
+  }
 
   const queryPromises: Array<Promise<any>> = [
-    runContactsQuery(),
-    runPostsQuery(),
-    runNavigationQuery(),
-    runAvailableRadiiQuery(),
-    runServicesQuery(),
-    runFragmentsQuery(),
-    runUiQuery(),
-    runWorkResultsQuery(),
-    runCarBodiesQuery(),
+    getContactsData(),
+    getPostsData(),
+    getNavigationData(),
+    getAvailableRadiiData(),
+    getServicesData(),
+    getFragmentsData(),
+    getUiData(),
+    getWorkResultsData(),
+    getCarBodiesData(),
   ]
 
   const retrievedData = await Promise.all(queryPromises)
