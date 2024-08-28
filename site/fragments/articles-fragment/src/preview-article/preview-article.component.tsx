@@ -1,18 +1,19 @@
-import React                   from 'react'
-import { FC }                  from 'react'
+import type { FC }                  from 'react'
 
-import { ImageBlock }          from '@ui/image'
-import { Box }                 from '@ui/layout'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Row }                 from '@ui/layout'
-import { Text }                from '@ui/text'
-import { TextEllipsis }        from '@ui/text'
-import { formattedDate }       from '@shared/utils'
-import { normalizeString }     from '@shared/utils'
-import { useHover }            from '@ui/utils'
+import type { PreviewArticleProps } from './preview-article.interface.js'
 
-import { PreviewArticleProps } from './preview-article.interface'
+import React                        from 'react'
+
+import { ImageBlock }               from '@ui/image'
+import { Box }                      from '@ui/layout'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Row }                      from '@ui/layout'
+import { Text }                     from '@ui/text'
+import { TextEllipsis }             from '@ui/text'
+import { formattedDate }            from '@shared/utils'
+import { normalizeString }          from '@shared/utils'
+import { useHover }                 from '@ui/utils'
 
 const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, featuredImage }) => {
   const [hover, hoverProps] = useHover()
