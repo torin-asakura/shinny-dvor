@@ -1421,6 +1421,8 @@ __metadata:
     "@atls/next-document-with-helmet": "npm:0.3.1"
     "@blog/index-page": "workspace:*"
     "@blog/post-page": "workspace:*"
+    "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/configs": "workspace:*"
@@ -1428,12 +1430,16 @@ __metadata:
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@types/react-helmet": "npm:6.1.11"
+    "@types/styled-system": "npm:^5"
     graphql: "npm:16.9.0"
     next: "npm:14.2.5"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
+    react-helmet: "npm:6.1.0"
     recompose: "npm:0.30.0"
-    typescript: "npm:5.2.2"
+    styled-system: "npm:5.1.5"
+    typescript: "npm:5.4.2"
   languageName: unknown
   linkType: soft
 
@@ -1443,11 +1449,13 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@types/dompurify": "npm:3.0.5"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@types/styled-system": "npm:^5"
     "@ui/button": "workspace:*"
     "@ui/carousel": "workspace:*"
     "@ui/condition": "workspace:*"
@@ -1458,17 +1466,22 @@ __metadata:
     "@ui/link": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/utils": "workspace:*"
+    graphql: "npm:16.9.0"
     next: "npm:14.2.5"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-intl: "npm:6.6.8"
+    styled-system: "npm:^5.1.5"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
+    "@emotion/styled": "*"
+    graphql: "*"
     next: "*"
     react: "*"
     react-dom: "*"
     react-intl: "*"
+    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -1478,22 +1491,28 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
+    "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
     "@fragments/footer-fragment": "workspace:*"
     "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-helmet": "npm:6.1.11"
+    "@types/styled-system": "npm:^5"
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
+    graphql: "npm:16.9.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:6.1.0"
     react-intl: "npm:6.6.8"
+    styled-system: "npm:^5.1.5"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    graphql: "*"
     react: "*"
     react-dom: "*"
     react-helmet: "*"
@@ -1508,18 +1527,23 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:3.11.3"
     "@blog/articles-fragment": "workspace:*"
+    "@emotion/react": "npm:11.13.0"
+    "@emotion/styled": "npm:11.13.0"
     "@fragments/footer-fragment": "workspace:*"
     "@fragments/navigation-fragment": "workspace:*"
     "@globals/data": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-helmet": "npm:6.1.11"
+    "@types/styled-system": "npm:^5"
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
+    graphql: "npm:16.9.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:6.1.0"
     react-intl: "npm:6.6.8"
+    styled-system: "npm:^5.1.5"
   peerDependencies:
     "@apollo/client": "*"
     "@emotion/react": "*"
@@ -2158,9 +2182,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@globals/configs@workspace:globals/configs"
   dependencies:
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
     next: "npm:14.2.5"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
   peerDependencies:
     next: "*"
+    react: "*"
+    react-dom: "*"
   languageName: unknown
   linkType: soft
 
@@ -15036,9 +15066,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/webpack": "npm:5.28.5"
-    eslint: "npm:8.57.0"
-    prettier: "npm:3.1.1"
-    typescript: "npm:5.2.2"
+    typescript: "npm:5.4.2"
   languageName: unknown
   linkType: soft
 
@@ -16085,16 +16113,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.2.2":
-  version: 5.2.2
-  resolution: "typescript@npm:5.2.2"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/d65e50eb849bd21ff8677e5b9447f9c6e74777e346afd67754934264dcbf4bd59e7d2473f6062d9a015d66bd573311166357e3eb07fea0b52859cf9bb2b58555
-  languageName: node
-  linkType: hard
-
 "typescript@npm:5.4.2":
   version: 5.4.2
   resolution: "typescript@npm:5.4.2"
@@ -16122,16 +16140,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/458f7220ab11e0fc191514cc41be1707645ec9a8c2d609448a448e18c522cef9646f58728f6811185a4c35613dacdf6c98cf8965c88b3541d0288c47291e4300
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>":
-  version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 10/f79cc2ba802c94c2b78dbb00d767a10adb67368ae764709737dc277273ec148aa4558033a03ce901406b35fddf4eac46dabc94a1e1d12d2587e2b9cfe5707b4a
   languageName: node
   linkType: hard
 
