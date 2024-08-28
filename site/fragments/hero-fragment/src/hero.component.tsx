@@ -33,15 +33,10 @@ const Hero = forwardRef((
 ) => {
   const [visible, setVisible] = useState<boolean>(false)
 
-  // @ts-expect-error never
   const leadObj = extractFragment('contentAddons', 'hero-title', fragmentsData)
-  // @ts-expect-error never
   const ctaObj = extractFragment('contentAddons', 'sign-up', fragmentsData)
-  // @ts-expect-error never
   const anchorObj = extractFragment('contentAddons', 'our-services', fragmentsData)
-  // @ts-expect-error never
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
-  // @ts-expect-error never
   const backgroundObj = extractFragment('contentAddons', 'hero', uiData)
 
   const title = new Map([
@@ -71,11 +66,11 @@ const Hero = forwardRef((
         />
       </Layer>
       <Box
-        ref={ref}
         maxWidth={['100%', '100%', 1440]}
         width='100%'
         height='100vh'
         justifyContent='center'
+        ref={ref}
       >
         <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock

@@ -1,1 +1,1 @@
-export * from './contacts.component.js'
+export * from './contacts.component'

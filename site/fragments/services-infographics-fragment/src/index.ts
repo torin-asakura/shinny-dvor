@@ -1,1 +1,1 @@
-export * from './services-infographics.component.js'
+export * from './services-infographics.component'

@@ -1,7 +1,5 @@
-import type { ServiceProps }    from './service.interface.js'
-import type { FC }              from 'react'
-
 import React                    from 'react'
+import { FC }                   from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 
@@ -23,13 +21,14 @@ import { Text }                 from '@ui/text'
 import { extractFragment }      from '@globals/data'
 import { serviceVar }           from '@store/services'
 
-import { AdditionalService }    from './additional-service/index.js'
-import { CarBodiesCarousel }    from './carousel/index.js'
-import { WorkExamplesCarousel } from './carousel/index.js'
-import { Radii }                from './radii/index.js'
-import { ReturnButton }         from './return-button/index.js'
-import { WorkExample }          from './work-example/index.js'
-import { carBodyConverter }     from './helpers/index.js'
+import { AdditionalService }    from './additional-service'
+import { CarBodiesCarousel }    from './carousel'
+import { WorkExamplesCarousel } from './carousel'
+import { Radii }                from './radii'
+import { ReturnButton }         from './return-button'
+import { ServiceProps }         from './service.interface'
+import { WorkExample }          from './work-example'
+import { carBodyConverter }     from './helpers'
 
 const Service: FC<ServiceProps> = ({
   servicesData,
@@ -51,12 +50,9 @@ const Service: FC<ServiceProps> = ({
       additionalservice,
     },
   } = serviceData
-
-  // @ts-expect-error not match
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
   const carBody = carBodyConverter(onCarBody)
 
-  // @ts-expect-error undefined
   const availableRadii = Object.entries(price)
     .filter((item: any) => item[1]?.[carBody] !== null)
     .map((item) => item[0])
@@ -76,16 +72,12 @@ const Service: FC<ServiceProps> = ({
 
   const workExamplesData = [
     {
-      // @ts-expect-error null undefined
       image: workexamples.firstexample.image,
-      // @ts-expect-error null undefined
       title: workexamples.firstexample.title,
       price,
     },
     {
-      // @ts-expect-error null undefined
       image: workexamples.secondexample.image,
-      // @ts-expect-error null undefined
       title: workexamples.secondexample.title,
       price,
     },
@@ -97,9 +89,7 @@ const Service: FC<ServiceProps> = ({
     // eslint-disable-next-line
   }, [onCarBody])
 
-  // @ts-expect-error null undefined
   const defaultPrice = price[Object.keys(price)[1]]?.passenger
-  // @ts-expect-error null undefined
   const servicePrice = price[radius]?.[carBody]
 
   return (
@@ -112,7 +102,6 @@ const Service: FC<ServiceProps> = ({
           carBodiesData={carBodiesData}
           servicesData={servicesData}
           navigationData={navigationData}
-          // @ts-expect-error null undefined
           additionalService={isAdditionalService ? additionalservice.title : ''}
         />
       </Layer>
@@ -139,14 +128,11 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
                 <Switch active={onCarBody}>
-                  {
-                    // @ts-expect-error null undefined
-                    carBodies.map((item: string) => (
-                      <Item key={item} value={item} onSelect={setOnCarBody}>
-                        {item}
-                      </Item>
-                    ))
-                  }
+                  {carBodies.map((item) => (
+                    <Item key={item} value={item} onSelect={setOnCarBody}>
+                      {item}
+                    </Item>
+                  ))}
                 </Switch>
               </Layout>
               <Layout flexBasis={24} />
@@ -158,36 +144,33 @@ const Service: FC<ServiceProps> = ({
                 display={['flex', 'flex', 'none']}
               >
                 <CarBodiesCarousel>
-                  {
-                    // @ts-expect-error null undefined
-                    carBodies.map((item: string) => (
-                      <Box
-                        key={item}
-                        width='100%'
+                  {carBodies.map((item) => (
+                    <Box
+                      key={item}
+                      width='100%'
+                      height='100%'
+                      alignItems='center'
+                      justifyContent='center'
+                      borderRadius='small'
+                      backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
+                    >
+                      <Button
+                        color='transparent'
+                        size='small'
                         height='100%'
-                        alignItems='center'
-                        justifyContent='center'
-                        borderRadius='small'
-                        backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
+                        width='100%'
+                        onClick={() => setOnCarBody(item)}
                       >
-                        <Button
-                          color='transparent'
-                          size='small'
-                          height='100%'
-                          width='100%'
-                          onClick={() => setOnCarBody(item)}
+                        <Text
+                          color={onCarBody === item ? 'white' : 'black'}
+                          fontWeight='bold'
+                          fontSize='small'
                         >
-                          <Text
-                            color={onCarBody === item ? 'white' : 'black'}
-                            fontWeight='bold'
-                            fontSize='small'
-                          >
-                            {item}
-                          </Text>
-                        </Button>
-                      </Box>
-                    ))
-                  }
+                          {item}
+                        </Text>
+                      </Button>
+                    </Box>
+                  ))}
                 </CarBodiesCarousel>
               </Box>
               <Layout flexBasis={[24, 24, 0]} />
@@ -209,7 +192,7 @@ const Service: FC<ServiceProps> = ({
               </Text>
               <Layout flexBasis={24} />
               <Column justifyContent='center'>
-                <Condition match={Boolean(addon)}>
+                <Condition match={addon}>
                   <Box
                     height={28}
                     backgroundColor='lightGray'
@@ -226,14 +209,11 @@ const Service: FC<ServiceProps> = ({
             <Layout flexBasis={24} />
             <Layout>
               <Column fill>
-                {
-                  // @ts-expect-error null undefined
-                  description.split('|n|').map((item: string) => (
-                    <Text key={item} lineHeight='medium'>
-                      {item}
-                    </Text>
-                  ))
-                }
+                {description.split('|n|').map((item) => (
+                  <Text key={item} lineHeight='medium'>
+                    {item}
+                  </Text>
+                ))}
               </Column>
             </Layout>
             <Condition match={variant === 'tertiary'}>
@@ -250,13 +230,7 @@ const Service: FC<ServiceProps> = ({
                   >
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <React.Fragment key={title}>
-                        <WorkExample
-                          // @ts-expect-error null undefined
-                          image={image}
-                          // @ts-expect-error null undefined
-                          title={title}
-                          price={defaultPrice}
-                        />
+                        <WorkExample image={image} title={title} price={defaultPrice} />
                         <Condition match={index === 0}>
                           <Layout flexBasis={16} flexShrink={0} />
                         </Condition>
@@ -270,13 +244,7 @@ const Service: FC<ServiceProps> = ({
                   <WorkExamplesCarousel>
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <React.Fragment key={title}>
-                        <WorkExample
-                          // @ts-expect-error null undefined
-                          image={image}
-                          // @ts-expect-error null undefined
-                          title={title}
-                          price={defaultPrice}
-                        />
+                        <WorkExample image={image} title={title} price={defaultPrice} />
                         <Condition match={index === 0}>
                           <Layout flexBasis={32} flexShrink={0} />
                         </Condition>
@@ -286,15 +254,11 @@ const Service: FC<ServiceProps> = ({
                 </Accordion>
               </Row>
             </Condition>
-            <Condition
-              // @ts-expect-error null undefined
-              match={variant === 'primary' && additionalservice.title !== null}
-            >
+            <Condition match={variant === 'primary' && additionalservice.title !== null}>
               <Layout flexBasis={24} />
               <AdditionalService
                 isAdditionalService={isAdditionalService}
                 setIsAdditionalService={setIsAdditionalService}
-                // @ts-expect-error undefined
                 additionalservice={additionalservice}
               />
             </Condition>
@@ -303,7 +267,6 @@ const Service: FC<ServiceProps> = ({
               <Button
                 onClick={() => {
                   setVisible(true)
-                  // @ts-expect-error undefined type types
                   serviceVar({ radius, carBody: onCarBody, serviceName })
                 }}
               >

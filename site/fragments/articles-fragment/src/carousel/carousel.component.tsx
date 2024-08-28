@@ -1,24 +1,63 @@
-import type { FC }                from 'react'
-import type { PropsWithChildren } from 'react'
+import React           from 'react'
+import { FC }          from 'react'
 
-import React                      from 'react'
+import { Layout }      from '@ui/layout'
+import { useCarousel } from '@ui/carousel'
 
-import { Layout }                 from '@ui/layout'
+const Desktop: FC = ({ children }) => {
+  const { carousel } = useCarousel({
+    children,
+    slidesPerView: 3,
+    spaceBetween: 32,
+    centered: false,
+    height: 397,
+    width: 1279,
+    loop: false,
+  })
 
-import { DesktopCarousel }        from './desktop-carousel/index.js'
-import { MobileCarousel }         from './mobile-carousel/index.js'
-import { TabletCarousel }         from './tablet-carousel/index.js'
+  return carousel
+}
 
-export const Carousel: FC<PropsWithChildren> = ({ children }) => (
+const Tablet: FC = ({ children }) => {
+  const { carousel } = useCarousel({
+    children,
+    slidesPerView: 2,
+    spaceBetween: 0,
+    centered: true,
+    height: 333,
+    width: 700,
+    loop: true,
+  })
+
+  return carousel
+}
+
+const Mobile: FC = ({ children }) => {
+  const { carousel } = useCarousel({
+    children,
+    slidesPerView: 2,
+    spaceBetween: 290,
+    centered: true,
+    height: 333,
+    width: 355,
+    loop: true,
+  })
+
+  return carousel
+}
+
+const Carousel: FC = ({ children }) => (
   <>
     <Layout overflow='hidden' display={['none', 'none', 'flex']}>
-      <DesktopCarousel>{children}</DesktopCarousel>
+      <Desktop>{children}</Desktop>
     </Layout>
     <Layout display={['none', 'flex', 'none']}>
-      <TabletCarousel>{children}</TabletCarousel>
+      <Tablet>{children}</Tablet>
     </Layout>
     <Layout display={['flex', 'none', 'none']}>
-      <MobileCarousel>{children}</MobileCarousel>
+      <Mobile>{children}</Mobile>
     </Layout>
   </>
 )
+
+export { Carousel }

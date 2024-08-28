@@ -1,40 +1,36 @@
 {
   "name": "@site/hero-fragment",
   "version": "0.0.1",
-  "license": "BSD-3-Clause",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "main": "src/index.ts",
   "dependencies": {
-    "@fragments/booking-fragment": "workspace:*",
-    "@globals/data": "workspace:*",
-    "@store/actions": "workspace:*",
-    "@store/booking": "workspace:*",
-    "@ui/button": "workspace:*",
-    "@ui/condition": "workspace:*",
-    "@ui/divider": "workspace:*",
-    "@ui/icons": "workspace:*",
-    "@ui/image": "workspace:*",
-    "@ui/layer": "workspace:*",
-    "@ui/layout": "workspace:*",
-    "@ui/link": "workspace:*",
-    "@ui/social-links": "workspace:*",
-    "@ui/text": "workspace:*"
+    "@emotion/react": "^11.6.0",
+    "@fragments/booking-fragment": "workspace:0.0.1",
+    "@globals/data": "workspace:0.0.1",
+    "@store/actions": "workspace:0.0.1",
+    "@store/booking": "workspace:0.0.1",
+    "@ui/button": "workspace:0.0.1",
+    "@ui/condition": "workspace:0.0.1",
+    "@ui/divider": "workspace:0.0.1",
+    "@ui/icons": "workspace:0.0.1",
+    "@ui/image": "workspace:0.0.1",
+    "@ui/layer": "workspace:0.0.1",
+    "@ui/layout": "workspace:0.0.1",
+    "@ui/link": "workspace:0.0.1",
+    "@ui/social-links": "workspace:0.0.1",
+    "@ui/text": "workspace:0.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@apollo/client": "3.11.3",
-    "@emotion/react": "11.13.0",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@apollo/client": "^3.6.9",
+    "@types/react": "^17",
+    "@types/react-dom": "^17"
   },
   "peerDependencies": {
     "@apollo/client": "*",
     "@emotion/react": "*",
     "@emotion/styled": "*",
+    "next": "*",
     "react": "*",
     "react-dom": "*"
   }
