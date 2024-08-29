@@ -2,7 +2,7 @@ import * as Sentry             from '@sentry/node'
 
 import { Logger }              from '@atls/logger'
 
-import cron                    from 'node-cron'
+import { CronJob }             from 'cron'
 
 import { API_URL }             from './http/index.js'
 import { GOODS_LIST_PATH }     from './http/index.js'
@@ -63,7 +63,7 @@ const bootstrap = async () => {
   if (goodsData.length && goodsCategoryData.length) generateXml(goodsData, goodsCategoryData)
 }
 
-const task = cron.schedule('0 0 * * 0', () => {
+const task = new CronJob('0 0 * * 0', () => {
   logger.info('task started')
 
   bootstrap()
