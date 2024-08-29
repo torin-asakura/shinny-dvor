@@ -13,10 +13,18 @@
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
-  "devDependencies": {
+  "dependencies": {
     "@apollo/client": "3.11.3",
     "@atls/next-document-with-gtag": "0.1.1",
     "@atls/next-document-with-helmet": "0.3.1",
+    "graphql": "16.9.0",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "6.1.0",
+    "recompose": "0.30.0"
+  },
+  "devDependencies": {
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
     "@globals/configs": "workspace:*",
@@ -28,11 +36,10 @@
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "graphql": "16.9.0",
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "recompose": "0.30.0",
-    "typescript": "5.2.2"
+    "@types/react-helmet": "6.1.11",
+    "typescript": "5.4.2"
+  },
+  "peerDependencies": {
+    "react-helmet": "*"
   }
 }
