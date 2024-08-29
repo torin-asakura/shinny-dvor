@@ -367,7 +367,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", null],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/subscriptions-transport-ws", null],\
-          ["@types/zen-observable", "npm:0.8.7"],\
           ["@wry/caches", "npm:1.0.1"],\
           ["@wry/equality", "npm:0.5.7"],\
           ["@wry/trie", "npm:0.5.0"],\
@@ -411,7 +410,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", null],\
           ["@types/react-dom", null],\
           ["@types/subscriptions-transport-ws", null],\
-          ["@types/zen-observable", "npm:0.8.7"],\
           ["@wry/caches", "npm:1.0.1"],\
           ["@wry/equality", "npm:0.5.7"],\
           ["@wry/trie", "npm:0.5.0"],\
@@ -455,7 +453,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/subscriptions-transport-ws", null],\
-          ["@types/zen-observable", "npm:0.8.7"],\
           ["@wry/caches", "npm:1.0.1"],\
           ["@wry/equality", "npm:0.5.7"],\
           ["@wry/trie", "npm:0.5.0"],\
@@ -499,7 +496,6 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/subscriptions-transport-ws", null],\
-          ["@types/zen-observable", "npm:0.8.7"],\
           ["@wry/caches", "npm:1.0.1"],\
           ["@wry/equality", "npm:0.5.7"],\
           ["@wry/trie", "npm:0.5.0"],\
@@ -10572,15 +10568,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-yargs-parser-npm-21.0.3-1d265246a1-a794eb750e.zip/node_modules/@types/yargs-parser/",\
         "packageDependencies": [\
           ["@types/yargs-parser", "npm:21.0.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["@types/zen-observable", [\
-      ["npm:0.8.7", {\
-        "packageLocation": "./.yarn/cache/@types-zen-observable-npm-0.8.7-a758e68cc1-6d4cdccded.zip/node_modules/@types/zen-observable/",\
-        "packageDependencies": [\
-          ["@types/zen-observable", "npm:0.8.7"]\
         ],\
         "linkType": "HARD"\
       }]\
