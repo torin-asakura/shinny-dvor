@@ -2,7 +2,7 @@
   "name": "@prices/service-entrypoint",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
-  "type": "commonjs",
+  "type": "module",
   "exports": {
     ".": "./src/index.ts"
   },
