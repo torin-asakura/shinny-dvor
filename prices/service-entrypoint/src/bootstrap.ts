@@ -1,12 +1,14 @@
 import * as Sentry             from '@sentry/node'
+
 import { Logger }              from '@atls/logger'
+
 import cron                    from 'node-cron'
 
-import { API_URL }             from './http'
-import { GOODS_LIST_PATH }     from './http'
-import { GOODS_CATEGORY_PATH } from './http'
-import { generateXml }         from './generator'
-import { fetchData }           from './http'
+import { API_URL }             from './http/index.js'
+import { GOODS_LIST_PATH }     from './http/index.js'
+import { GOODS_CATEGORY_PATH } from './http/index.js'
+import { generateXml }         from './generator/index.js'
+import { fetchData }           from './http/index.js'
 
 const logger = new Logger('Bootstrap')
 
@@ -32,6 +34,7 @@ const bootstrap = async () => {
 
   const formattedGoodsData = retrievedData
     .map((item) =>
+      // @ts-expect-error any
       item.rows.map(({ id, group_id, name, price }) => ({
         id,
         group_id,
@@ -41,12 +44,16 @@ const bootstrap = async () => {
     .flat()
 
   const formattedGoodsCategoryData = jsonGoodsCategoryData
+    // @ts-expect-error any
     .filter((item) => !item.children.length)
+    // @ts-expect-error any
     .map(({ id, name }) => ({ id, name }))
     .flat()
 
   const formattedGoodsCategoryDataDeep = jsonGoodsCategoryData
+    // @ts-expect-error any
     .filter((category) => category.children.length)
+    // @ts-expect-error any
     .map((item) => item.children.map(({ id, name }) => ({ id, name })))
     .flat()
 

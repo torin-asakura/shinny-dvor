@@ -1,1 +1,1 @@
-export * from './generate-xml'
+export * from './generate-xml.js'
