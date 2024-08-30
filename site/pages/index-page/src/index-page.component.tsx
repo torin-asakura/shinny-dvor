@@ -1,19 +1,23 @@
-'use client'
-
 import type { IndexPageProps }     from './index-page.interfaces.js'
+import type { FC }                 from 'react'
 
 import React                       from 'react'
 
-import { getSiteIndexPageSeoData } from '@globals/data'
+import { GET_SITE_INDEX_PAGE_SEO } from '@globals/data'
+import { getServerClient }         from '@globals/data'
 
-import { IndexPageClient }         from './index-page.client.js'
-import { IndexPageServer }         from './index-page.server.js'
+const IndexPage: FC<IndexPageProps> = async () => {
+  const client = getServerClient()
 
-const IndexPage: IndexPageProps = () => {
-  const seoData = getSiteIndexPageSeoData()
-  console.log(seoData)
+  const { data } = await client.query({
+    query: GET_SITE_INDEX_PAGE_SEO,
+    // context,
+  })
+
+  console.log(data)
+  // const seoData = getSiteIndexPageSeoData()
   // const indexPageData = await IndexPageServer()
-  return <IndexPageClient {...indexPageData} />
+  // return <IndexPageClient {...indexPageData} />
 }
 
 export default IndexPage
