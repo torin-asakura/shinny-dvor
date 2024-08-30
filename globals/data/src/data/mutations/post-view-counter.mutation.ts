@@ -1,5 +1,3 @@
-// TODO devide into hooks and query
-
 import { gql }         from '@apollo/client'
 import { useMutation } from '@apollo/client'
 

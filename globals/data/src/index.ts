@@ -1,6 +1,4 @@
+export * from './queries/index.js'
 export * from './data/index.js'
 export * from './helpers/index.js'
-export * from './interfaces/index.js'
-export * from './queries/index.js'
-export * from './getters/index.js'
 export * from './apollo/index.js'

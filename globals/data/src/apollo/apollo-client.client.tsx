@@ -7,7 +7,6 @@ import { HttpLink }               from '@apollo/client'
 import { ApolloClient }           from '@apollo/experimental-nextjs-app-support'
 import { ApolloNextAppProvider }  from '@apollo/experimental-nextjs-app-support'
 import { InMemoryCache }          from '@apollo/experimental-nextjs-app-support'
-
 import React                      from 'react'
 
 import { isServerSide }           from './apollo.constants.js'
