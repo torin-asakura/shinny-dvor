@@ -18,4 +18,3 @@ const { getClient, PreloadQuery } = registerApolloClient(
 )
 
 export { getClient as getServerClient }
-export { PreloadQuery }
