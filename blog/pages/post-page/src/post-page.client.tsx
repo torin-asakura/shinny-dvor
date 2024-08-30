@@ -1,7 +1,8 @@
 'use client'
 
-import type { PostPageClientProps } from './post-page.interfaces.js'
 import type { FC }                  from 'react'
+
+import type { PostPageClientProps } from './post-page.interfaces.js'
 
 import React                        from 'react'
 

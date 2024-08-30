@@ -1,6 +1,7 @@
-import type { PostPageServerProps } from './post-page.interfaces.js'
 import type { DataInt }             from '@globals/data'
 import type { SEOInt }              from '@globals/data'
+
+import type { PostPageServerProps } from './post-page.interfaces.js'
 
 import { getAvailableRadiiData }    from '@globals/data'
 import { getCarBodiesData }         from '@globals/data'
