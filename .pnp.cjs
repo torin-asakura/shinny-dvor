@@ -326,6 +326,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/webpack", "npm:5.28.5"],\
+          ["prettier", "npm:3.3.3"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"]\
         ],\
         "linkType": "SOFT"\
@@ -7689,7 +7690,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:22.1.0"],\
           ["@types/node-cron", "npm:3.0.11"],\
           ["aws-sdk", "npm:2.1667.0"],\
-          ["node-cron", "npm:3.0.3"],\
+          ["cron", "npm:3.1.7"],\
           ["node-fetch", "npm:3.3.2"],\
           ["xml-js", "npm:1.6.11"]\
         ],\
@@ -14715,6 +14716,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["cron", [\
+      ["npm:3.1.7", {\
+        "packageLocation": "../.yarn/berry/cache/cron-npm-3.1.7-e31150a197-10.zip/node_modules/cron/",\
+        "packageDependencies": [\
+          ["cron", "npm:3.1.7"],\
+          ["@types/luxon", "npm:3.4.2"],\
+          ["luxon", "npm:3.4.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["cross-fetch", [\
       ["npm:3.1.8", {\
         "packageLocation": "../.yarn/berry/cache/cross-fetch-npm-3.1.8-71c3c05709-10.zip/node_modules/cross-fetch/",\
@@ -19101,6 +19113,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["luxon", [\
+      ["npm:3.4.4", {\
+        "packageLocation": "../.yarn/berry/cache/luxon-npm-3.4.4-c93f95dde8-10.zip/node_modules/luxon/",\
+        "packageDependencies": [\
+          ["luxon", "npm:3.4.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:3.5.0", {\
         "packageLocation": "../.yarn/berry/cache/luxon-npm-3.5.0-92bb977f7f-10.zip/node_modules/luxon/",\
         "packageDependencies": [\
@@ -19565,16 +19584,6 @@ const RAW_RUNTIME_STATE =
           ["no-case", "npm:3.0.4"],\
           ["lower-case", "npm:2.0.2"],\
           ["tslib", "npm:2.7.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["node-cron", [\
-      ["npm:3.0.3", {\
-        "packageLocation": "../.yarn/berry/cache/node-cron-npm-3.0.3-fd539f5b81-10.zip/node_modules/node-cron/",\
-        "packageDependencies": [\
-          ["node-cron", "npm:3.0.3"],\
-          ["uuid", "npm:8.3.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21637,6 +21646,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/webpack", "npm:5.28.5"],\
+          ["prettier", "npm:3.3.3"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"]\
         ],\
         "linkType": "SOFT"\
@@ -23072,13 +23082,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/uuid-npm-8.0.0-591e3a2e23-10.zip/node_modules/uuid/",\
         "packageDependencies": [\
           ["uuid", "npm:8.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.3.2", {\
-        "packageLocation": "../.yarn/berry/cache/uuid-npm-8.3.2-eca0baba53-10.zip/node_modules/uuid/",\
-        "packageDependencies": [\
-          ["uuid", "npm:8.3.2"]\
         ],\
         "linkType": "HARD"\
       }],\

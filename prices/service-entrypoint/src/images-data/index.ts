@@ -1,1 +1,1 @@
-export * from './images-data'
+export * from './images-data.js'

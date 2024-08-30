@@ -1,12 +1,15 @@
 import { Logger }     from '@atls/logger'
-import { js2xml }     from 'xml-js'
+
 import AWS            from 'aws-sdk'
+import { js2xml }     from 'xml-js'
 
-import { imagesData } from '../images-data'
+import { imagesData } from '../images-data/index.js'
 
+// @ts-expect-error any
 const generateXml = (goodsData, goodsCategoryData) => {
   const logger = new Logger('XML-Generator')
 
+  // @ts-expect-error any
   const category = goodsCategoryData.map(({ id, name }) => ({
     _attributes: {
       id,
@@ -14,6 +17,7 @@ const generateXml = (goodsData, goodsCategoryData) => {
     _text: name,
   }))
 
+  // @ts-expect-error any
   const offer = goodsData.map(({ id, group_id, name, price }) => ({
     _attributes: {
       id,
