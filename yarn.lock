@@ -2036,6 +2036,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@globals/constants@workspace:*, @globals/constants@workspace:globals/constants":
+  version: 0.0.0-use.local
+  resolution: "@globals/constants@workspace:globals/constants"
+  languageName: unknown
+  linkType: soft
+
 "@globals/data@workspace:*, @globals/data@workspace:globals/data":
   version: 0.0.0-use.local
   resolution: "@globals/data@workspace:globals/data"
@@ -2055,6 +2061,7 @@ __metadata:
     react-dom: "npm:18.3.1"
   peerDependencies:
     "@apollo/client": "*"
+    "@apollo/experimental-nextjs-app-support": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
@@ -4355,6 +4362,7 @@ __metadata:
     "@emotion/styled": "npm:11.13.0"
     "@fragments/footer-fragment": "workspace:*"
     "@fragments/navigation-fragment": "workspace:*"
+    "@globals/constants": "workspace:*"
     "@globals/data": "workspace:*"
     "@site/articles-fragment": "workspace:*"
     "@site/hero-fragment": "workspace:*"
