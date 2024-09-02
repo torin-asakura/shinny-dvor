@@ -27,6 +27,7 @@
   },
   "peerDependencies": {
     "@apollo/client": "*",
+    "@apollo/experimental-nextjs-app-support": "*",
     "graphql": "*",
     "react": "*",
     "react-dom": "*"
