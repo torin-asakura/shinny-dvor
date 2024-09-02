@@ -3,7 +3,7 @@ import { ApolloClient }         from '@apollo/experimental-nextjs-app-support'
 import { InMemoryCache }        from '@apollo/experimental-nextjs-app-support'
 import { registerApolloClient } from '@apollo/experimental-nextjs-app-support'
 
-import { serverUri }            from './apollo.constants.js'
+import { GRAPHQL_API_URL }      from './apollo.constants.js'
 
 const { getClient, PreloadQuery } = registerApolloClient(
   () =>
@@ -11,10 +11,11 @@ const { getClient, PreloadQuery } = registerApolloClient(
       cache: new InMemoryCache(),
       connectToDevTools: true,
       link: new HttpLink({
-        uri: serverUri,
+        uri: GRAPHQL_API_URL,
         credentials: 'include',
       }),
     })
 )
 
 export { getClient as getServerClient }
+export { PreloadQuery }

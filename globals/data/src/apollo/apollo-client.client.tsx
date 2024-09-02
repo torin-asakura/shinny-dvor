@@ -7,15 +7,14 @@ import { HttpLink }               from '@apollo/client'
 import { ApolloClient }           from '@apollo/experimental-nextjs-app-support'
 import { ApolloNextAppProvider }  from '@apollo/experimental-nextjs-app-support'
 import { InMemoryCache }          from '@apollo/experimental-nextjs-app-support'
+
 import React                      from 'react'
 
-import { isServerSide }           from './apollo.constants.js'
-import { serverUri }              from './apollo.constants.js'
-import { clientUri }              from './apollo.constants.js'
+import { GRAPHQL_API_URL }        from './apollo.constants.js'
 
 export const makeClient = () => {
   const httpLink = new HttpLink({
-    uri: isServerSide ? serverUri : clientUri,
+    uri: GRAPHQL_API_URL,
     credentials: 'include',
     fetchOptions: { cache: 'force-cache' },
   })
