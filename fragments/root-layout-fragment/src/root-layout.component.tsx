@@ -1,18 +1,15 @@
-'use client'
+import React                   from 'react'
+import { FC }                  from 'react'
+import { Suspense }            from 'react'
+import { PropsWithChildren }   from 'react'
+import { memo }                from 'react'
 
-import { FC }                from 'react'
-import { Suspense }          from 'react'
-import { PropsWithChildren } from 'react'
-import { IntlProvider }      from 'react-intl'
-import { memo }              from 'react'
-import React                 from 'react'
+import { ApolloWrapper }       from '@globals/data'
+import { Gtag }                from '@ui/gtag'
 
-import { ApolloWrapper }     from '@globals/data'
-import { Gtag }              from '@ui/gtag'
-import { ThemeProvider }     from '@ui/theme'
-
-import { NavigationEvents }  from './hooks/index.js'
-import { RootLayoutProps }   from './root-layout.interfaces.js'
+import { NavigationEvents }    from './hooks/index.js'
+import { RootLayoutProps }     from './root-layout.interfaces.js'
+import { RoolLayoutProviders } from './root-layout.providers.js'
 
 export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ children, messages }) => {
   const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'
@@ -21,14 +18,12 @@ export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ childr
     <html>
       <body>
         <ApolloWrapper>
-          <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
-            <ThemeProvider>
-              {children}
-              <Suspense fallback={null}>
-                <NavigationEvents />
-              </Suspense>
-            </ThemeProvider>
-          </IntlProvider>
+          <RoolLayoutProviders messages={messages}>
+            {children}
+            <Suspense fallback={null}>
+              <NavigationEvents />
+            </Suspense>
+          </RoolLayoutProviders>
         </ApolloWrapper>
         <Gtag gaTrackingId={gaTrackingId} />
       </body>
