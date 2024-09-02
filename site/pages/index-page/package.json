@@ -10,6 +10,7 @@
   "dependencies": {
     "@fragments/footer-fragment": "workspace:*",
     "@fragments/navigation-fragment": "workspace:*",
+    "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/articles-fragment": "workspace:*",
     "@site/hero-fragment": "workspace:*",
