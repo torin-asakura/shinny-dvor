@@ -1,5 +1,8 @@
 export * from './get-site-index-page-seo-data/index.js'
 export * from './get-site-contacts-page-seo-data/index.js'
+export * from './get-site-services-page-seo-data/index.js'
+export * from './get-site-service-page-seo-data/index.js'
+export * from './get-service-by-data/index.js'
 
 export * from './get-page-preview-data/index.js'
 export * from './get-contacts-data/index.js'
