@@ -29,24 +29,18 @@ import { getCarBodiesData }          from '@globals/data'
 import { Seo }                       from './seo.component.js'
 import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
-export const IndexPageClient: FC<IndexPageClientProps> = ({ seoData, ogCover }) => {
-  const { navigation: navigationData } = getNavigationData()
-  const { fragments: fragmentsData } = getFragmentsData()
-  const { contacts: contactsData } = getContactsData()
-  const { posts: blogPostsData } = getBlogPostsData()
-  const { availableRadii: availableRadiiData } = getAvailableRadiiData()
-  const { services: servicesData } = getServicesData()
-  const { ui: uiData } = getUiData()
-  const { workResults: workResultsData } = getWorkResultsData()
-  const { carBodies: carBodiesData } = getCarBodiesData()
+export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) => {
+  const { seoData, ogCover } = serverQueryData
 
-  console.log(contactsData)
-  console.log(blogPostsData)
-  console.log(availableRadiiData)
-  console.log(servicesData)
-  console.log(uiData)
-  console.log(workResultsData)
-  console.log(carBodiesData)
+  const { navigation } = getNavigationData()
+  const { fragments } = getFragmentsData()
+  const { contacts } = getContactsData()
+  const { posts } = getBlogPostsData()
+  const { availableRadii } = getAvailableRadiiData()
+  const { services } = getServicesData()
+  const { ui } = getUiData()
+  const { workResults } = getWorkResultsData()
+  const { carBodies } = getCarBodiesData()
 
   const headerRef = useRef<HTMLDivElement | null>(null)
   const isLoaded = useRef<boolean>(false)
@@ -63,48 +57,48 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ seoData, ogCover }) 
           <Seo ogCover={ogCover} SEO={seoData} />
           <Navigation
             active={active}
-            navigationData={navigationData}
-            availableRadiiData={availableRadiiData}
-            fragmentsData={fragmentsData}
-            carBodiesData={carBodiesData}
-            servicesData={servicesData}
+            navigationData={navigation}
+            availableRadiiData={availableRadii}
+            fragmentsData={fragments}
+            carBodiesData={carBodies}
+            servicesData={services}
             scrollY={scrollY}
           />
           <Hero
-            fragmentsData={fragmentsData}
-            uiData={uiData}
-            contactsData={contactsData}
-            availableRadiiData={availableRadiiData}
-            carBodiesData={carBodiesData}
-            servicesData={servicesData}
-            navigationData={navigationData}
+            fragmentsData={fragments}
+            uiData={ui}
+            contactsData={contacts}
+            availableRadiiData={availableRadii}
+            carBodiesData={carBodies}
+            servicesData={services}
+            navigationData={navigation}
             {...getObserverOptions('hero')}
           />
         </Column>
       </Box>
       <Services
-        servicesData={servicesData}
-        fragmentsData={fragmentsData}
-        availableRadiiData={availableRadiiData}
+        servicesData={services}
+        fragmentsData={fragments}
+        availableRadiiData={availableRadii}
         {...getObserverOptions('services')}
       />
       <Articles
-        postsData={blogPostsData}
-        fragmentsData={fragmentsData}
-        navigationData={navigationData}
+        postsData={posts}
+        fragmentsData={fragments}
+        navigationData={navigation}
         {...getObserverOptions('articles')}
       />
       <ServicesInfographics
-        uiData={uiData}
-        fragmentsData={fragmentsData}
+        uiData={ui}
+        fragmentsData={fragments}
         {...getObserverOptions('infographics')}
       />
       <WorksExamples
-        workResultsData={workResultsData}
-        fragmentsData={fragmentsData}
+        workResultsData={workResults}
+        fragmentsData={fragments}
         {...getObserverOptions('works-examples')}
       />
-      <Footer fragmentsData={fragmentsData} contactsData={contactsData} />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )
 }
