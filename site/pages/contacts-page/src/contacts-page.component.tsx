@@ -1,13 +1,13 @@
-import type { ContactsPageProps } from './contacts-page.interfaces.js'
+import type { ContactsPageProps }       from './contacts-page.interfaces.js'
 
-import React                      from 'react'
+import React                            from 'react'
 
-import { ContactsPageClient }     from './contacts-page.client.js'
-import { ContactsPageServer }     from './contacts-page.server.js'
+import { ContactsPageClient }           from './contacts-page.client.js'
+import { runContactsPageServerQueries } from './hooks/index.js'
 
 const ContactsPage: ContactsPageProps = async () => {
-  const contactsPageData = await ContactsPageServer()
-  return <ContactsPageClient {...contactsPageData} />
+  const serverQueryData = await runContactsPageServerQueries()
+  return <ContactsPageClient serverQueryData={serverQueryData} />
 }
 
 export default ContactsPage
