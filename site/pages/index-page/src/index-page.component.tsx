@@ -1,26 +1,18 @@
-import type { IndexPageProps }     from './index-page.interfaces.js'
-import type { FC }                 from 'react'
+import type { IndexPageProps }       from './index-page.interfaces.js'
+import type { FC }                   from 'react'
 
-import React                       from 'react'
-import { memo }                    from 'react'
+import React                         from 'react'
+import { memo }                      from 'react'
 
-import { PreloadQuery }            from '@globals/data'
-import { GET_SITE_INDEX_PAGE_SEO } from '@globals/data'
-
-import { IndexPageClient }         from './index-page.client.js'
-import { IndexPageServer }         from './index-page.server.js'
+import { IndexPageClient }           from './index-page.client.js'
+import { runIndexPageServerQueries } from './hooks/run-index-page-server-queries.hook.js'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
 const IndexPage: FC<IndexPageProps> = async () => {
-  await IndexPageServer()
-  // return <IndexPageClient {...indexPageData} />
-  return (
-    <>
-      <IndexPageClient />
-    </>
-  )
+  await runIndexPageServerQueries()
+  return <IndexPageClient />
 }
 
 export default memo(IndexPage)
