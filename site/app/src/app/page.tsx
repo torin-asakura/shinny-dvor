@@ -25,16 +25,7 @@ const Page = async () => {
   console.log('server data:')
   console.log(data)
 
-  return (
-    <PreloadQuery
-      query={GET_SITE_INDEX_PAGE_SEO}
-      variables={{
-        foo: 1,
-      }}
-    >
-      <ClientChild />
-    </PreloadQuery>
-  )
+  return <ClientChild />
 }
 
 export default Page
