@@ -1,8 +1,7 @@
 'use client'
 
-import type { FC }                      from 'react'
-
 import type { ServicesPageClientProps } from './services-page.interface.js'
+import type { FC }                      from 'react'
 
 import React                            from 'react'
 
@@ -10,17 +9,28 @@ import { Footer }                       from '@fragments/footer-fragment'
 import { Navigation }                   from '@fragments/navigation-fragment'
 import { AllServices }                  from '@site/all-services-fragment'
 import { Column }                       from '@ui/layout'
+import { getAvailableRadiiData }        from '@globals/data'
+import { getCarBodiesData }             from '@globals/data'
+import { getContactsData }              from '@globals/data'
+import { getFragmentsData }             from '@globals/data'
+import { getNavigationData }            from '@globals/data'
+import { getServicesData }              from '@globals/data'
 
 import { Seo }                          from './seo.component.js'
 
-export const ServicesPageClient: FC<ServicesPageClientProps> = (props) => {
-  const { SEO, ogCover, data } = props
+export const ServicesPageClient: FC<ServicesPageClientProps> = ({ serverQueryData }) => {
+  const { seoData, ogCover } = serverQueryData
 
-  const { fragments, contacts, navigation, availableRadii, services, carBodies } = data
+  const { fragments } = getFragmentsData()
+  const { contacts } = getContactsData()
+  const { navigation } = getNavigationData()
+  const { availableRadii } = getAvailableRadiiData()
+  const { services } = getServicesData()
+  const { carBodies } = getCarBodiesData()
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo SEO={SEO} ogCover={ogCover} />
+      <Seo SEO={seoData} ogCover={ogCover} />
       <Navigation
         active={2}
         navigationData={navigation}
