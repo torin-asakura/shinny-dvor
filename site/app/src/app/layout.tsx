@@ -1,16 +1,11 @@
-import type { FC }                      from 'react'
-import type { PropsWithChildren }       from 'react'
+import { ApolloWrapper } from './apollo-wrapper.js'
 
-import React                            from 'react'
-
-import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
-
-import messages                         from '../../locales/ru.json'
-
-const RootLayout: FC<PropsWithChildren> = ({ children }) => (
-  <BaseRootLayout messages={messages}>{children}</BaseRootLayout>
-)
-
-// export { generateMetadata } from '@fragments/root-layout-fragment'
-// export { revalidate } from '@fragments/root-layout-fragment'
-export default RootLayout
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang='en'>
+      <body>
+        <ApolloWrapper>{children}</ApolloWrapper>
+      </body>
+    </html>
+  )
+}

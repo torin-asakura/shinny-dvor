@@ -4179,6 +4179,7 @@ __metadata:
   resolution: "@site/app@workspace:site/app"
   dependencies:
     "@apollo/client": "npm:3.11.3"
+    "@apollo/experimental-nextjs-app-support": "npm:0.11.2"
     "@atls/next-document-with-gtag": "npm:0.1.1"
     "@atls/next-document-with-helmet": "npm:0.3.1"
     "@fragments/global-error-fragment": "workspace:*"
