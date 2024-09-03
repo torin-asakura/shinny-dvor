@@ -1,4 +1,6 @@
-export * from './get-site-index-page-seo/index.js'
+export * from './get-site-index-page-seo-data/index.js'
+export * from './get-site-contacts-page-seo-data/index.js'
+
 export * from './get-page-preview-data/index.js'
 export * from './get-contacts-data/index.js'
 export * from './get-blog-posts-data/index.js'
