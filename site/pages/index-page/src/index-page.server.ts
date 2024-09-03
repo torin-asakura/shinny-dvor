@@ -17,19 +17,16 @@ import { getSiteIndexPageSeoData }   from '@globals/data'
 import { getPagePreviewData }        from '@globals/data'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
-  console.log('on server')
-
-  const { data } = useSuspenseQuery(GET_SITE_INDEX_PAGE_SEO)
-  console.log('DATA ON CLIENT:')
-  console.log(data)
-
   // let SEO: SEOInt
-  //
-  // const client = getServerClient()
-  //
-  // const { data } = await client.query({
-  //   query: GET_SITE_INDEX_PAGE_SEO,
-  // })
+
+  const client = getServerClient()
+
+  const { data } = await client.query({
+    query: GET_SITE_INDEX_PAGE_SEO,
+  })
+
+  console.log('DATA ON SERVER:')
+  console.log(data)
 
   // // TODO context
   // const context = ''
