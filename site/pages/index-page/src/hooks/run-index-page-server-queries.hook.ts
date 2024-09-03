@@ -18,8 +18,18 @@ export const runIndexPageServerQueries = async () => {
   // добавить ревалидацию для запросов
   // const context = { headers: { cookie } }
 
-  await client.query({ query: GET_SITE_INDEX_PAGE_SEO })
-  await client.query({
+  const {
+    data: {
+      pageBy: { seo: seoData },
+    },
+  } = await client.query({ query: GET_SITE_INDEX_PAGE_SEO })
+  console.log(seoData)
+
+  const {
+    data: {
+      mediaItemBy: { sourceUrl: ogCover },
+    },
+  } = await client.query({
     query: GET_PREVIEW,
     variables: {
       uri: '/cover/',
@@ -36,5 +46,5 @@ export const runIndexPageServerQueries = async () => {
   await client.query({ query: GET_AVAILABLE_RADII })
   await client.query({ query: GET_CAR_BODIES })
 
-  return
+  return { seoData, ogCover }
 }

@@ -11,8 +11,8 @@ export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
 const IndexPage: FC<IndexPageProps> = async () => {
-  await runIndexPageServerQueries()
-  return <IndexPageClient />
+  const { seoData, ogCover } = await runIndexPageServerQueries()
+  return <IndexPageClient seoData={seoData} ogCover={ogCover} />
 }
 
 export default memo(IndexPage)

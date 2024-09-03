@@ -19,6 +19,7 @@ import { Column }                    from '@ui/layout'
 import { getNavigationData }         from '@globals/data'
 import { getBlogPostsData }          from '@globals/data'
 import { getAvailableRadiiData }     from '@globals/data'
+import { getContactsData }           from '@globals/data'
 import { getServicesData }           from '@globals/data'
 import { getFragmentsData }          from '@globals/data'
 import { getUiData }                 from '@globals/data'
@@ -28,84 +29,82 @@ import { getCarBodiesData }          from '@globals/data'
 import { Seo }                       from './seo.component.js'
 import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
-export const IndexPageClient: FC<IndexPageClientProps> = () => {
-  const navigationData = getNavigationData()
-  const blogPostsData = getBlogPostsData()
-  const availableRadiiData = getAvailableRadiiData()
-  const servicesData = getServicesData()
-  const fragmentsData = getFragmentsData
-  const uiData = getUiData()
-  const workResultsData = getWorkResultsData()
-  const carBodiesData = getCarBodiesData()
+export const IndexPageClient: FC<IndexPageClientProps> = ({ seoData, ogCover }) => {
+  const { navigation: navigationData } = getNavigationData()
+  const { fragments: fragmentsData } = getFragmentsData()
+  const { contacts: contactsData } = getContactsData()
+  const { posts: blogPostsData } = getBlogPostsData()
+  const { availableRadii: availableRadiiData } = getAvailableRadiiData()
+  const { services: servicesData } = getServicesData()
+  const { ui: uiData } = getUiData()
+  const { workResults: workResultsData } = getWorkResultsData()
+  const { carBodies: carBodiesData } = getCarBodiesData()
 
-  console.log('CLIENT DATA:')
-  console.log(navigationData)
+  console.log(contactsData)
   console.log(blogPostsData)
   console.log(availableRadiiData)
   console.log(servicesData)
-  console.log(fragmentsData)
   console.log(uiData)
   console.log(workResultsData)
   console.log(carBodiesData)
 
-  // const { SEO, ogCover, data } = props
-  // const headerRef = useRef<HTMLDivElement | null>(null)
-  // const isLoaded = useRef<boolean>(false)
-  //
-  // const [active, setActive] = useState<number>(0)
-  // const [scrollY, setScrollY] = useState<number>(0)
-  //
-  // const { getObserverOptions } = useIndexPageClient({ isLoaded, setActive, headerRef, setScrollY })
-  //
-  // return (
-  //   <Column ref={headerRef} width='100%' alignItems='center'>
-  //     <Box width='100%' justifyContent='center'>
-  //       <Column width='100%' alignItems='center'>
-  //         <Seo ogCover={ogCover} SEO={SEO} />
-  //         <Navigation
-  //           active={active}
-  //           navigationData={navigation}
-  //           availableRadiiData={availableRadii}
-  //           fragmentsData={fragments}
-  //           carBodiesData={carBodies}
-  //           servicesData={services}
-  //           scrollY={scrollY}
-  //         />
-  //         <Hero
-  //           fragmentsData={fragments}
-  //           uiData={ui}
-  //           contactsData={contacts}
-  //           availableRadiiData={availableRadii}
-  //           carBodiesData={carBodies}
-  //           servicesData={services}
-  //           navigationData={navigation}
-  //           {...getObserverOptions('hero')}
-  //         />
-  //       </Column>
-  //     </Box>
-  //     <Services
-  //       servicesData={services}
-  //       fragmentsData={fragments}
-  //       availableRadiiData={availableRadii}
-  //       {...getObserverOptions('services')}
-  //     />
-  //     <Articles
-  //       postsData={posts}
-  //       fragmentsData={fragments}
-  //       navigationData={navigation}
-  //       {...getObserverOptions('articles')}
-  //     />
-  //     <ServicesInfographics
-  //       uiData={ui}
-  //       fragmentsData={fragments}
-  //       {...getObserverOptions('infographics')}
-  //     />
-  //     <WorksExamples
-  //       workResultsData={workResults}
-  //       fragmentsData={fragments}
-  //       {...getObserverOptions('works-examples')}
-  //     />
-  //     <Footer fragmentsData={fragments} contactsData={contacts} />
-  //   </Column>
-  // )
+  const headerRef = useRef<HTMLDivElement | null>(null)
+  const isLoaded = useRef<boolean>(false)
+
+  const [active, setActive] = useState<number>(0)
+  const [scrollY, setScrollY] = useState<number>(0)
+
+  const { getObserverOptions } = useIndexPageClient({ isLoaded, setActive, headerRef, setScrollY })
+
+  return (
+    <Column ref={headerRef} width='100%' alignItems='center'>
+      <Box width='100%' justifyContent='center'>
+        <Column width='100%' alignItems='center'>
+          <Seo ogCover={ogCover} SEO={seoData} />
+          <Navigation
+            active={active}
+            navigationData={navigationData}
+            availableRadiiData={availableRadiiData}
+            fragmentsData={fragmentsData}
+            carBodiesData={carBodiesData}
+            servicesData={servicesData}
+            scrollY={scrollY}
+          />
+          <Hero
+            fragmentsData={fragmentsData}
+            uiData={uiData}
+            contactsData={contactsData}
+            availableRadiiData={availableRadiiData}
+            carBodiesData={carBodiesData}
+            servicesData={servicesData}
+            navigationData={navigationData}
+            {...getObserverOptions('hero')}
+          />
+        </Column>
+      </Box>
+      <Services
+        servicesData={servicesData}
+        fragmentsData={fragmentsData}
+        availableRadiiData={availableRadiiData}
+        {...getObserverOptions('services')}
+      />
+      <Articles
+        postsData={blogPostsData}
+        fragmentsData={fragmentsData}
+        navigationData={navigationData}
+        {...getObserverOptions('articles')}
+      />
+      <ServicesInfographics
+        uiData={uiData}
+        fragmentsData={fragmentsData}
+        {...getObserverOptions('infographics')}
+      />
+      <WorksExamples
+        workResultsData={workResultsData}
+        fragmentsData={fragmentsData}
+        {...getObserverOptions('works-examples')}
+      />
+      <Footer fragmentsData={fragmentsData} contactsData={contactsData} />
+    </Column>
+  )
 }
