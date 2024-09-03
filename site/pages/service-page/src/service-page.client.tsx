@@ -1,38 +1,42 @@
 'use client'
 
-import type { FC }                     from 'react'
+import type { ServicePageClientProps }            from './service-page.interfaces.js'
+import type { FC }                                from 'react'
 
-import type { ServicePageClientProps } from './service-page.interfaces.js'
+import React                                      from 'react'
 
-import React                           from 'react'
+import { Footer }                                 from '@fragments/footer-fragment'
+import { Navigation }                             from '@fragments/navigation-fragment'
+import { Articles }                               from '@site/articles-fragment'
+import { Service }                                from '@site/service-fragment'
+import { Column }                                 from '@ui/layout'
+import { getAvailableRadiiData }                  from '@globals/data'
+import { getContactsData } from '@globals/data'
+import { getServicesData }                        from '@globals/data'
+import { getServiceByData }                       from '@globals/data'
+import { getCarBodiesData }                       from '@globals/data'
+import { getFragmentsData }                       from '@globals/data'
+import { getNavigationData }                      from '@globals/data'
+import { getBlogPostsData }                       from '@globals/data'
 
-import { Footer }                      from '@fragments/footer-fragment'
-import { Navigation }                  from '@fragments/navigation-fragment'
-import { Articles }                    from '@site/articles-fragment'
-import { Service }                     from '@site/service-fragment'
-import { Column }                      from '@ui/layout'
+import { Seo }                                    from './seo.component.js'
 
-import { Seo }                         from './seo.component.js'
+export const ServicePageClient: FC<ServicePageClientProps> = ({ serverQueryData, params }) => {
+  const { seoData, ogCover } = serverQueryData
+  const { uri } = params
 
-export const ServicePageClient: FC<ServicePageClientProps> = (props) => {
-  const {
-    SEO,
-    ogCover,
-    data: {
-      fragments,
-      contacts,
-      posts,
-      navigation,
-      availableRadii,
-      serviceBy,
-      services,
-      carBodies,
-    },
-  } = props
+  const { navigation } = getNavigationData()
+  const { availableRadii } = getAvailableRadiiData()
+  const { fragments } = getFragmentsData()
+  const { carBodies } = getCarBodiesData()
+  const { services } = getServicesData()
+  const { serviceBy } = getServiceByData(uri)
+  const { posts } = getBlogPostsData()
+  const { contacts } = getContactsData()
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo SEO={SEO} ogCover={ogCover} />
+      <Seo SEO={seoData} ogCover={ogCover} />
       <Navigation
         active={2}
         navigationData={navigation}

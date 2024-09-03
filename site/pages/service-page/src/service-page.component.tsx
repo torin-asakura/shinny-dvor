@@ -1,13 +1,13 @@
-import type { ServicePageProps } from './service-page.interfaces.js'
+import type { ServicePageProps }       from './service-page.interfaces.js'
 
-import React                     from 'react'
+import React                           from 'react'
 
-import { ServicePageClient }     from './service-page.client.js'
-import { ServicePageServer }     from './service-page.server.js'
+import { ServicePageClient }           from './service-page.client.js'
+import { runServicePageServerQueries } from './hooks/index.js'
 
 const ServicePage: ServicePageProps = async ({ params }) => {
-  const servicePageData = await ServicePageServer({ params })
-  return <ServicePageClient {...servicePageData} />
+  const serverQueryData = await runServicePageServerQueries({ params })
+  return <ServicePageClient params={params} serverQueryData={serverQueryData} />
 }
 
 export default ServicePage
