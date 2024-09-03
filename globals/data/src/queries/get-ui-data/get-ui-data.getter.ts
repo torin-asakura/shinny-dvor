@@ -1,10 +1,9 @@
-import { GET_UI } from './get-ui-data.query.js'
+import { useSuspenseQuery } from '@apollo/client'
 
-const getUiData = async (client, context) => {
-  const { data } = await client.query({
-    query: GET_UI,
-    context,
-  })
+import { GET_UI }           from './get-ui-data.query.js'
+
+const getUiData = () => {
+  const { data } = useSuspenseQuery(GET_UI)
 
   if (data) {
     return {

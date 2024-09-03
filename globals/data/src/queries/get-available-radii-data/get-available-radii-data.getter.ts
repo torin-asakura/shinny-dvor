@@ -1,12 +1,11 @@
 import type { AvailableRadiiQueryDataType } from './get-available-radii-data.interface.js'
 
+import { useSuspenseQuery }                 from '@apollo/client'
+
 import { GET_AVAILABLE_RADII }              from './get-available-radii-data.query.js'
 
-const getAvailableRadiiData = async (client, context) => {
-  const { data }: { data: AvailableRadiiQueryDataType } = await client.query({
-    query: GET_AVAILABLE_RADII,
-    context,
-  })
+const getAvailableRadiiData = () => {
+  const { data }: { data: AvailableRadiiQueryDataType } = useSuspenseQuery(GET_AVAILABLE_RADII)
 
   if (data.availableRadiusItems) {
     return {

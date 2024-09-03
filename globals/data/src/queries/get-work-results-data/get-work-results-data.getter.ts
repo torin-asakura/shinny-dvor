@@ -1,10 +1,9 @@
+import { useSuspenseQuery } from '@apollo/client'
+
 import { GET_WORK_RESULTS } from './get-work-results-data.query.js'
 
-const getWorkResultsData = async (client, context) => {
-  const { data } = await client.query({
-    query: GET_WORK_RESULTS,
-    context,
-  })
+const getWorkResultsData = () => {
+  const { data } = useSuspenseQuery(GET_WORK_RESULTS)
 
   if (data) {
     return {

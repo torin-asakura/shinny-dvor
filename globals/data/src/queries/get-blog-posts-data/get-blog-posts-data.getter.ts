@@ -1,12 +1,11 @@
 import type { BlogPostsQueryDataType } from './get-blog-posts-data.interface.js'
 
+import { useSuspenseQuery }            from '@apollo/client'
+
 import { GET_BLOG_POSTS }              from './get-blog-posts-data.query.js'
 
-const getBlogPostsData = async (client, context) => {
-  const { data }: { data: BlogPostsQueryDataType } = await client.query({
-    query: GET_BLOG_POSTS,
-    context,
-  })
+const getBlogPostsData = () => {
+  const { data }: { data: BlogPostsQueryDataType } = useSuspenseQuery(GET_BLOG_POSTS)
 
   if (data && data.posts) {
     return {
