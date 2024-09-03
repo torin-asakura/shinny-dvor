@@ -1,5 +1,7 @@
 import type { IndexPageServerProps } from './index-page.interfaces.js'
 
+import { useSuspenseQuery }          from '@apollo/client'
+
 import { GET_SITE_INDEX_PAGE_SEO }   from '@globals/data'
 import { getServerClient }           from '@globals/data'
 import { getContactsData }           from '@globals/data'
@@ -15,13 +17,19 @@ import { getSiteIndexPageSeoData }   from '@globals/data'
 import { getPagePreviewData }        from '@globals/data'
 
 export const IndexPageServer: IndexPageServerProps = async () => {
+  console.log('on server')
+
+  const { data } = useSuspenseQuery(GET_SITE_INDEX_PAGE_SEO)
+  console.log('DATA ON CLIENT:')
+  console.log(data)
+
   // let SEO: SEOInt
   //
-  const client = getServerClient()
-
-  const { data } = await client.query({
-    query: GET_SITE_INDEX_PAGE_SEO,
-  })
+  // const client = getServerClient()
+  //
+  // const { data } = await client.query({
+  //   query: GET_SITE_INDEX_PAGE_SEO,
+  // })
 
   // // TODO context
   // const context = ''
@@ -55,5 +63,6 @@ export const IndexPageServer: IndexPageServerProps = async () => {
   // const data = retrievedData.reduce((props, allData) => ({ ...props, ...allData }), {})
 
   // return { SEO, ogCover, data }
+
   return
 }

@@ -12,7 +12,7 @@ import React                      from 'react'
 
 import { GRAPHQL_API_URL }        from './apollo.constants.js'
 
-export const makeClient = () => {
+const makeClient = () => {
   const httpLink = new HttpLink({
     uri: GRAPHQL_API_URL,
     credentials: 'include',
