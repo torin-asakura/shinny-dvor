@@ -16,7 +16,6 @@ export const runContactsPageServerQueries = async () => {
       pageBy: { seo: seoData },
     },
   } = await client.query({ query: GET_SITE_CONTACTS_PAGE_SEO })
-  console.log(seoData)
 
   const {
     data: {

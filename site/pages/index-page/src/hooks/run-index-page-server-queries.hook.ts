@@ -23,7 +23,6 @@ export const runIndexPageServerQueries = async () => {
       pageBy: { seo: seoData },
     },
   } = await client.query({ query: GET_SITE_INDEX_PAGE_SEO })
-  console.log(seoData)
 
   const {
     data: {
