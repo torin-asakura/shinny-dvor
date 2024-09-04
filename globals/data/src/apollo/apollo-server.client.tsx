@@ -12,6 +12,7 @@ const { getClient, PreloadQuery } = registerApolloClient(
     new ApolloClient({
       cache: new InMemoryCache(),
       connectToDevTools: true,
+      // @ts-ignore:next-line
       link: new HttpLink({
         uri: GRAPHQL_API_URL,
         credentials: 'include',

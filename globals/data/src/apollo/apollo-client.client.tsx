@@ -21,6 +21,7 @@ const makeClient = () => {
 
   return new ApolloClient({
     cache: new InMemoryCache(),
+    // @ts-ignore:next-line
     link: httpLink,
     connectToDevTools: true,
   })
