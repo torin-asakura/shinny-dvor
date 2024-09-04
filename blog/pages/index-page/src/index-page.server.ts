@@ -1,6 +1,5 @@
-import type { SEOInt }               from '@globals/data'
-
 import type { IndexPageServerProps } from './index-page.interfaces.js'
+import type { SEOInt }               from '@globals/data'
 
 import { getAvailableRadiiData }     from '@globals/data'
 import { getCarBodiesData }          from '@globals/data'
