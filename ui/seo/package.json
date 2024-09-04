@@ -1,0 +1,24 @@
+{
+  "name": "@ui/seo",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@globals/data": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "6.1.11",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "6.1.0"
+  },
+  "peerDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-helmet": "*"
+  }
+}
