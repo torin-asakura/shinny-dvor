@@ -1,16 +1,38 @@
 'use server'
 
-import { HttpLink }             from '@apollo/client'
-import { ApolloClient }         from '@apollo/experimental-nextjs-app-support'
-import { InMemoryCache }        from '@apollo/experimental-nextjs-app-support'
-import { registerApolloClient } from '@apollo/experimental-nextjs-app-support'
+import { HttpLink }                from '@apollo/client'
+import { ApolloClient }            from '@apollo/experimental-nextjs-app-support'
+import { InMemoryCache }           from '@apollo/experimental-nextjs-app-support'
+import { defaultDataIdFromObject } from '@apollo/client'
+import { registerApolloClient }    from '@apollo/experimental-nextjs-app-support'
 
-import { GRAPHQL_API_URL }      from './apollo.constants.js'
+import { GRAPHQL_API_URL }         from './apollo.constants.js'
 
 const { getClient, PreloadQuery } = registerApolloClient(
   () =>
     new ApolloClient({
-      cache: new InMemoryCache(),
+      // cache: new InMemoryCache(),
+      cache: new InMemoryCache({
+        dataIdFromObject(responseObject) {
+          switch (responseObject.__typename) {
+            case 'Post':
+              console.log(responseObject)
+              if (responseObject.seo) {
+                return `PostBy:${responseObject.seo.title}`
+              } else if (responseObject.postId) {
+                return `PostBy:${responseObject.postId}`
+              } else if (responseObject.uri) {
+                return `PostBy:${responseObject.uri}`
+              } else {
+                return defaultDataIdFromObject(responseObject)
+              }
+            case 'Service':
+              return `ServiceBy:${responseObject.uri}`
+            default:
+              return defaultDataIdFromObject(responseObject)
+          }
+        },
+      }),
       connectToDevTools: true,
       // @ts-ignore:next-line
       link: new HttpLink({
