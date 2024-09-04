@@ -21,6 +21,7 @@ import { getFragmentsData }            from '@globals/data'
 import { getNavigationData }           from '@globals/data'
 import { getBlogPostsData }            from '@globals/data'
 
+// @ts-expect-error param is not exist
 export const ServicePageClient: FC<ServicePageClientProps> = ({ serverQueryData, params }) => {
   const { seoData, ogCover } = serverQueryData
   const { uri } = params

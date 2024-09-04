@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './services-list.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 
@@ -10,8 +9,14 @@ const ServicesList: FC<ItemProps> = ({ services }) => (
   <>
     {services.map(({
       uri,
-      // @ts-expect-error type not exist
-      servicesParams: { title, description, price },
+      servicesParams: {
+        // @ts-expect-error type not exist
+        title,
+        // @ts-expect-error type not exist
+        description,
+        // @ts-expect-error type not exist
+        price,
+      },
     }) => (
       <Service
         key={uri}

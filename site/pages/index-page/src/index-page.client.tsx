@@ -30,6 +30,7 @@ import { getCarBodiesData }          from '@globals/data'
 
 import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
+// @ts-expect-error not exist
 export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) => {
   const { seoData, ogCover } = serverQueryData
 

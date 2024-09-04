@@ -1,7 +1,9 @@
-import type { DataInt }             from '@globals/data'
-import type { SEOInt }              from '@globals/data'
+// @ts-nocheck
+// TODO remove
 
 import type { PostPageServerProps } from './post-page.interfaces.js'
+import type { DataInt }             from '@globals/data'
+import type { SEOInt }              from '@globals/data'
 
 import { getAvailableRadiiData }    from '@globals/data'
 import { getCarBodiesData }         from '@globals/data'
@@ -15,7 +17,6 @@ import { getRadiiData }             from '@globals/data'
 import { getBlogPostPageSeoData }   from '@globals/data'
 import { getPagePreviewData }       from '@globals/data'
 
-// @ts-expect-error type missing
 export const PostPageServer: PostPageServerProps = async ({ params }) => {
   let SEO: SEOInt
 

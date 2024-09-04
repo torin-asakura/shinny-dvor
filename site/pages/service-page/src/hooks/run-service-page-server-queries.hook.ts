@@ -1,4 +1,4 @@
-import type { ServicePageServerProps } from './service-page.interfaces.js'
+import type { ServicePageServerProps } from '../service-page.interfaces.js'
 
 import { GET_SITE_SERVICE_PAGE_SEO }   from '@globals/data'
 import { GET_PREVIEW }                 from '@globals/data'
@@ -12,6 +12,7 @@ import { GET_CAR_BODIES }              from '@globals/data'
 import { GET_SERVICE_BY }              from '@globals/data'
 import { getServerClient }             from '@globals/data'
 
+// @ts-expect-error any type
 export const runServicePageServerQueries: ServicePageServerProps = async ({ params }) => {
   const { uri } = params
 

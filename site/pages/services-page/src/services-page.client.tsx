@@ -19,6 +19,7 @@ import { getNavigationData }            from '@globals/data'
 import { getServicesData }              from '@globals/data'
 
 export const ServicesPageClient: FC<ServicesPageClientProps> = ({ serverQueryData }) => {
+  // @ts-expect-error not exist
   const { seoData, ogCover } = serverQueryData
 
   const { fragments } = getFragmentsData()

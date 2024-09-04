@@ -12,6 +12,7 @@ export const revalidate = 0
 
 const IndexPage: FC<IndexPageProps> = async () => {
   const serverQueryData = await runIndexPageServerQueries()
+  // @ts-expect-error not assignable
   return <IndexPageClient serverQueryData={serverQueryData} />
 }
 

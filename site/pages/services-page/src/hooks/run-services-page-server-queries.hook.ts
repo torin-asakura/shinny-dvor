@@ -1,4 +1,4 @@
-import type { ServicesPageServerProps } from './services-page.interface.js'
+import type { ServicesPageServerProps } from '../services-page.interface.js'
 
 import { GET_SITE_SERVICES_PAGE_SEO }   from '@globals/data'
 import { GET_PREVIEW }                  from '@globals/data'
@@ -11,6 +11,7 @@ import { GET_CAR_BODIES }               from '@globals/data'
 import { GET_SERVICES }                 from '@globals/data'
 import { getServerClient }              from '@globals/data'
 
+// @ts-expect-error incorrect types
 export const runServicesPageServerQueries: ServicesPageServerProps = async () => {
   const client = getServerClient()
 

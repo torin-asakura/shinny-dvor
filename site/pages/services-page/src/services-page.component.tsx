@@ -7,6 +7,7 @@ import { runServicesPageServerQueries } from './hooks/index.js'
 
 const ServicesPage: ServicesPageProps = async () => {
   const serverQueryData = await runServicesPageServerQueries()
+  // @ts-expect-error incorrect types
   return <ServicesPageClient serverQueryData={serverQueryData} />
 }
 

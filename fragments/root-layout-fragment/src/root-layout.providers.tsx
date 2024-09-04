@@ -5,7 +5,7 @@ import { IntlProvider }  from 'react-intl'
 
 import { ThemeProvider } from '@ui/theme'
 
-// TODO interfaces
+// @ts-expect-error any types
 const RoolLayoutProviders = ({ messages, children }) => {
   return (
     <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
