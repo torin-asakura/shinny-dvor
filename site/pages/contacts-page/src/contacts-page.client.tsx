@@ -3,6 +3,8 @@
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 import type { FC }                      from 'react'
 
+import { Seo }                          from '@ui/seo'
+
 import React                            from 'react'
 
 import { Footer }                       from '@fragments/footer-fragment'
@@ -15,8 +17,6 @@ import { getNavigationData }            from '@globals/data'
 import { getAvailableRadiiData }        from '@globals/data'
 import { getCarBodiesData }             from '@globals/data'
 import { getServicesData }              from '@globals/data'
-
-import { Seo }                          from './seo.component.js'
 
 export const ContactsPageClient: FC<ContactsPageClientProps> = ({ serverQueryData }) => {
   const { ogCover, seoData } = serverQueryData

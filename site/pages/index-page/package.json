@@ -19,6 +19,7 @@
     "@site/works-examples-fragment": "workspace:*",
     "@ui/intersection-observer": "workspace:*",
     "@ui/layout": "workspace:*",
+    "@ui/seo": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {

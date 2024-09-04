@@ -17,7 +17,8 @@
     "@site/service-fragment": "workspace:*",
     "@store/services": "workspace:*",
     "@ui/condition": "workspace:*",
-    "@ui/layout": "workspace:*"
+    "@ui/layout": "workspace:*",
+    "@ui/seo": "workspace:*"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",

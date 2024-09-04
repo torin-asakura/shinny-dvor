@@ -3,6 +3,8 @@
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
+import { Seo }                       from '@ui/seo'
+
 import React                         from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
@@ -26,7 +28,6 @@ import { getUiData }                 from '@globals/data'
 import { getWorkResultsData }        from '@globals/data'
 import { getCarBodiesData }          from '@globals/data'
 
-import { Seo }                       from './seo.component.js'
 import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
 export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) => {
