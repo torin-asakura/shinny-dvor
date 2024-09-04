@@ -1,4 +1,4 @@
-import type { AvailableRadiiQueryDataType } from '@globals/data'
+import type { GetAvailableRadiiQuery as AvailableRadiiQueryDataType } from '@globals/data'
 
 type AvailableRadiiType = Exclude<
   AvailableRadiiQueryDataType['availableRadiusItems'],

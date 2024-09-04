@@ -1,8 +1,8 @@
-import type { ServicesQueryDataType } from './get-services-data.interface.js'
+import type { GetServicesQuery as ServicesQueryDataType } from '@globals/data'
 
-import { useSuspenseQuery }           from '@apollo/client'
+import { useSuspenseQuery }                               from '@apollo/client'
 
-import { GET_SERVICES }               from './get-services-data.query.js'
+import { GET_SERVICES }                                   from './get-services-data.query.js'
 
 // TODO type
 const getServicesData = () => {

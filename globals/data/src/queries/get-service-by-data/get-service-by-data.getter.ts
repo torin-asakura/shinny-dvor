@@ -1,6 +1,6 @@
 import { useSuspenseQuery } from '@apollo/client'
 
-import { GET_SERVICE_BY }   from './get-service-by.query.js'
+import { GET_SERVICE_BY }   from './get-service-by-data.query.js'
 
 const getServiceByData = (uri: string) => {
   // const { schema } = await getSchemaData()
@@ -12,6 +12,7 @@ const getServiceByData = (uri: string) => {
 
   if (data) {
     return {
+      // @ts-expect-error not exist
       serviceBy: data.serviceBy,
     }
   }

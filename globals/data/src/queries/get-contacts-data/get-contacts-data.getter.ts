@@ -1,8 +1,8 @@
-import type { ContactsQueryDataType } from '@globals/data'
+import type { GetContactsQuery as ContactsQueryDataType } from '@globals/data'
 
-import { useSuspenseQuery }           from '@apollo/client'
+import { useSuspenseQuery }                               from '@apollo/client'
 
-import { GET_CONTACTS }               from './get-contacts-data.query.js'
+import { GET_CONTACTS }                                   from './get-contacts-data.query.js'
 
 const getContactsData = () => {
   const { data }: { data: ContactsQueryDataType } = useSuspenseQuery(GET_CONTACTS)

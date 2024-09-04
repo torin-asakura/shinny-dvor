@@ -7,6 +7,7 @@ const getUiData = () => {
 
   if (data) {
     return {
+      // @ts-expect-error not exist
       ui: data.uiItems.nodes,
     }
   }

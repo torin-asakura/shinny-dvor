@@ -1,8 +1,8 @@
-import type { BlogPostsQueryDataType } from './get-blog-posts-data.interface.js'
+import type { GetPostsQuery as BlogPostsQueryDataType } from '@globals/data'
 
-import { useSuspenseQuery }            from '@apollo/client'
+import { useSuspenseQuery }                             from '@apollo/client'
 
-import { GET_BLOG_POSTS }              from './get-blog-posts-data.query.js'
+import { GET_BLOG_POSTS }                               from './get-blog-posts-data.query.js'
 
 const getBlogPostsData = () => {
   const { data }: { data: BlogPostsQueryDataType } = useSuspenseQuery(GET_BLOG_POSTS)

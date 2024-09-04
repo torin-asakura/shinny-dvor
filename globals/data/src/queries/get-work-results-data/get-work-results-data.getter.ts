@@ -7,6 +7,7 @@ const getWorkResultsData = () => {
 
   if (data) {
     return {
+      // @ts-expect-error not exist
       workResults: data.workResultItems.nodes,
     }
   }

@@ -1,8 +1,8 @@
-import type { FragmentsDataType } from './get-fragments-data.interface.js'
+import type { GetFragmentsQuery as FragmentsQueryDataType } from '@globals/data'
 
-import { useSuspenseQuery }       from '@apollo/client'
+import { useSuspenseQuery }                                 from '@apollo/client'
 
-import { GET_FRAGMENTS }          from './get-fragments-data.query.js'
+import { GET_FRAGMENTS }                                    from './get-fragments-data.query.js'
 
 // Promise<{ fragments: FragmentsDataType | [] }>
 const getFragmentsData = () => {
