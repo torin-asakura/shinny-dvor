@@ -4296,6 +4296,7 @@ __metadata:
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/link": "workspace:*"
+    "@ui/seo": "workspace:*"
     "@ui/social-links": "workspace:*"
     "@ui/text": "workspace:*"
     graphql: "npm:16.9.0"
@@ -4376,6 +4377,7 @@ __metadata:
     "@types/styled-system": "npm:^5"
     "@ui/intersection-observer": "workspace:*"
     "@ui/layout": "workspace:*"
+    "@ui/seo": "workspace:*"
     "@ui/utils": "workspace:*"
     graphql: "npm:16.9.0"
     react: "npm:18.3.1"
@@ -4462,6 +4464,7 @@ __metadata:
     "@types/react-helmet": "npm:6.1.11"
     "@types/styled-system": "npm:^5"
     "@ui/layout": "workspace:*"
+    "@ui/seo": "workspace:*"
     graphql: "npm:16.9.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -4571,6 +4574,7 @@ __metadata:
     "@types/styled-system": "npm:^5"
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
+    "@ui/seo": "workspace:*"
     graphql: "npm:16.9.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -6206,6 +6210,24 @@ __metadata:
     remove: "*"
     styled-system: "*"
     styled-tools: "*"
+  languageName: unknown
+  linkType: soft
+
+"@ui/seo@workspace:*, @ui/seo@workspace:ui/seo":
+  version: 0.0.0-use.local
+  resolution: "@ui/seo@workspace:ui/seo"
+  dependencies:
+    "@globals/data": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/react-helmet": "npm:6.1.11"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-helmet: "npm:6.1.0"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+    react-helmet: "*"
   languageName: unknown
   linkType: soft
 
