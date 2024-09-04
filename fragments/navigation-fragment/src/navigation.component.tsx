@@ -29,7 +29,6 @@ const Navigation: FC<NavigationProps> = ({
   navigationData,
   availableRadiiData,
   navigationItemsType = 'nav-item',
-  backgroundColor,
   fragmentsData,
   carBodiesData,
   servicesData,
