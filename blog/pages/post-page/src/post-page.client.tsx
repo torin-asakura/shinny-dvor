@@ -1,8 +1,7 @@
 'use client'
 
-import type { FC }                  from 'react'
-
 import type { PostPageClientProps } from './post-page.interfaces.js'
+import type { FC }                  from 'react'
 
 import React                        from 'react'
 
@@ -10,17 +9,32 @@ import { Article }                  from '@blog/articles-fragment'
 import { Footer }                   from '@fragments/footer-fragment'
 import { Navigation }               from '@fragments/navigation-fragment'
 import { Column }                   from '@ui/layout'
+import { getContactsData }          from '@globals/data'
+import { getPostData }              from '@globals/data'
+import { getNavigationData }        from '@globals/data'
+import { getAvailableRadiiData }    from '@globals/data'
+import { getFragmentsData }         from '@globals/data'
+import { getCarBodiesData }         from '@globals/data'
+import { getServicesData }          from '@globals/data'
 
 import { Seo }                      from './seo.component.js'
 
-export const PostPageClient: FC<PostPageClientProps> = (props) => {
-  const { ogCover, SEO, data } = props
+// @ts-expect-error not exist
+export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, params }) => {
+  const { seoData, ogCover } = serverQueryData
+  const { uri } = params
 
-  const { contacts, postBy, navigation, availableRadii, fragments, carBodies, services } = data
+  const { contacts } = getContactsData()
+  const { postBy } = getPostData({ uri })
+  const { navigation } = getNavigationData()
+  const { availableRadii } = getAvailableRadiiData()
+  const { fragments } = getFragmentsData()
+  const { carBodies } = getCarBodiesData()
+  const { services } = getServicesData()
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo ogCover={ogCover} SEO={SEO} />
+      <Seo ogCover={ogCover} SEO={seoData} />
       <Navigation
         navigationItemsType='blog-nav-item'
         backgroundColor='white'
