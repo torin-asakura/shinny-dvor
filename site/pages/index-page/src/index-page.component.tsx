@@ -1,4 +1,3 @@
-import type { IndexPageProps }       from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
 import React                         from 'react'
@@ -10,7 +9,7 @@ import { runIndexPageServerQueries } from './hooks/run-index-page-server-queries
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
-const IndexPage: FC<IndexPageProps> = async () => {
+const IndexPage: FC = async () => {
   const serverQueryData = await runIndexPageServerQueries()
   // @ts-expect-error not assignable
   return <IndexPageClient serverQueryData={serverQueryData} />
