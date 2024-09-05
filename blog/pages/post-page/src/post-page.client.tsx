@@ -9,6 +9,7 @@ import { Article }                  from '@blog/articles-fragment'
 import { Footer }                   from '@fragments/footer-fragment'
 import { Navigation }               from '@fragments/navigation-fragment'
 import { Column }                   from '@ui/layout'
+import { Seo }                      from '@ui/seo'
 import { getContactsData }          from '@globals/data'
 import { getPostData }              from '@globals/data'
 import { getNavigationData }        from '@globals/data'
@@ -17,15 +18,15 @@ import { getFragmentsData }         from '@globals/data'
 import { getCarBodiesData }         from '@globals/data'
 import { getServicesData }          from '@globals/data'
 
-import { Seo }                      from './seo.component.js'
-
 // @ts-expect-error not exist
 export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, params }) => {
   const { seoData, ogCover } = serverQueryData
   const { uri } = params
 
   const { contacts } = getContactsData()
+
   const { postBy } = getPostData({ uri })
+
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
   const { fragments } = getFragmentsData()
@@ -45,6 +46,7 @@ export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, param
         servicesData={services}
       />
       <Article
+        // @ts-expect-error not assignable
         postData={postBy}
         // @ts-expect-error undefined
         fragmentsData={fragments}
