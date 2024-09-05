@@ -16,8 +16,8 @@ const { getClient, PreloadQuery } = registerApolloClient(
         dataIdFromObject(responseObject) {
           switch (responseObject.__typename) {
             case 'Post':
-              console.log(responseObject)
               if (responseObject.seo) {
+                // @ts-expect-error not exist
                 return `PostBy:${responseObject.seo.title}`
               } else if (responseObject.postId) {
                 return `PostBy:${responseObject.postId}`
