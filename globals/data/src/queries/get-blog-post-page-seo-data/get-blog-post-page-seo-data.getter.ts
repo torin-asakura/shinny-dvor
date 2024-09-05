@@ -9,6 +9,7 @@ const getBlogPostPageSeoData = ({ uri }: { uri: string }) => {
 
   if (data) {
     return {
+      // @ts-expect-error not exist
       postBy: data.postBy,
     }
   }
