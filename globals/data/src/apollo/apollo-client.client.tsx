@@ -21,27 +21,30 @@ const makeClient = () => {
   })
 
   return new ApolloClient({
-    cache: new InMemoryCache(),
-    // cache: new InMemoryCache({
-    //   dataIdFromObject(responseObject) {
-    //     switch (responseObject.__typename) {
-    //       case 'Post':
-    //         if (responseObject.postId) {
-    //           return `PostBy:${responseObject.postId}`
-    //         } else if (responseObject.uri) {
-    //           return `PostBy:${responseObject.uri}`
-    //         } else {
-    //           return defaultDataIdFromObject(responseObject)
-    //         }
-    //       case 'Service':
-    //         return `ServiceBy:${responseObject.uri}`
-    //       default:
-    //         return defaultDataIdFromObject(responseObject)
-    //     }
-    //   },
-    // }),
+    cache: new InMemoryCache({
+      dataIdFromObject(responseObject) {
+        switch (responseObject.__typename) {
+          case 'Post':
+            if (responseObject.seo) {
+              // @ts-expect-error not exist
+              return `PostBy:${responseObject.seo.title}`
+            } else if (responseObject.postId) {
+              return `PostBy:${responseObject.postId}`
+            } else if (responseObject.uri) {
+              return `PostBy:${responseObject.uri}`
+            } else {
+              return defaultDataIdFromObject(responseObject)
+            }
+          case 'Service':
+            return `ServiceBy:${responseObject.uri}`
+          default:
+            return defaultDataIdFromObject(responseObject)
+        }
+      },
+    }),
     // @ts-ignore:next-line
     link: httpLink,
+    ssrMode: true,
     connectToDevTools: true,
   })
 }
