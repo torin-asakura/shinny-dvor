@@ -8,7 +8,7 @@ import { GET_BLOG_POST }             from '@globals/data'
 import { PostPageClient }            from './post-page.client.js'
 import { runPostPageServerQuerires } from './hooks/index.js'
 
-export const PostPage: PostPageProps = async ({ params }) => {
+const PostPage: PostPageProps = async ({ params }) => {
   const serverQueryData = await runPostPageServerQuerires({ params })
   const { uri } = params
   return (
@@ -26,3 +26,5 @@ export const PostPage: PostPageProps = async ({ params }) => {
     </PreloadQuery>
   )
 }
+
+export default PostPage
