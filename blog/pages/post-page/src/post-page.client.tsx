@@ -23,15 +23,13 @@ export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, param
   const { seoData, ogCover } = serverQueryData
   const { uri } = params
 
-  const { contacts } = getContactsData()
-
-  const { postBy } = getPostData({ uri })
-
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
   const { fragments } = getFragmentsData()
   const { carBodies } = getCarBodiesData()
   const { services } = getServicesData()
+  const { postBy } = getPostData(uri)
+  const { contacts } = getContactsData()
 
   return (
     <Column width='100%' alignItems='center'>

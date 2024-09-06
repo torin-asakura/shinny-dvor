@@ -4,7 +4,7 @@ import { useSuspenseQuery }       from '@apollo/client'
 
 import { GET_BLOG_POST }          from '@globals/data'
 
-const getPostData = ({ uri }: { uri: string }) => {
+const getPostData = (uri: string) => {
   const { data }: { data: PostQueryDataType } = useSuspenseQuery(GET_BLOG_POST, {
     variables: { uri },
   })
