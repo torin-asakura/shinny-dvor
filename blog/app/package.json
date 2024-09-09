@@ -33,7 +33,7 @@
     "@blog/post-page": "workspace:*",
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
-    "@globals/configs": "workspace:*",
+    "@globals/config": "workspace:*",
     "@globals/data": "workspace:*",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
