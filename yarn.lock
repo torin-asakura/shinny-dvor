@@ -4447,6 +4447,7 @@ __metadata:
     "@emotion/styled": "npm:11.13.0"
     "@fragments/footer-fragment": "workspace:*"
     "@fragments/navigation-fragment": "workspace:*"
+    "@globals/config": "workspace:*"
     "@globals/data": "workspace:*"
     "@shared/utils": "workspace:*"
     "@site/articles-fragment": "workspace:*"
