@@ -1,12 +1,13 @@
-import { Logger }     from '@atls/logger'
+import { Logger }           from '@atls/logger'
+import { S3Client }         from '@aws-sdk/client-s3'
+import { PutObjectCommand } from '@aws-sdk/client-s3'
 
-import AWS            from 'aws-sdk'
-import { js2xml }     from 'xml-js'
+import { js2xml }           from 'xml-js'
 
-import { imagesData } from '../images-data/index.js'
+import { imagesData }       from '../images-data/index.js'
 
 // @ts-expect-error any
-const generateXml = (goodsData, goodsCategoryData) => {
+const generateXml = async (goodsData, goodsCategoryData) => {
   const logger = new Logger('XML-Generator')
 
   // @ts-expect-error any
@@ -72,38 +73,44 @@ const generateXml = (goodsData, goodsCategoryData) => {
 
   const xml = js2xml(YML, { compact: true, spaces: 2 })
 
-  const s3 = new AWS.S3({
+  const s3Client = new S3Client({
     endpoint: process.env.FILES_STORAGE_HOST,
     region: process.env.FILES_STORAGE_REGION,
-    accessKeyId: process.env.YC_SA_KEY_ID,
-    secretAccessKey: process.env.YC_SA_SECRET_KEY,
+    // accessKeyId: process.env.YC_SA_KEY_ID,
+    // secretAccessKey: process.env.YC_SA_SECRET_KEY,
   })
 
-  s3.upload(
-    {
-      Bucket: process.env.BUCKET_NAME || '',
-      Key: `prices-${new Date().toISOString()}.xml`,
-      Body: xml,
-    },
-    (err, data) => {
-      if (err) logger.error(err)
+  try {
+    const KEY = `prices-${new Date().toISOString()}.xml`
 
-      logger.info(`File uploaded on ${data.Location}`)
-    }
-  )
+    await s3Client.send(
+      new PutObjectCommand({
+        Bucket: process.env.BUCKET_NAME || '',
+        Key: `prices-${new Date().toISOString()}.xml`,
+        Body: xml,
+      })
+    )
 
-  s3.upload(
-    {
-      Bucket: process.env.BUCKET_NAME || '',
-      Key: `prices-latest.xml`,
-      Body: xml,
-    },
-    (err, data) => {
-      if (err) logger.error(err)
+    logger.info(`${KEY} uploaded successfully.`)
+  } catch (error) {
+    logger.error(error)
+  }
 
-      logger.info(`Latest file uploaded on ${data.Location}`)
-    }
-  )
+  try {
+    const KEY = `prices-latest.xml`
+
+    await s3Client.send(
+      new PutObjectCommand({
+        Bucket: process.env.BUCKET_NAME || '',
+        Key: KEY,
+        Body: xml,
+      })
+    )
+
+    logger.info(`${KEY} uploaded successfully.`)
+  } catch (error) {
+    if (error) logger.error(error)
+  }
 }
 
 export { generateXml }
