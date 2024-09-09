@@ -1,5 +1,3 @@
-// export { nextConfig as default } from '@globals/configs'
-
 import { join } from 'path'
 import { dirname } from 'path'
 

@@ -1,10 +1,10 @@
 {
-  "name": "@globals/constants",
+  "name": "@globals/config",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.js"
+    ".": "./src/index.ts"
   },
-  "main": "src/index.js"
+  "main": "src/index.ts"
 }
