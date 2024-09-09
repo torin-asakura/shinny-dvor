@@ -20,8 +20,6 @@ const generateStaticParams = async () => {
     },
   } = await client.query({ query: GET_BLOG_POSTS })
 
-  console.log(getBlogPostUris(posts))
-
   return getBlogPostUris(posts)
 }
 
