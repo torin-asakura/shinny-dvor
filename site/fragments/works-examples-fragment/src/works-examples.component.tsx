@@ -1,13 +1,14 @@
-import type { WorksExamplesProps }   from './works-examples.interface.js'
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'
 
-import React                         from 'react'
+import type { WorksExamplesProps }   from './works-examples.interface.js'
+
 import { Children }                  from 'react'
 import { useState }                  from 'react'
 import { forwardRef }                from 'react'
 import { useMemo }                   from 'react'
+import React                         from 'react'
 
 import { Button }                    from '@ui/button'
 import { ArrowLeftIcon }             from '@ui/icons'

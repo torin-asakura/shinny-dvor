@@ -1,12 +1,13 @@
 'use client'
 
+import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
-import type { IndexPageClientProps } from './index-page.interfaces.js'
+import { Seo }                       from '@ui/seo'
 
+import React                         from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
-import React                         from 'react'
 
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
@@ -17,24 +18,31 @@ import { ServicesInfographics }      from '@site/services-infographics-fragment'
 import { WorksExamples }             from '@site/works-examples-fragment'
 import { Box }                       from '@ui/layout'
 import { Column }                    from '@ui/layout'
+import { getNavigationData }         from '@globals/data'
+import { getBlogPostsData }          from '@globals/data'
+import { getAvailableRadiiData }     from '@globals/data'
+import { getContactsData }           from '@globals/data'
+import { getServicesData }           from '@globals/data'
+import { getFragmentsData }          from '@globals/data'
+import { getUiData }                 from '@globals/data'
+import { getWorkResultsData }        from '@globals/data'
+import { getCarBodiesData }          from '@globals/data'
 
-import { Seo }                       from './seo.component.js'
 import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
 
-export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
-  const { SEO, ogCover, data } = props
+// @ts-expect-error not exist
+export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) => {
+  const { seoData, ogCover } = serverQueryData
 
-  const {
-    contacts,
-    posts,
-    navigation,
-    availableRadii,
-    services,
-    fragments,
-    ui,
-    workResults,
-    carBodies,
-  } = data
+  const { navigation } = getNavigationData()
+  const { fragments } = getFragmentsData()
+  const { contacts } = getContactsData()
+  const { posts } = getBlogPostsData()
+  const { availableRadii } = getAvailableRadiiData()
+  const { services } = getServicesData()
+  const { ui } = getUiData()
+  const { workResults } = getWorkResultsData()
+  const { carBodies } = getCarBodiesData()
 
   const headerRef = useRef<HTMLDivElement | null>(null)
   const isLoaded = useRef<boolean>(false)
@@ -48,7 +56,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = (props) => {
     <Column ref={headerRef} width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
-          <Seo ogCover={ogCover} SEO={SEO} />
+          <Seo ogCover={ogCover} SEO={seoData} />
           <Navigation
             active={active}
             navigationData={navigation}

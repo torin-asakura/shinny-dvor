@@ -1,2 +1,3 @@
 export { default } from '@site/index-page'
-export const revalidate = 3600
+export { dynamic } from '@site/index-page'
+export { revalidate } from '@site/index-page'

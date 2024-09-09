@@ -1,45 +1,35 @@
-import type { FC }            from 'react'
+import type { ArticleProps }           from './article.interface.js'
+import type { FC }                     from 'react'
 
-import type { ArticleProps }  from './article.interface.js'
+import React                           from 'react'
+import { FormattedPlural }             from 'react-intl'
+import { FormattedMessage }            from 'react-intl'
+import { memo }                        from 'react'
+import { useEffect }                   from 'react'
 
-import { FormattedPlural }    from 'react-intl'
-import { FormattedMessage }   from 'react-intl'
-import { memo }               from 'react'
-import { useEffect }          from 'react'
-import React                  from 'react'
+import { Divider }                     from '@ui/divider'
+import { ImageBlock }                  from '@ui/image'
+import { Box }                         from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Layout }                      from '@ui/layout'
+import { Text }                        from '@ui/text'
+import { Space }                       from '@ui/text'
+import { extractFragment }             from '@globals/data'
+import { useIncrementPostViewCounter } from '@globals/data'
+import { formattedDate }               from '@shared/utils'
 
-import { Divider }            from '@ui/divider'
-import { ImageBlock }         from '@ui/image'
-import { Box }                from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Layout }             from '@ui/layout'
-import { Text }               from '@ui/text'
-import { Space }              from '@ui/text'
-import { extractFragment }    from '@globals/data'
-import { usePostViewCounter } from '@globals/data'
-import { formattedDate }      from '@shared/utils'
-
-import { ReturnButton }       from './return-button/index.js'
+import { ReturnButton }                from './return-button/index.js'
 
 const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
   const { postId, content, title, date, viewCount, contentAddons } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
-  const [submit] = usePostViewCounter()
-
-  const incrementViewCounter = (post_id: number): void => {
-    submit({
-      variables: {
-        post_id,
-      },
-    })
-  }
+  const incrementViewCounter = useIncrementPostViewCounter()
 
   useEffect(() => {
     incrementViewCounter(postId)
-    // eslint-disable-next-line
   }, [])
 
   return (

@@ -3,11 +3,10 @@ import type { KeyboardEvent }  from 'react'
 import type { FC }             from 'react'
 
 import { useReactiveVar }      from '@apollo/client'
-
-import React                   from 'react'
 import { useCallback }         from 'react'
 import { useEffect }           from 'react'
 import { useState }            from 'react'
+import React                   from 'react'
 
 import { INVALID }             from '@store/booking'
 import { SUCCESS }             from '@store/booking'

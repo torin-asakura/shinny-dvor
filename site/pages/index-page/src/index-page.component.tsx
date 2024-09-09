@@ -1,13 +1,18 @@
-import type { IndexPageProps } from './index-page.interfaces.js'
+import type { FC }                   from 'react'
 
-import React                   from 'react'
+import React                         from 'react'
+import { memo }                      from 'react'
 
-import { IndexPageClient }     from './index-page.client.js'
-import { IndexPageServer }     from './index-page.server.js'
+import { IndexPageClient }           from './index-page.client.js'
+import { runIndexPageServerQueries } from './hooks/run-index-page-server-queries.hook.js'
 
-const IndexPage: IndexPageProps = async () => {
-  const indexPageData = await IndexPageServer()
-  return <IndexPageClient {...indexPageData} />
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
+const IndexPage: FC = async () => {
+  const serverQueryData = await runIndexPageServerQueries()
+  // @ts-expect-error not assignable
+  return <IndexPageClient serverQueryData={serverQueryData} />
 }
 
-export default IndexPage
+export default memo(IndexPage)

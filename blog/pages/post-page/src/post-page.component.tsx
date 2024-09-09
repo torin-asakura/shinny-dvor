@@ -1,11 +1,30 @@
-import type { PostPageProps } from './post-page.interfaces.js'
+import type { PostPageProps }        from './post-page.interfaces.js'
 
-import React                  from 'react'
+import React                         from 'react'
 
-import { PostPageClient }     from './post-page.client.js'
-import { PostPageServer }     from './post-page.server.js'
+import { PreloadQuery }              from '@globals/data'
+import { GET_BLOG_POST }             from '@globals/data'
 
-export const PostPage: PostPageProps = async ({ params }) => {
-  const postPageData = await PostPageServer({ params })
-  return <PostPageClient {...postPageData} />
+import { PostPageClient }            from './post-page.client.js'
+import { runPostPageServerQuerires } from './hooks/index.js'
+
+const PostPage: PostPageProps = async ({ params }) => {
+  const serverQueryData = await runPostPageServerQuerires({ params })
+  const { uri } = params
+  return (
+    <PreloadQuery
+      query={GET_BLOG_POST}
+      variables={{
+        uri,
+      }}
+    >
+      <PostPageClient
+        // @ts-expect-error not assignable
+        params={params}
+        serverQueryData={serverQueryData}
+      />
+    </PreloadQuery>
+  )
 }
+
+export default PostPage

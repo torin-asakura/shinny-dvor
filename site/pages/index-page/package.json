@@ -10,6 +10,7 @@
   "dependencies": {
     "@fragments/footer-fragment": "workspace:*",
     "@fragments/navigation-fragment": "workspace:*",
+    "@globals/constants": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/articles-fragment": "workspace:*",
     "@site/hero-fragment": "workspace:*",
@@ -18,6 +19,7 @@
     "@site/works-examples-fragment": "workspace:*",
     "@ui/intersection-observer": "workspace:*",
     "@ui/layout": "workspace:*",
+    "@ui/seo": "workspace:*",
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {

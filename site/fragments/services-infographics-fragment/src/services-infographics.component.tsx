@@ -1,10 +1,11 @@
-import type { ServicesInfographicsProps } from './services-infographic.interface.js'
 import type { FC }                        from 'react'
 // TODO ?
 import type { LegacyRef }                 from 'react'
 
-import React                              from 'react'
+import type { ServicesInfographicsProps } from './services-infographic.interface.js'
+
 import { forwardRef }                     from 'react'
+import React                              from 'react'
 
 import { Box }                            from '@ui/layout'
 import { Wheel }                          from '@ui/wheel'

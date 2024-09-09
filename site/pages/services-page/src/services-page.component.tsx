@@ -1,13 +1,14 @@
-import type { ServicesPageProps } from './services-page.interface.js'
+import type { ServicesPageProps }       from './services-page.interface.js'
 
-import React                      from 'react'
+import React                            from 'react'
 
-import { ServicesPageClient }     from './services-page.client.js'
-import { ServicesPageServer }     from './services-page.server.js'
+import { ServicesPageClient }           from './services-page.client.js'
+import { runServicesPageServerQueries } from './hooks/index.js'
 
 const ServicesPage: ServicesPageProps = async () => {
-  const servicesPageData = await ServicesPageServer()
-  return <ServicesPageClient {...servicesPageData} />
+  const serverQueryData = await runServicesPageServerQueries()
+  // @ts-expect-error incorrect types
+  return <ServicesPageClient serverQueryData={serverQueryData} />
 }
 
 export default ServicesPage

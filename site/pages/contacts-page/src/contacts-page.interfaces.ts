@@ -1,11 +1,6 @@
 import type { SEOInt }  from '@globals/data'
 import type { DataInt } from '@globals/data'
 
-export interface SeoProps {
-  ogCover: string
-  SEO: SEOInt
-}
-
 export interface ContactsPageClientProps {
   ogCover: string
   SEO: SEOInt

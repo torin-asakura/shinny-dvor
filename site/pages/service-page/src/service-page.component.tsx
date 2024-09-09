@@ -1,13 +1,30 @@
-import type { ServicePageProps } from './service-page.interfaces.js'
+import type { ServicePageProps }       from './service-page.interfaces.js'
 
-import React                     from 'react'
+import React                           from 'react'
 
-import { ServicePageClient }     from './service-page.client.js'
-import { ServicePageServer }     from './service-page.server.js'
+import { GET_SERVICE_BY }              from '@globals/data'
+import { PreloadQuery }                from '@globals/data'
+
+import { ServicePageClient }           from './service-page.client.js'
+import { runServicePageServerQueries } from './hooks/index.js'
 
 const ServicePage: ServicePageProps = async ({ params }) => {
-  const servicePageData = await ServicePageServer({ params })
-  return <ServicePageClient {...servicePageData} />
+  const serverQueryData = await runServicePageServerQueries({ params })
+  const { uri } = params
+  return (
+    <PreloadQuery
+      query={GET_SERVICE_BY}
+      variables={{
+        uri,
+      }}
+    >
+      <ServicePageClient
+        // @ts-expect-error params is not assignable
+        params={params}
+        serverQueryData={serverQueryData}
+      />
+    </PreloadQuery>
+  )
 }
 
 export default ServicePage

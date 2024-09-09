@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 
-import React       from 'react'
 import { memo }    from 'react'
+import React       from 'react'
 
 import { Row }     from '@ui/layout'
 import { Column }  from '@ui/layout'

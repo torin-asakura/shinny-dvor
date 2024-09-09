@@ -9,8 +9,14 @@ const ServicesList: FC<ItemProps> = ({ services }) => (
   <>
     {services.map(({
       uri,
-      // @ts-expect-error type not exist
-      servicesParams: { title, description, price },
+      servicesParams: {
+        // @ts-expect-error type not exist
+        title,
+        // @ts-expect-error type not exist
+        description,
+        // @ts-expect-error type not exist
+        price,
+      },
     }) => (
       <Service
         key={uri}

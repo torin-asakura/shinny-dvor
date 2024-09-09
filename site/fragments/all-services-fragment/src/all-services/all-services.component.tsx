@@ -1,6 +1,7 @@
+import type { FC }               from 'react'
+
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
-import type { FC }               from 'react'
 
 import React                     from 'react'
 
