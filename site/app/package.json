@@ -28,7 +28,6 @@
   "devDependencies": {
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
-    "@globals/configs": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/contacts-page": "workspace:*",
     "@site/index-page": "workspace:*",
