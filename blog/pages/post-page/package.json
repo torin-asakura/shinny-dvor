@@ -11,6 +11,7 @@
     "@blog/articles-fragment": "workspace:*",
     "@fragments/footer-fragment": "workspace:*",
     "@fragments/navigation-fragment": "workspace:*",
+    "@globals/config": "workspace:*",
     "@globals/data": "workspace:*",
     "@ui/condition": "workspace:*",
     "@ui/layout": "workspace:*",
