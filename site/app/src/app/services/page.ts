@@ -1,2 +1,2 @@
 export { default } from '@site/services-page'
-export const revalidate = 3600
+export { revalidate } from '@site/services-page'
