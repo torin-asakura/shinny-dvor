@@ -37,6 +37,7 @@ const Navigation: FC<NavigationProps> = ({
   const [visible, setVisible] = useState<boolean>(false)
   const [drawer, setDrawer] = useState<boolean>(false)
 
+  const mainNavigationItem = extractFragment('contentAddons', 'main', navigationData)
   const navigationIndexItems = extractFragments(
     navigationItemsType,
     'contentAddons',
@@ -83,11 +84,11 @@ const Navigation: FC<NavigationProps> = ({
                 </Drawer>
                 <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
                 <Layout>
-                  <Logo path='/' color={getColor(active!, scrollY)} />
+                  <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
                 </Layout>
               </Box>
               <Layout display={['none', 'none', 'flex']}>
-                <Logo path='/' color={getColor(active!, scrollY)} />
+                <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
               </Layout>
               <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
                 <NavigationList
