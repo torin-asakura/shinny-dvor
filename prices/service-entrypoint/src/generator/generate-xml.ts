@@ -73,6 +73,8 @@ const generateXml = async (goodsData, goodsCategoryData) => {
 
   const xml = js2xml(YML, { compact: true, spaces: 2 })
 
+  logger.debug(`Endpoint: ${process.env.FILES_STORAGE_REGION}`)
+
   const s3Client = new S3Client({
     endpoint: process.env.FILES_STORAGE_HOST,
     region: process.env.FILES_STORAGE_REGION,
