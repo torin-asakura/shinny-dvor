@@ -76,8 +76,10 @@ const generateXml = async (goodsData, goodsCategoryData) => {
   const s3Client = new S3Client({
     endpoint: process.env.FILES_STORAGE_HOST,
     region: process.env.FILES_STORAGE_REGION,
-    // accessKeyId: process.env.YC_SA_KEY_ID,
-    // secretAccessKey: process.env.YC_SA_SECRET_KEY,
+    credentials: {
+      accessKeyId: process.env.YC_SA_KEY_ID as string,
+      secretAccessKey: process.env.YC_SA_SECRET_KEY as string,
+    },
   })
 
   try {
