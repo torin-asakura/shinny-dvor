@@ -1,6 +1,6 @@
 interface ImageData {
-  id: string | null
   url: string
+  id: string | null
 }
 
 const imagesData: Array<ImageData> = [
