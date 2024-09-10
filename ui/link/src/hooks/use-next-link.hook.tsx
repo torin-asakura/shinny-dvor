@@ -1,7 +1,8 @@
 import type { UseNextNavLinkType } from './use-next-link.interface.js'
 
-import { useRouter }               from 'next/navigation.js'
 import React                       from 'react'
+import { useRouter }               from 'next/navigation.js'
+import { usePathname }             from 'next/navigation.js'
 
 import { progressBar }             from '@ui/progress-bar'
 
@@ -10,12 +11,15 @@ export const useNextLink: UseNextNavLinkType = (Link, pathProp = 'path') => {
 
   return (props) => {
     const newPathname: string = props[pathProp]
+    const currentPathname = usePathname()
 
     const handleClick = (event: Event): void => {
       event.preventDefault()
-      progressBar.start()
-      if (router) {
-        router.push(newPathname)
+      if (currentPathname !== newPathname) {
+        progressBar.start()
+        if (router) {
+          router.push(newPathname)
+        }
       }
     }
 
