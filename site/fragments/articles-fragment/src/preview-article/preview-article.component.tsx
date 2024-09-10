@@ -1,6 +1,5 @@
-import type { FC }                  from 'react'
-
 import type { PreviewArticleProps } from './preview-article.interface.js'
+import type { FC }                  from 'react'
 
 import React                        from 'react'
 
@@ -19,8 +18,8 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
   const [hover, hoverProps] = useHover()
 
   return (
-    <Column fill {...hoverProps}>
-      <Box width={[300, 300, 405]} height={[200, 260, 260]} backgroundColor='gray'>
+    <Column maxWidth={[300, 300, 405]} fill {...hoverProps}>
+      <Box width='100%' height={[200, 260, 260]} backgroundColor='gray'>
         <ImageBlock src={featuredImage?.node.mediaItemUrl} alt={featuredImage?.node.altText} />
       </Box>
       <Layout flexBasis={24} />
