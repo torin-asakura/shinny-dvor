@@ -23,19 +23,19 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
         <ImageBlock src={featuredImage?.node.mediaItemUrl} alt={featuredImage?.node.altText} />
       </Box>
       <Layout flexBasis={24} />
-      <Layout width={300}>
+      <Layout width='100%'>
         <Text color={hover ? 'blue' : 'black'} lineHeight='grown'>
           {formattedDate(date)}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
-      <Layout width={300}>
+      <Layout width='100%'>
         <Text color={hover ? 'blue' : 'black'} fontWeight='medium' fontSize='big'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
-      <Row width={[300, 300, 405]} maxHeight={52}>
+      <Row width={[300, 300, '100%']} maxHeight={52}>
         <TextEllipsis lineHeight='medium' color='darkGray' overflow='hidden' lineClamp={2}>
           {normalizeString(excerpt)}
         </TextEllipsis>
