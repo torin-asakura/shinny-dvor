@@ -1,9 +1,8 @@
+import type { ArticlesProps } from './articles.interface.js'
 import type { FC }            from 'react'
 
-import type { ArticlesProps } from './articles.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
@@ -57,8 +56,13 @@ const Articles: FC<ArticlesProps> = forwardRef((
             <Carousel>
               {
                 // @ts-expect-error null | undefined
-                postsData.slice(0, 3).map(({ uri, title, date, excerpt, featuredImage }) => (
-                  <NextLink key={uri} path={`${linkBlog.contentAddons.content}/${uri}`}>
+                postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
+                  <NextLink
+                    // @ts-expect-error not assignable
+                    width={['auto', 'auto', '100%']}
+                    key={uri}
+                    path={`${linkBlog.contentAddons.content}/${uri}`}
+                  >
                     <PreviewArticle
                       title={title}
                       date={date}

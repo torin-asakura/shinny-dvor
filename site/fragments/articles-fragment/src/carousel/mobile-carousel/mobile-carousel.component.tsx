@@ -9,10 +9,10 @@ export const MobileCarousel: FC<PropsWithChildren> = ({ children }) => {
   const { carousel } = useCarousel({
     children,
     slidesPerView: 2,
-    spaceBetween: 290,
+    spaceBetween: 0,
     centered: true,
     height: 333,
-    width: 355,
+    width: 700,
     loop: true,
   })
 

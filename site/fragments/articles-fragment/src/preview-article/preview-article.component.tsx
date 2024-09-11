@@ -1,6 +1,5 @@
-import type { FC }                  from 'react'
-
 import type { PreviewArticleProps } from './preview-article.interface.js'
+import type { FC }                  from 'react'
 
 import React                        from 'react'
 
@@ -19,24 +18,24 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
   const [hover, hoverProps] = useHover()
 
   return (
-    <Column fill {...hoverProps}>
-      <Box width={[300, 300, 405]} height={[200, 260, 260]} backgroundColor='gray'>
+    <Column maxWidth={[300, 300, 405]} fill {...hoverProps}>
+      <Box width='100%' height={[200, 260, 260]} backgroundColor='gray'>
         <ImageBlock src={featuredImage?.node.mediaItemUrl} alt={featuredImage?.node.altText} />
       </Box>
       <Layout flexBasis={24} />
-      <Layout width={300}>
+      <Layout width='100%'>
         <Text color={hover ? 'blue' : 'black'} lineHeight='grown'>
           {formattedDate(date)}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
-      <Layout width={300}>
+      <Layout width='100%'>
         <Text color={hover ? 'blue' : 'black'} fontWeight='medium' fontSize='big'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
-      <Row width={[300, 300, 405]} maxHeight={52}>
+      <Row width={[300, 300, '100%']} maxHeight={52}>
         <TextEllipsis lineHeight='medium' color='darkGray' overflow='hidden' lineClamp={2}>
           {normalizeString(excerpt)}
         </TextEllipsis>
