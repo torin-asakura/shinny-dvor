@@ -8,11 +8,11 @@ import { useCarousel }            from '@ui/carousel'
 export const TabletCarousel: FC<PropsWithChildren> = ({ children }) => {
   const { carousel } = useCarousel({
     children,
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 0,
     centered: true,
     height: 333,
-    width: 700,
+    width: 900,
     loop: true,
   })
 
