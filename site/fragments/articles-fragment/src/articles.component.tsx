@@ -56,9 +56,9 @@ const Articles: FC<ArticlesProps> = forwardRef((
             <Carousel>
               {
                 // @ts-expect-error null | undefined
-                postsData.slice(0, 3).map(({ uri, title, date, excerpt, featuredImage }) => (
+                postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
                   <NextLink
-                    width='100%'
+                    width={['auto', 'auto', '100%']}
                     key={uri}
                     path={`${linkBlog.contentAddons.content}/${uri}`}
                   >
