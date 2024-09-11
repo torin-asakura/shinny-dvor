@@ -58,6 +58,7 @@ const Articles: FC<ArticlesProps> = forwardRef((
                 // @ts-expect-error null | undefined
                 postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
                   <NextLink
+                    // @ts-expect-error not assignable
                     width={['auto', 'auto', '100%']}
                     key={uri}
                     path={`${linkBlog.contentAddons.content}/${uri}`}
