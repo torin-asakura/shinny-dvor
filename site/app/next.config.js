@@ -8,6 +8,16 @@ const __dirname = dirname(__filename)
 
 /** @type {import('next').NextConfig} */
 export default {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'wp.shdvor.pro',
+        port: '',
+        pathname: '/wp-content/uploads/**',
+      },
+    ],
+  },
   experimental: {
     externalDir: true,
     outputFileTracingRoot: join(__dirname, './'),

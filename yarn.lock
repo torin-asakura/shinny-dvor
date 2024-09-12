@@ -293,17 +293,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/image@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/image@npm:0.1.1"
-  peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-  checksum: 10/bb6e9e0ced6d5c318a7d5733950611968613db53cbc98d36bbcb52ccbd38aa9d1596afb7ad827f569cfb96af44e303817f56f5fddf5a79ed437938323d6df89d
-  languageName: node
-  linkType: hard
-
 "@atls-ui-parts/input@npm:0.1.1":
   version: 0.1.1
   resolution: "@atls-ui-parts/input@npm:0.1.1"
@@ -7218,16 +7207,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
-    "@atls-ui-parts/image": "npm:0.1.1"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    next: "npm:14.2.5"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
+    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"

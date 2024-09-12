@@ -43,7 +43,8 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
           zIndex='-1'
         >
           <ImageBlock
-            width='100%'
+            width={1606}
+            height={480}
             src={contentAddons?.image.mediaItemUrl}
             alt={contentAddons?.image.altText}
             style={{ opacity: 0.5 }}

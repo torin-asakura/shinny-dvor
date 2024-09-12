@@ -20,7 +20,12 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
   return (
     <Column maxWidth={[300, 300, 405]} fill {...hoverProps}>
       <Box width='100%' height={[200, 260, 260]} backgroundColor='gray'>
-        <ImageBlock src={featuredImage?.node.mediaItemUrl} alt={featuredImage?.node.altText} />
+        <ImageBlock
+          width={405}
+          height={260}
+          src={featuredImage?.node.mediaItemUrl}
+          alt={featuredImage?.node.altText}
+        />
       </Box>
       <Layout flexBasis={24} />
       <Layout width='100%'>
