@@ -1,10 +1,9 @@
+import type { ItemProps }   from './item.interface.js'
 import type { FC }          from 'react'
 
-import type { ItemProps }   from './item.interface.js'
-
+import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
-import React                from 'react'
 
 import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'
@@ -62,7 +61,7 @@ const Item: FC<ItemProps> = ({ uri, averagePrice, serviceName, price, image, add
             <Column width='100%' alignItems='center'>
               <Layout flexBasis={32} flexShrink={0} />
               <Box minWidth={[180, 180, 232]} minHeight={[180, 180, 232]}>
-                <ImageBlock src={image.sourceUrl} alt={image.altText} />
+                <ImageBlock width={232} height={232} src={image.sourceUrl} alt={image.altText} />
               </Box>
               <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
               <Row>

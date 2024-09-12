@@ -1,6 +1,5 @@
-import type { FC }         from 'react'
-
 import type { ImageProps } from './image.interface.js'
+import type { FC }         from 'react'
 
 import React               from 'react'
 
@@ -11,9 +10,11 @@ import { Container }       from './container/index.js'
 const Image: FC<ImageProps> = ({ wheelImg }) => (
   <Container>
     <ImageBlock
-      width='100%'
-      height='100%'
+      width={440}
+      height={440}
+      // @ts-expect-error undefined
       src={wheelImg.get('sourceUrl')}
+      // @ts-expect-error undefined
       alt={wheelImg.get('altText')}
     />
   </Container>

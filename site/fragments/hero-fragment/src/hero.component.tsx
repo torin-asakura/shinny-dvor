@@ -1,6 +1,6 @@
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -74,6 +74,8 @@ const Hero = forwardRef((
       >
         <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock
+            width={1440}
+            height={800}
             src={backgroundImage.get('url')}
             alt={backgroundImage.get('altText')}
             style={{ opacity: 0.5 }}
