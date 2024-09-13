@@ -8,7 +8,6 @@ import { AllArticles }           from '@blog/articles-fragment'
 import { Footer }                from '@fragments/footer-fragment'
 import { Navigation }            from '@fragments/navigation-fragment'
 import { Column }                from '@ui/layout'
-import { Seo }                   from '@ui/seo'
 import { getContactsData }       from '@globals/data'
 import { getBlogPostsData }      from '@globals/data'
 import { getNavigationData }     from '@globals/data'
@@ -19,10 +18,7 @@ import { getServicesData }       from '@globals/data'
 
 import { IndexPageProps }        from './index-page.interfaces.js'
 
-// @ts-expect-error not exist
-export const IndexPageClient: FC<IndexPageProps> = ({ serverQueryData }) => {
-  const { seoData, ogCover } = serverQueryData
-
+export const IndexPageClient: FC<IndexPageProps> = () => {
   const { contacts } = getContactsData()
   // TODO ошибка тут
   const { posts } = getBlogPostsData()
@@ -34,7 +30,6 @@ export const IndexPageClient: FC<IndexPageProps> = ({ serverQueryData }) => {
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo ogCover={ogCover} SEO={seoData} />
       <Navigation
         navigationItemsType='blog-nav-item'
         backgroundColor='white'

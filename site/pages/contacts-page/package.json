@@ -17,7 +17,6 @@
     "@ui/condition": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/link": "workspace:*",
-    "@ui/seo": "workspace:*",
     "@ui/social-links": "workspace:*",
     "@ui/text": "workspace:*"
   },

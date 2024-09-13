@@ -9,7 +9,7 @@ import { PostPageClient }            from './post-page.client.js'
 import { runPostPageServerQuerires } from './hooks/index.js'
 
 const PostPage: PostPageProps = async ({ params }) => {
-  const serverQueryData = await runPostPageServerQuerires({ params })
+  await runPostPageServerQuerires({ params })
   const { uri } = params
   return (
     <PreloadQuery
@@ -21,7 +21,6 @@ const PostPage: PostPageProps = async ({ params }) => {
       <PostPageClient
         // @ts-expect-error not assignable
         params={params}
-        serverQueryData={serverQueryData}
       />
     </PreloadQuery>
   )

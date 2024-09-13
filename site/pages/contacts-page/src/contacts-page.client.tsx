@@ -3,8 +3,6 @@
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 import type { FC }                      from 'react'
 
-import { Seo }                          from '@ui/seo'
-
 import React                            from 'react'
 
 import { Footer }                       from '@fragments/footer-fragment'
@@ -20,8 +18,6 @@ import { getServicesData }              from '@globals/data'
 
 // @ts-expect-error not exist
 export const ContactsPageClient: FC<ContactsPageClientProps> = ({ serverQueryData }) => {
-  const { ogCover, seoData } = serverQueryData
-
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
@@ -31,7 +27,6 @@ export const ContactsPageClient: FC<ContactsPageClientProps> = ({ serverQueryDat
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo ogCover={ogCover} SEO={seoData} />
       <Navigation
         active={2}
         navigationData={navigation}
