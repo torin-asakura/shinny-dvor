@@ -3,8 +3,6 @@
 import type { ServicesPageClientProps } from './services-page.interface.js'
 import type { FC }                      from 'react'
 
-import { Seo }                          from '@ui/seo'
-
 import React                            from 'react'
 
 import { Footer }                       from '@fragments/footer-fragment'
@@ -18,10 +16,7 @@ import { getFragmentsData }             from '@globals/data'
 import { getNavigationData }            from '@globals/data'
 import { getServicesData }              from '@globals/data'
 
-export const ServicesPageClient: FC<ServicesPageClientProps> = ({ serverQueryData }) => {
-  // @ts-expect-error not exist
-  const { seoData, ogCover } = serverQueryData
-
+export const ServicesPageClient: FC<ServicesPageClientProps> = () => {
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
@@ -31,7 +26,6 @@ export const ServicesPageClient: FC<ServicesPageClientProps> = ({ serverQueryDat
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo SEO={seoData} ogCover={ogCover} />
       <Navigation
         active={2}
         navigationData={navigation}

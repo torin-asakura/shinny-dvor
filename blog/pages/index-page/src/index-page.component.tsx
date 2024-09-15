@@ -5,9 +5,9 @@ import { IndexPageClient }               from './index-page.client.js'
 import { runBlogIndexPageServerQueries } from './hooks/index.js'
 
 const IndexPage = async () => {
-  const serverQueryData = await runBlogIndexPageServerQueries()
+  await runBlogIndexPageServerQueries()
   // @ts-expect-error not assignable
-  return <IndexPageClient serverQueryData={serverQueryData} />
+  return <IndexPageClient />
 }
 
 export default memo(IndexPage)

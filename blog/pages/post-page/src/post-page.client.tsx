@@ -9,7 +9,6 @@ import { Article }                  from '@blog/articles-fragment'
 import { Footer }                   from '@fragments/footer-fragment'
 import { Navigation }               from '@fragments/navigation-fragment'
 import { Column }                   from '@ui/layout'
-import { Seo }                      from '@ui/seo'
 import { getContactsData }          from '@globals/data'
 import { getPostData }              from '@globals/data'
 import { getNavigationData }        from '@globals/data'
@@ -19,8 +18,7 @@ import { getCarBodiesData }         from '@globals/data'
 import { getServicesData }          from '@globals/data'
 
 // @ts-expect-error not exist
-export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, params }) => {
-  const { seoData, ogCover } = serverQueryData
+export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { uri } = params
 
   const { navigation } = getNavigationData()
@@ -33,7 +31,6 @@ export const PostPageClient: FC<PostPageClientProps> = ({ serverQueryData, param
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo ogCover={ogCover} SEO={seoData} />
       <Navigation
         navigationItemsType='blog-nav-item'
         backgroundColor='white'

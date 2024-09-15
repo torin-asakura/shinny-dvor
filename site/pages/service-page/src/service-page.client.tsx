@@ -3,8 +3,6 @@
 import type { ServicePageClientProps } from './service-page.interfaces.js'
 import type { FC }                     from 'react'
 
-import { Seo }                         from '@ui/seo'
-
 import React                           from 'react'
 
 import { Footer }                      from '@fragments/footer-fragment'
@@ -22,8 +20,7 @@ import { getNavigationData }           from '@globals/data'
 import { getBlogPostsData }            from '@globals/data'
 
 // @ts-expect-error param is not exist
-export const ServicePageClient: FC<ServicePageClientProps> = ({ serverQueryData, params }) => {
-  const { seoData, ogCover } = serverQueryData
+export const ServicePageClient: FC<ServicePageClientProps> = ({ params }) => {
   const { uri } = params
 
   const { navigation } = getNavigationData()
@@ -37,7 +34,6 @@ export const ServicePageClient: FC<ServicePageClientProps> = ({ serverQueryData,
 
   return (
     <Column width='100%' alignItems='center'>
-      <Seo SEO={seoData} ogCover={ogCover} />
       <Navigation
         active={2}
         navigationData={navigation}
