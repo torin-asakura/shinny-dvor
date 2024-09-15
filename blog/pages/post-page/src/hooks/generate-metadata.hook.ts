@@ -4,29 +4,27 @@ import { getServerClient } from '@globals/data'
 import { getSeoMetadata }  from '@globals/data'
 
 const generateMetadata = async ({ params }: { params: { uri: string } }) => {
-  // const client = getServerClient()
-  // const { uri } = params
-  //
-  // const {
-  //   data: {
-  //     postBy: { seo: seoData },
-  //   },
-  // } = await client.query({ query: GET_PAGE_SEO, variables: { uri } })
-  //
-  // const {
-  //   data: {
-  //     mediaItemBy: { sourceUrl: ogCover },
-  //   },
-  // } = await client.query({
-  //   query: GET_PREVIEW,
-  //   variables: {
-  //     uri: '/cover/',
-  //   },
-  // })
-  //
-  // return getSeoMetadata({ ogCover, seoData })
+  const { uri } = params
+  const client = getServerClient()
 
-  return { title: 'bla' }
+  const {
+    data: {
+      postBy: { seo: seoData },
+    },
+  } = await client.query({ query: GET_PAGE_SEO, variables: { uri } })
+
+  const {
+    data: {
+      mediaItemBy: { sourceUrl: ogCover },
+    },
+  } = await client.query({
+    query: GET_PREVIEW,
+    variables: {
+      uri: '/cover/',
+    },
+  })
+
+  return getSeoMetadata({ ogCover, seoData })
 }
 
 export { generateMetadata }
