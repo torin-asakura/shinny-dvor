@@ -3,6 +3,10 @@
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
+import React                         from 'react'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
+
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
 import { Articles }                  from '@site/articles-fragment'
@@ -22,13 +26,8 @@ import { getUiData }                 from '@globals/data'
 import { getWorkResultsData }        from '@globals/data'
 import { getCarBodiesData }          from '@globals/data'
 
-import React                         from 'react'
-import { useRef }                    from 'react'
-import { useState }                  from 'react'
-
 import { useIndexPageClient }        from './hooks/index.js'
 
-// @ts-expect-error not exist
 export const IndexPageClient: FC<IndexPageClientProps> = () => {
   const { navigation } = getNavigationData()
   const { fragments } = getFragmentsData()

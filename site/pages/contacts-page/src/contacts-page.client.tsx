@@ -16,7 +16,6 @@ import { getAvailableRadiiData }        from '@globals/data'
 import { getCarBodiesData }             from '@globals/data'
 import { getServicesData }              from '@globals/data'
 
-// @ts-expect-error not exist
 export const ContactsPageClient: FC<ContactsPageClientProps> = () => {
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
