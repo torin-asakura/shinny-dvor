@@ -3,10 +3,6 @@
 import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
-import React                         from 'react'
-import { useRef }                    from 'react'
-import { useState }                  from 'react'
-
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
 import { Articles }                  from '@site/articles-fragment'
@@ -26,12 +22,14 @@ import { getUiData }                 from '@globals/data'
 import { getWorkResultsData }        from '@globals/data'
 import { getCarBodiesData }          from '@globals/data'
 
-import { useIndexPageClient }        from './hooks/use-index-page-client.hook.js'
+import React                         from 'react'
+import { useRef }                    from 'react'
+import { useState }                  from 'react'
+
+import { useIndexPageClient }        from './hooks/index.js'
 
 // @ts-expect-error not exist
-export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) => {
-  const { seoData, ogCover } = serverQueryData
-
+export const IndexPageClient: FC<IndexPageClientProps> = () => {
   const { navigation } = getNavigationData()
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
@@ -54,7 +52,6 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ serverQueryData }) =
     <Column ref={headerRef} width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
-          <Seo ogCover={ogCover} SEO={seoData} />
           <Navigation
             active={active}
             navigationData={navigation}
