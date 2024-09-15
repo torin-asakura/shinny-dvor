@@ -6,9 +6,9 @@ import { ContactsPageClient }           from './contacts-page.client.js'
 import { runContactsPageServerQueries } from './hooks/index.js'
 
 const ContactsPage: ContactsPageProps = async () => {
-  const serverQueryData = await runContactsPageServerQueries()
+  await runContactsPageServerQueries()
   // @ts-expect-error not assignable
-  return <ContactsPageClient serverQueryData={serverQueryData} />
+  return <ContactsPageClient />
 }
 
 export default ContactsPage
