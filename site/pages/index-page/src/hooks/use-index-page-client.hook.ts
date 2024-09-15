@@ -1,8 +1,8 @@
 import type { UseIndexPageClientType } from './use-index-page-client.interface.js'
 
-import { useEffect }                   from 'react'
-
 import { useIntersectionObserver }     from '@ui/intersection-observer'
+
+import { useEffect }                   from 'react'
 
 export const useIndexPageClient: UseIndexPageClientType = ({
   isLoaded,
