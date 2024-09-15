@@ -16,7 +16,7 @@ import { GRAPHQL_API_URL }         from './apollo.constants.js'
 const makeClient = () => {
   const httpLink = new HttpLink({
     uri: GRAPHQL_API_URL,
-    credentials: 'include',
+    credentials: 'same-origin',
     fetchOptions: { cache: 'force-cache' },
   })
 
