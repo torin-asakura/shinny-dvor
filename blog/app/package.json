@@ -44,6 +44,7 @@
     "typescript": "5.4.2"
   },
   "packConfiguration": {
+    "buildpackVersion": "0.1.0",
     "builderTag": "bookworm-18.20"
   }
 }
