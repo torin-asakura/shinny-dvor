@@ -45,6 +45,6 @@
   },
   "packConfiguration": {
     "buildpackVersion": "0.1.0",
-    "builderTag": "bookworm-18.20"
+    "builderTag": "bookworm-20.17"
   }
 }
