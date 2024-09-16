@@ -42,5 +42,8 @@
     "@types/react-helmet": "6.1.11",
     "@types/styled-system": "^5",
     "typescript": "5.4.2"
+  },
+  "packConfiguration": {
+    "builderTag": "bookworm-18.20"
   }
 }
