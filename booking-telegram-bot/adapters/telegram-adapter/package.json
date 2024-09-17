@@ -1,0 +1,11 @@
+{
+  "name": "@booking-telegram-bot/telegram-adapter-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "main": "src/index.ts",
+  "dependencies": {
+    "@nestjs/common": "10.4.2",
+    "tgsnake": "3.3.1"
+  }
+}
