@@ -2616,6 +2616,9 @@ __metadata:
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     tgsnake: "npm:3.3.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    tgsnake: "*"
   languageName: unknown
   linkType: soft
 
@@ -7344,6 +7347,18 @@ __metadata:
   dependencies:
     "@swc/counter": "npm:^0.1.3"
   checksum: 10/92dbbc70cd068ea30fb6fbdc1ae8599d6c058a5d09b2923d6e4e24fab5ad7c86a19dd01f349a8e03e300a9321e06911a24df18303b40e307fbd4109372cef2ef
+  languageName: node
+  linkType: hard
+
+"@tgsnake/core@npm:*":
+  version: 1.13.9
+  resolution: "@tgsnake/core@npm:1.13.9"
+  dependencies:
+    "@tgsnake/log": "npm:latest"
+    async-mutex: "npm:0.5.0"
+    big-integer: "npm:1.6.52"
+    socks: "npm:2.8.3"
+  checksum: 10/9b41aaeb0a3c23fdb9906b368f94ef891cb6c292dff7b2b05aac47a9a4e49770537b50c72efa085798d963f5715b2f9fda54ece77643f97d79fa020beb33e82c
   languageName: node
   linkType: hard
 
