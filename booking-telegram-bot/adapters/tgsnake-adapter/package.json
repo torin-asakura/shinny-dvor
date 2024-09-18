@@ -1,5 +1,5 @@
 {
-  "name": "@booking-telegram-bot/telegram-adapter-module",
+  "name": "@booking-telegram-bot/tgsnake-adapter-module",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",

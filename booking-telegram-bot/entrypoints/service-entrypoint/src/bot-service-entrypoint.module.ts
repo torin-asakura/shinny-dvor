@@ -1,7 +1,7 @@
-import { TelegramAdapterModule } from '@booking-telegram-bot/telegram-adapter-module'
-import { Module }                from '@nestjs/common'
+import { TgsnakeAdapterModule } from '@booking-telegram-bot/tgsnake-adapter-module'
+import { Module }               from '@nestjs/common'
 
 @Module({
-  imports: [TelegramAdapterModule.register()],
+  imports: [TgsnakeAdapterModule.register()],
 })
 export class BotServiceEntrypointModule {}
