@@ -1,0 +1,16 @@
+{
+  "name": "@telegram-bot/application-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@nestjs/common": "10.4.2"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "*"
+  }
+}
