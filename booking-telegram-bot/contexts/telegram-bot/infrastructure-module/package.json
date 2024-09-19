@@ -7,14 +7,15 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "dependencies": {
+    "@telegram-bot/application-module": "workspace:*"
+  },
   "devDependencies": {
     "@booking-telegram-bot/tgsnake-adapter-module": "workspace:*",
-    "@nestjs/common": "10.4.2",
-    "@telegram-bot/application-module": "workspace:*"
+    "@nestjs/common": "10.4.2"
   },
   "peerDependencies": {
     "@booking-telegram-bot/tgsnake-adapter-module": "*",
-    "@nestjs/common": "*",
-    "@telegram-bot/application-module": "*"
+    "@nestjs/common": "*"
   }
 }

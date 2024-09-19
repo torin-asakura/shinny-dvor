@@ -5,15 +5,14 @@ import { Snake }          from 'tgsnake'
 import { TGSHAKE_CONFIG } from '../config/index.js'
 
 @Injectable()
-export class TgsnakeAdapterService {
-  // constructor(@Inject(FFMPEG_ADAPTER_OPTIONS) private readonly options: FfmpegAdapterOptions) {
+export class TgsnakeAdapterService extends Snake {
   constructor() {
-    this.client = new Snake(TGSHAKE_CONFIG)
-    this.client.run()
+    super(TGSHAKE_CONFIG)
+    this.run()
   }
 
   async listenMessage() {
-    this.client.on('msg.text', (update) => {
+    this.on('msg.text', (update) => {
       return update.msg?.reply('I hear You!')
     })
   }
