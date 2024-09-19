@@ -1,6 +1,8 @@
 import { NestLogger }                 from '@atls/nestjs-logger'
 import { NestFactory }                from '@nestjs/core'
 
+import { StartCommandProcessor }      from '@telegram-bot/infrastructure-module'
+
 import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'
 
 declare const module: {
@@ -17,6 +19,9 @@ const bootstrap = async () => {
   app.enableShutdownHooks()
 
   await app.listen(3000)
+
+  const processor = app.get(StartCommandProcessor)
+  await processor.process()
 
   if (module.hot) {
     module.hot.accept()
