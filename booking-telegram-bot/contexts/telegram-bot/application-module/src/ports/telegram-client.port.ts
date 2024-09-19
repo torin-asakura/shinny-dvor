@@ -1,3 +1,3 @@
 export abstract class TelegramClientPort {
-  abstract listenMessage(): any
+  abstract listen(): any
 }
