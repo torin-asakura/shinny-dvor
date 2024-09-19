@@ -1,1 +1,1 @@
-export * from './part-a0.service.js'
+export * from './tgsnake-adapter.service.js'

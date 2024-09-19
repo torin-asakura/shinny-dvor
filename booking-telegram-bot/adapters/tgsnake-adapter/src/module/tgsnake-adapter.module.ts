@@ -1,15 +1,19 @@
-import { Module }        from '@nestjs/common'
+import * as services from '../services/index.js'
 
-import { TgsnakeModule } from './tgsnake.module.js'
+import { Module }    from '@nestjs/common'
 
 @Module({})
 export class TgsnakeAdapterModule {
-  static register() {
+  // TODO provide tgsnake config options
+  static registerAsync() {
+    const serviceProviders = Object.values(services)
+    const providers = [...serviceProviders]
+
     return {
       global: true,
-      // providers: [TestService, ...tgsnakeProviders],
       module: TgsnakeAdapterModule,
-      imports: [TgsnakeModule.forRoot()],
+      providers: [...providers],
+      exports: [...providers],
     }
   }
 }
