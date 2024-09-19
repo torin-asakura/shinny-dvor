@@ -2600,6 +2600,7 @@ __metadata:
     "@nestjs/platform-express": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
     "@telegram-bot/infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
     amqp-connection-manager: "npm:4.1.14"
@@ -7371,7 +7372,6 @@ __metadata:
   peerDependencies:
     "@booking-telegram-bot/tgsnake-adapter-module": "*"
     "@nestjs/common": "*"
-    "@telegram-bot/application-module": "*"
   languageName: unknown
   linkType: soft
 
