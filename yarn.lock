@@ -2600,6 +2600,8 @@ __metadata:
     "@nestjs/platform-express": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
+    "@telegram-bot/infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
     amqp-connection-manager: "npm:4.1.14"
     amqplib: "npm:0.10.4"
@@ -7349,6 +7351,30 @@ __metadata:
   checksum: 10/92dbbc70cd068ea30fb6fbdc1ae8599d6c058a5d09b2923d6e4e24fab5ad7c86a19dd01f349a8e03e300a9321e06911a24df18303b40e307fbd4109372cef2ef
   languageName: node
   linkType: hard
+
+"@telegram-bot/application-module@workspace:*, @telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module":
+  version: 0.0.0-use.local
+  resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+  peerDependencies:
+    "@nestjs/common": "*"
+  languageName: unknown
+  linkType: soft
+
+"@telegram-bot/infrastructure-module@workspace:*, @telegram-bot/infrastructure-module@workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@telegram-bot/infrastructure-module@workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"
+  dependencies:
+    "@booking-telegram-bot/tgsnake-adapter-module": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
+  peerDependencies:
+    "@booking-telegram-bot/tgsnake-adapter-module": "*"
+    "@nestjs/common": "*"
+    "@telegram-bot/application-module": "*"
+  languageName: unknown
+  linkType: soft
 
 "@tgsnake/core@npm:*":
   version: 1.13.9
