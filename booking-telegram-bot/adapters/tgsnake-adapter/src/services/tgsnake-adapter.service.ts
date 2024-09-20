@@ -1,3 +1,4 @@
+import crypto             from 'node:crypto'
 import { Injectable }     from '@nestjs/common'
 import { Snake }          from 'tgsnake'
 
@@ -18,6 +19,10 @@ export class TgsnakeAdapterService extends Snake {
     const reply = async (ctx, text) => {
       return await ctx.message.reply(text)
     }
+
+      // TODO to globals
+      const randomHex = crypto.randomBytes(4).toString('hex')
+      const randomBigInt = BigInt(parseInt(randomHex, 16))
 
     const runConversationA1 = async (ctx) => {
       await reply(ctx, 'start conversation')
