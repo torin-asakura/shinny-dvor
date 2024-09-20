@@ -4,6 +4,9 @@ import { Snake }          from 'tgsnake'
 
 import { TGSHAKE_CONFIG } from '../config/index.js'
 
+// TODO all text to locales
+// check migration bot maybe
+
 @Injectable()
 export class TgsnakeAdapterService extends Snake {
   constructor() {
@@ -12,8 +15,21 @@ export class TgsnakeAdapterService extends Snake {
   }
 
   async listenMessage() {
-    this.on('msg.text', (update) => {
-      return update.msg?.reply('I hear You!')
+    // TODO interfaces
+    const reply = async (ctx, text) => {
+      return ctx.message.reply(text)
+    }
+
+    this.cmd('start', async (ctx) => {
+      reply(ctx, 'command start')
+    })
+
+    this.cmd('help', async (ctx) => {
+      reply(ctx, 'command help')
+    })
+
+    this.on('msg.text', (ctx) => {
+      return reply(ctx, 'message received')
     })
   }
 }
