@@ -39,6 +39,11 @@ export class TgsnakeAdapterService extends Snake {
         })
       )
     }
+
+    const removeConversation = async (ctx) => {
+      this.conversation.remove(ctx.message.chat.id)
+    }
+
     const runConversationA1 = async (ctx) => {
       await reply(ctx, 'start conversation')
       const conversation = this.conversation.create(ctx.message.chat.id)
