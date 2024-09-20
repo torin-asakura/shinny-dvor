@@ -1,7 +1,8 @@
 'use client'
 
-import type { ServicesPageClientProps } from './services-page.interface.js'
 import type { FC }                      from 'react'
+
+import type { ServicesPageClientProps } from './services-page.interface.js'
 
 import React                            from 'react'
 

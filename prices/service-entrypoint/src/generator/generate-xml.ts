@@ -1,7 +1,6 @@
 import { Logger }           from '@atls/logger'
 import { S3Client }         from '@aws-sdk/client-s3'
 import { PutObjectCommand } from '@aws-sdk/client-s3'
-
 import { js2xml }           from 'xml-js'
 
 import { imagesData }       from '../images-data/index.js'

@@ -1,6 +1,6 @@
-import * as services from '../services/index.js'
-
 import { Module }    from '@nestjs/common'
+
+import * as services from '../services/index.js'
 
 @Module({})
 export class TgsnakeAdapterModule {

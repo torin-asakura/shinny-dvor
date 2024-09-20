@@ -1,8 +1,8 @@
-import React                   from 'react'
 import { FC }                  from 'react'
 import { Suspense }            from 'react'
 import { PropsWithChildren }   from 'react'
 import { memo }                from 'react'
+import React                   from 'react'
 
 import { ApolloWrapper }       from '@globals/data'
 import { Gtag }                from '@ui/gtag'

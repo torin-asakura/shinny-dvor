@@ -8,7 +8,6 @@ import { ApolloClient }            from '@apollo/experimental-nextjs-app-support
 import { ApolloNextAppProvider }   from '@apollo/experimental-nextjs-app-support'
 import { InMemoryCache }           from '@apollo/experimental-nextjs-app-support'
 import { defaultDataIdFromObject } from '@apollo/client'
-
 import React                       from 'react'
 
 import { GRAPHQL_API_URL }         from './apollo.constants.js'

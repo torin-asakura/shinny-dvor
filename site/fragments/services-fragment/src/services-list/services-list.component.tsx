@@ -1,5 +1,6 @@
-import type { ItemProps } from './services-list.interface.js'
 import type { FC }        from 'react'
+
+import type { ItemProps } from './services-list.interface.js'
 
 import React              from 'react'
 

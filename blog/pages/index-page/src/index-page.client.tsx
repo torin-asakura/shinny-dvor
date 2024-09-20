@@ -1,8 +1,8 @@
 // move it directive to fragment level
 'use client'
 
-import React                     from 'react'
 import { FC }                    from 'react'
+import React                     from 'react'
 
 import { AllArticles }           from '@blog/articles-fragment'
 import { Footer }                from '@fragments/footer-fragment'

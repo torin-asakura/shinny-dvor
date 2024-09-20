@@ -1,5 +1,6 @@
 import { NestLogger }                 from '@atls/nestjs-logger'
 import { NestFactory }                from '@nestjs/core'
+
 import { BotEventProcessor }          from '@telegram-bot/infrastructure-module'
 
 import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'

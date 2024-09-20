@@ -1,5 +1,6 @@
-import type { PreviewArticleProps } from './preview-article.interface.js'
 import type { FC }                  from 'react'
+
+import type { PreviewArticleProps } from './preview-article.interface.js'
 
 import React                        from 'react'
 
