@@ -1,5 +1,7 @@
 import crypto             from 'node:crypto'
+
 import { Injectable }     from '@nestjs/common'
+
 import { Snake }          from 'tgsnake'
 import { Raw }            from 'tgsnake'
 
@@ -45,18 +47,28 @@ export class TgsnakeAdapterService extends Snake {
     }
 
     const runConversationA1 = async (ctx) => {
-      await reply(ctx, 'start conversation')
       const conversation = this.conversation.create(ctx.message.chat.id)
-      await reply(ctx, 'input a')
+      await sendMessage(ctx, 'start conversation')
 
-      // await reply(ctx, 'input kuzov (need to query. look at site form)')
-      // await reply(ctx, 'answer with keyboard button')
-      // await reply(ctx, 'with cancel button')
-      // await reply(ctx, 'check correct answer')
+      // TODO Q: name? - save it from context
+      // TODO Q: phone? - есть кнопка в telegram api - типо поделиться контактом - сделать опциональной
 
-      const response1 = await conversation.wait('msg.text')
-      await reply(response1, 'input b')
+      // TODO keyboard with cancel button
+      await sendMessage(ctx, 'kuzov auto quesiton*')
 
+      // TODO R: check response
+      const response1 = await conversation.wait('msg.text', ({ message }) => {
+        if (message.text.toLowerCase() === 'b') {
+          return true
+        }
+        message.reply('Input B')
+        return false
+      })
+
+      // TODO keyboard with cancel button
+      await sendMessage(ctx, 'diameter coles*')
+
+      // TODO R: check response
       const response2 = await conversation.wait('msg.text', (update) => {
         if (update.message.text.toLowerCase() === 'b') {
           return true
@@ -65,13 +77,39 @@ export class TgsnakeAdapterService extends Snake {
         return false
       })
 
-      response2.message.reply('Done')
+      // TODO keyboard with cancel button
+      await sendMessage(ctx, 'tip remonta*')
 
-      this.conversation.remove(ctx.message.chat.id)
+      // TODO R: check response
+      const response3 = await conversation.wait('msg.text', (update) => {
+        if (update.message.text.toLowerCase() === 'b') {
+          return true
+        }
+        update.message.reply('Input B')
+        return false
+      })
+
+      // TODO keyboard with cancel and skip button
+      await sendMessage(ctx, 'commentary*')
+
+      // TODO R: check response
+      const response4 = await conversation.wait('msg.text', (update) => {
+        if (update.message.text.toLowerCase() === 'b') {
+          return true
+        }
+        update.message.reply('Input B')
+        return false
+      })
+
+      await sendMessage(ctx, 'done')
+      await sendMessage(ctx, 'предложение отменить или перенести запись')
+      await sendMessage(ctx, 'ссылки на оператора (другой чат)')
+
+      removeConversation(ctx)
     }
 
     this.cmd('start', async (ctx) => {
-      // TODO remove any conversation, than:
+      removeConversation(ctx)
       await reply(ctx, 'welcome message')
       await runConversationA1(ctx)
     })
@@ -81,7 +119,7 @@ export class TgsnakeAdapterService extends Snake {
     })
 
     this.on('msg.text', async (ctx) => {
-      if (!this.conversation.conversation.size) {
+      if (!this.conversation?.conversation?.size) {
         await runConversationA1(ctx)
       }
     })
