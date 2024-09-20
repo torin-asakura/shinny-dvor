@@ -1,6 +1,7 @@
 import crypto             from 'node:crypto'
 import { Injectable }     from '@nestjs/common'
 import { Snake }          from 'tgsnake'
+import { Raw }            from 'tgsnake'
 
 import { TGSHAKE_CONFIG } from '../config/index.js'
 
@@ -20,10 +21,24 @@ export class TgsnakeAdapterService extends Snake {
       return await ctx.message.reply(text)
     }
 
+    const sendMessage = async (ctx, text) => {
+      const { from: userMessage } = ctx.message
+
+      const { id: userId } = userMessage
+      const { accessHash } = userMessage
+
       // TODO to globals
       const randomHex = crypto.randomBytes(4).toString('hex')
       const randomBigInt = BigInt(parseInt(randomHex, 16))
 
+      ctx.api.invoke(
+        new Raw.messages.SendMessage({
+          message: text,
+          peer: new Raw.InputPeerUser({ userId, accessHash }),
+          randomId: randomBigInt,
+        })
+      )
+    }
     const runConversationA1 = async (ctx) => {
       await reply(ctx, 'start conversation')
       const conversation = this.conversation.create(ctx.message.chat.id)
