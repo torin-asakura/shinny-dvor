@@ -1,7 +1,7 @@
 import { NestLogger }                 from '@atls/nestjs-logger'
 import { NestFactory }                from '@nestjs/core'
 
-import { StartCommandProcessor }      from '@telegram-bot/infrastructure-module'
+import { BotListenProcessor }         from '@telegram-bot/infrastructure-module'
 
 import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'
 
@@ -20,7 +20,7 @@ const bootstrap = async () => {
 
   await app.listen(3000)
 
-  const processor = app.get(StartCommandProcessor)
+  const processor = app.get(BotListenProcessor)
   await processor.process()
 
   if (module.hot) {
