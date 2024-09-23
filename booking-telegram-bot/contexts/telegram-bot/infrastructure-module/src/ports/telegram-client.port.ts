@@ -6,11 +6,21 @@ import { TelegramClientPort }    from '@telegram-bot/application-module'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
-  // TODO почему на этом уровне конструктор завязан на tgsnake?
-  // TODO почему зависимости добавленны и в дев и в пир?
   constructor(private readonly telegramClient: TgsnakeAdapterService) {}
 
-  async listen() {
-    return this.telegramClient.listenMessage()
+  async reply(ctx: any, text: string) {
+    return await this.telegramClient.reply(ctx, text)
+  }
+
+  async sendMessage(ctx: any, text: string) {
+    return await this.telegramClient.sendMessage(ctx, text)
+  }
+
+  async createConversation(ctx: any) {
+    return await this.telegramClient.createConversation(ctx)
+  }
+
+  async removeConversation(ctx: any) {
+    return await this.telegramClient.removeConversation(ctx)
   }
 }
