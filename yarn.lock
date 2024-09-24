@@ -2586,12 +2586,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@booking-telegram-bot/apollo-adapter@workspace:*, @booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter":
+  version: 0.0.0-use.local
+  resolution: "@booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter"
+  dependencies:
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+  peerDependencies:
+    "@nestjs/common": "*"
+  languageName: unknown
+  linkType: soft
+
 "@booking-telegram-bot/service-entrypoint@workspace:booking-telegram-bot/entrypoints/service-entrypoint":
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/service-entrypoint@workspace:booking-telegram-bot/entrypoints/service-entrypoint"
   dependencies:
     "@atls/nestjs-logger": "npm:0.2.39"
-    "@booking-telegram-bot/tgsnake-adapter-module": "workspace:*"
+    "@booking-telegram-bot/apollo-adapter": "workspace:*"
+    "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
+    "@graphql-client/application-module": "workspace:*"
+    "@graphql-client/infrastructure-module": "workspace:*"
     "@grpc/grpc-js": "npm:1.11.2"
     "@grpc/proto-loader": "npm:0.7.13"
     "@nestjs/common": "npm:10.4.2"
@@ -2612,9 +2626,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@booking-telegram-bot/tgsnake-adapter-module@workspace:*, @booking-telegram-bot/tgsnake-adapter-module@workspace:booking-telegram-bot/adapters/tgsnake-adapter":
+"@booking-telegram-bot/tgsnake-adapter@workspace:*, @booking-telegram-bot/tgsnake-adapter@workspace:booking-telegram-bot/adapters/tgsnake-adapter":
   version: 0.0.0-use.local
-  resolution: "@booking-telegram-bot/tgsnake-adapter-module@workspace:booking-telegram-bot/adapters/tgsnake-adapter"
+  resolution: "@booking-telegram-bot/tgsnake-adapter@workspace:booking-telegram-bot/adapters/tgsnake-adapter"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     tgsnake: "npm:3.3.1"
@@ -3192,6 +3206,30 @@ __metadata:
     graphql: "*"
     react: "*"
     react-dom: "*"
+  languageName: unknown
+  linkType: soft
+
+"@graphql-client/application-module@workspace:*, @graphql-client/application-module@workspace:booking-telegram-bot/contexts/graphql-client/application-module":
+  version: 0.0.0-use.local
+  resolution: "@graphql-client/application-module@workspace:booking-telegram-bot/contexts/graphql-client/application-module"
+  dependencies:
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+  peerDependencies:
+    "@nestjs/common": "*"
+  languageName: unknown
+  linkType: soft
+
+"@graphql-client/infrastructure-module@workspace:*, @graphql-client/infrastructure-module@workspace:booking-telegram-bot/contexts/graphql-client/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@graphql-client/infrastructure-module@workspace:booking-telegram-bot/contexts/graphql-client/infrastructure-module"
+  dependencies:
+    "@booking-telegram-bot/apollo-adapter": "workspace:*"
+    "@graphql-client/application-module": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+  peerDependencies:
+    "@booking-telegram-bot/apollo-adapter": "*"
+    "@nestjs/common": "*"
   languageName: unknown
   linkType: soft
 
@@ -4593,6 +4631,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/env@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/env@npm:14.2.13"
+  checksum: 10/b61ae9e50d04c84a8e10860b61d5c6b74478447a5f952e378b2f809360696942e76227e0f72866ddfde3356fb5be378a1be796f7be52c76cf423f1137bb2d975
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/env@npm:14.2.5"
@@ -4609,10 +4654,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-darwin-arm64@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-darwin-arm64@npm:14.2.13"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-darwin-arm64@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/swc-darwin-arm64@npm:14.2.5"
   conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@next/swc-darwin-x64@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-darwin-x64@npm:14.2.13"
+  conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
@@ -4623,10 +4682,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-arm64-gnu@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-linux-arm64-gnu@npm:14.2.13"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-arm64-gnu@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/swc-linux-arm64-gnu@npm:14.2.5"
   conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-arm64-musl@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-linux-arm64-musl@npm:14.2.13"
+  conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
@@ -4637,10 +4710,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-linux-x64-gnu@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-linux-x64-gnu@npm:14.2.13"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
 "@next/swc-linux-x64-gnu@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/swc-linux-x64-gnu@npm:14.2.5"
   conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@next/swc-linux-x64-musl@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-linux-x64-musl@npm:14.2.13"
+  conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
@@ -4651,6 +4738,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-arm64-msvc@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-win32-arm64-msvc@npm:14.2.13"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-arm64-msvc@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/swc-win32-arm64-msvc@npm:14.2.5"
@@ -4658,10 +4752,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next/swc-win32-ia32-msvc@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-win32-ia32-msvc@npm:14.2.13"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@next/swc-win32-ia32-msvc@npm:14.2.5":
   version: 14.2.5
   resolution: "@next/swc-win32-ia32-msvc@npm:14.2.5"
   conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@next/swc-win32-x64-msvc@npm:14.2.13":
+  version: 14.2.13
+  resolution: "@next/swc-win32-x64-msvc@npm:14.2.13"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -7356,9 +7464,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
+    "@apollo/client": "npm:3.11.4"
+    "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
+    graphql: "npm:15.8.0"
   peerDependencies:
+    "@apollo/client": "*"
     "@nestjs/common": "*"
+    graphql: "*"
   languageName: unknown
   linkType: soft
 
@@ -7366,11 +7479,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@telegram-bot/infrastructure-module@workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"
   dependencies:
-    "@booking-telegram-bot/tgsnake-adapter-module": "workspace:*"
+    "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
+    "@globals/data": "workspace:*"
+    "@graphql-client/application-module": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
   peerDependencies:
-    "@booking-telegram-bot/tgsnake-adapter-module": "*"
+    "@booking-telegram-bot/tgsnake-adapter": "*"
     "@nestjs/common": "*"
   languageName: unknown
   linkType: soft
@@ -14775,6 +14890,64 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: 10/1a7948fea86f2b33ec766bc899c88796a51ba76a4afc9026764aedc6e7cde692a09067031e4a1bf6db4f978ccd99e7f5b6c03fe47ad9865c3d4f99050d67e002
+  languageName: node
+  linkType: hard
+
+"next@npm:*":
+  version: 14.2.13
+  resolution: "next@npm:14.2.13"
+  dependencies:
+    "@next/env": "npm:14.2.13"
+    "@next/swc-darwin-arm64": "npm:14.2.13"
+    "@next/swc-darwin-x64": "npm:14.2.13"
+    "@next/swc-linux-arm64-gnu": "npm:14.2.13"
+    "@next/swc-linux-arm64-musl": "npm:14.2.13"
+    "@next/swc-linux-x64-gnu": "npm:14.2.13"
+    "@next/swc-linux-x64-musl": "npm:14.2.13"
+    "@next/swc-win32-arm64-msvc": "npm:14.2.13"
+    "@next/swc-win32-ia32-msvc": "npm:14.2.13"
+    "@next/swc-win32-x64-msvc": "npm:14.2.13"
+    "@swc/helpers": "npm:0.5.5"
+    busboy: "npm:1.6.0"
+    caniuse-lite: "npm:^1.0.30001579"
+    graceful-fs: "npm:^4.2.11"
+    postcss: "npm:8.4.31"
+    styled-jsx: "npm:5.1.1"
+  peerDependencies:
+    "@opentelemetry/api": ^1.1.0
+    "@playwright/test": ^1.41.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    sass: ^1.3.0
+  dependenciesMeta:
+    "@next/swc-darwin-arm64":
+      optional: true
+    "@next/swc-darwin-x64":
+      optional: true
+    "@next/swc-linux-arm64-gnu":
+      optional: true
+    "@next/swc-linux-arm64-musl":
+      optional: true
+    "@next/swc-linux-x64-gnu":
+      optional: true
+    "@next/swc-linux-x64-musl":
+      optional: true
+    "@next/swc-win32-arm64-msvc":
+      optional: true
+    "@next/swc-win32-ia32-msvc":
+      optional: true
+    "@next/swc-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@opentelemetry/api":
+      optional: true
+    "@playwright/test":
+      optional: true
+    sass:
+      optional: true
+  bin:
+    next: dist/bin/next
+  checksum: 10/152928801dc403172e6b4a3d64ae250ad59a4d57fff862d9560687380d4b6ca95a07439da9a9b702bda86ff01093aa04e46a0003d0422295bdbd7d8ce449c4d6
   languageName: node
   linkType: hard
 
