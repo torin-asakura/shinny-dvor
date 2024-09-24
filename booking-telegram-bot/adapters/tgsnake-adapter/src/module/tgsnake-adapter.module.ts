@@ -1,11 +1,11 @@
-import { Module }    from '@nestjs/common'
-
 import * as services from '../services/index.js'
+
+import { Module }    from '@nestjs/common'
 
 @Module({})
 export class TgsnakeAdapterModule {
   // TODO provide tgsnake config options
-  static registerAsync() {
+  static register() {
     const serviceProviders = Object.values(services)
     const providers = [...serviceProviders]
 
