@@ -4,7 +4,9 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./apollo": "./src/apollo/index.ts",
+    "./apollo-core": "./src/apollo-core/index.ts"
   },
   "main": "src/index.ts",
   "scripts": {
