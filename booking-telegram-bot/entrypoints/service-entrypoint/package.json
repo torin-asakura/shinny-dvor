@@ -20,7 +20,10 @@
   },
   "devDependencies": {
     "@atls/nestjs-logger": "0.2.39",
-    "@booking-telegram-bot/tgsnake-adapter-module": "workspace:*",
+    "@booking-telegram-bot/apollo-adapter": "workspace:*",
+    "@booking-telegram-bot/tgsnake-adapter": "workspace:*",
+    "@graphql-client/application-module": "workspace:*",
+    "@graphql-client/infrastructure-module": "workspace:*",
     "@grpc/grpc-js": "1.11.2",
     "@grpc/proto-loader": "0.7.13",
     "@nestjs/core": "10.4.2",
