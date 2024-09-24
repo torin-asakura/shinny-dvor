@@ -7,7 +7,7 @@ import { GET_AVAILABLE_RADII }      from '@globals/data'
 import { GET_BLOG_POST }            from '@globals/data'
 import { GET_CAR_BODIES }           from '@globals/data'
 import { GET_SERVICES }             from '@globals/data'
-import { getServerClient }          from '@globals/data'
+import { getServerClient }          from '@globals/data/apollo'
 
 // @ts-expect-error notAssignable
 export const runPostPageServerQuerires: PostPageServerProps = async ({ params }) => {

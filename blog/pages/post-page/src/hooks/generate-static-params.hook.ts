@@ -1,5 +1,5 @@
 import { GET_BLOG_POSTS }  from '@globals/data'
-import { getServerClient } from '@globals/data'
+import { getServerClient } from '@globals/data/apollo'
 
 const generateStaticParams = async () => {
   const getCleanedUriString = (rawUriString: string) => {

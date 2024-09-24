@@ -2,8 +2,8 @@ import type { PostPageProps }        from './post-page.interfaces.js'
 
 import React                         from 'react'
 
-import { PreloadQuery }              from '@globals/data'
 import { GET_BLOG_POST }             from '@globals/data'
+import { PreloadQuery }              from '@globals/data/apollo'
 
 import { PostPageClient }            from './post-page.client.js'
 import { runPostPageServerQuerires } from './hooks/index.js'

@@ -7,7 +7,7 @@ import { GET_FRAGMENTS }       from '@globals/data'
 import { GET_NAVIGATION }      from '@globals/data'
 import { GET_AVAILABLE_RADII } from '@globals/data'
 import { GET_CAR_BODIES }      from '@globals/data'
-import { getServerClient }     from '@globals/data'
+import { getServerClient }     from '@globals/data/apollo'
 
 export const runIndexPageServerQueries = async () => {
   const client = getServerClient()

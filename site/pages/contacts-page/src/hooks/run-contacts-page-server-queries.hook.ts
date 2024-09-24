@@ -4,7 +4,7 @@ import { GET_CAR_BODIES }      from '@globals/data'
 import { GET_FRAGMENTS }       from '@globals/data'
 import { GET_SERVICES }        from '@globals/data'
 import { GET_AVAILABLE_RADII } from '@globals/data'
-import { getServerClient }     from '@globals/data'
+import { getServerClient }     from '@globals/data/apollo'
 
 export const runContactsPageServerQueries = async () => {
   const client = getServerClient()
