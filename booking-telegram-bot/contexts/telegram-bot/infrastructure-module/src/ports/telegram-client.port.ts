@@ -1,7 +1,7 @@
+import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
 import { Injectable }            from '@nestjs/common'
 import { Logger }                from '@nestjs/common'
 
-import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter-module'
 import { TelegramClientPort }    from '@telegram-bot/application-module'
 
 @Injectable()
