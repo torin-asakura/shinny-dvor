@@ -7,6 +7,10 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "dependencies": {
+    "@globals/data": "workspace:*",
+    "@graphql-client/application-module": "workspace:*"
+  },
   "devDependencies": {
     "@nestjs/common": "10.4.2"
   },
