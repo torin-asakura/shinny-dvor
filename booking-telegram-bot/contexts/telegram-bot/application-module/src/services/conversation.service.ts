@@ -3,12 +3,17 @@ import { Injectable }                              from '@nestjs/common'
 import { GET_CAR_BODIES }                          from '@globals/data'
 import { GET_AVAILABLE_RADII }                     from '@globals/data'
 import { GET_SERVICES }                            from '@globals/data'
+import { GET_CONTACTS }                            from '@globals/data'
 import { RunQueryUseCase }                         from '@graphql-client/application-module'
 import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../ports/index.js'
+import { DATE_OPTIONS }                            from './conversation.constants.js'
+import { DAY_MILLISECONDS }                        from './conversation.constants.js'
 import { CANCEL_APPOINTMENT_BUTTON_TEXT }          from './conversation.constants.js'
 import { CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT } from './conversation.constants.js'
+import { APPROVE_APPOINTMENT_BUTTON_TEXT }         from './conversation.constants.js'
+import { EDIT_APPOINTMENT_BUTTON_TEXT }            from './conversation.constants.js'
 
 @Injectable()
 export class ConversationService {
@@ -65,6 +70,55 @@ export class ConversationService {
   async process(ctx: any) {
     try {
       const conversationData: Record<string, string> = {}
+      await this.telegramClient.sendMessage(ctx, 'Начало диалога')
+
+      const queryData = await this.runQueryUseCase.execute(GET_CONTACTS)
+      console.log(queryData.data.contactItems.nodes)
+
+      // TODO create createConversation method on adapter
+      const conversation = await this.telegramClient.createConversation(ctx)
+      // console.log(conversation)
+
+      const appointmentDatesData = Array.apply(null, Array(7)).map((_, i) => {
+        const daysFromNow = DAY_MILLISECONDS + DAY_MILLISECONDS * i
+
+        const options = DATE_OPTIONS
+
+        const milliseconds = Date.now() + daysFromNow
+        const eventDate = new Date(milliseconds)
+        const clientText = eventDate.toLocaleDateString('ru-RU', options)
+
+        return {
+          clientText,
+          milliseconds,
+        }
+      })
+
+      const dateVariants = appointmentDatesData.map(({ clientText }) => clientText)
+
+      await this.telegramClient.sendMessageWithMarkup(ctx, 'Выберите дату записи', [
+        ...dateVariants,
+        CANCEL_APPOINTMENT_BUTTON_TEXT,
+      ])
+
+      // TODO check interfaces
+      await conversation.wait('msg.text', ({ message }) => {
+        const { text: responseText } = message
+
+        // TODO switch case
+        if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+          console.log('cancel conversation')
+        } else if (dateVariants.includes(responseText)) {
+          const date = appointmentDatesData.find(({ clientText }) => clientText === responseText)
+          conversationData.dateDay = date?.milliseconds
+          return true
+        }
+
+        message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+        return false
+      })
+
+      // TODO autoservice worktime
 
       const carBodiesData = await this.getCarBodiesData()
       const radiiData = await this.getRadiiData()
@@ -73,12 +127,6 @@ export class ConversationService {
       const carBodyTitles = this.getCarBodyTitles(carBodiesData)
       const radiiTitles = this.getRadiiTitles(radiiData)
       const serviceTitles = this.getServiceTitles(servicesData)
-
-      await this.telegramClient.sendMessage(ctx, 'start conversation')
-
-      // TODO create createConversation method on adapter
-      const conversation = await this.telegramClient.createConversation(ctx)
-      // console.log(conversation)
 
       // TODO keyboard with cancel button
       await this.telegramClient.sendMessageWithMarkup(ctx, 'kuzov auto quesiton*', [
@@ -163,6 +211,8 @@ export class ConversationService {
         return true
       })
 
+      // TODO выбор даты
+
       const { carBodyTitle, radiiTitle, serviceTitle, commentary } = conversationData
 
       let approvalMessage = ''
@@ -171,16 +221,33 @@ export class ConversationService {
       approvalMessage += `Тип ремонта: ${serviceTitle}\n`
       if (commentary) approvalMessage += `Комментарий: ${commentary}`
 
-      await this.telegramClient.sendMessage(ctx, approvalMessage)
+      await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
+        APPROVE_APPOINTMENT_BUTTON_TEXT,
+        EDIT_APPOINTMENT_BUTTON_TEXT,
+        CANCEL_APPOINTMENT_BUTTON_TEXT,
+      ])
+
+      await conversation.wait('msg.text', ({ message }) => {
+        const { text: responseText } = message
+
+        // TODO switch case
+        if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+          console.log('cancel conversation')
+        } else if (responseText === APPROVE_APPOINTMENT_BUTTON_TEXT) {
+          return true
+        } else if (responseText === EDIT_APPOINTMENT_BUTTON_TEXT) {
+          this.process(ctx)
+          return false
+        }
+
+        return false
+      })
 
       // TODO Q: name? - save it from context
       // TODO Q: phone? - есть кнопка в telegram api - типо поделиться контактом - сделать опциональной
 
-      // TODO approve with keyboard
-      await this.telegramClient.sendMessage(
-        ctx,
-        'предложение согласовать отменить или перенести запись'
-      )
+      // TODO запись в бд
+
       await this.telegramClient.sendMessage(ctx, 'ссылки на оператора (другой чат)')
 
       this.telegramClient.removeConversation(ctx)
