@@ -1,7 +1,7 @@
-import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
 import { Injectable }            from '@nestjs/common'
 import { Logger }                from '@nestjs/common'
 
+import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
 import { TelegramClientPort }    from '@telegram-bot/application-module'
 
 @Injectable()
@@ -14,6 +14,10 @@ export class TelegramClientPortImpl implements TelegramClientPort {
 
   async sendMessage(ctx: any, text: string) {
     return await this.telegramClient.sendMessage(ctx, text)
+  }
+
+  async sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>) {
+    return await this.telegramClient.sendMessageWithMarkup(ctx, text, buttonsText)
   }
 
   async createConversation(ctx: any) {
