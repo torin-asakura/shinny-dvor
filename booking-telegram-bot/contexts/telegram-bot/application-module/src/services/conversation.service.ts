@@ -25,6 +25,11 @@ export class ConversationService {
     return carBodiesQueryData
   }
 
+  // TODO interfaces
+  private getCarBodyTitles(carBodiesData: any) {
+    return carBodiesData.map((singleCarData: any) => singleCarData.contentAddons.title)
+  }
+
   private async getRadiiData() {
     // TODO income interfaces
     const queryData = await this.runQueryUseCase.execute(GET_AVAILABLE_RADII)
@@ -35,6 +40,11 @@ export class ConversationService {
     return radiiQueryData
   }
 
+  // TODO interfaces
+  private getRadiiTitles(radiiData: any) {
+    return radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
+  }
+
   private async getServicesData() {
     // TODO income interfaces
     const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
@@ -43,6 +53,10 @@ export class ConversationService {
     checkArrayLength({ servicesQueryData })
 
     return servicesQueryData
+  }
+
+  private getServiceTitles(servicesData: any) {
+    return servicesData.map((singleServiceData: any) => singleServiceData.servicesParams.title)
   }
 
   // TODO inteface
@@ -57,9 +71,11 @@ export class ConversationService {
       const radiiData = await this.getRadiiData()
       const servicesData = await this.getServicesData()
 
-      // const carBodyTitle
-      // const radiiTitles
-      // const serviceTitles
+      const carBodyTitles = this.getCarBodyTitles(carBodiesData)
+      const radiiTitles = this.getRadiiTitles(radiiData)
+      const serviceTitles = this.getServiceTitles(servicesData)
+      console.log(radiiTitles)
+      console.log(serviceTitles)
 
       await this.telegramClient.sendMessage(ctx, 'start conversation')
 
