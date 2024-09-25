@@ -55,17 +55,4 @@ export class TgsnakeAdapterService extends Snake {
   async removeConversation(ctx: any) {
     this.conversation.remove(ctx.message.chat.id)
   }
-
-  async listen() {
-    // TODO interfaces
-    //   const removeConversation = async (ctx) => {
-    //     this.conversation.remove(ctx.message.chat.id)
-    //   }
-    //
-    //   this.on('msg.text', async (ctx) => {
-    //     if (!this.conversation?.conversation?.size) {
-    //       await runConversationA1(ctx)
-    //     }
-    //   })
-  }
 }
