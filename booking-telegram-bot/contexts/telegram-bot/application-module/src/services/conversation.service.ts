@@ -86,6 +86,7 @@ export class ConversationService {
 
         const milliseconds = Date.now() + daysFromNow
         const eventDate = new Date(milliseconds)
+        // TODO add 'сегодня' to сегодня
         const clientText = eventDate.toLocaleDateString('ru-RU', options)
 
         return {
