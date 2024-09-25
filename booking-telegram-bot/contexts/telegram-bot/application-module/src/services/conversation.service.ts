@@ -16,7 +16,6 @@ export class ConversationService {
   ) {}
 
   private async getCarBodiesData() {
-    // test gpg
     // TODO income interfaces
     const queryData = await this.runQueryUseCase.execute(GET_CAR_BODIES)
     const carBodiesQueryData = queryData.data.carBodyItems.nodes
