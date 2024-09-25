@@ -4,7 +4,7 @@ import { GET_CAR_BODIES }      from '@globals/data'
 import { GET_AVAILABLE_RADII } from '@globals/data'
 import { GET_SERVICES }        from '@globals/data'
 import { RunQueryUseCase }     from '@graphql-client/application-module'
-import { extractFragments }    from '@globals/data'
+import { checkArrayLength }    from '@globals/data'
 
 import { TelegramClientPort }  from '../ports/index.js'
 
@@ -20,11 +20,7 @@ export class ConversationService {
     const queryData = await this.runQueryUseCase.execute(GET_CAR_BODIES)
     const carBodiesQueryData = queryData.data.carBodyItems.nodes
 
-    // TODO move it to globals
-    // TODO check func when move it to globals
-    if (!carBodiesQueryData.length) {
-      throw new Error('carBodiesQueryData is empty')
-    }
+    checkArrayLength({ carBodiesQueryData })
 
     return carBodiesQueryData
   }
@@ -34,9 +30,7 @@ export class ConversationService {
     const queryData = await this.runQueryUseCase.execute(GET_AVAILABLE_RADII)
     const radiiQueryData = queryData.data.availableRadiusItems.nodes
 
-    if (!radiiQueryData.length) {
-      throw new Error('radiiQueryData is empty')
-    }
+    checkArrayLength({ radiiQueryData })
 
     return radiiQueryData
   }
@@ -46,9 +40,7 @@ export class ConversationService {
     const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
     const servicesQueryData = queryData.data.services.nodes
 
-    if (!servicesQueryData.length) {
-      throw new Error('radiiQueryData is empty')
-    }
+    checkArrayLength({ servicesQueryData })
 
     return servicesQueryData
   }
@@ -63,9 +55,11 @@ export class ConversationService {
 
       const carBodiesData = await this.getCarBodiesData()
       const radiiData = await this.getRadiiData()
-      console.log(radiiData)
       const servicesData = await this.getServicesData()
-      console.log(servicesData)
+
+      // const carBodyTitle
+      // const radiiTitles
+      // const serviceTitles
 
       await this.telegramClient.sendMessage(ctx, 'start conversation')
 
