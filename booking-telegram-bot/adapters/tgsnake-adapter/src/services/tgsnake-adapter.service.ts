@@ -46,6 +46,37 @@ export class TgsnakeAdapterService extends Snake {
     )
   }
 
+  async sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>) {
+    console.log('sendMessageWithMarkup')
+    const { from: userMessage } = ctx.message
+
+    const { id: userId } = userMessage
+    const { accessHash } = userMessage
+
+    const randomBigInt = this.getRandomBigInt()
+
+    const rows = buttonsText.map(
+      (text) =>
+        new Raw.KeyboardButtonRow({
+          buttons: [new Raw.KeyboardButton({ text })],
+        })
+    )
+
+    const replyMarkup = new Raw.ReplyKeyboardMarkup({
+      rows,
+    })
+
+    // TODO keyboardmarkup to const
+    return await ctx.api.invoke(
+      new Raw.messages.SendMessage({
+        message: text,
+        peer: new Raw.InputPeerUser({ userId, accessHash }),
+        replyMarkup,
+        randomId: randomBigInt,
+      })
+    )
+  }
+
   // TODO interface
   async createConversation(ctx: any) {
     return this.conversation.create(ctx.message.chat.id)
