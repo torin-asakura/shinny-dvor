@@ -47,7 +47,6 @@ export class TgsnakeAdapterService extends Snake {
   }
 
   async sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>) {
-    console.log('sendMessageWithMarkup')
     const { from: userMessage } = ctx.message
 
     const { id: userId } = userMessage
