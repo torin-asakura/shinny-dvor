@@ -1,8 +1,6 @@
-import { TgsnakeAdapterService }  from '@booking-telegram-bot/tgsnake-adapter'
-import { RunQueryUseCase }        from '@graphql-client/application-module'
 import { Injectable }             from '@nestjs/common'
 
-import { GET_CAR_BODIES }         from '@globals/data'
+import { TgsnakeAdapterService }  from '@booking-telegram-bot/tgsnake-adapter'
 import { StartCommandUseCase }    from '@telegram-bot/application-module'
 import { HelpCommandUseCase }     from '@telegram-bot/application-module'
 import { ReceivedMessageUseCase } from '@telegram-bot/application-module'
@@ -13,8 +11,7 @@ export class BotListenProcessor {
     private readonly telegramClient: TgsnakeAdapterService,
     private readonly startCommandUseCase: StartCommandUseCase,
     private readonly helpCommandUseCase: HelpCommandUseCase,
-    private readonly receivedMessageUseCase: ReceivedMessageUseCase,
-    private readonly runQueryUseCase: RunQueryUseCase
+    private readonly receivedMessageUseCase: ReceivedMessageUseCase
   ) {}
 
   // TODO я выношу прослушивание из `useCase` для того, чтобы на уровне `useCase`
@@ -32,10 +29,6 @@ export class BotListenProcessor {
     })
 
     this.telegramClient.on('msg.text', async (ctx) => {
-      const queryData = await this.runQueryUseCase.execute(GET_CAR_BODIES)
-      console.log('query data on processor:')
-      console.log(queryData)
-
       // TODO fix it:
       // use conversation class
       if (!this.telegramClient.conversation?.conversation?.size) {

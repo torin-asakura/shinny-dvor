@@ -8,8 +8,6 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@globals/data": "workspace:*",
-    "@graphql-client/application-module": "workspace:*",
     "@telegram-bot/application-module": "workspace:*"
   },
   "devDependencies": {
