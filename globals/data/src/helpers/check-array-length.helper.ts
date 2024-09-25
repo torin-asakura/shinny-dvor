@@ -1,6 +1,4 @@
 const checkArrayLength = (objectToCheck: { [key: string]: Array<any> }) => {
-  console.log(objectToCheck)
-
   const checkVariableName = Object.keys(objectToCheck)[0]
   const checkVariableValue = objectToCheck[checkVariableName]
 
