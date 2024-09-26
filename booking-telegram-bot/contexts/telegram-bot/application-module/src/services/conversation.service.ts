@@ -1,10 +1,10 @@
+import { RunQueryUseCase }                         from '@graphql-client/application-module'
 import { Injectable }                              from '@nestjs/common'
 
 import { GET_CAR_BODIES }                          from '@globals/data'
 import { GET_AVAILABLE_RADII }                     from '@globals/data'
 import { GET_SERVICES }                            from '@globals/data'
 import { GET_CONTACTS }                            from '@globals/data'
-import { RunQueryUseCase }                         from '@graphql-client/application-module'
 import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../ports/index.js'
@@ -80,18 +80,21 @@ export class ConversationService {
       // console.log(conversation)
 
       const appointmentDatesData = Array.apply(null, Array(7)).map((_, i) => {
-        const daysFromNow = DAY_MILLISECONDS + DAY_MILLISECONDS * i
-
         const options = DATE_OPTIONS
 
+        const daysFromNow = DAY_MILLISECONDS * i
         const milliseconds = Date.now() + daysFromNow
         const eventDate = new Date(milliseconds)
-        // TODO add 'сегодня' to сегодня
-        const clientText = eventDate.toLocaleDateString('ru-RU', options)
+        eventDate.setHours(0, 0, 0, 0)
+
+        const eventDateMilliseconds = eventDate.getTime()
+
+        let clientText = eventDate.toLocaleDateString('ru-RU', options)
+        if (!i) clientText += ' (сегодня)'
 
         return {
           clientText,
-          milliseconds,
+          milliseconds: eventDateMilliseconds,
         }
       })
 
@@ -118,6 +121,8 @@ export class ConversationService {
         message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
         return false
       })
+
+      console.log(conversationData)
 
       // TODO autoservice worktime
 
