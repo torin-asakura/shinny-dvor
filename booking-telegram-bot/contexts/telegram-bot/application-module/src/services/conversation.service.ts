@@ -1,10 +1,10 @@
-import { RunQueryUseCase }                         from '@graphql-client/application-module'
 import { Injectable }                              from '@nestjs/common'
 
 import { GET_CAR_BODIES }                          from '@globals/data'
 import { GET_AVAILABLE_RADII }                     from '@globals/data'
 import { GET_SERVICES }                            from '@globals/data'
 import { GET_CONTACTS }                            from '@globals/data'
+import { RunQueryUseCase }                         from '@graphql-client/application-module'
 import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../ports/index.js'
@@ -109,23 +109,13 @@ export class ConversationService {
   // TODO inteface
   async process(ctx: any) {
     try {
-      const conversationData: Record<string, string> = {}
+      // TODO type
+      const conversationData: Record<string, any> = {}
       await this.telegramClient.sendMessage(ctx, 'Начало диалога')
 
       // TODO create createConversation method on adapter
       const conversation = await this.telegramClient.createConversation(ctx)
       // console.log(conversation)
-
-      // * TODO autoservice worktime
-
-      const workTimeData = await this.getWorktimeData()
-      const workTimeString = await this.getWorkTime(workTimeData)
-      const workTime = this.parseWorkTimeString(workTimeString)
-      console.log(workTime)
-
-      // * TODO autoservice worktime
-
-      console.log(conversationData)
 
       const appointmentDatesData = Array.apply(null, Array(7)).map((_, i) => {
         const options = DATE_OPTIONS
@@ -169,6 +159,108 @@ export class ConversationService {
         message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
         return false
       })
+
+      // * TODO autoservice worktime
+
+      const workTimeData = await this.getWorktimeData()
+      const workTimeString = await this.getWorkTime(workTimeData)
+      const workTime = this.parseWorkTimeString(workTimeString)
+
+      // * TODO отправить клавиатуру с выбором времени
+      // TODO узнать какой день недели
+
+      const selectedDate = new Date(conversationData.dateDay)
+      const selectedDay = selectedDate.getDay()
+
+      let selectedDayType
+
+      if (selectedDay > 0 && selectedDay < 6) {
+        selectedDayType = 'weekdays'
+      } else {
+        selectedDayType = 'weekends'
+      }
+
+      const selectedWorkTime = workTime[selectedDayType]
+
+      const getTimeSlots = (workTime: Record<string, number>) => {
+        const { start, end } = workTime
+        const timeSlots = []
+        const startWorkTimeDate = selectedDate.setHours(start)
+        const endWorkTimeDate = selectedDate.setHours(end)
+
+        // TODO to consts
+        const step = 1000 * 60 * 30
+
+        for (
+          let indexDateMilliseconds = startWorkTimeDate;
+          indexDateMilliseconds < endWorkTimeDate;
+          indexDateMilliseconds += step
+        ) {
+          const getPadString = (number: number) => number.toString().padStart(2, 0)
+
+          const indexDate = new Date(indexDateMilliseconds)
+          const indexDateHours = getPadString(indexDate.getHours())
+          const indexDateMinutes = getPadString(indexDate.getMinutes())
+          const indexDateText = `${indexDateHours}:${indexDateMinutes}`
+
+          // TODO нужна проверка по бд - свободный ли слот
+          const indexDateFreeState = true
+
+          timeSlots.push({
+            milliseconds: indexDateMilliseconds,
+            text: indexDateText,
+            isFree: indexDateFreeState,
+          })
+        }
+
+        return timeSlots
+      }
+
+      const formatTimeSlots = (timeSlots: Array<any>) => {
+        const formattedTimeSlots = timeSlots.map(({ text, isFree }) => {
+          if (!isFree) return 'X'
+          return text
+        })
+
+        const reorderedTimeSlots = []
+
+        // TODO to constants
+        const innerArrayLength = 4
+
+        for (let i = 0; i < formattedTimeSlots.length; i += innerArrayLength) {
+          reorderedTimeSlots.push(formattedTimeSlots.slice(i, i + innerArrayLength))
+        }
+
+        return reorderedTimeSlots
+      }
+
+      const timeSlots = getTimeSlots(selectedWorkTime)
+      const formattedTimeSlots = formatTimeSlots(timeSlots)
+
+      await this.telegramClient.sendMessageWithMarkup(ctx, 'Выберите время записи', [
+        ...formattedTimeSlots,
+        CANCEL_APPOINTMENT_BUTTON_TEXT,
+      ])
+
+      await conversation.wait('msg.text', ({ message }) => {
+        const { text: responseText } = message
+
+        // TODO switch case
+        if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+          console.log('cancel conversation')
+        }
+
+        const findedTimeSlot = timeSlots.find(({ text }) => text === responseText)
+        if (findedTimeSlot) {
+          conversationData.selectedTimeSlot = findedTimeSlot
+          return true
+        }
+
+        message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+        return false
+      })
+
+      // * TODO autoservice worktime
 
       const carBodiesData = await this.getCarBodiesData()
       const radiiData = await this.getRadiiData()
@@ -263,12 +355,23 @@ export class ConversationService {
 
       // TODO выбор даты
 
-      const { carBodyTitle, radiiTitle, serviceTitle, commentary } = conversationData
+      const { carBodyTitle, radiiTitle, serviceTitle, commentary, selectedTimeSlot } =
+        conversationData
+
+      const selectedTimeDate = new Date(selectedTimeSlot.milliseconds)
+      let selectedDateText = selectedTimeDate.toLocaleDateString('ru-RU', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+      })
 
       let approvalMessage = ''
       approvalMessage += `Тип кузова: ${carBodyTitle}\n`
       approvalMessage += `Диаметр колёс: ${radiiTitle}\n`
       approvalMessage += `Тип ремонта: ${serviceTitle}\n`
+      approvalMessage += `Выбранная дата: ${selectedDateText}\n`
       if (commentary) approvalMessage += `Комментарий: ${commentary}`
 
       await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
@@ -298,7 +401,10 @@ export class ConversationService {
 
       // TODO запись в бд
 
-      await this.telegramClient.sendMessage(ctx, 'ссылки на оператора (другой чат)')
+      await this.telegramClient.sendMessage(
+        ctx,
+        'ссылки на оператора (другой чат), скрыть клавиатуру'
+      )
 
       this.telegramClient.removeConversation(ctx)
     } catch (error) {
