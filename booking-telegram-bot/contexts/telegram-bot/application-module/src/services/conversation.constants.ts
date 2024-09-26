@@ -10,3 +10,14 @@ export const DATE_OPTIONS = {
   day: 'numeric',
   month: 'long',
 }
+
+export const WORK_TIME = {
+  weekdays: {
+    start: 9,
+    end: 19,
+  },
+  weekends: {
+    start: 9,
+    end: 16,
+  },
+}
