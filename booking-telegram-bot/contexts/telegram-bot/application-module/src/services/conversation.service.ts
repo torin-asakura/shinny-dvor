@@ -8,6 +8,7 @@ import { GET_CONTACTS }                            from '@globals/data'
 import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../ports/index.js'
+import { WORK_TIME }                               from './conversation.constants.js'
 import { DATE_OPTIONS }                            from './conversation.constants.js'
 import { DAY_MILLISECONDS }                        from './conversation.constants.js'
 import { CANCEL_APPOINTMENT_BUTTON_TEXT }          from './conversation.constants.js'
@@ -62,6 +63,45 @@ export class ConversationService {
     return servicesQueryData
   }
 
+  private async getWorktimeData() {
+    const queryData = await this.runQueryUseCase.execute(GET_CONTACTS)
+    const workTimeData = queryData.data.contactItems.nodes
+    return workTimeData
+  }
+
+  // TODO interface
+  private async getWorkTime(workTimeData) {
+    return workTimeData[0].contactAddons.workinghours
+  }
+
+  private parseWorkTimeString(workTimeString: string) {
+    let workTime = WORK_TIME
+
+    try {
+      const workTimeRawStringsArray = workTimeString.split('|n|')
+
+      const workTimeHoursArray = workTimeRawStringsArray.map((workTimeRawStringsArrayItem) => {
+        const workTimeStringsArray = workTimeRawStringsArrayItem.split(', ').at(-1)?.split(' - ')
+        const workTimeHoursArray = workTimeStringsArray?.map((workTimeStringsArray) =>
+          Number(workTimeStringsArray.split(':')[0]))
+        return workTimeHoursArray
+      })
+
+      if (!workTimeHoursArray.length) throw new Error('parse time error')
+      if (!workTimeHoursArray[0]?.length) throw new Error('parse time error')
+      if (!workTimeHoursArray[1]?.length) throw new Error('parse time error')
+
+      workTime.weekdays.start = workTimeHoursArray[0][0]
+      workTime.weekdays.end = workTimeHoursArray[0][1]
+      workTime.weekends.start = workTimeHoursArray[1][0]
+      workTime.weekends.end = workTimeHoursArray[1][1]
+    } catch (error) {
+      console.error(error)
+    } finally {
+      return workTime
+    }
+  }
+
   private getServiceTitles(servicesData: any) {
     return servicesData.map((singleServiceData: any) => singleServiceData.servicesParams.title)
   }
@@ -72,12 +112,20 @@ export class ConversationService {
       const conversationData: Record<string, string> = {}
       await this.telegramClient.sendMessage(ctx, 'Начало диалога')
 
-      const queryData = await this.runQueryUseCase.execute(GET_CONTACTS)
-      console.log(queryData.data.contactItems.nodes)
-
       // TODO create createConversation method on adapter
       const conversation = await this.telegramClient.createConversation(ctx)
       // console.log(conversation)
+
+      // * TODO autoservice worktime
+
+      const workTimeData = await this.getWorktimeData()
+      const workTimeString = await this.getWorkTime(workTimeData)
+      const workTime = this.parseWorkTimeString(workTimeString)
+      console.log(workTime)
+
+      // * TODO autoservice worktime
+
+      console.log(conversationData)
 
       const appointmentDatesData = Array.apply(null, Array(7)).map((_, i) => {
         const options = DATE_OPTIONS
@@ -121,10 +169,6 @@ export class ConversationService {
         message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
         return false
       })
-
-      console.log(conversationData)
-
-      // TODO autoservice worktime
 
       const carBodiesData = await this.getCarBodiesData()
       const radiiData = await this.getRadiiData()
