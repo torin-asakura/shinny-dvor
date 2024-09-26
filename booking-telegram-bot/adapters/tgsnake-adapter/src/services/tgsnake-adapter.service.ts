@@ -46,7 +46,7 @@ export class TgsnakeAdapterService extends Snake {
     )
   }
 
-  async sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>) {
+  async sendMessageWithMarkup(ctx: any, text: string, buttons: Array<string | Array<any>>) {
     const { from: userMessage } = ctx.message
 
     const { id: userId } = userMessage
@@ -54,12 +54,27 @@ export class TgsnakeAdapterService extends Snake {
 
     const randomBigInt = this.getRandomBigInt()
 
-    const rows = buttonsText.map(
-      (text) =>
-        new Raw.KeyboardButtonRow({
-          buttons: [new Raw.KeyboardButton({ text })],
-        })
-    )
+    const rows = []
+
+    for (const rowButton of buttons) {
+      if (typeof rowButton === 'object') {
+        const row = []
+        for (const columnButon of rowButton) {
+          row.push(new Raw.KeyboardButton({ text: columnButon }))
+        }
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: row,
+          })
+        )
+      } else {
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: [new Raw.KeyboardButton({ text: rowButton })],
+          })
+        )
+      }
+    }
 
     const replyMarkup = new Raw.ReplyKeyboardMarkup({
       rows,
