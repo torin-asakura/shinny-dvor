@@ -39,10 +39,13 @@ export class BotListenProcessor {
     })
 
     this.telegramClient.on('msg.text', async (ctx) => {
+      // TODO
+      // await this.telegramClient.sendMessage(ctx, '/create_appointment')
       // TODO fix it:
       // use conversation class
       if (!this.telegramClient.conversation?.conversation?.size) {
         // rename use case to conversation
+        await this.telegramClient.sendMessage(ctx, 'Начало диалога в processor')
         await this.receivedMessageUseCase.execute(ctx)
         // await runConversationA1(ctx)
       }
