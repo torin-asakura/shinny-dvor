@@ -92,12 +92,12 @@ export class TgsnakeAdapterService extends Snake {
   }
 
   // TODO interface
-  async createConversation(ctx: any) {
+  createConversation(ctx: any) {
     return this.conversation.create(ctx.message.chat.id)
   }
 
   // TODO interface
-  async removeConversation(ctx: any) {
+  removeConversation(ctx: any) {
     this.conversation.remove(ctx.message.chat.id)
   }
 }
