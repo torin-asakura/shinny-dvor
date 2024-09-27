@@ -20,11 +20,11 @@ export class TelegramClientPortImpl implements TelegramClientPort {
     return await this.telegramClient.sendMessageWithMarkup(ctx, text, buttonsText)
   }
 
-  async createConversation(ctx: any) {
-    return await this.telegramClient.createConversation(ctx)
+  createConversation(ctx: any) {
+    return this.telegramClient.createConversation(ctx)
   }
 
-  async removeConversation(ctx: any) {
-    return await this.telegramClient.removeConversation(ctx)
+  removeConversation(ctx: any) {
+    return this.telegramClient.removeConversation(ctx)
   }
 }
