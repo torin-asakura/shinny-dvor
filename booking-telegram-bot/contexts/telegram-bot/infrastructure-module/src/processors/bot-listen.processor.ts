@@ -28,6 +28,16 @@ export class BotListenProcessor {
       await this.helpCommandUseCase.execute(ctx)
     })
 
+    this.telegramClient.cmd('create_appointment', async (ctx) => {
+      if (!this.telegramClient.conversation?.conversation?.size) {
+        // rename use case to conversation
+        await this.receivedMessageUseCase.execute(ctx)
+        // await runConversationA1(ctx)
+      } else {
+        // TODO сообщение об отмене текущей операции
+      }
+    })
+
     this.telegramClient.on('msg.text', async (ctx) => {
       // TODO fix it:
       // use conversation class
