@@ -1,13 +1,13 @@
-import { Injectable }          from '@nestjs/common'
+import { Injectable }                     from '@nestjs/common'
 
-import { TelegramClientPort }  from '../ports/index.js'
-import { ConversationService } from '../services/index.js'
+import { TelegramClientPort }             from '../ports/index.js'
+import { AppointmentConversationService } from '../services/index.js'
 
 @Injectable()
 export class ReceivedMessageUseCase {
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly conversationService: ConversationService
+    private readonly conversationService: AppointmentConversationService
   ) {}
 
   // TODO interface
