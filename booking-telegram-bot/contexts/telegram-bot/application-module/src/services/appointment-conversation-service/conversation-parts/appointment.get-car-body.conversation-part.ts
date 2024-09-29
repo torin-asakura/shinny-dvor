@@ -5,20 +5,25 @@ import { RunQueryUseCase }                from '@graphql-client/application-modu
 import { checkArrayLength }               from '@globals/data'
 
 import { TelegramClientPort }             from '../../../ports/index.js'
+import { ConversationPart }               from '../../conversation-part.class.js'
 import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
 @Injectable()
-export class AppointmentGetCarBodyConversationPart {
+export class AppointmentGetCarBodyConversationPart extends ConversationPart {
   // TODO interfaces
   carBodiesData: any
   carBodyTitles: Array<string>
 
+  conversationPartName: string = 'carBody'
+
   constructor(
     private readonly telegramClient: TelegramClientPort,
     private readonly runQueryUseCase: RunQueryUseCase
-  ) {}
+  ) {
+    super()
+  }
 
   private async getCarBodiesData() {
     // TODO income interfaces

@@ -5,18 +5,23 @@ import { RunQueryUseCase }                         from '@graphql-client/applica
 import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../../../ports/index.js'
+import { ConversationPart }                        from '../../conversation-part.class.js'
 import { CANCEL_APPOINTMENT_BUTTON_TEXT }          from '../appointment.constants.js'
 import { CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT } from '../appointment.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
 @Injectable()
-export class AppointmentGetCommentaryConversationPart {
+export class AppointmentGetCommentaryConversationPart extends ConversationPart {
   // TODO interfaces
   servicesData: any
   serviceTitles: Array<string>
 
-  constructor(private readonly telegramClient: TelegramClientPort) {}
+  conversationPartName: string = 'commentary'
+
+  constructor(private readonly telegramClient: TelegramClientPort) {
+    super()
+  }
 
   async sendQuestion(ctx) {
     await this.telegramClient.sendMessageWithMarkup(ctx, 'commentary*', [
@@ -31,12 +36,19 @@ export class AppointmentGetCommentaryConversationPart {
 
     // TODO switch case
     if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+      // TODO cancel
       console.log('cancel appointment')
     } else if (responseText === CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT) {
-      console.log('continue without commentary')
       return true
     }
 
-    return ' '
+    return responseText
+  }
+
+  checkAnswerCondition(checkAnswerResult) {
+    if (typeof checkAnswerResult === 'string') {
+      return true
+    }
+    return false
   }
 }

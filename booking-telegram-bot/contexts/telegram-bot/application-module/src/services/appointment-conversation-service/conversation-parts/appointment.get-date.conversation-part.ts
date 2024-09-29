@@ -1,6 +1,7 @@
 import { Injectable }                     from '@nestjs/common'
 
 import { TelegramClientPort }             from '../../../ports/index.js'
+import { ConversationPart }               from '../../conversation-part.class.js'
 import { DATE_OPTIONS }                   from '../appointment.constants.js'
 import { DAY_MS }                         from '../appointment.constants.js'
 import { SUGGESTED_DAYS_QUANTITY }        from '../appointment.constants.js'
@@ -9,12 +10,15 @@ import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
 // TODO create conversationPart Class with createConversation method
 
 @Injectable()
-export class AppointmentGetDateConversationPart {
+export class AppointmentGetDateConversationPart extends ConversationPart {
   // TODO types
   suggestedDates: any
   keyboardVariants: any
 
+  conversationPartName: string = 'date'
+
   constructor(private readonly telegramClient: TelegramClientPort) {
+    super()
     this.suggestedDates = this.getSuggestedDates()
     this.keyboardVariants = this.getKeyboardVariants()
   }
