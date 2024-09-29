@@ -12,7 +12,7 @@ import { EDIT_APPOINTMENT_BUTTON_TEXT }             from './appointment.constant
 import { AppointmentGetCommentaryConversationPart } from './conversation-parts/index.js'
 import { AppointmentGetDateConversationPart }       from './conversation-parts/index.js'
 import { AppointmentGetRadiiConversationPart }      from './conversation-parts/index.js'
-import { AppointmentGetServicesConversationPart }   from './conversation-parts/index.js'
+import { AppointmentGetServiceConversationPart }    from './conversation-parts/index.js'
 import { AppointmentGetTimeSlotConversationPart }   from './conversation-parts/index.js'
 import { AppointmentGetCarBodyConversationPart }    from './conversation-parts/index.js'
 
@@ -24,7 +24,7 @@ export class AppointmentConversationService {
     private readonly appointmentGetTimeSlotConversationPart: AppointmentGetTimeSlotConversationPart,
     private readonly appointmentGetCarBodyConversationPart: AppointmentGetCarBodyConversationPart,
     private readonly appointmentGetRadiiConversationPart: AppointmentGetRadiiConversationPart,
-    private readonly appointmentGetServicesConversationPart: AppointmentGetServicesConversationPart,
+    private readonly appointmentGetServicesConversationPart: AppointmentGetServiceConversationPart,
     private readonly appointmentGetCommentaryConversationPart: AppointmentGetCommentaryConversationPart
   ) {}
 
@@ -41,81 +41,21 @@ export class AppointmentConversationService {
 
       appointmentConversation.data = {}
 
-      await this.appointmentGetDateConversationPart.sendQuestion(ctx)
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetDateConversationPart.checkAnswer(ctx)
-        if (checkAnswerResult) {
-          appointmentConversation.data.selectedDate = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
-
-      await this.appointmentGetTimeSlotConversationPart.sendQuestion(
-        ctx,
-        appointmentConversation.data.selectedDate.milliseconds
-      )
-
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetTimeSlotConversationPart.checkAnswer(ctx)
-        if (checkAnswerResult) {
-          appointmentConversation.data.selectedTimeSlot = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
-
-      await this.appointmentGetCarBodyConversationPart.sendQuestion(ctx)
-
-      // TODO check interfaces
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetCarBodyConversationPart.checkAnswer(ctx)
-        if (checkAnswerResult) {
-          appointmentConversation.data.selectedCarBody = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
-
-      await this.appointmentGetRadiiConversationPart.sendQuestion(ctx)
-
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetRadiiConversationPart.checkAnswer(ctx)
-        if (checkAnswerResult) {
-          appointmentConversation.data.selectedRadii = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
-
-      await this.appointmentGetServicesConversationPart.sendQuestion(ctx)
-
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetServicesConversationPart.checkAnswer(ctx)
-        if (checkAnswerResult) {
-          appointmentConversation.data.selectedService = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
-
-      await this.appointmentGetCommentaryConversationPart.sendQuestion(ctx)
-
-      await appointmentConversation.wait('msg.text', (ctx) => {
-        const checkAnswerResult = this.appointmentGetCommentaryConversationPart.checkAnswer(ctx)
-        if (typeof checkAnswerResult === 'string' && checkAnswerResult !== ' ') {
-          appointmentConversation.data.commentary = checkAnswerResult
-        }
-
-        return Boolean(checkAnswerResult)
-      })
+      await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
 
       console.log(appointmentConversation.data)
 
-      const { selectedCarBody, selectedRadii, selectedService, commentary, selectedTimeSlot } =
-        appointmentConversation.data
+      await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetTimeSlotConversationPart.process(ctx, appointmentConversation, {
+        questionData: appointmentConversation.data.date.milliseconds,
+      })
+      await this.appointmentGetCarBodyConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetRadiiConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetServicesConversationPart.process(ctx, appointmentConversation)
 
-      const selectedTimeDate = new Date(selectedTimeSlot.milliseconds)
+      const { carBody, radii, service, commentary, timeSlot } = appointmentConversation.data
+
+      const selectedTimeDate = new Date(timeSlot.milliseconds)
       let selectedDateText = selectedTimeDate.toLocaleDateString('ru-RU', {
         weekday: 'long',
         month: 'long',
@@ -125,9 +65,9 @@ export class AppointmentConversationService {
       })
 
       let approvalMessage = ''
-      approvalMessage += `Тип кузова: ${selectedCarBody}\n`
-      approvalMessage += `Диаметр колёс: ${selectedRadii}\n`
-      approvalMessage += `Тип ремонта: ${selectedService}\n`
+      approvalMessage += `Тип кузова: ${carBody}\n`
+      approvalMessage += `Диаметр колёс: ${radii}\n`
+      approvalMessage += `Тип ремонта: ${service}\n`
       approvalMessage += `Выбранная дата: ${selectedDateText}\n`
       if (commentary) approvalMessage += `Комментарий: ${commentary}`
 
