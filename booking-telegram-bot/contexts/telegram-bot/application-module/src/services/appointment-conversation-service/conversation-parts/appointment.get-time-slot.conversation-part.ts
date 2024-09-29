@@ -3,10 +3,10 @@ import { Injectable }                     from '@nestjs/common'
 import { GET_CONTACTS }                   from '@globals/data'
 import { RunQueryUseCase }                from '@graphql-client/application-module'
 
-import { TelegramClientPort }             from '../ports/index.js'
-import { WORK_TIME }                      from './appointment.constants.js'
-import { TIME_SLOT_STEP_MIN }             from './appointment.constants.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from './appointment.constants.js'
+import { TelegramClientPort }             from '../../../ports/index.js'
+import { WORK_TIME }                      from '../appointment.constants.js'
+import { TIME_SLOT_STEP_MIN }             from '../appointment.constants.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
 
 // TODO make free is false on прошедшие time slots
 // TODO create conversationPart Class with createConversation method
@@ -156,13 +156,14 @@ export class AppointmentGetTimeSlotConversationPart {
   async sendQuestion(ctx, selectedDayMs: number) {
     this.setDayType(selectedDayMs)
 
+    // TODO filter closed intervals
+    // TODO get now time and close intervast, котороые уже прошли
+
     await this.initWorkTimeData()
     this.setSelectedDayWorkTime()
 
     this.getTimeSlots()
     this.reorderTimeSlots()
-
-		console.log(this.reorderedTimeSlots
 
     await this.telegramClient.sendMessageWithMarkup(ctx, 'Выберите время записи', [
       ...this.reorderedTimeSlots,

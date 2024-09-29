@@ -4,8 +4,8 @@ import { GET_SERVICES }                   from '@globals/data'
 import { RunQueryUseCase }                from '@graphql-client/application-module'
 import { checkArrayLength }               from '@globals/data'
 
-import { TelegramClientPort }             from '../ports/index.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from './appointment.constants.js'
+import { TelegramClientPort }             from '../../../ports/index.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
