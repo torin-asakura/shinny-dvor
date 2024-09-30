@@ -1,11 +1,11 @@
-import { Injectable }                     from '@nestjs/common'
+import { Injectable }              from '@nestjs/common'
 
-import { TelegramClientPort }             from '../../../ports/index.js'
-import { ConversationPart }               from '../../conversation-part.class.js'
-import { DATE_OPTIONS }                   from '../appointment-conversation.constants.js'
-import { DAY_MS }                         from '../appointment-conversation.constants.js'
-import { SUGGESTED_DAYS_QUANTITY }        from '../appointment-conversation.constants.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
+import { TelegramClientPort }      from '../../../ports/index.js'
+import { ConversationPart }        from '../../conversation-part.class.js'
+import { DATE_OPTIONS }            from '../appointment-conversation.constants.js'
+import { DAY_MS }                  from '../appointment-conversation.constants.js'
+import { SUGGESTED_DAYS_QUANTITY } from '../appointment-conversation.constants.js'
+import { ruLocale }                from '../../../locals/index.js'
 
 // TODO create conversationPart Class with createConversation method
 
@@ -50,17 +50,20 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
 
   async sendQuestion(ctx) {
     // TODO to locales
-    const MESSAGE_TEXT = 'Выберите дату записи'
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, MESSAGE_TEXT, [
+    const { selectDateMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectDateMessage, [
       ...this.keyboardVariants,
-      CANCEL_APPOINTMENT_BUTTON_TEXT,
+      cancelAppointmentButton,
     ])
   }
 
   // TODO to constructor
   private checkCancelCondition(text: string) {
-    return text === CANCEL_APPOINTMENT_BUTTON_TEXT || text === '/cancel'
+    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
+
+    return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
   checkAnswer(ctx) {
@@ -68,6 +71,8 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
     // TODO нужно выносить метод wait в адаптер?
     // 	он относится к библиотеке, а вызываю я его тут
     const { text: responseText } = message
+
+    const { missClickMessage } = ruLocale.appointmentConversation
 
     // TODO switch case
     // TODO move it into top layer. cancel current operation
@@ -80,7 +85,7 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
       return date
     }
 
-    message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+    message.reply(missClickMessage)
     return false
   }
 }

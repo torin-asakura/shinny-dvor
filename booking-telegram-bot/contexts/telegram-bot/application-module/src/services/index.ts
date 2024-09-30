@@ -1,1 +1,1 @@
-export * from './appointment-conversation-service/index.js'
+export * from './appointment-conversation/index.js'

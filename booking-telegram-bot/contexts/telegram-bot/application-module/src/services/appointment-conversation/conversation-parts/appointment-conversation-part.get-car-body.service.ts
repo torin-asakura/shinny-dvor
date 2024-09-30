@@ -1,12 +1,12 @@
-import { Injectable }                     from '@nestjs/common'
+import { Injectable }         from '@nestjs/common'
 
-import { GET_CAR_BODIES }                 from '@globals/data'
-import { RunQueryUseCase }                from '@graphql-client/application-module'
-import { checkArrayLength }               from '@globals/data'
+import { GET_CAR_BODIES }     from '@globals/data'
+import { RunQueryUseCase }    from '@graphql-client/application-module'
+import { checkArrayLength }   from '@globals/data'
 
-import { TelegramClientPort }             from '../../../ports/index.js'
-import { ConversationPart }               from '../../conversation-part.class.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
+import { TelegramClientPort } from '../../../ports/index.js'
+import { ConversationPart }   from '../../conversation-part.class.js'
+import { ruLocale }           from '../../../locals/index.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
@@ -48,10 +48,16 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
   async sendQuestion(ctx) {
     await this.initData()
 
+    const { selectCarBodyMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+
+    // TODO move cancel button text to adapter consts
+    // TODO add options to sendMessage method on adapter
+    // add cancelButton:boolean option flag to sendMessage method
+
     // TODO keyboard with cancel button
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'kuzov auto quesiton*', [
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectCarBodyMessage, [
       ...this.carBodyTitles,
-      CANCEL_APPOINTMENT_BUTTON_TEXT,
+      cancelAppointmentButton,
     ])
   }
 
@@ -59,14 +65,19 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     const { message } = ctx
     const { text: responseText } = message
 
+    // TODO move it in to parent class with checkAnswerCommand
+    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
+      ruLocale.appointmentConversation
+
     // TODO switch case
-    if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+    // TODO check answer to parent class
+    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
       console.log('cancel appointment')
     } else if (this.carBodyTitles.includes(responseText)) {
       return responseText
     }
 
-    message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+    message.reply(missClickMessage)
     return false
   }
 }

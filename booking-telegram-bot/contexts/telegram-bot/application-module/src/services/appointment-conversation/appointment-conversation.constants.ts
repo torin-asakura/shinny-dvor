@@ -1,8 +1,4 @@
 // TODO to messages (locales)
-export const CANCEL_APPOINTMENT_BUTTON_TEXT = 'Отменить запись'
-export const CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT = 'Продолжить без комментария'
-export const APPROVE_APPOINTMENT_BUTTON_TEXT = 'Согласовать запись'
-export const EDIT_APPOINTMENT_BUTTON_TEXT = 'Изменить запись'
 export const TIME_SLOT_STEP_MIN = 30
 
 export const DAY_MS = 1000 * 60 * 60 * 24

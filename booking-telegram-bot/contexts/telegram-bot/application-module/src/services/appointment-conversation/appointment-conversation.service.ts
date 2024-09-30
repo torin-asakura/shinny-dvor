@@ -4,7 +4,9 @@ import { Injectable }                               from '@nestjs/common'
 // TODO for what?
 import { Logger }                                   from '@nestjs/common'
 
+// TODO change import to sub-paths
 import { TelegramClientPort }                       from '../../ports/index.js'
+// TODO change import to sub-paths
 import { AppointmentGetCommentaryConversationPart } from './conversation-parts/index.js'
 import { AppointmentGetDateConversationPart }       from './conversation-parts/index.js'
 import { AppointmentGetRadiiConversationPart }      from './conversation-parts/index.js'
@@ -12,6 +14,8 @@ import { AppointmentGetServiceConversationPart }    from './conversation-parts/i
 import { AppointmentGetTimeSlotConversationPart }   from './conversation-parts/index.js'
 import { AppointmentGetCarBodyConversationPart }    from './conversation-parts/index.js'
 import { AppointmentGetApprovalConversationPart }   from './conversation-parts/index.js'
+// TODO change import to sub-path
+import { ruLocale }                                 from '../../locals/index.js'
 
 @Injectable()
 export class AppointmentConversationService {
@@ -31,7 +35,10 @@ export class AppointmentConversationService {
     try {
       // TODO type
       // const appointmentData: Record<string, any> = {}
-      await this.telegramClient.sendMessage(ctx, 'Начало диалога в use case')
+      await this.telegramClient.sendMessage(
+        ctx,
+        ruLocale.appointmentConversation.startConversationMessage
+      )
 
       const appointmentConversation: {
         data: AppointmentConversationDataType
@@ -58,12 +65,11 @@ export class AppointmentConversationService {
 
       // TODO Q: name? - save it from context
       // TODO Q: phone? - есть кнопка в telegram api - типо поделиться контактом - сделать опциональной
-
       // TODO запись в бд
 
       await this.telegramClient.sendMessage(
         ctx,
-        'ссылки на оператора (другой чат), скрыть клавиатуру'
+        ruLocale.appointmentConversation.endConversatoinMessage
       )
 
       this.telegramClient.removeConversation(ctx)
@@ -72,7 +78,8 @@ export class AppointmentConversationService {
       // если он пишет логи, то в случае ошибок нужно использовать его
       console.error(error)
 
-      // TODO more details on error???
+      // TODO maybe more details on error???
+      // - но зачем это знать клиенту?
       await this.telegramClient.sendMessage(ctx, 'На сервере произошла ошибка')
     }
   }

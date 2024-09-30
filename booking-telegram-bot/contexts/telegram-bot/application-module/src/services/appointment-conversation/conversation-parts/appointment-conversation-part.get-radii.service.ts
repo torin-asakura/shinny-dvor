@@ -1,12 +1,12 @@
-import { Injectable }                     from '@nestjs/common'
+import { Injectable }          from '@nestjs/common'
 
-import { GET_AVAILABLE_RADII }            from '@globals/data'
-import { RunQueryUseCase }                from '@graphql-client/application-module'
-import { checkArrayLength }               from '@globals/data'
+import { GET_AVAILABLE_RADII } from '@globals/data'
+import { RunQueryUseCase }     from '@graphql-client/application-module'
+import { checkArrayLength }    from '@globals/data'
 
-import { TelegramClientPort }             from '../../../ports/index.js'
-import { ConversationPart }               from '../../conversation-part.class.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
+import { TelegramClientPort }  from '../../../ports/index.js'
+import { ConversationPart }    from '../../conversation-part.class.js'
+import { ruLocale }            from '../../../locals/index.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
@@ -48,9 +48,11 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
   async sendQuestion(ctx) {
     await this.initData()
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'diameter coles*', [
+    const { selectRadiiMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectRadiiMessage, [
       ...this.radiiTitles,
-      CANCEL_APPOINTMENT_BUTTON_TEXT,
+      cancelAppointmentButton,
     ])
   }
 
@@ -58,14 +60,17 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     const { message } = ctx
     const { text: responseText } = message
 
+    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
+      ruLocale.appointmentConversation
+
     // TODO switch case
-    if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
       console.log('cancel appointment')
     } else if (this.radiiTitles.includes(responseText)) {
       return responseText
     }
 
-    message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+    message.reply(missClickMessage)
     return false
   }
 }

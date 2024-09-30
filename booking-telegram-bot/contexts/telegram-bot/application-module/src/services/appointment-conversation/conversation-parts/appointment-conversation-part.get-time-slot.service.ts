@@ -1,13 +1,13 @@
-import { Injectable }                     from '@nestjs/common'
+import { Injectable }         from '@nestjs/common'
 
-import { GET_CONTACTS }                   from '@globals/data'
-import { RunQueryUseCase }                from '@graphql-client/application-module'
+import { GET_CONTACTS }       from '@globals/data'
+import { RunQueryUseCase }    from '@graphql-client/application-module'
 
-import { TelegramClientPort }             from '../../../ports/index.js'
-import { ConversationPart }               from '../../conversation-part.class.js'
-import { WORK_TIME }                      from '../appointment-conversation.constants.js'
-import { TIME_SLOT_STEP_MIN }             from '../appointment-conversation.constants.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
+import { TelegramClientPort } from '../../../ports/index.js'
+import { ConversationPart }   from '../../conversation-part.class.js'
+import { WORK_TIME }          from '../appointment-conversation.constants.js'
+import { TIME_SLOT_STEP_MIN } from '../appointment-conversation.constants.js'
+import { ruLocale }           from '../../../locals/index.js'
 
 // TODO make free is false on прошедшие time slots
 // TODO create conversationPart Class with createConversation method
@@ -159,34 +159,42 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
   }
 
   async sendQuestion(ctx, selectedDayMs: number) {
+    const { cancelAppointmentButton, selectTimeSlotMessage } = ruLocale.appointmentConversation
+
     this.setDayType(selectedDayMs)
 
     // TODO filter closed intervals
     // TODO get now time and close intervast, котороые уже прошли
 
+    // TODO init data
     await this.initWorkTimeData()
     this.setSelectedDayWorkTime()
 
     this.getTimeSlots()
     this.reorderTimeSlots()
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'Выберите время записи', [
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectTimeSlotMessage, [
       ...this.reorderedTimeSlots,
-      CANCEL_APPOINTMENT_BUTTON_TEXT,
+      cancelAppointmentButton,
     ])
   }
 
   // TODO to constructor
   private checkCancelCondition(text: string) {
-    return text === CANCEL_APPOINTMENT_BUTTON_TEXT || text === '/cancel'
+    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
+
+    return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
 
+    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
+      ruLocale.appointmentConversation
+
     // TODO switch case
-    if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
+    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
       message.reply('Запись отменена')
       return this.telegramClient.removeConversation(ctx)
     }
@@ -196,7 +204,7 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
       return findedTimeSlot
     }
 
-    message.reply('Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись')
+    message.reply(missClickMessage)
     return false
   }
 }
