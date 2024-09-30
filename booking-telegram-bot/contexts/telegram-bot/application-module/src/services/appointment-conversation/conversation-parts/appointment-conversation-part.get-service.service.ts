@@ -63,9 +63,7 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
       ruLocale.appointmentConversation
 
     // TODO switch case
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      console.log('cancel appointment')
-    } else if (this.serviceTitles.includes(responseText)) {
+    if (this.serviceTitles.includes(responseText)) {
       return responseText
     }
 

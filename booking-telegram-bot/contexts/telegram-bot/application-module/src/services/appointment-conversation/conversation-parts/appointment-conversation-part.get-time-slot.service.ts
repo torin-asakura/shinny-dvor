@@ -179,25 +179,11 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
     ])
   }
 
-  // TODO to constructor
-  private checkCancelCondition(text: string) {
-    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
-
-    return text === cancelAppointmentButton || text === cancelAppointmentCommand
-  }
-
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
 
-    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
-      ruLocale.appointmentConversation
-
-    // TODO switch case
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      message.reply('Запись отменена')
-      return this.telegramClient.removeConversation(ctx)
-    }
+    const { missClickMessage } = ruLocale.appointmentConversation
 
     const findedTimeSlot = this.timeSlots.find(({ text }) => text === responseText)
     if (findedTimeSlot) {

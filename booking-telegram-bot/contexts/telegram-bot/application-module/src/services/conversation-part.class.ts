@@ -1,11 +1,22 @@
+import { TelegramClientPort } from '../ports/index.js'
+import { ruLocale }           from '../locals/index.js'
+
 class ConversationPart {
   conversationPartName: string
 
   async sendQuestion() {}
   async checkAnswer() {}
 
-  checkAnswerCondition(checkAnswerResult) {
+  constructor(private readonly telegramClient: TelegramClientPort) {}
+
+  checkWriteConversationDataCondition(checkAnswerResult) {
     return checkAnswerResult
+  }
+
+  checkCancelCondition(text: string) {
+    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
+
+    return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
   async process(ctx, conversation, processData) {
@@ -13,16 +24,23 @@ class ConversationPart {
 
     await this.sendQuestion(ctx, questionData)
 
+    // TODO нужно выносить метод wait в адаптер?
+    // 	он относится к библиотеке, а вызываю я его тут
     await conversation.wait('msg.text', (ctx) => {
+      const { message } = ctx
+      const { text: responseText } = message
+
+      if (this.checkCancelCondition(responseText)) {
+        message.reply('Запись отменена')
+        return this.telegramClient.removeConversation(ctx)
+      }
+
       const checkAnswerResult = this.checkAnswer(ctx)
 
-      // TODO change namings
-      // TODO это условия записи в память диалога
-      if (this.checkAnswerCondition(checkAnswerResult)) {
+      if (this.checkWriteConversationDataCondition(checkAnswerResult)) {
         conversation.data[this.conversationPartName] = checkAnswerResult
       }
 
-      // TODO это условия перехода к следующему шагу
       return Boolean(checkAnswerResult)
     })
   }

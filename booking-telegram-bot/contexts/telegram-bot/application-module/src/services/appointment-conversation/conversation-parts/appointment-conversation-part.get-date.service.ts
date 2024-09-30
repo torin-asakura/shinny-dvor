@@ -59,28 +59,13 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
     ])
   }
 
-  // TODO to constructor
-  private checkCancelCondition(text: string) {
-    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
-
-    return text === cancelAppointmentButton || text === cancelAppointmentCommand
-  }
-
   checkAnswer(ctx) {
     const { message } = ctx
-    // TODO нужно выносить метод wait в адаптер?
-    // 	он относится к библиотеке, а вызываю я его тут
     const { text: responseText } = message
 
     const { missClickMessage } = ruLocale.appointmentConversation
 
-    // TODO switch case
-    // TODO move it into top layer. cancel current operation
-
-    if (this.checkCancelCondition(responseText)) {
-      message.reply('Запись отменена')
-      return this.telegramClient.removeConversation(ctx)
-    } else if (this.keyboardVariants.includes(responseText)) {
+    if (this.keyboardVariants.includes(responseText)) {
       const date = this.suggestedDates.find(({ clientText }) => clientText === responseText)
       return date
     }

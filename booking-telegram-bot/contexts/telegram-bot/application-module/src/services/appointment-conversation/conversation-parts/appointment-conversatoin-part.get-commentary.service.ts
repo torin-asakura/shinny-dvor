@@ -4,8 +4,6 @@ import { TelegramClientPort } from '../../../ports/index.js'
 import { ConversationPart }   from '../../conversation-part.class.js'
 import { ruLocale }           from '../../../locals/index.js'
 
-// TODO create conversationPart Class with createConversation method and extend that class
-
 @Injectable()
 export class AppointmentGetCommentaryConversationPart extends ConversationPart {
   // TODO interfaces
@@ -32,21 +30,16 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     const { message } = ctx
     const { text: responseText } = message
 
-    const { cancelAppointmentButton, cancelAppointmentCommand, continueWithoutCommentaryButton } =
-      ruLocale.appointmentConversation
+    const { continueWithoutCommentaryButton } = ruLocale.appointmentConversation
 
-    // TODO switch case
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      // TODO cancel
-      console.log('cancel appointment')
-    } else if (responseText === continueWithoutCommentaryButton) {
+    if (responseText === continueWithoutCommentaryButton) {
       return true
     }
 
     return responseText
   }
 
-  checkAnswerCondition(checkAnswerResult) {
+  checkWriteConversationDataCondition(checkAnswerResult) {
     if (typeof checkAnswerResult === 'string') {
       return true
     }

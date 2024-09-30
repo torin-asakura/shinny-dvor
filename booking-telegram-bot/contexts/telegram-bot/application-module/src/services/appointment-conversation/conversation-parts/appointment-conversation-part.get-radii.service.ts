@@ -60,13 +60,9 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     const { message } = ctx
     const { text: responseText } = message
 
-    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
-      ruLocale.appointmentConversation
+    const { missClickMessage } = ruLocale.appointmentConversation
 
-    // TODO switch case
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      console.log('cancel appointment')
-    } else if (this.radiiTitles.includes(responseText)) {
+    if (this.radiiTitles.includes(responseText)) {
       return responseText
     }
 

@@ -51,22 +51,12 @@ export class AppointmentGetApprovalConversationPart extends ConversationPart {
     const { message } = ctx
     const { text: responseText } = message
 
-    const {
-      approveAppointmentButton,
-      editAppointmentButton,
-      cancelAppointmentButton,
-      cancelAppointmentCommand,
-    } = ruLocale.appointmentConversation
+    const { approveAppointmentButton, editAppointmentButton } = ruLocale.appointmentConversation
 
-    // TODO switch case
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      console.log('cancel appointment')
-    } else if (responseText === approveAppointmentButton) {
+    if (responseText === approveAppointmentButton) {
       return true
     } else if (responseText === editAppointmentButton) {
-      // TODO - смотри, как сделан commentary. там таже логика
-      // this.process(ctx)
-      return false
+      return this.telegramClient.removeConversation(ctx)
     }
 
     return false

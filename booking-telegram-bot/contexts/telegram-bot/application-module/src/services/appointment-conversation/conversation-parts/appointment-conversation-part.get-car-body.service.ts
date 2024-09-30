@@ -66,14 +66,11 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     const { text: responseText } = message
 
     // TODO move it in to parent class with checkAnswerCommand
-    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
-      ruLocale.appointmentConversation
+    const { missClickMessage } = ruLocale.appointmentConversation
 
     // TODO switch case
     // TODO check answer to parent class
-    if (responseText === cancelAppointmentButton || responseText === cancelAppointmentCommand) {
-      console.log('cancel appointment')
-    } else if (this.carBodyTitles.includes(responseText)) {
+    if (this.carBodyTitles.includes(responseText)) {
       return responseText
     }
 
