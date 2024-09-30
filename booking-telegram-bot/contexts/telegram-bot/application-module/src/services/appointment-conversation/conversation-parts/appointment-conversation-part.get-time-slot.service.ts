@@ -1,64 +1,53 @@
-import { Injectable }         from '@nestjs/common'
+import type { WorkTimeDataType }            from '../appointment-conversation.interfaces.js'
+import type { TimeSlotsType }               from '../appointment-conversation.interfaces.js'
 
-import { GET_CONTACTS }       from '@globals/data'
-import { RunQueryUseCase }    from '@graphql-client/application-module'
+import { Injectable }                       from '@nestjs/common'
 
-import { TelegramClientPort } from '../../../ports/index.js'
-import { ConversationPart }   from '../../conversation-part.class.js'
-import { WORK_TIME }          from '../appointment-conversation.constants.js'
-import { TIME_SLOT_STEP_MIN } from '../appointment-conversation.constants.js'
-import { ruLocale }           from '../../../locals/index.js'
+import { GET_CONTACTS }                     from '@globals/data'
+import { RunQueryUseCase }                  from '@graphql-client/application-module'
 
-// TODO make free is false on прошедшие time slots
-// TODO create conversationPart Class with createConversation method
+import { TelegramClientPort }               from '../../../ports/index.js'
+import { ConversationPart }                 from '../../conversation-part.class.js'
+import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS } from '../appointment-conversation.constants.js'
+import { WORK_TIME }                        from '../appointment-conversation.constants.js'
+import { TIME_SLOT_STEP_MIN }               from '../appointment-conversation.constants.js'
+import { ruLocale }                         from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
-  // TODO types
-  selectedDayWorkTime: any
-  selectedDayDate: Date
-  timeSlots: Array<{
-    milliseconds: number
-    text: string
-    isFree: boolean
-  }> = []
-  reorderedTimeSlots: Array<Array<string>>
-  selectedDayType: 'weekdays' | 'weekends'
-
   conversationPartName: string = 'timeSlot'
 
-  // TODO to interfaces
-  workTimeData: {
-    weekdays: {
-      start: number
-      end: number
-    }
-    weekends: {
-      start: number
-      end: number
-    }
-  }
+  // @ts-expect-error any
+  selectedDayWorkTime
+  // @ts-expect-error any
+  keyboardVariants
+  selectedDayDate: Date
+  timeSlots: TimeSlotsType = []
+  selectedDayType: 'weekdays' | 'weekends'
+  workTimeData: WorkTimeDataType
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
     private readonly runQueryUseCase: RunQueryUseCase
   ) {
+    // @ts-expect-error arguments
     super()
   }
 
-  private async initWorkTimeData() {
-    const workTimeData = await this.getWorktimeData()
+  private async getWorkTimeData() {
+    const workTimeData = await this.getWorkTimeQueryData()
     const workTimeRawString = this.getWorkTimeRawString(workTimeData)
     const parsedWorkTime = this.parseWorkTimeString(workTimeRawString)
-    this.workTimeData = parsedWorkTime
+    return parsedWorkTime
   }
 
-  private async getWorktimeData() {
+  private async getWorkTimeQueryData() {
     const queryData = await this.runQueryUseCase.execute(GET_CONTACTS)
     const workTimeData = queryData.data.contactItems.nodes
     return workTimeData
   }
 
+  // @ts-expect-error any
   private getWorkTimeRawString(workTimeData) {
     return workTimeData[0].contactAddons.workinghours
   }
@@ -92,6 +81,7 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
   }
 
   private getTimeSlots() {
+    let timeSlots = []
     const { start, end } = this.selectedDayWorkTime
     const startWorkTimeDate = this.selectedDayDate.setHours(start)
     const endWorkTimeDate = this.selectedDayDate.setHours(end)
@@ -113,72 +103,84 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
       // TODO нужна проверка по бд - свободный ли слот
       const indexDateFreeState = true
 
-      this.timeSlots.push({
+      timeSlots.push({
         milliseconds: indexDateMilliseconds,
         text: indexDateText,
         isFree: indexDateFreeState,
       })
     }
+
+    return timeSlots
   }
 
-  private formatTimeSlots() {
-    return this.timeSlots.map(({ text, isFree }) => {
+  // @ts-expect-error any
+  private getFormattedTimeSlots(timeSlots) {
+    // @ts-expect-error any
+    return timeSlots.map(({ text, isFree }) => {
       if (!isFree) return 'X'
       return text
     })
   }
 
-  private reorderTimeSlots() {
-    const formattedTimeSlots = this.formatTimeSlots()
+  // @ts-expect-error any
+  private getReorderedTimeSlots(timeSlots) {
     const reorderedTimeSlots = []
 
-    // TODO to constants
-    const innerArrayLength = 4
+    const innerArrayLength = TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS
 
-    for (let i = 0; i < formattedTimeSlots.length; i += innerArrayLength) {
-      reorderedTimeSlots.push(formattedTimeSlots.slice(i, i + innerArrayLength))
+    for (let i = 0; i < timeSlots.length; i += innerArrayLength) {
+      reorderedTimeSlots.push(timeSlots.slice(i, i + innerArrayLength))
     }
 
-    this.reorderedTimeSlots = reorderedTimeSlots
+    return reorderedTimeSlots
   }
 
-  private setDayType(selectedDayMs: number) {
+  private getDayType(selectedDayMs: number) {
+    let dayType: string
+
     this.selectedDayDate = new Date(selectedDayMs)
     const selectedDay = this.selectedDayDate.getDay()
+
     if (selectedDay > 0 && selectedDay < 6) {
-      this.selectedDayType = 'weekdays'
-      return
+      dayType = 'weekdays'
     }
-    this.selectedDayType = 'weekends'
-    return
+    dayType = 'weekends'
+
+    return dayType
   }
 
-  // TODO interfaces
-  private setSelectedDayWorkTime() {
-    this.selectedDayWorkTime = this.workTimeData[this.selectedDayType]
+  private getSelectedDayWorkTime() {
+    return this.workTimeData[this.selectedDayType]
   }
 
+  private async initData(selectedDayMs: number) {
+    // @ts-expect-error not assignable
+    this.selectedDayType = this.getDayType(selectedDayMs)
+
+    // TODO filter closed today intervals, in past time
+
+    this.workTimeData = await this.getWorkTimeData()
+    this.selectedDayWorkTime = this.getSelectedDayWorkTime()
+
+    this.timeSlots = this.getTimeSlots()
+    const timeSlotes_formatted = this.getFormattedTimeSlots(this.timeSlots)
+    const timeSlots_reordered = this.getReorderedTimeSlots(timeSlotes_formatted)
+    this.keyboardVariants = timeSlots_reordered
+  }
+
+  // @ts-expect-error not assignable
   async sendQuestion(ctx, selectedDayMs: number) {
     const { cancelAppointmentButton, selectTimeSlotMessage } = ruLocale.appointmentConversation
 
-    this.setDayType(selectedDayMs)
-
-    // TODO filter closed intervals
-    // TODO get now time and close intervast, котороые уже прошли
-
-    // TODO init data
-    await this.initWorkTimeData()
-    this.setSelectedDayWorkTime()
-
-    this.getTimeSlots()
-    this.reorderTimeSlots()
+    await this.initData(selectedDayMs)
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectTimeSlotMessage, [
-      ...this.reorderedTimeSlots,
+      ...this.keyboardVariants,
       cancelAppointmentButton,
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
