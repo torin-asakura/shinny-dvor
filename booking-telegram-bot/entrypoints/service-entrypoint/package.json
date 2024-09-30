@@ -9,7 +9,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn service build && cp -R -a ./static/. ./dist/",
+    "build": "yarn service build",
     "copy-assets": "cp -R -a ./static/. ./dist/",
     "dev": "ENVIRONMENT=dev yarn service dev ",
     "prepack": "run build",
