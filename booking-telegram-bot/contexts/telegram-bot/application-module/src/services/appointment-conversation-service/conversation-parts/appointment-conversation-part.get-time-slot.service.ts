@@ -5,9 +5,9 @@ import { RunQueryUseCase }                from '@graphql-client/application-modu
 
 import { TelegramClientPort }             from '../../../ports/index.js'
 import { ConversationPart }               from '../../conversation-part.class.js'
-import { WORK_TIME }                      from '../appointment.constants.js'
-import { TIME_SLOT_STEP_MIN }             from '../appointment.constants.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
+import { WORK_TIME }                      from '../appointment-conversation.constants.js'
+import { TIME_SLOT_STEP_MIN }             from '../appointment-conversation.constants.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
 
 // TODO make free is false on прошедшие time slots
 // TODO create conversationPart Class with createConversation method

@@ -2,10 +2,10 @@ import { Injectable }                     from '@nestjs/common'
 
 import { TelegramClientPort }             from '../../../ports/index.js'
 import { ConversationPart }               from '../../conversation-part.class.js'
-import { DATE_OPTIONS }                   from '../appointment.constants.js'
-import { DAY_MS }                         from '../appointment.constants.js'
-import { SUGGESTED_DAYS_QUANTITY }        from '../appointment.constants.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
+import { DATE_OPTIONS }                   from '../appointment-conversation.constants.js'
+import { DAY_MS }                         from '../appointment-conversation.constants.js'
+import { SUGGESTED_DAYS_QUANTITY }        from '../appointment-conversation.constants.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
 
 // TODO create conversationPart Class with createConversation method
 

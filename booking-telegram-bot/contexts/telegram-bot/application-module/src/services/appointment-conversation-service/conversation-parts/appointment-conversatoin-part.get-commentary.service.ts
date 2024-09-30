@@ -6,8 +6,8 @@ import { checkArrayLength }                        from '@globals/data'
 
 import { TelegramClientPort }                      from '../../../ports/index.js'
 import { ConversationPart }                        from '../../conversation-part.class.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT }          from '../appointment.constants.js'
-import { CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT } from '../appointment.constants.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT }          from '../appointment-conversation.constants.js'
+import { CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT } from '../appointment-conversation.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 

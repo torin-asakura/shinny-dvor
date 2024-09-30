@@ -1,22 +1,23 @@
 import { Injectable }                     from '@nestjs/common'
 
-import { GET_CAR_BODIES }                 from '@globals/data'
+import { GET_SERVICES }                   from '@globals/data'
 import { RunQueryUseCase }                from '@graphql-client/application-module'
 import { checkArrayLength }               from '@globals/data'
 
 import { TelegramClientPort }             from '../../../ports/index.js'
 import { ConversationPart }               from '../../conversation-part.class.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
+import { ConversationPart }               from '../../conversation-part.class.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
 @Injectable()
-export class AppointmentGetCarBodyConversationPart extends ConversationPart {
+export class AppointmentGetServiceConversationPart extends ConversationPart {
   // TODO interfaces
-  carBodiesData: any
-  carBodyTitles: Array<string>
+  servicesData: any
+  serviceTitles: Array<string>
 
-  conversationPartName: string = 'carBody'
+  conversationPartName: string = 'service'
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
@@ -25,45 +26,42 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     super()
   }
 
-  private async getCarBodiesData() {
+  private async getServicesData() {
     // TODO income interfaces
-    const queryData = await this.runQueryUseCase.execute(GET_CAR_BODIES)
-    const carBodiesQueryData = queryData.data.carBodyItems.nodes
+    const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
+    const servicesQueryData = queryData.data.services.nodes
 
-    checkArrayLength({ carBodiesQueryData })
+    checkArrayLength({ servicesQueryData })
 
-    return carBodiesQueryData
+    return servicesQueryData
   }
 
-  // TODO interfaces
-  private getCarBodyTitles() {
-    return this.carBodiesData.map((singleCarData: any) => singleCarData.contentAddons.title)
+  private getServiceTitles() {
+    return this.servicesData.map((singleServiceData: any) => singleServiceData.servicesParams.title)
   }
 
   private async initData() {
-    this.carBodiesData = await this.getCarBodiesData()
-    this.carBodyTitles = this.getCarBodyTitles()
+    this.servicesData = await this.getServicesData()
+    this.serviceTitles = this.getServiceTitles()
   }
 
   async sendQuestion(ctx) {
     await this.initData()
 
-    // TODO keyboard with cancel button
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'kuzov auto quesiton*', [
-      ...this.carBodyTitles,
+    await this.telegramClient.sendMessageWithMarkup(ctx, 'tip remonta*', [
+      ...this.serviceTitles,
       CANCEL_APPOINTMENT_BUTTON_TEXT,
     ])
   }
 
   checkAnswer(ctx) {
     const { message } = ctx
-
     const { text: responseText } = message
 
     // TODO switch case
     if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
       console.log('cancel appointment')
-    } else if (this.carBodyTitles.includes(responseText)) {
+    } else if (this.serviceTitles.includes(responseText)) {
       return responseText
     }
 

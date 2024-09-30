@@ -1,20 +1,17 @@
-import type { AppointmentConversationDataType }     from './appointment.interfaces.js'
+import type { AppointmentConversationDataType }     from './appointment-conversation.interfaces.js'
 
 import { Injectable }                               from '@nestjs/common'
 // TODO for what?
 import { Logger }                                   from '@nestjs/common'
 
 import { TelegramClientPort }                       from '../../ports/index.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT }           from './appointment.constants.js'
-import { CONTINUE_WITHOUT_COMMENTARY_BUTTON_TEXT }  from './appointment.constants.js'
-import { APPROVE_APPOINTMENT_BUTTON_TEXT }          from './appointment.constants.js'
-import { EDIT_APPOINTMENT_BUTTON_TEXT }             from './appointment.constants.js'
 import { AppointmentGetCommentaryConversationPart } from './conversation-parts/index.js'
 import { AppointmentGetDateConversationPart }       from './conversation-parts/index.js'
 import { AppointmentGetRadiiConversationPart }      from './conversation-parts/index.js'
 import { AppointmentGetServiceConversationPart }    from './conversation-parts/index.js'
 import { AppointmentGetTimeSlotConversationPart }   from './conversation-parts/index.js'
 import { AppointmentGetCarBodyConversationPart }    from './conversation-parts/index.js'
+import { AppointmentGetApprovalConversationPart }   from './conversation-parts/index.js'
 
 @Injectable()
 export class AppointmentConversationService {
@@ -25,7 +22,8 @@ export class AppointmentConversationService {
     private readonly appointmentGetCarBodyConversationPart: AppointmentGetCarBodyConversationPart,
     private readonly appointmentGetRadiiConversationPart: AppointmentGetRadiiConversationPart,
     private readonly appointmentGetServicesConversationPart: AppointmentGetServiceConversationPart,
-    private readonly appointmentGetCommentaryConversationPart: AppointmentGetCommentaryConversationPart
+    private readonly appointmentGetCommentaryConversationPart: AppointmentGetCommentaryConversationPart,
+    private readonly appointmentGetApprovalConversationPart: AppointmentGetApprovalConversationPart
   ) {}
 
   // TODO inteface
@@ -41,56 +39,21 @@ export class AppointmentConversationService {
 
       appointmentConversation.data = {}
 
-      await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
-
-      console.log(appointmentConversation.data)
-
       await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
+
+      const selectedDateMs = appointmentConversation.data.date.milliseconds
       await this.appointmentGetTimeSlotConversationPart.process(ctx, appointmentConversation, {
-        questionData: appointmentConversation.data.date.milliseconds,
+        questionData: selectedDateMs,
       })
+
       await this.appointmentGetCarBodyConversationPart.process(ctx, appointmentConversation)
       await this.appointmentGetRadiiConversationPart.process(ctx, appointmentConversation)
       await this.appointmentGetServicesConversationPart.process(ctx, appointmentConversation)
 
-      const { carBody, radii, service, commentary, timeSlot } = appointmentConversation.data
+      await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
 
-      const selectedTimeDate = new Date(timeSlot.milliseconds)
-      let selectedDateText = selectedTimeDate.toLocaleDateString('ru-RU', {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-      })
-
-      let approvalMessage = ''
-      approvalMessage += `Тип кузова: ${carBody}\n`
-      approvalMessage += `Диаметр колёс: ${radii}\n`
-      approvalMessage += `Тип ремонта: ${service}\n`
-      approvalMessage += `Выбранная дата: ${selectedDateText}\n`
-      if (commentary) approvalMessage += `Комментарий: ${commentary}`
-
-      await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
-        APPROVE_APPOINTMENT_BUTTON_TEXT,
-        EDIT_APPOINTMENT_BUTTON_TEXT,
-        CANCEL_APPOINTMENT_BUTTON_TEXT,
-      ])
-
-      await appointmentConversation.wait('msg.text', ({ message }) => {
-        const { text: responseText } = message
-
-        // TODO switch case
-        if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
-          console.log('cancel appointment')
-        } else if (responseText === APPROVE_APPOINTMENT_BUTTON_TEXT) {
-          return true
-        } else if (responseText === EDIT_APPOINTMENT_BUTTON_TEXT) {
-          this.process(ctx)
-          return false
-        }
-
-        return false
+      await this.appointmentGetApprovalConversationPart.process(ctx, appointmentConversation, {
+        questionData: appointmentConversation.data,
       })
 
       // TODO Q: name? - save it from context

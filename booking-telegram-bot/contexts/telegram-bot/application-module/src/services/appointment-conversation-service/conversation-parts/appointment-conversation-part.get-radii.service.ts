@@ -1,23 +1,22 @@
 import { Injectable }                     from '@nestjs/common'
 
-import { GET_SERVICES }                   from '@globals/data'
+import { GET_AVAILABLE_RADII }            from '@globals/data'
 import { RunQueryUseCase }                from '@graphql-client/application-module'
 import { checkArrayLength }               from '@globals/data'
 
 import { TelegramClientPort }             from '../../../ports/index.js'
 import { ConversationPart }               from '../../conversation-part.class.js'
-import { ConversationPart }               from '../../conversation-part.class.js'
-import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment.constants.js'
+import { CANCEL_APPOINTMENT_BUTTON_TEXT } from '../appointment-conversation.constants.js'
 
 // TODO create conversationPart Class with createConversation method and extend that class
 
 @Injectable()
-export class AppointmentGetServiceConversationPart extends ConversationPart {
+export class AppointmentGetRadiiConversationPart extends ConversationPart {
   // TODO interfaces
-  servicesData: any
-  serviceTitles: Array<string>
+  radiiData: any
+  radiiTitles: string
 
-  conversationPartName: string = 'service'
+  conversationPartName: string = 'radii'
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
@@ -26,30 +25,31 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     super()
   }
 
-  private async getServicesData() {
+  private async getRadiiData() {
     // TODO income interfaces
-    const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
-    const servicesQueryData = queryData.data.services.nodes
+    const queryData = await this.runQueryUseCase.execute(GET_AVAILABLE_RADII)
+    const radiiQueryData = queryData.data.availableRadiusItems.nodes
 
-    checkArrayLength({ servicesQueryData })
+    checkArrayLength({ radiiQueryData })
 
-    return servicesQueryData
+    return radiiQueryData
   }
 
-  private getServiceTitles() {
-    return this.servicesData.map((singleServiceData: any) => singleServiceData.servicesParams.title)
+  // TODO interfaces
+  private getRadiiTitles() {
+    return this.radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
   }
 
   private async initData() {
-    this.servicesData = await this.getServicesData()
-    this.serviceTitles = this.getServiceTitles()
+    this.radiiData = await this.getRadiiData()
+    this.radiiTitles = this.getRadiiTitles()
   }
 
   async sendQuestion(ctx) {
     await this.initData()
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'tip remonta*', [
-      ...this.serviceTitles,
+    await this.telegramClient.sendMessageWithMarkup(ctx, 'diameter coles*', [
+      ...this.radiiTitles,
       CANCEL_APPOINTMENT_BUTTON_TEXT,
     ])
   }
@@ -61,7 +61,7 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     // TODO switch case
     if (responseText === CANCEL_APPOINTMENT_BUTTON_TEXT || responseText === '/cancel') {
       console.log('cancel appointment')
-    } else if (this.serviceTitles.includes(responseText)) {
+    } else if (this.radiiTitles.includes(responseText)) {
       return responseText
     }
 
