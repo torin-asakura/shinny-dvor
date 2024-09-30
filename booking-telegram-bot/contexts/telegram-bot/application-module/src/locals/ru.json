@@ -1,5 +1,9 @@
 {
+  "receiveMessage": {
+    "entrypointAnswer": "Начало диалога в processor, /create_appointment"
+  },
   "appointmentConversation": {
+    "serverErrorMessage": "На сервере произошла ошибка",
     "startConversationMessage": "appointment conversation welcome message",
     "endConversatoinMessage": "appointment conversation close message",
     "approvalMessageTitles": {
