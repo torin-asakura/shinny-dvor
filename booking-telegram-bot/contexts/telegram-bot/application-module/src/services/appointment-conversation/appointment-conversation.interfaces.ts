@@ -22,4 +22,23 @@ type SelectedTimeSlotType = {
   isFree: boolean
 }
 
+type WorkTimeDataType = {
+  weekdays: {
+    start: number
+    end: number
+  }
+  weekends: {
+    start: number
+    end: number
+  }
+}
+
+type TimeSlotsType = Array<{
+  milliseconds: number
+  text: string
+  isFree: boolean
+}>
+
 export type { AppointmentConversationDataType }
+export type { WorkTimeDataType }
+export type { TimeSlotsType }
