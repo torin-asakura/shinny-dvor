@@ -8,14 +8,13 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@booking-telegram-bot/tgsnake-adapter": "workspace:*",
     "@telegram-bot/application-module": "workspace:*"
   },
   "devDependencies": {
-    "@booking-telegram-bot/tgsnake-adapter": "workspace:*",
     "@nestjs/common": "10.4.2"
   },
   "peerDependencies": {
-    "@booking-telegram-bot/tgsnake-adapter": "*",
     "@nestjs/common": "*"
   }
 }
