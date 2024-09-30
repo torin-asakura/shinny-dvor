@@ -8,6 +8,8 @@ export const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
   month: 'long',
 }
 
+export const TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS = 4
+
 export const WORK_TIME = {
   weekdays: {
     start: 9,
