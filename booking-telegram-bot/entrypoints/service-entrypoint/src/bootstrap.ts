@@ -6,7 +6,10 @@ import { BotListenProcessor }         from '@telegram-bot/infrastructure-module'
 import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'
 
 declare const module: {
-  hot: any
+  hot: {
+    accept: VoidFunction
+    dispose: (param: VoidFunction) => void
+  }
   accept: VoidFunction
   dispose: VoidFunction
 }
