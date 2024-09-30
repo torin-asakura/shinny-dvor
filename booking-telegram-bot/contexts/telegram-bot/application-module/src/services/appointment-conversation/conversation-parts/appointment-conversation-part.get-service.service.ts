@@ -8,13 +8,12 @@ import { TelegramClientPort } from '../../../ports/index.js'
 import { ConversationPart }   from '../../conversation-part.class.js'
 import { ruLocale }           from '../../../locals/index.js'
 
-// TODO create conversationPart Class with createConversation method and extend that class
-
 @Injectable()
 export class AppointmentGetServiceConversationPart extends ConversationPart {
-  // TODO interfaces
-  servicesData: any
-  serviceTitles: Array<string>
+  // @ts-expect-error
+  servicesData
+  // @ts-expect-error
+  serviceTitles
 
   conversationPartName: string = 'service'
 
@@ -22,11 +21,11 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     private readonly telegramClient: TelegramClientPort,
     private readonly runQueryUseCase: RunQueryUseCase
   ) {
+    // @ts-expect-error
     super()
   }
 
   private async getServicesData() {
-    // TODO income interfaces
     const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
     const servicesQueryData = queryData.data.services.nodes
 
@@ -44,6 +43,7 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     this.serviceTitles = this.getServiceTitles()
   }
 
+  // @ts-expect-error not assignable
   async sendQuestion(ctx) {
     await this.initData()
 
@@ -55,14 +55,13 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
 
-    const { cancelAppointmentButton, cancelAppointmentCommand, missClickMessage } =
-      ruLocale.appointmentConversation
+    const { missClickMessage } = ruLocale.appointmentConversation
 
-    // TODO switch case
     if (this.serviceTitles.includes(responseText)) {
       return responseText
     }

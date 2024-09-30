@@ -1,4 +1,3 @@
-// TODO to messages (locales)
 export const TIME_SLOT_STEP_MIN = 30
 
 export const DAY_MS = 1000 * 60 * 60 * 24

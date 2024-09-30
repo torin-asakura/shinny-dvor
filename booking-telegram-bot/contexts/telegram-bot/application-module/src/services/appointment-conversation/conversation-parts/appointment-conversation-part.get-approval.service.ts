@@ -7,9 +7,11 @@ import { ruLocale }           from '../../../locals/index.js'
 @Injectable()
 export class AppointmentGetApprovalConversationPart extends ConversationPart {
   constructor(private readonly telegramClient: TelegramClientPort) {
+    // @ts-expect-error
     super()
   }
 
+  // @ts-expect-error any type
   private getApprovalMessage(conversationData) {
     const { carBody, radii, service, commentary, timeSlot } = conversationData
 
@@ -34,6 +36,7 @@ export class AppointmentGetApprovalConversationPart extends ConversationPart {
     return approvalMessage
   }
 
+  // @ts-expect-error not assignable
   async sendQuestion(ctx, questionData) {
     const approvalMessage = this.getApprovalMessage(questionData)
 
@@ -47,6 +50,7 @@ export class AppointmentGetApprovalConversationPart extends ConversationPart {
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message

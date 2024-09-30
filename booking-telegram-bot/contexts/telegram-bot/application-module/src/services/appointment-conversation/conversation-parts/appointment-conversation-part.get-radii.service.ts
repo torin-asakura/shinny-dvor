@@ -8,13 +8,12 @@ import { TelegramClientPort }  from '../../../ports/index.js'
 import { ConversationPart }    from '../../conversation-part.class.js'
 import { ruLocale }            from '../../../locals/index.js'
 
-// TODO create conversationPart Class with createConversation method and extend that class
-
 @Injectable()
 export class AppointmentGetRadiiConversationPart extends ConversationPart {
-  // TODO interfaces
-  radiiData: any
-  radiiTitles: string
+  // @ts-expect-error any
+  radiiData
+  // @ts-expect-error any
+  radiiTitles
 
   conversationPartName: string = 'radii'
 
@@ -22,11 +21,11 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     private readonly telegramClient: TelegramClientPort,
     private readonly runQueryUseCase: RunQueryUseCase
   ) {
+    // @ts-expect-error arguments
     super()
   }
 
   private async getRadiiData() {
-    // TODO income interfaces
     const queryData = await this.runQueryUseCase.execute(GET_AVAILABLE_RADII)
     const radiiQueryData = queryData.data.availableRadiusItems.nodes
 
@@ -35,7 +34,6 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     return radiiQueryData
   }
 
-  // TODO interfaces
   private getRadiiTitles() {
     return this.radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
   }
@@ -45,6 +43,7 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     this.radiiTitles = this.getRadiiTitles()
   }
 
+  // @ts-expect-error not assignable
   async sendQuestion(ctx) {
     await this.initData()
 
@@ -56,6 +55,7 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message

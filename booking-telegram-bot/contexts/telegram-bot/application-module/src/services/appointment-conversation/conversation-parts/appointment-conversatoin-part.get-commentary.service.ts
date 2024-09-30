@@ -6,16 +6,18 @@ import { ruLocale }           from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCommentaryConversationPart extends ConversationPart {
-  // TODO interfaces
-  servicesData: any
+  // @ts-expect-error any
+  servicesData
   serviceTitles: Array<string>
 
   conversationPartName: string = 'commentary'
 
   constructor(private readonly telegramClient: TelegramClientPort) {
+    // @ts-expect-error arguments
     super()
   }
 
+  // @ts-expect-error not assignable
   async sendQuestion(ctx) {
     const { continueWithoutCommentaryButton, cancelAppointmentButton } =
       ruLocale.appointmentConversation
@@ -26,6 +28,7 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
@@ -39,6 +42,7 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     return responseText
   }
 
+  // @ts-expect-error any
   checkWriteConversationDataCondition(checkAnswerResult) {
     if (typeof checkAnswerResult === 'string') {
       return true

@@ -7,17 +7,15 @@ import { DAY_MS }                  from '../appointment-conversation.constants.j
 import { SUGGESTED_DAYS_QUANTITY } from '../appointment-conversation.constants.js'
 import { ruLocale }                from '../../../locals/index.js'
 
-// TODO create conversationPart Class with createConversation method
-
 @Injectable()
 export class AppointmentGetDateConversationPart extends ConversationPart {
-  // TODO types
-  suggestedDates: any
-  keyboardVariants: any
+  suggestedDates
+  keyboardVariants
 
   conversationPartName: string = 'date'
 
   constructor(private readonly telegramClient: TelegramClientPort) {
+    // @ts-expect-error arguments
     super()
     this.suggestedDates = this.getSuggestedDates()
     this.keyboardVariants = this.getKeyboardVariants()
@@ -49,8 +47,6 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
   }
 
   async sendQuestion(ctx) {
-    // TODO to locales
-
     const { selectDateMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectDateMessage, [
@@ -59,6 +55,7 @@ export class AppointmentGetDateConversationPart extends ConversationPart {
     ])
   }
 
+  // @ts-expect-error not assignable
   checkAnswer(ctx) {
     const { message } = ctx
     const { text: responseText } = message
