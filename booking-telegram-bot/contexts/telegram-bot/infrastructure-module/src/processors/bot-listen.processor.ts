@@ -1,9 +1,10 @@
-import { Injectable }             from '@nestjs/common'
+import { Injectable }                     from '@nestjs/common'
 
-import { TgsnakeAdapterService }  from '@booking-telegram-bot/tgsnake-adapter'
-import { StartCommandUseCase }    from '@telegram-bot/application-module'
-import { HelpCommandUseCase }     from '@telegram-bot/application-module'
-import { ReceivedMessageUseCase } from '@telegram-bot/application-module'
+import { TgsnakeAdapterService }          from '@booking-telegram-bot/tgsnake-adapter'
+import { StartCommandUseCase }            from '@telegram-bot/application-module'
+import { HelpCommandUseCase }             from '@telegram-bot/application-module'
+import { AppointmentConversationUseCase } from '@telegram-bot/application-module'
+import { ReceiveMessageUseCase }          from '@telegram-bot/application-module'
 
 @Injectable()
 export class BotListenProcessor {
@@ -11,13 +12,9 @@ export class BotListenProcessor {
     private readonly telegramClient: TgsnakeAdapterService,
     private readonly startCommandUseCase: StartCommandUseCase,
     private readonly helpCommandUseCase: HelpCommandUseCase,
-    private readonly receivedMessageUseCase: ReceivedMessageUseCase
+    private readonly appointmentConversationUseCase: AppointmentConversationUseCase,
+    private readonly receiveMessageService: ReceiveMessageUseCase
   ) {}
-
-  // TODO я выношу прослушивание из `useCase` для того, чтобы на уровне `useCase`
-  // не обращаться к другим `useCase`, а вызывать их отсюда
-
-  // все обращения к `useCases` будут с этого уровня.
 
   async process() {
     this.telegramClient.cmd('start', async (ctx) => {
@@ -29,26 +26,11 @@ export class BotListenProcessor {
     })
 
     this.telegramClient.cmd('create_appointment', async (ctx) => {
-      if (!this.telegramClient.conversation?.conversation?.size) {
-        // rename use case to conversation
-        await this.receivedMessageUseCase.execute(ctx)
-        // await runConversationA1(ctx)
-      } else {
-        // TODO сообщение об отмене текущей операции
-      }
+      await this.appointmentConversationUseCase.process(ctx)
     })
 
     this.telegramClient.on('msg.text', async (ctx) => {
-      // TODO
-      // await this.telegramClient.sendMessage(ctx, '/create_appointment')
-      // TODO fix it:
-      // use conversation class
-      if (!this.telegramClient.conversation?.conversation?.size) {
-        // rename use case to conversation
-        await this.telegramClient.sendMessage(ctx, 'Начало диалога в processor')
-        await this.receivedMessageUseCase.execute(ctx)
-        // await runConversationA1(ctx)
-      }
+      await this.receiveMessageService.process(ctx)
     })
   }
 }
