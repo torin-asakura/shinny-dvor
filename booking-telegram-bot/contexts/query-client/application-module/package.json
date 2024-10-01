@@ -1,5 +1,5 @@
 {
-  "name": "@graphql-client/application-module",
+  "name": "@query-client/application-module",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",

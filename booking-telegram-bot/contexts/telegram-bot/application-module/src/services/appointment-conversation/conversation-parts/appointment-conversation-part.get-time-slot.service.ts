@@ -2,9 +2,9 @@ import type { WorkTimeDataType }            from '../appointment-conversation.in
 import type { TimeSlotsType }               from '../appointment-conversation.interfaces.js'
 
 import { Injectable }                       from '@nestjs/common'
+import { RunQueryUseCase }                  from '@query-client/application-module'
 
 import { GET_CONTACTS }                     from '@globals/data'
-import { RunQueryUseCase }                  from '@graphql-client/application-module'
 
 import { TelegramClientPort }               from '../../../ports/index.js'
 import { ConversationPart }                 from '../../conversation-part.class.js'

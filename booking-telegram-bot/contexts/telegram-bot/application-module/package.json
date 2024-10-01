@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@globals/data": "workspace:*",
-    "@graphql-client/application-module": "workspace:*"
+    "@query-client/application-module": "workspace:*"
   },
   "devDependencies": {
     "@nestjs/common": "10.4.2"

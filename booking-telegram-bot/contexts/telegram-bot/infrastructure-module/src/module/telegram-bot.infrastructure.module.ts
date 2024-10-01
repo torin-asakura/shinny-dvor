@@ -8,7 +8,7 @@ import { telegramBotProviders }         from './telegram-bot.infrastructure.prov
 
 @Module({})
 export class TelegramBotInfrastructureModule {
-  static registerAsync(): DynamicModule {
+  static register(): DynamicModule {
     const providers = telegramBotProviders
 
     return {

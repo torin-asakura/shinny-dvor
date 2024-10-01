@@ -1,22 +1,20 @@
 import * as useCases          from '../use-cases/index.js'
-import * as services          from '../services/index.js'
 
 import type { DynamicModule } from '@nestjs/common'
 
 import { Module }             from '@nestjs/common'
 
 @Module({})
-export class GraphqlClientApplicationModule {
+export class QueryClientApplicationModule {
   static register(): DynamicModule {
     const useCaseProviders = Object.values(useCases)
-    const serviceProviders = Object.values(services)
 
-    const providers = [...useCaseProviders, ...serviceProviders]
+    const providers = [...useCaseProviders]
     const exports = [...useCaseProviders]
 
     return {
       global: true,
-      module: GraphqlClientApplicationModule,
+      module: QueryClientApplicationModule,
       providers,
       exports,
     }

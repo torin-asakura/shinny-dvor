@@ -1,7 +1,7 @@
 import { Injectable }         from '@nestjs/common'
+import { RunQueryUseCase }    from '@query-client/application-module'
 
 import { GET_CAR_BODIES }     from '@globals/data'
-import { RunQueryUseCase }    from '@graphql-client/application-module'
 import { checkArrayLength }   from '@globals/data'
 
 import { TelegramClientPort } from '../../../ports/index.js'

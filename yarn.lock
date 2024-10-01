@@ -2604,8 +2604,6 @@ __metadata:
     "@atls/nestjs-logger": "npm:0.2.39"
     "@booking-telegram-bot/apollo-adapter": "workspace:*"
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
-    "@graphql-client/application-module": "workspace:*"
-    "@graphql-client/infrastructure-module": "workspace:*"
     "@grpc/grpc-js": "npm:1.11.2"
     "@grpc/proto-loader": "npm:0.7.13"
     "@nestjs/common": "npm:10.4.2"
@@ -2614,6 +2612,8 @@ __metadata:
     "@nestjs/platform-express": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
+    "@query-client/application-module": "workspace:*"
+    "@query-client/infrastructure-module": "workspace:*"
     "@telegram-bot/application-module": "workspace:*"
     "@telegram-bot/infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
@@ -3206,30 +3206,6 @@ __metadata:
     graphql: "*"
     react: "*"
     react-dom: "*"
-  languageName: unknown
-  linkType: soft
-
-"@graphql-client/application-module@workspace:*, @graphql-client/application-module@workspace:booking-telegram-bot/contexts/graphql-client/application-module":
-  version: 0.0.0-use.local
-  resolution: "@graphql-client/application-module@workspace:booking-telegram-bot/contexts/graphql-client/application-module"
-  dependencies:
-    "@globals/data": "workspace:*"
-    "@nestjs/common": "npm:10.4.2"
-  peerDependencies:
-    "@nestjs/common": "*"
-  languageName: unknown
-  linkType: soft
-
-"@graphql-client/infrastructure-module@workspace:*, @graphql-client/infrastructure-module@workspace:booking-telegram-bot/contexts/graphql-client/infrastructure-module":
-  version: 0.0.0-use.local
-  resolution: "@graphql-client/infrastructure-module@workspace:booking-telegram-bot/contexts/graphql-client/infrastructure-module"
-  dependencies:
-    "@booking-telegram-bot/apollo-adapter": "workspace:*"
-    "@graphql-client/application-module": "workspace:*"
-    "@nestjs/common": "npm:10.4.2"
-  peerDependencies:
-    "@booking-telegram-bot/apollo-adapter": "*"
-    "@nestjs/common": "*"
   languageName: unknown
   linkType: soft
 
@@ -5323,6 +5299,29 @@ __metadata:
   checksum: 10/131e289c57534c1d73a0e55782d6751dd821db1583cb2f7f7e017c9d6747addaebe79f28120b2e0185395d990aad347fb14ffa73ef4096fa38508d61a0e64602
   languageName: node
   linkType: hard
+
+"@query-client/application-module@workspace:*, @query-client/application-module@workspace:booking-telegram-bot/contexts/query-client/application-module":
+  version: 0.0.0-use.local
+  resolution: "@query-client/application-module@workspace:booking-telegram-bot/contexts/query-client/application-module"
+  dependencies:
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+  peerDependencies:
+    "@nestjs/common": "*"
+  languageName: unknown
+  linkType: soft
+
+"@query-client/infrastructure-module@workspace:*, @query-client/infrastructure-module@workspace:booking-telegram-bot/contexts/query-client/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@query-client/infrastructure-module@workspace:booking-telegram-bot/contexts/query-client/infrastructure-module"
+  dependencies:
+    "@booking-telegram-bot/apollo-adapter": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@query-client/application-module": "workspace:*"
+  peerDependencies:
+    "@nestjs/common": "*"
+  languageName: unknown
+  linkType: soft
 
 "@repeaterjs/repeater@npm:^3.0.4, @repeaterjs/repeater@npm:^3.0.6":
   version: 3.0.6
@@ -7465,8 +7464,8 @@ __metadata:
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
     "@globals/data": "workspace:*"
-    "@graphql-client/application-module": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
+    "@query-client/application-module": "workspace:*"
   peerDependencies:
     "@nestjs/common": "*"
   languageName: unknown
@@ -7480,7 +7479,6 @@ __metadata:
     "@nestjs/common": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
   peerDependencies:
-    "@booking-telegram-bot/tgsnake-adapter": "*"
     "@nestjs/common": "*"
   languageName: unknown
   linkType: soft
