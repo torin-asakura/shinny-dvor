@@ -1,7 +1,7 @@
 // TODO envs
+import type { Options } from 'tgsnake'
 
-/** @type {import('tgsnake').Options} */
-const TGSHAKE_CONFIG = {
+const TGSHAKE_CONFIG: Options = {
   apiHash: '1456d21e179cc0d3165bd3f65424db87',
   apiId: 27275852,
   logLevel: 'error',
