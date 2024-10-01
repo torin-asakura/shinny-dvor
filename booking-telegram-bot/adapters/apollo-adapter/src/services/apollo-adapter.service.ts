@@ -7,7 +7,8 @@ import { GET_SERVICES }          from '@globals/data'
 import { GET_CAR_BODIES }        from '@globals/data'
 import { GET_AVAILABLE_RADII }   from '@globals/data'
 import { checkArrayLength }      from '@globals/data'
-import { client }                from '@globals/data/apollo-core'
+
+import { client }                from '../client/index.js'
 
 @Injectable()
 export class ApolloAdapterService implements ApolloAdapterInt {

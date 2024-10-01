@@ -2590,10 +2590,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter"
   dependencies:
+    "@apollo/client": "npm:3.11.4"
     "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
+    graphql: "npm:15.8.0"
   peerDependencies:
+    "@apollo/client": "*"
     "@nestjs/common": "*"
+    graphql: "*"
   languageName: unknown
   linkType: soft
 

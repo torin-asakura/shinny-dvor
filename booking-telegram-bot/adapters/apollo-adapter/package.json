@@ -12,9 +12,13 @@
     "@globals/data": "workspace:*"
   },
   "devDependencies": {
-    "@nestjs/common": "10.4.2"
+    "@apollo/client": "3.11.4",
+    "@nestjs/common": "10.4.2",
+    "graphql": "15.8.0"
   },
   "peerDependencies": {
-    "@nestjs/common": "*"
+    "@apollo/client": "*",
+    "@nestjs/common": "*",
+    "graphql": "*"
   }
 }

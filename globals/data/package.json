@@ -5,8 +5,7 @@
   "type": "module",
   "exports": {
     ".": "./src/index.ts",
-    "./apollo": "./src/apollo/index.ts",
-    "./apollo-core": "./src/apollo-core/index.ts"
+    "./apollo": "./src/apollo/index.ts"
   },
   "main": "src/index.ts",
   "scripts": {
