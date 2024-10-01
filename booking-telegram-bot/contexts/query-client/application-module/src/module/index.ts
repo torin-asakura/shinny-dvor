@@ -1,1 +1,1 @@
-export * from './query-client.application.module.js
+export * from './query-client.application.module.js'
