@@ -2,9 +2,7 @@ import type { WorkTimeDataType }            from '../appointment-conversation.in
 import type { TimeSlotsType }               from '../appointment-conversation.interfaces.js'
 
 import { Injectable }                       from '@nestjs/common'
-import { RunQueryUseCase }                  from '@query-client/application-module'
-
-import { GET_CONTACTS }                     from '@globals/data'
+import { GetWorkTimeRawStringUseCase }      from '@query-client/application-module'
 
 import { TelegramClientPort }               from '../../../ports/index.js'
 import { ConversationPart }                 from '../../conversation-part.class.js'
@@ -28,28 +26,16 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly runQueryUseCase: RunQueryUseCase
+    private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase
   ) {
     // @ts-expect-error arguments
     super()
   }
 
   private async getWorkTimeData() {
-    const workTimeData = await this.getWorkTimeQueryData()
-    const workTimeRawString = this.getWorkTimeRawString(workTimeData)
+    const workTimeRawString = await this.getWorkTimeRawStringUseCase.execute()
     const parsedWorkTime = this.parseWorkTimeString(workTimeRawString)
     return parsedWorkTime
-  }
-
-  private async getWorkTimeQueryData() {
-    const queryData = await this.runQueryUseCase.execute(GET_CONTACTS)
-    const workTimeData = queryData.data.contactItems.nodes
-    return workTimeData
-  }
-
-  // @ts-expect-error any
-  private getWorkTimeRawString(workTimeData) {
-    return workTimeData[0].contactAddons.workinghours
   }
 
   private parseWorkTimeString(workTimeRawString: string) {

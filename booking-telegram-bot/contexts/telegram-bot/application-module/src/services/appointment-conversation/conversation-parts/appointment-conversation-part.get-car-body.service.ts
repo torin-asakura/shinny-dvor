@@ -1,12 +1,9 @@
-import { Injectable }         from '@nestjs/common'
-import { RunQueryUseCase }    from '@query-client/application-module'
+import { Injectable }              from '@nestjs/common'
+import { GetCarBodyTitlesUseCase } from '@query-client/application-module'
 
-import { GET_CAR_BODIES }     from '@globals/data'
-import { checkArrayLength }   from '@globals/data'
-
-import { TelegramClientPort } from '../../../ports/index.js'
-import { ConversationPart }   from '../../conversation-part.class.js'
-import { ruLocale }           from '../../../locals/index.js'
+import { TelegramClientPort }      from '../../../ports/index.js'
+import { ConversationPart }        from '../../conversation-part.class.js'
+import { ruLocale }                from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCarBodyConversationPart extends ConversationPart {
@@ -19,28 +16,14 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly runQueryUseCase: RunQueryUseCase
+    private readonly getCarBodyTitlesUseCase: GetCarBodyTitlesUseCase
   ) {
     // @ts-expect-error need argument
     super()
   }
 
-  private async getCarBodiesData() {
-    const queryData = await this.runQueryUseCase.execute(GET_CAR_BODIES)
-    const carBodiesQueryData = queryData.data.carBodyItems.nodes
-
-    checkArrayLength({ carBodiesQueryData })
-
-    return carBodiesQueryData
-  }
-
-  private getCarBodyTitles() {
-    return this.carBodiesData.map((singleCarData: any) => singleCarData.contentAddons.title)
-  }
-
   private async initData() {
-    this.carBodiesData = await this.getCarBodiesData()
-    this.carBodyTitles = this.getCarBodyTitles()
+    this.carBodyTitles = await this.getCarBodyTitlesUseCase.execute()
   }
 
   // @ts-expect-error not assignable

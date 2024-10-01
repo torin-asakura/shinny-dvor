@@ -1,12 +1,9 @@
-import { Injectable }          from '@nestjs/common'
-import { RunQueryUseCase }     from '@query-client/application-module'
+import { Injectable }            from '@nestjs/common'
+import { GetRadiiTitlesUseCase } from '@query-client/application-module'
 
-import { GET_AVAILABLE_RADII } from '@globals/data'
-import { checkArrayLength }    from '@globals/data'
-
-import { TelegramClientPort }  from '../../../ports/index.js'
-import { ConversationPart }    from '../../conversation-part.class.js'
-import { ruLocale }            from '../../../locals/index.js'
+import { TelegramClientPort }    from '../../../ports/index.js'
+import { ConversationPart }      from '../../conversation-part.class.js'
+import { ruLocale }              from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetRadiiConversationPart extends ConversationPart {
@@ -19,28 +16,14 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly runQueryUseCase: RunQueryUseCase
+    private readonly getRadiiTitlesUseCase: GetRadiiTitlesUseCase
   ) {
     // @ts-expect-error arguments
     super()
   }
 
-  private async getRadiiData() {
-    const queryData = await this.runQueryUseCase.execute(GET_AVAILABLE_RADII)
-    const radiiQueryData = queryData.data.availableRadiusItems.nodes
-
-    checkArrayLength({ radiiQueryData })
-
-    return radiiQueryData
-  }
-
-  private getRadiiTitles() {
-    return this.radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
-  }
-
   private async initData() {
-    this.radiiData = await this.getRadiiData()
-    this.radiiTitles = this.getRadiiTitles()
+    this.radiiTitles = await this.getRadiiTitlesUseCase.execute()
   }
 
   // @ts-expect-error not assignable

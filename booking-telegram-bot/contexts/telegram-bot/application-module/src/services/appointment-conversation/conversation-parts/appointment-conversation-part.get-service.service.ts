@@ -1,12 +1,9 @@
-import { Injectable }         from '@nestjs/common'
-import { RunQueryUseCase }    from '@query-client/application-module'
+import { Injectable }              from '@nestjs/common'
+import { GetServiceTitlesUseCase } from '@query-client/application-module'
 
-import { GET_SERVICES }       from '@globals/data'
-import { checkArrayLength }   from '@globals/data'
-
-import { TelegramClientPort } from '../../../ports/index.js'
-import { ConversationPart }   from '../../conversation-part.class.js'
-import { ruLocale }           from '../../../locals/index.js'
+import { TelegramClientPort }      from '../../../ports/index.js'
+import { ConversationPart }        from '../../conversation-part.class.js'
+import { ruLocale }                from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetServiceConversationPart extends ConversationPart {
@@ -19,28 +16,14 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
 
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly runQueryUseCase: RunQueryUseCase
+    private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase
   ) {
     // @ts-expect-error
     super()
   }
 
-  private async getServicesData() {
-    const queryData = await this.runQueryUseCase.execute(GET_SERVICES)
-    const servicesQueryData = queryData.data.services.nodes
-
-    checkArrayLength({ servicesQueryData })
-
-    return servicesQueryData
-  }
-
-  private getServiceTitles() {
-    return this.servicesData.map((singleServiceData: any) => singleServiceData.servicesParams.title)
-  }
-
   private async initData() {
-    this.servicesData = await this.getServicesData()
-    this.serviceTitles = this.getServiceTitles()
+    this.serviceTitles = await this.getServiceTitlesUseCase.execute()
   }
 
   // @ts-expect-error not assignable
