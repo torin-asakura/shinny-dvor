@@ -8,7 +8,19 @@ import { ApolloAdapterService } from '@booking-telegram-bot/apollo-adapter'
 export class QueryClientPortImpl implements QueryClientPort {
   constructor(private readonly queryClient: ApolloAdapterService) {}
 
-  async runQuery(query) {
-    return await this.queryClient.runQuery(query)
+  async getCarBodyTitles() {
+    return await this.queryClient.getCarBodyTitles()
+  }
+
+  async getRadiiTitles() {
+    return await this.queryClient.getRadiiTitles()
+  }
+
+  async getServiceTitles() {
+    return await this.queryClient.getServiceTitles()
+  }
+
+  async getWorkTimeRawString() {
+    return await this.queryClient.getWorkTimeRawString()
   }
 }
