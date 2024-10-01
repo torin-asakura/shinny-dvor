@@ -1,4 +1,5 @@
 import type { ApolloAdapterInt } from './apollo-adapter.interfaces.js'
+import type { QueryType }        from './apollo-adapter.interfaces.js'
 
 import { Injectable }            from '@nestjs/common'
 
@@ -12,7 +13,7 @@ import { client }                from '../client/index.js'
 
 @Injectable()
 export class ApolloAdapterService implements ApolloAdapterInt {
-  private async runQuery(query) {
+  private async runQuery(query: QueryType) {
     return client.query({ query })
   }
 

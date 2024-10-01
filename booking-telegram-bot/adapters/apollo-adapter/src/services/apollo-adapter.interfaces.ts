@@ -1,3 +1,5 @@
+import { gql } from '@apollo/client'
+
 type GetTitlesFunctionType = () => Promise<Array<string>>
 
 interface ApolloAdapterInt {
@@ -7,4 +9,7 @@ interface ApolloAdapterInt {
   getWorkTimeRawString: () => Promise<string>
 }
 
+type QueryType = ReturnType<typeof gql>
+
 export type { ApolloAdapterInt }
+export type { QueryType }
