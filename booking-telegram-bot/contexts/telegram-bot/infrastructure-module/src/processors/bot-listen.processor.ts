@@ -17,19 +17,21 @@ export class BotListenProcessor {
   ) {}
 
   async process() {
-    this.telegramClient.cmd('start', async (ctx) => {
+    // TODO что такое ctx для этого уровня???
+    // его нужно переопределить - унифицировать. для того, чтобы передавать по всему приложению
+    this.telegramClient.onCommand('start', async (ctx) => {
       await this.startCommandUseCase.execute(ctx)
     })
 
-    this.telegramClient.cmd('help', async (ctx) => {
+    this.telegramClient.onCommand('help', async (ctx) => {
       await this.helpCommandUseCase.execute(ctx)
     })
 
-    this.telegramClient.cmd('create_appointment', async (ctx) => {
+    this.telegramClient.onCommand('create_appointment', async (ctx) => {
       await this.appointmentConversationUseCase.process(ctx)
     })
 
-    this.telegramClient.on('msg.text', async (ctx) => {
+    this.telegramClient.onMessage(async (ctx) => {
       await this.receiveMessageService.process(ctx)
     })
   }
