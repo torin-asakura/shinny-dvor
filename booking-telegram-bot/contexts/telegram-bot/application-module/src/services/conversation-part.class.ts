@@ -1,11 +1,15 @@
-import { TelegramClientPort } from '../ports/index.js'
-import { ruLocale }           from '../locals/index.js'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+
+import { TelegramClientPort }                   from '../ports/index.js'
+import { ruLocale }                             from '../locals/index.js'
 
 class ConversationPart {
   conversationPartName: string
 
   async sendQuestion() {}
-  async checkAnswer() {}
+  async checkAnswer(_: TelegramBotFormattedContextType): Promise<string | boolean> {
+    throw new Error(`checkAnswer not defined at ${this.conversationPartName}`)
+  }
 
   constructor(private readonly telegramClient: TelegramClientPort) {}
 
@@ -23,19 +27,16 @@ class ConversationPart {
   // TODO conversation must be formatted-conversation
   // TODO processData is optional
 
-  async process(ctx, conversation, processData) {
+  async process(ctx: TelegramBotFormattedContextType, conversation, processData) {
     const questionData = processData?.questionData
 
     await this.sendQuestion(ctx, questionData)
 
-    // TODO нужно выносить метод wait в адаптер?
-    // 	он относится к библиотеке, а вызываю я его тут
-    await conversation.wait('msg.text', (ctx) => {
-      const { message } = ctx
-      const { text: responseText } = message
+    await conversation.waitMessage((ctx: TelegramBotFormattedContextType) => {
+      const { messageText: responseText } = ctx
 
       if (this.checkCancelCondition(responseText)) {
-        message.reply('Запись отменена')
+        ctx.replyMessage('Запись отменена')
         return this.telegramClient.removeConversation(ctx)
       }
 
