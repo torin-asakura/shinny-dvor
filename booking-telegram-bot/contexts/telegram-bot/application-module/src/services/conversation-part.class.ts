@@ -19,6 +19,10 @@ class ConversationPart {
     return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
+  // TODO ctx must be formatted ctx
+  // TODO conversation must be formatted-conversation
+  // TODO processData is optional
+
   async process(ctx, conversation, processData) {
     const questionData = processData?.questionData
 
