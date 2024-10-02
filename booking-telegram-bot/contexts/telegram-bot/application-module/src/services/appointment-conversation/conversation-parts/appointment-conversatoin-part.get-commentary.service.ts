@@ -1,8 +1,10 @@
-import { Injectable }         from '@nestjs/common'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TelegramClientPort } from '../../../ports/index.js'
-import { ConversationPart }   from '../../conversation-part.class.js'
-import { ruLocale }           from '../../../locals/index.js'
+import { Injectable }                           from '@nestjs/common'
+
+import { TelegramClientPort }                   from '../../../ports/index.js'
+import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCommentaryConversationPart extends ConversationPart {
@@ -28,10 +30,8 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     ])
   }
 
-  // @ts-expect-error not assignable
-  checkAnswer(ctx) {
-    const { message } = ctx
-    const { text: responseText } = message
+  checkAnswer(ctx: TelegramBotFormattedContextType) {
+    const { messageText: responseText } = ctx
 
     const { continueWithoutCommentaryButton } = ruLocale.appointmentConversation
 

@@ -1,9 +1,12 @@
-import { Injectable }              from '@nestjs/common'
-import { GetCarBodyTitlesUseCase } from '@query-client/application-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TelegramClientPort }      from '../../../ports/index.js'
-import { ConversationPart }        from '../../conversation-part.class.js'
-import { ruLocale }                from '../../../locals/index.js'
+import { Injectable }                           from '@nestjs/common'
+
+import { GetCarBodyTitlesUseCase }              from '@query-client/application-module'
+
+import { TelegramClientPort }                   from '../../../ports/index.js'
+import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCarBodyConversationPart extends ConversationPart {
@@ -18,7 +21,6 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     private readonly telegramClient: TelegramClientPort,
     private readonly getCarBodyTitlesUseCase: GetCarBodyTitlesUseCase
   ) {
-    // @ts-expect-error need argument
     super()
   }
 
@@ -26,7 +28,6 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     this.carBodyTitles = await this.getCarBodyTitlesUseCase.execute()
   }
 
-  // @ts-expect-error not assignable
   async sendQuestion(ctx) {
     await this.initData()
 
@@ -38,10 +39,8 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     ])
   }
 
-  // @ts-expect-error not assignable
-  checkAnswer(ctx) {
-    const { message } = ctx
-    const { text: responseText } = message
+  checkAnswer(ctx: TelegramBotFormattedContextType) {
+    const { messageText: responseText } = ctx
 
     const { missClickMessage } = ruLocale.appointmentConversation
 
@@ -49,7 +48,7 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
       return responseText
     }
 
-    message.reply(missClickMessage)
+    ctx.replyMessage(missClickMessage)
     return false
   }
 }
