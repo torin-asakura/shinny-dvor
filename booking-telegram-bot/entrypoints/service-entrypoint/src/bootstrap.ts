@@ -24,7 +24,10 @@ const bootstrap = async () => {
   await app.listen(3000)
 
   const processor = app.get(BotListenProcessor)
-  await processor.process()
+  await processor.processCommand_startCommand()
+  await processor.processCommand_helpCommand()
+  await processor.processCommand_createAppointment()
+  await processor.processReceiveMessage()
 
   if (module.hot) {
     module.hot.accept()
