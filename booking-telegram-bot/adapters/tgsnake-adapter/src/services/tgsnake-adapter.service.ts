@@ -1,15 +1,17 @@
-import crypto                                   from 'node:crypto'
+import crypto                                      from 'node:crypto'
 
-import type { CallbackType }                    from './tgsnake-adapter.interfaces.js'
-import type { TgsnakeContextType }              from './tgsnake-adapter.interfaces.js'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { CallbackType }                       from './tgsnake-adapter.interfaces.js'
+import type { TgsnakeContextType }                 from './tgsnake-adapter.interfaces.js'
+import type { TelegramBotFormattedContextType }    from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextKeyType } from '@telegram-bot/infrastructure-module'
 
-import { Injectable }                           from '@nestjs/common'
+import { Injectable }                              from '@nestjs/common'
 
-import { Snake }                                from 'tgsnake'
-import { Raw }                                  from 'tgsnake'
+import { Snake }                                   from 'tgsnake'
+import { Raw }                                     from 'tgsnake'
 
-import { TGSHAKE_CONFIG }                       from '../config/index.js'
+import { Conversation }                            from '../class/index.js'
+import { TGSHAKE_CONFIG }                          from '../config/index.js'
 
 // TODO all text to locales
 // check migration bot maybe
@@ -22,22 +24,31 @@ export class TgsnakeAdapterService extends Snake {
     this.run()
   }
 
+  // TODO
   // какие свойства у контекста мне нужны?
   // этот тип нужно написать на уровне infrastructure
-
   private getFormattedContext(ctx: TgsnakeContextType): TelegramBotFormattedContextType {
-    console.log(ctx)
-
-    // TODO move it to private checks
-    // maybe down it on send message level
-    if (!ctx.message?.from?.id) throw new Error('cannot acces userId')
-    if (!ctx.message?.from?.accessHash) throw new Error('cannot access accessHash')
-
-    return {
+    const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
       userId: ctx.message?.from?.id,
       accessHash: ctx.message?.from?.accessHash,
-      messageId: 1234,
+      messageId: ctx.message?.id,
+      chatId: ctx.message?.chat?.id,
     }
+
+    const formattedContext_checked = this.checkFormattedContext(formattedContext)
+    return formattedContext_checked
+  }
+
+  private checkFormattedContext(
+    formattedContext: Record<TelegramBotFormattedContextKeyType, any>
+  ): TelegramBotFormattedContextType {
+    const formattedContextKeys = Object.keys(formattedContext)
+    for (const contextKey of formattedContextKeys) {
+      if (!formattedContext[contextKey as TelegramBotFormattedContextKeyType]) {
+        throw new Error(`cannot acces ${contextKey}`)
+      }
+    }
+    return formattedContext
   }
 
   onMessage(callback: CallbackType) {
@@ -84,6 +95,28 @@ export class TgsnakeAdapterService extends Snake {
     )
   }
 
+  // TODO - что делает conversation?
+  // TODO - просто ждет сообщение
+  // TODO куда сохранятся все conversations?
+  // как их удалить?
+  createConversation(ctx: TelegramBotFormattedContextType) {
+    const { chatId } = ctx
+
+    // TODO создавай новый класс. на уровень контекста попадают лишние функции. нужно выносить только то что нужно
+    const conversation = new Conversation(chatId, this)
+
+    // const conversation = this.conversation.create(chatId)
+    // return conversation
+    // conversation.waitMessage
+    // return conversation
+  }
+
+  // // TODO interface
+  // createConversation(ctx: any) {
+  // }
+
+  // removeConversation () {}
+
   // async sendMessageWithMarkup(ctx: any, text: string, buttons: Array<string | Array<any>>) {
   //   const { from: userMessage } = ctx.message
   //
@@ -129,10 +162,6 @@ export class TgsnakeAdapterService extends Snake {
   //   )
   // }
   //
-  // // TODO interface
-  // createConversation(ctx: any) {
-  //   return this.conversation.create(ctx.message.chat.id)
-  // }
   //
   // // TODO interface
   // removeConversation(ctx: any) {
