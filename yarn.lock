@@ -7471,6 +7471,7 @@ __metadata:
     "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"
+    "@telegram-bot/infrastructure-module": "workspace:*"
   peerDependencies:
     "@nestjs/common": "*"
   languageName: unknown
