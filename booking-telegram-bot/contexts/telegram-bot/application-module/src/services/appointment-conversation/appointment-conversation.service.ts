@@ -40,36 +40,32 @@ export class AppointmentConversationService {
         data: AppointmentConversationDataType
       } = await this.telegramClient.createConversation(ctx)
 
-      console.log(appointmentConversation)
+      await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
+      const selectedDateMs = appointmentConversation.data.date.milliseconds
 
-      appointmentConversation.data = {}
+      await this.appointmentGetTimeSlotConversationPart.process(ctx, appointmentConversation, {
+        questionData: selectedDateMs,
+      })
 
-      //   await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetCarBodyConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetRadiiConversationPart.process(ctx, appointmentConversation)
+      await this.appointmentGetServicesConversationPart.process(ctx, appointmentConversation)
+
+      await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
       //
-      //   const selectedDateMs = appointmentConversation.data.date.milliseconds
-      //   await this.appointmentGetTimeSlotConversationPart.process(ctx, appointmentConversation, {
-      //     questionData: selectedDateMs,
-      //   })
-      //
-      //   await this.appointmentGetCarBodyConversationPart.process(ctx, appointmentConversation)
-      //   await this.appointmentGetRadiiConversationPart.process(ctx, appointmentConversation)
-      //   await this.appointmentGetServicesConversationPart.process(ctx, appointmentConversation)
-      //
-      //   await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
-      //
-      //   await this.appointmentGetApprovalConversationPart.process(ctx, appointmentConversation, {
-      //     questionData: appointmentConversation.data,
-      //   })
-      //
+      await this.appointmentGetApprovalConversationPart.process(ctx, appointmentConversation, {
+        questionData: appointmentConversation.data,
+      })
+
       //   // TODO write to DB - appointmentConversation.data
       //   // TODO write with telegram-client-data (phone - if available, userId )
-      //
-      //   await this.telegramClient.sendMessage(
-      //     ctx,
-      //     ruLocale.appointmentConversation.endConversatoinMessage
-      //   )
-      //
-      //   this.telegramClient.removeConversation(ctx)
+
+      await this.telegramClient.sendMessage(
+        ctx,
+        ruLocale.appointmentConversation.endConversatoinMessage
+      )
+
+      this.telegramClient.removeConversation(ctx)
     } catch (error) {
       console.error(error)
       const { serverErrorMessage } = ruLocale.appointmentConversation
