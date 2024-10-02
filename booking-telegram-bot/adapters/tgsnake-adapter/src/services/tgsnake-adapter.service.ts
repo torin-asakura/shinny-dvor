@@ -30,13 +30,33 @@ export class TgsnakeAdapterService extends Snake {
   private getFormattedContext(ctx: TgsnakeContextType): TelegramBotFormattedContextType {
     const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
       userId: ctx.message?.from?.id,
+      messageText: ctx.message?.text,
       accessHash: ctx.message?.from?.accessHash,
       messageId: ctx.message?.id,
       chatId: ctx.message?.chat?.id,
     }
 
+    formattedContext.replyMessage = async (text: string) =>
+      await this.replyMessage(text, formattedContext)
+
     const formattedContext_checked = this.checkFormattedContext(formattedContext)
     return formattedContext_checked
+  }
+
+  private async replyMessage(text, ctx: TelegramBotFormattedContextType) {
+    const { userId, accessHash, messageId } = ctx
+
+    const randomBigInt = this.getRandomBigInt()
+
+    await this.api.invoke(
+      new Raw.messages.SendMessage({
+        message: text,
+        peer: new Raw.InputPeerUser({ userId, accessHash }),
+        replyTo: new Raw.InputReplyToMessage({ replyToMsgId: messageId }),
+        randomId: randomBigInt,
+      })
+    )
+    return
   }
 
   private checkFormattedContext(
@@ -71,11 +91,6 @@ export class TgsnakeAdapterService extends Snake {
     return randomBigInt
   }
 
-  // // TODO types
-  // async reply(ctx: any, text: string) {
-  //   return await ctx.message.reply(text)
-  // }
-
   async sendMessage(ctx: TelegramBotFormattedContextType, text: string) {
     // TODO зачем ты пересобираешь контекст?
     // контекст как-то разбирается/переиспользуется на уровне выше?
@@ -102,67 +117,70 @@ export class TgsnakeAdapterService extends Snake {
   createConversation(ctx: TelegramBotFormattedContextType) {
     const { chatId } = ctx
 
-    // TODO создавай новый класс. на уровень контекста попадают лишние функции. нужно выносить только то что нужно
-    const conversation = new Conversation(chatId, this)
+    const conversation = this.conversation.create(chatId)
 
-    // const conversation = this.conversation.create(chatId)
-    // return conversation
-    // conversation.waitMessage
-    // return conversation
+    return {
+      data: {},
+      waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => {
+        return conversation.wait('msg.text', (conversationCtx: TgsnakeContextType) => {
+          const formattedContext = this.getFormattedContext(conversationCtx)
+          return callback(formattedContext)
+        })
+      },
+    }
   }
 
-  // // TODO interface
-  // createConversation(ctx: any) {
-  // }
+  removeConversation(chatId: bigint) {
+    this.conversation.remove(chatId)
+  }
 
-  // removeConversation () {}
+  async sendMessageWithMarkup(
+    ctx: TelegramBotFormattedContextType,
+    text: string,
+    buttons: Array<string | Array<any>>
+  ) {
+    const { userId } = ctx
+    const { accessHash } = ctx
 
-  // async sendMessageWithMarkup(ctx: any, text: string, buttons: Array<string | Array<any>>) {
-  //   const { from: userMessage } = ctx.message
-  //
-  //   const { id: userId } = userMessage
-  //   const { accessHash } = userMessage
-  //
-  //   const randomBigInt = this.getRandomBigInt()
-  //
-  //   const rows = []
-  //
-  //   for (const rowButton of buttons) {
-  //     if (typeof rowButton === 'object') {
-  //       const row = []
-  //       for (const columnButon of rowButton) {
-  //         row.push(new Raw.KeyboardButton({ text: columnButon }))
-  //       }
-  //       rows.push(
-  //         new Raw.KeyboardButtonRow({
-  //           buttons: row,
-  //         })
-  //       )
-  //     } else {
-  //       rows.push(
-  //         new Raw.KeyboardButtonRow({
-  //           buttons: [new Raw.KeyboardButton({ text: rowButton })],
-  //         })
-  //       )
-  //     }
-  //   }
-  //
-  //   const replyMarkup = new Raw.ReplyKeyboardMarkup({
-  //     rows,
-  //   })
-  //
-  //   // TODO keyboardmarkup to const
-  //   return await ctx.api.invoke(
-  //     new Raw.messages.SendMessage({
-  //       message: text,
-  //       peer: new Raw.InputPeerUser({ userId, accessHash }),
-  //       replyMarkup,
-  //       randomId: randomBigInt,
-  //     })
-  //   )
-  // }
-  //
-  //
+    const randomBigInt = this.getRandomBigInt()
+
+    const rows = []
+
+    for (const rowButton of buttons) {
+      if (typeof rowButton === 'object') {
+        const row = []
+        for (const columnButon of rowButton) {
+          row.push(new Raw.KeyboardButton({ text: columnButon }))
+        }
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: row,
+          })
+        )
+      } else {
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: [new Raw.KeyboardButton({ text: rowButton })],
+          })
+        )
+      }
+    }
+
+    const replyMarkup = new Raw.ReplyKeyboardMarkup({
+      rows,
+    })
+
+    // TODO keyboardmarkup to const
+    return await this.api.invoke(
+      new Raw.messages.SendMessage({
+        message: text,
+        peer: new Raw.InputPeerUser({ userId, accessHash }),
+        replyMarkup,
+        randomId: randomBigInt,
+      })
+    )
+  }
+
   // // TODO interface
   // removeConversation(ctx: any) {
   //   this.conversation.remove(ctx.message.chat.id)
