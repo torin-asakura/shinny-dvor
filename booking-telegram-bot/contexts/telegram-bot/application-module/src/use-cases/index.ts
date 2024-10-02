@@ -1,4 +1,4 @@
-export * from './appointment-conversation.use-case.js'
-export * from './start-command.use-case.js'
-export * from './help-command.use-case.js'
+export * from './appointment-conversation.command.js'
+export * from './start.command.js'
+export * from './help.command.js'
 export * from './receive-message.use-case.js'

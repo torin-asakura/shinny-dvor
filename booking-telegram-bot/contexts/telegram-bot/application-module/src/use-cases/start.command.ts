@@ -3,7 +3,7 @@ import { Injectable }         from '@nestjs/common'
 import { TelegramClientPort } from '../ports/index.js'
 
 @Injectable()
-export class StartCommandUseCase {
+export class StartCommand {
   constructor(private readonly telegramClient: TelegramClientPort) {}
 
   // TODO interface
