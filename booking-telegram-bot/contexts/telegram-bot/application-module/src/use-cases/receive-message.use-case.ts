@@ -27,9 +27,10 @@ export class ReceiveMessageUseCase {
 
   async process(ctx) {
     try {
-      const { entrypointAnswer } = ruLocale.receiveMessage
-      console.log('entrypoint answer')
-      await this.telegramClient.sendMessage(ctx, entrypointAnswer)
+      console.log('receive message entrypoint')
+      console.log(this.telegramClient)
+      // const { entrypointAnswer } = ruLocale.receiveMessage
+      // await this.telegramClient.sendMessage(ctx, entrypointAnswer)
     } catch (error) {
       const { serverErrorMessage } = ruLocale.appointmentConversation
       await this.telegramClient.sendMessage(ctx, serverErrorMessage)
