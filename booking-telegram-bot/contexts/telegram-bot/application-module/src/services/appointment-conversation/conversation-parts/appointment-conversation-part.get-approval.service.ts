@@ -63,6 +63,9 @@ export class AppointmentGetApprovalConversationPart extends ConversationPart {
       return this.telegramClient.removeConversation(ctx)
     }
 
+    const { missClickMessage } = ruLocale.appointmentConversation
+    ctx.replyMessage(missClickMessage)
+
     return false
   }
 }

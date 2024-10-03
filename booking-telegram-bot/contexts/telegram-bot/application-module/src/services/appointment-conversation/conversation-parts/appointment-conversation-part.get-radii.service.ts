@@ -44,13 +44,13 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
   checkAnswer(ctx: TelegramBotFormattedContextType) {
     const { messageText: responseText } = ctx
 
-    const { missClickMessage } = ruLocale.appointmentConversation
-
     if (this.radiiTitles.includes(responseText)) {
       return responseText
     }
 
+    const { missClickMessage } = ruLocale.appointmentConversation
     ctx.replyMessage(missClickMessage)
+
     return false
   }
 }
