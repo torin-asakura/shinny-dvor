@@ -1,8 +1,18 @@
-// TODO interfaces
+import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+
 export abstract class TelegramClientPort {
-  abstract reply(ctx: any, text: string): any
-  abstract sendMessage(ctx: any, text: string): any
-  abstract sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>): any
-  abstract createConversation(ctx: any): any
-  abstract removeConversation(ctx: any): any
+  abstract sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void>
+
+  abstract sendMessageWithMarkup(
+    ctx: TelegramBotFormattedContextType,
+    text: string,
+    buttonsText: Array<string>
+  ): Promise<void>
+
+  abstract createConversation(ctx: TelegramBotFormattedContextType): CreateConversationReturnType
+
+  abstract removeConversation(chatId: bigint): void
+
+  abstract checkChatConversation(chatId: bigint): boolean
 }

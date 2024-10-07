@@ -6,7 +6,7 @@ import { QueryClientPort } from '../ports/index.js'
 export class GetWorkTimeRawStringUseCase {
   constructor(private readonly queryClient: QueryClientPort) {}
 
-  async execute() {
+  async execute(): Promise<string> {
     return this.queryClient.getWorkTimeRawString()
   }
 }

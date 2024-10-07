@@ -10,27 +10,18 @@ import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetRadiiConversationPart extends ConversationPart {
-  // @ts-expect-error any
-  radiiData
-  // @ts-expect-error any
-  radiiTitles
+  radiiTitles: Array<string>
 
   conversationPartName: string = 'radii'
 
   constructor(
-    private readonly telegramClient: TelegramClientPort,
+    telegramClient: TelegramClientPort,
     private readonly getRadiiTitlesUseCase: GetRadiiTitlesUseCase
   ) {
-    // @ts-expect-error arguments
-    super()
+    super(telegramClient)
   }
 
-  private async initData() {
-    this.radiiTitles = await this.getRadiiTitlesUseCase.execute()
-  }
-
-  // @ts-expect-error not assignable
-  async sendQuestion(ctx) {
+  async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
     const { selectRadiiMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
@@ -41,7 +32,7 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     ])
   }
 
-  checkAnswer(ctx: TelegramBotFormattedContextType) {
+  checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
     if (this.radiiTitles.includes(responseText)) {
@@ -52,5 +43,9 @@ export class AppointmentGetRadiiConversationPart extends ConversationPart {
     ctx.replyMessage(missClickMessage)
 
     return false
+  }
+
+  private async initData(): Promise<void> {
+    this.radiiTitles = await this.getRadiiTitlesUseCase.execute()
   }
 }

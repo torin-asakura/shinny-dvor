@@ -1,11 +1,12 @@
-import * as services from '../services/index.js'
+import type { DynamicModule } from '@nestjs/common'
 
-import { Module }    from '@nestjs/common'
+import { Module }             from '@nestjs/common'
+
+import * as services          from '../services/index.js'
 
 @Module({})
 export class ApolloAdapterModule {
-  // TODO provide tgsnake config options
-  static register() {
+  static register(): DynamicModule {
     const serviceProviders = Object.values(services)
     const providers = [...serviceProviders]
 

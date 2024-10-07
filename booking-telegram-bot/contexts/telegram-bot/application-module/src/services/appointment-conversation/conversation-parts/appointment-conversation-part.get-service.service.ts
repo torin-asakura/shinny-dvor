@@ -10,27 +10,18 @@ import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetServiceConversationPart extends ConversationPart {
-  // @ts-expect-error
-  servicesData
-  // @ts-expect-error
-  serviceTitles
+  serviceTitles: Array<string>
 
   conversationPartName: string = 'service'
 
   constructor(
-    private readonly telegramClient: TelegramClientPort,
+    telegramClient: TelegramClientPort,
     private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase
   ) {
-    // @ts-expect-error
-    super()
+    super(telegramClient)
   }
 
-  private async initData() {
-    this.serviceTitles = await this.getServiceTitlesUseCase.execute()
-  }
-
-  // @ts-expect-error not assignable
-  async sendQuestion(ctx) {
+  async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
     const { selectServiceMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
@@ -41,7 +32,7 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
     ])
   }
 
-  checkAnswer(ctx: TelegramBotFormattedContextType) {
+  checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
     const { missClickMessage } = ruLocale.appointmentConversation
@@ -52,5 +43,9 @@ export class AppointmentGetServiceConversationPart extends ConversationPart {
 
     ctx.replyMessage(missClickMessage)
     return false
+  }
+
+  private async initData(): Promise<void> {
+    this.serviceTitles = await this.getServiceTitlesUseCase.execute()
   }
 }

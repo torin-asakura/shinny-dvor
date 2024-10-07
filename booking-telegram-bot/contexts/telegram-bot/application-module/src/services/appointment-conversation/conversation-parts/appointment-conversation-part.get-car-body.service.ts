@@ -10,25 +10,18 @@ import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCarBodyConversationPart extends ConversationPart {
-  // @ts-expect-error any
-  carBodiesData
-  // @ts-expect-error any
-  carBodyTitles
+  carBodyTitles: Array<string>
 
   conversationPartName: string = 'carBody'
 
   constructor(
-    private readonly telegramClient: TelegramClientPort,
+    telegramClient: TelegramClientPort,
     private readonly getCarBodyTitlesUseCase: GetCarBodyTitlesUseCase
   ) {
-    super()
+    super(telegramClient)
   }
 
-  private async initData() {
-    this.carBodyTitles = await this.getCarBodyTitlesUseCase.execute()
-  }
-
-  async sendQuestion(ctx) {
+  async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
     const { selectCarBodyMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
@@ -39,7 +32,7 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
     ])
   }
 
-  checkAnswer(ctx: TelegramBotFormattedContextType) {
+  checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
     const { missClickMessage } = ruLocale.appointmentConversation
@@ -50,5 +43,9 @@ export class AppointmentGetCarBodyConversationPart extends ConversationPart {
 
     ctx.replyMessage(missClickMessage)
     return false
+  }
+
+  private async initData(): Promise<void> {
+    this.carBodyTitles = await this.getCarBodyTitlesUseCase.execute()
   }
 }

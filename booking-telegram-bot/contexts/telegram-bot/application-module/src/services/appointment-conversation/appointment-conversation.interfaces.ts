@@ -1,4 +1,4 @@
-import { TelegramClientPort } from '../../ports/index.js'
+import type { TelegramClientPort } from '../../ports/index.js'
 
 type ConversationType = ReturnType<TelegramClientPort['createConversation']>
 

@@ -1,6 +1,7 @@
 import type { DynamicModule }           from '@nestjs/common'
 
 import { Module }                       from '@nestjs/common'
+
 import { QueryClientApplicationModule } from '@query-client/application-module'
 
 import { graphqlClientProviders }       from './query-client.infrastructure.providers.js'

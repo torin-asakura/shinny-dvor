@@ -1,30 +1,36 @@
-import { Injectable }            from '@nestjs/common'
-import { Logger }                from '@nestjs/common'
+import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramClientPort }              from '@telegram-bot/application-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
-import { TelegramClientPort }    from '@telegram-bot/application-module'
+import { Injectable }                           from '@nestjs/common'
+
+import { TgsnakeAdapterService }                from '@booking-telegram-bot/tgsnake-adapter'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
   constructor(private readonly telegramClient: TgsnakeAdapterService) {}
 
-  async reply(ctx: any, text: string) {
-    return await this.telegramClient.reply(ctx, text)
+  async sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void> {
+    return this.telegramClient.sendMessage(ctx, text)
   }
 
-  async sendMessage(ctx: any, text: string) {
-    return await this.telegramClient.sendMessage(ctx, text)
+  async sendMessageWithMarkup(
+    ctx: TelegramBotFormattedContextType,
+    text: string,
+    buttonsText: Array<string>
+  ): Promise<void> {
+    return this.telegramClient.sendMessageWithMarkup(ctx, text, buttonsText)
   }
 
-  async sendMessageWithMarkup(ctx: any, text: string, buttonsText: Array<string>) {
-    return await this.telegramClient.sendMessageWithMarkup(ctx, text, buttonsText)
-  }
-
-  createConversation(ctx: any) {
+  createConversation(ctx: TelegramBotFormattedContextType): CreateConversationReturnType {
     return this.telegramClient.createConversation(ctx)
   }
 
-  removeConversation(ctx: any) {
-    return this.telegramClient.removeConversation(ctx)
+  removeConversation(chatId: bigint): void {
+    this.telegramClient.removeConversation(chatId)
+  }
+
+  checkChatConversation(chatId: bigint): boolean {
+    return this.telegramClient.checkChatConversation(chatId)
   }
 }

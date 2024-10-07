@@ -6,7 +6,7 @@ import { QueryClientPort } from '../ports/index.js'
 export class GetCarBodyTitlesUseCase {
   constructor(private readonly queryClient: QueryClientPort) {}
 
-  async execute() {
+  async execute(): Promise<Array<string>> {
     return this.queryClient.getCarBodyTitles()
   }
 }

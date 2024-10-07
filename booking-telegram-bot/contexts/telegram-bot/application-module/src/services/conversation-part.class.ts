@@ -1,48 +1,67 @@
+import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
 import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TelegramClientPort }                   from '../ports/index.js'
+import type { TelegramClientPort }              from '../ports/index.js'
+
 import { ruLocale }                             from '../locals/index.js'
 
 class ConversationPart {
   conversationPartName: string
 
-  async sendQuestion() {}
-  async checkAnswer(_: TelegramBotFormattedContextType): Promise<string | boolean> {
+  telegramClient: TelegramClientPort
+
+  constructor(telegramClient: TelegramClientPort) {
+    this.telegramClient = telegramClient
+  }
+
+  async sendQuestion(
+    _ctx: TelegramBotFormattedContextType,
+    _questionData?: Record<string, any> | number
+  ): Promise<void> {
+    throw new Error(`sendQuestion not defined at ${this.conversationPartName}`)
+  }
+
+  checkAnswer(_ctx: TelegramBotFormattedContextType): Record<string, any> | boolean | string {
     throw new Error(`checkAnswer not defined at ${this.conversationPartName}`)
   }
 
-  constructor(private readonly telegramClient: TelegramClientPort) {}
-
-  checkWriteConversationDataCondition(checkAnswerResult) {
-    return checkAnswerResult
+  checkWriteConversationDataCondition(
+    checkAnswerResult: Record<string, any> | boolean | string
+  ): boolean {
+    if (checkAnswerResult) {
+      return true
+    }
+    return false
   }
 
-  checkCancelCondition(text: string) {
+  checkCancelCondition(text: string): boolean {
     const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
 
     return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
-  // TODO ctx must be formatted ctx
-  // TODO conversation must be formatted-conversation
-  // TODO processData is optional
-
-  async process(ctx: TelegramBotFormattedContextType, conversation, processData) {
+  async process(
+    ctx: TelegramBotFormattedContextType,
+    conversation: CreateConversationReturnType,
+    processData?: Record<'questionData', Record<string, any>>
+  ): Promise<void> {
     const questionData = processData?.questionData
 
     await this.sendQuestion(ctx, questionData)
 
-    await conversation.waitMessage((ctx: TelegramBotFormattedContextType) => {
-      const { messageText: responseText } = ctx
+    await conversation.waitMessage((waitMessageCtx: TelegramBotFormattedContextType) => {
+      const { messageText: responseText } = waitMessageCtx
 
       if (this.checkCancelCondition(responseText)) {
-        ctx.replyMessage('Запись отменена')
-        return this.telegramClient.removeConversation(ctx)
+        waitMessageCtx.replyMessage('Запись отменена')
+        this.telegramClient.removeConversation(waitMessageCtx.chatId)
+        return true
       }
 
-      const checkAnswerResult = this.checkAnswer(ctx)
+      const checkAnswerResult = this.checkAnswer(waitMessageCtx)
 
       if (this.checkWriteConversationDataCondition(checkAnswerResult)) {
+        // eslint-disable-next-line no-param-reassign
         conversation.data[this.conversationPartName] = checkAnswerResult
       }
 

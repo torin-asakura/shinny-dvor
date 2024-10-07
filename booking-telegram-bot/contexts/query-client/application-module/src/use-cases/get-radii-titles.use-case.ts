@@ -6,7 +6,7 @@ import { QueryClientPort } from '../ports/index.js'
 export class GetRadiiTitlesUseCase {
   constructor(private readonly queryClient: QueryClientPort) {}
 
-  async execute() {
+  async execute(): Promise<Array<string>> {
     return this.queryClient.getRadiiTitles()
   }
 }

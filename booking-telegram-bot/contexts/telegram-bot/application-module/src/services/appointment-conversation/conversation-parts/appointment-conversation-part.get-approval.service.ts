@@ -1,5 +1,7 @@
 import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
+import type { ConversationDataType }            from './appointment-conversation-part.get-approval.interface.js'
+
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
@@ -8,17 +10,52 @@ import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetApprovalConversationPart extends ConversationPart {
-  constructor(private readonly telegramClient: TelegramClientPort) {
-    // @ts-expect-error
-    super()
+  // eslint-disable-next-line
+  constructor(telegramClient: TelegramClientPort) {
+    super(telegramClient)
   }
 
-  // @ts-expect-error any type
-  private getApprovalMessage(conversationData) {
+  async sendQuestion(
+    ctx: TelegramBotFormattedContextType,
+    questionData: ConversationDataType
+  ): Promise<void> {
+    const approvalMessage = this.getApprovalMessage(questionData)
+
+    const { approveAppointmentButton, editAppointmentButton, cancelAppointmentButton } =
+      ruLocale.appointmentConversation
+
+    await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
+      approveAppointmentButton,
+      editAppointmentButton,
+      cancelAppointmentButton,
+    ])
+  }
+
+  checkAnswer(ctx: TelegramBotFormattedContextType): boolean {
+    const { messageText: responseText } = ctx
+
+    const { approveAppointmentButton, editAppointmentButton } = ruLocale.appointmentConversation
+
+    if (responseText === approveAppointmentButton) {
+      return true
+    }
+
+    if (responseText === editAppointmentButton) {
+      this.telegramClient.removeConversation(ctx.chatId)
+      return true
+    }
+
+    const { missClickMessage } = ruLocale.appointmentConversation
+    ctx.replyMessage(missClickMessage)
+
+    return false
+  }
+
+  private getApprovalMessage(conversationData: ConversationDataType): string {
     const { carBody, radii, service, commentary, timeSlot } = conversationData
 
     const selectedTimeDate = new Date(timeSlot.milliseconds)
-    let selectedDateText = selectedTimeDate.toLocaleDateString('ru-RU', {
+    const selectedDateText = selectedTimeDate.toLocaleDateString('ru-RU', {
       weekday: 'long',
       month: 'long',
       day: 'numeric',
@@ -36,36 +73,5 @@ export class AppointmentGetApprovalConversationPart extends ConversationPart {
     if (commentary) approvalMessage += `${approvalMessageTitles.commentary}: ${commentary}`
 
     return approvalMessage
-  }
-
-  // @ts-expect-error not assignable
-  async sendQuestion(ctx, questionData) {
-    const approvalMessage = this.getApprovalMessage(questionData)
-
-    const { approveAppointmentButton, editAppointmentButton, cancelAppointmentButton } =
-      ruLocale.appointmentConversation
-
-    await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
-      approveAppointmentButton,
-      editAppointmentButton,
-      cancelAppointmentButton,
-    ])
-  }
-
-  checkAnswer(ctx: TelegramBotFormattedContextType) {
-    const { messageText: responseText } = ctx
-
-    const { approveAppointmentButton, editAppointmentButton } = ruLocale.appointmentConversation
-
-    if (responseText === approveAppointmentButton) {
-      return true
-    } else if (responseText === editAppointmentButton) {
-      return this.telegramClient.removeConversation(ctx)
-    }
-
-    const { missClickMessage } = ruLocale.appointmentConversation
-    ctx.replyMessage(missClickMessage)
-
-    return false
   }
 }

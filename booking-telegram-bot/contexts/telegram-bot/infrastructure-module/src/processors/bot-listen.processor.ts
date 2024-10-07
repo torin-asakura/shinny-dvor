@@ -16,27 +16,25 @@ export class BotListenProcessor {
     private readonly receiveMessageUseCase: ReceiveMessageUseCase
   ) {}
 
-  async processCommand_startCommand() {
+  async processCommand_startCommand(): Promise<void> {
     this.telegramClient.onCommand('start', async (ctx) => {
       await this.startCommand.execute(ctx)
     })
   }
 
-  async processCommand_helpCommand() {
+  async processCommand_helpCommand(): Promise<void> {
     this.telegramClient.onCommand('help', async (ctx) => {
       await this.helpCommand.execute(ctx)
     })
   }
 
-  async processCommand_createAppointment() {
+  async processCommand_createAppointment(): Promise<void> {
     this.telegramClient.onCommand('create_appointment', async (ctx) => {
       await this.appointmentConversationCommand.process(ctx)
     })
   }
 
-  async processReceiveMessage() {
-    // TODO что такое ctx для этого уровня???
-    // его нужно переопределить - унифицировать. для того, чтобы передавать по всему приложению
+  async processReceiveMessage(): Promise<void> {
     this.telegramClient.onMessage(async (ctx) => {
       await this.receiveMessageUseCase.process(ctx)
     })

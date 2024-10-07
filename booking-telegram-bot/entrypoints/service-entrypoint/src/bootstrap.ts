@@ -5,16 +5,18 @@ import { BotListenProcessor }         from '@telegram-bot/infrastructure-module'
 
 import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'
 
+// eslint-disable-next-line @next/next/no-assign-module-variable
 declare const module: {
   hot: {
     accept: VoidFunction
     dispose: (param: VoidFunction) => void
   }
+
   accept: VoidFunction
   dispose: VoidFunction
 }
 
-const bootstrap = async () => {
+const bootstrap = async (): Promise<void> => {
   const app = await NestFactory.create(BotServiceEntrypointModule, {
     logger: new NestLogger(),
   })
@@ -31,7 +33,8 @@ const bootstrap = async () => {
 
   if (module.hot) {
     module.hot.accept()
-    module.hot.dispose(() => app.close())
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+    module.hot.dispose(async () => app.close())
   }
 }
 

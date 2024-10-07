@@ -1,37 +1,23 @@
-import { Injectable }         from '@nestjs/common'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TelegramClientPort } from '../ports/index.js'
-import { ruLocale }           from '../locals/index.js'
+import { Injectable }                           from '@nestjs/common'
+
+import { TelegramClientPort }                   from '../ports/index.js'
+import { ruLocale }                             from '../locals/index.js'
 
 @Injectable()
 export class ReceiveMessageUseCase {
   constructor(private readonly telegramClient: TelegramClientPort) {}
 
-  // TODO interface
-  // TODO какой контекст сюда должен попадать?
-  // 	- отформатированный?
-  // 	- контекст tgsnake?
-
-  // TODO провести formatted telegram-bot-context-type
-  // TODO по сути в рамках контекста `telegram-bot` - используются одни типы
-  // и в application и в infrastructure
-  // поэтому, я думаю, что нужно создать дополнительный пакет
-  // с типами на одном уровне и с
-  // application и с infrastructure
-  // и использовать его и там и там и в адаптере
-  // либо создать его именно в infrastructure -
-  // потомучто этот пакет отвечает за инфрастукруктуру, чем типы и являются
-
-  // TODO locales to adapter?
-  // - при смене адаптера должны меняться сообщения?
-
-  async process(ctx) {
+  async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      console.log('receive message entrypoint')
-      console.log(this.telegramClient)
-      // const { entrypointAnswer } = ruLocale.receiveMessage
-      // await this.telegramClient.sendMessage(ctx, entrypointAnswer)
+      if (!this.telegramClient.checkChatConversation(ctx.chatId)) {
+        const { entrypointAnswer } = ruLocale.receiveMessage
+        await this.telegramClient.sendMessage(ctx, entrypointAnswer)
+      }
     } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(error)
       const { serverErrorMessage } = ruLocale.appointmentConversation
       await this.telegramClient.sendMessage(ctx, serverErrorMessage)
     }

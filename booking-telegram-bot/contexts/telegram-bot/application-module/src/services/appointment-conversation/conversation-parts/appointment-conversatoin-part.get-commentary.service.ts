@@ -8,19 +8,16 @@ import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 export class AppointmentGetCommentaryConversationPart extends ConversationPart {
-  // @ts-expect-error any
-  servicesData
   serviceTitles: Array<string>
 
   conversationPartName: string = 'commentary'
 
-  constructor(private readonly telegramClient: TelegramClientPort) {
-    // @ts-expect-error arguments
-    super()
+  // eslint-disable-next-line
+  constructor(telegramClient: TelegramClientPort) {
+    super(telegramClient)
   }
 
-  // @ts-expect-error not assignable
-  async sendQuestion(ctx) {
+  async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     const { continueWithoutCommentaryButton, cancelAppointmentButton } =
       ruLocale.appointmentConversation
 
@@ -30,7 +27,7 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     ])
   }
 
-  checkAnswer(ctx: TelegramBotFormattedContextType) {
+  checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
     const { continueWithoutCommentaryButton } = ruLocale.appointmentConversation
@@ -42,8 +39,7 @@ export class AppointmentGetCommentaryConversationPart extends ConversationPart {
     return responseText
   }
 
-  // @ts-expect-error any
-  checkWriteConversationDataCondition(checkAnswerResult) {
+  checkWriteConversationDataCondition(checkAnswerResult: boolean | string): boolean {
     if (typeof checkAnswerResult === 'string') {
       return true
     }

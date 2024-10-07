@@ -1,4 +1,4 @@
-import type { AppointmentConversationDataType }     from './appointment-conversation.interfaces.js'
+import type { TelegramBotFormattedContextType }     from '@telegram-bot/infrastructure-module'
 
 import { Injectable }                               from '@nestjs/common'
 
@@ -25,8 +25,7 @@ export class AppointmentConversationService {
     private readonly appointmentGetApprovalConversationPart: AppointmentGetApprovalConversationPart
   ) {}
 
-  // TODO it is must be formatted-telegram-bot-context, cause context layer
-  async process(ctx) {
+  async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
       await this.telegramClient.sendMessage(
         ctx,
@@ -34,11 +33,7 @@ export class AppointmentConversationService {
         ruLocale.appointmentConversation.startConversationMessage
       )
 
-      // TODO get-conversation
-      // TODO what is conversation?
-      const appointmentConversation: {
-        data: AppointmentConversationDataType
-      } = await this.telegramClient.createConversation(ctx)
+      const appointmentConversation = this.telegramClient.createConversation(ctx)
 
       await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
       const selectedDateMs = appointmentConversation.data.date.milliseconds
@@ -52,7 +47,6 @@ export class AppointmentConversationService {
       await this.appointmentGetServicesConversationPart.process(ctx, appointmentConversation)
 
       await this.appointmentGetCommentaryConversationPart.process(ctx, appointmentConversation)
-      //
       await this.appointmentGetApprovalConversationPart.process(ctx, appointmentConversation, {
         questionData: appointmentConversation.data,
       })
@@ -65,8 +59,9 @@ export class AppointmentConversationService {
         ruLocale.appointmentConversation.endConversatoinMessage
       )
 
-      this.telegramClient.removeConversation(ctx)
+      this.telegramClient.removeConversation(ctx.chatId)
     } catch (error) {
+      // eslint-disable-next-line
       console.error(error)
       const { serverErrorMessage } = ruLocale.appointmentConversation
       await this.telegramClient.sendMessage(ctx, serverErrorMessage)

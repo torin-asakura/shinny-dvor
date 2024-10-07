@@ -1,16 +1,14 @@
-import { Injectable }         from '@nestjs/common'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
-import { TelegramClientPort } from '../ports/index.js'
+import { Injectable }                           from '@nestjs/common'
+
+import { TelegramClientPort }                   from '../ports/index.js'
 
 @Injectable()
 export class StartCommand {
   constructor(private readonly telegramClient: TelegramClientPort) {}
 
-  // TODO interface
-  async execute(ctx: any) {
-    // removeConversation(ctx)
-    // await reply(ctx, 'welcome message')
-    // await runConversationA1(ctx)
+  async execute(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.telegramClient.sendMessage(ctx, 'welcome message')
   }
 }
