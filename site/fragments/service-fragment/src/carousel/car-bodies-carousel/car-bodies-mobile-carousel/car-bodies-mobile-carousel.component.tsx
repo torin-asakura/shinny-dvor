@@ -1,8 +1,6 @@
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
-
 import { useCarousel }            from '@ui/carousel'
 
 export const CarBodiesMobileCarousel: FC<PropsWithChildren> = ({ children }) => {

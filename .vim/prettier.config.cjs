@@ -1,6 +1,3 @@
-/**
- * @type {import('prettier').Options}
- */
 module.exports = {
   plugins: [require('@atls/prettier-plugin')],
   semi: false,

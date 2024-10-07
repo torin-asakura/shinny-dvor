@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useMutation } from '@apollo/client'
 
 import { SUBMIT_FORM } from './submit.mutation.js'

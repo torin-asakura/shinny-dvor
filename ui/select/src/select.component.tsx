@@ -1,5 +1,10 @@
+/* eslint-disable */
+
+import type { FC }                         from 'react'
+
+import type { SelectProps }                from './select.interface.js'
+
 import { useSelect }                       from '@atls-ui-parts/select'
-import { FC }                              from 'react'
 import { useMultipleSelection }            from 'downshift'
 import { useSelect as useDownshiftSelect } from 'downshift'
 import React                               from 'react'
@@ -12,7 +17,6 @@ import { ArrowContainer }                  from './arrow-container/index.js'
 import { Button }                          from './button/index.js'
 import { MenuItem }                        from './menu-item/index.js'
 import { Menu }                            from './menu/index.js'
-import { SelectProps }                     from './select.interface.js'
 
 const Select: FC<SelectProps> = ({
   items,

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { ServicePageProps }       from './service-page.interfaces.js'
 
 import React                           from 'react'

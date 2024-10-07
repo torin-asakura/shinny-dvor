@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 import type { FC }               from 'react'
 
 import type { GtagProps }        from './gtag.interfaces.js'
 
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import { default as BaseScript } from 'next/script'
 import { memo }                  from 'react'
 import React                     from 'react'

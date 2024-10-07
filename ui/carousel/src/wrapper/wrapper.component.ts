@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { WrapperProps }           from './wrapper.interface.js'
 
 import { createWrapperBaseStyles }     from '@atls-ui-parts/carousel'

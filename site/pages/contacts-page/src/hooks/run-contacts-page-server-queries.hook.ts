@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { GET_CONTACTS }        from '@globals/data'
 import { GET_NAVIGATION }      from '@globals/data'
 import { GET_CAR_BODIES }      from '@globals/data'

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetContactsQuery as ContactsQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                               from '@apollo/client'

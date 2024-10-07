@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 export interface AccordionProps {
   text: string
-  children: ReactNode | ReactNode[]
+  children: Array<ReactNode> | ReactNode
 }

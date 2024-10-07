@@ -312,7 +312,7 @@ const RAW_RUNTIME_STATE =
     ["@store/actions", ["virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:store/actions", "workspace:store/actions"]],\
     ["@store/booking", ["virtual:440922e3611ccb34d524d7728c0356611cecca33df78df3a72e350cf7f3d61365c49bee0705d7cdea6d70844bd326025e74984be0bfe180685e4fe5b4f7a6b42#workspace:store/booking", "virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:store/booking", "workspace:store/booking"]],\
     ["@store/services", ["virtual:b31447be08cb5fc5956c2781e3d1bed57ccde829086dcd20db1295d90fc9000df1a601c5b30c5b332ac61a90a507b6f212b17b1e232e98e0bc8f4c993523b76d#workspace:store/services", "workspace:store/services"]],\
-    ["@telegram-bot/application-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "virtual:4b5984241c9b016ba12bf8183711678d8977a6313d2c8b78e1213aede1971a1adbeb0b06076a4e60f65764bae0f7202bbf68f5066ec2243c69fa3a5fb348d53c#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "workspace:booking-telegram-bot/contexts/telegram-bot/application-module"]],\
+    ["@telegram-bot/application-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "virtual:4b5984241c9b016ba12bf8183711678d8977a6313d2c8b78e1213aede1971a1adbeb0b06076a4e60f65764bae0f7202bbf68f5066ec2243c69fa3a5fb348d53c#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "virtual:62ab0f1dacae9e2f367a2a433e70f382e7eee6d7446c1ec5405acf0cf2a6cef46a992d8eb0dc7968bc38802ace83482571fa43234b24d3302618150b9a646847#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", "workspace:booking-telegram-bot/contexts/telegram-bot/application-module"]],\
     ["@telegram-bot/infrastructure-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module", "virtual:48a7aec2b0df86c6fcad576ebb3ce56dcc6c5e945215ec0adbf9f9ebcd2db6a085d51e8a44677d457ffbff2d409acf92283200dfa8984bd185e6a2c69ceb4866#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module", "virtual:4f5810624b9fd4ea6115a91311595d5b625cc979f7ad3871fe34ff840ab3fa32ab9af9abb0f89875471003caf5dfae91e21e768e292189ee818990c23d021bbb#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module", "virtual:665230af639a5fa475c5674820f35c70c221f9c4db4ce304416d97549ec5e342420996e7ec32b1ae237ff46edd23e70aeeff824305cd15728061a3b5f72ed1f0#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module", "workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"]],\
     ["@ui/accordion", ["virtual:9fbd9874ed4e25506788a967540ec7abb2115aa8cd8a7d8cf8025f89d8ca7da50192df5bab2941a2de40a6243d774f3473b1d91441b334bac6c9eb4cb57a7348#workspace:ui/accordion", "workspace:ui/accordion"]],\
     ["@ui/button", ["virtual:7275470f820713902e5324143c7d02c2db8b3fe3dfde11481865f2a902374e342b80211a770a24078fc64737ca8636cc13d4054453d161aa0ab23e4847cb87f9#workspace:ui/button", "virtual:b35ba6360ca8a77a44c4d5ec585eee203fe146b3cd864ed5aa4c34db11a97f78de50d531bab9b230b7493dbb2e57600b0699b6a34b7885b75766746c460d3b91#workspace:ui/button", "workspace:ui/button"]],\
@@ -13259,6 +13259,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@telegram-bot-application-module-virtual-73c62d432e/1/booking-telegram-bot/contexts/telegram-bot/application-module/",\
         "packageDependencies": [\
           ["@telegram-bot/application-module", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@booking-telegram-bot/tgsnake-adapter", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
           ["@globals/data", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:globals/data"],\
           ["@nestjs/common", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#npm:10.4.2"],\
           ["@query-client/application-module", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/query-client/application-module"],\
@@ -13275,6 +13276,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@telegram-bot-application-module-virtual-7ccdf8e9ec/1/booking-telegram-bot/contexts/telegram-bot/application-module/",\
         "packageDependencies": [\
           ["@telegram-bot/application-module", "virtual:4b5984241c9b016ba12bf8183711678d8977a6313d2c8b78e1213aede1971a1adbeb0b06076a4e60f65764bae0f7202bbf68f5066ec2243c69fa3a5fb348d53c#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@booking-telegram-bot/tgsnake-adapter", "virtual:4b5984241c9b016ba12bf8183711678d8977a6313d2c8b78e1213aede1971a1adbeb0b06076a4e60f65764bae0f7202bbf68f5066ec2243c69fa3a5fb348d53c#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
           ["@globals/data", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:globals/data"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@query-client/application-module", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:booking-telegram-bot/contexts/query-client/application-module"],\
@@ -13287,10 +13289,28 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["virtual:62ab0f1dacae9e2f367a2a433e70f382e7eee6d7446c1ec5405acf0cf2a6cef46a992d8eb0dc7968bc38802ace83482571fa43234b24d3302618150b9a646847#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", {\
+        "packageLocation": "./.yarn/__virtual__/@telegram-bot-application-module-virtual-a5c6a22b3f/1/booking-telegram-bot/contexts/telegram-bot/application-module/",\
+        "packageDependencies": [\
+          ["@telegram-bot/application-module", "virtual:62ab0f1dacae9e2f367a2a433e70f382e7eee6d7446c1ec5405acf0cf2a6cef46a992d8eb0dc7968bc38802ace83482571fa43234b24d3302618150b9a646847#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@booking-telegram-bot/tgsnake-adapter", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
+          ["@globals/data", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:globals/data"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@query-client/application-module", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:booking-telegram-bot/contexts/query-client/application-module"],\
+          ["@telegram-bot/infrastructure-module", "virtual:48a7aec2b0df86c6fcad576ebb3ce56dcc6c5e945215ec0adbf9f9ebcd2db6a085d51e8a44677d457ffbff2d409acf92283200dfa8984bd185e6a2c69ceb4866#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"],\
+          ["@types/nestjs__common", null]\
+        ],\
+        "packagePeers": [\
+          "@nestjs/common",\
+          "@types/nestjs__common"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/contexts/telegram-bot/application-module", {\
         "packageLocation": "./.yarn/__virtual__/@telegram-bot-application-module-virtual-9b7cdc1c61/1/booking-telegram-bot/contexts/telegram-bot/application-module/",\
         "packageDependencies": [\
           ["@telegram-bot/application-module", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@booking-telegram-bot/tgsnake-adapter", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
           ["@globals/data", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:globals/data"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@query-client/application-module", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:booking-telegram-bot/contexts/query-client/application-module"],\
@@ -13307,6 +13327,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./booking-telegram-bot/contexts/telegram-bot/application-module/",\
         "packageDependencies": [\
           ["@telegram-bot/application-module", "workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@booking-telegram-bot/tgsnake-adapter", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
           ["@globals/data", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:globals/data"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@query-client/application-module", "virtual:9b7cdc1c61953eb55fc1ff08daaaef688dfc68a90d5e558b8136b466279a46a909fc5860f292864373cffacce5c5519b66c7638dab56cefd0f287367269e3eda#workspace:booking-telegram-bot/contexts/query-client/application-module"],\
@@ -13337,7 +13358,7 @@ const RAW_RUNTIME_STATE =
           ["@telegram-bot/infrastructure-module", "virtual:48a7aec2b0df86c6fcad576ebb3ce56dcc6c5e945215ec0adbf9f9ebcd2db6a085d51e8a44677d457ffbff2d409acf92283200dfa8984bd185e6a2c69ceb4866#workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"],\
           ["@booking-telegram-bot/tgsnake-adapter", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/adapters/tgsnake-adapter"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@telegram-bot/application-module", "virtual:fac4acc1e8deeb57c7cb0d27c44bb95f1c1023bd90aaa0c32bdd2f24536835bdcd361e16ef4f56f3acd1cf0833287d39224578af08966c6d7113a56ef949f0db#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
+          ["@telegram-bot/application-module", "virtual:62ab0f1dacae9e2f367a2a433e70f382e7eee6d7446c1ec5405acf0cf2a6cef46a992d8eb0dc7968bc38802ace83482571fa43234b24d3302618150b9a646847#workspace:booking-telegram-bot/contexts/telegram-bot/application-module"],\
           ["@types/nestjs__common", null]\
         ],\
         "packagePeers": [\

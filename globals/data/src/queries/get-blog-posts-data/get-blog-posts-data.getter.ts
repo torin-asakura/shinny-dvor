@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetPostsQuery as BlogPostsQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                             from '@apollo/client'

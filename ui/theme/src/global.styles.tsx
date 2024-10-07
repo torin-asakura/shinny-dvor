@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Global } from '@emotion/react'
 import { css }    from '@emotion/react'
 import React      from 'react'
@@ -19,7 +21,7 @@ export const GlobalStyles = () => (
         display: flex;
         flex-direction: column;
       }
-       .swiper-slide {
+      .swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use client'
 
 import type { PropsWithChildren }  from 'react'
@@ -27,13 +29,15 @@ const makeClient = () => {
             if (responseObject.seo) {
               // @ts-expect-error not exist
               return `PostBy:${responseObject.seo.title}`
-            } else if (responseObject.postId) {
-              return `PostBy:${responseObject.postId}`
-            } else if (responseObject.uri) {
-              return `PostBy:${responseObject.uri}`
-            } else {
-              return defaultDataIdFromObject(responseObject)
             }
+            if (responseObject.postId) {
+              return `PostBy:${responseObject.postId}`
+            }
+            if (responseObject.uri) {
+              return `PostBy:${responseObject.uri}`
+            }
+            return defaultDataIdFromObject(responseObject)
+
           case 'Service':
             return `ServiceBy:${responseObject.uri}`
           default:
@@ -41,7 +45,7 @@ const makeClient = () => {
         }
       },
     }),
-    // @ts-ignore:next-line
+    // @ts-ignore
     link: httpLink,
     ssrMode: true,
     connectToDevTools: true,

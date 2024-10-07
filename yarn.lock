@@ -7468,6 +7468,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
+    "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"

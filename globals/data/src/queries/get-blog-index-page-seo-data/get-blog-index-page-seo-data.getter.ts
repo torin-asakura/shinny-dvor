@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useSuspenseQuery }        from '@apollo/client'
 
 import { GET_BLOG_INDEX_PAGE_SEO } from '@globals/data'

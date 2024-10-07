@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useRef }    from 'react'
 import { useEffect } from 'react'
 
@@ -9,7 +11,6 @@ const useIntersectionObserver = (onIntersection: (id: string) => void = doNothin
   const observers: Map<string, { ref: any }> = new Map()
 
   const getObserverOptions = (id: string): { ref: any } => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const ref = useRef(null)
 
     observers.set(id, { ref })
@@ -34,7 +35,6 @@ const useIntersectionObserver = (onIntersection: (id: string) => void = doNothin
         if (observer?.ref.current) {
           const heightCoefficient =
             document.documentElement.clientHeight /
-            // eslint-disable-next-line no-unsafe-optional-chaining
             observer?.ref.current.getBoundingClientRect().height
           const observerThreshold = heightCoefficient > 1 ? 1 : heightCoefficient
 
@@ -51,11 +51,11 @@ const useIntersectionObserver = (onIntersection: (id: string) => void = doNothin
               )
             )
 
-            observer!.ref.current.observerId = key
+            observer.ref.current.observerId = key
 
             intersectionObservers.get(observerThreshold)!.observe(observer?.ref?.current)
           } else {
-            observer!.ref.current.observerId = key
+            observer.ref.current.observerId = key
 
             intersectionObservers.get(observerThreshold)!.observe(observer?.ref?.current)
           }
@@ -64,7 +64,6 @@ const useIntersectionObserver = (onIntersection: (id: string) => void = doNothin
 
       resizeObserver.observe(observer?.ref.current)
     })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {

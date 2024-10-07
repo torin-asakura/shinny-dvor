@@ -1,6 +1,6 @@
-import { InputHTMLAttributes } from 'react'
+import type { InputHTMLAttributes } from 'react'
 
 export interface RadioProps extends InputHTMLAttributes<any> {
   checked: boolean
-  textTransform?: 'uppercase' | 'lowercase'
+  textTransform?: 'lowercase' | 'uppercase'
 }

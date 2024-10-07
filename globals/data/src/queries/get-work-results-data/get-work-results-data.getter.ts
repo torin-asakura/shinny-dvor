@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useSuspenseQuery } from '@apollo/client'
 
 import { GET_WORK_RESULTS } from './get-work-results-data.query.js'

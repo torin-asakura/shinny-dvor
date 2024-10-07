@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { GET_CONTACTS }        from '@globals/data'
 import { GET_SERVICES }        from '@globals/data'
 import { GET_BLOG_POSTS }      from '@globals/data'

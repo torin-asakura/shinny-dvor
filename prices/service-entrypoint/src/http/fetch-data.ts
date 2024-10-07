@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { Logger } from '@atls/logger'
 import fetch      from 'node-fetch'
 

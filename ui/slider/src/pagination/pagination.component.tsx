@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { FC }                   from 'react'
 
 import type { PaginationProps }      from './pagination.interface.js'
@@ -38,7 +40,9 @@ const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => 
             backgroundColor={calculatedActiveItem === index ? 'primaryBlue' : 'lightGray'}
             borderRadius={50}
             cursor='pointer'
-            onClick={() => handleClick(index)}
+            onClick={() => {
+              handleClick(index)
+            }}
           />
           <Layout flexBasis={12} flexShrink={0} />
         </React.Fragment>

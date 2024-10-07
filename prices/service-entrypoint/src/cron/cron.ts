@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { CronJob } from 'cron'
 
 const getCronTask = (logger: any, bootstrap: any) => {

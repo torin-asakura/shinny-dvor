@@ -1,7 +1,8 @@
-import { FC }       from 'react'
-import React        from 'react'
+import type { FC }       from 'react'
 
-import { MapProps } from './map.interface.js'
+import type { MapProps } from './map.interface.js'
+
+import React             from 'react'
 
 const Map: FC<MapProps> = ({ width, height }) => (
   <iframe

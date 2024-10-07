@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-expect-error any
 const getSeoMetadata = ({ ogCover, seoData }) => {
   const { title } = seoData

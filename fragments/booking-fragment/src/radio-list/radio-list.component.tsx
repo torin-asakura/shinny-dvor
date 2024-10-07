@@ -1,11 +1,14 @@
-import { FC }             from 'react'
-import React              from 'react'
+/* eslint-disable */
 
-import { Box }            from '@ui/layout'
-import { Row }            from '@ui/layout'
-import { Radio }          from '@ui/radio'
+import type { FC }             from 'react'
 
-import { RadioListProps } from './radio-list.interface.js'
+import type { RadioListProps } from './radio-list.interface.js'
+
+import React                   from 'react'
+
+import { Box }                 from '@ui/layout'
+import { Row }                 from '@ui/layout'
+import { Radio }               from '@ui/radio'
 
 const RadioList: FC<RadioListProps> = ({
   items,

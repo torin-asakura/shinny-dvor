@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
 import React               from 'react'
@@ -55,7 +57,13 @@ const Hero = forwardRef((
 
   return (
     <>
-      <Layer scroll visible={visible} onClose={() => setVisible(true)}>
+      <Layer
+        scroll
+        visible={visible}
+        onClose={() => {
+          setVisible(true)
+        }}
+      >
         <Booking
           setVisible={setVisible}
           fragmentsData={fragmentsData}

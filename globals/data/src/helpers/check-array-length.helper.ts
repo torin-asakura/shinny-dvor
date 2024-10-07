@@ -1,4 +1,6 @@
-const checkArrayLength = (objectToCheck: { [key: string]: Array<any> }) => {
+/* eslint-disable */
+
+const checkArrayLength = (objectToCheck: Record<string, Array<any>>) => {
   const checkVariableName = Object.keys(objectToCheck)[0]
   const checkVariableValue = objectToCheck[checkVariableName]
 

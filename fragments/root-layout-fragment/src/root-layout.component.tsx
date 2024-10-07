@@ -1,15 +1,19 @@
-import React                   from 'react'
-import { FC }                  from 'react'
-import { Suspense }            from 'react'
-import { PropsWithChildren }   from 'react'
-import { memo }                from 'react'
+/* eslint-disable */
 
-import { ApolloWrapper }       from '@globals/data/apollo'
-import { Gtag }                from '@ui/gtag'
+import type { FC }                from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { NavigationEvents }    from './hooks/index.js'
-import { RootLayoutProps }     from './root-layout.interfaces.js'
-import { RoolLayoutProviders } from './root-layout.providers.js'
+import type { RootLayoutProps }   from './root-layout.interfaces.js'
+
+import { Suspense }               from 'react'
+import { memo }                   from 'react'
+import React                      from 'react'
+
+import { ApolloWrapper }          from '@globals/data/apollo'
+import { Gtag }                   from '@ui/gtag'
+
+import { NavigationEvents }       from './hooks/index.js'
+import { RoolLayoutProviders }    from './root-layout.providers.js'
 
 export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ children, messages }) => {
   const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'

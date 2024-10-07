@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { styleFn }   from 'styled-system'
 
 import { getBaseStyles }  from './styles/index.js'

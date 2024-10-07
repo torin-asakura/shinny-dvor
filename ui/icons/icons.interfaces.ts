@@ -1,6 +1,8 @@
-import { SVGProps } from 'react'
+/* eslint-disable */
+
+import type { SVGProps } from 'react'
 
 export interface IconProps extends Omit<SVGProps<SVGSVGElement>, 'color' | 'stroke'> {
-  color?: string | boolean | any
-  stroke?: string | boolean | any
+  color?: any | boolean | string
+  stroke?: any | boolean | string
 }

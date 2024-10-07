@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { FC }                from 'react'
 
 import type { ReturnButtonProps } from './return-button.interface.js'

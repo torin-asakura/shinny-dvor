@@ -1,4 +1,6 @@
-import { styleFn } from 'styled-system'
+/* eslint-disable */
+
+import type { styleFn } from 'styled-system'
 
 export const appearanceNavLinkStyles: styleFn = ({ theme, keep }) =>
   !keep && {

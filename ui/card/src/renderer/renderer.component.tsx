@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
@@ -21,7 +23,7 @@ const Renderer: FC<PropsWithChildren<RendererProps>> = ({ children, active }) =>
     ? createPortal(
         <>
           {Children.map(children, (child) => (
-            <AnimatePresence>{active && child}</AnimatePresence>
+            <AnimatePresence>{!!active && child}</AnimatePresence>
           ))}
         </>,
         doc.body

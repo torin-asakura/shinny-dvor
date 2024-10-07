@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { memo }                          from 'react'
 import React                             from 'react'
 

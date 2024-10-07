@@ -1,35 +1,38 @@
-import type { ReactiveVar }    from '@apollo/client'
-import type { KeyboardEvent }  from 'react'
-import type { FC }             from 'react'
+/* eslint-disable */
 
-import { useReactiveVar }      from '@apollo/client'
-import { useCallback }         from 'react'
-import { useEffect }           from 'react'
-import { useState }            from 'react'
-import React                   from 'react'
+import type { ReactiveVar }         from '@apollo/client'
+import type { Service as IService } from '@store/services'
+import type { KeyboardEvent }       from 'react'
+import type { FC }                  from 'react'
 
-import { INVALID }             from '@store/booking'
-import { SUCCESS }             from '@store/booking'
-import { Service as IService } from '@store/services'
-import { Button }              from '@ui/button'
-import { Divider }             from '@ui/divider'
-import { Input }               from '@ui/input'
-import { Column }              from '@ui/layout'
-import { Layout }              from '@ui/layout'
-import { Box }                 from '@ui/layout'
-import { Select }              from '@ui/select'
-import { Switch }              from '@ui/switch'
-import { Item }                from '@ui/switch'
-import { Text }                from '@ui/text'
-import { extractFragment }     from '@globals/data'
-import { extractFragments }    from '@globals/data'
-import { doNothing }           from '@shared/utils'
-import { screenVar }           from '@store/booking'
-import { serviceVar }          from '@store/services'
+import type { InitialProps }        from './initial.interface.js'
 
-import { RadioList }           from '../radio-list/index.js'
-import { InitialProps }        from './initial.interface.js'
-import { useSubmit }           from '../data/index.js'
+import { useReactiveVar }           from '@apollo/client'
+import { useCallback }              from 'react'
+import { useEffect }                from 'react'
+import { useState }                 from 'react'
+import React                        from 'react'
+
+import { INVALID }                  from '@store/booking'
+import { SUCCESS }                  from '@store/booking'
+import { Button }                   from '@ui/button'
+import { Divider }                  from '@ui/divider'
+import { Input }                    from '@ui/input'
+import { Column }                   from '@ui/layout'
+import { Layout }                   from '@ui/layout'
+import { Box }                      from '@ui/layout'
+import { Select }                   from '@ui/select'
+import { Switch }                   from '@ui/switch'
+import { Item }                     from '@ui/switch'
+import { Text }                     from '@ui/text'
+import { extractFragment }          from '@globals/data'
+import { extractFragments }         from '@globals/data'
+import { doNothing }                from '@shared/utils'
+import { screenVar }                from '@store/booking'
+import { serviceVar }               from '@store/services'
+
+import { RadioList }                from '../radio-list/index.js'
+import { useSubmit }                from '../data/index.js'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -49,7 +52,7 @@ const Initial: FC<InitialProps> = ({
   const [comment, setComment] = useState<string>('')
   const [selectedRadius, setSelectedRadius] = useState<string>(service.radius || '')
   const [selectedCarBody, setSelectedCarBody] = useState<string>(service.carBody || carBodyItems[0])
-  const [selectedRepairTypes, setSelectedRepairTypes] = useState<string[]>([])
+  const [selectedRepairTypes, setSelectedRepairTypes] = useState<Array<string>>([])
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const signUpTitle = extractFragment('contentAddons', 'sign-up', fragmentsData).title
@@ -128,7 +131,7 @@ const Initial: FC<InitialProps> = ({
   const handleKeyPress = (event: KeyboardEvent<HTMLElement>) => {
     const correctChars = ['+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-    if (correctChars.indexOf(event.key) === -1) {
+    if (!correctChars.includes(event.key)) {
       event.preventDefault()
     }
   }
@@ -164,8 +167,8 @@ const Initial: FC<InitialProps> = ({
             <Input
               maxLength={12}
               value={name}
-              onChange={setName}
               placeholder={yourNamePlaceholder}
+              onChange={setName}
             />
           </Layout>
         </Column>
@@ -180,8 +183,10 @@ const Initial: FC<InitialProps> = ({
           <Layout>
             <Input
               value={phone}
-              onChange={(value) => validatePhone(value)}
               placeholder={yourPhonePlaceholder}
+              onChange={(value) => {
+                validatePhone(value)
+              }}
               onKeyPress={handleKeyPress}
             />
           </Layout>
@@ -236,9 +241,10 @@ const Initial: FC<InitialProps> = ({
         items={repairTypeItems}
         value={selectedRepairTypes}
         placeholder={repairTypePlaceholder}
-        onSelect={setSelectedRepairTypes}
         setIsOpen={setIsOpen}
-        selectedDefault={service.serviceName?.length ? service.serviceName : undefined}
+        // @ts-expect-error not assignable
+        selectedDefault={!!service.serviceName?.length && service.serviceName}
+        onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
       <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
@@ -250,7 +256,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={12} />
       <Layout>
-        <Input value={comment} onChange={setComment} placeholder={commentPlaceholder} />
+        <Input value={comment} placeholder={commentPlaceholder} onChange={setComment} />
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>

@@ -1,4 +1,4 @@
 export interface MapProps {
-  width: string | number
-  height: string | number
+  width: number | string
+  height: number | string
 }

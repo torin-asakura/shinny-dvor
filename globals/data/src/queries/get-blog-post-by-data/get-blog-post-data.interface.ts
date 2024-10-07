@@ -1,2 +1,2 @@
 import type { GetPostByQuery as PostQueryDataType } from '@globals/data'
-export { PostQueryDataType }
+export type { PostQueryDataType }

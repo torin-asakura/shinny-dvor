@@ -1,11 +1,12 @@
-import { FC }        from 'react'
-import React         from 'react'
+import type { FC }        from 'react'
 
-import { LogoIcon }  from '@ui/icons'
-import { Box }       from '@ui/layout'
-import { NextLink }  from '@ui/link'
+import type { LogoProps } from './logo.interface.js'
 
-import { LogoProps } from './logo.interface.js'
+import React              from 'react'
+
+import { LogoIcon }       from '@ui/icons'
+import { Box }            from '@ui/layout'
+import { NextLink }       from '@ui/link'
 
 const Logo: FC<LogoProps> = ({ path, ...props }) => (
   <NextLink path={path}>

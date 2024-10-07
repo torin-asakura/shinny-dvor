@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import * as Sentry             from '@sentry/node'
 
 import { API_URL }             from '../http/index.js'

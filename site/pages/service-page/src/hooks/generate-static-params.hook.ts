@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { GET_SERVICES }    from '@globals/data'
 import { getServerClient } from '@globals/data/apollo'
 

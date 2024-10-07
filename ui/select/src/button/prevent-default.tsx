@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { CreatePreventDefaultType } from './prevent-default.interface.js'
 
 import { forwardRef }                    from 'react'

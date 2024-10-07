@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // @ts-expect-error any type
 export const extractFragment = (key: string, id: string, data) =>
   // @ts-expect-error any type

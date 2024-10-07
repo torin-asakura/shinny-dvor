@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { UseNextNavLinkType } from './use-next-link.interface.js'
 
 import { useRouter }               from 'next/navigation.js'

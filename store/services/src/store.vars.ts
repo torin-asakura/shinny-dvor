@@ -1,6 +1,6 @@
-import { makeVar } from '@apollo/client'
+import type { Service } from './store.interfaces.js'
 
-import { Service } from './store.interfaces.js'
+import { makeVar }      from '@apollo/client'
 
 export const serviceVar = makeVar<Service>({
   radius: '',

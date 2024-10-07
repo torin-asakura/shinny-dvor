@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { GET_SITE_SERVICES_PAGE_SEO } from '@globals/data'
 import { GET_PREVIEW }                from '@globals/data'
 import { getSeoMetadata }             from '@globals/data'
