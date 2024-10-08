@@ -2584,10 +2584,14 @@ __metadata:
     "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     graphql: "npm:15.8.0"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
   peerDependencies:
     "@apollo/client": "*"
     "@nestjs/common": "*"
     graphql: "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -2625,9 +2629,13 @@ __metadata:
   resolution: "@booking-telegram-bot/tgsnake-adapter@workspace:booking-telegram-bot/adapters/tgsnake-adapter"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
     tgsnake: "npm:3.3.1"
   peerDependencies:
     "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -5460,8 +5468,12 @@ __metadata:
   resolution: "@query-client/application-module@workspace:booking-telegram-bot/contexts/query-client/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -5472,8 +5484,12 @@ __metadata:
     "@booking-telegram-bot/apollo-adapter": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -7619,8 +7635,12 @@ __metadata:
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -7631,8 +7651,12 @@ __metadata:
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
