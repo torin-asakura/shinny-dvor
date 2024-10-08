@@ -9,10 +9,8 @@
   },
   "dependencies": {
     "@booking-telegram-bot/apollo-adapter": "workspace:*",
+    "@nestjs/common": "10.4.2",
     "@query-client/application-module": "workspace:*"
-  },
-  "devDependencies": {
-    "@nestjs/common": "10.4.2"
   },
   "peerDependencies": {
     "@nestjs/common": "*"

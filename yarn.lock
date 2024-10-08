@@ -2625,7 +2625,6 @@ __metadata:
   resolution: "@booking-telegram-bot/tgsnake-adapter@workspace:booking-telegram-bot/adapters/tgsnake-adapter"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
-    "@telegram-bot/infrastructure-module": "workspace:*"
     tgsnake: "npm:3.3.1"
   peerDependencies:
     "@nestjs/common": "*"
@@ -7618,11 +7617,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
-    "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
-    "@globals/data": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"
-    "@telegram-bot/infrastructure-module": "workspace:*"
   peerDependencies:
     "@nestjs/common": "*"
   languageName: unknown

@@ -7,7 +7,7 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "devDependencies": {
+  "dependencies": {
     "@nestjs/common": "10.4.2"
   },
   "peerDependencies": {
