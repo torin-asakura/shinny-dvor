@@ -4,7 +4,7 @@ type TelegramBotFormattedContextType = {
   accessHash: bigint
   messageId: number
   chatId: bigint
-  replyMessage: (test: string) => Promise<void>
+  replyMessage: (text: string) => Promise<void>
 }
 
 type TelegramBotFormattedContextKeyType = keyof TelegramBotFormattedContextType
