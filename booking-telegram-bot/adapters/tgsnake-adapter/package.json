@@ -16,7 +16,6 @@
     "tgsnake": "3.3.1"
   },
   "peerDependencies": {
-    "@nestjs/common": "*",
-    "tgsnake": "*"
+    "@nestjs/common": "*"
   }
 }
