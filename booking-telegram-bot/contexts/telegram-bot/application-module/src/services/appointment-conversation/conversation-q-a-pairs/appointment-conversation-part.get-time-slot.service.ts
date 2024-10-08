@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable prefer-destructuring */
 
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { WorkTimeDataType }                from '../appointment-conversation.interfaces.js'
 import type { TimeSlotsType }                   from '../appointment-conversation.interfaces.js'
@@ -12,14 +12,14 @@ import { Injectable }                           from '@nestjs/common'
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '../appointment-conversation.constants.js'
 import { WORK_TIME }                            from '../appointment-conversation.constants.js'
 import { TIME_SLOT_STEP_MIN }                   from '../appointment-conversation.constants.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetTimeSlotConversationPart extends ConversationPart {
+export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
   conversationPartName: string = 'timeSlot'
 
   selectedDayWorkTime: {

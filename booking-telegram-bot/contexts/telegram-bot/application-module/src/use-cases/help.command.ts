@@ -1,4 +1,4 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
 

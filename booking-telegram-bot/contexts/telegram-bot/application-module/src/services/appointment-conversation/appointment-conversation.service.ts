@@ -1,15 +1,15 @@
-import type { TelegramBotFormattedContextType }     from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType }     from '@telegram-bot/application-module'
 
 import { Injectable }                               from '@nestjs/common'
 
 import { TelegramClientPort }                       from '../../ports/index.js'
-import { AppointmentGetCommentaryConversationPart } from './conversation-parts/index.js'
-import { AppointmentGetDateConversationPart }       from './conversation-parts/index.js'
-import { AppointmentGetRadiiConversationPart }      from './conversation-parts/index.js'
-import { AppointmentGetServiceConversationPart }    from './conversation-parts/index.js'
-import { AppointmentGetTimeSlotConversationPart }   from './conversation-parts/index.js'
-import { AppointmentGetCarBodyConversationPart }    from './conversation-parts/index.js'
-import { AppointmentGetApprovalConversationPart }   from './conversation-parts/index.js'
+import { AppointmentGetCommentaryConversationPart } from './conversation-q-a-pairs/index.js'
+import { AppointmentGetDateConversationPart }       from './conversation-q-a-pairs/index.js'
+import { AppointmentGetRadiiConversationPart }      from './conversation-q-a-pairs/index.js'
+import { AppointmentGetServiceConversationPart }    from './conversation-q-a-pairs/index.js'
+import { AppointmentGetTimeSlotConversationPart }   from './conversation-q-a-pairs/index.js'
+import { AppointmentGetCarBodyConversationPart }    from './conversation-q-a-pairs/index.js'
+import { AppointmentGetApprovalConversationPart }   from './conversation-q-a-pairs/index.js'
 import { ruLocale }                                 from '../../locals/index.js'
 
 @Injectable()

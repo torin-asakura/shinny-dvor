@@ -1,11 +1,11 @@
-import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { CreateConversationReturnType }    from '@telegram-bot/application-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { TelegramClientPort }              from '../ports/index.js'
 
 import { ruLocale }                             from '../locals/index.js'
 
-class ConversationPart {
+class ConversationQAPair {
   conversationPartName: string
 
   telegramClient: TelegramClientPort
@@ -70,4 +70,4 @@ class ConversationPart {
   }
 }
 
-export { ConversationPart }
+export { ConversationQAPair }

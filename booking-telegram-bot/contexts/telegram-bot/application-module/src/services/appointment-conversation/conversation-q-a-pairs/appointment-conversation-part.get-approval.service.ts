@@ -1,15 +1,15 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { ConversationDataType }            from './appointment-conversation-part.get-approval.interface.js'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetApprovalConversationPart extends ConversationPart {
+export class AppointmentGetApprovalConversationPart extends ConversationQAPair {
   // eslint-disable-next-line
   constructor(telegramClient: TelegramClientPort) {
     super(telegramClient)

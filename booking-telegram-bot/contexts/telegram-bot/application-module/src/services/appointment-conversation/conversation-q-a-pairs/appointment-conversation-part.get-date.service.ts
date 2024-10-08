@@ -1,16 +1,16 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { DATE_OPTIONS }                         from '../appointment-conversation.constants.js'
 import { DAY_MS }                               from '../appointment-conversation.constants.js'
 import { SUGGESTED_DAYS_QUANTITY }              from '../appointment-conversation.constants.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetDateConversationPart extends ConversationPart {
+export class AppointmentGetDateConversationPart extends ConversationQAPair {
   suggestedDates
 
   keyboardVariants

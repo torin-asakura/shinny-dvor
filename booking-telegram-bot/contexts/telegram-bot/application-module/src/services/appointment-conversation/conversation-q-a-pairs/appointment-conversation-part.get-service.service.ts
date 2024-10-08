@@ -1,15 +1,15 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { GetServiceTitlesUseCase }              from '@query-client/application-module'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationPart }                     from '../../conversation-part.class.js'
+import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetServiceConversationPart extends ConversationPart {
+export class AppointmentGetServiceConversationPart extends ConversationQAPair {
   serviceTitles: Array<string>
 
   conversationPartName: string = 'service'
