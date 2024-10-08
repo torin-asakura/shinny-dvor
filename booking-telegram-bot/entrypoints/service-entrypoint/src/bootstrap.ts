@@ -1,35 +1,22 @@
-import { NestLogger }                 from '@atls/nestjs-logger'
-import { NestFactory }                from '@nestjs/core'
+import type { NestFastifyApplication } from '@nestjs/platform-fastify'
 
-import { BotListenProcessor }         from '@telegram-bot/infrastructure-module'
+import { NestFactory }                 from '@nestjs/core'
+import { FastifyAdapter }              from '@nestjs/platform-fastify'
 
-import { BotServiceEntrypointModule } from './bot-service-entrypoint.module.js'
-
-// eslint-disable-next-line @next/next/no-assign-module-variable
-declare const module: {
-  hot: {
-    accept: VoidFunction
-    dispose: (param: VoidFunction) => void
-  }
-
-  accept: VoidFunction
-  dispose: VoidFunction
-}
+import { BotServiceEntrypointModule }  from './bot-service-entrypoint.module.js'
+import { module }                      from './bootstrap.module.js'
 
 const bootstrap = async (): Promise<void> => {
-  const app = await NestFactory.create(BotServiceEntrypointModule, {
-    logger: new NestLogger(),
-  })
+  const app = await NestFactory.create<NestFastifyApplication>(
+    BotServiceEntrypointModule,
+    new FastifyAdapter({
+      logger: true,
+    })
+  )
 
   app.enableShutdownHooks()
 
   await app.listen(3000)
-
-  const processor = app.get(BotListenProcessor)
-  await processor.processCommand_startCommand()
-  await processor.processCommand_helpCommand()
-  await processor.processCommand_createAppointment()
-  await processor.processReceiveMessage()
 
   if (module.hot) {
     module.hot.accept()
