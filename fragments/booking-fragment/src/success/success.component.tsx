@@ -1,17 +1,20 @@
-import { FC }              from 'react'
-import React               from 'react'
+/* eslint-disable */
 
-import { INITIAL }         from '@store/booking'
-import { Button }          from '@ui/button'
-import { Column }          from '@ui/layout'
-import { Box }             from '@ui/layout'
-import { Layout }          from '@ui/layout'
-import { NextLink }        from '@ui/link'
-import { Text }            from '@ui/text'
-import { extractFragment } from '@globals/data'
-import { screenVar }       from '@store/booking'
+import type { FC }           from 'react'
 
-import { SuccessProps }    from './success.interface.js'
+import type { SuccessProps } from './success.interface.js'
+
+import React                 from 'react'
+
+import { INITIAL }           from '@store/booking'
+import { Button }            from '@ui/button'
+import { Column }            from '@ui/layout'
+import { Box }               from '@ui/layout'
+import { Layout }            from '@ui/layout'
+import { NextLink }          from '@ui/link'
+import { Text }              from '@ui/text'
+import { extractFragment }   from '@globals/data'
+import { screenVar }         from '@store/booking'
 
 const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(

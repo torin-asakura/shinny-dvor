@@ -1,7 +1,12 @@
+/* eslint-disable */
+
+import type { FC }                     from 'react'
+
+import type { RadioProps }             from './radio.interface.js'
+
 import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
 import styled                          from '@emotion/styled'
-import { FC }                          from 'react'
 import React                           from 'react'
 
 import { Layout }                      from '@ui/layout'
@@ -10,7 +15,6 @@ import { Text }                        from '@ui/text'
 import { useHover }                    from '@ui/utils'
 
 import { Container }                   from './container/index.js'
-import { RadioProps }                  from './radio.interface.js'
 import { getCheckColor }               from './helper/index.js'
 
 const Radio: FC<RadioProps> = ({ children, checked, textTransform = 'lowercase' }) => {

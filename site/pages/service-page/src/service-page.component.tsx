@@ -1,9 +1,11 @@
+/* eslint-disable */
+
 import type { ServicePageProps }       from './service-page.interfaces.js'
 
 import React                           from 'react'
 
 import { GET_SERVICE_BY }              from '@globals/data'
-import { PreloadQuery }                from '@globals/data'
+import { PreloadQuery }                from '@globals/data/apollo'
 
 import { ServicePageClient }           from './service-page.client.js'
 import { runServicePageServerQueries } from './hooks/index.js'

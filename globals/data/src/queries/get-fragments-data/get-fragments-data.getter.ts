@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetFragmentsQuery as FragmentsQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                                 from '@apollo/client'

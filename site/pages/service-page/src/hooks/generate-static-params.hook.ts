@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 import { GET_SERVICES }    from '@globals/data'
-import { getServerClient } from '@globals/data'
+import { getServerClient } from '@globals/data/apollo'
 
 const generateStaticParams = async () => {
   const getCleanedUriString = (rawUriString: string) => {

@@ -7,7 +7,7 @@ import { GET_FRAGMENTS }             from '@globals/data'
 import { GET_CONTACTS }              from '@globals/data'
 import { GET_NAVIGATION }            from '@globals/data'
 import { GET_BLOG_POSTS }            from '@globals/data'
-import { getServerClient }           from '@globals/data'
+import { getServerClient }           from '@globals/data/apollo'
 
 // @ts-expect-error not-assignable
 export const runBlogIndexPageServerQueries: IndexPageServerProps = async () => {

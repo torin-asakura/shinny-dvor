@@ -4,20 +4,20 @@ import type { LayoutProps }                    from 'styled-system'
 import type { SpaceProps }                     from 'styled-system'
 
 type ButtonColors =
-  | 'primary'
-  | 'secondary'
-  | 'transparent'
-  | 'radius'
+  | 'blueText'
   | 'darkSocial'
   | 'darkWheel'
-  | 'lightWheel'
   | 'grey'
-  | 'blueText'
+  | 'lightWheel'
+  | 'primary'
+  | 'radius'
+  | 'secondary'
+  | 'transparent'
 
 export interface ButtonProps extends BaseButtonProps, LayoutProps, SpaceProps {
   color?: ButtonColors
-  width?: number | string | number[] | string[]
-  height?: number | string | number[] | string[]
+  width?: Array<number> | Array<string> | number | string
+  height?: Array<number> | Array<string> | number | string
   onMouseEnter?: MouseEventHandler<HTMLButtonElement>
   onMouseLeave?: MouseEventHandler<HTMLButtonElement>
 }

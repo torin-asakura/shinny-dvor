@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 'use server'
 
 import { HttpLink }                from '@apollo/client'
@@ -19,13 +21,15 @@ const { getClient, PreloadQuery } = registerApolloClient(
               if (responseObject.seo) {
                 // @ts-expect-error not exist
                 return `PostBy:${responseObject.seo.title}`
-              } else if (responseObject.postId) {
-                return `PostBy:${responseObject.postId}`
-              } else if (responseObject.uri) {
-                return `PostBy:${responseObject.uri}`
-              } else {
-                return defaultDataIdFromObject(responseObject)
               }
+              if (responseObject.postId) {
+                return `PostBy:${responseObject.postId}`
+              }
+              if (responseObject.uri) {
+                return `PostBy:${responseObject.uri}`
+              }
+              return defaultDataIdFromObject(responseObject)
+
             case 'Service':
               return `ServiceBy:${responseObject.uri}`
             default:
@@ -34,7 +38,7 @@ const { getClient, PreloadQuery } = registerApolloClient(
         },
       }),
       connectToDevTools: true,
-      // @ts-ignore:next-line
+      // @ts-ignore
       link: new HttpLink({
         uri: GRAPHQL_API_URL,
         credentials: 'include',

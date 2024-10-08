@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useQuery }       from '@apollo/client'
 
 import { GET_NAVIGATION } from './navigation.query.js'

@@ -1,6 +1,6 @@
 export interface SmoothOptions {
   duration?: number
-  pattern?: 'in' | 'out' | 'in-and-out'
+  pattern?: 'in-and-out' | 'in' | 'out'
 }
 
 export interface ConditionProps {

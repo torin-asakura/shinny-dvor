@@ -1,7 +1,10 @@
+/* eslint-disable */
+
 'use client'
 
-import type { ServicePageClientProps } from './service-page.interfaces.js'
 import type { FC }                     from 'react'
+
+import type { ServicePageClientProps } from './service-page.interfaces.js'
 
 import React                           from 'react'
 

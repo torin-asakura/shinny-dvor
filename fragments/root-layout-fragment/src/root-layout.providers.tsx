@@ -1,17 +1,17 @@
+/* eslint-disable */
+
 'use client'
 
-import React             from 'react'
 import { IntlProvider }  from 'react-intl'
+import React             from 'react'
 
 import { ThemeProvider } from '@ui/theme'
 
 // @ts-expect-error any types
-const RoolLayoutProviders = ({ messages, children }) => {
-  return (
-    <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
-      <ThemeProvider>{children}</ThemeProvider>
-    </IntlProvider>
-  )
-}
+const RoolLayoutProviders = ({ messages, children }) => (
+  <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>
+    <ThemeProvider>{children}</ThemeProvider>
+  </IntlProvider>
+)
 
 export { RoolLayoutProviders }

@@ -1,1 +1,1 @@
-export type Screen = 'initial' | 'success' | 'invalid'
+export type Screen = 'initial' | 'invalid' | 'success'

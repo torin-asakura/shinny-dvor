@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { PostQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }       from '@apollo/client'

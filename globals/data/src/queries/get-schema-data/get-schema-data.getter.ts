@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { SchemaQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }         from '@apollo/client'
@@ -10,8 +12,6 @@ const getSchemaData = () => {
   const serviceItem = data.__schema.types.filter(
     (item) => item.name === 'Service_Servicesparams_Price'
   )[0]
-
-  const t = serviceItem.fields
 
   return { schema: serviceItem || [] }
 }

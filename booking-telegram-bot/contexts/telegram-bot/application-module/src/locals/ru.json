@@ -1,0 +1,28 @@
+{
+  "receiveMessage": {
+    "entrypointAnswer": "Начало диалога в processor, /create_appointment"
+  },
+  "appointmentConversation": {
+    "serverErrorMessage": "На сервере произошла ошибка",
+    "startConversationMessage": "appointment conversation welcome message",
+    "endConversatoinMessage": "appointment conversation close message",
+    "approvalMessageTitles": {
+      "carBody": "Тип кузова",
+      "radii": "Диаметр колёс",
+      "service": "Тип ремонта",
+      "selectedDate": "Выбранная дата",
+      "commentary": "Комментарий"
+    },
+    "approveAppointmentButton": "Согласовать запись",
+    "editAppointmentButton": "Изменить запись",
+    "selectDateMessage": "Выберите дату записи",
+    "selectCarBodyMessage": "kuzov auto quesiton*",
+    "selectRadiiMessage": "diameter coles*",
+    "selectServiceMessage": "tip remonta*",
+    "selectTimeSlotMessage": "Выберите время записи",
+    "cancelAppointmentButton": "Отменить запись",
+    "cancelAppointmentCommand": "/cancel",
+    "missClickMessage": "Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись",
+    "continueWithoutCommentaryButton": "Продолжить без комментария"
+  }
+}

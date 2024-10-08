@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'

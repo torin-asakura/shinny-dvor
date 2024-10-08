@@ -1,0 +1,22 @@
+{
+  "name": "@query-client/infrastructure-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@booking-telegram-bot/apollo-adapter": "workspace:*",
+    "@nestjs/common": "10.4.2",
+    "@query-client/application-module": "workspace:*",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}

@@ -1,8 +1,10 @@
-import { AnimatePresence } from 'framer-motion'
-import { motion }          from 'framer-motion'
-import React               from 'react'
+/* eslint-disable */
 
-import { ConditionProps }  from './condition.interface.js'
+import type { ConditionProps } from './condition.interface.js'
+
+import { AnimatePresence }     from 'framer-motion'
+import { motion }              from 'framer-motion'
+import React                   from 'react'
 
 // what is a remove package?
 // 12 yrs old
@@ -20,7 +22,7 @@ const Condition = ({
     if (smoothOptions.pattern === 'in-and-out') {
       return (
         <AnimatePresence>
-          {match && (
+          {!!match && (
             <motion.div
               style={{ display: 'flex', width: '100%', height: '100%' }}
               initial={{ opacity: 0 }}
@@ -54,7 +56,7 @@ const Condition = ({
     if (smoothOptions.pattern === 'out') {
       return (
         <AnimatePresence>
-          {match && (
+          {!!match && (
             <motion.div
               style={{ display: 'flex', width: '100%', height: '100%' }}
               initial={{ opacity: 1 }}

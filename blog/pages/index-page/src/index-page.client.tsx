@@ -1,8 +1,12 @@
 // move it directive to fragment level
+
 'use client'
 
+import type { FC }               from 'react'
+
+import type { IndexPageProps }   from './index-page.interfaces.js'
+
 import React                     from 'react'
-import { FC }                    from 'react'
 
 import { AllArticles }           from '@blog/articles-fragment'
 import { Footer }                from '@fragments/footer-fragment'
@@ -15,8 +19,6 @@ import { getAvailableRadiiData } from '@globals/data'
 import { getFragmentsData }      from '@globals/data'
 import { getCarBodiesData }      from '@globals/data'
 import { getServicesData }       from '@globals/data'
-
-import { IndexPageProps }        from './index-page.interfaces.js'
 
 export const IndexPageClient: FC<IndexPageProps> = () => {
   const { contacts } = getContactsData()

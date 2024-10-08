@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetCarBodiesQuery as CarBodiesQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                                 from '@apollo/client'

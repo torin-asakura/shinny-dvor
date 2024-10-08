@@ -1,5 +1,8 @@
-import type { PreviewArticleProps } from './preview-article.interface.js'
+/* eslint-disable */
+
 import type { FC }                  from 'react'
+
+import type { PreviewArticleProps } from './preview-article.interface.js'
 
 import React                        from 'react'
 

@@ -6,10 +6,8 @@ import React               from 'react'
 
 const BaseImage = Image as unknown as FC<ImageProps>
 
-const ImageBlock: FC<ImageProps> = ({ style, ...props }) => {
-  return (
-    <BaseImage style={{ width: '100%', height: 'auto', objectFit: 'cover', ...style }} {...props} />
-  )
-}
+const ImageBlock: FC<ImageProps> = ({ style, ...props }) => (
+  <BaseImage style={{ width: '100%', height: 'auto', objectFit: 'cover', ...style }} {...props} />
+)
 
 export { ImageBlock }

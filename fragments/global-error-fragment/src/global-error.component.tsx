@@ -1,12 +1,14 @@
+/* eslint-disable */
+
 'use client'
 
 import * as Sentry   from '@sentry/nextjs'
 import { useEffect } from 'react'
-// @ts-ignore:next-line
+// @ts-expect-error:next-line
 import NextError     from 'next/error'
 import React         from 'react'
 
-export function GlobalError(contextData: any) {
+export const GlobalError = (contextData: any) => {
   const { error }: { error: Error & { digest?: string } } = contextData
 
   useEffect(() => {

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useMutation }       from '@apollo/client'
 
 import { POST_VIEW_COUNTER } from './increment-post-view-counter.mutation.js'

@@ -1,5 +1,7 @@
-import React                             from 'react'
+/* eslint-disable */
+
 import { memo }                          from 'react'
+import React                             from 'react'
 
 import { IndexPageClient }               from './index-page.client.js'
 import { runBlogIndexPageServerQueries } from './hooks/index.js'

@@ -54,7 +54,7 @@ const Slide: FC<SlideProps> = ({
               alignItems='center'
             >
               <ReactCompareImage
-                handle={swiperSlide.isActive ? <Handle /> : null}
+                handle={!!swiperSlide.isActive && <Handle />}
                 sliderLineWidth={swiperSlide.isActive ? 2 : 0}
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
@@ -71,7 +71,7 @@ const Slide: FC<SlideProps> = ({
               alignItems='center'
             >
               <ReactCompareImage
-                handle={swiperSlide.isActive ? <Handle /> : null}
+                handle={!!swiperSlide.isActive && <Handle />}
                 leftImage={image.firstPhoto.sourceUrl}
                 rightImage={image.secondPhoto.sourceUrl}
                 sliderPositionPercentage={0.4}

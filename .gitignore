@@ -75,3 +75,7 @@ wp-content/themes/!misik!/
 
 # exclude personal files
 effectivnayarabota1/
+
+# tgsnake cache files
+myapp.cache
+myapp.session

@@ -1,14 +1,15 @@
-import { FC }               from 'react'
-import React                from 'react'
+import type { FC }               from 'react'
 
-import { Button }           from '@ui/button'
-import { VkIcon }           from '@ui/icons'
-import { FacebookIcon }     from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Link }             from '@ui/link'
+import type { SocialLinksProps } from './social-links.interface.js'
 
-import { SocialLinksProps } from './social-links.interface.js'
+import React                     from 'react'
+
+import { Button }                from '@ui/button'
+import { VkIcon }                from '@ui/icons'
+import { FacebookIcon }          from '@ui/icons'
+import { Box }                   from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Link }                  from '@ui/link'
 
 const SocialLinksDark: FC<SocialLinksProps> = ({ linkVk, linkFb }) => (
   <Box width='100%' justifyContent='flex-end'>

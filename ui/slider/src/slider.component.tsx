@@ -1,27 +1,30 @@
-import { Swiper }            from '@atls-ui-parts/swiper'
-import { PropsWithChildren } from 'react'
-import { FC }                from 'react'
-// @ts-ignore:next-line
-import { Keyboard }          from 'swiper/modules'
-// @ts-ignore:next-line
-import { Navigation }        from 'swiper/modules'
-import React                 from 'react'
+/* eslint-disable */
 
-import { SliderProps }       from './slider.interface.js'
+import type { PropsWithChildren } from 'react'
+import type { FC }                from 'react'
+
+import type { SliderProps }       from './slider.interface.js'
+
+import { Swiper }                 from '@atls-ui-parts/swiper'
+// @ts-ignore
+import { Keyboard }               from 'swiper/modules'
+// @ts-ignore
+import { Navigation }             from 'swiper/modules'
+import React                      from 'react'
 
 export const Slider: FC<PropsWithChildren<SliderProps>> = ({ children }) => (
   <Swiper
     loop
+    centeredSlides
     loopAddBlankSlides={false}
     allowTouchMove={false}
-    centeredSlides
+    modules={[Keyboard, Navigation]}
     keyboard={{
       enabled: true,
     }}
     autoplay={{
       stopOnLastSlide: false,
     }}
-    modules={[Keyboard, Navigation]}
     breakpoints={{
       640: {
         slidesPerView: 1,

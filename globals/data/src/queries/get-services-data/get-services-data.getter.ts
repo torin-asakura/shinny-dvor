@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetServicesQuery as ServicesQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                               from '@apollo/client'

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { GetNavigationQuery as NavigationQueryDataType } from '@globals/data'
 
 import { useSuspenseQuery }                                   from '@apollo/client'

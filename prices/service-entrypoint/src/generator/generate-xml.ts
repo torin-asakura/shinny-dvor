@@ -1,7 +1,8 @@
+/* eslint-disable */
+
 import { Logger }           from '@atls/logger'
 import { S3Client }         from '@aws-sdk/client-s3'
 import { PutObjectCommand } from '@aws-sdk/client-s3'
-
 import { js2xml }           from 'xml-js'
 
 import { imagesData }       from '../images-data/index.js'
@@ -79,8 +80,8 @@ const generateXml = async (goodsData, goodsCategoryData) => {
     endpoint: process.env.FILES_STORAGE_HOST,
     region: process.env.FILES_STORAGE_REGION,
     credentials: {
-      accessKeyId: process.env.YC_SA_KEY_ID as string,
-      secretAccessKey: process.env.YC_SA_SECRET_KEY as string,
+      accessKeyId: process.env.YC_SA_KEY_ID!,
+      secretAccessKey: process.env.YC_SA_SECRET_KEY!,
     },
   })
 

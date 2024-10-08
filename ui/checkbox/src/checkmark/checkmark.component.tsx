@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
 import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
 import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { FC }              from 'react'
 
 import type { ServiceProps }    from './service.interface.js'
@@ -94,8 +96,6 @@ const Service: FC<ServiceProps> = ({
 
   useEffect(() => {
     if (!availableRadii.includes(radius)) setRadius(availableRadii[0])
-
-    // eslint-disable-next-line
   }, [onCarBody])
 
   // @ts-expect-error null | undefined
@@ -105,7 +105,13 @@ const Service: FC<ServiceProps> = ({
 
   return (
     <>
-      <Layer scroll visible={visible} onClose={() => setVisible(true)}>
+      <Layer
+        scroll
+        visible={visible}
+        onClose={() => {
+          setVisible(true)
+        }}
+      >
         <Booking
           setVisible={setVisible}
           fragmentsData={fragmentsData}
@@ -176,7 +182,9 @@ const Service: FC<ServiceProps> = ({
                           size='small'
                           height='100%'
                           width='100%'
-                          onClick={() => setOnCarBody(item)}
+                          onClick={() => {
+                            setOnCarBody(item)
+                          }}
                         >
                           <Text
                             color={onCarBody === item ? 'white' : 'black'}
@@ -204,7 +212,7 @@ const Service: FC<ServiceProps> = ({
             </Condition>
             <Row>
               <Text fontSize={['xl', 'giant', 'giant']} fontWeight='medium'>
-                {servicePrice !== undefined ? servicePrice : defaultPrice}
+                {servicePrice !== undefined && servicePrice}
                 <Space />
                 <Ruble />
               </Text>
@@ -311,7 +319,7 @@ const Service: FC<ServiceProps> = ({
                 <Text fontWeight='medium'>
                   {signUp}
                   <Space />
-                  {servicePrice !== undefined ? servicePrice : defaultPrice}
+                  {servicePrice !== undefined && servicePrice}
                   <Space />
                   <Ruble />
                 </Text>

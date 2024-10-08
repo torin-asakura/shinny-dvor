@@ -1,8 +1,9 @@
-import type { ArticleProps } from './article.interface.js'
 import type { FC }           from 'react'
 
-import React                 from 'react'
+import type { ArticleProps } from './article.interface.js'
+
 import { memo }              from 'react'
+import React                 from 'react'
 
 import { ImageBlock }        from '@ui/image'
 import { Box }               from '@ui/layout'

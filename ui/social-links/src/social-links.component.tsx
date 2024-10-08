@@ -1,15 +1,16 @@
-import { FC }               from 'react'
-import React                from 'react'
+import type { FC }               from 'react'
 
-import { Button }           from '@ui/button'
-import { FacebookIcon }     from '@ui/icons'
-import { VkIcon }           from '@ui/icons'
-import { Box }              from '@ui/layout'
-import { Layout }           from '@ui/layout'
-import { Link }             from '@ui/link'
-import { useHover }         from '@ui/utils'
+import type { SocialLinksProps } from './social-links.interface.js'
 
-import { SocialLinksProps } from './social-links.interface.js'
+import React                     from 'react'
+
+import { Button }                from '@ui/button'
+import { FacebookIcon }          from '@ui/icons'
+import { VkIcon }                from '@ui/icons'
+import { Box }                   from '@ui/layout'
+import { Layout }                from '@ui/layout'
+import { Link }                  from '@ui/link'
+import { useHover }              from '@ui/utils'
 
 const SocialLinks: FC<SocialLinksProps> = ({ linkVk, linkFb }) => {
   const [hoverVk, hoverVkProps] = useHover()

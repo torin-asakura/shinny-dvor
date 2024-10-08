@@ -1,6 +1,11 @@
-import React                    from 'react'
-import { FC }                   from 'react'
+/* eslint-disable */
+
+import type { FC }              from 'react'
+
+import type { NavigationProps } from './navigation.interface.js'
+
 import { useState }             from 'react'
+import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -20,7 +25,6 @@ import { screenVar }            from '@store/booking'
 
 import { NavigationListMobile } from './navigation-list-mobile/index.js'
 import { NavigationList }       from './navigation-list/index.js'
-import { NavigationProps }      from './navigation.interface.js'
 import { getColor }             from './helpers/index.js'
 import { getColorBackground }   from './helpers/index.js'
 
@@ -47,7 +51,13 @@ const Navigation: FC<NavigationProps> = ({
 
   return (
     <>
-      <Layer scroll visible={visible} onClose={() => setVisible(true)}>
+      <Layer
+        scroll
+        visible={visible}
+        onClose={() => {
+          setVisible(true)
+        }}
+      >
         <Booking
           setVisible={setVisible}
           fragmentsData={fragmentsData}
@@ -72,10 +82,21 @@ const Navigation: FC<NavigationProps> = ({
             <Layout flexBasis={[20, 20, 28]} />
             <Row justifyContent='space-between'>
               <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
-                <Button size='ghost' color='transparent' onClick={() => setDrawer(!drawer)}>
+                <Button
+                  size='ghost'
+                  color='transparent'
+                  onClick={() => {
+                    setDrawer(!drawer)
+                  }}
+                >
                   <MenuIcon width={24} height={24} color={getColor(active!, scrollY)} />
                 </Button>
-                <Drawer active={drawer} onClose={() => setDrawer(false)}>
+                <Drawer
+                  active={drawer}
+                  onClose={() => {
+                    setDrawer(false)
+                  }}
+                >
                   <NavigationListMobile
                     scrollY={scrollY}
                     active={active}

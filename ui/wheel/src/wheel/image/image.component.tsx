@@ -1,5 +1,6 @@
-import type { ImageProps } from './image.interface.js'
 import type { FC }         from 'react'
+
+import type { ImageProps } from './image.interface.js'
 
 import React               from 'react'
 

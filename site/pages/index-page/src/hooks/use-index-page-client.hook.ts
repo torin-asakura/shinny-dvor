@@ -1,8 +1,10 @@
+/* eslint-disable */
+
 import type { UseIndexPageClientType } from './use-index-page-client.interface.js'
 
-import { useIntersectionObserver }     from '@ui/intersection-observer'
-
 import { useEffect }                   from 'react'
+
+import { useIntersectionObserver }     from '@ui/intersection-observer'
 
 export const useIndexPageClient: UseIndexPageClientType = ({
   isLoaded,

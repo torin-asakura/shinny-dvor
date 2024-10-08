@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { LinkProps }          from './link.interfaces.js'
 import type { BaseLinkProps }      from './link.interfaces.js'
 

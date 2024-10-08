@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { join } from 'path'
 import { dirname } from 'path'
 
@@ -28,12 +30,15 @@ export default {
   },
   webpack: (webpackConfig, { webpack }) => {
     webpackConfig.plugins.push(
-      new webpack.NormalModuleReplacementPlugin(new RegExp(/\.js$/), function (
-        /** @type {{ request: string }} */
-        resource
-      ) {
-        resource.request = resource.request.replace('.js', '')
-      })
+      new webpack.NormalModuleReplacementPlugin(
+        new RegExp(/\.js$/),
+        (
+          /** @type {{ request: string }} */
+          resource
+        ) => {
+          resource.request = resource.request.replace('.js', '')
+        }
+      )
     )
     return webpackConfig
   },

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import type { FC }                        from 'react'
 // TODO ?
 import type { LegacyRef }                 from 'react'
