@@ -1,13 +1,12 @@
 // eslint-disable @typescript-eslint/naming-convention
 
-import type { TelegramBotFormattedContextType }    from '@telegram-bot/infrastructure-module'
-import type { TelegramBotFormattedContextKeyType } from '@telegram-bot/infrastructure-module'
-
-import type { OnCommandReturnType }                from './tgsnake-adapter.interfaces.js'
-import type { OnMessageReturnType }                from './tgsnake-adapter.interfaces.js'
-import type { CreateConversationReturnType }       from './tgsnake-adapter.interfaces.js'
-import type { CallbackType }                       from './tgsnake-adapter.interfaces.js'
-import type { TgsnakeContextType }                 from './tgsnake-adapter.interfaces.js'
+import type { TelegramBotFormattedContextType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextKeyType } from '@booking-telegram-bot/tgsnake-adapter'
+import type { OnCommandReturnType }                from '@booking-telegram-bot/tgsnake-adapter'
+import type { OnMessageReturnType }                from '@booking-telegram-bot/tgsnake-adapter'
+import type { CreateConversationReturnType }       from '@booking-telegram-bot/tgsnake-adapter'
+import type { CallbackType }                       from '@booking-telegram-bot/tgsnake-adapter'
+import type { TgsnakeContextType }                 from '@booking-telegram-bot/tgsnake-adapter'
 
 import crypto                                      from 'node:crypto'
 

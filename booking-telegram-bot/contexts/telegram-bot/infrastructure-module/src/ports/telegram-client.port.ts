@@ -1,6 +1,6 @@
 import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsnake-adapter'
 import type { TelegramClientPort }              from '@telegram-bot/application-module'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
 
 import { Injectable }                           from '@nestjs/common'
 

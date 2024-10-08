@@ -1,7 +1,17 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
-import type { Composer }                        from 'tgsnake'
-import type { Conversation }                    from 'tgsnake/lib/src/Conversation/conversation.js'
-import type { TypeUpdate }                      from 'tgsnake/lib/src/TL/Updates/Update.js'
+import type { Composer }     from 'tgsnake'
+import type { Conversation } from 'tgsnake/lib/src/Conversation/conversation.js'
+import type { TypeUpdate }   from 'tgsnake/lib/src/TL/Updates/Update.js'
+
+type TelegramBotFormattedContextType = {
+  userId: bigint
+  messageText: string
+  accessHash: bigint
+  messageId: number
+  chatId: bigint
+  replyMessage: (text: string) => Promise<void>
+}
+
+type TelegramBotFormattedContextKeyType = keyof TelegramBotFormattedContextType
 
 type TgsnakeContextType = TypeUpdate
 
@@ -26,3 +36,5 @@ export type { CreateConversationReturnType }
 export type { WaitMessageType }
 export type { OnMessageReturnType }
 export type { OnCommandReturnType }
+export type { TelegramBotFormattedContextType }
+export type { TelegramBotFormattedContextKeyType }
