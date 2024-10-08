@@ -1,5 +1,6 @@
 import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/infrastructure-module'
+
+import type { TelegramBotFormattedContextType } from './telegram-client.interfaces.js'
 
 export abstract class TelegramClientPort {
   abstract sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void>
