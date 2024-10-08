@@ -2,6 +2,8 @@ import type { TelegramBotFormattedContextType }     from '@telegram-bot/applicat
 
 import { Injectable }                               from '@nestjs/common'
 
+import { WriteAppointmentDataUseCase }              from '@orm-client/application-module'
+
 import { TelegramClientPort }                       from '../../ports/index.js'
 import { AppointmentGetCommentaryConversationPart } from './conversation-q-a-pairs/index.js'
 import { AppointmentGetDateConversationPart }       from './conversation-q-a-pairs/index.js'
@@ -16,6 +18,7 @@ import { ruLocale }                                 from '../../locals/index.js'
 export class AppointmentConversationService {
   constructor(
     private readonly telegramClient: TelegramClientPort,
+    private readonly writeAppointmentDataUseCase: WriteAppointmentDataUseCase,
     private readonly appointmentGetDateConversationPart: AppointmentGetDateConversationPart,
     private readonly appointmentGetTimeSlotConversationPart: AppointmentGetTimeSlotConversationPart,
     private readonly appointmentGetCarBodyConversationPart: AppointmentGetCarBodyConversationPart,
@@ -27,6 +30,24 @@ export class AppointmentConversationService {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
+      // const mockData = {
+      //   date: { clientText: 'среда, 9 октября', milliseconds: 1728421200000 },
+      //   timeSlot: { milliseconds: 1728462600000, text: '11:30', isFree: true },
+      //   carBody: 'Джип',
+      //   radii: 'R14',
+      //   service: 'Хранение шин',
+      //   commentary: 'Тест комментарий текст',
+      //   undefined: true,
+      // }
+
+      await this.writeAppointmentDataUseCase.process()
+
+      // TODO write mock data to db
+
+      // TODO move write data func to bottom of conversation.service
+      // TODO change mock data to real data
+      // TODO test it
+
       await this.telegramClient.sendMessage(
         ctx,
         // TODO start appointment-conversation-message
@@ -51,8 +72,8 @@ export class AppointmentConversationService {
         questionData: appointmentConversation.data,
       })
 
-      //   // TODO write to DB - appointmentConversation.data
-      //   // TODO write with telegram-client-data (phone - if available, userId )
+      // TODO write to DB - appointmentConversation.data
+      // TODO write with telegram-client-data (phone - if available, userId )
 
       await this.telegramClient.sendMessage(
         ctx,
