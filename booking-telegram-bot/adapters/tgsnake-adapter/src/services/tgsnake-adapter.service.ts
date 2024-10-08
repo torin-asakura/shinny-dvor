@@ -17,6 +17,8 @@ import { Raw }                                     from 'tgsnake'
 
 import { TGSHAKE_CONFIG }                          from '../config/index.js'
 
+// TODO divide that class into smaller parts
+
 @Injectable()
 export class TgsnakeAdapterService extends Snake {
   constructor() {

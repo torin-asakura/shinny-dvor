@@ -6,6 +6,8 @@ import { HelpCommand }                    from '@telegram-bot/application-module
 import { AppointmentConversationCommand } from '@telegram-bot/application-module'
 import { ReceiveMessageUseCase }          from '@telegram-bot/application-module'
 
+// TODO divide that class into each command personal processor
+
 @Injectable()
 export class BotListenProcessor {
   constructor(

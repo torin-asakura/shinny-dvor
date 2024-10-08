@@ -15,6 +15,8 @@ import { checkArrayLength }            from '@globals/data'
 
 import { client }                      from '../client/index.js'
 
+// TODO divide that class into smaller parts
+
 @Injectable()
 export class ApolloAdapterService implements ApolloAdapterInt {
   async getCarBodyTitles(): ReturnTitlesType {
