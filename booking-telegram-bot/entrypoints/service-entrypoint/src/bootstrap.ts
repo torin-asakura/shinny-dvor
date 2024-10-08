@@ -4,7 +4,14 @@ import { NestFactory }                 from '@nestjs/core'
 import { FastifyAdapter }              from '@nestjs/platform-fastify'
 
 import { BotServiceEntrypointModule }  from './bot-service-entrypoint.module.js'
-import { module }                      from './bootstrap.module.js'
+
+// eslint-disable-next-line @next/next/no-assign-module-variable
+declare const module: {
+  hot: {
+    accept: VoidFunction
+    dispose: (param: VoidFunction) => void
+  }
+}
 
 const bootstrap = async (): Promise<void> => {
   const app = await NestFactory.create<NestFastifyApplication>(
