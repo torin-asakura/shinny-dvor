@@ -5,7 +5,7 @@ import { Module }             from '@nestjs/common'
 import * as services          from '../services/index.js'
 
 @Module({})
-export class TgsnakeAdapterModule {
+class TgsnakeAdapterModule {
   static register(): DynamicModule {
     const serviceProviders = Object.values(services)
     const providers = [...serviceProviders]
@@ -18,3 +18,5 @@ export class TgsnakeAdapterModule {
     }
   }
 }
+
+export { TgsnakeAdapterModule }
