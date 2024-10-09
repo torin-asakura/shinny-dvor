@@ -5542,9 +5542,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orm-client/application-module@workspace:*, @orm-client/application-module@workspace:booking-telegram-bot/contexts/orm-client/application-module":
+"@orm-client/application-module@workspace:*, @orm-client/application-module@workspace:booking-telegram-bot/contexts/orm/application-module":
   version: 0.0.0-use.local
-  resolution: "@orm-client/application-module@workspace:booking-telegram-bot/contexts/orm-client/application-module"
+  resolution: "@orm-client/application-module@workspace:booking-telegram-bot/contexts/orm/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     reflect-metadata: "npm:0.2.2"
@@ -5556,11 +5556,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@orm-client/infrastructure-module@workspace:*, @orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm-client/infrastructure-module":
+"@orm-client/infrastructure-module@workspace:*, @orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm/infrastructure-module":
   version: 0.0.0-use.local
-  resolution: "@orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm-client/infrastructure-module"
+  resolution: "@orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm/infrastructure-module"
   dependencies:
     "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
+    "@mikro-orm/core": "npm:6.3.13"
     "@nestjs/common": "npm:10.4.2"
     "@orm-client/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
