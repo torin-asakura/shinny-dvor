@@ -7,7 +7,7 @@ class WriteAppointmentDataUseCase {
   constructor(private readonly orm: OrmPort) {}
 
   async process(): Promise<void> {
-    // console.log('process write appointment date use case')
+    await this.orm.writeAppointmentData({ data: 'test' })
   }
 }
 
