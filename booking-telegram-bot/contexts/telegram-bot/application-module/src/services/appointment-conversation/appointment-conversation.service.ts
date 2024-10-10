@@ -1,3 +1,6 @@
+// TODO
+/* eslint-disable */
+
 import type { TelegramBotFormattedContextType }     from '@telegram-bot/application-module'
 
 import { Injectable }                               from '@nestjs/common'
@@ -30,17 +33,34 @@ export class AppointmentConversationService {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      // const mockData = {
-      //   date: { clientText: 'среда, 9 октября', milliseconds: 1728421200000 },
-      //   timeSlot: { milliseconds: 1728462600000, text: '11:30', isFree: true },
-      //   carBody: 'Джип',
-      //   radii: 'R14',
-      //   service: 'Хранение шин',
-      //   commentary: 'Тест комментарий текст',
-      //   undefined: true,
-      // }
+      const mockData = {
+        date: { clientText: 'среда, 9 октября', milliseconds: 1728421200000 },
+        timeSlot: { milliseconds: 1728462600000, text: '11:30', isFree: true },
+        carBody: 'Джип',
+        radii: 'R14',
+        service: 'Хранение шин',
+        commentary: 'Тест комментарий текст',
+        undefined: true,
+      }
 
-      await this.writeAppointmentDataUseCase.process()
+      // TODO create for raw appointment data interface
+      // TODO create formatted data interface
+      // @ts-expect-error undefined
+      const getFormattedAppointmentData = (rawAppointmentData, telegramUserId, telegramName) => {
+        return {
+          telegramUserId,
+          telegramName,
+          timeSlot: rawAppointmentData.timeSlot.milliseconds,
+          carBody: rawAppointmentData.carBody,
+          radii: rawAppointmentData.radii,
+          service: rawAppointmentData.service,
+          commentary: rawAppointmentData.commentary,
+        }
+      }
+
+      const formattedMockData = getFormattedAppointmentData(mockData, BigInt(1234), 'test-name')
+
+      await this.writeAppointmentDataUseCase.process(formattedMockData)
 
       // TODO write mock data to db
 
@@ -82,7 +102,8 @@ export class AppointmentConversationService {
 
       this.telegramClient.removeConversation(ctx.chatId)
     } catch (error) {
-      // eslint-disable-next-line
+      // TODO
+      // // eslint-disable-next-line
       console.error(error)
       const { serverErrorMessage } = ruLocale.appointmentConversation
       await this.telegramClient.sendMessage(ctx, serverErrorMessage)

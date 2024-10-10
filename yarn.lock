@@ -5562,6 +5562,7 @@ __metadata:
   dependencies:
     "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
     "@mikro-orm/core": "npm:6.3.13"
+    "@mikro-orm/postgresql": "npm:6.3.13"
     "@nestjs/common": "npm:10.4.2"
     "@orm-client/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
