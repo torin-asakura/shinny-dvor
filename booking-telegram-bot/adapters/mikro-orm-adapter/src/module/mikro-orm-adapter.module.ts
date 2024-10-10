@@ -33,8 +33,13 @@ class MikroOrmAdapterModule implements OnModuleInit {
 
   async onModuleInit(): Promise<void> {
     const migrator = this.orm.getMigrator()
-    const migrationNeeded = await migrator.checkMigrationNeeded()
-    if (migrationNeeded) await migrator.up()
+
+    // await migrator.createMigration() // creates file Migration20191019195930.ts
+    // await migrator.up() // runs migrations up to the latest
+    // await this.orm.close(true)
+
+    const isMigrationNeeded = await migrator.checkMigrationNeeded()
+    if (isMigrationNeeded) await migrator.up()
   }
 }
 
