@@ -11,6 +11,21 @@ class AppointmentEntity {
 
   @Property()
   telegramUserId!: bigint
+
+  @Property()
+  timeSlot!: number
+
+  @Property()
+  carBody!: string
+
+  @Property()
+  radii!: string
+
+  @Property()
+  service!: string
+
+  @Property()
+  commentary?: string
 }
 
 export { AppointmentEntity }
