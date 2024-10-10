@@ -3,8 +3,7 @@ import { PostgreSqlDriver } from '@mikro-orm/postgresql'
 import { defineConfig }     from '@mikro-orm/postgresql'
 
 import * as entities        from './entities/index.js'
-
-// import * as migrations      from './migrations'
+import * as migrations      from './migrations/index.js'
 
 const mikroOrmOptions = defineConfig({
   // TODO port to consts
@@ -18,20 +17,21 @@ const mikroOrmOptions = defineConfig({
   entities: Object.values(entities),
   entitiesTs: Object.values(entities),
   debug: process.env.NODE_ENV !== 'production',
-  // migrations: {
-  //   migrationsList: [
-  //     {
-  //       name: 'Migration20240524105900.ts',
-  //       class: migrations.Migration20240524105900,
-  //     },
-  //   ],
-  //   snapshot: false,
-  //   allOrNothing: true,
-  //   safe: true,
-  //   dropTables: false,
-  //   transactional: true,
-  //   emit: 'ts',
-  // },
+  migrations: {
+    path: './migrations',
+    migrationsList: [
+      {
+        name: 'Migration20240524105900.ts',
+        class: migrations.Migration20241010115319,
+      },
+    ],
+    snapshot: false,
+    allOrNothing: true,
+    safe: true,
+    dropTables: false,
+    transactional: true,
+    emit: 'ts',
+  },
   forceUndefined: true,
 })
 
