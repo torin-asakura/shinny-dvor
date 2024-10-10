@@ -6,8 +6,10 @@ import { OrmPort }    from '../ports/index.js'
 class WriteAppointmentDataUseCase {
   constructor(private readonly orm: OrmPort) {}
 
-  async process(): Promise<void> {
-    await this.orm.writeAppointmentData({ data: 'test' })
+  // TODO
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  async process(appointmentData: any): Promise<void> {
+    await this.orm.writeAppointmentData(appointmentData)
   }
 }
 
