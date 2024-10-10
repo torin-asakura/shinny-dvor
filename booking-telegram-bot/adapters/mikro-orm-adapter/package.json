@@ -9,13 +9,11 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "create-migrations": "mikro-orm-esm migration:create",
-    "create-migrations-intial": "mikro-orm-esm migration:create --initial",
-    "fresh-migrations": "mikro-orm-esm migration:fresh --drop-db",
-    "up-migrations": "mikro-orm-esm migration:up"
+    "migrate": "yarn ts-node src/migrate.ts"
   },
   "dependencies": {
     "@mikro-orm/cli": "6.3.13",
+    "@mikro-orm/core": "6.3.13",
     "@mikro-orm/nestjs": "6.0.2",
     "@mikro-orm/postgresql": "6.3.13",
     "pg": "8.13.0",
@@ -23,7 +21,6 @@
   },
   "devDependencies": {
     "@grpc/grpc-js": "1.11.2",
-    "@mikro-orm/core": "6.3.13",
     "@mikro-orm/migrations": "6.3.13",
     "@mikro-orm/sqlite": "6.3.13",
     "@nestjs/common": "10.4.2",
