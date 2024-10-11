@@ -1,6 +1,3 @@
-// TODO
-/* eslint-disable */
-
 import type { TelegramBotFormattedContextType }     from '@telegram-bot/application-module'
 
 import { Injectable }                               from '@nestjs/common'
@@ -33,40 +30,26 @@ export class AppointmentConversationService {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      const mockData = {
-        date: { clientText: 'среда, 9 октября', milliseconds: 1728421200000 },
-        timeSlot: { milliseconds: 1728462600000, text: '11:30', isFree: true },
-        carBody: 'Джип',
-        radii: 'R14',
-        service: 'Хранение шин',
-        commentary: 'Тест комментарий текст',
-        undefined: true,
+      const getFormattedAppointmentData = (
+        rawAppointmentData: Record<string, any>,
+        telegramUserId: bigint,
+        telegramFullName: string
+      ): Record<string, any> => ({
+        telegramUserId,
+        telegramFullName,
+        timeSlot: BigInt(rawAppointmentData.timeSlot.milliseconds as number),
+        carBody: rawAppointmentData.carBody,
+        radii: rawAppointmentData.radii,
+        service: rawAppointmentData.service,
+        commentary: rawAppointmentData.commentary,
+      })
+
+      const getUserFullName = (firstName: string, lastname?: string): string => {
+        let output = ''
+        output += firstName
+        if (lastname) output += ` ${lastname}`
+        return output
       }
-
-      // TODO create for raw appointment data interface
-      // TODO create formatted data interface
-      // @ts-expect-error undefined
-      const getFormattedAppointmentData = (rawAppointmentData, telegramUserId, telegramName) => {
-        return {
-          telegramUserId,
-          telegramName,
-          timeSlot: rawAppointmentData.timeSlot.milliseconds,
-          carBody: rawAppointmentData.carBody,
-          radii: rawAppointmentData.radii,
-          service: rawAppointmentData.service,
-          commentary: rawAppointmentData.commentary,
-        }
-      }
-
-      const formattedMockData = getFormattedAppointmentData(mockData, BigInt(1234), 'test-name')
-
-      await this.writeAppointmentDataUseCase.process(formattedMockData)
-
-      // TODO write mock data to db
-
-      // TODO move write data func to bottom of conversation.service
-      // TODO change mock data to real data
-      // TODO test it
 
       await this.telegramClient.sendMessage(
         ctx,
@@ -92,8 +75,16 @@ export class AppointmentConversationService {
         questionData: appointmentConversation.data,
       })
 
-      // TODO write to DB - appointmentConversation.data
-      // TODO write with telegram-client-data (phone - if available, userId )
+      // TODO get telegram phone - optional
+      const userFullName = getUserFullName(ctx.userFirstName, ctx.userLastName)
+
+      const formattedConversationData = getFormattedAppointmentData(
+        appointmentConversation.data,
+        ctx.userId,
+        userFullName
+      )
+
+      await this.writeAppointmentDataUseCase.process(formattedConversationData)
 
       await this.telegramClient.sendMessage(
         ctx,
@@ -102,8 +93,7 @@ export class AppointmentConversationService {
 
       this.telegramClient.removeConversation(ctx.chatId)
     } catch (error) {
-      // TODO
-      // // eslint-disable-next-line
+      // eslint-disable-next-line
       console.error(error)
       const { serverErrorMessage } = ruLocale.appointmentConversation
       await this.telegramClient.sendMessage(ctx, serverErrorMessage)

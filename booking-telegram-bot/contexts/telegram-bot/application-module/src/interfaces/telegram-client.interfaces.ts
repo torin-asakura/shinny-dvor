@@ -1,5 +1,7 @@
 type TelegramBotFormattedContextType = {
   userId: bigint
+  userFirstName: string
+  userLastName?: string
   messageText: string
   accessHash: bigint
   messageId: number
