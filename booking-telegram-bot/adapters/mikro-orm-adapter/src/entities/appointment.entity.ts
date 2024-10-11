@@ -13,7 +13,10 @@ class AppointmentEntity {
   telegramUserId!: bigint
 
   @Property()
-  timeSlot!: number
+  telegramFullName!: string
+
+  @Property()
+  timeSlot!: bigint
 
   @Property()
   carBody!: string
