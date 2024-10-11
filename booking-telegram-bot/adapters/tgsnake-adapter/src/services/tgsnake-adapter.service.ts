@@ -137,6 +137,9 @@ export class TgsnakeAdapterService extends Snake {
   private getFormattedContext(ctx: TgsnakeContextType): TelegramBotFormattedContextType {
     const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
       userId: ctx.message?.from?.id,
+      userFirstName: ctx.message?.from?.firstname,
+      userLastName: ctx.message?.from?.lastname,
+      // userUsername: ctx.message?.from?.username,
       messageText: ctx.message?.text,
       accessHash: ctx.message?.from?.accessHash,
       messageId: ctx.message?.id,
