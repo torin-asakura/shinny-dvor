@@ -8,8 +8,8 @@ import { OrmPort }                  from '../ports/index.js'
 class WriteAppointmentDataUseCase {
   constructor(private readonly orm: OrmPort) {}
 
-  async process(appointmentData: AppointmentDataType): Promise<void> {
-    await this.orm.writeAppointmentData(appointmentData)
+  async process(appointmentData: Record<string, any>): Promise<void> {
+    await this.orm.writeAppointmentData(appointmentData as AppointmentDataType)
   }
 }
 
