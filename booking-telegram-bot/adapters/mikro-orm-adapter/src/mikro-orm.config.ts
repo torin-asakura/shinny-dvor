@@ -6,8 +6,7 @@ import * as entities        from './entities/index.js'
 import * as migrations      from './migrations/index.js'
 
 const mikroOrmOptions = defineConfig({
-  // TODO port to consts
-  port: 5432,
+  port: Number(process.env.DB_PORT) ?? 5432,
   host: process.env.DB_HOST ?? 'localhost',
   extensions: [Migrator],
   dbName: process.env.DB_DATABASE ?? 'db',
