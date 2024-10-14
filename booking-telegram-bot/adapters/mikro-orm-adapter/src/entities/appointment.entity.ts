@@ -16,7 +16,13 @@ class AppointmentEntity {
   telegramFullName!: string
 
   @Property()
-  timeSlot!: bigint
+  timeSlotStart!: bigint
+
+  @Property()
+  timeSlotEnd!: bigint
+
+  @Property({ default: false })
+  isApproved!: boolean
 
   @Property()
   carBody!: string
