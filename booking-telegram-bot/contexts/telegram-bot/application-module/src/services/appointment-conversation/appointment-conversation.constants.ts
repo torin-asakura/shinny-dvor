@@ -1,4 +1,5 @@
-export const TIME_SLOT_STEP_MIN = 30
+const TIME_SLOT_STEP_MIN = 30
+export const TIME_SLOT_STEP_MS = 1000 * 60 * TIME_SLOT_STEP_MIN
 
 export const DAY_MS = 1000 * 60 * 60 * 24
 export const SUGGESTED_DAYS_QUANTITY = 7

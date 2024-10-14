@@ -15,7 +15,7 @@ import { TelegramClientPort }                   from '../../../ports/index.js'
 import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '../appointment-conversation.constants.js'
 import { WORK_TIME }                            from '../appointment-conversation.constants.js'
-import { TIME_SLOT_STEP_MIN }                   from '../appointment-conversation.constants.js'
+import { TIME_SLOT_STEP_MS }                    from '../appointment-conversation.constants.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
@@ -111,7 +111,7 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
     const startWorkTimeDate = this.selectedDayDate.setHours(start)
     const endWorkTimeDate = this.selectedDayDate.setHours(end)
 
-    const step = 1000 * 60 * TIME_SLOT_STEP_MIN
+    const step = TIME_SLOT_STEP_MS
 
     for (
       let indexDateMilliseconds = startWorkTimeDate;
