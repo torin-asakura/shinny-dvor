@@ -10956,7 +10956,6 @@ const RAW_RUNTIME_STATE =
           ["@orm-client/infrastructure-module", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/orm/infrastructure-module"],\
           ["@booking-telegram-bot/mikro-orm-adapter", "virtual:489f35cd1732e93e200af4509154c425f9da5662e9bee250a32699078dd0f9a7aa4cb79eb7bcdd5ce8c34740554420de39b8892c4b2c257c35876f4dc4544b1b#workspace:booking-telegram-bot/adapters/mikro-orm-adapter"],\
           ["@mikro-orm/core", "npm:6.3.13"],\
-          ["@mikro-orm/postgresql", "virtual:2b1870f3f32905376e9c92f38646f2c0ac9f0679d574d87c6f1036d93552ca9e1a516786bdffe07da2fa7d2aacd0055111b4c06825a417e090bc016f7c802860#npm:6.3.13"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@orm-client/application-module", "virtual:489f35cd1732e93e200af4509154c425f9da5662e9bee250a32699078dd0f9a7aa4cb79eb7bcdd5ce8c34740554420de39b8892c4b2c257c35876f4dc4544b1b#workspace:booking-telegram-bot/contexts/orm/application-module"],\
           ["@types/nestjs__common", null],\
@@ -10981,7 +10980,6 @@ const RAW_RUNTIME_STATE =
           ["@orm-client/infrastructure-module", "workspace:booking-telegram-bot/contexts/orm/infrastructure-module"],\
           ["@booking-telegram-bot/mikro-orm-adapter", "virtual:489f35cd1732e93e200af4509154c425f9da5662e9bee250a32699078dd0f9a7aa4cb79eb7bcdd5ce8c34740554420de39b8892c4b2c257c35876f4dc4544b1b#workspace:booking-telegram-bot/adapters/mikro-orm-adapter"],\
           ["@mikro-orm/core", "npm:6.3.13"],\
-          ["@mikro-orm/postgresql", "virtual:2b1870f3f32905376e9c92f38646f2c0ac9f0679d574d87c6f1036d93552ca9e1a516786bdffe07da2fa7d2aacd0055111b4c06825a417e090bc016f7c802860#npm:6.3.13"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@orm-client/application-module", "virtual:489f35cd1732e93e200af4509154c425f9da5662e9bee250a32699078dd0f9a7aa4cb79eb7bcdd5ce8c34740554420de39b8892c4b2c257c35876f4dc4544b1b#workspace:booking-telegram-bot/contexts/orm/application-module"],\
           ["reflect-metadata", "npm:0.2.2"],\

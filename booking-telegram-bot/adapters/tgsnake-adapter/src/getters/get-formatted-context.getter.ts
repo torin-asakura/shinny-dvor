@@ -14,6 +14,10 @@ const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormatte
     accessHash: ctx.message?.from?.accessHash,
     messageId: ctx.message?.id,
     chatId: ctx.message?.chat?.id,
+    replyMessage: (text: string) => {
+      // eslint-disable-next-line
+      console.log(`TODO replyMessage ${text} method`)
+    },
   }
 
   const formattedContextChecked = checkFormattedContextHelper(formattedContext)
