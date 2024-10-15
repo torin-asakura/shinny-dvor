@@ -33,7 +33,7 @@ class AppointmentEntity {
   @Property()
   service!: string
 
-  @Property()
+  @Property({ default: '' })
   commentary?: string
 }
 
