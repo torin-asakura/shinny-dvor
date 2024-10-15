@@ -46,7 +46,7 @@ export class AppointmentGetDateConversationPart extends ConversationQAPair {
       return date
     }
 
-    ctx.replyMessage(missClickMessage)
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 

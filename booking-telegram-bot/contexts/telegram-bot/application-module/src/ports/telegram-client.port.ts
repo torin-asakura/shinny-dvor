@@ -10,6 +10,8 @@ export abstract class TelegramClientPort {
     buttonsText: Array<string>
   ): Promise<void>
 
+  abstract replyMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void>
+
   abstract createConversation(ctx: TelegramBotFormattedContextType): CreateConversationReturnType
 
   abstract removeConversation(chatId: bigint): void

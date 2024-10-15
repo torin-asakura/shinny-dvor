@@ -41,7 +41,7 @@ export class AppointmentGetServiceConversationPart extends ConversationQAPair {
       return responseText
     }
 
-    ctx.replyMessage(missClickMessage)
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 

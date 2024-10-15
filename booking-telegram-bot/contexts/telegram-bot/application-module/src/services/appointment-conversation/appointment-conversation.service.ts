@@ -41,6 +41,7 @@ export class AppointmentConversationService {
       const appointmentConversation = this.telegramClient.createConversation(ctx)
 
       await this.appointmentGetDateConversationPart.process(ctx, appointmentConversation)
+
       const selectedDateMs = appointmentConversation.data.date.milliseconds
 
       await this.appointmentGetTimeSlotConversationPart.process(ctx, appointmentConversation, {

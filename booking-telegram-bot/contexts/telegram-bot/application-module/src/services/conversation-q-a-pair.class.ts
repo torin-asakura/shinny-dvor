@@ -53,9 +53,12 @@ class ConversationQAPair {
       const { messageText: responseText } = waitMessageCtx
 
       if (this.checkCancelCondition(responseText)) {
-        waitMessageCtx.replyMessage('Запись отменена')
+        // waitMessageCtx.replyMessage('Запись отменена')
         this.telegramClient.removeConversation(waitMessageCtx.chatId)
-        return true
+
+        // TODO locales
+        this.telegramClient.replyMessage(ctx, 'Запись отменена')
+        return false
       }
 
       const checkAnswerResult = this.checkAnswer(waitMessageCtx)

@@ -54,7 +54,7 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
       return findedTimeSlot
     }
 
-    ctx.replyMessage(missClickMessage)
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 
@@ -113,6 +113,8 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
 
     const step = TIME_SLOT_STEP_MS
 
+    const dateNow = Date.now()
+
     for (
       let indexDateMilliseconds = startWorkTimeDate;
       indexDateMilliseconds < endWorkTimeDate;
@@ -126,7 +128,8 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
       const indexDateText = `${indexDateHours}:${indexDateMinutes}`
 
       // TODO нужна проверка по бд - свободный ли слот
-      const indexDateFreeState = true
+      // запрос типа getDayTimeSlots(day: millisedonds)
+      const indexDateFreeState = indexDateMilliseconds > dateNow
 
       timeSlots.push({
         milliseconds: indexDateMilliseconds,
@@ -158,17 +161,14 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
   }
 
   private getDayType(selectedDayMs: number): string {
-    let dayType: string
-
     this.selectedDayDate = new Date(selectedDayMs)
     const selectedDay = this.selectedDayDate.getDay()
 
     if (selectedDay > 0 && selectedDay < 6) {
-      dayType = 'weekdays'
+      return 'weekdays'
     }
-    dayType = 'weekends'
 
-    return dayType
+    return 'weekends'
   }
 
   private getSelectedDayWorkTime(): { end: number; start: number } {
@@ -177,8 +177,6 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
 
   private async initData(selectedDayMs: number): Promise<void> {
     this.selectedDayType = this.getDayType(selectedDayMs) as typeof this.selectedDayType
-
-    // TODO filter closed today intervals, in past time
 
     this.workTimeData = await this.getWorkTimeData()
     this.selectedDayWorkTime = this.getSelectedDayWorkTime()

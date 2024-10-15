@@ -9,12 +9,14 @@ import { SendMessageWithMarkupUseCase }         from '@booking-telegram-bot/tgsn
 import { CreateConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
 import { RemoveConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
 import { CheckChatConversationUseCase }         from '@booking-telegram-bot/tgsnake-adapter'
+import { ReplyMessageUseCase }                  from '@booking-telegram-bot/tgsnake-adapter'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
   constructor(
     private readonly sendMessageUseCase: SendMessageUseCase,
     private readonly sendMessageWithMarkupUseCase: SendMessageWithMarkupUseCase,
+    private readonly replyMessageUseCase: ReplyMessageUseCase,
     private readonly createConversationUseCase: CreateConversationUseCase,
     private readonly removeConversationUseCase: RemoveConversationUseCase,
     private readonly checkChatConversationUseCase: CheckChatConversationUseCase
@@ -30,6 +32,10 @@ export class TelegramClientPortImpl implements TelegramClientPort {
     buttonsText: Array<string>
   ): Promise<void> {
     return this.sendMessageWithMarkupUseCase.process(ctx, text, buttonsText)
+  }
+
+  async replyMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void> {
+    return this.replyMessageUseCase.process(ctx, text)
   }
 
   createConversation(ctx: TelegramBotFormattedContextType): CreateConversationReturnType {
