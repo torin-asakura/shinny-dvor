@@ -1,14 +1,14 @@
-import type { OnModuleInit }     from '@nestjs/common'
+import type { OnModuleInit } from '@nestjs/common'
 
-import { Injectable }            from '@nestjs/common'
+import { Injectable }        from '@nestjs/common'
 
-import { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
-import { HelpCommand }           from '@telegram-bot/application-module'
+import { OnCommandUseCase }  from '@booking-telegram-bot/tgsnake-adapter'
+import { HelpCommand }       from '@telegram-bot/application-module'
 
 @Injectable()
 export class HelpCommandProcessor implements OnModuleInit {
   constructor(
-    private readonly telegramClient: TgsnakeAdapterService,
+    private readonly onCommandUseCase: OnCommandUseCase,
     private readonly helpCommand: HelpCommand
   ) {}
 
@@ -17,7 +17,7 @@ export class HelpCommandProcessor implements OnModuleInit {
   }
 
   private async processCommand_helpCommand(): Promise<void> {
-    this.telegramClient.onCommand('help', async (ctx) => {
+    this.onCommandUseCase.process('help', async (ctx) => {
       await this.helpCommand.execute(ctx)
     })
   }

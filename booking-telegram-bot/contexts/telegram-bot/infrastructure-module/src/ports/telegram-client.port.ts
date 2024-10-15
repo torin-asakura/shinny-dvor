@@ -4,14 +4,24 @@ import type { TelegramClientPort }              from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { TgsnakeAdapterService }                from '@booking-telegram-bot/tgsnake-adapter'
+import { SendMessageUseCase }                   from '@booking-telegram-bot/tgsnake-adapter'
+import { SendMessageWithMarkupUseCase }         from '@booking-telegram-bot/tgsnake-adapter'
+import { CreateConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
+import { RemoveConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
+import { CheckChatConversationUseCase }         from '@booking-telegram-bot/tgsnake-adapter'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
-  constructor(private readonly telegramClient: TgsnakeAdapterService) {}
+  constructor(
+    private readonly sendMessageUseCase: SendMessageUseCase,
+    private readonly sendMessageWithMarkupUseCase: SendMessageWithMarkupUseCase,
+    private readonly createConversationUseCase: CreateConversationUseCase,
+    private readonly removeConversationUseCase: RemoveConversationUseCase,
+    private readonly checkChatConversationUseCase: CheckChatConversationUseCase
+  ) {}
 
   async sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void> {
-    return this.telegramClient.sendMessage(ctx, text)
+    return this.sendMessageUseCase.process(ctx, text)
   }
 
   async sendMessageWithMarkup(
@@ -19,18 +29,18 @@ export class TelegramClientPortImpl implements TelegramClientPort {
     text: string,
     buttonsText: Array<string>
   ): Promise<void> {
-    return this.telegramClient.sendMessageWithMarkup(ctx, text, buttonsText)
+    return this.sendMessageWithMarkupUseCase.process(ctx, text, buttonsText)
   }
 
   createConversation(ctx: TelegramBotFormattedContextType): CreateConversationReturnType {
-    return this.telegramClient.createConversation(ctx)
+    return this.createConversationUseCase.process(ctx)
   }
 
   removeConversation(chatId: bigint): void {
-    this.telegramClient.removeConversation(chatId)
+    this.removeConversationUseCase.process(chatId)
   }
 
   checkChatConversation(chatId: bigint): boolean {
-    return this.telegramClient.checkChatConversation(chatId)
+    return this.checkChatConversationUseCase.process(chatId)
   }
 }

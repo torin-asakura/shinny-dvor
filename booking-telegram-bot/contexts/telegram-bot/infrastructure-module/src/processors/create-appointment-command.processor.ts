@@ -2,13 +2,13 @@ import type { OnModuleInit }              from '@nestjs/common'
 
 import { Injectable }                     from '@nestjs/common'
 
-import { TgsnakeAdapterService }          from '@booking-telegram-bot/tgsnake-adapter'
+import { OnCommandUseCase }               from '@booking-telegram-bot/tgsnake-adapter'
 import { AppointmentConversationCommand } from '@telegram-bot/application-module'
 
 @Injectable()
 export class CreateAppointmentCommandProcessor implements OnModuleInit {
   constructor(
-    private readonly telegramClient: TgsnakeAdapterService,
+    private readonly onCommandUseCase: OnCommandUseCase,
     private readonly appointmentConversationCommand: AppointmentConversationCommand
   ) {}
 
@@ -17,7 +17,7 @@ export class CreateAppointmentCommandProcessor implements OnModuleInit {
   }
 
   private async processCommand_createAppointment(): Promise<void> {
-    this.telegramClient.onCommand('create_appointment', async (ctx) => {
+    this.onCommandUseCase.process('create_appointment', async (ctx) => {
       await this.appointmentConversationCommand.process(ctx)
     })
   }
