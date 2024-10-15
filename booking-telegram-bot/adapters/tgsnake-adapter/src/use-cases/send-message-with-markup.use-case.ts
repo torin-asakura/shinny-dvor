@@ -1,57 +1,62 @@
 import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsnake-adapter'
-import type { TgsnakeAdapterService }           from '@booking-telegram-bot/tgsnake-adapter'
 
+import { Injectable }                           from '@nestjs/common'
 import { Raw }                                  from 'tgsnake'
 
+import { TgsnakeAdapterService }                from '../services/index.js'
 import { getRandomBigIntGetter }                from '../getters/get-random-big-int.getter.js'
 
 // TODO сделать из сенд-мессейдж - один файл.
 // на входе сделать проверку типов и разбить на несколько дочерних функций
-const sendMessageWithMarkupUseCase = async (
-  tgsnakeClient: TgsnakeAdapterService,
-  ctx: TelegramBotFormattedContextType,
-  text: string,
-  buttons: Array<Array<string> | string>
-): Promise<void> => {
-  const { userId } = ctx
-  const { accessHash } = ctx
+@Injectable()
+class SendMessageWithMarkupUseCase {
+  constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
-  const randomBigInt = getRandomBigIntGetter()
+  async process(
+    ctx: TelegramBotFormattedContextType,
+    text: string,
+    buttons: Array<Array<string> | string>
+  ): Promise<void> {
+    const { userId } = ctx
+    const { accessHash } = ctx
 
-  const rows = []
+    const randomBigInt = getRandomBigIntGetter()
 
-  for (const rowButton of buttons) {
-    if (typeof rowButton === 'object') {
-      const row = []
-      for (const columnButon of rowButton) {
-        row.push(new Raw.KeyboardButton({ text: columnButon }))
+    const rows = []
+
+    for (const rowButton of buttons) {
+      if (typeof rowButton === 'object') {
+        const row = []
+        for (const columnButon of rowButton) {
+          row.push(new Raw.KeyboardButton({ text: columnButon }))
+        }
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: row,
+          })
+        )
+      } else {
+        rows.push(
+          new Raw.KeyboardButtonRow({
+            buttons: [new Raw.KeyboardButton({ text: rowButton })],
+          })
+        )
       }
-      rows.push(
-        new Raw.KeyboardButtonRow({
-          buttons: row,
-        })
-      )
-    } else {
-      rows.push(
-        new Raw.KeyboardButtonRow({
-          buttons: [new Raw.KeyboardButton({ text: rowButton })],
-        })
-      )
     }
-  }
 
-  const replyMarkup = new Raw.ReplyKeyboardMarkup({
-    rows,
-  })
-
-  await tgsnakeClient.api.invoke(
-    new Raw.messages.SendMessage({
-      message: text,
-      peer: new Raw.InputPeerUser({ userId, accessHash }),
-      replyMarkup,
-      randomId: randomBigInt,
+    const replyMarkup = new Raw.ReplyKeyboardMarkup({
+      rows,
     })
-  )
+
+    await this.tgsnakeAdapterService.api.invoke(
+      new Raw.messages.SendMessage({
+        message: text,
+        peer: new Raw.InputPeerUser({ userId, accessHash }),
+        replyMarkup,
+        randomId: randomBigInt,
+      })
+    )
+  }
 }
 
-export { sendMessageWithMarkupUseCase }
+export { SendMessageWithMarkupUseCase }

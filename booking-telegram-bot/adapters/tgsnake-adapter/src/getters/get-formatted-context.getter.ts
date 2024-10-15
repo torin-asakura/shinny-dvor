@@ -1,14 +1,10 @@
 import type { TelegramBotFormattedContextKeyType } from '@booking-telegram-bot/tgsnake-adapter'
 import type { TgsnakeContextType }                 from '@booking-telegram-bot/tgsnake-adapter'
 import type { TelegramBotFormattedContextType }    from '@booking-telegram-bot/tgsnake-adapter'
-import type { TgsnakeAdapterService }              from '@booking-telegram-bot/tgsnake-adapter'
 
 import { checkFormattedContextHelper }             from '../helpers/index.js'
 
-const getFormattedContextGetter = (
-  tgsnakeClient: TgsnakeAdapterService,
-  ctx: TgsnakeContextType
-): TelegramBotFormattedContextType => {
+const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormattedContextType => {
   const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
     userId: ctx.message?.from?.id,
     userFirstName: ctx.message?.from?.firstname,
@@ -18,7 +14,6 @@ const getFormattedContextGetter = (
     accessHash: ctx.message?.from?.accessHash,
     messageId: ctx.message?.id,
     chatId: ctx.message?.chat?.id,
-    replyMessage: async (text: string) => tgsnakeClient.replyMessage(text, formattedContext),
   }
 
   const formattedContextChecked = checkFormattedContextHelper(formattedContext)

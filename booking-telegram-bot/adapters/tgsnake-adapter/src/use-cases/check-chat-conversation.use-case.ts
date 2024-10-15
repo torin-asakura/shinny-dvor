@@ -1,17 +1,22 @@
-import type { TgsnakeAdapterService } from '../services/tgsnake-adapter.service.js'
+import { Injectable }            from '@nestjs/common'
 
-const checkChatConversationUseCase = (
-  tgsnakeClient: TgsnakeAdapterService,
-  chatId: bigint
-): boolean => {
-  const { conversation } = tgsnakeClient.conversation as unknown as {
-    conversation: Map<bigint, any>
-  }
+import { TgsnakeAdapterService } from '../services/index.js'
 
-  if (conversation.get(chatId)) {
-    return true
+@Injectable()
+class CheckChatConversationUseCase {
+  // TODO можно ли вынести конструктор в имплементацию (класс-родитель), чтобы не дублировать еге инициализацию
+  constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
+
+  process(chatId: bigint): boolean {
+    const { conversation } = this.tgsnakeAdapterService.conversation as unknown as {
+      conversation: Map<bigint, any>
+    }
+
+    if (conversation.get(chatId)) {
+      return true
+    }
+    return false
   }
-  return false
 }
 
-export { checkChatConversationUseCase }
+export { CheckChatConversationUseCase }

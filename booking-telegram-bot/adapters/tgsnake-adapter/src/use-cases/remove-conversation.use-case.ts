@@ -1,7 +1,14 @@
-import type { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
+import { Injectable }            from '@nestjs/common'
 
-const removeConversationUseCase = (tgsnakeClient: TgsnakeAdapterService, chatId: bigint): void => {
-  tgsnakeClient.conversation.remove(chatId)
+import { TgsnakeAdapterService } from '../services/index.js'
+
+@Injectable()
+class RemoveConversationUseCase {
+  constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
+
+  process(chatId: bigint): void {
+    this.tgsnakeAdapterService.conversation.remove(chatId)
+  }
 }
 
-export { removeConversationUseCase }
+export { RemoveConversationUseCase }

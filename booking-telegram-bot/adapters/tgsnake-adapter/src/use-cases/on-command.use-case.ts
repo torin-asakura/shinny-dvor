@@ -1,17 +1,21 @@
-import type { CallbackType }          from '@booking-telegram-bot/tgsnake-adapter'
-import type { OnCommandReturnType }   from '@booking-telegram-bot/tgsnake-adapter'
-import type { TgsnakeAdapterService } from '@booking-telegram-bot/tgsnake-adapter'
+import type { CallbackType }         from '@booking-telegram-bot/tgsnake-adapter'
+import type { OnCommandReturnType }  from '@booking-telegram-bot/tgsnake-adapter'
 
-import { getFormattedContextGetter }  from '../getters/index.js'
+import { Injectable }                from '@nestjs/common'
 
-const onCommandUseCase = (
-  tgsnakeClient: TgsnakeAdapterService,
-  command: string,
-  callback: CallbackType
-): OnCommandReturnType =>
-  tgsnakeClient.cmd(command, async (ctx) => {
-    const formattedContext = getFormattedContextGetter(tgsnakeClient, ctx)
-    return callback(formattedContext)
-  })
+import { TgsnakeAdapterService }     from '../services/index.js'
+import { getFormattedContextGetter } from '../getters/index.js'
 
-export { onCommandUseCase }
+@Injectable()
+class OnCommandUseCase {
+  constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
+
+  process(command: string, callback: CallbackType): OnCommandReturnType {
+    return this.tgsnakeAdapterService.cmd(command, async (ctx) => {
+      const formattedContext = getFormattedContextGetter(ctx)
+      return callback(formattedContext)
+    })
+  }
+}
+
+export { OnCommandUseCase }

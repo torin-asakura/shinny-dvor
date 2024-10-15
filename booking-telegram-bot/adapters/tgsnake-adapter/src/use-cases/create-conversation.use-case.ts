@@ -1,26 +1,30 @@
 import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsnake-adapter'
-import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
 import type { TgsnakeContextType }              from '@booking-telegram-bot/tgsnake-adapter'
-import type { TgsnakeAdapterService }           from '@booking-telegram-bot/tgsnake-adapter'
+import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsnake-adapter'
 
+import { Injectable }                           from '@nestjs/common'
+
+import { TgsnakeAdapterService }                from '../services/index.js'
 import { getFormattedContextGetter }            from '../getters/index.js'
 
-const createConversaionUseCase = (
-  tgsnakeClient: TgsnakeAdapterService,
-  ctx: TelegramBotFormattedContextType
-): CreateConversationReturnType => {
-  const { chatId } = ctx
+@Injectable()
+class CreateConversationUseCase {
+  constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
-  const conversation = tgsnakeClient.conversation.create(chatId)
+  process(ctx: TelegramBotFormattedContextType): CreateConversationReturnType {
+    const { chatId } = ctx
 
-  return {
-    data: {},
-    waitMessage: async (callback) =>
-      conversation.wait('msg.text', (conversationCtx: TgsnakeContextType) => {
-        const formattedContext = getFormattedContextGetter(tgsnakeClient, conversationCtx)
-        return callback(formattedContext)
-      }),
+    const conversation = this.tgsnakeAdapterService.conversation.create(chatId)
+
+    return {
+      data: {},
+      waitMessage: async (callback) =>
+        conversation.wait('msg.text', (conversationCtx: TgsnakeContextType) => {
+          const formattedContext = getFormattedContextGetter(conversationCtx)
+          return callback(formattedContext)
+        }),
+    }
   }
 }
 
-export { createConversaionUseCase }
+export { CreateConversationUseCase }
