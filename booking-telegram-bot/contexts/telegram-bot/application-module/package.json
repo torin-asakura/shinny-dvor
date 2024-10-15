@@ -5,7 +5,10 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./getters": "./src/getters/index.ts",
+    "./interfaces": "./src/interfaces/index.ts",
+    "./constants": "./src/constants/index.ts"
   },
   "devDependencies": {
     "@nestjs/common": "10.4.2",

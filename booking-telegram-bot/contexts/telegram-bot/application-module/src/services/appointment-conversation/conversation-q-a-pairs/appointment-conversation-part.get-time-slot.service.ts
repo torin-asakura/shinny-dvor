@@ -10,12 +10,12 @@ import type { ParsedWorkTimeType }              from './appointment-conversation
 import { Injectable }                           from '@nestjs/common'
 
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
+import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
+import { WORK_TIME }                            from '@telegram-bot/application-module/constants'
+import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
-import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '../appointment-conversation.constants.js'
-import { WORK_TIME }                            from '../appointment-conversation.constants.js'
-import { TIME_SLOT_STEP_MS }                    from '../appointment-conversation.constants.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()

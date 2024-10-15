@@ -3,9 +3,10 @@ import type { TelegramBotFormattedContextType }     from '@telegram-bot/applicat
 import { Injectable }                               from '@nestjs/common'
 
 import { WriteAppointmentDataUseCase }              from '@orm-client/application-module'
+import { getFormattedAppointmentData }              from '@telegram-bot/application-module/getters'
+import { getUserFullName }                          from '@telegram-bot/application-module/getters'
 
 import { TelegramClientPort }                       from '../../ports/index.js'
-import { TIME_SLOT_STEP_MS }                        from './appointment-conversation.constants.js'
 import { AppointmentGetCommentaryConversationPart } from './conversation-q-a-pairs/index.js'
 import { AppointmentGetDateConversationPart }       from './conversation-q-a-pairs/index.js'
 import { AppointmentGetRadiiConversationPart }      from './conversation-q-a-pairs/index.js'
@@ -14,19 +15,6 @@ import { AppointmentGetTimeSlotConversationPart }   from './conversation-q-a-pai
 import { AppointmentGetCarBodyConversationPart }    from './conversation-q-a-pairs/index.js'
 import { AppointmentGetApprovalConversationPart }   from './conversation-q-a-pairs/index.js'
 import { ruLocale }                                 from '../../locals/index.js'
-
-// TODO to interfaces
-type AppointmentDataType = {
-  telegramUserId: bigint
-  telegramFullName: string
-  timeSlotStart: bigint
-  timeSlotEnd: bigint
-  isApproved?: boolean
-  carBody: string
-  radii: string
-  service: string
-  commentary?: string
-}
 
 @Injectable()
 export class AppointmentConversationService {
@@ -44,29 +32,6 @@ export class AppointmentConversationService {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      // TODO to helpers
-      const getFormattedAppointmentData = (
-        rawAppointmentData: Record<string, any>,
-        telegramUserId: bigint,
-        telegramFullName: string
-      ): AppointmentDataType => ({
-        telegramUserId,
-        telegramFullName,
-        timeSlotStart: BigInt(rawAppointmentData.timeSlot.milliseconds as number),
-        timeSlotEnd: BigInt(Number(rawAppointmentData.timeSlot.milliseconds) + TIME_SLOT_STEP_MS),
-        carBody: rawAppointmentData.carBody,
-        radii: rawAppointmentData.radii,
-        service: rawAppointmentData.service,
-        commentary: rawAppointmentData.commentary,
-      })
-
-      const getUserFullName = (firstName: string, lastname?: string): string => {
-        let output = ''
-        output += firstName
-        if (lastname) output += ` ${lastname}`
-        return output
-      }
-
       await this.telegramClient.sendMessage(
         ctx,
         // TODO start appointment-conversation-message

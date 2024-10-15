@@ -2,11 +2,12 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
+import { DATE_OPTIONS }                         from '@telegram-bot/application-module/constants'
+import { DAY_MS }                               from '@telegram-bot/application-module/constants'
+import { SUGGESTED_DAYS_QUANTITY }              from '@telegram-bot/application-module/constants'
+
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
-import { DATE_OPTIONS }                         from '../appointment-conversation.constants.js'
-import { DAY_MS }                               from '../appointment-conversation.constants.js'
-import { SUGGESTED_DAYS_QUANTITY }              from '../appointment-conversation.constants.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
