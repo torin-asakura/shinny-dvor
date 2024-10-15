@@ -1,12 +1,11 @@
-import type { gql } from '@apollo/client'
+import type { gql }    from '@apollo/client'
 
-type GetTitlesFunctionType = () => Promise<Array<string>>
+import type { client } from '../client/index.js'
+
+export type GetTitlesFunctionType = () => Promise<Array<string>>
 
 interface ApolloAdapterInt {
-  getCarBodyTitles: GetTitlesFunctionType
-  getRadiiTitles: GetTitlesFunctionType
-  getServiceTitles: GetTitlesFunctionType
-  getWorkTimeRawString: () => Promise<string>
+  runQuery: (query: QueryType) => Promise<ReturnType<typeof client.query<any>>>
 }
 
 type QueryType = ReturnType<typeof gql>
