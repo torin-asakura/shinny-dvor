@@ -3,16 +3,16 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 import { Injectable }                           from '@nestjs/common'
 
 import { GetCarBodyTitlesUseCase }              from '@query-client/application-module'
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetCarBodyConversationPart extends ConversationQAPair {
-  carBodyTitles: Array<string>
+class GetCarBodyQuestionAnswerPart extends QuestionAnswerPair {
+  questionAnswerPairName = 'carBody'
 
-  conversationPartName: string = 'carBody'
+  carBodyTitles: Array<string>
 
   constructor(
     telegramClient: TelegramClientPort,
@@ -49,3 +49,5 @@ export class AppointmentGetCarBodyConversationPart extends ConversationQAPair {
     this.carBodyTitles = await this.getCarBodyTitlesUseCase.execute()
   }
 }
+
+export { GetCarBodyQuestionAnswerPart }

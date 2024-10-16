@@ -2,15 +2,16 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetCommentaryConversationPart extends ConversationQAPair {
-  serviceTitles: Array<string>
+class GetCommentaryQuestionAnswerPart extends QuestionAnswerPair {
+  questionAnswerPairName = 'commentary'
 
-  conversationPartName: string = 'commentary'
+  serviceTitles: Array<string>
 
   // eslint-disable-next-line
   constructor(telegramClient: TelegramClientPort) {
@@ -46,3 +47,5 @@ export class AppointmentGetCommentaryConversationPart extends ConversationQAPair
     return false
   }
 }
+
+export { GetCommentaryQuestionAnswerPart }

@@ -1,15 +1,18 @@
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
-import type { ConversationDataType }            from './appointment-conversation-part.get-approval.interface.js'
+import type { ConversationDataType }            from './get-approval.question-answer-pair.interface.js'
 
 import { Injectable }                           from '@nestjs/common'
 
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetApprovalConversationPart extends ConversationQAPair {
+class GetApprovalQuestionAnswerPair extends QuestionAnswerPair {
+  questionAnswerPairName = 'approval'
+
   // eslint-disable-next-line
   constructor(telegramClient: TelegramClientPort) {
     super(telegramClient)
@@ -75,3 +78,5 @@ export class AppointmentGetApprovalConversationPart extends ConversationQAPair {
     return approvalMessage
   }
 }
+
+export { GetApprovalQuestionAnswerPair }

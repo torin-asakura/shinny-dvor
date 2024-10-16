@@ -2,21 +2,21 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { GetServiceTitlesUseCase }              from '@query-client/application-module'
+import { GetRadiiTitlesUseCase }                from '@query-client/application-module'
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetServiceConversationPart extends ConversationQAPair {
-  serviceTitles: Array<string>
+class GetRadiiQuestionAnswerPart extends QuestionAnswerPair {
+  questionAnswerPairName = 'radii'
 
-  conversationPartName: string = 'service'
+  radiiTitles: Array<string>
 
   constructor(
     telegramClient: TelegramClientPort,
-    private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase
+    private readonly getRadiiTitlesUseCase: GetRadiiTitlesUseCase
   ) {
     super(telegramClient)
   }
@@ -24,10 +24,10 @@ export class AppointmentGetServiceConversationPart extends ConversationQAPair {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const { selectServiceMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+    const { selectRadiiMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, selectServiceMessage, [
-      ...this.serviceTitles,
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectRadiiMessage, [
+      ...this.radiiTitles,
       cancelAppointmentButton,
     ])
   }
@@ -35,17 +35,19 @@ export class AppointmentGetServiceConversationPart extends ConversationQAPair {
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const { missClickMessage } = ruLocale.appointmentConversation
-
-    if (this.serviceTitles.includes(responseText)) {
+    if (this.radiiTitles.includes(responseText)) {
       return responseText
     }
 
+    const { missClickMessage } = ruLocale.appointmentConversation
     this.telegramClient.replyMessage(ctx, missClickMessage)
+
     return false
   }
 
   private async initData(): Promise<void> {
-    this.serviceTitles = await this.getServiceTitlesUseCase.execute()
+    this.radiiTitles = await this.getRadiiTitlesUseCase.execute()
   }
 }
+
+export { GetRadiiQuestionAnswerPart }

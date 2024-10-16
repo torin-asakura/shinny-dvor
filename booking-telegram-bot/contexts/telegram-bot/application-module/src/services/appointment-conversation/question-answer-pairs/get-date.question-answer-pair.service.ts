@@ -2,21 +2,21 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 import { DATE_OPTIONS }                         from '@telegram-bot/application-module/constants'
 import { DAY_MS }                               from '@telegram-bot/application-module/constants'
 import { SUGGESTED_DAYS_QUANTITY }              from '@telegram-bot/application-module/constants'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetDateConversationPart extends ConversationQAPair {
+class GetDateQuestionAnswerPart extends QuestionAnswerPair {
+  questionAnswerPairName: string = 'date'
+
   suggestedDates
 
   keyboardVariants
-
-  conversationPartName: string = 'date'
 
   constructor(telegramClient: TelegramClientPort) {
     super(telegramClient)
@@ -76,3 +76,5 @@ export class AppointmentGetDateConversationPart extends ConversationQAPair {
     return this.suggestedDates.map(({ clientText }) => clientText)
   }
 }
+
+export { GetDateQuestionAnswerPart }

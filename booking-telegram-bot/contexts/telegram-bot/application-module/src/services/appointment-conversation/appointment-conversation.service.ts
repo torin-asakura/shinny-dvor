@@ -1,33 +1,33 @@
-import type { TelegramBotFormattedContextType }     from '@telegram-bot/application-module'
+import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
-import { Injectable }                               from '@nestjs/common'
+import { Injectable }                           from '@nestjs/common'
 
-import { WriteAppointmentDataUseCase }              from '@orm-client/application-module'
-import { getFormattedAppointmentData }              from '@telegram-bot/application-module/getters'
-import { getUserFullName }                          from '@telegram-bot/application-module/getters'
+import { WriteAppointmentDataUseCase }          from '@orm-client/application-module'
+import { getFormattedAppointmentData }          from '@telegram-bot/application-module/getters'
+import { getUserFullName }                      from '@telegram-bot/application-module/getters'
 
-import { TelegramClientPort }                       from '../../ports/index.js'
-import { AppointmentGetCommentaryConversationPart } from './conversation-q-a-pairs/index.js'
-import { AppointmentGetDateConversationPart }       from './conversation-q-a-pairs/index.js'
-import { AppointmentGetRadiiConversationPart }      from './conversation-q-a-pairs/index.js'
-import { AppointmentGetServiceConversationPart }    from './conversation-q-a-pairs/index.js'
-import { AppointmentGetTimeSlotConversationPart }   from './conversation-q-a-pairs/index.js'
-import { AppointmentGetCarBodyConversationPart }    from './conversation-q-a-pairs/index.js'
-import { AppointmentGetApprovalConversationPart }   from './conversation-q-a-pairs/index.js'
-import { ruLocale }                                 from '../../locals/index.js'
+import { TelegramClientPort }                   from '../../ports/index.js'
+import { GetCommentaryQuestionAnswerPart }      from './question-answer-pairs/index.js'
+import { GetDateQuestionAnswerPart }            from './question-answer-pairs/index.js'
+import { GetRadiiQuestionAnswerPart }           from './question-answer-pairs/index.js'
+import { GetServiceQuestionAnswerPart }         from './question-answer-pairs/index.js'
+import { GetTimeSlotQuestionAnswerPart }        from './question-answer-pairs/index.js'
+import { GetCarBodyQuestionAnswerPart }         from './question-answer-pairs/index.js'
+import { GetApprovalQuestionAnswerPair }        from './question-answer-pairs/index.js'
+import { ruLocale }                             from '../../locals/index.js'
 
 @Injectable()
 export class AppointmentConversationService {
   constructor(
     private readonly telegramClient: TelegramClientPort,
     private readonly writeAppointmentDataUseCase: WriteAppointmentDataUseCase,
-    private readonly appointmentGetDateConversationPart: AppointmentGetDateConversationPart,
-    private readonly appointmentGetTimeSlotConversationPart: AppointmentGetTimeSlotConversationPart,
-    private readonly appointmentGetCarBodyConversationPart: AppointmentGetCarBodyConversationPart,
-    private readonly appointmentGetRadiiConversationPart: AppointmentGetRadiiConversationPart,
-    private readonly appointmentGetServicesConversationPart: AppointmentGetServiceConversationPart,
-    private readonly appointmentGetCommentaryConversationPart: AppointmentGetCommentaryConversationPart,
-    private readonly appointmentGetApprovalConversationPart: AppointmentGetApprovalConversationPart
+    private readonly appointmentGetDateConversationPart: GetDateQuestionAnswerPart,
+    private readonly appointmentGetTimeSlotConversationPart: GetTimeSlotQuestionAnswerPart,
+    private readonly appointmentGetCarBodyConversationPart: GetCarBodyQuestionAnswerPart,
+    private readonly appointmentGetRadiiConversationPart: GetRadiiQuestionAnswerPart,
+    private readonly appointmentGetServicesConversationPart: GetServiceQuestionAnswerPart,
+    private readonly appointmentGetCommentaryConversationPart: GetCommentaryQuestionAnswerPart,
+    private readonly appointmentGetApprovalConversationPart: GetApprovalQuestionAnswerPair
   ) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {

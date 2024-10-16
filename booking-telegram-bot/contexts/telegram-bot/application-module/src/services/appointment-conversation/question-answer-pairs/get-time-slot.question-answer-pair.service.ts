@@ -5,22 +5,22 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import type { WorkTimeDataType }                from '../appointment-conversation.interfaces.js'
 import type { TimeSlotsType }                   from '../appointment-conversation.interfaces.js'
-import type { ParsedWorkTimeType }              from './appointment-conversation-part.get-time-slot.interfaces.js'
+import type { ParsedWorkTimeType }              from './get-time-slot.question-answer-pair.interfaces.js'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
+import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
 import { WORK_TIME }                            from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ConversationQAPair }                   from '../../conversation-q-a-pair.class.js'
 import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
-export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
-  conversationPartName: string = 'timeSlot'
+class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
+  questionAnswerPairName: string = 'timeSlot'
 
   selectedDayWorkTime: {
     start: number
@@ -187,3 +187,5 @@ export class AppointmentGetTimeSlotConversationPart extends ConversationQAPair {
     this.keyboardVariants = timeSlots_reordered
   }
 }
+
+export { GetTimeSlotQuestionAnswerPart }
