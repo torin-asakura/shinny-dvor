@@ -20,6 +20,24 @@ class OrmPortimpl implements OrmPort {
 
     await this.orm.em.flush()
   }
+
+  @CreateRequestContext()
+  async getAppointmenstByDay(dayMs: number): Promise<Array<[number, number]>> {
+    const appointmentsData: Array<{ timeSlotStart: bigint; timeSlotEnd: bigint }> =
+      await this.orm.em.find('AppointmentEntity', {
+        timeSlotStart: {
+          $gt: BigInt(dayMs),
+        },
+      })
+
+    return appointmentsData.map(({
+      timeSlotStart,
+      timeSlotEnd,
+    }: {
+      timeSlotStart: bigint
+      timeSlotEnd: bigint
+    }) => [Number(timeSlotStart), Number(timeSlotEnd)])
+  }
 }
 
 export { OrmPortimpl }
