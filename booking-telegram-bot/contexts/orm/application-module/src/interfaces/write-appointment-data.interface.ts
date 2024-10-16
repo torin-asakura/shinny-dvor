@@ -3,7 +3,7 @@ type AppointmentDataType = {
   telegramFullName: string
   timeSlotStart: bigint
   timeSlotEnd: bigint
-  isApproved?: boolean
+  isApproved: boolean
   carBody: string
   radii: string
   service: string
