@@ -9,14 +9,15 @@ import type { ParsedWorkTimeType }              from './get-time-slot.question-a
 
 import { Injectable }                           from '@nestjs/common'
 
+import { GetAppointmentsByDayUseCase }          from '@orm-client/application-module'
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
 import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+import { CLOSED_TIME_SLOT_TEXT }                from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
 import { WORK_TIME }                            from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
@@ -37,8 +38,11 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
 
   workTimeData: WorkTimeDataType
 
+  selectedDayClosedTimeSlots: Array<[number, number]>
+
   constructor(
     telegramClient: TelegramClientPort,
+    private readonly getAppointmentsByDayUseCase: GetAppointmentsByDayUseCase,
     private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase
   ) {
     super(telegramClient)
@@ -47,26 +51,35 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
   checkAnswer(ctx: TelegramBotFormattedContextType): TimeSlotsType[0] | boolean {
     const { messageText: responseText } = ctx
 
-    const { missClickMessage } = ruLocale.appointmentConversation
+    if (responseText === CLOSED_TIME_SLOT_TEXT) {
+      const { appointmentConversation_closedTimeSlotMessage } = this.telegramClient.ruLocale
+      this.telegramClient.replyMessage(ctx, appointmentConversation_closedTimeSlotMessage)
+      return false
+    }
 
     const findedTimeSlot = this.timeSlots.find(({ text }) => text === responseText)
     if (findedTimeSlot) {
       return findedTimeSlot
     }
 
-    this.telegramClient.replyMessage(ctx, missClickMessage)
+    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
+    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
     return false
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType, selectedDayMs: number): Promise<void> {
-    const { cancelAppointmentButton, selectTimeSlotMessage } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_cancelAppointmentButton,
+      appointmentConversation_selectTimeSlotMessage,
+    } = this.telegramClient.ruLocale
 
     await this.initData(selectedDayMs)
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, selectTimeSlotMessage, [
-      ...this.keyboardVariants,
-      cancelAppointmentButton,
-    ] as Array<string>)
+    await this.telegramClient.sendMessageWithMarkup(
+      ctx,
+      appointmentConversation_selectTimeSlotMessage,
+      [...this.keyboardVariants, appointmentConversation_cancelAppointmentButton] as Array<string>
+    )
   }
 
   private async getWorkTimeData(): Promise<ParsedWorkTimeType> {
@@ -113,8 +126,6 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
 
     const step = TIME_SLOT_STEP_MS
 
-    const dateNow = Date.now()
-
     for (
       let indexDateMilliseconds = startWorkTimeDate;
       indexDateMilliseconds < endWorkTimeDate;
@@ -127,23 +138,35 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
       const indexDateMinutes = getPadString(indexDate.getMinutes())
       const indexDateText = `${indexDateHours}:${indexDateMinutes}`
 
-      // TODO нужна проверка по бд - свободный ли слот
-      // запрос типа getDayTimeSlots(day: millisedonds)
-      const indexDateFreeState = indexDateMilliseconds > dateNow
+      const isTimeSlogFree = this.checkTimeSlotFree(indexDateMilliseconds)
 
       timeSlots.push({
         milliseconds: indexDateMilliseconds,
         text: indexDateText,
-        isFree: indexDateFreeState,
+        isFree: isTimeSlogFree,
       })
     }
 
     return timeSlots
   }
 
+  private checkTimeSlotFree = (dateMs: number): boolean => {
+    const dateNow = Date.now()
+    const indexDateFreeState = dateMs > dateNow
+
+    const isIndexTimeSlotInClosedInterval = this.selectedDayClosedTimeSlots.find((timeSlot) => {
+      if (dateMs >= timeSlot[0] && dateMs < timeSlot[1]) {
+        return true
+      }
+      return false
+    })
+
+    return Boolean(indexDateFreeState && !isIndexTimeSlotInClosedInterval)
+  }
+
   private getFormattedTimeSlots(timeSlots: TimeSlotsType): Array<string> {
     return timeSlots.map(({ text, isFree }) => {
-      if (!isFree) return 'X'
+      if (!isFree) return CLOSED_TIME_SLOT_TEXT
       return text
     })
   }
@@ -175,7 +198,16 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
     return this.workTimeData[this.selectedDayType]
   }
 
+  private async getSelectedDaySlosedTimeSlots(
+    selectedDayMs: number
+  ): Promise<Array<[number, number]>> {
+    const appointmentsData = await this.getAppointmentsByDayUseCase.process(selectedDayMs)
+    return appointmentsData
+  }
+
   private async initData(selectedDayMs: number): Promise<void> {
+    this.selectedDayClosedTimeSlots = await this.getSelectedDaySlosedTimeSlots(selectedDayMs)
+
     this.selectedDayType = this.getDayType(selectedDayMs) as typeof this.selectedDayType
 
     this.workTimeData = await this.getWorkTimeData()

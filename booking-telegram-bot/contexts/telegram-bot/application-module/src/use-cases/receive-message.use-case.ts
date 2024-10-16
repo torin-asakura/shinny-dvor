@@ -1,9 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../ports/index.js'
-import { ruLocale }                             from '../locals/index.js'
 
 @Injectable()
 export class ReceiveMessageUseCase {
@@ -12,14 +12,14 @@ export class ReceiveMessageUseCase {
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
       if (!this.telegramClient.checkChatConversation(ctx.chatId)) {
-        const { entrypointAnswer } = ruLocale.receiveMessage
-        await this.telegramClient.sendMessage(ctx, entrypointAnswer)
+        const { receiveMessage_entrypointAnswer } = this.telegramClient.ruLocale
+        await this.telegramClient.sendMessage(ctx, receiveMessage_entrypointAnswer)
       }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
-      const { serverErrorMessage } = ruLocale.appointmentConversation
-      await this.telegramClient.sendMessage(ctx, serverErrorMessage)
+      const { appointmentConversation_serverErrorMessage } = this.telegramClient.ruLocale
+      await this.telegramClient.sendMessage(ctx, appointmentConversation_serverErrorMessage)
     }
   }
 }

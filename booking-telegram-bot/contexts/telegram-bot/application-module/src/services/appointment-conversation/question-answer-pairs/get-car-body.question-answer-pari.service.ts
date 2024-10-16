@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -6,7 +7,6 @@ import { GetCarBodyTitlesUseCase }              from '@query-client/application-
 import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetCarBodyQuestionAnswerPart extends QuestionAnswerPair {
@@ -24,24 +24,28 @@ class GetCarBodyQuestionAnswerPart extends QuestionAnswerPair {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const { selectCarBodyMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_selectCarBodyMessage,
+      appointmentConversation_cancelAppointmentButton,
+    } = this.telegramClient.ruLocale
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, selectCarBodyMessage, [
-      ...this.carBodyTitles,
-      cancelAppointmentButton,
-    ])
+    await this.telegramClient.sendMessageWithMarkup(
+      ctx,
+      appointmentConversation_selectCarBodyMessage,
+      [...this.carBodyTitles, appointmentConversation_cancelAppointmentButton]
+    )
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const { missClickMessage } = ruLocale.appointmentConversation
+    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
 
     if (this.carBodyTitles.includes(responseText)) {
       return responseText
     }
 
-    this.telegramClient.replyMessage(ctx, missClickMessage)
+    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
     return false
   }
 

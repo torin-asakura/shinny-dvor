@@ -1,10 +1,9 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import type { CreateConversationReturnType }    from '@telegram-bot/application-module'
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { TelegramClientPort }              from '../ports/index.js'
-
-// TODO импорт через инфраструктуру?
-import { ruLocale }                             from '../locals/index.js'
 
 abstract class QuestionAnswerPair {
   questionAnswerPairName!: string
@@ -52,9 +51,15 @@ abstract class QuestionAnswerPair {
   }
 
   checkCancelCondition(text: string): boolean {
-    const { cancelAppointmentButton, cancelAppointmentCommand } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_cancelAppointmentButton,
+      appointmentConversation_cancelAppointmentCommand,
+    } = this.telegramClient.ruLocale
 
-    return text === cancelAppointmentButton || text === cancelAppointmentCommand
+    return (
+      text === appointmentConversation_cancelAppointmentButton ||
+      text === appointmentConversation_cancelAppointmentCommand
+    )
   }
 
   abstract sendQuestion(

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -6,7 +7,6 @@ import { GetRadiiTitlesUseCase }                from '@query-client/application-
 import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetRadiiQuestionAnswerPart extends QuestionAnswerPair {
@@ -24,12 +24,16 @@ class GetRadiiQuestionAnswerPart extends QuestionAnswerPair {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const { selectRadiiMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_selectRadiiMessage,
+      appointmentConversation_cancelAppointmentButton,
+    } = this.telegramClient.ruLocale
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, selectRadiiMessage, [
-      ...this.radiiTitles,
-      cancelAppointmentButton,
-    ])
+    await this.telegramClient.sendMessageWithMarkup(
+      ctx,
+      appointmentConversation_selectRadiiMessage,
+      [...this.radiiTitles, appointmentConversation_cancelAppointmentButton]
+    )
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
@@ -39,8 +43,8 @@ class GetRadiiQuestionAnswerPart extends QuestionAnswerPair {
       return responseText
     }
 
-    const { missClickMessage } = ruLocale.appointmentConversation
-    this.telegramClient.replyMessage(ctx, missClickMessage)
+    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
+    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
 
     return false
   }

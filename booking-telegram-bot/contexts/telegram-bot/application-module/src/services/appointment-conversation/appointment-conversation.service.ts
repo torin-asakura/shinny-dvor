@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -14,7 +15,6 @@ import { GetServiceQuestionAnswerPart }         from './question-answer-pairs/in
 import { GetTimeSlotQuestionAnswerPart }        from './question-answer-pairs/index.js'
 import { GetCarBodyQuestionAnswerPart }         from './question-answer-pairs/index.js'
 import { GetApprovalQuestionAnswerPair }        from './question-answer-pairs/index.js'
-import { ruLocale }                             from '../../locals/index.js'
 
 @Injectable()
 export class AppointmentConversationService {
@@ -35,7 +35,7 @@ export class AppointmentConversationService {
       await this.telegramClient.sendMessage(
         ctx,
         // TODO start appointment-conversation-message
-        ruLocale.appointmentConversation.startConversationMessage
+        this.telegramClient.ruLocale.appointmentConversation_startConversationMessage
       )
 
       const appointmentConversation = this.telegramClient.createConversation(ctx)
@@ -70,15 +70,15 @@ export class AppointmentConversationService {
 
       await this.telegramClient.sendMessage(
         ctx,
-        ruLocale.appointmentConversation.endConversatoinMessage
+        this.telegramClient.ruLocale.appointmentConversation_endConversatoinMessage
       )
 
       this.telegramClient.removeConversation(ctx.chatId)
     } catch (error) {
       // eslint-disable-next-line
       console.error(error)
-      const { serverErrorMessage } = ruLocale.appointmentConversation
-      await this.telegramClient.sendMessage(ctx, serverErrorMessage)
+      const { appointmentConversation_serverErrorMessage } = this.telegramClient.ruLocale
+      await this.telegramClient.sendMessage(ctx, appointmentConversation_serverErrorMessage)
     }
   }
 }

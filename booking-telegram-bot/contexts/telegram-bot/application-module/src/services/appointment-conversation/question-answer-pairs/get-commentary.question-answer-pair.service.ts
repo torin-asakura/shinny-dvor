@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -5,7 +6,6 @@ import { Injectable }                           from '@nestjs/common'
 import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetCommentaryQuestionAnswerPart extends QuestionAnswerPair {
@@ -19,21 +19,23 @@ class GetCommentaryQuestionAnswerPart extends QuestionAnswerPair {
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const { continueWithoutCommentaryButton, cancelAppointmentButton } =
-      ruLocale.appointmentConversation
+    const {
+      appointmentConversation_continueWithoutCommentaryButton,
+      appointmentConversation_cancelAppointmentButton,
+    } = this.telegramClient.ruLocale
 
     await this.telegramClient.sendMessageWithMarkup(ctx, 'commentary*', [
-      continueWithoutCommentaryButton,
-      cancelAppointmentButton,
+      appointmentConversation_continueWithoutCommentaryButton,
+      appointmentConversation_cancelAppointmentButton,
     ])
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const { continueWithoutCommentaryButton } = ruLocale.appointmentConversation
+    const { appointmentConversation_continueWithoutCommentaryButton } = this.telegramClient.ruLocale
 
-    if (responseText === continueWithoutCommentaryButton) {
+    if (responseText === appointmentConversation_continueWithoutCommentaryButton) {
       return true
     }
 

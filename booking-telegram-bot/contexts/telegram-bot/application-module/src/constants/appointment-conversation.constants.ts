@@ -9,6 +9,8 @@ export const DATE_OPTIONS: Intl.DateTimeFormatOptions = {
   month: 'long',
 }
 
+export const CLOSED_TIME_SLOT_TEXT = 'X'
+
 export const TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS = 4
 
 export const WORK_TIME = {

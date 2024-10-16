@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { ConversationDataType }            from './get-approval.question-answer-pair.interface.js'
@@ -7,7 +8,6 @@ import { Injectable }                           from '@nestjs/common'
 import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetApprovalQuestionAnswerPair extends QuestionAnswerPair {
@@ -24,32 +24,38 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPair {
   ): Promise<void> {
     const approvalMessage = this.getApprovalMessage(questionData)
 
-    const { approveAppointmentButton, editAppointmentButton, cancelAppointmentButton } =
-      ruLocale.appointmentConversation
+    const {
+      appointmentConversation_approveAppointmentButton,
+      appointmentConversation_editAppointmentButton,
+      appointmentConversation_cancelAppointmentButton,
+    } = this.telegramClient.ruLocale
 
     await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
-      approveAppointmentButton,
-      editAppointmentButton,
-      cancelAppointmentButton,
+      appointmentConversation_approveAppointmentButton,
+      appointmentConversation_editAppointmentButton,
+      appointmentConversation_cancelAppointmentButton,
     ])
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean {
     const { messageText: responseText } = ctx
 
-    const { approveAppointmentButton, editAppointmentButton } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_approveAppointmentButton,
+      appointmentConversation_editAppointmentButton,
+    } = this.telegramClient.ruLocale
 
-    if (responseText === approveAppointmentButton) {
+    if (responseText === appointmentConversation_approveAppointmentButton) {
       return true
     }
 
-    if (responseText === editAppointmentButton) {
+    if (responseText === appointmentConversation_editAppointmentButton) {
       this.telegramClient.removeConversation(ctx.chatId)
       return true
     }
 
-    const { missClickMessage } = ruLocale.appointmentConversation
-    this.telegramClient.replyMessage(ctx, missClickMessage)
+    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
+    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
 
     return false
   }
@@ -66,14 +72,18 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPair {
       minute: '2-digit',
     })
 
-    const { approvalMessageTitles } = ruLocale.appointmentConversation
+    const carBodyTitle = this.telegramClient.ruLocale.appointmentConversation_carBodyTitle
+    const radiiTitle = this.telegramClient.ruLocale.appointmentConversation_radiiTitle
+    const serviceTitle = this.telegramClient.ruLocale.appointmentConversation_serviceTitle
+    const selectedDateTitle = this.telegramClient.ruLocale.appointmentConversation_selectedDateTitle
+    const commentaryTitle = this.telegramClient.ruLocale.appointmentConversation_commentaryTitle
 
     let approvalMessage = ''
-    approvalMessage += `${approvalMessageTitles.carBody}: ${carBody}\n`
-    approvalMessage += `${approvalMessageTitles.radii}: ${radii}\n`
-    approvalMessage += `${approvalMessageTitles.service}: ${service}\n`
-    approvalMessage += `${approvalMessageTitles.selectedDate}: ${selectedDateText}\n`
-    if (commentary) approvalMessage += `${approvalMessageTitles.commentary}: ${commentary}`
+    approvalMessage += `${carBodyTitle}: ${carBody}\n`
+    approvalMessage += `${radiiTitle}: ${radii}\n`
+    approvalMessage += `${serviceTitle}: ${service}\n`
+    approvalMessage += `${selectedDateTitle}: ${selectedDateText}\n`
+    if (commentary) approvalMessage += `${commentaryTitle}: ${commentary}`
 
     return approvalMessage
   }

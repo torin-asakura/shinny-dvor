@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -8,7 +9,6 @@ import { DAY_MS }                               from '@telegram-bot/application-
 import { SUGGESTED_DAYS_QUANTITY }              from '@telegram-bot/application-module/constants'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
-import { ruLocale }                             from '../../../locals/index.js'
 
 @Injectable()
 class GetDateQuestionAnswerPart extends QuestionAnswerPair {
@@ -25,12 +25,16 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPair {
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const { selectDateMessage, cancelAppointmentButton } = ruLocale.appointmentConversation
+    const {
+      appointmentConversation_selectDateMessage,
+      appointmentConversation_cancelAppointmentButton,
+    } = this.telegramClient.ruLocale
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, selectDateMessage, [
-      ...this.keyboardVariants,
-      cancelAppointmentButton,
-    ])
+    await this.telegramClient.sendMessageWithMarkup(
+      ctx,
+      appointmentConversation_selectDateMessage,
+      [...this.keyboardVariants, appointmentConversation_cancelAppointmentButton]
+    )
   }
 
   checkAnswer(
@@ -38,7 +42,7 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPair {
   ): boolean | { clientText: string; milliseconds: number } {
     const { messageText: responseText } = ctx
 
-    const { missClickMessage } = ruLocale.appointmentConversation
+    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
 
     if (this.keyboardVariants.includes(responseText)) {
       const date = this.suggestedDates.find(({ clientText }) => clientText === responseText)
@@ -46,7 +50,7 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPair {
       return date
     }
 
-    this.telegramClient.replyMessage(ctx, missClickMessage)
+    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
     return false
   }
 
