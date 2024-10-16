@@ -8,6 +8,7 @@
     ".": "./src/index.ts",
     "./getters": "./src/getters/index.ts",
     "./interfaces": "./src/interfaces/index.ts",
+    "./classes": "./src/classes/index.ts",
     "./constants": "./src/constants/index.ts"
   },
   "devDependencies": {
