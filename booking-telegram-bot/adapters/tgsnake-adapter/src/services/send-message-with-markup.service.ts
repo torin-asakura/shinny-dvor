@@ -3,11 +3,11 @@ import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsn
 import { Injectable }                           from '@nestjs/common'
 import { Raw }                                  from 'tgsnake'
 
-import { TgsnakeAdapterService }                from '../services/index.js'
+import { TgsnakeAdapterService }                from './index.js'
 import { getRandomBigIntGetter }                from '../getters/get-random-big-int.getter.js'
 
 @Injectable()
-class SendMessageWithMarkupUseCase {
+class SendMessageWithMarkupService {
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
   async process(
@@ -57,4 +57,4 @@ class SendMessageWithMarkupUseCase {
   }
 }
 
-export { SendMessageWithMarkupUseCase }
+export { SendMessageWithMarkupService }

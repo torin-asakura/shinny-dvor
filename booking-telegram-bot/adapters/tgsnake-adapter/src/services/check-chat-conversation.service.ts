@@ -1,9 +1,9 @@
 import { Injectable }            from '@nestjs/common'
 
-import { TgsnakeAdapterService } from '../services/index.js'
+import { TgsnakeAdapterService } from './index.js'
 
 @Injectable()
-class CheckChatConversationUseCase {
+class CheckChatConversationService {
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
   process(chatId: bigint): boolean {
@@ -18,4 +18,4 @@ class CheckChatConversationUseCase {
   }
 }
 
-export { CheckChatConversationUseCase }
+export { CheckChatConversationService }
