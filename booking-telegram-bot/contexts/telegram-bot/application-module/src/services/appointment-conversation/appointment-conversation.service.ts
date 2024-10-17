@@ -32,11 +32,10 @@ export class AppointmentConversationService {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      await this.telegramClient.sendMessage(
-        ctx,
-        // TODO start appointment-conversation-message
+      // TODO start appointment-conversation-message
+      const startConversationMessage =
         this.telegramClient.ruLocale.appointmentConversation_startConversationMessage
-      )
+      await this.telegramClient.sendMessage(ctx, startConversationMessage)
 
       const appointmentConversation = this.telegramClient.createConversation(ctx)
 

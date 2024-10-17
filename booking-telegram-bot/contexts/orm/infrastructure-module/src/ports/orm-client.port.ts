@@ -1,10 +1,11 @@
 import type { AppointmentEntity } from '@booking-telegram-bot/mikro-orm-adapter'
 import type { OrmPort }           from '@orm-client/application-module'
 
-import { RequiredEntityData }     from '@mikro-orm/core'
-import { MikroORM }               from '@mikro-orm/core'
-import { CreateRequestContext }   from '@mikro-orm/core'
 import { Injectable }             from '@nestjs/common'
+
+import { RequiredEntityData }     from '@booking-telegram-bot/mikro-orm-adapter'
+import { MikroORM }               from '@booking-telegram-bot/mikro-orm-adapter'
+import { CreateRequestContext }   from '@booking-telegram-bot/mikro-orm-adapter'
 
 @Injectable()
 class OrmPortimpl implements OrmPort {

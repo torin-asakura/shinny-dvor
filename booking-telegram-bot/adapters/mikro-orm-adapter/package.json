@@ -14,14 +14,15 @@
   "dependencies": {
     "@mikro-orm/cli": "6.3.13",
     "@mikro-orm/core": "6.3.13",
+    "@mikro-orm/migrations": "6.3.13",
     "@mikro-orm/nestjs": "6.0.2",
     "@mikro-orm/postgresql": "6.3.13",
     "pg": "8.13.0",
+    "pg-query-stream": "4.7.0",
     "ts-node": "10.9.2"
   },
   "devDependencies": {
     "@grpc/grpc-js": "1.11.2",
-    "@mikro-orm/migrations": "6.3.13",
     "@mikro-orm/sqlite": "6.3.13",
     "@nestjs/common": "10.4.2",
     "@nestjs/core": "10.4.2",
@@ -35,11 +36,8 @@
     "amqplib": "0.10.4",
     "ioredis": "5.4.1",
     "kafkajs": "2.2.4",
-    "pg-query-stream": "4.7.0",
     "reflect-metadata": "0.2.2",
-    "rxjs": "7.8.1",
-    "ts-node": "10.9.2",
-    "typescript": "5.4.2"
+    "rxjs": "7.8.1"
   },
   "peerDependencies": {
     "@grpc/grpc-js": "*",
@@ -55,7 +53,6 @@
     "amqplib": "*",
     "ioredis": "*",
     "kafkajs": "*",
-    "pg-query-stream": "*",
     "reflect-metadata": "*",
     "rxjs": "*"
   },

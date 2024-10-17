@@ -15,7 +15,9 @@
     "rxjs": "7.8.1"
   },
   "peerDependencies": {
+    "@booking-telegram-bot/tgsnake-adapter": "*",
     "@nestjs/common": "*",
+    "@telegram-bot/application-module": "*",
     "reflect-metadata": "*",
     "rxjs": "*"
   }

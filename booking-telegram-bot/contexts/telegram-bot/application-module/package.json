@@ -20,6 +20,8 @@
   },
   "peerDependencies": {
     "@nestjs/common": "*",
+    "@orm-client/application-module": "*",
+    "@query-client/application-module": "*",
     "reflect-metadata": "*",
     "rxjs": "*"
   }

@@ -9,6 +9,7 @@ export class HelpCommand {
   constructor(private readonly telegramClient: TelegramClientPort) {}
 
   async execute(ctx: TelegramBotFormattedContextType): Promise<void> {
+    // TODO locales
     await this.telegramClient.sendMessage(ctx, 'help message')
   }
 }

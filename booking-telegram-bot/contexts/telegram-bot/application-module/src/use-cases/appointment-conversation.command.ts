@@ -9,6 +9,7 @@ export class AppointmentConversationCommand {
   constructor(private readonly appointmentConversationService: AppointmentConversationService) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
+    // TODO locales
     await this.appointmentConversationService.process(ctx)
   }
 }
