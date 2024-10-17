@@ -9,7 +9,7 @@ import { checkArrayLength }            from '@globals/data'
 import { ApolloAdapterService }        from '../services/index.js'
 
 @Injectable()
-export class GetServiceTitlesUseCase {
+class GetServiceTitlesService {
   constructor(private readonly apolloAdapterService: ApolloAdapterService) {}
 
   async process(): ReturnTitlesType {
@@ -25,3 +25,5 @@ export class GetServiceTitlesUseCase {
     return servicesQueryData
   }
 }
+
+export { GetServiceTitlesService }

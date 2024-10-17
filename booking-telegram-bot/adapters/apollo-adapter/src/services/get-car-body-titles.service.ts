@@ -6,10 +6,10 @@ import { Injectable }            from '@nestjs/common'
 import { GET_CAR_BODIES }        from '@globals/data'
 import { checkArrayLength }      from '@globals/data'
 
-import { ApolloAdapterService }  from '../services/index.js'
+import { ApolloAdapterService }  from './apollo-adapter.service.js'
 
 @Injectable()
-export class GetCarBodyTitlesUseCase {
+class GetCarBodyTitlesService {
   constructor(private readonly apolloAdapterService: ApolloAdapterService) {}
 
   async process(): ReturnTitlesType {
@@ -26,3 +26,5 @@ export class GetCarBodyTitlesUseCase {
     return carBodiesQueryData
   }
 }
+
+export { GetCarBodyTitlesService }

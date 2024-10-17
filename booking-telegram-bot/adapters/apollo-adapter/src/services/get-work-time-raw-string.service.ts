@@ -4,10 +4,10 @@ import { Injectable }                  from '@nestjs/common'
 
 import { GET_CONTACTS }                from '@globals/data'
 
-import { ApolloAdapterService }        from '../services/index.js'
+import { ApolloAdapterService }        from './apollo-adapter.service.js'
 
 @Injectable()
-export class GetWorkTimeRawStringUseCase {
+class GetWorkTimeRawStringService {
   constructor(private readonly apolloAdapterService: ApolloAdapterService) {}
 
   async process(): Promise<string> {
@@ -22,3 +22,5 @@ export class GetWorkTimeRawStringUseCase {
     return workTimeData
   }
 }
+
+export { GetWorkTimeRawStringService }

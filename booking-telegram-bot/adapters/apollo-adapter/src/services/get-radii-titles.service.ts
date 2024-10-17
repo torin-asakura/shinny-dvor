@@ -6,10 +6,10 @@ import { Injectable }            from '@nestjs/common'
 import { GET_AVAILABLE_RADII }   from '@globals/data'
 import { checkArrayLength }      from '@globals/data'
 
-import { ApolloAdapterService }  from '../services/index.js'
+import { ApolloAdapterService }  from './apollo-adapter.service.js'
 
 @Injectable()
-export class GetRadiiTitlesUseCase {
+class GetRadiiTitlesService {
   constructor(private readonly apolloAdapterService: ApolloAdapterService) {}
 
   async process(): ReturnTitlesType {
@@ -26,3 +26,5 @@ export class GetRadiiTitlesUseCase {
     return radiiQueryData
   }
 }
+
+export { GetRadiiTitlesService }
