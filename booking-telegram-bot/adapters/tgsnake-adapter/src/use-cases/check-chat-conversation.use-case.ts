@@ -4,7 +4,6 @@ import { TgsnakeAdapterService } from '../services/index.js'
 
 @Injectable()
 class CheckChatConversationUseCase {
-  // TODO можно ли вынести конструктор в имплементацию (класс-родитель), чтобы не дублировать еге инициализацию
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
   process(chatId: bigint): boolean {

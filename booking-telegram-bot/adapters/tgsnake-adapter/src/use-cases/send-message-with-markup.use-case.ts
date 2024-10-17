@@ -6,8 +6,6 @@ import { Raw }                                  from 'tgsnake'
 import { TgsnakeAdapterService }                from '../services/index.js'
 import { getRandomBigIntGetter }                from '../getters/get-random-big-int.getter.js'
 
-// TODO сделать из сенд-мессейдж - один файл.
-// на входе сделать проверку типов и разбить на несколько дочерних функций
 @Injectable()
 class SendMessageWithMarkupUseCase {
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}

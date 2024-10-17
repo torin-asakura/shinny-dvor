@@ -25,8 +25,7 @@ abstract class QuestionAnswerPair {
       if (this.checkCancelCondition(responseText)) {
         this.telegramClient.removeConversation(waitMessageCtx.chatId)
 
-        // TODO locales
-        this.telegramClient.replyMessage(ctx, 'Запись отменена')
+        this.telegramClient.replyMessage(ctx, this.telegramClient.ruLocale.appointmentCanceled)
         return false
       }
 

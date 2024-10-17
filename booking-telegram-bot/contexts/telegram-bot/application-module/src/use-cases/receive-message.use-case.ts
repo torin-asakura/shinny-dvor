@@ -12,6 +12,7 @@ export class ReceiveMessageUseCase {
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
       if (!this.telegramClient.checkChatConversation(ctx.chatId)) {
+        // TODO need markdown send
         const { receiveMessage_entrypointAnswer } = this.telegramClient.ruLocale
         await this.telegramClient.sendMessage(ctx, receiveMessage_entrypointAnswer)
       }

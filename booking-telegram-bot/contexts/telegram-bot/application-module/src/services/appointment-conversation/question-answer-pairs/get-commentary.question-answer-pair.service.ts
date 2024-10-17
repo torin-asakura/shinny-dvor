@@ -24,10 +24,14 @@ class GetCommentaryQuestionAnswerPart extends QuestionAnswerPair {
       appointmentConversation_cancelAppointmentButton,
     } = this.telegramClient.ruLocale
 
-    await this.telegramClient.sendMessageWithMarkup(ctx, 'commentary*', [
-      appointmentConversation_continueWithoutCommentaryButton,
-      appointmentConversation_cancelAppointmentButton,
-    ])
+    await this.telegramClient.sendMessageWithMarkup(
+      ctx,
+      this.telegramClient.ruLocale.appointmentConversation_commentaryTitle,
+      [
+        appointmentConversation_continueWithoutCommentaryButton,
+        appointmentConversation_cancelAppointmentButton,
+      ]
+    )
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
