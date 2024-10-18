@@ -5,12 +5,12 @@ import type { ConversationDataType }            from './get-approval.question-an
 
 import { Injectable }                           from '@nestjs/common'
 
-import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 
 @Injectable()
-class GetApprovalQuestionAnswerPair extends QuestionAnswerPair {
+class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName = 'approval'
 
   // eslint-disable-next-line

@@ -3,15 +3,15 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 import { DATE_OPTIONS }                         from '@telegram-bot/application-module/constants'
 import { DAY_MS }                               from '@telegram-bot/application-module/constants'
 import { SUGGESTED_DAYS_QUANTITY }              from '@telegram-bot/application-module/constants'
+import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 
 @Injectable()
-class GetDateQuestionAnswerPart extends QuestionAnswerPair {
+class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName: string = 'date'
 
   suggestedDates

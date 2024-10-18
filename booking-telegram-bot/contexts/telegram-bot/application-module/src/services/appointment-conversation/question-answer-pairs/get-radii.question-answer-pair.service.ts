@@ -4,12 +4,12 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 import { Injectable }                           from '@nestjs/common'
 
 import { GetRadiiTitlesUseCase }                from '@query-client/application-module'
-import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 
 @Injectable()
-class GetRadiiQuestionAnswerPart extends QuestionAnswerPair {
+class GetRadiiQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName = 'radii'
 
   radiiTitles: Array<string>

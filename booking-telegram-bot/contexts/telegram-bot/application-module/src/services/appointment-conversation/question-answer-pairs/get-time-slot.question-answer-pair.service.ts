@@ -11,16 +11,16 @@ import { Injectable }                           from '@nestjs/common'
 
 import { GetAppointmentsByDayUseCase }          from '@orm-client/application-module'
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
-import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
 import { CLOSED_TIME_SLOT_TEXT }                from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
 import { WORK_TIME }                            from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
+import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 
 @Injectable()
-class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPair {
+class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName: string = 'timeSlot'
 
   selectedDayWorkTime: {

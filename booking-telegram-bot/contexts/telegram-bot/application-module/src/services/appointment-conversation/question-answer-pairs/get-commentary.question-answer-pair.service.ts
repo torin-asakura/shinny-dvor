@@ -3,12 +3,12 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { QuestionAnswerPair }                   from '@telegram-bot/application-module/classes'
+import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
 
 @Injectable()
-class GetCommentaryQuestionAnswerPart extends QuestionAnswerPair {
+class GetCommentaryQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName = 'commentary'
 
   serviceTitles: Array<string>
