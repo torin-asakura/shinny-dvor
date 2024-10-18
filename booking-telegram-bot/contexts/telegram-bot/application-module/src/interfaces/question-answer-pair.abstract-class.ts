@@ -5,7 +5,7 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import type { TelegramClientPort }              from '../ports/index.js'
 
-abstract class QuestionAnswerPair {
+abstract class QuestionAnswerPairAbstractClass {
   questionAnswerPairName!: string
 
   constructor(readonly telegramClient: TelegramClientPort) {}
@@ -69,4 +69,4 @@ abstract class QuestionAnswerPair {
   abstract checkAnswer(ctx: TelegramBotFormattedContextType): Record<string, any> | boolean | string
 }
 
-export { QuestionAnswerPair }
+export { QuestionAnswerPairAbstractClass }
