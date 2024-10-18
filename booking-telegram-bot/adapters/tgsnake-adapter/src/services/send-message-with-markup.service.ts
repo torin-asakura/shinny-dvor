@@ -4,7 +4,7 @@ import { Injectable }                           from '@nestjs/common'
 import { Raw }                                  from 'tgsnake'
 
 import { TgsnakeAdapterService }                from './index.js'
-import { getRandomBigIntGetter }                from '../getters/get-random-big-int.getter.js'
+import { getRandomBigIntGetter }                from '../getters/index.js'
 
 @Injectable()
 class SendMessageWithMarkupService {
