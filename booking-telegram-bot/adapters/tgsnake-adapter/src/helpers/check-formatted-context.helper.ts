@@ -7,7 +7,7 @@ const checkFormattedContextHelper = (
   const formattedContextKeys = Object.keys(formattedContext)
   for (const contextKey of formattedContextKeys) {
     if (!formattedContext[contextKey as TelegramBotFormattedContextKeyType]) {
-      throw new Error(`cannot acces ${contextKey}`)
+      throw new Error(`cannot access ${contextKey}`)
     }
   }
   return formattedContext
