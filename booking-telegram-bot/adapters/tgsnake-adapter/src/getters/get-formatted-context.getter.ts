@@ -9,7 +9,6 @@ const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormatte
     userId: ctx.message?.from?.id,
     userFirstName: ctx.message?.from?.firstname,
     userLastName: ctx.message?.from?.lastname,
-    // userUsername: ctx.message?.from?.username,
     messageText: ctx.message?.text,
     accessHash: ctx.message?.from?.accessHash,
     messageId: ctx.message?.id,
