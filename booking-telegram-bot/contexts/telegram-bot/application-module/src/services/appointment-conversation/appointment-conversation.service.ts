@@ -2,10 +2,10 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { WriteAppointmentDataUseCase }          from '@orm-client/application-module'
 import { getFormattedAppointmentData }          from '@telegram-bot/application-module/getters'
 import { getUserFullName }                      from '@telegram-bot/application-module/getters'
 
+import { OrmPort }                              from '../../ports/index.js'
 import { TelegramClientPort }                   from '../../ports/index.js'
 import { I18nPort }                             from '../../ports/index.js'
 import { GetCommentaryQuestionAnswerPart }      from './question-answer-pairs/index.js'
@@ -20,7 +20,6 @@ import { GetApprovalQuestionAnswerPair }        from './question-answer-pairs/in
 export class AppointmentConversationService {
   constructor(
     private readonly telegramClient: TelegramClientPort,
-    private readonly writeAppointmentDataUseCase: WriteAppointmentDataUseCase,
     private readonly appointmentGetDateConversationPart: GetDateQuestionAnswerPart,
     private readonly appointmentGetTimeSlotConversationPart: GetTimeSlotQuestionAnswerPart,
     private readonly appointmentGetCarBodyConversationPart: GetCarBodyQuestionAnswerPart,
@@ -28,7 +27,8 @@ export class AppointmentConversationService {
     private readonly appointmentGetServicesConversationPart: GetServiceQuestionAnswerPart,
     private readonly appointmentGetCommentaryConversationPart: GetCommentaryQuestionAnswerPart,
     private readonly appointmentGetApprovalConversationPart: GetApprovalQuestionAnswerPair,
-    private readonly i18n: I18nPort
+    private readonly i18n: I18nPort,
+    private readonly orm: OrmPort
   ) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
@@ -64,7 +64,7 @@ export class AppointmentConversationService {
         userFullName
       )
 
-      await this.writeAppointmentDataUseCase.process(formattedConversationData)
+      await this.orm.writeAppointmentData(formattedConversationData)
 
       // TODO подставить usename бота оператора
       const endConversatoinMessage = this.i18n.getAppointmentConversationEndConversation()

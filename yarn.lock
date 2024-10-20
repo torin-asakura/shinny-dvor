@@ -7977,6 +7977,7 @@ __metadata:
   resolution: "@telegram-bot/infrastructure-module@workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"
   dependencies:
     "@booking-telegram-bot/i18n-adapter": "workspace:*"
+    "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
@@ -7984,6 +7985,7 @@ __metadata:
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@booking-telegram-bot/i18n-adapter": "*"
+    "@booking-telegram-bot/mikro-orm-adapter": "*"
     "@booking-telegram-bot/tgsnake-adapter": "*"
     "@nestjs/common": "*"
     "@telegram-bot/application-module": "*"

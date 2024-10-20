@@ -30,8 +30,6 @@
     "@nestjs/platform-fastify": "10.4.2",
     "@nestjs/platform-socket.io": "10.4.2",
     "@nestjs/websockets": "10.4.2",
-    "@orm-client/application-module": "workspace:*",
-    "@orm-client/infrastructure-module": "workspace:*",
     "@query-client/application-module": "workspace:*",
     "@query-client/infrastructure-module": "workspace:*",
     "@telegram-bot/application-module": "workspace:*",

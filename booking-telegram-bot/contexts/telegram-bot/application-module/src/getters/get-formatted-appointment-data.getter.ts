@@ -18,6 +18,7 @@ const getFormattedAppointmentData: GetFormattedAppointmentDataType = (
     timeSlotEnd,
     carBody,
     radii,
+    isApproved: false,
     service,
     commentary,
   }

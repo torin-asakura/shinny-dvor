@@ -9,7 +9,6 @@ import type { ParsedWorkTimeType }              from './get-time-slot.question-a
 
 import { Injectable }                           from '@nestjs/common'
 
-import { GetAppointmentsByDayUseCase }          from '@orm-client/application-module'
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
 import { CLOSED_TIME_SLOT_TEXT }                from '@telegram-bot/application-module/constants'
 import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
@@ -17,6 +16,7 @@ import { WORK_TIME }                            from '@telegram-bot/application-
 import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
 import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
+import { OrmPort }                              from '../../../ports/index.js'
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { I18nPort }                             from '../../../ports/index.js'
 
@@ -43,9 +43,9 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
 
   constructor(
     telegramClient: TelegramClientPort,
-    private readonly getAppointmentsByDayUseCase: GetAppointmentsByDayUseCase,
     private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase,
-    i18n: I18nPort
+    i18n: I18nPort,
+    private readonly orm: OrmPort
   ) {
     super(telegramClient, i18n)
   }
@@ -200,7 +200,7 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   private async getSelectedDaySlosedTimeSlots(
     selectedDayMs: number
   ): Promise<Array<[number, number]>> {
-    const appointmentsData = await this.getAppointmentsByDayUseCase.process(selectedDayMs)
+    const appointmentsData = await this.orm.getAppointmenstByDay(selectedDayMs)
     return appointmentsData
   }
 
