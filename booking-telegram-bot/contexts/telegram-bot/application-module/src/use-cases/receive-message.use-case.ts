@@ -1,26 +1,28 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../ports/index.js'
+import { I18nPort }                             from '../ports/index.js'
 
 @Injectable()
 export class ReceiveMessageUseCase {
-  constructor(private readonly telegramClient: TelegramClientPort) {}
+  constructor(
+    private readonly telegramClient: TelegramClientPort,
+    private readonly i18n: I18nPort
+  ) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
       if (!this.telegramClient.checkChatConversation(ctx.chatId)) {
         // TODO need markdown send
-        const { receiveMessage_entrypointAnswer } = this.telegramClient.ruLocale
-        await this.telegramClient.sendMessage(ctx, receiveMessage_entrypointAnswer)
+        await this.telegramClient.sendMessage(ctx, this.i18n.getEntrypoint())
       }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
-      const { appointmentConversation_serverErrorMessage } = this.telegramClient.ruLocale
-      await this.telegramClient.sendMessage(ctx, appointmentConversation_serverErrorMessage)
+      const errorMessage = this.i18n.getAppointmentConversationServerError()
+      await this.telegramClient.sendMessage(ctx, errorMessage)
     }
   }
 }

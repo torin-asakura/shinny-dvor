@@ -3,12 +3,17 @@ import type { TelegramBotFormattedContextType } from '@telegram-bot/application-
 import { Injectable }                           from '@nestjs/common'
 
 import { TelegramClientPort }                   from '../ports/index.js'
+import { I18nPort }                             from '../ports/index.js'
 
 @Injectable()
 export class StartCommand {
-  constructor(private readonly telegramClient: TelegramClientPort) {}
+  constructor(
+    private readonly telegramClient: TelegramClientPort,
+    private readonly i18n: I18nPort
+  ) {}
 
   async execute(ctx: TelegramBotFormattedContextType): Promise<void> {
-    await this.telegramClient.sendMessage(ctx, this.telegramClient.ruLocale.welcomeMessage)
+    const welcomeMessage = this.i18n.getWelcome()
+    await this.telegramClient.sendMessage(ctx, welcomeMessage)
   }
 }
