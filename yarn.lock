@@ -2599,6 +2599,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@booking-telegram-bot/i18n-adapter@workspace:*, @booking-telegram-bot/i18n-adapter@workspace:booking-telegram-bot/adapters/i18n-adapter":
+  version: 0.0.0-use.local
+  resolution: "@booking-telegram-bot/i18n-adapter@workspace:booking-telegram-bot/adapters/i18n-adapter"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@types/hbs": "npm:^4"
+    class-validator: "npm:0.14.1"
+    hbs: "npm:4.2.0"
+    nestjs-i18n: "npm:10.4.9"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
 "@booking-telegram-bot/mikro-orm-adapter@workspace:*, @booking-telegram-bot/mikro-orm-adapter@workspace:booking-telegram-bot/adapters/mikro-orm-adapter":
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/mikro-orm-adapter@workspace:booking-telegram-bot/adapters/mikro-orm-adapter"
@@ -2652,6 +2672,7 @@ __metadata:
   resolution: "@booking-telegram-bot/service-entrypoint@workspace:booking-telegram-bot/entrypoints/service-entrypoint"
   dependencies:
     "@booking-telegram-bot/apollo-adapter": "workspace:*"
+    "@booking-telegram-bot/i18n-adapter": "workspace:*"
     "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@grpc/grpc-js": "npm:1.11.2"
@@ -7955,12 +7976,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@telegram-bot/infrastructure-module@workspace:booking-telegram-bot/contexts/telegram-bot/infrastructure-module"
   dependencies:
+    "@booking-telegram-bot/i18n-adapter": "workspace:*"
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
+    "@booking-telegram-bot/i18n-adapter": "*"
     "@booking-telegram-bot/tgsnake-adapter": "*"
     "@nestjs/common": "*"
     "@telegram-bot/application-module": "*"
@@ -8204,6 +8227,15 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/79d746a8f053954bba36bd3d94a90c78de995d126289d656fb3271dd9f1229d33f678da04d10bce6be440494a5a73438e2e363e92802d16b8315b051036c5256
+  languageName: node
+  linkType: hard
+
+"@types/hbs@npm:^4":
+  version: 4.0.4
+  resolution: "@types/hbs@npm:4.0.4"
+  dependencies:
+    handlebars: "npm:^4.1.0"
+  checksum: 10/dbbab9d66d227084076bab3d1b16048b63079f8958017b3004c833665533b67d50d2b1d40f3aa7554241a7b84c705f7d2d84b8181cba06d7b33bcdbd2bcb863d
   languageName: node
   linkType: hard
 
@@ -9664,6 +9696,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"accept-language-parser@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "accept-language-parser@npm:1.5.0"
+  checksum: 10/9d8dd3e2db701ee4de4a68b77e05c0413e234d37311c9f7784c309228871e8317389d20c6f2317fb95d5c3529c2de5add4850c88b2253c6fa9079e4c660ec3c8
+  languageName: node
+  linkType: hard
+
 "accepts@npm:~1.3.4, accepts@npm:~1.3.8":
   version: 1.3.8
   resolution: "accepts@npm:1.3.8"
@@ -10824,7 +10863,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-validator@npm:*":
+"class-validator@npm:*, class-validator@npm:0.14.1":
   version: 0.14.1
   resolution: "class-validator@npm:0.14.1"
   dependencies:
@@ -11157,6 +11196,13 @@ __metadata:
   version: 0.6.0
   resolution: "cookie@npm:0.6.0"
   checksum: 10/c1f8f2ea7d443b9331680598b0ae4e6af18a618c37606d1bbdc75bec8361cce09fe93e727059a673f2ba24467131a9fb5a4eec76bb1b149c1b3e1ccb268dc583
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "cookie@npm:0.5.0"
+  checksum: 10/aae7911ddc5f444a9025fbd979ad1b5d60191011339bce48e555cb83343d0f98b865ff5c4d71fecdfb8555a5cafdc65632f6fce172f32aaf6936830a883a0380
   languageName: node
   linkType: hard
 
@@ -13001,6 +13047,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"foreachasync@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "foreachasync@npm:3.0.0"
+  checksum: 10/21bd394f1db54a89a03b5351a07abe318ebb90756364adefafcfccf98c37b92cbe6b95f09909e0c398661f7ccccfa05119d7dbe4c2c58a680e7cdfd7d9009fca
+  languageName: node
+  linkType: hard
+
 "foreground-child@npm:^3.1.0":
   version: 3.3.0
   resolution: "foreground-child@npm:3.3.0"
@@ -13584,6 +13637,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"handlebars@npm:4.7.7":
+  version: 4.7.7
+  resolution: "handlebars@npm:4.7.7"
+  dependencies:
+    minimist: "npm:^1.2.5"
+    neo-async: "npm:^2.6.0"
+    source-map: "npm:^0.6.1"
+    uglify-js: "npm:^3.1.4"
+    wordwrap: "npm:^1.0.0"
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 10/617b1e689b7577734abc74564bdb8cdaddf8fd48ce72afdb489f426e9c60a7d6ee2a2707c023720c4059070128243c948bded8f2716e4543378033e3971b85ea
+  languageName: node
+  linkType: hard
+
+"handlebars@npm:^4.1.0":
+  version: 4.7.8
+  resolution: "handlebars@npm:4.7.8"
+  dependencies:
+    minimist: "npm:^1.2.5"
+    neo-async: "npm:^2.6.2"
+    source-map: "npm:^0.6.1"
+    uglify-js: "npm:^3.1.4"
+    wordwrap: "npm:^1.0.0"
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 10/bd528f4dd150adf67f3f857118ef0fa43ff79a153b1d943fa0a770f2599e38b25a7a0dbac1a3611a4ec86970fd2325a81310fb788b5c892308c9f8743bd02e11
+  languageName: node
+  linkType: hard
+
 "has-bigints@npm:^1.0.1, has-bigints@npm:^1.0.2":
   version: 1.0.2
   resolution: "has-bigints@npm:1.0.2"
@@ -13659,6 +13748,16 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 10/7898a9c1788b2862cf0f9c345a6bec77ba4a0c0983c7f19d610c382343d4f98fa260686b225dfb1f88393a66679d2ec58ee310c1d6868c081eda7918f32cc70a
+  languageName: node
+  linkType: hard
+
+"hbs@npm:*, hbs@npm:4.2.0":
+  version: 4.2.0
+  resolution: "hbs@npm:4.2.0"
+  dependencies:
+    handlebars: "npm:4.7.7"
+    walk: "npm:2.3.15"
+  checksum: 10/9c7da3d96ab01ccba1bb3a3e45328290eac1fc213cce7a93cd0b1a8d5fce0fa242425994770d6594ad98473aa352afa5bade849836d355508a4d56c401271a05
   languageName: node
   linkType: hard
 
@@ -14583,7 +14682,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iterare@npm:1.2.1":
+"iterare@npm:1.2.1, iterare@npm:^1.2.1":
   version: 1.2.1
   resolution: "iterare@npm:1.2.1"
   checksum: 10/ee8322dd9d92e86d8653c899df501c58c5b8e90d6767cf2af0b6d6dc5a4b9b7ed8bce936976f4f4c3a55be110a300c8a7d71967d03f72e104e8db66befcfd874
@@ -15917,7 +16016,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.6":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.3, minimist@npm:^1.2.5, minimist@npm:^1.2.6":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 10/908491b6cc15a6c440ba5b22780a0ba89b9810e1aea684e253e43c4e3b8d56ec1dcdd7ea96dde119c29df59c936cde16062159eae4225c691e19c70b432b6e6f
@@ -16180,10 +16279,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"neo-async@npm:^2.6.2":
+"neo-async@npm:^2.6.0, neo-async@npm:^2.6.2":
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: 10/1a7948fea86f2b33ec766bc899c88796a51ba76a4afc9026764aedc6e7cde692a09067031e4a1bf6db4f978ccd99e7f5b6c03fe47ad9865c3d4f99050d67e002
+  languageName: node
+  linkType: hard
+
+"nestjs-i18n@npm:10.4.9":
+  version: 10.4.9
+  resolution: "nestjs-i18n@npm:10.4.9"
+  dependencies:
+    accept-language-parser: "npm:^1.5.0"
+    chokidar: "npm:^3.5.3"
+    cookie: "npm:^0.5.0"
+    iterare: "npm:^1.2.1"
+    js-yaml: "npm:^4.1.0"
+    string-format: "npm:^2.0.0"
+  peerDependencies:
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    class-validator: "*"
+    rxjs: "*"
+  checksum: 10/7e368f2f3a4d54d910100f3e65b795a7f2462ede12a9c216bddf7378c51c21ef3aaa7a644db1b2e405c1ac1e88a038f3af91c4cdcd005eb54c7dc0f959be7364
   languageName: node
   linkType: hard
 
@@ -19040,6 +19158,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"string-format@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string-format@npm:2.0.0"
+  checksum: 10/8889014e926f69aaa8d117551a84a97cd7932484f5b0ab5b5b760eb0761e5722dee6112893ea742efac5adeb1b08dfedb77d9a91192dcd683a331e06c5148a87
+  languageName: node
+  linkType: hard
+
 "string-length@npm:^4.0.1":
   version: 4.0.2
   resolution: "string-length@npm:4.0.2"
@@ -19966,6 +20091,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uglify-js@npm:^3.1.4":
+  version: 3.19.3
+  resolution: "uglify-js@npm:3.19.3"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 10/6b9639c1985d24580b01bb0ab68e78de310d38eeba7db45bec7850ab4093d8ee464d80ccfaceda9c68d1c366efbee28573b52f95e69ac792354c145acd380b11
+  languageName: node
+  linkType: hard
+
 "uid@npm:2.0.2":
   version: 2.0.2
   resolution: "uid@npm:2.0.2"
@@ -20239,6 +20373,15 @@ __metadata:
   dependencies:
     xml-name-validator: "npm:^4.0.0"
   checksum: 10/9a00c412b5496f4f040842c9520bc0aaec6e0c015d06412a91a723cd7d84ea605ab903965f546b4ecdb3eae267f5145ba08565222b1d6cb443ee488cda9a0aee
+  languageName: node
+  linkType: hard
+
+"walk@npm:2.3.15":
+  version: 2.3.15
+  resolution: "walk@npm:2.3.15"
+  dependencies:
+    foreachasync: "npm:^3.0.0"
+  checksum: 10/79dcd1749e2d78bacabb745cb2239fc98e64abc58bcb024a238cdf9158343a7b725dfba1a561fc6193e903829ff74f2d8212d691eb540fd1a5e23a7cf8552b86
   languageName: node
   linkType: hard
 
@@ -20570,6 +20713,13 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10/1ec6f6089f205f83037be10d0c4b34c9183b0b63fca0834a5b3cee55dd321429d73d40bb44c8fc8471b5203d6e8f8275717f49a8ff4b2b0ab41d7e1b563e0854
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 10/497d40beb2bdb08e6d38754faa17ce20b0bf1306327f80cb777927edb23f461ee1f6bc659b3c3c93f26b08e1cf4b46acc5bae8fda1f0be3b5ab9a1a0211034cd
   languageName: node
   linkType: hard
 
