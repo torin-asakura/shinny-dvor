@@ -2686,8 +2686,6 @@ __metadata:
     "@nestjs/platform-fastify": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
-    "@orm-client/application-module": "workspace:*"
-    "@orm-client/infrastructure-module": "workspace:*"
     "@query-client/application-module": "workspace:*"
     "@query-client/infrastructure-module": "workspace:*"
     "@telegram-bot/application-module": "workspace:*"
@@ -5567,38 +5565,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@orm-client/application-module@workspace:*, @orm-client/application-module@workspace:booking-telegram-bot/contexts/orm/application-module":
-  version: 0.0.0-use.local
-  resolution: "@orm-client/application-module@workspace:booking-telegram-bot/contexts/orm/application-module"
-  dependencies:
-    "@nestjs/common": "npm:10.4.2"
-    reflect-metadata: "npm:0.2.2"
-    rxjs: "npm:7.8.1"
-  peerDependencies:
-    "@nestjs/common": "*"
-    reflect-metadata: "*"
-    rxjs: "*"
-  languageName: unknown
-  linkType: soft
-
-"@orm-client/infrastructure-module@workspace:*, @orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm/infrastructure-module":
-  version: 0.0.0-use.local
-  resolution: "@orm-client/infrastructure-module@workspace:booking-telegram-bot/contexts/orm/infrastructure-module"
-  dependencies:
-    "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
-    "@nestjs/common": "npm:10.4.2"
-    "@orm-client/application-module": "workspace:*"
-    reflect-metadata: "npm:0.2.2"
-    rxjs: "npm:7.8.1"
-  peerDependencies:
-    "@booking-telegram-bot/mikro-orm-adapter": "*"
-    "@nestjs/common": "*"
-    "@orm-client/application-module": "*"
-    reflect-metadata: "*"
-    rxjs: "*"
-  languageName: unknown
-  linkType: soft
-
 "@peculiar/asn1-schema@npm:^2.3.13, @peculiar/asn1-schema@npm:^2.3.8":
   version: 2.3.13
   resolution: "@peculiar/asn1-schema@npm:2.3.13"
@@ -7959,13 +7925,11 @@ __metadata:
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
-    "@orm-client/application-module": "workspace:*"
     "@query-client/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
-    "@orm-client/application-module": "*"
     "@query-client/application-module": "*"
     reflect-metadata: "*"
     rxjs: "*"
