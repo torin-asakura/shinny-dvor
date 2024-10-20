@@ -18,6 +18,7 @@ import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-
 import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
+import { I18nPort }                             from '../../../ports/index.js'
 
 @Injectable()
 class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
@@ -43,17 +44,18 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   constructor(
     telegramClient: TelegramClientPort,
     private readonly getAppointmentsByDayUseCase: GetAppointmentsByDayUseCase,
-    private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase
+    private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase,
+    i18n: I18nPort
   ) {
-    super(telegramClient)
+    super(telegramClient, i18n)
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): TimeSlotsType[0] | boolean {
     const { messageText: responseText } = ctx
 
     if (responseText === CLOSED_TIME_SLOT_TEXT) {
-      const { appointmentConversation_closedTimeSlotMessage } = this.telegramClient.ruLocale
-      this.telegramClient.replyMessage(ctx, appointmentConversation_closedTimeSlotMessage)
+      const closedTimeSlotMessage = this.i18n.getAppointmentConversationClosedTimeSlotMessage()
+      this.telegramClient.replyMessage(ctx, closedTimeSlotMessage)
       return false
     }
 
@@ -62,24 +64,21 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
       return findedTimeSlot
     }
 
-    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
-    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
+    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType, selectedDayMs: number): Promise<void> {
-    const {
-      appointmentConversation_cancelAppointmentButton,
-      appointmentConversation_selectTimeSlotMessage,
-    } = this.telegramClient.ruLocale
+    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const selectTimeSlotMessage = this.i18n.getAppointmentConversationSelectTimeSlotMessage()
 
     await this.initData(selectedDayMs)
 
-    await this.telegramClient.sendMessageWithMarkup(
-      ctx,
-      appointmentConversation_selectTimeSlotMessage,
-      [...this.keyboardVariants, appointmentConversation_cancelAppointmentButton] as Array<string>
-    )
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectTimeSlotMessage, [
+      ...this.keyboardVariants,
+      cancelAppointmentButton,
+    ] as Array<string>)
   }
 
   private async getWorkTimeData(): Promise<ParsedWorkTimeType> {

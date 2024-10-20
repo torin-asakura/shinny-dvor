@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -8,6 +7,7 @@ import { getFormattedAppointmentData }          from '@telegram-bot/application-
 import { getUserFullName }                      from '@telegram-bot/application-module/getters'
 
 import { TelegramClientPort }                   from '../../ports/index.js'
+import { I18nPort }                             from '../../ports/index.js'
 import { GetCommentaryQuestionAnswerPart }      from './question-answer-pairs/index.js'
 import { GetDateQuestionAnswerPart }            from './question-answer-pairs/index.js'
 import { GetRadiiQuestionAnswerPart }           from './question-answer-pairs/index.js'
@@ -27,13 +27,13 @@ export class AppointmentConversationService {
     private readonly appointmentGetRadiiConversationPart: GetRadiiQuestionAnswerPart,
     private readonly appointmentGetServicesConversationPart: GetServiceQuestionAnswerPart,
     private readonly appointmentGetCommentaryConversationPart: GetCommentaryQuestionAnswerPart,
-    private readonly appointmentGetApprovalConversationPart: GetApprovalQuestionAnswerPair
+    private readonly appointmentGetApprovalConversationPart: GetApprovalQuestionAnswerPair,
+    private readonly i18n: I18nPort
   ) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     try {
-      const startConversationMessage =
-        this.telegramClient.ruLocale.appointmentConversation_startConversationMessage
+      const startConversationMessage = this.i18n.getAppointmentConversationStartConversation()
       await this.telegramClient.sendMessage(ctx, startConversationMessage)
 
       const appointmentConversation = this.telegramClient.createConversation(ctx)
@@ -67,17 +67,15 @@ export class AppointmentConversationService {
       await this.writeAppointmentDataUseCase.process(formattedConversationData)
 
       // TODO подставить usename бота оператора
-      await this.telegramClient.sendMessage(
-        ctx,
-        this.telegramClient.ruLocale.appointmentConversation_endConversatoinMessage
-      )
+      const endConversatoinMessage = this.i18n.getAppointmentConversationEndConversation()
+      await this.telegramClient.sendMessage(ctx, endConversatoinMessage)
 
       this.telegramClient.removeConversation(ctx.chatId)
     } catch (error) {
       // eslint-disable-next-line
       console.error(error)
-      const { appointmentConversation_serverErrorMessage } = this.telegramClient.ruLocale
-      await this.telegramClient.sendMessage(ctx, appointmentConversation_serverErrorMessage)
+      const serverErrorMessage = this.i18n.getAppointmentConversationServerError()
+      await this.telegramClient.sendMessage(ctx, serverErrorMessage)
     }
   }
 }

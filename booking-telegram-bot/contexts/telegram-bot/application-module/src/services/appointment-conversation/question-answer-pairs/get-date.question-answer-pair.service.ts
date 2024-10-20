@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -9,6 +8,7 @@ import { SUGGESTED_DAYS_QUANTITY }              from '@telegram-bot/application-
 import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
+import { I18nPort }                             from '../../../ports/index.js'
 
 @Injectable()
 class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
@@ -18,23 +18,20 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
 
   keyboardVariants
 
-  constructor(telegramClient: TelegramClientPort) {
-    super(telegramClient)
+  constructor(telegramClient: TelegramClientPort, i18n: I18nPort) {
+    super(telegramClient, i18n)
     this.suggestedDates = this.getSuggestedDates()
     this.keyboardVariants = this.getKeyboardVariants()
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const {
-      appointmentConversation_selectDateMessage,
-      appointmentConversation_cancelAppointmentButton,
-    } = this.telegramClient.ruLocale
+    const selectDateMessage = this.i18n.getAppointmentConversationSelectDateMessage()
+    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
 
-    await this.telegramClient.sendMessageWithMarkup(
-      ctx,
-      appointmentConversation_selectDateMessage,
-      [...this.keyboardVariants, appointmentConversation_cancelAppointmentButton]
-    )
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectDateMessage, [
+      ...this.keyboardVariants,
+      cancelAppointmentButton,
+    ])
   }
 
   checkAnswer(
@@ -42,7 +39,7 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   ): boolean | { clientText: string; milliseconds: number } {
     const { messageText: responseText } = ctx
 
-    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
+    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
 
     if (this.keyboardVariants.includes(responseText)) {
       const date = this.suggestedDates.find(({ clientText }) => clientText === responseText)
@@ -50,7 +47,7 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
       return date
     }
 
-    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 

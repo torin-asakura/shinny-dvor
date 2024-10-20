@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import { Injectable }                           from '@nestjs/common'
@@ -7,6 +6,7 @@ import { GetServiceTitlesUseCase }              from '@query-client/application-
 import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
+import { I18nPort }                             from '../../../ports/index.js'
 
 @Injectable()
 class GetServiceQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
@@ -16,36 +16,33 @@ class GetServiceQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
 
   constructor(
     telegramClient: TelegramClientPort,
-    private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase
+    private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase,
+    i18n: I18nPort
   ) {
-    super(telegramClient)
+    super(telegramClient, i18n)
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const {
-      appointmentConversation_selectServiceMessage,
-      appointmentConversation_cancelAppointmentButton,
-    } = this.telegramClient.ruLocale
+    const selectServiceMessage = this.i18n.getAppointmentConversationSelectServiceMessage()
+    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
 
-    await this.telegramClient.sendMessageWithMarkup(
-      ctx,
-      appointmentConversation_selectServiceMessage,
-      [...this.serviceTitles, appointmentConversation_cancelAppointmentButton]
-    )
+    await this.telegramClient.sendMessageWithMarkup(ctx, selectServiceMessage, [
+      ...this.serviceTitles,
+      cancelAppointmentButton,
+    ])
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
-
+    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
     if (this.serviceTitles.includes(responseText)) {
       return responseText
     }
 
-    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
+    this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { ConversationDataType }            from './get-approval.question-answer-pair.interface.js'
@@ -8,14 +7,15 @@ import { Injectable }                           from '@nestjs/common'
 import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
 import { TelegramClientPort }                   from '../../../ports/index.js'
+import { I18nPort }                             from '../../../ports/index.js'
 
 @Injectable()
 class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
   questionAnswerPairName = 'approval'
 
   // eslint-disable-next-line
-  constructor(telegramClient: TelegramClientPort) {
-    super(telegramClient)
+  constructor(telegramClient: TelegramClientPort, i18n: I18nPort) {
+    super(telegramClient, i18n)
   }
 
   async sendQuestion(
@@ -24,38 +24,34 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
   ): Promise<void> {
     const approvalMessage = this.getApprovalMessage(questionData)
 
-    const {
-      appointmentConversation_approveAppointmentButton,
-      appointmentConversation_editAppointmentButton,
-      appointmentConversation_cancelAppointmentButton,
-    } = this.telegramClient.ruLocale
+    const approveAppointmentButton = this.i18n.getAppointmentConversationApproveAppointmentButton()
+    const editAppointmentButton = this.i18n.getAppointmentConversationEditAppointmentButton()
+    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
 
     await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
-      appointmentConversation_approveAppointmentButton,
-      appointmentConversation_editAppointmentButton,
-      appointmentConversation_cancelAppointmentButton,
+      approveAppointmentButton,
+      editAppointmentButton,
+      cancelAppointmentButton,
     ])
   }
 
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean {
     const { messageText: responseText } = ctx
 
-    const {
-      appointmentConversation_approveAppointmentButton,
-      appointmentConversation_editAppointmentButton,
-    } = this.telegramClient.ruLocale
+    const approveAppointmentButton = this.i18n.getAppointmentConversationApproveAppointmentButton()
+    const editAppointmentButton = this.i18n.getAppointmentConversationEditAppointmentButton()
 
-    if (responseText === appointmentConversation_approveAppointmentButton) {
+    if (responseText === approveAppointmentButton) {
       return true
     }
 
-    if (responseText === appointmentConversation_editAppointmentButton) {
+    if (responseText === editAppointmentButton) {
       this.telegramClient.removeConversation(ctx.chatId)
       return true
     }
 
-    const { appointmentConversation_missClickMessage } = this.telegramClient.ruLocale
-    this.telegramClient.replyMessage(ctx, appointmentConversation_missClickMessage)
+    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    this.telegramClient.replyMessage(ctx, missClickMessage)
 
     return false
   }
@@ -72,11 +68,11 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
       minute: '2-digit',
     })
 
-    const carBodyTitle = this.telegramClient.ruLocale.appointmentConversation_carBodyTitle
-    const radiiTitle = this.telegramClient.ruLocale.appointmentConversation_radiiTitle
-    const serviceTitle = this.telegramClient.ruLocale.appointmentConversation_serviceTitle
-    const selectedDateTitle = this.telegramClient.ruLocale.appointmentConversation_selectedDateTitle
-    const commentaryTitle = this.telegramClient.ruLocale.appointmentConversation_commentaryTitle
+    const carBodyTitle = this.i18n.getAppointmentConversationCarBodyTitle()
+    const radiiTitle = this.i18n.getAppointmentConversationRadiiTitle()
+    const serviceTitle = this.i18n.getAppointmentConversationServiceTitle()
+    const selectedDateTitle = this.i18n.getAppointmentConversationSelectedDateTitle()
+    const commentaryTitle = this.i18n.getAppointmentConversationCommentaryTitle()
 
     let approvalMessage = ''
     approvalMessage += `${carBodyTitle}: ${carBody}\n`
