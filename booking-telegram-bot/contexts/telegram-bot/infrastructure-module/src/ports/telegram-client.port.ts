@@ -10,7 +10,6 @@ import { CreateConversationService }            from '@booking-telegram-bot/tgsn
 import { RemoveConversationService }            from '@booking-telegram-bot/tgsnake-adapter'
 import { CheckChatConversationService }         from '@booking-telegram-bot/tgsnake-adapter'
 import { ReplyMessageService }                  from '@booking-telegram-bot/tgsnake-adapter'
-import { GetRuLocaleService }                   from '@booking-telegram-bot/tgsnake-adapter'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
@@ -20,13 +19,8 @@ export class TelegramClientPortImpl implements TelegramClientPort {
     private readonly replyMessageUseCase: ReplyMessageService,
     private readonly createConversationUseCase: CreateConversationService,
     private readonly removeConversationUseCase: RemoveConversationService,
-    private readonly checkChatConversationUseCase: CheckChatConversationService,
-    private readonly getRuLocaleUseCase: GetRuLocaleService
+    private readonly checkChatConversationUseCase: CheckChatConversationService
   ) {}
-
-  get ruLocale(): Record<string, string> {
-    return this.getRuLocaleUseCase.process()
-  }
 
   async sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void> {
     return this.sendMessageUseCase.process(ctx, text)
