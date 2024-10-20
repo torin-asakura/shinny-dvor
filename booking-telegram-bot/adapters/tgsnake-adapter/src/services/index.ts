@@ -1,7 +1,6 @@
 export * from './tgsnake-adapter.service.js'
 export * from './check-chat-conversation.service.js'
 export * from './create-conversation.service.js'
-export * from './get-ru-locale.service.js'
 export * from './on-command.service.js'
 export * from './on-message.service.js'
 export * from './remove-conversation.service.js'
