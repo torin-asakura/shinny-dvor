@@ -2,13 +2,13 @@ import type { OnModuleInit } from '@nestjs/common'
 
 import { Injectable }        from '@nestjs/common'
 
-import { OnCommandUseCase }  from '@booking-telegram-bot/tgsnake-adapter'
+import { OnCommandService }  from '@booking-telegram-bot/tgsnake-adapter'
 import { StartCommand }      from '@telegram-bot/application-module'
 
 @Injectable()
 export class StartCommandProcessor implements OnModuleInit {
   constructor(
-    private readonly onCommandUseCase: OnCommandUseCase,
+    private readonly onCommandUseCase: OnCommandService,
     private readonly startCommand: StartCommand
   ) {}
 

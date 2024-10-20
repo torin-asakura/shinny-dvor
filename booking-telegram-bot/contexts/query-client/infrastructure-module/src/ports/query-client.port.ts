@@ -2,18 +2,18 @@ import type { QueryClientPort }        from '@query-client/application-module'
 
 import { Injectable }                  from '@nestjs/common'
 
-import { GetCarBodyTitlesUseCase }     from '@booking-telegram-bot/apollo-adapter'
-import { GetRadiiTitlesUseCase }       from '@booking-telegram-bot/apollo-adapter'
-import { GetServiceTitlesUseCase }     from '@booking-telegram-bot/apollo-adapter'
-import { GetWorkTimeRawStringUseCase } from '@booking-telegram-bot/apollo-adapter'
+import { GetCarBodyTitlesService }     from '@booking-telegram-bot/apollo-adapter'
+import { GetRadiiTitlesService }       from '@booking-telegram-bot/apollo-adapter'
+import { GetServiceTitlesService }     from '@booking-telegram-bot/apollo-adapter'
+import { GetWorkTimeRawStringService } from '@booking-telegram-bot/apollo-adapter'
 
 @Injectable()
 export class QueryClientPortImpl implements QueryClientPort {
   constructor(
-    private readonly getCarBodyTitlesUseCase: GetCarBodyTitlesUseCase,
-    private readonly getRadiiTitlesUseCase: GetRadiiTitlesUseCase,
-    private readonly getServiceTitlesUseCase: GetServiceTitlesUseCase,
-    private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase
+    private readonly getCarBodyTitlesUseCase: GetCarBodyTitlesService,
+    private readonly getRadiiTitlesUseCase: GetRadiiTitlesService,
+    private readonly getServiceTitlesUseCase: GetServiceTitlesService,
+    private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringService
   ) {}
 
   async getCarBodyTitles(): Promise<Array<string>> {

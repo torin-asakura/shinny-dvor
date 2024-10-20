@@ -4,24 +4,24 @@ import type { TelegramClientPort }              from '@telegram-bot/application-
 
 import { Injectable }                           from '@nestjs/common'
 
-import { SendMessageUseCase }                   from '@booking-telegram-bot/tgsnake-adapter'
-import { SendMessageWithMarkupUseCase }         from '@booking-telegram-bot/tgsnake-adapter'
-import { CreateConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
-import { RemoveConversationUseCase }            from '@booking-telegram-bot/tgsnake-adapter'
-import { CheckChatConversationUseCase }         from '@booking-telegram-bot/tgsnake-adapter'
-import { ReplyMessageUseCase }                  from '@booking-telegram-bot/tgsnake-adapter'
-import { GetRuLocaleUseCase }                   from '@booking-telegram-bot/tgsnake-adapter'
+import { SendMessageService }                   from '@booking-telegram-bot/tgsnake-adapter'
+import { SendMessageWithMarkupService }         from '@booking-telegram-bot/tgsnake-adapter'
+import { CreateConversationService }            from '@booking-telegram-bot/tgsnake-adapter'
+import { RemoveConversationService }            from '@booking-telegram-bot/tgsnake-adapter'
+import { CheckChatConversationService }         from '@booking-telegram-bot/tgsnake-adapter'
+import { ReplyMessageService }                  from '@booking-telegram-bot/tgsnake-adapter'
+import { GetRuLocaleService }                   from '@booking-telegram-bot/tgsnake-adapter'
 
 @Injectable()
 export class TelegramClientPortImpl implements TelegramClientPort {
   constructor(
-    private readonly sendMessageUseCase: SendMessageUseCase,
-    private readonly sendMessageWithMarkupUseCase: SendMessageWithMarkupUseCase,
-    private readonly replyMessageUseCase: ReplyMessageUseCase,
-    private readonly createConversationUseCase: CreateConversationUseCase,
-    private readonly removeConversationUseCase: RemoveConversationUseCase,
-    private readonly checkChatConversationUseCase: CheckChatConversationUseCase,
-    private readonly getRuLocaleUseCase: GetRuLocaleUseCase
+    private readonly sendMessageUseCase: SendMessageService,
+    private readonly sendMessageWithMarkupUseCase: SendMessageWithMarkupService,
+    private readonly replyMessageUseCase: ReplyMessageService,
+    private readonly createConversationUseCase: CreateConversationService,
+    private readonly removeConversationUseCase: RemoveConversationService,
+    private readonly checkChatConversationUseCase: CheckChatConversationService,
+    private readonly getRuLocaleUseCase: GetRuLocaleService
   ) {}
 
   get ruLocale(): Record<string, string> {

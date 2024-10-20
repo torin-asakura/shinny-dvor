@@ -2,13 +2,13 @@ import type { OnModuleInit }     from '@nestjs/common'
 
 import { Injectable }            from '@nestjs/common'
 
-import { OnMessageUseCase }      from '@booking-telegram-bot/tgsnake-adapter'
+import { OnMessageService }      from '@booking-telegram-bot/tgsnake-adapter'
 import { ReceiveMessageUseCase } from '@telegram-bot/application-module'
 
 @Injectable()
 export class ReceiveMessageProcessor implements OnModuleInit {
   constructor(
-    private readonly onMessageUseCase: OnMessageUseCase,
+    private readonly onMessageUseCase: OnMessageService,
     private readonly receiveMessageUseCase: ReceiveMessageUseCase
   ) {}
 
