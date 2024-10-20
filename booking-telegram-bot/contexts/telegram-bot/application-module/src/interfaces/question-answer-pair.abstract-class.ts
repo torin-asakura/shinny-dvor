@@ -1,14 +1,16 @@
-/* eslint-disable @typescript-eslint/naming-convention */
-
 import type { CreateConversationReturnType }    from '@telegram-bot/application-module'
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
 
 import type { TelegramClientPort }              from '../ports/index.js'
+import type { I18nPort }                        from '../ports/index.js'
 
 abstract class QuestionAnswerPairAbstractClass {
   questionAnswerPairName!: string
 
-  constructor(readonly telegramClient: TelegramClientPort) {}
+  constructor(
+    readonly telegramClient: TelegramClientPort,
+    readonly i18n: I18nPort
+  ) {}
 
   async process(
     ctx: TelegramBotFormattedContextType,
@@ -25,7 +27,8 @@ abstract class QuestionAnswerPairAbstractClass {
       if (this.checkCancelCondition(responseText)) {
         this.telegramClient.removeConversation(waitMessageCtx.chatId)
 
-        this.telegramClient.replyMessage(ctx, this.telegramClient.ruLocale.appointmentCanceled)
+        const canceledMessage = this.i18n.getCanceled()
+        this.telegramClient.replyMessage(ctx, canceledMessage)
         return false
       }
 
@@ -50,15 +53,10 @@ abstract class QuestionAnswerPairAbstractClass {
   }
 
   checkCancelCondition(text: string): boolean {
-    const {
-      appointmentConversation_cancelAppointmentButton,
-      appointmentConversation_cancelAppointmentCommand,
-    } = this.telegramClient.ruLocale
+    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const cancelAppointmentCommand = this.i18n.getAppointmentConversationCancelAppointmentCommand()
 
-    return (
-      text === appointmentConversation_cancelAppointmentButton ||
-      text === appointmentConversation_cancelAppointmentCommand
-    )
+    return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }
 
   abstract sendQuestion(
