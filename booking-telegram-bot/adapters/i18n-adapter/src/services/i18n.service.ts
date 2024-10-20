@@ -91,7 +91,7 @@ class I18nAdapterService {
     return this.getMessage('appointment-conversation.cancelAppointmentCommand')
   }
 
-  getAppointmentConversationMissClickMessage(): string {
+  getAppointmentConversationMissClick(): string {
     return this.getMessage('appointment-conversation.missClickMessage')
   }
 
