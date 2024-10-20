@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@booking-telegram-bot/apollo-adapter": "workspace:*",
+    "@booking-telegram-bot/i18n-adapter": "workspace:*",
     "@booking-telegram-bot/mikro-orm-adapter": "workspace:*",
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*",
     "@grpc/grpc-js": "1.11.2",
