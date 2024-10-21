@@ -12,11 +12,13 @@ abstract class QuestionAnswerPairAbstractClass {
     readonly i18n: I18nPort
   ) {}
 
-  async process(
+  async process<Type>(
     ctx: TelegramBotFormattedContextType,
     conversation: CreateConversationReturnType,
-    processData?: Record<'questionData', Record<string, any>>
-  ): Promise<void> {
+    processData?: Record<'questionData', Record<string, any> | number>
+  ): Promise<Type> {
+    let outputData
+
     const questionData = processData?.questionData
 
     await this.sendQuestion(ctx, questionData)
@@ -39,8 +41,11 @@ abstract class QuestionAnswerPairAbstractClass {
         conversation.data[this.questionAnswerPairName] = checkAnswerResult
       }
 
+      outputData = checkAnswerResult
       return Boolean(checkAnswerResult)
     })
+
+    return outputData as Type
   }
 
   checkWriteConversationDataCondition(

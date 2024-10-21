@@ -1,4 +1,4 @@
-type AppointmentDataType = {
+type OrmAppointmentDataType = {
   telegramUserId: bigint
   telegramFullName: string
   timeSlotStart: bigint
@@ -10,4 +10,4 @@ type AppointmentDataType = {
   commentary?: string
 }
 
-export type { AppointmentDataType }
+export type { OrmAppointmentDataType }
