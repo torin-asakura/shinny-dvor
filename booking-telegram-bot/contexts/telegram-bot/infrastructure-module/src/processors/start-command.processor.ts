@@ -1,15 +1,15 @@
-import type { OnModuleInit } from '@nestjs/common'
+import type { OnModuleInit }       from '@nestjs/common'
 
-import { Injectable }        from '@nestjs/common'
+import { Injectable }              from '@nestjs/common'
 
-import { OnCommandService }  from '@booking-telegram-bot/tgsnake-adapter'
-import { StartCommand }      from '@telegram-bot/application-module'
+import { OnTgsnakeCommandService } from '@booking-telegram-bot/tgsnake-adapter'
+import { StartCommandUseCase }     from '@telegram-bot/application-module'
 
 @Injectable()
 export class StartCommandProcessor implements OnModuleInit {
   constructor(
-    private readonly onCommandUseCase: OnCommandService,
-    private readonly startCommand: StartCommand
+    private readonly onTgsnakeCommandService: OnTgsnakeCommandService,
+    private readonly startCommand: StartCommandUseCase
   ) {}
 
   async onModuleInit(): Promise<void> {
@@ -17,7 +17,7 @@ export class StartCommandProcessor implements OnModuleInit {
   }
 
   private async processCommand_startCommand(): Promise<void> {
-    this.onCommandUseCase.process('start', async (ctx) => {
+    this.onTgsnakeCommandService.process('start', async (ctx) => {
       await this.startCommand.execute(ctx)
     })
   }

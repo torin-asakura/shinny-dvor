@@ -2,9 +2,9 @@
 /* eslint-disable prefer-destructuring */
 
 import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
+import type { WorkTimeDataType }                from '@telegram-bot/application-module'
+import type { TimeSlotsType }                   from '@telegram-bot/application-module'
 
-import type { WorkTimeDataType }                from '../appointment-conversation.interfaces.js'
-import type { TimeSlotsType }                   from '../appointment-conversation.interfaces.js'
 import type { ParsedWorkTimeType }              from './get-time-slot.question-answer-pair.interfaces.js'
 
 import { Injectable }                           from '@nestjs/common'

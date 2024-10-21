@@ -79,7 +79,7 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
     approvalMessage += `${radiiTitle}: ${radii}\n`
     approvalMessage += `${serviceTitle}: ${service}\n`
     approvalMessage += `${selectedDateTitle}: ${selectedDateText}\n`
-    if (commentary) approvalMessage += `${commentaryTitle}: ${commentary}`
+    if (typeof commentary === 'string') approvalMessage += `${commentaryTitle}: ${commentary}`
 
     return approvalMessage
   }
