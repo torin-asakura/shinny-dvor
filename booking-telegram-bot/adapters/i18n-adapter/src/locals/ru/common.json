@@ -1,5 +1,5 @@
 {
-  "welcome": "welcome message",
+  "welcome": "Бот для записи в https://shdvor.pro/\n\nЧтобы начать отправьте команду - /create_appointment",
   "help": "help message",
   "canceled": "Запись отменена",
   "entrypoint": "Бот для записи в https://shdvor.pro/\n\nЧтобы начать отправьте команду - /create_appointment"
