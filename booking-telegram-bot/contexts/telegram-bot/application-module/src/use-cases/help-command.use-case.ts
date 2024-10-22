@@ -13,7 +13,7 @@ export class HelpCommandUseCase {
   ) {}
 
   async execute(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const helpMessage = this.i18n.getHelp()
+    const helpMessage = this.i18n.help
     await this.telegramClient.sendMessage(ctx, helpMessage)
   }
 }

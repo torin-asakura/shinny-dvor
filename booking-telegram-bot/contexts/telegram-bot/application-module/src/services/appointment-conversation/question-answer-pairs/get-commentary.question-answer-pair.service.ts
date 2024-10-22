@@ -20,9 +20,9 @@ class GetCommentaryQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     const continueWithoutCommentaryButton =
-      this.i18n.getAppointmentConversationContinueWithoutCommentaryButton()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
-    const commentaryTitle = this.i18n.getAppointmentConversationCommentaryTitle()
+      this.i18n.appointmentConversationContinueWithoutCommentaryButton
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
+    const commentaryTitle = this.i18n.appointmentConversationCommentaryTitle
 
     await this.telegramClient.sendMessageWithMarkup(ctx, commentaryTitle, [
       continueWithoutCommentaryButton,
@@ -34,7 +34,7 @@ class GetCommentaryQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
     const { messageText: responseText } = ctx
 
     const continueWithoutCommentaryButton =
-      this.i18n.getAppointmentConversationContinueWithoutCommentaryButton()
+      this.i18n.appointmentConversationContinueWithoutCommentaryButton
 
     if (responseText === continueWithoutCommentaryButton) {
       return true

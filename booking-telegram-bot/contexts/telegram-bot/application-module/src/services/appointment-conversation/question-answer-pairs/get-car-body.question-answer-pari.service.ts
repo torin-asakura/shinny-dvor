@@ -25,8 +25,8 @@ class GetCarBodyQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const selectCarBodyMessage = this.i18n.getAppointmentConversationSelectCarBodyMessage()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const selectCarBodyMessage = this.i18n.appointmentConversationSelectCarBodyMessage
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectCarBodyMessage, [
       ...this.carBodyTitles,
@@ -37,7 +37,7 @@ class GetCarBodyQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
 
     if (this.carBodyTitles.includes(responseText)) {
       return responseText

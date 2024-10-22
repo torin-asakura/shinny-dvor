@@ -15,7 +15,7 @@ export class AppointmentConversationCatchErrorUseCase {
   async process(ctx: TelegramBotFormattedContextType, error: Error): Promise<void> {
     // eslint-disable-next-line
     console.error(error)
-    const serverErrorMessage = this.i18n.getAppointmentConversationServerError()
+    const serverErrorMessage = this.i18n.appointmentConversationServerError
     await this.telegramClient.sendMessage(ctx, serverErrorMessage)
   }
 }

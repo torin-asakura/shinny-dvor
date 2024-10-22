@@ -16,12 +16,12 @@ export class ReceiveMessageUseCase {
     try {
       if (!this.telegramClient.checkChatConversation(ctx.chatId)) {
         // TODO need markdown send
-        await this.telegramClient.sendMessage(ctx, this.i18n.getEntrypoint())
+        await this.telegramClient.sendMessage(ctx, this.i18n.entrypoint)
       }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error(error)
-      const errorMessage = this.i18n.getAppointmentConversationServerError()
+      const errorMessage = this.i18n.appointmentConversationServerError
       await this.telegramClient.sendMessage(ctx, errorMessage)
     }
   }

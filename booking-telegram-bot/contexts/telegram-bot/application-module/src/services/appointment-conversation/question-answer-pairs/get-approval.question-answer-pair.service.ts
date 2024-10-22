@@ -24,9 +24,9 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
   ): Promise<void> {
     const approvalMessage = this.getApprovalMessage(questionData)
 
-    const approveAppointmentButton = this.i18n.getAppointmentConversationApproveAppointmentButton()
-    const editAppointmentButton = this.i18n.getAppointmentConversationEditAppointmentButton()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const approveAppointmentButton = this.i18n.appointmentConversationApproveAppointmentButton
+    const editAppointmentButton = this.i18n.appointmentConversationEditAppointmentButton
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
 
     await this.telegramClient.sendMessageWithMarkup(ctx, approvalMessage, [
       approveAppointmentButton,
@@ -38,8 +38,8 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean {
     const { messageText: responseText } = ctx
 
-    const approveAppointmentButton = this.i18n.getAppointmentConversationApproveAppointmentButton()
-    const editAppointmentButton = this.i18n.getAppointmentConversationEditAppointmentButton()
+    const approveAppointmentButton = this.i18n.appointmentConversationApproveAppointmentButton
+    const editAppointmentButton = this.i18n.appointmentConversationEditAppointmentButton
 
     if (responseText === approveAppointmentButton) {
       return true
@@ -50,7 +50,7 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
       return true
     }
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
     this.telegramClient.replyMessage(ctx, missClickMessage)
 
     return false
@@ -68,11 +68,11 @@ class GetApprovalQuestionAnswerPair extends QuestionAnswerPairAbstractClass {
       minute: '2-digit',
     })
 
-    const carBodyTitle = this.i18n.getAppointmentConversationCarBodyTitle()
-    const radiiTitle = this.i18n.getAppointmentConversationRadiiTitle()
-    const serviceTitle = this.i18n.getAppointmentConversationServiceTitle()
-    const selectedDateTitle = this.i18n.getAppointmentConversationSelectedDateTitle()
-    const commentaryTitle = this.i18n.getAppointmentConversationCommentaryTitle()
+    const carBodyTitle = this.i18n.appointmentConversationCarBodyTitle
+    const radiiTitle = this.i18n.appointmentConversationRadiiTitle
+    const serviceTitle = this.i18n.appointmentConversationServiceTitle
+    const selectedDateTitle = this.i18n.appointmentConversationSelectedDateTitle
+    const commentaryTitle = this.i18n.appointmentConversationCommentaryTitle
 
     let approvalMessage = ''
     approvalMessage += `${carBodyTitle}: ${carBody}\n`

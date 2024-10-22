@@ -29,7 +29,7 @@ abstract class QuestionAnswerPairAbstractClass {
       if (this.checkCancelCondition(responseText)) {
         this.telegramClient.removeConversation(waitMessageCtx.chatId)
 
-        const canceledMessage = this.i18n.getCanceled()
+        const canceledMessage = this.i18n.canceled
         this.telegramClient.replyMessage(ctx, canceledMessage)
         return false
       }
@@ -58,8 +58,8 @@ abstract class QuestionAnswerPairAbstractClass {
   }
 
   checkCancelCondition(text: string): boolean {
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
-    const cancelAppointmentCommand = this.i18n.getAppointmentConversationCancelAppointmentCommand()
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
+    const cancelAppointmentCommand = this.i18n.appointmentConversationCancelAppointmentCommand
 
     return text === cancelAppointmentButton || text === cancelAppointmentCommand
   }

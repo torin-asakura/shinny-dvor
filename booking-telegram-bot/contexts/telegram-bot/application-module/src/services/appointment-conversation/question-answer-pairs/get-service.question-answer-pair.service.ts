@@ -25,8 +25,8 @@ class GetServiceQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const selectServiceMessage = this.i18n.getAppointmentConversationSelectServiceMessage()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const selectServiceMessage = this.i18n.appointmentConversationSelectServiceMessage
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectServiceMessage, [
       ...this.serviceTitles,
@@ -37,7 +37,7 @@ class GetServiceQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   checkAnswer(ctx: TelegramBotFormattedContextType): boolean | string {
     const { messageText: responseText } = ctx
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
     if (this.serviceTitles.includes(responseText)) {
       return responseText
     }

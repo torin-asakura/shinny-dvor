@@ -13,7 +13,7 @@ export class AppointmentConversationSendStartMessageUseCase {
   ) {}
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const startConversationMessage = this.i18n.getAppointmentConversationStartConversation()
+    const startConversationMessage = this.i18n.appointmentConversationStartConversation
     await this.telegramClient.sendMessage(ctx, startConversationMessage)
   }
 }

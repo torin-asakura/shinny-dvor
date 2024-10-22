@@ -25,8 +25,8 @@ class GetRadiiQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
     await this.initData()
 
-    const selectRadiiMessage = this.i18n.getAppointmentConversationSelectRadiiMessage()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const selectRadiiMessage = this.i18n.appointmentConversationSelectRadiiMessage
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectRadiiMessage, [
       ...this.radiiTitles,
@@ -41,7 +41,7 @@ class GetRadiiQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
       return responseText
     }
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
     this.telegramClient.replyMessage(ctx, missClickMessage)
 
     return false

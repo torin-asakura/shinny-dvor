@@ -8,99 +8,99 @@ import { I18nAdapterService } from '@booking-telegram-bot/i18n-adapter'
 class I18nPortImpl implements I18nPort {
   constructor(private readonly i18n: I18nAdapterService) {}
 
-  getWelcome(): string {
+  get welcome(): string {
     return this.i18n.getWelcome()
   }
 
-  getHelp(): string {
+  get help(): string {
     return this.i18n.getHelp()
   }
 
-  getCanceled(): string {
+  get canceled(): string {
     return this.i18n.getCanceled()
   }
 
-  getEntrypoint(): string {
+  get entrypoint(): string {
     return this.i18n.getEntrypoint()
   }
 
-  getAppointmentConversationServerError(): string {
+  get appointmentConversationServerError(): string {
     return this.i18n.getAppointmentConversationServerError()
   }
 
-  getAppointmentConversationStartConversation(): string {
+  get appointmentConversationStartConversation(): string {
     return this.i18n.getAppointmentConversationStartConversation()
   }
 
-  getAppointmentConversationEndConversation(): string {
+  get appointmentConversationEndConversation(): string {
     return this.i18n.getAppointmentConversationEndConversation()
   }
 
-  getAppointmentConversationCarBodyTitle(): string {
+  get appointmentConversationCarBodyTitle(): string {
     return this.i18n.getAppointmentConversationCarBodyTitle()
   }
 
-  getAppointmentConversationRadiiTitle(): string {
+  get appointmentConversationRadiiTitle(): string {
     return this.i18n.getAppointmentConversationRadiiTitle()
   }
 
-  getAppointmentConversationServiceTitle(): string {
+  get appointmentConversationServiceTitle(): string {
     return this.i18n.getAppointmentConversationServiceTitle()
   }
 
-  getAppointmentConversationSelectedDateTitle(): string {
+  get appointmentConversationSelectedDateTitle(): string {
     return this.i18n.getAppointmentConversationSelectedDateTitle()
   }
 
-  getAppointmentConversationCommentaryTitle(): string {
+  get appointmentConversationCommentaryTitle(): string {
     return this.i18n.getAppointmentConversationCommentaryTitle()
   }
 
-  getAppointmentConversationApproveAppointmentButton(): string {
+  get appointmentConversationApproveAppointmentButton(): string {
     return this.i18n.getAppointmentConversationApproveAppointmentButton()
   }
 
-  getAppointmentConversationEditAppointmentButton(): string {
+  get appointmentConversationEditAppointmentButton(): string {
     return this.i18n.getAppointmentConversationEditAppointmentButton()
   }
 
-  getAppointmentConversationSelectDateMessage(): string {
+  get appointmentConversationSelectDateMessage(): string {
     return this.i18n.getAppointmentConversationSelectDateMessage()
   }
 
-  getAppointmentConversationSelectCarBodyMessage(): string {
+  get appointmentConversationSelectCarBodyMessage(): string {
     return this.i18n.getAppointmentConversationSelectCarBodyMessage()
   }
 
-  getAppointmentConversationSelectRadiiMessage(): string {
+  get appointmentConversationSelectRadiiMessage(): string {
     return this.i18n.getAppointmentConversationSelectRadiiMessage()
   }
 
-  getAppointmentConversationSelectServiceMessage(): string {
+  get appointmentConversationSelectServiceMessage(): string {
     return this.i18n.getAppointmentConversationSelectServiceMessage()
   }
 
-  getAppointmentConversationSelectTimeSlotMessage(): string {
+  get appointmentConversationSelectTimeSlotMessage(): string {
     return this.i18n.getAppointmentConversationSelectTimeSlotMessage()
   }
 
-  getAppointmentConversationCancelAppointmentButton(): string {
+  get appointmentConversationCancelAppointmentButton(): string {
     return this.i18n.getAppointmentConversationCancelAppointmentButton()
   }
 
-  getAppointmentConversationCancelAppointmentCommand(): string {
+  get appointmentConversationCancelAppointmentCommand(): string {
     return this.i18n.getAppointmentConversationCancelAppointmentCommand()
   }
 
-  getAppointmentConversationMissClick(): string {
+  get appointmentConversationMissClick(): string {
     return this.i18n.getAppointmentConversationMissClick()
   }
 
-  getAppointmentConversationContinueWithoutCommentaryButton(): string {
+  get appointmentConversationContinueWithoutCommentaryButton(): string {
     return this.i18n.getAppointmentConversationContinueWithoutCommentaryButton()
   }
 
-  getAppointmentConversationClosedTimeSlotMessage(): string {
+  get appointmentConversationClosedTimeSlotMessage(): string {
     return this.i18n.getAppointmentConversationClosedTimeSlotMessage()
   }
 }

@@ -25,8 +25,8 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const selectDateMessage = this.i18n.getAppointmentConversationSelectDateMessage()
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
+    const selectDateMessage = this.i18n.appointmentConversationSelectDateMessage
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
 
     await this.telegramClient.sendMessageWithMarkup(ctx, selectDateMessage, [
       ...this.keyboardVariants,
@@ -39,7 +39,7 @@ class GetDateQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   ): boolean | { clientText: string; milliseconds: number } {
     const { messageText: responseText } = ctx
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
 
     if (this.keyboardVariants.includes(responseText)) {
       const date = this.suggestedDates.find(({ clientText }) => clientText === responseText)

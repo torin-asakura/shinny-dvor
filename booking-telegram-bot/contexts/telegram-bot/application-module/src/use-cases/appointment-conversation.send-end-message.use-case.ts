@@ -14,7 +14,7 @@ export class AppointmentConversationSendEndMessageUseCase {
 
   async process(ctx: TelegramBotFormattedContextType): Promise<void> {
     // TODO подставить usename бота оператора
-    const endConversatoinMessage = this.i18n.getAppointmentConversationEndConversation()
+    const endConversatoinMessage = this.i18n.appointmentConversationEndConversation
 
     await this.telegramClient.sendMessage(ctx, endConversatoinMessage)
   }

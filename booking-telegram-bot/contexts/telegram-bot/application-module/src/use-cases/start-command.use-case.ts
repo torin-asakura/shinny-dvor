@@ -13,7 +13,7 @@ export class StartCommandUseCase {
   ) {}
 
   async execute(ctx: TelegramBotFormattedContextType): Promise<void> {
-    const welcomeMessage = this.i18n.getWelcome()
+    const welcomeMessage = this.i18n.welcome
     await this.telegramClient.sendMessage(ctx, welcomeMessage)
   }
 }

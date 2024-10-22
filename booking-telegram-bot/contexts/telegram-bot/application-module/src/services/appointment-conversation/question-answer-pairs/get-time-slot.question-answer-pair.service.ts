@@ -54,7 +54,7 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
     const { messageText: responseText } = ctx
 
     if (responseText === CLOSED_TIME_SLOT_TEXT) {
-      const closedTimeSlotMessage = this.i18n.getAppointmentConversationClosedTimeSlotMessage()
+      const closedTimeSlotMessage = this.i18n.appointmentConversationClosedTimeSlotMessage
       this.telegramClient.replyMessage(ctx, closedTimeSlotMessage)
       return false
     }
@@ -64,14 +64,14 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
       return findedTimeSlot
     }
 
-    const missClickMessage = this.i18n.getAppointmentConversationMissClick()
+    const missClickMessage = this.i18n.appointmentConversationMissClick
     this.telegramClient.replyMessage(ctx, missClickMessage)
     return false
   }
 
   async sendQuestion(ctx: TelegramBotFormattedContextType, selectedDayMs: number): Promise<void> {
-    const cancelAppointmentButton = this.i18n.getAppointmentConversationCancelAppointmentButton()
-    const selectTimeSlotMessage = this.i18n.getAppointmentConversationSelectTimeSlotMessage()
+    const cancelAppointmentButton = this.i18n.appointmentConversationCancelAppointmentButton
+    const selectTimeSlotMessage = this.i18n.appointmentConversationSelectTimeSlotMessage
 
     await this.initData(selectedDayMs)
 

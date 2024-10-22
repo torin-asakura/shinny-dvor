@@ -1,49 +1,49 @@
 export abstract class I18nPort {
-  abstract getWelcome(): string
+  abstract get welcome(): string
 
-  abstract getHelp(): string
+  abstract get help(): string
 
-  abstract getCanceled(): string
+  abstract get canceled(): string
 
-  abstract getEntrypoint(): string
+  abstract get entrypoint(): string
 
-  abstract getAppointmentConversationServerError(): string
+  abstract get appointmentConversationServerError(): string
 
-  abstract getAppointmentConversationStartConversation(): string
+  abstract get appointmentConversationStartConversation(): string
 
-  abstract getAppointmentConversationEndConversation(): string
+  abstract get appointmentConversationEndConversation(): string
 
-  abstract getAppointmentConversationCarBodyTitle(): string
+  abstract get appointmentConversationCarBodyTitle(): string
 
-  abstract getAppointmentConversationRadiiTitle(): string
+  abstract get appointmentConversationRadiiTitle(): string
 
-  abstract getAppointmentConversationServiceTitle(): string
+  abstract get appointmentConversationServiceTitle(): string
 
-  abstract getAppointmentConversationSelectedDateTitle(): string
+  abstract get appointmentConversationSelectedDateTitle(): string
 
-  abstract getAppointmentConversationCommentaryTitle(): string
+  abstract get appointmentConversationCommentaryTitle(): string
 
-  abstract getAppointmentConversationApproveAppointmentButton(): string
+  abstract get appointmentConversationApproveAppointmentButton(): string
 
-  abstract getAppointmentConversationEditAppointmentButton(): string
+  abstract get appointmentConversationEditAppointmentButton(): string
 
-  abstract getAppointmentConversationSelectDateMessage(): string
+  abstract get appointmentConversationSelectDateMessage(): string
 
-  abstract getAppointmentConversationSelectCarBodyMessage(): string
+  abstract get appointmentConversationSelectCarBodyMessage(): string
 
-  abstract getAppointmentConversationSelectRadiiMessage(): string
+  abstract get appointmentConversationSelectRadiiMessage(): string
 
-  abstract getAppointmentConversationSelectServiceMessage(): string
+  abstract get appointmentConversationSelectServiceMessage(): string
 
-  abstract getAppointmentConversationSelectTimeSlotMessage(): string
+  abstract get appointmentConversationSelectTimeSlotMessage(): string
 
-  abstract getAppointmentConversationCancelAppointmentButton(): string
+  abstract get appointmentConversationCancelAppointmentButton(): string
 
-  abstract getAppointmentConversationCancelAppointmentCommand(): string
+  abstract get appointmentConversationCancelAppointmentCommand(): string
 
-  abstract getAppointmentConversationMissClick(): string
+  abstract get appointmentConversationMissClick(): string
 
-  abstract getAppointmentConversationContinueWithoutCommentaryButton(): string
+  abstract get appointmentConversationContinueWithoutCommentaryButton(): string
 
-  abstract getAppointmentConversationClosedTimeSlotMessage(): string
+  abstract get appointmentConversationClosedTimeSlotMessage(): string
 }
