@@ -4,6 +4,7 @@ import type { CreateConversationReturnType }    from '@booking-telegram-bot/tgsn
 
 import { Injectable }                           from '@nestjs/common'
 
+import { TGSNAKE_FILTER }                       from '../constants/tgsnake-filter.constant.js'
 import { TgsnakeAdapterService }                from './index.js'
 import { getFormattedContextGetter }            from '../getters/index.js'
 
@@ -19,7 +20,7 @@ class CreateConversationService {
     return {
       data: {},
       waitMessage: async (callback) =>
-        conversation.wait('msg.text', (conversationCtx: TgsnakeContextType) => {
+        conversation.wait(TGSNAKE_FILTER.message, (conversationCtx: TgsnakeContextType) => {
           const formattedContext = getFormattedContextGetter(conversationCtx)
           return callback(formattedContext)
         }),
