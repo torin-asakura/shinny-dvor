@@ -6,7 +6,7 @@ import * as services          from '../services/index.js'
 import * as useCases          from '../use-cases/index.js'
 
 @Module({})
-export class TelegramBotApplicationModule {
+class TelegramBotApplicationModule {
   static register(): DynamicModule {
     const useCaseProviders = Object.values(useCases)
     const serviceProviders = Object.values(services)
@@ -22,3 +22,5 @@ export class TelegramBotApplicationModule {
     }
   }
 }
+
+export { TelegramBotApplicationModule }

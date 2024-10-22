@@ -1,0 +1,22 @@
+{
+  "serverErrorMessage": "На сервере произошла ошибка",
+  "startConversationMessage": "Записаться",
+  "endConversatoinMessage": "После того, как оператор подтвердит запись - вас оповестят.\n\n@someshdvoroperatorusername - связаться с оператором\nЧтобы добавить еще одну запись, отправьте команду - /create_appointment",
+  "carBodyTitle": "Тип кузова",
+  "radiiTitle": "Диаметр колёс",
+  "serviceTitle": "Тип ремонта",
+  "selectedDateTitle": "Выбранная дата",
+  "commentaryTitle": "Комментарий",
+  "approveAppointmentButton": "Согласовать запись",
+  "editAppointmentButton": "Изменить запись",
+  "selectDateMessage": "Выберите дату записи",
+  "selectCarBodyMessage": "Кузов автомобиля",
+  "selectRadiiMessage": "Диаметр колёс",
+  "selectServiceMessage": "Тип ремонта",
+  "selectTimeSlotMessage": "Выберите время записи",
+  "cancelAppointmentButton": "Отменить запись",
+  "cancelAppointmentCommand": "/cancel",
+  "missClickMessage": "Выберите ответ на клавиатуре, либо нажмите /cancel, чтобы отменить запись",
+  "continueWithoutCommentaryButton": "Продолжить без комментария",
+  "closedTimeSlotMessage": "Извините, но это время занято"
+}

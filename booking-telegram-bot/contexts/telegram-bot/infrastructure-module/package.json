@@ -7,7 +7,9 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@booking-telegram-bot/i18n-adapter": "workspace:*",
+    "@booking-telegram-bot/mikro-orm-adapter": "workspace:*",
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*",
     "@nestjs/common": "10.4.2",
     "@telegram-bot/application-module": "workspace:*",
@@ -15,7 +17,11 @@
     "rxjs": "7.8.1"
   },
   "peerDependencies": {
+    "@booking-telegram-bot/i18n-adapter": "*",
+    "@booking-telegram-bot/mikro-orm-adapter": "*",
+    "@booking-telegram-bot/tgsnake-adapter": "*",
     "@nestjs/common": "*",
+    "@telegram-bot/application-module": "*",
     "reflect-metadata": "*",
     "rxjs": "*"
   }

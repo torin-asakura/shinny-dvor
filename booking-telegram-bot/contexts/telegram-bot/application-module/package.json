@@ -5,9 +5,13 @@
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./getters": "./src/getters/index.ts",
+    "./interfaces": "./src/interfaces/index.ts",
+    "./classes": "./src/classes/index.ts",
+    "./constants": "./src/constants/index.ts"
   },
-  "dependencies": {
+  "devDependencies": {
     "@nestjs/common": "10.4.2",
     "@query-client/application-module": "workspace:*",
     "reflect-metadata": "0.2.2",
@@ -15,6 +19,7 @@
   },
   "peerDependencies": {
     "@nestjs/common": "*",
+    "@query-client/application-module": "*",
     "reflect-metadata": "*",
     "rxjs": "*"
   }

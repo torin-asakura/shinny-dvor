@@ -2,6 +2,7 @@ import type { DynamicModule }           from '@nestjs/common'
 
 import { Module }                       from '@nestjs/common'
 
+import { ApolloAdapterModule }          from '@booking-telegram-bot/apollo-adapter'
 import { QueryClientApplicationModule } from '@query-client/application-module'
 
 import { graphqlClientProviders }       from './query-client.infrastructure.providers.js'
@@ -16,7 +17,7 @@ export class QueryClientInfrastructureModule {
       module: QueryClientInfrastructureModule,
       providers: [...providers],
       exports: [...providers],
-      imports: [QueryClientApplicationModule.register()],
+      imports: [QueryClientApplicationModule.register(), ApolloAdapterModule.register()],
     }
   }
 }

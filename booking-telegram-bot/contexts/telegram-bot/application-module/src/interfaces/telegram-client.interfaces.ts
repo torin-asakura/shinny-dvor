@@ -1,10 +1,11 @@
 type TelegramBotFormattedContextType = {
   userId: bigint
+  userFirstName: string
+  userLastName?: string
   messageText: string
   accessHash: bigint
   messageId: number
   chatId: bigint
-  replyMessage: (text: string) => Promise<void>
 }
 
 type CreateConversationReturnType = {
