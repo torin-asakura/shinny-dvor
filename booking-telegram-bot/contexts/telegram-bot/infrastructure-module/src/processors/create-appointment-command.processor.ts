@@ -15,7 +15,7 @@ import { AppointmentConversationGetApprovalUseCase }        from '@telegram-bot/
 import { AppointmentConversationSendEndMessageUseCase }     from '@telegram-bot/application-module'
 import { AppointmentConversationRemoveConversationUseCase } from '@telegram-bot/application-module'
 import { AppointmentConversationCatchErrorUseCase }         from '@telegram-bot/application-module'
-import { OrmPort }                                          from '@telegram-bot/application-module'
+import { AppointmentEntityRepository }                      from '@telegram-bot/application-module'
 // TODO move it into that layer (infra)
 import { getUserFullName }                                  from '@telegram-bot/application-module/getters'
 // TODO move it into that layer (infra)
@@ -24,7 +24,7 @@ import { getFormattedAppointmentData }                      from '@telegram-bot/
 @Injectable()
 export class CreateAppointmentCommandProcessor implements OnModuleInit {
   constructor(
-    private readonly orm: OrmPort,
+    private readonly appointmentEntityRepository: AppointmentEntityRepository,
     private readonly onTgsnakeCommandService: OnTgsnakeCommandService,
     private readonly appointmentConversationSendStartMessageUseCase: AppointmentConversationSendStartMessageUseCase,
     private readonly appointmentConversationCreateConversationUseCase: AppointmentConversationCreateConversationUseCase,
@@ -110,7 +110,7 @@ export class CreateAppointmentCommandProcessor implements OnModuleInit {
           appointmentData
         )
 
-        await this.orm.writeAppointmentData(formattedConversationData)
+        await this.appointmentEntityRepository.writeData(formattedConversationData)
 
         await this.appointmentConversationSendEndMessageUseCase.process(ctx)
 

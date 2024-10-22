@@ -1,13 +1,13 @@
-import type { Provider }          from '@nestjs/common'
+import type { Provider }                   from '@nestjs/common'
 
-import { TelegramClientPort }     from '@telegram-bot/application-module'
-import { I18nPort }               from '@telegram-bot/application-module'
-import { OrmPort }                from '@telegram-bot/application-module'
+import { TelegramClientPort }              from '@telegram-bot/application-module'
+import { I18nPort }                        from '@telegram-bot/application-module'
+import { AppointmentEntityRepository }     from '@telegram-bot/application-module'
 
-import * as processors            from '../processors/index.js'
-import { TelegramClientPortImpl } from '../ports/index.js'
-import { I18nPortImpl }           from '../ports/index.js'
-import { OrmPortimpl }            from '../ports/index.js'
+import * as processors                     from '../processors/index.js'
+import { TelegramClientPortImpl }          from '../ports/index.js'
+import { I18nPortImpl }                    from '../ports/index.js'
+import { AppointmentEntityRepositoryImpl } from '../repositories/index.js'
 
 export const telegramBotProviders: Array<Provider> = [
   {
@@ -19,8 +19,8 @@ export const telegramBotProviders: Array<Provider> = [
     useClass: I18nPortImpl,
   },
   {
-    provide: OrmPort,
-    useClass: OrmPortimpl,
+    provide: AppointmentEntityRepository,
+    useClass: AppointmentEntityRepositoryImpl,
   },
   ...Object.values(processors),
 ]

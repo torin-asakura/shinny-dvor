@@ -15,9 +15,9 @@ import { WORK_TIME }                            from '../../../constants/index.j
 import { TIME_SLOT_STEP_MS }                    from '../../../constants/index.js'
 import { CLOSED_TIME_SLOT_TEXT }                from '../../../constants/index.js'
 import { QuestionAnswerPairAbstractClass }      from '../../../interfaces/index.js'
-import { OrmPort }                              from '../../../ports/index.js'
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { I18nPort }                             from '../../../ports/index.js'
+import { AppointmentEntityRepository }          from '../../../repositories/index.js'
 
 @Injectable()
 class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
@@ -44,7 +44,7 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
     telegramClient: TelegramClientPort,
     private readonly getWorkTimeRawStringUseCase: GetWorkTimeRawStringUseCase,
     i18n: I18nPort,
-    private readonly orm: OrmPort
+    private readonly appointmentEntityRepository: AppointmentEntityRepository
   ) {
     super(telegramClient, i18n)
   }
@@ -199,7 +199,7 @@ class GetTimeSlotQuestionAnswerPart extends QuestionAnswerPairAbstractClass {
   private async getSelectedDaySlosedTimeSlots(
     selectedDayMs: number
   ): Promise<Array<[number, number]>> {
-    const appointmentsData = await this.orm.getAppointmenstByDay(selectedDayMs)
+    const appointmentsData = await this.appointmentEntityRepository.getDataByDay(selectedDayMs)
     return appointmentsData
   }
 
