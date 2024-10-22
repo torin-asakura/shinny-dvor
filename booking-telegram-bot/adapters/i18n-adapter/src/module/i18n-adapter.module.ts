@@ -20,6 +20,8 @@ export class I18nAdapterModule {
     const providers = [...serviceProviders]
     const exports = [...serviceProviders]
 
+    const watch = Boolean(process.env.ENVIRONMENT === 'dev')
+
     return {
       global: true,
       module: I18nAdapterModule,
@@ -30,7 +32,7 @@ export class I18nAdapterModule {
           fallbackLanguage: 'ru',
           loaderOptions: {
             path: path.join(dianemPath, '../locals/'),
-            watch: true,
+            watch,
           },
         }),
       ],
