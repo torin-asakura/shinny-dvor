@@ -2671,10 +2671,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/service-entrypoint@workspace:booking-telegram-bot/entrypoints/service-entrypoint"
   dependencies:
-    "@booking-telegram-bot/apollo-adapter": "workspace:*"
-    "@booking-telegram-bot/i18n-adapter": "workspace:*"
-    "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
-    "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@grpc/grpc-js": "npm:1.11.2"
     "@grpc/proto-loader": "npm:0.7.13"
     "@mikro-orm/core": "npm:6.3.13"
@@ -2686,9 +2682,7 @@ __metadata:
     "@nestjs/platform-fastify": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
-    "@query-client/application-module": "workspace:*"
     "@query-client/infrastructure-module": "workspace:*"
-    "@telegram-bot/application-module": "workspace:*"
     "@telegram-bot/infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
     amqp-connection-manager: "npm:4.1.14"
