@@ -1,21 +1,20 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable prefer-destructuring */
 
-import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
-import type { WorkTimeDataType }                from '@telegram-bot/application-module'
-import type { TimeSlotsType }                   from '@telegram-bot/application-module'
-
+import type { TelegramBotFormattedContextType } from '../../../interfaces/index.js'
+import type { WorkTimeDataType }                from '../../../interfaces/index.js'
+import type { TimeSlotsType }                   from '../../../interfaces/index.js'
 import type { ParsedWorkTimeType }              from './get-time-slot.question-answer-pair.interfaces.js'
 
 import { Injectable }                           from '@nestjs/common'
 
 import { GetWorkTimeRawStringUseCase }          from '@query-client/application-module'
-import { CLOSED_TIME_SLOT_TEXT }                from '@telegram-bot/application-module/constants'
-import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '@telegram-bot/application-module/constants'
-import { WORK_TIME }                            from '@telegram-bot/application-module/constants'
-import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
-import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
 
+import { TIME_SLOT_KEYBOARD_ROW_MAX_ITEMS }     from '../../../constants/index.js'
+import { WORK_TIME }                            from '../../../constants/index.js'
+import { TIME_SLOT_STEP_MS }                    from '../../../constants/index.js'
+import { CLOSED_TIME_SLOT_TEXT }                from '../../../constants/index.js'
+import { QuestionAnswerPairAbstractClass }      from '../../../interfaces/index.js'
 import { OrmPort }                              from '../../../ports/index.js'
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { I18nPort }                             from '../../../ports/index.js'

@@ -1,5 +1,5 @@
-import type { CreateConversationReturnType }    from '@telegram-bot/application-module'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
+import type { CreateConversationReturnType }    from '../interfaces/index.js'
+import type { TelegramBotFormattedContextType } from '../interfaces/index.js'
 
 export abstract class TelegramClientPort {
   abstract sendMessage(ctx: TelegramBotFormattedContextType, text: string): Promise<void>

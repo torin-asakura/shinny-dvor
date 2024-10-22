@@ -1,9 +1,8 @@
-import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
+import type { TelegramBotFormattedContextType } from '../../../interfaces/index.js'
 
 import { Injectable }                           from '@nestjs/common'
 
-import { QuestionAnswerPairAbstractClass }      from '@telegram-bot/application-module/interfaces'
-
+import { QuestionAnswerPairAbstractClass }      from '../../../interfaces/index.js'
 import { TelegramClientPort }                   from '../../../ports/index.js'
 import { I18nPort }                             from '../../../ports/index.js'
 

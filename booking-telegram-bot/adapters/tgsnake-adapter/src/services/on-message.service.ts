@@ -1,5 +1,5 @@
-import type { CallbackType }         from '@booking-telegram-bot/tgsnake-adapter'
-import type { OnMessageReturnType }  from '@booking-telegram-bot/tgsnake-adapter'
+import type { CallbackType }         from '../interfaces/index.js'
+import type { OnMessageReturnType }  from '../interfaces/index.js'
 
 import { Injectable }                from '@nestjs/common'
 

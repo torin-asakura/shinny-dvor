@@ -1,6 +1,6 @@
 import type { GetFormattedAppointmentDataType } from './get-formatted-appointment-data.interface.js'
 
-import { TIME_SLOT_STEP_MS }                    from '@telegram-bot/application-module/constants'
+import { TIME_SLOT_STEP_MS }                    from '../constants/index.js'
 
 const getFormattedAppointmentData: GetFormattedAppointmentDataType = (
   rawAppointmentData,

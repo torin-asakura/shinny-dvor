@@ -1,7 +1,7 @@
-import type { TelegramBotFormattedContextKeyType } from '@booking-telegram-bot/tgsnake-adapter'
-import type { TelegramBotFormattedContextType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextType }    from '../interfaces/index.js'
+import type { TelegramBotFormattedContextKeyType } from '../interfaces/index.js'
 
-import { TgsnakeAdapterError }                     from '@booking-telegram-bot/tgsnake-adapter'
+import { TgsnakeAdapterError }                     from '../errors/index.js'
 
 const checkFormattedContextHelper = (
   formattedContext: Record<TelegramBotFormattedContextKeyType, any>

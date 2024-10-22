@@ -1,6 +1,5 @@
-import type { CreateConversationReturnType }    from '@telegram-bot/application-module'
-import type { TelegramBotFormattedContextType } from '@telegram-bot/application-module'
-
+import type { CreateConversationReturnType }    from '../interfaces/index.js'
+import type { TelegramBotFormattedContextType } from '../interfaces/index.js'
 import type { TelegramClientPort }              from '../ports/index.js'
 import type { I18nPort }                        from '../ports/index.js'
 

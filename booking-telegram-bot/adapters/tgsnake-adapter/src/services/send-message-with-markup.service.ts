@@ -1,4 +1,4 @@
-import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextType } from '../interfaces/index.js'
 
 import { Injectable }                           from '@nestjs/common'
 import { Raw }                                  from 'tgsnake'
