@@ -11,7 +11,7 @@
   "scripts": {
     "build": "yarn service build",
     "dev": "ENVIRONMENT=dev yarn service dev ",
-    "prepack": "run build",
+    "prepack": "run build && cp -r ../../adapters/i18n-adapter/src/locals/ ./dist/",
     "start": "node dist/index.js"
   },
   "devDependencies": {
