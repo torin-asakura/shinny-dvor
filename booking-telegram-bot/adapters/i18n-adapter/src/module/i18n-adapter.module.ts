@@ -12,7 +12,7 @@ import { I18nModule }         from 'nestjs-i18n'
 
 import * as services          from '../services/index.js'
 
-const dianemPath = dirname(fileURLToPath(import.meta.url))
+const dirnamePath = dirname(fileURLToPath(import.meta.url))
 
 @Module({})
 export class I18nAdapterModule {
@@ -25,6 +25,11 @@ export class I18nAdapterModule {
 
     const watch = Boolean(process.env.ENVIRONMENT === 'dev')
 
+    const localsDirPath =
+      process.env.ENVIRONMENT === 'dev'
+        ? path.join(dirnamePath, '../locals/')
+        : path.resolve('./dist/locals/')
+
     return {
       global: true,
       module: I18nAdapterModule,
@@ -34,7 +39,7 @@ export class I18nAdapterModule {
         I18nModule.forRoot({
           fallbackLanguage: 'ru',
           loaderOptions: {
-            path: path.join(dianemPath, '../locals/'),
+            path: localsDirPath,
             watch,
           },
         }),
