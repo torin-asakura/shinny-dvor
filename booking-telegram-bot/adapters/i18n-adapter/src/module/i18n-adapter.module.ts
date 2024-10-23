@@ -1,9 +1,12 @@
 import type { DynamicModule } from '@nestjs/common'
+import type { Provider }      from '@nestjs/common'
 
 import { dirname }            from 'node:path'
 import { fileURLToPath }      from 'node:url'
 
 import { Module }             from '@nestjs/common'
+import { HttpAdapterHost }    from '@nestjs/core'
+import { ModuleRef }          from '@nestjs/core'
 import * as path              from 'path'
 import { I18nModule }         from 'nestjs-i18n'
 
@@ -17,8 +20,8 @@ export class I18nAdapterModule {
   static register(): DynamicModule {
     const serviceProviders = Object.values(services)
 
-    const providers = [...serviceProviders]
-    const exports = [...serviceProviders]
+    const providers = [...serviceProviders, HttpAdapterHost, ModuleRef as Provider]
+    const exports = [...serviceProviders, HttpAdapterHost, ModuleRef]
 
     const watch = Boolean(process.env.ENVIRONMENT === 'dev')
 

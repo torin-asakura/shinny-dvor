@@ -1,10 +1,12 @@
 import type { Options }         from '@mikro-orm/postgresql'
 import type { DynamicModule }   from '@nestjs/common'
 import type { OnModuleInit }    from '@nestjs/common'
+import type { Provider }        from '@nestjs/common'
 
 import { MikroORM }             from '@mikro-orm/core'
 import { MikroOrmModule }       from '@mikro-orm/nestjs'
 import { Module }               from '@nestjs/common'
+import { ModuleRef }            from '@nestjs/core'
 
 import { MIKRO_ORM_CONFIG }     from '../constants/entity.constants.js'
 import { createConfigProvider } from './mikro-orm-adapter.providers.js'
@@ -20,8 +22,8 @@ class MikroOrmAdapterModule implements OnModuleInit {
     return {
       global: true,
       module: MikroOrmAdapterModule,
-      providers: [configProvider],
-      exports: [configProvider],
+      providers: [configProvider, ModuleRef as Provider],
+      exports: [configProvider, ModuleRef],
       imports: [
         MikroOrmModule.forRootAsync({
           useFactory: (options) => options as Options,
