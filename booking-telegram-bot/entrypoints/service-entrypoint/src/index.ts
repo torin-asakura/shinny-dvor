@@ -1,1 +1,1 @@
-import './bootstrap.js'
+import './bot-service-entrypoint.bootstrap.js'

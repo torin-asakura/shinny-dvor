@@ -3,6 +3,7 @@ import type { NestFastifyApplication } from '@nestjs/platform-fastify'
 import { NestFactory }                 from '@nestjs/core'
 import { FastifyAdapter }              from '@nestjs/platform-fastify'
 
+import { SERVICE_PORT }                from './bot-service-entrypoint.constants.js'
 import { BotServiceEntrypointModule }  from './bot-service-entrypoint.module.js'
 
 // eslint-disable-next-line @next/next/no-assign-module-variable
@@ -23,7 +24,7 @@ const bootstrap = async (): Promise<void> => {
 
   app.enableShutdownHooks()
 
-  await app.listen(3000)
+  await app.listen(SERVICE_PORT)
 
   if (module.hot) {
     module.hot.accept()
