@@ -2582,6 +2582,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@booking-telegram-bot/api-infrastructure-module@workspace:booking-telegram-bot/contexts/api/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@booking-telegram-bot/api-infrastructure-module@workspace:booking-telegram-bot/contexts/api/infrastructure-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
 "@booking-telegram-bot/apollo-adapter@workspace:*, @booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter":
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter"
@@ -2603,17 +2617,35 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/i18n-adapter@workspace:booking-telegram-bot/adapters/i18n-adapter"
   dependencies:
+    "@grpc/grpc-js": "npm:1.11.2"
     "@nestjs/common": "npm:10.4.2"
     "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
     "@types/hbs": "npm:^4"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
     class-validator: "npm:0.14.1"
     hbs: "npm:4.2.0"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
     nestjs-i18n: "npm:10.4.9"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
+    "@grpc/grpc-js": "*"
     "@nestjs/common": "*"
     "@nestjs/core": "*"
+    "@nestjs/microservices": "*"
+    "@nestjs/platform-express": "*"
+    "@nestjs/platform-socket.io": "*"
+    "@nestjs/websockets": "*"
+    amqp-connection-manager: "*"
+    amqplib: "*"
+    ioredis: "*"
+    kafkajs: "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
