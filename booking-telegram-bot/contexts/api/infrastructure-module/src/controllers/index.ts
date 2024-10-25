@@ -1,1 +1,1 @@
-export * from './test.controller.js'
+export * from './booking.controller.js'
