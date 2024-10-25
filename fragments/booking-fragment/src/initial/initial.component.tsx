@@ -109,15 +109,10 @@ const Initial: FC<InitialProps> = ({
       commentary: comment,
     })
 
-    const response = await fetch('/api/booking', {
+    await fetch('/api/booking', {
       method: 'post',
       body: jsonData,
     })
-
-    console.log(response)
-    console.log(response.status)
-
-    // TODO change button state
   }
 
   const updateStatus = useCallback(
