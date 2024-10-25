@@ -1,1 +1,1 @@
-export * from './tgsnake-adapter.error.js'
+export * from './check-formatted-context-helper.error.js'
