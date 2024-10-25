@@ -2587,10 +2587,12 @@ __metadata:
   resolution: "@booking-telegram-bot/api-infrastructure-module@workspace:booking-telegram-bot/contexts/api/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@telegram-bot/application-module": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
@@ -6362,6 +6364,7 @@ __metadata:
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/data": "workspace:*"
+    "@site/booking-api": "workspace:*"
     "@site/contacts-page": "workspace:*"
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
@@ -6421,6 +6424,12 @@ __metadata:
     react-dom: "*"
     react-intl: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/booking-api@workspace:*, @site/booking-api@workspace:site/api/booking":
+  version: 0.0.0-use.local
+  resolution: "@site/booking-api@workspace:site/api/booking"
   languageName: unknown
   linkType: soft
 
