@@ -7,7 +7,7 @@ import { HttpException }  from '@nestjs/common'
 import { BookingService } from '../services/index.js'
 
 @Controller('booking')
-export class CatsController {
+export class BookingController {
   constructor(private readonly bookingService: BookingService) {}
 
   @Post()
