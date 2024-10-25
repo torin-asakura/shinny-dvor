@@ -94,33 +94,12 @@ const Initial: FC<InitialProps> = ({
     !selectedCarBody ||
     !selectedRepairTypes.length
 
-  // TODO создай хук для отправки
   const [submit, data] = useSubmit()
 
-  // TODO remove button disables
   // TODO bug on tip remonta - false
   // typeRepairProp
 
-  /* const submitForm = () => { */
-  /*   if (selectedRadius && selectedCarBody && selectedRepairTypes.length) { */
-  /*     submit({ */
-  /*       variables: { */
-  /*         name, */
-  /*         phone, */
-  /*         diameter: selectedRadius, */
-  /*         carBody: selectedCarBody, */
-  /*         typeRepair: selectedRepairTypes.join(', '), */
-  /*         additionalService: typeof additionalService === 'string' ? additionalService : '', */
-  /*         comment, */
-  /*       }, */
-  /*     }) */
-  /*   } */
-  /* } */
-
   const submitForm = async () => {
-    /* TODO сделай здесь фетч на booking-service */
-    /* TODO у next.js есть компонент form. посмотри его */
-
     const jsonData = JSON.stringify({
       telegramFullName: name,
       phone,
@@ -271,8 +250,6 @@ const Initial: FC<InitialProps> = ({
         value={selectedRepairTypes}
         placeholder={repairTypePlaceholder}
         setIsOpen={setIsOpen}
-        // @ts-expect-error not assignable
-        selectedDefault={!!service.serviceName?.length && service.serviceName}
         onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
@@ -289,8 +266,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
-        <Button disabled={false} onClick={submitForm}>
-          {/* <Button disabled={isFormFilled} onClick={submitForm}> */}
+        <Button disabled={isFormFilled} onClick={submitForm}>
           {signUpTitle}
         </Button>
       </Box>
