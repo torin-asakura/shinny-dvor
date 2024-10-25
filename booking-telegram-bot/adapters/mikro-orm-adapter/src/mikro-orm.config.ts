@@ -24,7 +24,7 @@ const mikroOrmOptions = defineConfig({
         class: migrations.Migration20241010115319,
       },
       {
-        name: '@site adaptation',
+        name: 'Migration20241024125715.ts',
         class: migrations.Migration20241024125715,
       },
     ],
