@@ -5,6 +5,7 @@ import { HttpStatus }                  from '@nestjs/common'
 
 import { AppointmentEntityRepository } from '@telegram-bot/application-module'
 
+import { BookingServiceError }         from '../errors/index.js'
 import { checkBookingDataHelper }      from '../helpers/index.js'
 
 @Injectable()
@@ -19,6 +20,6 @@ export class BookingService {
       return HttpStatus.OK
     }
 
-    throw new Error('body is not string')
+    throw new BookingServiceError('body is not string')
   }
 }
