@@ -1,8 +1,9 @@
 type OrmAppointmentDataType = {
-  telegramUserId: bigint
+  telegramUserId?: bigint
   telegramFullName: string
-  timeSlotStart: bigint
-  timeSlotEnd: bigint
+  phone?: string
+  timeSlotStart?: bigint
+  timeSlotEnd?: bigint
   isApproved: boolean
   carBody: string
   radii: string
