@@ -94,22 +94,51 @@ const Initial: FC<InitialProps> = ({
     !selectedCarBody ||
     !selectedRepairTypes.length
 
+  // TODO создай хук для отправки
   const [submit, data] = useSubmit()
 
-  const submitForm = () => {
-    if (selectedRadius && selectedCarBody && selectedRepairTypes.length) {
-      submit({
-        variables: {
-          name,
-          phone,
-          diameter: selectedRadius,
-          carBody: selectedCarBody,
-          typeRepair: selectedRepairTypes.join(', '),
-          additionalService: typeof additionalService === 'string' ? additionalService : '',
-          comment,
-        },
-      })
-    }
+  // TODO remove button disables
+  // TODO bug on tip remonta - false
+  // typeRepairProp
+
+  /* const submitForm = () => { */
+  /*   if (selectedRadius && selectedCarBody && selectedRepairTypes.length) { */
+  /*     submit({ */
+  /*       variables: { */
+  /*         name, */
+  /*         phone, */
+  /*         diameter: selectedRadius, */
+  /*         carBody: selectedCarBody, */
+  /*         typeRepair: selectedRepairTypes.join(', '), */
+  /*         additionalService: typeof additionalService === 'string' ? additionalService : '', */
+  /*         comment, */
+  /*       }, */
+  /*     }) */
+  /*   } */
+  /* } */
+
+  const submitForm = async () => {
+    /* TODO сделай здесь фетч на booking-service */
+    /* TODO у next.js есть компонент form. посмотри его */
+
+    const jsonData = JSON.stringify({
+      telegramFullName: name,
+      phone,
+      carBody: selectedCarBody,
+      radii: selectedRadius,
+      service: selectedRepairTypes.join(', '),
+      commentary: comment,
+    })
+
+    const response = await fetch('/api/booking', {
+      method: 'post',
+      body: jsonData,
+    })
+
+    console.log(response)
+    console.log(response.status)
+
+    // TODO change button state
   }
 
   const updateStatus = useCallback(
@@ -260,7 +289,8 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
-        <Button disabled={isFormFilled} onClick={submitForm}>
+        <Button disabled={false} onClick={submitForm}>
+          {/* <Button disabled={isFormFilled} onClick={submitForm}> */}
           {signUpTitle}
         </Button>
       </Box>
