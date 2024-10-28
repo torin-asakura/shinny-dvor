@@ -9,20 +9,23 @@ class AppointmentEntity {
   @PrimaryKey()
   id!: number
 
-  @Property()
-  telegramUserId!: bigint
+  @Property({ nullable: true })
+  telegramUserId?: bigint
 
   @Property()
   telegramFullName!: string
 
-  @Property()
-  timeSlotStart!: bigint
+  @Property({ nullable: true })
+  phone?: string
+
+  @Property({ nullable: true })
+  timeSlotStart?: bigint
+
+  @Property({ nullable: true })
+  timeSlotEnd?: bigint
 
   @Property()
-  timeSlotEnd!: bigint
-
-  @Property({ default: false })
-  isApproved!: boolean
+  isApproved: boolean = false
 
   @Property()
   carBody!: string
@@ -33,7 +36,7 @@ class AppointmentEntity {
   @Property()
   service!: string
 
-  @Property({ default: '' })
+  @Property({ nullable: true })
   commentary?: string
 }
 

@@ -2582,6 +2582,42 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@booking-telegram-bot/api-application-module@workspace:*, @booking-telegram-bot/api-application-module@workspace:booking-telegram-bot/contexts/api/application-module":
+  version: 0.0.0-use.local
+  resolution: "@booking-telegram-bot/api-application-module@workspace:booking-telegram-bot/contexts/api/application-module"
+  dependencies:
+    "@booking-telegram-bot/api-infrastructure-module": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@booking-telegram-bot/api-infrastructure-module": "*"
+    "@nestjs/common": "*"
+    "@telegram-bot/application-module": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@booking-telegram-bot/api-infrastructure-module@workspace:*, @booking-telegram-bot/api-infrastructure-module@workspace:booking-telegram-bot/contexts/api/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@booking-telegram-bot/api-infrastructure-module@workspace:booking-telegram-bot/contexts/api/infrastructure-module"
+  dependencies:
+    "@booking-telegram-bot/api-application-module": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@telegram-bot/application-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@booking-telegram-bot/api-application-module": "*"
+    "@nestjs/common": "*"
+    "@telegram-bot/application-module": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
 "@booking-telegram-bot/apollo-adapter@workspace:*, @booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter":
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/apollo-adapter@workspace:booking-telegram-bot/adapters/apollo-adapter"
@@ -2689,6 +2725,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@booking-telegram-bot/service-entrypoint@workspace:booking-telegram-bot/entrypoints/service-entrypoint"
   dependencies:
+    "@booking-telegram-bot/api-infrastructure-module": "workspace:*"
     "@grpc/grpc-js": "npm:1.11.2"
     "@grpc/proto-loader": "npm:0.7.13"
     "@mikro-orm/core": "npm:6.3.13"
@@ -6347,6 +6384,7 @@ __metadata:
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/data": "workspace:*"
+    "@site/booking-api": "workspace:*"
     "@site/contacts-page": "workspace:*"
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
@@ -6406,6 +6444,14 @@ __metadata:
     react-dom: "*"
     react-intl: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/booking-api@workspace:*, @site/booking-api@workspace:site/api/booking":
+  version: 0.0.0-use.local
+  resolution: "@site/booking-api@workspace:site/api/booking"
+  dependencies:
+    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 

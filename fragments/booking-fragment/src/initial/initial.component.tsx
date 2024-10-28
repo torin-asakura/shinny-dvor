@@ -33,6 +33,7 @@ import { serviceVar }               from '@store/services'
 
 import { RadioList }                from '../radio-list/index.js'
 import { useSubmit }                from '../data/index.js'
+import { submitFormHook }           from './hooks/index.js'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -96,20 +97,15 @@ const Initial: FC<InitialProps> = ({
 
   const [submit, data] = useSubmit()
 
-  const submitForm = () => {
-    if (selectedRadius && selectedCarBody && selectedRepairTypes.length) {
-      submit({
-        variables: {
-          name,
-          phone,
-          diameter: selectedRadius,
-          carBody: selectedCarBody,
-          typeRepair: selectedRepairTypes.join(', '),
-          additionalService: typeof additionalService === 'string' ? additionalService : '',
-          comment,
-        },
-      })
-    }
+  const submitForm = async (): Promise<void> => {
+    await submitFormHook({
+      name,
+      phone,
+      selectedCarBody,
+      selectedRadius,
+      selectedRepairTypes,
+      comment,
+    })
   }
 
   const updateStatus = useCallback(
@@ -242,8 +238,6 @@ const Initial: FC<InitialProps> = ({
         value={selectedRepairTypes}
         placeholder={repairTypePlaceholder}
         setIsOpen={setIsOpen}
-        // @ts-expect-error not assignable
-        selectedDefault={!!service.serviceName?.length && service.serviceName}
         onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
