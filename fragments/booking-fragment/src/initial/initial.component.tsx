@@ -33,6 +33,7 @@ import { serviceVar }               from '@store/services'
 
 import { RadioList }                from '../radio-list/index.js'
 import { useSubmit }                from '../data/index.js'
+import { submitFormHook }           from './hooks/index.js'
 
 const Initial: FC<InitialProps> = ({
   fragmentsData,
@@ -96,22 +97,14 @@ const Initial: FC<InitialProps> = ({
 
   const [submit, data] = useSubmit()
 
-  // TODO bug on tip remonta - false
-  // typeRepairProp
-
-  const submitForm = async () => {
-    const jsonData = JSON.stringify({
-      telegramFullName: name,
+  const submitForm = async (): Promise<void> => {
+    await submitFormHook({
+      name,
       phone,
-      carBody: selectedCarBody,
-      radii: selectedRadius,
-      service: selectedRepairTypes.join(', '),
-      commentary: comment,
-    })
-
-    await fetch('/api/booking', {
-      method: 'post',
-      body: jsonData,
+      selectedCarBody,
+      selectedRadius,
+      selectedRepairTypes,
+      comment,
     })
   }
 
