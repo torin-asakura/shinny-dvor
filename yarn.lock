@@ -5614,6 +5614,115 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter"
+  dependencies:
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
+    "@types/hbs": "npm:^4"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
+    class-validator: "npm:0.14.1"
+    hbs: "npm:4.2.0"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    nestjs-i18n: "npm:10.4.9"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@grpc/grpc-js": "*"
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    "@nestjs/microservices": "*"
+    "@nestjs/platform-express": "*"
+    "@nestjs/platform-socket.io": "*"
+    "@nestjs/websockets": "*"
+    amqp-connection-manager: "*"
+    amqplib: "*"
+    ioredis: "*"
+    kafkajs: "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/service-entrypoint@workspace:operator-bot/entrypoints/service-entrypoint":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/service-entrypoint@workspace:operator-bot/entrypoints/service-entrypoint"
+  dependencies:
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@grpc/proto-loader": "npm:0.7.13"
+    "@mikro-orm/core": "npm:6.3.13"
+    "@mikro-orm/sqlite": "npm:6.3.13"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-fastify": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
+    "@operator-bot/telegram-bot-context_infrastructure-module": "workspace:*"
+    "@types/amqplib": "npm:^0"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/telegram-bot-context_application-module@workspace:*, @operator-bot/telegram-bot-context_application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/telegram-bot-context_application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/telegram-bot-context_infrastructure-module@workspace:*, @operator-bot/telegram-bot-context_infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/telegram-bot-context_infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    "@operator-bot/telegram-bot-context_application-module": "workspace:*"
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/tgsnake-adapter@workspace:*, @operator-bot/tgsnake-adapter@workspace:operator-bot/adapters/tgsnake-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/tgsnake-adapter@workspace:operator-bot/adapters/tgsnake-adapter"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+    tgsnake: "npm:3.3.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
 "@peculiar/asn1-schema@npm:^2.3.13, @peculiar/asn1-schema@npm:^2.3.8":
   version: 2.3.13
   resolution: "@peculiar/asn1-schema@npm:2.3.13"
