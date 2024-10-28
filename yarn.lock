@@ -6450,6 +6450,8 @@ __metadata:
 "@site/booking-api@workspace:*, @site/booking-api@workspace:site/api/booking":
   version: 0.0.0-use.local
   resolution: "@site/booking-api@workspace:site/api/booking"
+  dependencies:
+    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 

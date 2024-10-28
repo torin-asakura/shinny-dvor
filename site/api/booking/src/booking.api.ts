@@ -1,4 +1,4 @@
-import { fetchTelegramBotHelper } from './fetch-telegram-bot-service.helper.js'
+import { postDataFetch } from '@globals/data'
 
 export const bookingApiHandle = async (request: Request): Promise<Response> => {
   const bookingTelegramBotOrigin = process.env.BOOKING_TELEGRAM_BOT_ORIGIN || 'http://localhost'
@@ -7,5 +7,5 @@ export const bookingApiHandle = async (request: Request): Promise<Response> => {
   const fetchUrl = `${bookingTelegramBotOrigin}:${bookingTelegramBotPort}/booking`
   const jsonData = await request.json()
 
-  return fetchTelegramBotHelper({ url: fetchUrl, data: jsonData })
+  return postDataFetch({ url: fetchUrl, data: jsonData })
 }
