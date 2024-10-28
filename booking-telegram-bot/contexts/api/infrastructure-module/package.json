@@ -8,12 +8,14 @@
     ".": "./src/index.ts"
   },
   "devDependencies": {
+    "@booking-telegram-bot/api-application-module": "workspace:*",
     "@nestjs/common": "10.4.2",
     "@telegram-bot/application-module": "workspace:*",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.1"
   },
   "peerDependencies": {
+    "@booking-telegram-bot/api-application-module": "*",
     "@nestjs/common": "*",
     "@telegram-bot/application-module": "*",
     "reflect-metadata": "*",

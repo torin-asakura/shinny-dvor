@@ -1,23 +1,21 @@
-import { Controller }     from '@nestjs/common'
-import { Body }           from '@nestjs/common'
-import { Post }           from '@nestjs/common'
-import { HttpStatus }     from '@nestjs/common'
-import { HttpException }  from '@nestjs/common'
+import { Controller }              from '@nestjs/common'
+import { Body }                    from '@nestjs/common'
+import { Post }                    from '@nestjs/common'
 
-import { BookingService } from '../services/index.js'
+import { WriteBookingDataUseCase } from '@booking-telegram-bot/api-application-module'
+
+import { InternalServerError }     from '../errors/internal-server.error.js'
 
 @Controller('booking')
 export class BookingController {
-  constructor(private readonly bookingService: BookingService) {}
+  constructor(private readonly writeBookingDataUseCase: WriteBookingDataUseCase) {}
 
   @Post()
   async writeData(@Body() body: Body): Promise<number> {
     try {
-      return await this.bookingService.writeData(body)
+      return await this.writeBookingDataUseCase.process(body)
     } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(error)
-      throw new HttpException('Interfnal server error', HttpStatus.INTERNAL_SERVER_ERROR)
+      throw new InternalServerError()
     }
   }
 }
