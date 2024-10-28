@@ -1,0 +1,24 @@
+{
+  "name": "@operator-bot/telegram-bot-context_infrastructure-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@operator-bot/telegram-bot-context_application-module": "workspace:*",
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+  },
+  "devDependencies": {
+    "@nestjs/common": "10.4.2",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}

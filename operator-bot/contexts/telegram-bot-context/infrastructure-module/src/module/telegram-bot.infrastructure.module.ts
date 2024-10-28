@@ -1,0 +1,23 @@
+import type { DynamicModule }           from '@nestjs/common'
+
+import { Module }                       from '@nestjs/common'
+
+import { TelegramBotApplicationModule } from '@operator-bot/telegram-bot-context_application-module'
+import { TgsnakeAdapterModule }         from '@operator-bot/tgsnake-adapter'
+
+import { telegramBotProviders }         from './telegram-bot.infrastructure.providers.js'
+
+@Module({})
+export class TelegramBotInfrastructureModule {
+  static register(): DynamicModule {
+    const providers = telegramBotProviders
+
+    return {
+      global: true,
+      module: TelegramBotInfrastructureModule,
+      providers: [...providers],
+      exports: [...providers],
+      imports: [TgsnakeAdapterModule.register(), TelegramBotApplicationModule.register()],
+    }
+  }
+}
