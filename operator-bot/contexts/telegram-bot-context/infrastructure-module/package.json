@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@operator-bot/i18n-adapter": "workspace:*",
     "@operator-bot/telegram-bot-context_application-module": "workspace:*",
     "@operator-bot/tgsnake-adapter": "workspace:*"
   },

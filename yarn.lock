@@ -5614,7 +5614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter":
+"@operator-bot/i18n-adapter@workspace:*, @operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter":
   version: 0.0.0-use.local
   resolution: "@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter"
   dependencies:
@@ -5697,6 +5697,7 @@ __metadata:
   resolution: "@operator-bot/telegram-bot-context_infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@operator-bot/i18n-adapter": "workspace:*"
     "@operator-bot/telegram-bot-context_application-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
