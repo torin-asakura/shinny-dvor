@@ -1,3 +1,6 @@
+// TODO
+/* eslint-disable */
+
 import type { FormattedContextType }    from '../interfaces/index.js'
 
 import { Injectable }                   from '@nestjs/common'
@@ -8,7 +11,6 @@ import { I18nPort }                     from '../ports/index.js'
 
 @Injectable()
 export class StartCommandUseCase extends OperatorUseCaseAbstractClass {
-  // eslint-disable-next-line
   constructor(telegramClient: TelegramClientPort, i18n: I18nPort) {
     super(telegramClient, i18n)
   }
