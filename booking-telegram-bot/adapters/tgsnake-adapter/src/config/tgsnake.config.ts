@@ -7,9 +7,9 @@ const TGSHAKE_CONFIG: Options = {
   plugins: [],
   clientOptions: {},
   login: {
-    sessionName: 'myapp',
+    sessionName: 'booking-telegram-bot',
     forceDotSession: true,
-    botToken: process.env.BOOKING_BOT_BOT_TOKEN || '6451409399:AAENpt4tPx8m55kl-1QEQyEnAnvY4gaJ7rc',
+    botToken: process.env.BOOKING_BOT_BOT_TOKEN || '7626732382:AAHybEOeH0waFmPj-WaPihhODtotaW6_60U',
   },
   experimental: {},
 }
