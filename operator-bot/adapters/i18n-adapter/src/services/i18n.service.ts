@@ -10,6 +10,26 @@ class I18nAdapterService {
     return this.getMessage('common.welcome')
   }
 
+  getCarBodyTitle(): string {
+    return this.getMessage('titles.carBody')
+  }
+
+  getRadiiTitle(): string {
+    return this.getMessage('titles.radii')
+  }
+
+  getServiceTitle(): string {
+    return this.getMessage('titles.service')
+  }
+
+  getSelectedDateTitle(): string {
+    return this.getMessage('titles.selectedDate')
+  }
+
+  getCommentaryTitle(): string {
+    return this.getMessage('titles.commentary')
+  }
+
   getError_access(): string {
     return this.getMessage('error.access')
   }

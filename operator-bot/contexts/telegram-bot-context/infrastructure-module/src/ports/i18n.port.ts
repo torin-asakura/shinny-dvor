@@ -12,6 +12,26 @@ class I18nPortImpl implements I18nPort {
     return this.i18n.getWelcome()
   }
 
+  get carBodyTitle(): string {
+    return this.i18n.getCarBodyTitle()
+  }
+
+  get radiiTitle(): string {
+    return this.i18n.getRadiiTitle()
+  }
+
+  get serviceTitle(): string {
+    return this.i18n.getServiceTitle()
+  }
+
+  get selectedDateTitle(): string {
+    return this.i18n.getSelectedDateTitle()
+  }
+
+  get commentaryTitle(): string {
+    return this.i18n.getCommentaryTitle()
+  }
+
   get error_access(): string {
     return this.i18n.getError_access()
   }
