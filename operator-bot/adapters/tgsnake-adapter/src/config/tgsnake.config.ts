@@ -7,7 +7,7 @@ const TGSHAKE_CONFIG: Options = {
   plugins: [],
   clientOptions: {},
   login: {
-    sessionName: 'myapp',
+    sessionName: 'operator-bot',
     forceDotSession: true,
     botToken: process.env.BOOKING_BOT_BOT_TOKEN || '7810446159:AAFoqCymsy0DWnacpG3KLIt2Zju3L2fNDAw',
   },
