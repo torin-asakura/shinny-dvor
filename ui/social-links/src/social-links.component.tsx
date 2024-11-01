@@ -7,17 +7,29 @@ import React                     from 'react'
 import { Button }                from '@ui/button'
 import { FacebookIcon }          from '@ui/icons'
 import { VkIcon }                from '@ui/icons'
+import { TelegramIcon }          from '@ui/icons'
 import { Box }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { Link }                  from '@ui/link'
 import { useHover }              from '@ui/utils'
 
 const SocialLinks: FC<SocialLinksProps> = ({ linkVk, linkFb }) => {
+  const [hoverTelegram, hoverTelegramProps] = useHover()
   const [hoverVk, hoverVkProps] = useHover()
   const [hoverFb, hoverFbProps] = useHover()
 
   return (
     <Box width='100%' justifyContent='flex-end'>
+      <Link href={linkVk} target='_blank'>
+        <Box width={48} height={48} {...hoverTelegramProps}>
+          <Button color='radius'>
+            <Layout>
+              <TelegramIcon width={36} height={36} color={hoverTelegram ? 'white' : 'black'} />
+            </Layout>
+          </Button>
+        </Box>
+      </Link>
+      <Layout flexBasis={16} flexShrink={0} />
       <Link href={linkVk} target='_blank'>
         <Box width={48} height={48} {...hoverVkProps}>
           <Button color='radius'>
