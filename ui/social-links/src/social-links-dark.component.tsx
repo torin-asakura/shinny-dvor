@@ -5,14 +5,25 @@ import type { SocialLinksProps } from './social-links.interface.js'
 import React                     from 'react'
 
 import { Button }                from '@ui/button'
+import { TelegramIcon }          from '@ui/icons'
 import { VkIcon }                from '@ui/icons'
 import { FacebookIcon }          from '@ui/icons'
 import { Box }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { Link }                  from '@ui/link'
 
-const SocialLinksDark: FC<SocialLinksProps> = ({ linkVk, linkFb }) => (
+const SocialLinksDark: FC<SocialLinksProps> = ({ linkTelegram, linkVk, linkFb }) => (
   <Box width='100%' justifyContent='flex-end'>
+    <Link href={linkTelegram} target='_blank'>
+      <Box width={40}>
+        <Button color='darkSocial' size='small'>
+          <Layout>
+            <TelegramIcon width={28} height={28} color='white' />
+          </Layout>
+        </Button>
+      </Box>
+    </Link>
+    <Layout flexBasis={16} flexShrink={0} />
     <Link href={linkVk} target='_blank'>
       <Box width={40}>
         <Button color='darkSocial' size='small'>

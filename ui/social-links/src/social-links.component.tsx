@@ -13,14 +13,14 @@ import { Layout }                from '@ui/layout'
 import { Link }                  from '@ui/link'
 import { useHover }              from '@ui/utils'
 
-const SocialLinks: FC<SocialLinksProps> = ({ linkVk, linkFb }) => {
+const SocialLinks: FC<SocialLinksProps> = ({ linkTelegram, linkVk, linkFb }) => {
   const [hoverTelegram, hoverTelegramProps] = useHover()
   const [hoverVk, hoverVkProps] = useHover()
   const [hoverFb, hoverFbProps] = useHover()
 
   return (
     <Box width='100%' justifyContent='flex-end'>
-      <Link href={linkVk} target='_blank'>
+      <Link href={linkTelegram} target='_blank'>
         <Box width={48} height={48} {...hoverTelegramProps}>
           <Button color='radius'>
             <Layout>
