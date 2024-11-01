@@ -14,6 +14,7 @@ export type ContactsDataType = {
   contactsTitle: string
   telephone: string
   email: string
+  linkTelegram: string
   linkVk: string
   linkFb: string
 }

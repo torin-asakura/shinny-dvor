@@ -26,6 +26,7 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
     contactsTitle,
     telephone,
     email,
+    linkTelegram,
     linkVk,
     linkFb,
   } = contactsData
@@ -74,8 +75,8 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
           </Column>
         </Layout>
       </Column>
-      <Box display={['none', 'none', 'flex']} width='110px'>
-        <SocialLinks linkVk={linkVk} linkFb={linkFb} />
+      <Box display={['none', 'none', 'flex']} width={176}>
+        <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} linkFb={linkFb} />
       </Box>
     </Column>
   )
