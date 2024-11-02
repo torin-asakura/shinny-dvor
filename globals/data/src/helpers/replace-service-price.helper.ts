@@ -5,6 +5,8 @@ export const replaceServicePriceHelper = (
   service: ServiceDataType,
   aqsiSwervicesData: FormattedAqsiDataType
 ): ServiceDataType => {
+  if (!aqsiSwervicesData.length) return service
+
   const wpServiceTitle = service.servicesParams.title
 
   const outputServiceData = {

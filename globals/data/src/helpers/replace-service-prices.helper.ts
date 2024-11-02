@@ -6,6 +6,8 @@ export const replaceServicePricesHelper = (
   wpServicesData: ServicesDataType,
   aqsiSwervicesData: FormattedAqsiDataType
 ): ServicesDataType => {
+  if (!aqsiSwervicesData.length) return wpServicesData
+
   const replacedServicePrices = []
 
   if (wpServicesData) {
