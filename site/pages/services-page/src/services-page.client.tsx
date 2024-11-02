@@ -16,14 +16,17 @@ import { getContactsData }              from '@globals/data'
 import { getFragmentsData }             from '@globals/data'
 import { getNavigationData }            from '@globals/data'
 import { getServicesData }              from '@globals/data'
+import { replaceServicePricesHelper }   from '@globals/data'
 
-export const ServicesPageClient: FC<ServicesPageClientProps> = () => {
+export const ServicesPageClient: FC<ServicesPageClientProps> = ({ aqsiServicesData }) => {
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
   const { services } = getServicesData()
   const { carBodies } = getCarBodiesData()
+
+  const replacedServicePrices = replaceServicePricesHelper(services, aqsiServicesData)
 
   return (
     <Column width='100%' alignItems='center'>
@@ -35,7 +38,7 @@ export const ServicesPageClient: FC<ServicesPageClientProps> = () => {
         carBodiesData={carBodies}
         servicesData={services}
       />
-      <AllServices fragmentsData={fragments} servicesData={services} />
+      <AllServices fragmentsData={fragments} servicesData={replacedServicePrices} />
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )

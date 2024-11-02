@@ -8,6 +8,8 @@ import { GET_SERVICES }                from '@globals/data'
 import { GET_FRAGMENTS }               from '@globals/data'
 import { GET_CAR_BODIES }              from '@globals/data'
 import { GET_SERVICE_BY }              from '@globals/data'
+import { getAqsiData }                 from '@globals/data'
+import { formatAqsiDataHelper }        from '@globals/data'
 import { getServerClient }             from '@globals/data/apollo'
 
 // @ts-expect-error any type
@@ -23,4 +25,8 @@ export const runServicePageServerQueries: ServicePageServerProps = async ({ para
   await client.query({ query: GET_FRAGMENTS })
   await client.query({ query: GET_CAR_BODIES })
   await client.query({ query: GET_SERVICE_BY, variables: { uri } })
+
+  const aqsiData = await getAqsiData()
+  const formattedAqsiData = formatAqsiDataHelper(aqsiData)
+  return { aqsiServicesData: formattedAqsiData }
 }

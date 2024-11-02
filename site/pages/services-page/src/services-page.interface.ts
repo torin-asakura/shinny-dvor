@@ -1,8 +1,10 @@
+import type { FormattedAqsiDataType } from '@globals/data'
+
 export type ServicesPageProps = () => Promise<JSX.Element>
 
 export interface ServicesPageClientProps {
-  // TODO any
   serverQueryData: SeoProps
+  aqsiServicesData: FormattedAqsiDataType
 }
 
 export type ServicesPageServerProps = () => Promise<ServicesPageClientProps>

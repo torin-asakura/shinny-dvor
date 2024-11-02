@@ -6,9 +6,9 @@ import { ServicesPageClient }           from './services-page.client.js'
 import { runServicesPageServerQueries } from './hooks/index.js'
 
 const ServicesPage: ServicesPageProps = async () => {
-  await runServicesPageServerQueries()
+  const { aqsiServicesData } = await runServicesPageServerQueries()
   // @ts-expect-error incorrect types
-  return <ServicesPageClient />
+  return <ServicesPageClient aqsiServicesData={aqsiServicesData} />
 }
 
 export default ServicesPage

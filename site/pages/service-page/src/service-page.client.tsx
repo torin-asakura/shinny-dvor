@@ -21,9 +21,11 @@ import { getCarBodiesData }            from '@globals/data'
 import { getFragmentsData }            from '@globals/data'
 import { getNavigationData }           from '@globals/data'
 import { getBlogPostsData }            from '@globals/data'
+import { replaceServicePricesHelper }  from '@globals/data'
+import { replaceServicePriceHelper }   from '@globals/data'
 
 // @ts-expect-error param is not exist
-export const ServicePageClient: FC<ServicePageClientProps> = ({ params }) => {
+export const ServicePageClient: FC<ServicePageClientProps> = ({ params, aqsiServicesData }) => {
   const { uri } = params
 
   const { navigation } = getNavigationData()
@@ -34,6 +36,9 @@ export const ServicePageClient: FC<ServicePageClientProps> = ({ params }) => {
   const { serviceBy } = getServiceByData(uri)
   const { posts } = getBlogPostsData()
   const { contacts } = getContactsData()
+
+  const replacedServicePrices = replaceServicePricesHelper(services, aqsiServicesData)
+  const replacedServiceByPrice = replaceServicePriceHelper(serviceBy, aqsiServicesData)
 
   return (
     <Column width='100%' alignItems='center'>
@@ -46,11 +51,11 @@ export const ServicePageClient: FC<ServicePageClientProps> = ({ params }) => {
         servicesData={services}
       />
       <Service
-        servicesData={services}
+        servicesData={replacedServicePrices}
         availableRadiiData={availableRadii}
         fragmentsData={fragments}
         carBodiesData={carBodies}
-        serviceData={serviceBy}
+        serviceData={replacedServiceByPrice}
         navigationData={navigation}
       />
       <Articles fragmentsData={fragments} navigationData={navigation} postsData={posts} />
