@@ -16,6 +16,8 @@ export const getAqsiData = async (): Promise<GetAqsiDataReturnType> => {
 
   const retrievedData = await Promise.all(queryPromises)
 
+  if (retrievedData[0].message === 'Unauthorized') return []
+
   const formattedGoodsData = retrievedData
     .map((item) =>
       // @ts-expect-error any
