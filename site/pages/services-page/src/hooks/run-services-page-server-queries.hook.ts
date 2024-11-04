@@ -8,7 +8,6 @@ import { GET_BLOG_POSTS }               from '@globals/data'
 import { GET_CAR_BODIES }               from '@globals/data'
 import { GET_SERVICES }                 from '@globals/data'
 import { getAqsiData }                  from '@globals/data'
-import { formatAqsiDataHelper }         from '@globals/data'
 import { getServerClient }              from '@globals/data/apollo'
 
 // @ts-expect-error incorrect types
@@ -22,7 +21,6 @@ export const runServicesPageServerQueries: ServicesPageServerProps = async () =>
   await client.query({ query: GET_CAR_BODIES })
   await client.query({ query: GET_SERVICES })
 
-  const aqsiData = await getAqsiData()
-  const formattedAqsiData = formatAqsiDataHelper(aqsiData)
-  return { aqsiServicesData: formattedAqsiData }
+  const aqsiServicesData = await getAqsiData()
+  return { aqsiServicesData }
 }
