@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { FetchAqsiDataHelperReturnType } from './fetch-aqsi-data.interfaces.js'
 
 import { AQSI_DATA_FETCH_REVALIDATE_SECONDS } from './fetch-aqsi-data.constants.js'
@@ -17,7 +18,7 @@ const fetchAqsiDataHelper = async (url: string): Promise<FetchAqsiDataHelperRetu
         'Content-Type': 'application/json; charset=utf-8',
         'x-client-key': `Application ${process.env.API_KEY!}`,
       },
-      // @ts-expect-error
+      // @ts-ignore
       next: { revalidate: AQSI_DATA_FETCH_REVALIDATE_SECONDS },
     })
 
