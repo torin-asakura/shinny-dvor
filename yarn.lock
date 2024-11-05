@@ -6384,6 +6384,7 @@ __metadata:
     "@fragments/global-error-fragment": "workspace:*"
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/data": "workspace:*"
+    "@site/aqsi-data-api": "workspace:*"
     "@site/booking-api": "workspace:*"
     "@site/contacts-page": "workspace:*"
     "@site/index-page": "workspace:*"
@@ -6403,6 +6404,14 @@ __metadata:
     typescript: "npm:5.4.2"
   peerDependencies:
     react-helmet: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/aqsi-data-api@workspace:*, @site/aqsi-data-api@workspace:site/api/aqsi-data":
+  version: 0.0.0-use.local
+  resolution: "@site/aqsi-data-api@workspace:site/api/aqsi-data"
+  dependencies:
+    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 
