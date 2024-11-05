@@ -1,6 +1,6 @@
-import type { SEOInt }                from '@globals/data'
-import type { DataInt }               from '@globals/data'
-import type { FormattedAqsiDataType } from '@globals/data'
+import type { SEOInt }       from '@globals/data'
+import type { DataInt }      from '@globals/data'
+import type { AqsiDataType } from '@globals/data'
 
 export interface SeoProps {
   ogCover: string
@@ -8,7 +8,7 @@ export interface SeoProps {
 }
 
 export interface IndexPageClientProps {
-  aqsiServicesData: FormattedAqsiDataType
+  aqsiServicesData: AqsiDataType
   ogCover: string
   SEO: SEOInt
   data: DataInt

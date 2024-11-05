@@ -9,7 +9,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
-    "dev": "yarn next dev src",
+    "dev": "NODE_ENV=development yarn next dev src",
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
@@ -30,6 +30,7 @@
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
     "@globals/data": "workspace:*",
+    "@site/aqsi-data-api": "workspace:*",
     "@site/booking-api": "workspace:*",
     "@site/contacts-page": "workspace:*",
     "@site/index-page": "workspace:*",

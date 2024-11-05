@@ -1,9 +1,9 @@
-import type { SEOInt }                from '@globals/data'
-import type { DataInt }               from '@globals/data'
-import type { FormattedAqsiDataType } from '@globals/data'
+import type { SEOInt }       from '@globals/data'
+import type { DataInt }      from '@globals/data'
+import type { AqsiDataType } from '@globals/data'
 
 export interface ServicePageClientProps {
-  aqsiServicesData: FormattedAqsiDataType
+  aqsiServicesData: AqsiDataType
   SEO: SEOInt
   ogCover: string
   data: DataInt
