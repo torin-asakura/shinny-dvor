@@ -1,11 +1,18 @@
-import type { ServiceDataType } from '@globals/data'
-import type { AqsiDataType }    from '@globals/data'
+/* eslint-disable no-continue */
 
-export const replaceServicePriceHelper = (
-  service: ServiceDataType,
+import type { AqsiDataType }                          from '@globals/data'
+
+import type { RequiredReplaceServicePriceHelperType } from './replace-service-price.interface.js'
+
+export const replaceServicePriceHelper = <T>(
+  service: RequiredReplaceServicePriceHelperType & T,
   aqsiSwervicesData: AqsiDataType
-): ServiceDataType => {
+): T => {
   if (!aqsiSwervicesData.length) return service
+
+  if (!service) return service
+  if (!(typeof service === 'object')) return service
+  if (!service?.servicesParams) return service
 
   const wpServiceTitle = service.servicesParams.title
 
@@ -16,19 +23,17 @@ export const replaceServicePriceHelper = (
     },
   }
 
-  const outputPriceData: Record<string, any> = {}
+  const outputPriceData: Record<string, Record<string, number>> = {}
 
   if (!service.servicesParams.price) return service
 
   for (const radiiKey of Object.keys(service.servicesParams.price)) {
-    // eslint-disable-next-line no-continue
     if (radiiKey === '__typename') continue
 
-    // TODO
-    // @ts-expect-error not exist
-    // eslint-disable-next-line
-    for (const carBodyKey of Object.keys(service.servicesParams.price[radiiKey])) {
-      // eslint-disable-next-line no-continue
+    const carBodyKeys = Object.keys(service.servicesParams.price[radiiKey] as Record<string, any>)
+    if (!carBodyKeys.length) continue
+
+    for (const carBodyKey of carBodyKeys) {
       if (radiiKey === '__typename') continue
 
       if (!outputPriceData[radiiKey]) outputPriceData[radiiKey] = {}
@@ -51,12 +56,11 @@ export const replaceServicePriceHelper = (
         return false
       })
 
-      // eslint-disable-next-line no-continue
       if (!findedAqsiServiceData) continue
       outputPriceData[radiiKey][carBodyKey] = findedAqsiServiceData.price
     }
     outputServiceData.servicesParams.price = outputPriceData
   }
 
-  return outputServiceData as ServiceDataType
+  return outputServiceData
 }
