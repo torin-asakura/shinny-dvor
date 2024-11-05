@@ -1,9 +1,9 @@
-import type { ServiceDataType }       from '@globals/data'
-import type { FormattedAqsiDataType } from '@globals/data'
+import type { ServiceDataType } from '@globals/data'
+import type { AqsiDataType }    from '@globals/data'
 
 export const replaceServicePriceHelper = (
   service: ServiceDataType,
-  aqsiSwervicesData: FormattedAqsiDataType
+  aqsiSwervicesData: AqsiDataType
 ): ServiceDataType => {
   if (!aqsiSwervicesData.length) return service
 

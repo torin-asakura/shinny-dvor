@@ -1,10 +1,29 @@
-import type { FormattedAqsiDataType } from '../../helpers/index.js'
+import type { AqsiDataType }      from '../../interfaces/index.js'
 
-import { formatAqsiDataHelper }       from '../../helpers/index.js'
-import { getAqsiRawData }             from '../aqsi-raw-data-getter/index.js'
+import { REQUEST_URL }            from './awsi-data.constants.js'
+import { fetchAqsiDataHelper }    from './fetch-data/index.js'
+import { formatOutputDataHelper } from './format-output-data-helper/index.js'
+import { formatPagesDataHelper }  from './format-pages-data-helper/index.js'
 
-export const getAqsiData = async (): Promise<FormattedAqsiDataType> => {
-  const aqsiRawData = await getAqsiRawData()
-  const aqsiFormttedData = formatAqsiDataHelper(aqsiRawData)
-  return aqsiFormttedData
+export const getAqsiData = async (): Promise<AqsiDataType> => {
+  try {
+    const godsListResponse = await fetchAqsiDataHelper(REQUEST_URL)
+    const godsListData = await godsListResponse.json()
+
+    if (godsListData === null) throw new Error('response is nullish')
+
+    const godsListPages = [...Array(godsListData.pages)]
+    const pagePromises = godsListPages.map(async (_, index) =>
+      fetchAqsiDataHelper(`${REQUEST_URL}?pageNumber=${index}`))
+    const pageResponses = await Promise.all(pagePromises)
+
+    const formattedPagesData = await formatPagesDataHelper(pageResponses)
+
+    const outputData = formatOutputDataHelper(formattedPagesData)
+    return outputData
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error)
+    return []
+  }
 }

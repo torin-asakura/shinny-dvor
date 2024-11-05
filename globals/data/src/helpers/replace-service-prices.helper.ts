@@ -1,10 +1,9 @@
-import type { ServicesDataType }      from '@globals/data'
-
-import type { FormattedAqsiDataType } from './format-aqsi-data.interface.js'
+import type { AqsiDataType }     from '@globals/data'
+import type { ServicesDataType } from '@globals/data'
 
 export const replaceServicePricesHelper = (
   wpServicesData: ServicesDataType,
-  aqsiSwervicesData: FormattedAqsiDataType
+  aqsiSwervicesData: AqsiDataType
 ): ServicesDataType => {
   if (!aqsiSwervicesData.length) return wpServicesData
 

@@ -1,16 +1,18 @@
-import type { FormattedAqsiDataType } from './format-aqsi-data.interface.js'
+import type { AqsiDataType }           from '../../../interfaces/aqsi-data.interface.js'
+import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
-import { serviceTitles }              from './format-aqsi-data.constants.js'
-import { carBodyTitles }              from './format-aqsi-data.constants.js'
-import { radiiTitles }                from './format-aqsi-data.constants.js'
+import { serviceTitles }               from './format-output-data.constants.js'
+import { carBodyTitles }               from './format-output-data.constants.js'
+import { radiiTitles }                 from './format-output-data.constants.js'
 
-export const formatAqsiDataHelper = (
-  aqsiData: Array<{ name: string; price: number }>
-): FormattedAqsiDataType => {
+export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDataType => {
   const output = []
 
   for (const aqsiDataItem of aqsiData) {
     const { name: fullServiceString, price: itemPrice } = aqsiDataItem
+
+    // eslint-disable-next-line no-continue
+    if (!fullServiceString || !itemPrice) continue
 
     const itemServiceTitle = serviceTitles.find((serviceTitle) => {
       const { aqsiVariant } = serviceTitle

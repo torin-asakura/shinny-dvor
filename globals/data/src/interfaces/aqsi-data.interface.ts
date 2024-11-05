@@ -1,4 +1,4 @@
-export type FormattedAqsiDataType = Array<{
+export type AqsiDataType = Array<{
   service: string
   carBody: string
   radii: string
