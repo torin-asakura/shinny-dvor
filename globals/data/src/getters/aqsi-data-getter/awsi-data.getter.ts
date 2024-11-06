@@ -1,6 +1,7 @@
 import type { AqsiDataType }      from '../../interfaces/index.js'
 
 import { REQUEST_URL }            from './awsi-data.constants.js'
+import { NullResponseError }      from './error/null-response.error.js'
 import { fetchAqsiDataHelper }    from './fetch-data/index.js'
 import { formatOutputDataHelper } from './format-output-data-helper/index.js'
 import { formatPagesDataHelper }  from './format-pages-data-helper/index.js'
@@ -10,7 +11,7 @@ export const getAqsiData = async (): Promise<AqsiDataType> => {
     const godsListResponse = await fetchAqsiDataHelper(REQUEST_URL)
     const godsListData = await godsListResponse.json()
 
-    if (godsListData === null) throw new Error('response is nullish')
+    if (godsListData === null) throw new NullResponseError()
 
     const godsListPages = [...Array(godsListData.pages)]
     const pagePromises = godsListPages.map(async (_, index) =>

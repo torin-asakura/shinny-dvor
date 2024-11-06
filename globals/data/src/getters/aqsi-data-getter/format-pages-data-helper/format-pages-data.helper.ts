@@ -1,6 +1,9 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
+import { RowsNotExistError }           from '../error/index.js'
+import { DataNotExistError }           from '../error/index.js'
+import { UnauthorizedError }           from '../error/index.js'
 import { getRowsData }                 from './rows-data.getter.js'
 
 export const formatPagesDataHelper = async (
@@ -9,9 +12,9 @@ export const formatPagesDataHelper = async (
   const formattedPagesData_response = pageResponses.map(async (pageResponse) => {
     const pageData = await pageResponse.json()
 
-    if (!pageData) throw new Error('data not exitst on page-response')
-    if (!pageData.rows.length) throw new Error('rows not exitst on page-response')
-    if (pageData.message === 'Unauthorized') throw new Error('Unauthorized')
+    if (!pageData) throw new DataNotExistError()
+    if (!pageData.rows.length) throw new RowsNotExistError()
+    if (pageData.message === 'Unauthorized') throw new UnauthorizedError()
 
     const rowsData = getRowsData(pageData.rows as Array<any>)
     return rowsData
