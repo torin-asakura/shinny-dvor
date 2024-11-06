@@ -30,7 +30,6 @@
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
     "@globals/data": "workspace:*",
-    "@site/aqsi-data-api": "workspace:*",
     "@site/booking-api": "workspace:*",
     "@site/contacts-page": "workspace:*",
     "@site/index-page": "workspace:*",
