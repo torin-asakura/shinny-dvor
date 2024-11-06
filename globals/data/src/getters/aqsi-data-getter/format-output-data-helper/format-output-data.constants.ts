@@ -1,3 +1,4 @@
+// TODO change cyrillic to latin or id - better
 const AQSI_REMONT_STALNYH_DISKOV_TITLE = 'Ремонт стальных дисков'
 const AQSI_HRANENIE_SHIN_TITLE = 'Хранение шин'
 const AQSI_SHINOMONTAZH_TITLE = 'Монтаж и демонтаж резины'
