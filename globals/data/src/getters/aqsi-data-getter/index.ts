@@ -1,1 +1,1 @@
-export * from './awsi-data.getter.js'
+export * from './aqsi-data.getter.js'
