@@ -30,7 +30,7 @@ import { getCarBodiesData }           from '@globals/data'
 
 import { useIndexPageClient }         from './hooks/index.js'
 
-export const IndexPageClient: FC<IndexPageClientProps> = ({ aqsiServicesData }) => {
+export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplace }) => {
   const { navigation } = getNavigationData()
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
@@ -41,7 +41,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ aqsiServicesData }) 
   const { workResults } = getWorkResultsData()
   const { carBodies } = getCarBodiesData()
 
-  const services = replaceServicePricesHelper(baseServices, aqsiServicesData)
+  const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
 
   const headerRef = useRef<HTMLDivElement | null>(null)
   const isLoaded = useRef<boolean>(false)

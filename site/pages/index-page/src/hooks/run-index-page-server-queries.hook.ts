@@ -28,5 +28,5 @@ export const runIndexPageServerQueries = async () => {
   ])
 
   const aqsiServicesData = await getAqsiData()
-  return { aqsiServicesData }
+  return { servicesDataToReplace: aqsiServicesData }
 }

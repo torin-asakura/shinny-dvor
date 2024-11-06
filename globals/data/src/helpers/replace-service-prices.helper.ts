@@ -1,13 +1,13 @@
-import type { AqsiDataType }         from '@globals/data'
-import type { ServicesDataType }     from '@globals/data'
+import type { ServicesDataToReplaceType } from '@globals/data'
+import type { ServicesDataType }          from '@globals/data'
 
-import { replaceServicePriceHelper } from '@globals/data'
+import { replaceServicePriceHelper }      from '@globals/data'
 
 export const replaceServicePricesHelper = (
   wpServicesData: ServicesDataType,
-  aqsiSwervicesData: AqsiDataType
+  servicesDataToReplace: ServicesDataToReplaceType
 ): ServicesDataType => {
-  if (!aqsiSwervicesData.length) return wpServicesData
+  if (!servicesDataToReplace.length) return wpServicesData
 
   const replacedServicePrices = []
 
@@ -18,7 +18,7 @@ export const replaceServicePricesHelper = (
       // eslint-disable-next-line no-continue
       if (!service?.servicesParams) continue
 
-      const outputServiceData = replaceServicePriceHelper(service, aqsiSwervicesData)
+      const outputServiceData = replaceServicePriceHelper(service, servicesDataToReplace)
 
       replacedServicePrices.push(outputServiceData)
     }

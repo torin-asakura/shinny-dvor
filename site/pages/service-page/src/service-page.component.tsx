@@ -11,7 +11,7 @@ import { ServicePageClient }           from './service-page.client.js'
 import { runServicePageServerQueries } from './hooks/index.js'
 
 const ServicePage: ServicePageProps = async ({ params }) => {
-  const { aqsiServicesData } = await runServicePageServerQueries({ params })
+  const { servicesDataToReplace } = await runServicePageServerQueries({ params })
   const { uri } = params
   return (
     <PreloadQuery
@@ -20,11 +20,7 @@ const ServicePage: ServicePageProps = async ({ params }) => {
         uri,
       }}
     >
-      <ServicePageClient
-        // @ts-expect-error params is not assignable
-        params={params}
-        aqsiServicesData={aqsiServicesData}
-      />
+      <ServicePageClient params={params} servicesDataToReplace={servicesDataToReplace} />
     </PreloadQuery>
   )
 }

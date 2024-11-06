@@ -1,10 +1,10 @@
-import type { AqsiDataType } from '@globals/data'
+import type { ServicesDataToReplaceType } from '@globals/data'
 
 export type ServicesPageProps = () => Promise<JSX.Element>
 
 export interface ServicesPageClientProps {
   serverQueryData: SeoProps
-  aqsiServicesData: AqsiDataType
+  servicesDataToReplace: ServicesDataToReplaceType
 }
 
 export type ServicesPageServerProps = () => Promise<ServicesPageClientProps>

@@ -1,16 +1,12 @@
-import type { SEOInt }       from '@globals/data'
-import type { DataInt }      from '@globals/data'
-import type { AqsiDataType } from '@globals/data'
-
-export interface ServicePageClientProps {
-  aqsiServicesData: AqsiDataType
-  SEO: SEOInt
-  ogCover: string
-  data: DataInt
-}
+import type { ServicesDataToReplaceType } from '@globals/data'
 
 type ParamsType = {
   uri: string
+}
+
+export interface ServicePageClientProps {
+  params: ParamsType
+  servicesDataToReplace: ServicesDataToReplaceType
 }
 
 export type ServicePageProps = ({ params }: { params: ParamsType }) => Promise<JSX.Element>
@@ -20,8 +16,3 @@ export type ServicePageServerProps = ({
 }: {
   params: ParamsType
 }) => Promise<ServicePageClientProps>
-
-export interface SeoProps {
-  ogCover: string
-  SEO: SEOInt
-}

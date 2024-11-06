@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 'use client'
 
 import type { FC }                     from 'react'
@@ -24,8 +22,10 @@ import { getBlogPostsData }            from '@globals/data'
 import { replaceServicePricesHelper }  from '@globals/data'
 import { replaceServicePriceHelper }   from '@globals/data'
 
-// @ts-expect-error param is not exist
-export const ServicePageClient: FC<ServicePageClientProps> = ({ params, aqsiServicesData }) => {
+export const ServicePageClient: FC<ServicePageClientProps> = ({
+  params,
+  servicesDataToReplace,
+}) => {
   const { uri } = params
 
   const { navigation } = getNavigationData()
@@ -37,8 +37,8 @@ export const ServicePageClient: FC<ServicePageClientProps> = ({ params, aqsiServ
   const { posts } = getBlogPostsData()
   const { contacts } = getContactsData()
 
-  const services = replaceServicePricesHelper(baseServices, aqsiServicesData)
-  const serviceBy = replaceServicePriceHelper(baseServiceBy, aqsiServicesData)
+  const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
+  const serviceBy = replaceServicePriceHelper(baseServiceBy, servicesDataToReplace)
 
   return (
     <Column width='100%' alignItems='center'>

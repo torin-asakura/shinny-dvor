@@ -1,14 +1,14 @@
 /* eslint-disable no-continue */
 
-import type { AqsiDataType }                          from '@globals/data'
+import type { ServicesDataToReplaceType }             from '@globals/data'
 
 import type { RequiredReplaceServicePriceHelperType } from './replace-service-price.interface.js'
 
 export const replaceServicePriceHelper = <T>(
   service: RequiredReplaceServicePriceHelperType & T,
-  aqsiSwervicesData: AqsiDataType
+  servicesDataToReplace: ServicesDataToReplaceType
 ): T => {
-  if (!aqsiSwervicesData.length) return service
+  if (!servicesDataToReplace.length) return service
 
   if (!service) return service
   if (!(typeof service === 'object')) return service
@@ -38,7 +38,7 @@ export const replaceServicePriceHelper = <T>(
 
       if (!outputPriceData[radiiKey]) outputPriceData[radiiKey] = {}
 
-      const findedAqsiServiceData = aqsiSwervicesData.find((aqsiServiceData) => {
+      const findedAqsiServiceData = servicesDataToReplace.find((aqsiServiceData) => {
         const {
           service: aqsiServiceTitle,
           radii: aqsiRadiiTitle,

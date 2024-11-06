@@ -28,5 +28,5 @@ export const runServicePageServerQueries: ServicePageServerProps = async ({ para
   ])
 
   const aqsiServicesData = await getAqsiData()
-  return { aqsiServicesData }
+  return { servicesDataToReplace: aqsiServicesData }
 }

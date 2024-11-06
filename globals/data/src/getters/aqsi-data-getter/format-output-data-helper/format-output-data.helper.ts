@@ -1,15 +1,17 @@
 /* eslint-disable no-continue */
 
-import type { AqsiDataType }           from '../../../interfaces/aqsi-data.interface.js'
-import type { FormattedPagesDataType } from '../../../interfaces/index.js'
+import type { ServicesDataToReplaceType } from '../../../interfaces/aqsi-data.interface.js'
+import type { FormattedPagesDataType }    from '../../../interfaces/index.js'
 
-import { DataVariants }                from './helpers/get-data-variant.constants.js'
-import { serviceTitles }               from './format-output-data.constants.js'
-import { carBodyTitles }               from './format-output-data.constants.js'
-import { radiiTitles }                 from './format-output-data.constants.js'
-import { getDataVariantHelper }        from './helpers/get-data-variant.helper.js'
+import { DataVariants }                   from './helpers/get-data-variant.constants.js'
+import { serviceTitles }                  from './format-output-data.constants.js'
+import { carBodyTitles }                  from './format-output-data.constants.js'
+import { radiiTitles }                    from './format-output-data.constants.js'
+import { getDataVariantHelper }           from './helpers/get-data-variant.helper.js'
 
-export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDataType => {
+export const formatOutputDataHelper = (
+  aqsiData: FormattedPagesDataType
+): ServicesDataToReplaceType => {
   const output = []
 
   for (const aqsiDataItem of aqsiData) {
