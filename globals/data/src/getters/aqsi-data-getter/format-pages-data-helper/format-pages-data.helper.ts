@@ -1,26 +1,35 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
-import { RowsNotExistError }           from '../error/index.js'
-import { DataNotExistError }           from '../error/index.js'
-import { UnauthorizedError }           from '../error/index.js'
 import { getRowsData }                 from './rows-data.getter.js'
+
+const checkResponseDataValidity = (responseData: any): boolean => {
+  if (!responseData) return false
+  if (!responseData.rows.length) return false
+  if (responseData.message === 'Unauthorized') return false
+  return true
+}
 
 export const formatPagesDataHelper = async (
   pageResponses: Array<Response>
 ): Promise<FormattedPagesDataType> => {
-  const formattedPagesData_response = pageResponses.map(async (pageResponse) => {
-    const pageData = await pageResponse.json()
+  const outputData = []
+  const responsesData = []
 
-    if (!pageData) throw new DataNotExistError()
-    if (!pageData.rows.length) throw new RowsNotExistError()
-    if (pageData.message === 'Unauthorized') throw new UnauthorizedError()
+  for await (const pageResponse of pageResponses) {
+    const responseText = await pageResponse.text()
+    if (responseText) {
+      const pageData = await JSON.parse(responseText)
+      responsesData.push(pageData)
+    }
+  }
 
-    const rowsData = getRowsData(pageData.rows as Array<any>)
-    return rowsData
-  })
+  for (const responseData of responsesData) {
+    const isResponseDataValid = checkResponseDataValidity(responseData)
+    if (isResponseDataValid) {
+      const rowsData = getRowsData(responseData.rows as Array<any>)
+      outputData.push(...rowsData)
+    }
+  }
 
-  const formattedPagesData = (await Promise.all(formattedPagesData_response)).flat()
-
-  return formattedPagesData
+  return outputData
 }
