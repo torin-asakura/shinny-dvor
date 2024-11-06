@@ -18,7 +18,7 @@ export const formatPagesDataHelper = async (
   for await (const pageResponse of pageResponses) {
     const responseText = await pageResponse.text()
     if (responseText) {
-      const pageData = await JSON.parse(responseText)
+      const pageData = JSON.parse(responseText)
       responsesData.push(pageData)
     }
   }
