@@ -41,6 +41,8 @@ const Hero = forwardRef((
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
   const backgroundObj = extractFragment('contentAddons', 'hero', uiData)
 
+  const telegramContanctsObj = extractFragment('contactAddons', 'linkTelegram', contactsData)
+
   const title = new Map([
     ['title', leadObj?.title],
     ['highlighted', leadObj?.highlightedtext],
@@ -52,9 +54,9 @@ const Hero = forwardRef((
   const CTA = ctaObj?.title
   const anchor = anchorObj?.title
   const phone = contactsObj?.telephone
-  const linkTelegram = contactsObj?.linkTelegram
   const linkVk = contactsObj?.linkVk
   const linkFb = contactsObj?.linkFb
+  const linkTelegram = telegramContanctsObj?.address
 
   return (
     <>

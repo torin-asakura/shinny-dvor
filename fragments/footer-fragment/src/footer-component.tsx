@@ -38,12 +38,15 @@ export const Footer: FC<FooterProps> = memo(({
   const navigationItems = extractFragments(navigationItemsType, 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
+  const telegramContanctsObj = extractFragment('contactAddons', 'linkTelegram', contactsData)
+
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
   const linkVk = contactsObj?.linkVk
   const linkFb = contactsObj?.linkFb
+  const linkTelegram = telegramContanctsObj?.address
   const by = new Map()
   by.set('title', byObj?.title)
   by.set('content', byObj?.highlightedtext)
@@ -81,7 +84,7 @@ export const Footer: FC<FooterProps> = memo(({
                   </Box>
                 </Box>
               </Box>
-              <SocialLinks linkVk={linkVk} linkFb={linkFb} />
+              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} linkFb={linkFb} />
             </Row>
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>
