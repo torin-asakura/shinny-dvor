@@ -45,7 +45,6 @@ export const Footer: FC<FooterProps> = memo(({
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
   const linkVk = contactsObj?.linkVk
-  const linkFb = contactsObj?.linkFb
   const linkTelegram = telegramContanctsObj?.address
   const by = new Map()
   by.set('title', byObj?.title)
@@ -84,7 +83,7 @@ export const Footer: FC<FooterProps> = memo(({
                   </Box>
                 </Box>
               </Box>
-              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} linkFb={linkFb} />
+              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
             </Row>
             <Layout flexBasis={[24, 24, 40]} />
             <Box width={90} height={136} display={['flex', 'flex', 'none']}>

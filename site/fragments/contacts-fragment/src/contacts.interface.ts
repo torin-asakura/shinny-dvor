@@ -16,5 +16,4 @@ export type ContactsDataType = {
   email: string
   linkTelegram: string
   linkVk: string
-  linkFb: string
 }

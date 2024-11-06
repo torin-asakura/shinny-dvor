@@ -55,7 +55,6 @@ const Hero = forwardRef((
   const anchor = anchorObj?.title
   const phone = contactsObj?.telephone
   const linkVk = contactsObj?.linkVk
-  const linkFb = contactsObj?.linkFb
   const linkTelegram = telegramContanctsObj?.address
 
   return (
@@ -157,8 +156,8 @@ const Hero = forwardRef((
                 </Link>
               </Box>
               <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
-              <Box width={176} justifyContent='flex-end'>
-                <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} linkFb={linkFb} />
+              <Box width={96} justifyContent='flex-end'>
+                <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} />
               </Box>
             </Row>
           </Box>

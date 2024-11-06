@@ -18,7 +18,6 @@ export const useContacts: UseContactsType = (props) => {
   const telephone = contactsObj?.telephone
   const email = contactsObj?.email
   const linkVk = contactsObj?.linkVk
-  const linkFb = contactsObj?.linkFb
   const linkTelegram = telegramContanctsObj?.address
 
   return {
@@ -30,7 +29,6 @@ export const useContacts: UseContactsType = (props) => {
     telephone,
     email,
     linkVk,
-    linkFb,
     linkTelegram,
   }
 }
