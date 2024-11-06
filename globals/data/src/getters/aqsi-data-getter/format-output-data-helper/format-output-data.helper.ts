@@ -3,9 +3,11 @@
 import type { AqsiDataType }           from '../../../interfaces/aqsi-data.interface.js'
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
+import { DataVariants }                from './helpers/get-data-variant.constants.js'
 import { serviceTitles }               from './format-output-data.constants.js'
 import { carBodyTitles }               from './format-output-data.constants.js'
 import { radiiTitles }                 from './format-output-data.constants.js'
+import { getDataVariantHelper }        from './helpers/get-data-variant.helper.js'
 
 export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDataType => {
   const output = []
@@ -32,34 +34,42 @@ export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDa
       return fullServiceString.includes(aqsiVariant)
     })
 
-    if (itemCarBodyTitle && itemRadiiTitle) {
-      output.push({
-        service: itemServiceTitle.wpVariant,
-        radii: itemRadiiTitle.wpVariant,
-        carBody: itemCarBodyTitle.wpVariant,
-        price: itemPrice,
-      })
-      continue
-    } else if (itemRadiiTitle && !itemCarBodyTitle) {
-      for (const carBodyTitle of carBodyTitles) {
+    const dataVariant = getDataVariantHelper({
+      carBodyTitle: itemCarBodyTitle,
+      radiiTitle: itemRadiiTitle,
+    })
+
+    switch (dataVariant) {
+      case DataVariants.FULL:
         output.push({
           service: itemServiceTitle.wpVariant,
-          radii: itemRadiiTitle.wpVariant,
-          carBody: carBodyTitle.wpVariant,
+          radii: itemRadiiTitle!.wpVariant,
+          carBody: itemCarBodyTitle!.wpVariant,
           price: itemPrice,
         })
-      }
-    } else if (!itemRadiiTitle && !itemCarBodyTitle) {
-      for (const carBodyTitle of carBodyTitles) {
-        for (const radiiTitle of radiiTitles) {
+        break
+      case DataVariants.WITHOUT_CAR_BODY:
+        for (const carBodyTitle of carBodyTitles) {
           output.push({
             service: itemServiceTitle.wpVariant,
-            radii: radiiTitle.wpVariant,
+            radii: itemRadiiTitle!.wpVariant,
             carBody: carBodyTitle.wpVariant,
             price: itemPrice,
           })
         }
-      }
+        break
+      default:
+        for (const carBodyTitle of carBodyTitles) {
+          for (const radiiTitle of radiiTitles) {
+            output.push({
+              service: itemServiceTitle.wpVariant,
+              radii: radiiTitle.wpVariant,
+              carBody: carBodyTitle.wpVariant,
+              price: itemPrice,
+            })
+          }
+        }
+        break
     }
   }
 
