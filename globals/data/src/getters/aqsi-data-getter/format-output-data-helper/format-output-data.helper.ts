@@ -1,3 +1,5 @@
+/* eslint-disable no-continue */
+
 import type { AqsiDataType }           from '../../../interfaces/aqsi-data.interface.js'
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
@@ -11,7 +13,6 @@ export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDa
   for (const aqsiDataItem of aqsiData) {
     const { name: fullServiceString, price: itemPrice } = aqsiDataItem
 
-    // eslint-disable-next-line no-continue
     if (!fullServiceString || !itemPrice) continue
 
     const itemServiceTitle = serviceTitles.find((serviceTitle) => {
@@ -19,7 +20,6 @@ export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDa
       return fullServiceString.includes(aqsiVariant)
     })
 
-    // eslint-disable-next-line no-continue
     if (!itemServiceTitle) continue
 
     const itemCarBodyTitle = carBodyTitles.find((carBodyTitle) => {
@@ -39,7 +39,6 @@ export const formatOutputDataHelper = (aqsiData: FormattedPagesDataType): AqsiDa
         carBody: itemCarBodyTitle.wpVariant,
         price: itemPrice,
       })
-      // eslint-disable-next-line no-continue
       continue
     } else if (itemRadiiTitle && !itemCarBodyTitle) {
       for (const carBodyTitle of carBodyTitles) {
