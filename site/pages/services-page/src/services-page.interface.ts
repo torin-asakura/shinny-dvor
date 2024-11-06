@@ -1,8 +1,10 @@
+import type { ServicesDataToReplaceType } from '@globals/data'
+
 export type ServicesPageProps = () => Promise<JSX.Element>
 
 export interface ServicesPageClientProps {
-  // TODO any
   serverQueryData: SeoProps
+  servicesDataToReplace: ServicesDataToReplaceType
 }
 
 export type ServicesPageServerProps = () => Promise<ServicesPageClientProps>
