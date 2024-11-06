@@ -23,10 +23,10 @@ export const ServicesPageClient: FC<ServicesPageClientProps> = ({ aqsiServicesDa
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
-  const { services } = getServicesData()
+  const { services: baseServices } = getServicesData()
   const { carBodies } = getCarBodiesData()
 
-  const replacedServicePrices = replaceServicePricesHelper(services, aqsiServicesData)
+  const services = replaceServicePricesHelper(baseServices, aqsiServicesData)
 
   return (
     <Column width='100%' alignItems='center'>
@@ -36,9 +36,9 @@ export const ServicesPageClient: FC<ServicesPageClientProps> = ({ aqsiServicesDa
         availableRadiiData={availableRadii}
         fragmentsData={fragments}
         carBodiesData={carBodies}
-        servicesData={services}
+        servicesData={baseServices}
       />
-      <AllServices fragmentsData={fragments} servicesData={replacedServicePrices} />
+      <AllServices fragmentsData={fragments} servicesData={services} />
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )

@@ -36,12 +36,12 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ aqsiServicesData }) 
   const { contacts } = getContactsData()
   const { posts } = getBlogPostsData()
   const { availableRadii } = getAvailableRadiiData()
-  const { services } = getServicesData()
+  const { services: baseServices } = getServicesData()
   const { ui } = getUiData()
   const { workResults } = getWorkResultsData()
   const { carBodies } = getCarBodiesData()
 
-  const replacedServicePrices = replaceServicePricesHelper(services, aqsiServicesData)
+  const services = replaceServicePricesHelper(baseServices, aqsiServicesData)
 
   const headerRef = useRef<HTMLDivElement | null>(null)
   const isLoaded = useRef<boolean>(false)
@@ -61,7 +61,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ aqsiServicesData }) 
             availableRadiiData={availableRadii}
             fragmentsData={fragments}
             carBodiesData={carBodies}
-            servicesData={replacedServicePrices}
+            servicesData={services}
             scrollY={scrollY}
           />
           <Hero
@@ -70,14 +70,14 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ aqsiServicesData }) 
             contactsData={contacts}
             availableRadiiData={availableRadii}
             carBodiesData={carBodies}
-            servicesData={replacedServicePrices}
+            servicesData={services}
             navigationData={navigation}
             {...getObserverOptions('hero')}
           />
         </Column>
       </Box>
       <Services
-        servicesData={replacedServicePrices}
+        servicesData={services}
         fragmentsData={fragments}
         availableRadiiData={availableRadii}
         {...getObserverOptions('services')}

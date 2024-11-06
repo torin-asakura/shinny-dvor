@@ -7,7 +7,7 @@ import { GET_FRAGMENTS }                from '@globals/data'
 import { GET_BLOG_POSTS }               from '@globals/data'
 import { GET_CAR_BODIES }               from '@globals/data'
 import { GET_SERVICES }                 from '@globals/data'
-import { getAqsiDataFromLocalRoute }    from '@globals/data'
+import { getAqsiData }                  from '@globals/data'
 import { getServerClient }              from '@globals/data/apollo'
 
 // @ts-expect-error incorrect types
@@ -24,6 +24,6 @@ export const runServicesPageServerQueries: ServicesPageServerProps = async () =>
     client.query({ query: GET_SERVICES }),
   ])
 
-  const aqsiServicesData = await getAqsiDataFromLocalRoute()
+  const aqsiServicesData = await getAqsiData()
   return { aqsiServicesData }
 }
