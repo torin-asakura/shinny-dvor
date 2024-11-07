@@ -8,6 +8,7 @@ import { GET_SERVICES }                from '@globals/data'
 import { GET_FRAGMENTS }               from '@globals/data'
 import { GET_CAR_BODIES }              from '@globals/data'
 import { GET_SERVICE_BY }              from '@globals/data'
+import { getAqsiData }                 from '@globals/data'
 import { getServerClient }             from '@globals/data/apollo'
 
 // @ts-expect-error any type
@@ -15,12 +16,17 @@ export const runServicePageServerQueries: ServicePageServerProps = async ({ para
   const { uri } = params
   const client = getServerClient()
 
-  await client.query({ query: GET_CONTACTS })
-  await client.query({ query: GET_BLOG_POSTS })
-  await client.query({ query: GET_NAVIGATION })
-  await client.query({ query: GET_AVAILABLE_RADII })
-  await client.query({ query: GET_SERVICES })
-  await client.query({ query: GET_FRAGMENTS })
-  await client.query({ query: GET_CAR_BODIES })
-  await client.query({ query: GET_SERVICE_BY, variables: { uri } })
+  await Promise.allSettled([
+    client.query({ query: GET_CONTACTS }),
+    client.query({ query: GET_BLOG_POSTS }),
+    client.query({ query: GET_NAVIGATION }),
+    client.query({ query: GET_AVAILABLE_RADII }),
+    client.query({ query: GET_SERVICES }),
+    client.query({ query: GET_FRAGMENTS }),
+    client.query({ query: GET_CAR_BODIES }),
+    client.query({ query: GET_SERVICE_BY, variables: { uri } }),
+  ])
+
+  const aqsiServicesData = await getAqsiData()
+  return { servicesDataToReplace: aqsiServicesData }
 }
