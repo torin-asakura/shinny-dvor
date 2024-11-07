@@ -7,7 +7,6 @@ const GET_CONTACTS = gql`
         contactAddons {
           address
           email
-          linkFb
           linkVk
           telephone
           workinghours
