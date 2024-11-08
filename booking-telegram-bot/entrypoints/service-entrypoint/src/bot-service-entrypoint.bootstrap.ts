@@ -4,6 +4,7 @@ import { NestFactory }                 from '@nestjs/core'
 import { FastifyAdapter }              from '@nestjs/platform-fastify'
 
 import { BotServiceEntrypointModule }  from './bot-service-entrypoint.module.js'
+import { checkEnvsHelper }             from './helpers/check-envs.helper.js'
 
 // eslint-disable-next-line @next/next/no-assign-module-variable
 declare const module: {
@@ -14,6 +15,8 @@ declare const module: {
 }
 
 const bootstrap = async (): Promise<void> => {
+  checkEnvsHelper()
+
   const app = await NestFactory.create<NestFastifyApplication>(
     BotServiceEntrypointModule,
     new FastifyAdapter({
