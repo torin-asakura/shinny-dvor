@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
+    "build": "rm -rf ./dist/ && yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
     "dev": "NODE_ENV=development yarn next dev src",
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
