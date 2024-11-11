@@ -6389,6 +6389,7 @@ __metadata:
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
     "@site/services-page": "workspace:*"
+    "@site/yandex-turbo-api": "workspace:*"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -6827,6 +6828,14 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/yandex-turbo-api@workspace:*, @site/yandex-turbo-api@workspace:site/api/yandex-turbo":
+  version: 0.0.0-use.local
+  resolution: "@site/yandex-turbo-api@workspace:site/api/yandex-turbo"
+  dependencies:
+    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 
