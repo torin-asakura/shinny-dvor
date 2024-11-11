@@ -5,7 +5,7 @@ import React                            from 'react'
 
 import { RootLayout as BaseRootLayout } from '@fragments/root-layout-fragment'
 
-import messages                         from '../../locales/ru.json'
+import messages                         from '../../../locales/ru.json'
 
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
   <BaseRootLayout messages={messages}>{children}</BaseRootLayout>

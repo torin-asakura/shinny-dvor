@@ -12,6 +12,7 @@
     "booking-telegram-bot/**/*"
   ],
   "compilerOptions": {
+    "skipLibCheck": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
     "emitDecoratorMetadata": true,
