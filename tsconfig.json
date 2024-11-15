@@ -9,7 +9,8 @@
     "shared/**/*",
     "globals/**/*",
     "fragments/**/*",
-    "booking-telegram-bot/**/*"
+    "booking-telegram-bot/**/*",
+    "google-amp/**/*"
   ],
   "compilerOptions": {
     "skipLibCheck": true,
