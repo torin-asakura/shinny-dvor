@@ -1,0 +1,26 @@
+{
+  "name": "@google-amp/contacts-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@google-amp/contacts-info-fragment": "workspace:*",
+    "@google-amp/footer-fragment": "workspace:*",
+    "@google-amp/header-fragment": "workspace:*",
+    "@google-amp/map-fragment": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}

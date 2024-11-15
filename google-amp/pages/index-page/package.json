@@ -1,0 +1,28 @@
+{
+  "name": "@google-amp/index-page",
+  "version": "0.0.1",
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "@google-amp/before-after-fragment": "workspace:*",
+    "@google-amp/blog-posts-list-fragment": "workspace:*",
+    "@google-amp/footer-fragment": "workspace:*",
+    "@google-amp/header-fragment": "workspace:*",
+    "@google-amp/hero-fragment": "workspace:*",
+    "@google-amp/services-list-fragment": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+  }
+}
