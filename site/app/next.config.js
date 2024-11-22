@@ -21,6 +21,7 @@ export default {
     ],
   },
   experimental: {
+    instrumentationHook: true,
     externalDir: true,
     outputFileTracingRoot: join(__dirname, './'),
     esmExternals: 'loose',
