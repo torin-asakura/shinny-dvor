@@ -29,6 +29,7 @@
   "devDependencies": {
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
+    "@globals/config": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/booking-api": "workspace:*",
     "@site/contacts-page": "workspace:*",
