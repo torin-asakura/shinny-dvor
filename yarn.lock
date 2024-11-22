@@ -8085,13 +8085,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*, @types/eslint@npm:9.6.1":
+"@types/eslint@npm:*":
   version: 9.6.1
   resolution: "@types/eslint@npm:9.6.1"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
   checksum: 10/719fcd255760168a43d0e306ef87548e1e15bffe361d5f4022b0f266575637acc0ecb85604ac97879ee8ae83c6a6d0613b0ed31d0209ddf22a0fe6d608fc56fe
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:8.56.10":
+  version: 8.56.10
+  resolution: "@types/eslint@npm:8.56.10"
+  dependencies:
+    "@types/estree": "npm:*"
+    "@types/json-schema": "npm:*"
+  checksum: 10/0cdd914b944ebba51c35827d3ef95bc3e16eb82b4c2741f6437fa57cdb00a4407c77f89c220afe9e4c9566982ec8a0fb9b97c956ac3bd4623a3b6af32eed8424
   languageName: node
   linkType: hard
 
@@ -18547,7 +18557,7 @@ __metadata:
     "@atls/code-runtime": "npm:2.0.5"
     "@atls/prettier-plugin": "npm:0.0.8"
     "@jest/core": "npm:29.7.0"
-    "@types/eslint": "npm:9.6.1"
+    "@types/eslint": "npm:8.56.10"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"

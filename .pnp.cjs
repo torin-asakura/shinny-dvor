@@ -385,7 +385,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/code-runtime", "npm:2.0.5"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
           ["@jest/core", "virtual:845cdc2e13a9e683ea5ee19a350fd7bc3718e4f27f7fe2821f31e74d41e589e53a31227102585ea48b48f93331c272ea0121edc4fef39922148e4528df2aa7f6#npm:29.7.0"],\
-          ["@types/eslint", "npm:9.6.1"],\
+          ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:22.1.0"],\
           ["@types/react", "npm:18.3.3"],\
@@ -15201,6 +15201,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/eslint", [\
+      ["npm:8.56.10", {\
+        "packageLocation": "../.yarn/berry/cache/@types-eslint-npm-8.56.10-957cc305f5-10.zip/node_modules/@types/eslint/",\
+        "packageDependencies": [\
+          ["@types/eslint", "npm:8.56.10"],\
+          ["@types/estree", "npm:1.0.6"],\
+          ["@types/json-schema", "npm:7.0.15"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:9.6.1", {\
         "packageLocation": "../.yarn/berry/cache/@types-eslint-npm-9.6.1-31a8cf74e4-10.zip/node_modules/@types/eslint/",\
         "packageDependencies": [\
@@ -29416,7 +29425,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/code-runtime", "npm:2.0.5"],\
           ["@atls/prettier-plugin", "npm:0.0.8"],\
           ["@jest/core", "virtual:845cdc2e13a9e683ea5ee19a350fd7bc3718e4f27f7fe2821f31e74d41e589e53a31227102585ea48b48f93331c272ea0121edc4fef39922148e4528df2aa7f6#npm:29.7.0"],\
-          ["@types/eslint", "npm:9.6.1"],\
+          ["@types/eslint", "npm:8.56.10"],\
           ["@types/jest", "npm:29.5.12"],\
           ["@types/node", "npm:22.1.0"],\
           ["@types/react", "npm:18.3.3"],\
