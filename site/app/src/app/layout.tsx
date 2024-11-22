@@ -12,5 +12,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
 )
 
 export { generateMetadata } from '@fragments/root-layout-fragment'
+
 export { revalidate } from '@fragments/root-layout-fragment'
+
 export default RootLayout
