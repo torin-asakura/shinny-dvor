@@ -5,7 +5,8 @@ import * as Sentry             from '@sentry/node'
 import { API_URL }             from '../http/index.js'
 import { GOODS_LIST_PATH }     from '../http/index.js'
 import { GOODS_CATEGORY_PATH } from '../http/index.js'
-import { generateXml }         from '../generator/index.js'
+import { generateYandexXml }   from '../generator/index.js'
+import { generate2gisXml }     from '../generator/index.js'
 import { fetchData }           from '../http/index.js'
 
 const sentryDsn =
@@ -49,6 +50,34 @@ const getBootstrap = (logger: any) => {
       .map(({ id, name }) => ({ id, name }))
       .flat()
 
+    const formattedGoodsCategoryData_2gis = jsonGoodsCategoryData
+      // @ts-expect-error any
+      .map(({ id, name }) => ({ id, name }))
+      .flat()
+
+    const formattedGoodsData_2gis = retrievedData
+      .map((item) => {
+        // @ts-expect-error any
+        return item.rows.map((row) => {
+          const { id, group_id, name, price } = row
+
+          const findedRow = formattedGoodsCategoryData_2gis.find(({ id }) => id === group_id)
+          if (findedRow) {
+            console.log(findedRow.name, name)
+          }
+
+          return {
+            id,
+            group_id,
+            name,
+            price,
+          }
+        })
+      })
+      .flat()
+
+    console.log(formattedGoodsCategoryData_2gis)
+
     const formattedGoodsCategoryDataDeep = jsonGoodsCategoryData
       // @ts-expect-error any
       .filter((category) => category.children.length)
@@ -59,7 +88,10 @@ const getBootstrap = (logger: any) => {
     const goodsData = formattedGoodsData
     const goodsCategoryData = [...formattedGoodsCategoryData, ...formattedGoodsCategoryDataDeep]
 
-    if (goodsData.length && goodsCategoryData.length) generateXml(goodsData, goodsCategoryData)
+    if (goodsData.length && goodsCategoryData.length) {
+      // generateYandexXml(goodsData, goodsCategoryData)
+      generate2gisXml(goodsData, [...formattedGoodsCategoryData])
+    }
   }
 
   return bootstrap

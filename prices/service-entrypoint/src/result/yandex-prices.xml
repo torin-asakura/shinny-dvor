@@ -2,1341 +2,1341 @@
 <yml_catalog>
   <shop>
     <categories>
-      <category id="6f959fff-7c6d-4137-a365-a04c01ebd93d">Ремонт литых дисков</category>
-      <category id="749f780b-8838-4878-96db-1f066ff983cf">Ремонт стальных дисков</category>
-      <category id="d008b90e-11f5-4165-81ff-3d3198418a35">Шиномонтаж</category>
-      <category id="1199a426-7f3d-4688-8fe1-aa09a13b9cfe">Балансировка Легковой</category>
-      <category id="356161b7-94a6-47db-8c7f-8b178e898b4f">Балансировка Джип</category>
-      <category id="f4e3e920-cfdc-4280-b3d4-ad1c9e63b343">Балансировка Коммерческий транспорт</category>
-      <category id="620eff49-a356-4caa-84f2-1eaece86dad4">Балансировка Минивен</category>
-      <category id="61fdf31e-d202-4b94-86c2-571386f2e7d2">Балансировка Микроавтобус</category>
-      <category id="58c109d6-2707-4a03-9de7-ecce9ec7a2c9">Монтаж и демонтаж Легковой</category>
-      <category id="385ccfd4-8286-4b78-a1a5-4a0a5048e2c2">Монтаж и демонтаж Микроавтобус</category>
-      <category id="64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b">Монтаж и демонтаж Минивен</category>
-      <category id="7352d1e4-72a9-4fcd-87b0-96d22c62157b">Монтаж и демонтаж Коммерческий транспорт</category>
-      <category id="be22089b-6e5f-4e6e-bab8-ca2351019af0">Монтаж и демонтаж Джип</category>
-      <category id="6fa0d597-1879-4d64-8252-40b01a4f7e94">Переобувка Легковой</category>
-      <category id="da8e9df1-12ff-4069-ab87-1e8e76963cae">Переобувка Джип</category>
-      <category id="e0d2a8cf-925d-46b4-99e5-73c0eaee3223">Переобувка Минивен</category>
-      <category id="9702b8fb-cac7-45cd-a670-dc9390f0fe94">Переобувка Микроавтобус</category>
-      <category id="8fcc777e-13aa-4e70-9dc5-dde92bc8f9db">Переобувка Коммерческий транспорт</category>
-      <category id="8b9cabb9-9121-4ecc-bc78-ac51417bf104">Снятие колёс Легковой</category>
-      <category id="1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5">Снятие колёс Джип</category>
-      <category id="2fb4b65e-6e31-483d-afac-52a2bc6f815c">Снятие колёс Коммерческий транспорт</category>
-      <category id="9a984c0c-9e24-46df-8040-8a0b8c82e904">Снятие колёс Минивен</category>
-      <category id="1b69e45b-65c5-4e1d-8c07-45a8015d4a7f">Снятие колёс Микроавтобус</category>
-      <category id="374554c8-0806-42df-892d-cffb891aa8b2">Хранение шин Микроавтобус</category>
-      <category id="f742047d-f968-4d1d-8db9-ea67ddb42fc2">Хранение шин Минивен</category>
-      <category id="93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf">Хранение шин Джип</category>
-      <category id="b1e87bd9-67a5-424c-8a20-8e2d172b2417">Хранение шин Легковой</category>
+      <categories id="6f959fff-7c6d-4137-a365-a04c01ebd93d">Ремонт литых дисков</categories>
+      <categories id="749f780b-8838-4878-96db-1f066ff983cf">Ремонт стальных дисков</categories>
+      <categories id="d008b90e-11f5-4165-81ff-3d3198418a35">Шиномонтаж</categories>
+      <categories id="1199a426-7f3d-4688-8fe1-aa09a13b9cfe">Балансировка Легковой</categories>
+      <categories id="356161b7-94a6-47db-8c7f-8b178e898b4f">Балансировка Джип</categories>
+      <categories id="f4e3e920-cfdc-4280-b3d4-ad1c9e63b343">Балансировка Коммерческий транспорт</categories>
+      <categories id="620eff49-a356-4caa-84f2-1eaece86dad4">Балансировка Минивен</categories>
+      <categories id="61fdf31e-d202-4b94-86c2-571386f2e7d2">Балансировка Микроавтобус</categories>
+      <categories id="58c109d6-2707-4a03-9de7-ecce9ec7a2c9">Монтаж и демонтаж Легковой</categories>
+      <categories id="385ccfd4-8286-4b78-a1a5-4a0a5048e2c2">Монтаж и демонтаж Микроавтобус</categories>
+      <categories id="64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b">Монтаж и демонтаж Минивен</categories>
+      <categories id="7352d1e4-72a9-4fcd-87b0-96d22c62157b">Монтаж и демонтаж Коммерческий транспорт</categories>
+      <categories id="be22089b-6e5f-4e6e-bab8-ca2351019af0">Монтаж и демонтаж Джип</categories>
+      <categories id="6fa0d597-1879-4d64-8252-40b01a4f7e94">Переобувка Легковой</categories>
+      <categories id="da8e9df1-12ff-4069-ab87-1e8e76963cae">Переобувка Джип</categories>
+      <categories id="e0d2a8cf-925d-46b4-99e5-73c0eaee3223">Переобувка Минивен</categories>
+      <categories id="9702b8fb-cac7-45cd-a670-dc9390f0fe94">Переобувка Микроавтобус</categories>
+      <categories id="8fcc777e-13aa-4e70-9dc5-dde92bc8f9db">Переобувка Коммерческий транспорт</categories>
+      <categories id="8b9cabb9-9121-4ecc-bc78-ac51417bf104">Снятие колёс Легковой</categories>
+      <categories id="1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5">Снятие колёс Джип</categories>
+      <categories id="2fb4b65e-6e31-483d-afac-52a2bc6f815c">Снятие колёс Коммерческий транспорт</categories>
+      <categories id="9a984c0c-9e24-46df-8040-8a0b8c82e904">Снятие колёс Минивен</categories>
+      <categories id="1b69e45b-65c5-4e1d-8c07-45a8015d4a7f">Снятие колёс Микроавтобус</categories>
+      <categories id="374554c8-0806-42df-892d-cffb891aa8b2">Хранение шин Микроавтобус</categories>
+      <categories id="f742047d-f968-4d1d-8db9-ea67ddb42fc2">Хранение шин Минивен</categories>
+      <categories id="93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf">Хранение шин Джип</categories>
+      <categories id="b1e87bd9-67a5-424c-8a20-8e2d172b2417">Хранение шин Легковой</categories>
     </categories>
     <offers>
-      <offer id="722b149e-f60c-465e-95b0-3cac6959d56e">
+      <offers id="722b149e-f60c-465e-95b0-3cac6959d56e">
         <name>RunFlat</name>
         <vendor>Шинный двор</vendor>
-        <price>100</price>
+        <price>200</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/runflat.jpg</picture>
         <description>RunFlat</description>
-      </offer>
-      <offer id="3850dac3-f331-4ca4-805f-6744665131e7">
+      </offers>
+      <offers id="3850dac3-f331-4ca4-805f-6744665131e7">
         <name>Балансировка джипа R16</name>
         <vendor>Шинный двор</vendor>
-        <price>330</price>
+        <price>510</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r16.jpg</picture>
         <description>Балансировка джипа R16</description>
-      </offer>
-      <offer id="fee87203-0d8d-4168-bf8a-5e34e7eee4b2">
+      </offers>
+      <offers id="fee87203-0d8d-4168-bf8a-5e34e7eee4b2">
         <name>Балансировка джипа R17</name>
         <vendor>Шинный двор</vendor>
-        <price>350</price>
+        <price>530</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r17.jpg</picture>
         <description>Балансировка джипа R17</description>
-      </offer>
-      <offer id="88c6ea2c-966a-468c-86ae-18b3b09a16cc">
+      </offers>
+      <offers id="88c6ea2c-966a-468c-86ae-18b3b09a16cc">
         <name>Балансировка джипа R18</name>
         <vendor>Шинный двор</vendor>
-        <price>360</price>
+        <price>540</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r18.jpg</picture>
         <description>Балансировка джипа R18</description>
-      </offer>
-      <offer id="8eb6ee65-a37a-404e-9c91-38cc452bb272">
+      </offers>
+      <offers id="8eb6ee65-a37a-404e-9c91-38cc452bb272">
         <name>Балансировка джипа R19</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>560</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r19.jpg</picture>
         <description>Балансировка джипа R19</description>
-      </offer>
-      <offer id="b27fcea9-f08b-4fc0-9635-11f2eb4c7c55">
+      </offers>
+      <offers id="b27fcea9-f08b-4fc0-9635-11f2eb4c7c55">
         <name>Балансировка джипа R20</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>570</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r20.jpg</picture>
         <description>Балансировка джипа R20</description>
-      </offer>
-      <offer id="3e200383-dced-4dc4-95a3-8c82b28e50bd">
+      </offers>
+      <offers id="3e200383-dced-4dc4-95a3-8c82b28e50bd">
         <name>Балансировка джипа R21</name>
         <vendor>Шинный двор</vendor>
-        <price>430</price>
+        <price>580</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r21.jpg</picture>
         <description>Балансировка джипа R21</description>
-      </offer>
-      <offer id="468edbf6-d1ff-4142-9687-166d29a7e2cb">
+      </offers>
+      <offers id="468edbf6-d1ff-4142-9687-166d29a7e2cb">
         <name>Балансировка джипа R22</name>
         <vendor>Шинный двор</vendor>
-        <price>440</price>
+        <price>660</price>
         <currencyId>RUB</currencyId>
         <categoryId>356161b7-94a6-47db-8c7f-8b178e898b4f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-jeep-r22.jpg</picture>
         <description>Балансировка джипа R22</description>
-      </offer>
-      <offer id="5985d2c0-5619-4f9b-b25c-7c00ae0bb66b">
+      </offers>
+      <offers id="5985d2c0-5619-4f9b-b25c-7c00ae0bb66b">
         <name>Балансировка коммерческого транспорта R16</name>
         <vendor>Шинный двор</vendor>
-        <price>360</price>
+        <price>510</price>
         <currencyId>RUB</currencyId>
         <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r16.jpg</picture>
         <description>Балансировка коммерческого транспорта R16</description>
-      </offer>
-      <offer id="ebea2597-175f-49af-8c62-3cc3c64f6f20">
+      </offers>
+      <offers id="ebea2597-175f-49af-8c62-3cc3c64f6f20">
         <name>Балансировка коммерческого транспорта R17</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>530</price>
         <currencyId>RUB</currencyId>
         <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r17.jpg</picture>
         <description>Балансировка коммерческого транспорта R17</description>
-      </offer>
-      <offer id="fbb30d1b-4813-4d7d-9cfd-b0554c251146">
+      </offers>
+      <offers id="fbb30d1b-4813-4d7d-9cfd-b0554c251146">
         <name>Балансировка коммерческого транспорта R18</name>
         <vendor>Шинный двор</vendor>
-        <price>390</price>
+        <price>540</price>
         <currencyId>RUB</currencyId>
         <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r18.jpg</picture>
         <description>Балансировка коммерческого транспорта R18</description>
-      </offer>
-      <offer id="7d87255b-cbee-45b8-b8c0-0f6b486e2898">
+      </offers>
+      <offers id="7d87255b-cbee-45b8-b8c0-0f6b486e2898">
         <name>Балансировка коммерческого транспорта R19</name>
-        <vendor>Шинный двор</vendor>
-        <price>410</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r19.jpg</picture>
-        <description>Балансировка коммерческого транспорта R19</description>
-      </offer>
-      <offer id="75762ece-5a66-415a-9bd2-0e8e34b2e8bc">
-        <name>Балансировка коммерческого транспорта R20</name>
-        <vendor>Шинный двор</vendor>
-        <price>410</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r20.jpg</picture>
-        <description>Балансировка коммерческого транспорта R20</description>
-      </offer>
-      <offer id="7d511247-6309-4767-bf7b-84823e62339b">
-        <name>Балансировка коммерческого транспорта R21</name>
         <vendor>Шинный двор</vendor>
         <price>560</price>
         <currencyId>RUB</currencyId>
         <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r21.jpg</picture>
-        <description>Балансировка коммерческого транспорта R21</description>
-      </offer>
-      <offer id="e9935406-65b8-4847-9aac-fbdef31a669c">
-        <name>Балансировка коммерческого транспорта R22</name>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r19.jpg</picture>
+        <description>Балансировка коммерческого транспорта R19</description>
+      </offers>
+      <offers id="75762ece-5a66-415a-9bd2-0e8e34b2e8bc">
+        <name>Балансировка коммерческого транспорта R20</name>
         <vendor>Шинный двор</vendor>
         <price>570</price>
         <currencyId>RUB</currencyId>
         <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r20.jpg</picture>
+        <description>Балансировка коммерческого транспорта R20</description>
+      </offers>
+      <offers id="7d511247-6309-4767-bf7b-84823e62339b">
+        <name>Балансировка коммерческого транспорта R21</name>
+        <vendor>Шинный двор</vendor>
+        <price>580</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r21.jpg</picture>
+        <description>Балансировка коммерческого транспорта R21</description>
+      </offers>
+      <offers id="e9935406-65b8-4847-9aac-fbdef31a669c">
+        <name>Балансировка коммерческого транспорта R22</name>
+        <vendor>Шинный двор</vendor>
+        <price>660</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>f4e3e920-cfdc-4280-b3d4-ad1c9e63b343</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-commercial-r22.jpg</picture>
         <description>Балансировка коммерческого транспорта R22</description>
-      </offer>
-      <offer id="24f94b53-4f8a-4685-9d20-a14391957e9c">
+      </offers>
+      <offers id="24f94b53-4f8a-4685-9d20-a14391957e9c">
         <name>Балансировка легкового авто R13</name>
         <vendor>Шинный двор</vendor>
-        <price>100</price>
+        <price>170</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r13.jpg</picture>
         <description>Балансировка легкового авто R13</description>
-      </offer>
-      <offer id="78b73f78-48f6-407f-ad0f-3ebd2761dc83">
+      </offers>
+      <offers id="78b73f78-48f6-407f-ad0f-3ebd2761dc83">
         <name>Балансировка легкового авто R14</name>
         <vendor>Шинный двор</vendor>
-        <price>160</price>
+        <price>220</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r14.jpg</picture>
         <description>Балансировка легкового авто R14</description>
-      </offer>
-      <offer id="6783c5d7-acbf-4f49-b00b-9607edf29024">
+      </offers>
+      <offers id="6783c5d7-acbf-4f49-b00b-9607edf29024">
         <name>Балансировка легкового авто R15</name>
-        <vendor>Шинный двор</vendor>
-        <price>180</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r15.jpg</picture>
-        <description>Балансировка легкового авто R15</description>
-      </offer>
-      <offer id="13dd6b43-0019-4e49-a77b-f67a7f8fdaaf">
-        <name>Балансировка легкового авто R16</name>
-        <vendor>Шинный двор</vendor>
-        <price>210</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r16.jpg</picture>
-        <description>Балансировка легкового авто R16</description>
-      </offer>
-      <offer id="46b38dbb-2ee7-429a-91a2-095a3df963ba">
-        <name>Балансировка легкового авто R17</name>
         <vendor>Шинный двор</vendor>
         <price>230</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r15.jpg</picture>
+        <description>Балансировка легкового авто R15</description>
+      </offers>
+      <offers id="13dd6b43-0019-4e49-a77b-f67a7f8fdaaf">
+        <name>Балансировка легкового авто R16</name>
+        <vendor>Шинный двор</vendor>
+        <price>280</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r16.jpg</picture>
+        <description>Балансировка легкового авто R16</description>
+      </offers>
+      <offers id="46b38dbb-2ee7-429a-91a2-095a3df963ba">
+        <name>Балансировка легкового авто R17</name>
+        <vendor>Шинный двор</vendor>
+        <price>300</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r17.jpg</picture>
         <description>Балансировка легкового авто R17</description>
-      </offer>
-      <offer id="bdbbc328-f8d4-4264-a788-f1021d821bfe">
+      </offers>
+      <offers id="bdbbc328-f8d4-4264-a788-f1021d821bfe">
         <name>Балансировка легкового авто R18</name>
         <vendor>Шинный двор</vendor>
-        <price>240</price>
+        <price>310</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r18.jpg</picture>
         <description>Балансировка легкового авто R18</description>
-      </offer>
-      <offer id="30bb5775-52d7-48e2-b41d-50d13df13e9d">
+      </offers>
+      <offers id="30bb5775-52d7-48e2-b41d-50d13df13e9d">
         <name>Балансировка легкового авто R19</name>
         <vendor>Шинный двор</vendor>
-        <price>260</price>
+        <price>330</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r19.jpg</picture>
         <description>Балансировка легкового авто R19</description>
-      </offer>
-      <offer id="8add636e-8a1b-4359-a253-5e4582b2998b">
+      </offers>
+      <offers id="8add636e-8a1b-4359-a253-5e4582b2998b">
         <name>Балансировка легкового авто R20</name>
         <vendor>Шинный двор</vendor>
-        <price>260</price>
+        <price>340</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r20.jpg</picture>
         <description>Балансировка легкового авто R20</description>
-      </offer>
-      <offer id="382b076c-1a97-495f-b2ce-9b26093f8167">
+      </offers>
+      <offers id="382b076c-1a97-495f-b2ce-9b26093f8167">
         <name>Балансировка легкового авто R21</name>
         <vendor>Шинный двор</vendor>
-        <price>310</price>
+        <price>350</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r21.jpg</picture>
         <description>Балансировка легкового авто R21</description>
-      </offer>
-      <offer id="986c59c1-551b-4e5c-be81-b3aa9b945cd4">
+      </offers>
+      <offers id="986c59c1-551b-4e5c-be81-b3aa9b945cd4">
         <name>Балансировка легкового авто R22</name>
         <vendor>Шинный двор</vendor>
-        <price>320</price>
+        <price>370</price>
         <currencyId>RUB</currencyId>
         <categoryId>1199a426-7f3d-4688-8fe1-aa09a13b9cfe</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-legkovoi-r22.jpg</picture>
         <description>Балансировка легкового авто R22</description>
-      </offer>
-      <offer id="6bf5f4dc-c540-4f04-aa9a-208bddea2759">
+      </offers>
+      <offers id="6bf5f4dc-c540-4f04-aa9a-208bddea2759">
         <name>Балансировка микроавтобуса R15</name>
         <vendor>Шинный двор</vendor>
-        <price>300</price>
+        <price>440</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r15.jpg</picture>
         <description>Балансировка микроавтобуса R15</description>
-      </offer>
-      <offer id="5c60d165-1a3c-4f7e-a74d-5f2637254d31">
+      </offers>
+      <offers id="5c60d165-1a3c-4f7e-a74d-5f2637254d31">
         <name>Балансировка микроавтобуса R16</name>
         <vendor>Шинный двор</vendor>
-        <price>330</price>
+        <price>490</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r16.jpg</picture>
         <description>Балансировка микроавтобуса R16</description>
-      </offer>
-      <offer id="6ab554d1-7d96-4e7f-b4c2-40cf4ea28a99">
+      </offers>
+      <offers id="6ab554d1-7d96-4e7f-b4c2-40cf4ea28a99">
         <name>Балансировка микроавтобуса R17</name>
         <vendor>Шинный двор</vendor>
-        <price>350</price>
+        <price>510</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r17.jpg</picture>
         <description>Балансировка микроавтобуса R17</description>
-      </offer>
-      <offer id="13b9c33f-5f9f-42c0-8e6e-b1dbd09e2e63">
+      </offers>
+      <offers id="13b9c33f-5f9f-42c0-8e6e-b1dbd09e2e63">
         <name>Балансировка микроавтобуса R18</name>
         <vendor>Шинный двор</vendor>
-        <price>360</price>
+        <price>520</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r18.jpg</picture>
         <description>Балансировка микроавтобуса R18</description>
-      </offer>
-      <offer id="4969655b-0153-4b92-b64f-dfa7168aabdb">
+      </offers>
+      <offers id="4969655b-0153-4b92-b64f-dfa7168aabdb">
         <name>Балансировка микроавтобуса R19</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>540</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r19.jpg</picture>
         <description>Балансировка микроавтобуса R19</description>
-      </offer>
-      <offer id="3322834f-98c8-43c8-9f64-5a541e8209c1">
+      </offers>
+      <offers id="3322834f-98c8-43c8-9f64-5a541e8209c1">
         <name>Балансировка микроавтобуса R20</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>550</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r20.jpg</picture>
         <description>Балансировка микроавтобуса R20</description>
-      </offer>
-      <offer id="31d52060-c49b-40cd-9c98-ed89c33a9aca">
+      </offers>
+      <offers id="31d52060-c49b-40cd-9c98-ed89c33a9aca">
         <name>Балансировка микроавтобуса R21</name>
         <vendor>Шинный двор</vendor>
-        <price>430</price>
+        <price>560</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r21.jpg</picture>
         <description>Балансировка микроавтобуса R21</description>
-      </offer>
-      <offer id="72fce254-2ba9-49ec-8140-7f07325c713c">
+      </offers>
+      <offers id="72fce254-2ba9-49ec-8140-7f07325c713c">
         <name>Балансировка микроавтобуса R22</name>
         <vendor>Шинный двор</vendor>
-        <price>440</price>
+        <price>640</price>
         <currencyId>RUB</currencyId>
         <categoryId>61fdf31e-d202-4b94-86c2-571386f2e7d2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minibus-r22.jpg</picture>
         <description>Балансировка микроавтобуса R22</description>
-      </offer>
-      <offer id="e16eb5e3-cac9-4b24-8d07-399b09278ebd">
+      </offers>
+      <offers id="e16eb5e3-cac9-4b24-8d07-399b09278ebd">
         <name>Балансировка минивена R15</name>
         <vendor>Шинный двор</vendor>
-        <price>250</price>
+        <price>410</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r15.jpg</picture>
         <description>Балансировка минивена R15</description>
-      </offer>
-      <offer id="d50e359a-bb0e-4e0a-9766-0927b6b2270d">
+      </offers>
+      <offers id="d50e359a-bb0e-4e0a-9766-0927b6b2270d">
         <name>Балансировка минивена R16</name>
         <vendor>Шинный двор</vendor>
-        <price>280</price>
+        <price>460</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r16.jpg</picture>
         <description>Балансировка минивена R16</description>
-      </offer>
-      <offer id="422e9ffc-b6f2-4dcc-8af9-ee272b8ee8b4">
+      </offers>
+      <offers id="422e9ffc-b6f2-4dcc-8af9-ee272b8ee8b4">
         <name>Балансировка минивена R17</name>
         <vendor>Шинный двор</vendor>
-        <price>300</price>
+        <price>480</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r17.jpg</picture>
         <description>Балансировка минивена R17</description>
-      </offer>
-      <offer id="a988e6af-f412-4516-9920-8db3a9d613c7">
+      </offers>
+      <offers id="a988e6af-f412-4516-9920-8db3a9d613c7">
         <name>Балансировка минивена R18</name>
         <vendor>Шинный двор</vendor>
-        <price>310</price>
+        <price>490</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r18.jpg</picture>
         <description>Балансировка минивена R18</description>
-      </offer>
-      <offer id="bd9e79e1-eb7e-4735-9392-861e1055ea48">
+      </offers>
+      <offers id="bd9e79e1-eb7e-4735-9392-861e1055ea48">
         <name>Балансировка минивена R19</name>
         <vendor>Шинный двор</vendor>
-        <price>330</price>
+        <price>510</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r19.jpg</picture>
         <description>Балансировка минивена R19</description>
-      </offer>
-      <offer id="5a3bd706-c90f-4c35-8c38-6ba3754fc464">
+      </offers>
+      <offers id="5a3bd706-c90f-4c35-8c38-6ba3754fc464">
         <name>Балансировка минивена R20</name>
         <vendor>Шинный двор</vendor>
-        <price>330</price>
+        <price>520</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r20.jpg</picture>
         <description>Балансировка минивена R20</description>
-      </offer>
-      <offer id="d5b8cac8-08fe-4a47-922c-4c7bbd723e60">
+      </offers>
+      <offers id="d5b8cac8-08fe-4a47-922c-4c7bbd723e60">
         <name>Балансировка минивена R21</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>530</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r21.jpg</picture>
         <description>Балансировка минивена R21</description>
-      </offer>
-      <offer id="aaaa10d9-353d-4f3b-9d8c-13e698461cbe">
+      </offers>
+      <offers id="aaaa10d9-353d-4f3b-9d8c-13e698461cbe">
         <name>Балансировка минивена R22</name>
         <vendor>Шинный двор</vendor>
-        <price>390</price>
+        <price>610</price>
         <currencyId>RUB</currencyId>
         <categoryId>620eff49-a356-4caa-84f2-1eaece86dad4</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/balansirovka-minnivan-r22.jpg</picture>
         <description>Балансировка минивена R22</description>
-      </offer>
-      <offer id="f469ae60-fb9c-473a-a67f-6d648a2ad6a4">
+      </offers>
+      <offers id="f469ae60-fb9c-473a-a67f-6d648a2ad6a4">
         <name>Вулканизация</name>
         <vendor>Шинный двор</vendor>
-        <price>2000</price>
+        <price>3000</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/vulkanizaciya.jpeg</picture>
         <description>Вулканизация</description>
-      </offer>
-      <offer id="e9be8bc2-59ee-4364-8cdc-e569649faf0a">
+      </offers>
+      <offers id="e9be8bc2-59ee-4364-8cdc-e569649faf0a">
         <name>Герметизация борта диска</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>300</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/germetizacia-borta-diska.jpeg</picture>
         <description>Герметизация борта диска</description>
-      </offer>
-      <offer id="184a701b-87ed-4504-9ddf-7b0afcbae1b0">
+      </offers>
+      <offers id="184a701b-87ed-4504-9ddf-7b0afcbae1b0">
         <name>Датчики</name>
         <vendor>Шинный двор</vendor>
-        <price>100</price>
+        <price>150</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/datchiki.jpeg</picture>
         <description>Датчики</description>
-      </offer>
-      <offer id="d72c2648-f73a-4857-94e8-f85f9d9e4e5d">
+      </offers>
+      <offers id="d72c2648-f73a-4857-94e8-f85f9d9e4e5d">
         <name>Жгут для ремонта шины</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>350</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/jgyt.jpeg</picture>
         <description>Жгут для ремонта шины</description>
-      </offer>
-      <offer id="b4863325-08e3-434f-982c-b5d91b73cb3a">
+      </offers>
+      <offers id="b4863325-08e3-434f-982c-b5d91b73cb3a">
         <name>Замена вензеля</name>
         <vendor>Шинный двор</vendor>
-        <price>70</price>
+        <price>200</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/plug.jpg</picture>
         <description>Замена вензеля</description>
-      </offer>
-      <offer id="d88bb41d-d954-4545-baba-94f3e804d71d">
+      </offers>
+      <offers id="d88bb41d-d954-4545-baba-94f3e804d71d">
         <name>Заплатка</name>
         <vendor>Шинный двор</vendor>
-        <price>450</price>
+        <price>700</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/zaplatka.jpeg</picture>
         <description>Заплатка</description>
-      </offer>
-      <offer id="963425ec-00f0-40d2-b393-d5a66d4ccbea">
+      </offers>
+      <offers id="963425ec-00f0-40d2-b393-d5a66d4ccbea">
         <name>Заплатки кордовая</name>
         <vendor>Шинный двор</vendor>
-        <price>800</price>
+        <price>1000</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/zaplatka.jpeg</picture>
         <description>Заплатки кордовая</description>
-      </offer>
-      <offer id="cfc2b70b-564c-42f8-a39d-e3f470b2251f">
+      </offers>
+      <offers id="cfc2b70b-564c-42f8-a39d-e3f470b2251f">
         <name>Камера автомобильная</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>250</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/camera-avto.jpeg</picture>
         <description>Камера автомобильная</description>
-      </offer>
-      <offer id="9e5a3a9b-d2a6-4d1f-beb2-9ecab7ffb4c6">
+      </offers>
+      <offers id="9e5a3a9b-d2a6-4d1f-beb2-9ecab7ffb4c6">
         <name>Монтаж и демонтаж резины джипа R16</name>
         <vendor>Шинный двор</vendor>
-        <price>330</price>
+        <price>410</price>
         <currencyId>RUB</currencyId>
         <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r16.jpg</picture>
         <description>Монтаж и демонтаж резины джипа R16</description>
-      </offer>
-      <offer id="a8472f3e-1c17-463c-aa5d-4e39cf6f3355">
+      </offers>
+      <offers id="a8472f3e-1c17-463c-aa5d-4e39cf6f3355">
         <name>Монтаж и демонтаж резины джипа R17</name>
         <vendor>Шинный двор</vendor>
-        <price>360</price>
+        <price>430</price>
         <currencyId>RUB</currencyId>
         <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r17.jpg</picture>
         <description>Монтаж и демонтаж резины джипа R17</description>
-      </offer>
-      <offer id="db2ee258-edf5-4222-b144-f168210c484e">
+      </offers>
+      <offers id="db2ee258-edf5-4222-b144-f168210c484e">
         <name>Монтаж и демонтаж резины джипа R18</name>
-        <vendor>Шинный двор</vendor>
-        <price>380</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r18.jpg</picture>
-        <description>Монтаж и демонтаж резины джипа R18</description>
-      </offer>
-      <offer id="ac3b7967-d13d-44a4-99d8-5ced29de1214">
-        <name>Монтаж и демонтаж резины джипа R19</name>
-        <vendor>Шинный двор</vendor>
-        <price>390</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r19.jpg</picture>
-        <description>Монтаж и демонтаж резины джипа R19</description>
-      </offer>
-      <offer id="d1c5fefa-4f71-46bb-a328-10186717b0dd">
-        <name>Монтаж и демонтаж резины джипа R20</name>
-        <vendor>Шинный двор</vendor>
-        <price>390</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r20.jpg</picture>
-        <description>Монтаж и демонтаж резины джипа R20</description>
-      </offer>
-      <offer id="1321f855-fbf2-485c-9e3f-0946f0b60c59">
-        <name>Монтаж и демонтаж резины джипа R21</name>
-        <vendor>Шинный двор</vendor>
-        <price>440</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r21.jpg</picture>
-        <description>Монтаж и демонтаж резины джипа R21</description>
-      </offer>
-      <offer id="65158dd7-6c85-4438-b163-177fd4b1355a">
-        <name>Монтаж и демонтаж резины джипа R22</name>
         <vendor>Шинный двор</vendor>
         <price>460</price>
         <currencyId>RUB</currencyId>
         <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r18.jpg</picture>
+        <description>Монтаж и демонтаж резины джипа R18</description>
+      </offers>
+      <offers id="ac3b7967-d13d-44a4-99d8-5ced29de1214">
+        <name>Монтаж и демонтаж резины джипа R19</name>
+        <vendor>Шинный двор</vendor>
+        <price>480</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r19.jpg</picture>
+        <description>Монтаж и демонтаж резины джипа R19</description>
+      </offers>
+      <offers id="d1c5fefa-4f71-46bb-a328-10186717b0dd">
+        <name>Монтаж и демонтаж резины джипа R20</name>
+        <vendor>Шинный двор</vendor>
+        <price>500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r20.jpg</picture>
+        <description>Монтаж и демонтаж резины джипа R20</description>
+      </offers>
+      <offers id="1321f855-fbf2-485c-9e3f-0946f0b60c59">
+        <name>Монтаж и демонтаж резины джипа R21</name>
+        <vendor>Шинный двор</vendor>
+        <price>520</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r21.jpg</picture>
+        <description>Монтаж и демонтаж резины джипа R21</description>
+      </offers>
+      <offers id="65158dd7-6c85-4438-b163-177fd4b1355a">
+        <name>Монтаж и демонтаж резины джипа R22</name>
+        <vendor>Шинный двор</vendor>
+        <price>600</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>be22089b-6e5f-4e6e-bab8-ca2351019af0</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-jeep-r22.jpg</picture>
         <description>Монтаж и демонтаж резины джипа R22</description>
-      </offer>
-      <offer id="59163510-8a71-4292-8dc0-2d33a68651d5">
+      </offers>
+      <offers id="59163510-8a71-4292-8dc0-2d33a68651d5">
         <name>Монтаж и демонтаж резины коммерческого транспорта R16</name>
         <vendor>Шинный двор</vendor>
-        <price>360</price>
+        <price>430</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r16.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R16</description>
-      </offer>
-      <offer id="4f47a7ed-0085-4f83-ab90-974c5437cf50">
+      </offers>
+      <offers id="4f47a7ed-0085-4f83-ab90-974c5437cf50">
         <name>Монтаж и демонтаж резины коммерческого транспорта R17</name>
         <vendor>Шинный двор</vendor>
-        <price>390</price>
+        <price>450</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r17.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R17</description>
-      </offer>
-      <offer id="e1984c8e-2ffb-4986-9691-e0bd12a4d007">
+      </offers>
+      <offers id="e1984c8e-2ffb-4986-9691-e0bd12a4d007">
         <name>Монтаж и демонтаж резины коммерческого транспорта R18</name>
         <vendor>Шинный двор</vendor>
-        <price>410</price>
+        <price>480</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r18.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R18</description>
-      </offer>
-      <offer id="4f7b9ba7-8bcb-4f23-82ae-8abdd4960fde">
+      </offers>
+      <offers id="4f7b9ba7-8bcb-4f23-82ae-8abdd4960fde">
         <name>Монтаж и демонтаж резины коммерческого транспорта R19</name>
         <vendor>Шинный двор</vendor>
-        <price>420</price>
+        <price>500</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r19.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R19</description>
-      </offer>
-      <offer id="3d3aa7b5-c2a2-48eb-9146-ea4d3173207d">
+      </offers>
+      <offers id="3d3aa7b5-c2a2-48eb-9146-ea4d3173207d">
         <name>Монтаж и демонтаж резины коммерческого транспорта R20</name>
         <vendor>Шинный двор</vendor>
-        <price>420</price>
+        <price>520</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r20.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R20</description>
-      </offer>
-      <offer id="6a2d96f9-e130-4baf-838f-9ce579b9d970">
+      </offers>
+      <offers id="6a2d96f9-e130-4baf-838f-9ce579b9d970">
         <name>Монтаж и демонтаж резины коммерческого транспорта R21</name>
         <vendor>Шинный двор</vendor>
-        <price>470</price>
+        <price>540</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r21.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R21</description>
-      </offer>
-      <offer id="0b890161-a732-426e-b055-fd46764115c7">
+      </offers>
+      <offers id="0b890161-a732-426e-b055-fd46764115c7">
         <name>Монтаж и демонтаж резины коммерческого транспорта R22</name>
         <vendor>Шинный двор</vendor>
-        <price>490</price>
+        <price>620</price>
         <currencyId>RUB</currencyId>
         <categoryId>7352d1e4-72a9-4fcd-87b0-96d22c62157b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-commercial-r22.jpg</picture>
         <description>Монтаж и демонтаж резины коммерческого транспорта R22</description>
-      </offer>
-      <offer id="77b5340b-c8ff-456f-b19b-431861509ae9">
+      </offers>
+      <offers id="77b5340b-c8ff-456f-b19b-431861509ae9">
         <name>Монтаж и демонтаж резины легкового авто R13</name>
         <vendor>Шинный двор</vendor>
-        <price>100</price>
+        <price>170</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r13.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R13</description>
-      </offer>
-      <offer id="e218c85c-f54f-4c13-bbb9-043624d39232">
+      </offers>
+      <offers id="e218c85c-f54f-4c13-bbb9-043624d39232">
         <name>Монтаж и демонтаж резины легкового авто R14</name>
         <vendor>Шинный двор</vendor>
-        <price>140</price>
+        <price>200</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r14.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R14</description>
-      </offer>
-      <offer id="d37d5499-4895-40b6-b633-1a54d36e82a8">
+      </offers>
+      <offers id="d37d5499-4895-40b6-b633-1a54d36e82a8">
         <name>Монтаж и демонтаж резины легкового авто R15</name>
         <vendor>Шинный двор</vendor>
-        <price>155</price>
+        <price>200</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r15.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R15</description>
-      </offer>
-      <offer id="c55855fe-94f0-475f-9842-9d11375dacc6">
+      </offers>
+      <offers id="c55855fe-94f0-475f-9842-9d11375dacc6">
         <name>Монтаж и демонтаж резины легкового авто R16</name>
         <vendor>Шинный двор</vendor>
-        <price>160</price>
+        <price>230</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r16.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R16</description>
-      </offer>
-      <offer id="9ae60559-0b38-4487-8449-f9054147f2a2">
+      </offers>
+      <offers id="9ae60559-0b38-4487-8449-f9054147f2a2">
         <name>Монтаж и демонтаж резины легкового авто R17</name>
         <vendor>Шинный двор</vendor>
-        <price>190</price>
+        <price>250</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r17.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R17</description>
-      </offer>
-      <offer id="8f33900a-2bf8-4fd5-bd96-232b52d1be42">
+      </offers>
+      <offers id="8f33900a-2bf8-4fd5-bd96-232b52d1be42">
         <name>Монтаж и демонтаж резины легкового авто R18</name>
         <vendor>Шинный двор</vendor>
-        <price>210</price>
+        <price>280</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r18.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R18</description>
-      </offer>
-      <offer id="e9b9140e-f6ad-4f88-9f45-6638592a8e9f">
+      </offers>
+      <offers id="e9b9140e-f6ad-4f88-9f45-6638592a8e9f">
         <name>Монтаж и демонтаж резины легкового авто R19</name>
         <vendor>Шинный двор</vendor>
-        <price>220</price>
+        <price>300</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r19.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R19</description>
-      </offer>
-      <offer id="d5b862e2-c95a-4480-9c7a-d5f106492bde">
+      </offers>
+      <offers id="d5b862e2-c95a-4480-9c7a-d5f106492bde">
         <name>Монтаж и демонтаж резины легкового авто R20</name>
         <vendor>Шинный двор</vendor>
-        <price>220</price>
+        <price>320</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r20.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R20</description>
-      </offer>
-      <offer id="cc670a09-7372-4a2b-ae20-c5b904e6e1a7">
+      </offers>
+      <offers id="cc670a09-7372-4a2b-ae20-c5b904e6e1a7">
         <name>Монтаж и демонтаж резины легкового авто R21</name>
         <vendor>Шинный двор</vendor>
-        <price>270</price>
+        <price>340</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r21.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R21</description>
-      </offer>
-      <offer id="1982a2a7-3367-4c03-a23f-5260220b66f2">
+      </offers>
+      <offers id="1982a2a7-3367-4c03-a23f-5260220b66f2">
         <name>Монтаж и демонтаж резины легкового авто R22</name>
         <vendor>Шинный двор</vendor>
-        <price>290</price>
+        <price>350</price>
         <currencyId>RUB</currencyId>
         <categoryId>58c109d6-2707-4a03-9de7-ecce9ec7a2c9</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-legkovoi-r22.jpg</picture>
         <description>Монтаж и демонтаж резины легкового авто R22</description>
-      </offer>
-      <offer id="8e4ab0cf-9d18-4411-af0c-3365b709469a">
+      </offers>
+      <offers id="8e4ab0cf-9d18-4411-af0c-3365b709469a">
         <name>Монтаж и демонтаж резины микроавтобуса R15</name>
         <vendor>Шинный двор</vendor>
-        <price>250</price>
+        <price>380</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r15.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R15</description>
-      </offer>
-      <offer id="83910304-5c2e-4803-8cfb-7e8a7eabdfb2">
+      </offers>
+      <offers id="83910304-5c2e-4803-8cfb-7e8a7eabdfb2">
         <name>Монтаж и демонтаж резины микроавтобуса R16</name>
         <vendor>Шинный двор</vendor>
-        <price>255</price>
+        <price>410</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r16.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R16</description>
-      </offer>
-      <offer id="9d3f0d25-82f8-447f-8d72-7dab644843c7">
+      </offers>
+      <offers id="9d3f0d25-82f8-447f-8d72-7dab644843c7">
         <name>Монтаж и демонтаж резины микроавтобуса R17</name>
         <vendor>Шинный двор</vendor>
-        <price>285</price>
+        <price>430</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r17.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R17</description>
-      </offer>
-      <offer id="3aeeff63-3ba0-4697-a01a-442390b00121">
+      </offers>
+      <offers id="3aeeff63-3ba0-4697-a01a-442390b00121">
         <name>Монтаж и демонтаж резины микроавтобуса R18</name>
         <vendor>Шинный двор</vendor>
-        <price>305</price>
+        <price>460</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r18.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R18</description>
-      </offer>
-      <offer id="fbcf68f3-6061-4de7-bc66-9af8160264f0">
+      </offers>
+      <offers id="fbcf68f3-6061-4de7-bc66-9af8160264f0">
         <name>Монтаж и демонтаж резины микроавтобуса R19</name>
         <vendor>Шинный двор</vendor>
-        <price>315</price>
+        <price>480</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r19.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R19</description>
-      </offer>
-      <offer id="c34a50e5-bb04-4392-bcad-977b43e4212b">
+      </offers>
+      <offers id="c34a50e5-bb04-4392-bcad-977b43e4212b">
         <name>Монтаж и демонтаж резины микроавтобуса R20</name>
         <vendor>Шинный двор</vendor>
-        <price>315</price>
+        <price>500</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r20.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R20</description>
-      </offer>
-      <offer id="abe1b08c-c71d-4fe3-abc7-599ced95103e">
+      </offers>
+      <offers id="abe1b08c-c71d-4fe3-abc7-599ced95103e">
         <name>Монтаж и демонтаж резины микроавтобуса R21</name>
         <vendor>Шинный двор</vendor>
-        <price>365</price>
+        <price>520</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r21.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R21</description>
-      </offer>
-      <offer id="91c37d0e-7031-46f7-88e0-aa9dd0d5de8c">
+      </offers>
+      <offers id="91c37d0e-7031-46f7-88e0-aa9dd0d5de8c">
         <name>Монтаж и демонтаж резины микроавтобуса R22</name>
         <vendor>Шинный двор</vendor>
-        <price>385</price>
+        <price>600</price>
         <currencyId>RUB</currencyId>
         <categoryId>385ccfd4-8286-4b78-a1a5-4a0a5048e2c2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomontazh-minibus-r22.jpg</picture>
         <description>Монтаж и демонтаж резины микроавтобуса R22</description>
-      </offer>
-      <offer id="4cafe377-6999-4c23-9d42-20546b66ae79">
+      </offers>
+      <offers id="4cafe377-6999-4c23-9d42-20546b66ae79">
         <name>Монтаж и демонтаж резины минивена R15</name>
         <vendor>Шинный двор</vendor>
-        <price>220</price>
+        <price>330</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r15.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R15</description>
-      </offer>
-      <offer id="204fc558-5498-462a-ade9-22532a836c7c">
+      </offers>
+      <offers id="204fc558-5498-462a-ade9-22532a836c7c">
         <name>Монтаж и демонтаж резины минивена R16</name>
         <vendor>Шинный двор</vendor>
-        <price>225</price>
+        <price>360</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r16.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R16</description>
-      </offer>
-      <offer id="295681fe-97f7-4435-b781-22bd077b2265">
+      </offers>
+      <offers id="295681fe-97f7-4435-b781-22bd077b2265">
         <name>Монтаж и демонтаж резины минивена R17</name>
         <vendor>Шинный двор</vendor>
-        <price>255</price>
+        <price>380</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r17.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R17</description>
-      </offer>
-      <offer id="3df4b338-6991-483c-a3af-0cf4d5fd8a9b">
+      </offers>
+      <offers id="3df4b338-6991-483c-a3af-0cf4d5fd8a9b">
         <name>Монтаж и демонтаж резины минивена R18</name>
         <vendor>Шинный двор</vendor>
-        <price>275</price>
+        <price>410</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r18.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R18</description>
-      </offer>
-      <offer id="0dccc51e-60f7-4917-b59e-512cf8840820">
+      </offers>
+      <offers id="0dccc51e-60f7-4917-b59e-512cf8840820">
         <name>Монтаж и демонтаж резины минивена R19</name>
         <vendor>Шинный двор</vendor>
-        <price>285</price>
+        <price>430</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r19.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R19</description>
-      </offer>
-      <offer id="009a9d67-3b70-455f-bdf7-2c7b0017d95c">
+      </offers>
+      <offers id="009a9d67-3b70-455f-bdf7-2c7b0017d95c">
         <name>Монтаж и демонтаж резины минивена R20</name>
         <vendor>Шинный двор</vendor>
-        <price>285</price>
+        <price>450</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r20.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R20</description>
-      </offer>
-      <offer id="1b9e946e-18af-42fc-82f6-6aafe399c1d9">
+      </offers>
+      <offers id="1b9e946e-18af-42fc-82f6-6aafe399c1d9">
         <name>Монтаж и демонтаж резины минивена R21</name>
         <vendor>Шинный двор</vendor>
-        <price>335</price>
+        <price>470</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r21.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R21</description>
-      </offer>
-      <offer id="2d2054f2-8e5d-41ba-8e96-0ee50fb68b25">
+      </offers>
+      <offers id="2d2054f2-8e5d-41ba-8e96-0ee50fb68b25">
         <name>Монтаж и демонтаж резины минивена R22</name>
         <vendor>Шинный двор</vendor>
-        <price>355</price>
+        <price>550</price>
         <currencyId>RUB</currencyId>
         <categoryId>64bf7d37-6f58-4ec6-a9e2-a0853c7fee2b</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/shinomotazh-minnivan-r22.jpg</picture>
         <description>Монтаж и демонтаж резины минивена R22</description>
-      </offer>
-      <offer id="0dff9f32-77fa-4d6f-9bd6-7509d4bf7168">
+      </offers>
+      <offers id="0dff9f32-77fa-4d6f-9bd6-7509d4bf7168">
         <name>Пакет для хранения шин</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>300</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/paket-dlya-hraneniya.jpeg</picture>
         <description>Пакет для хранения шин</description>
-      </offer>
-      <offer id="c24c5e9c-931f-44bb-a0cc-01cde4790aaf">
+      </offers>
+      <offers id="c24c5e9c-931f-44bb-a0cc-01cde4790aaf">
         <name>Переобувка джипа R16</name>
         <vendor>Шинный двор</vendor>
-        <price>3440</price>
+        <price>5120</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r16.jpg</picture>
         <description>Переобувка джипа R16</description>
-      </offer>
-      <offer id="dce6bbf7-b88b-49fe-a784-7dcedf46f845">
+      </offers>
+      <offers id="dce6bbf7-b88b-49fe-a784-7dcedf46f845">
         <name>Переобувка джипа R17</name>
         <vendor>Шинный двор</vendor>
-        <price>3800</price>
+        <price>5440</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r17.jpg</picture>
         <description>Переобувка джипа R17</description>
-      </offer>
-      <offer id="17622336-ba82-4d92-804e-2c1faf0151dd">
+      </offers>
+      <offers id="17622336-ba82-4d92-804e-2c1faf0151dd">
         <name>Переобувка джипа R18</name>
         <vendor>Шинный двор</vendor>
-        <price>3920</price>
+        <price>5680</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r18.jpg</picture>
         <description>Переобувка джипа R18</description>
-      </offer>
-      <offer id="a1657f88-4906-4905-9915-6302440a635d">
+      </offers>
+      <offers id="a1657f88-4906-4905-9915-6302440a635d">
         <name>Переобувка джипа R19</name>
         <vendor>Шинный двор</vendor>
-        <price>4080</price>
+        <price>5920</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r19.jpg</picture>
         <description>Переобувка джипа R19</description>
-      </offer>
-      <offer id="91c7ec8f-7273-4b4d-871c-3e6deb8616f0">
+      </offers>
+      <offers id="91c7ec8f-7273-4b4d-871c-3e6deb8616f0">
         <name>Переобувка джипа R20</name>
         <vendor>Шинный двор</vendor>
-        <price>4080</price>
+        <price>6080</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r20.jpg</picture>
         <description>Переобувка джипа R20</description>
-      </offer>
-      <offer id="e411cb20-d3f1-4910-95cf-37c77f41a5a1">
+      </offers>
+      <offers id="e411cb20-d3f1-4910-95cf-37c77f41a5a1">
         <name>Переобувка джипа R21</name>
         <vendor>Шинный двор</vendor>
-        <price>4600</price>
+        <price>6360</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r21.jpg</picture>
         <description>Переобувка джипа R21</description>
-      </offer>
-      <offer id="5d8513f4-ccac-45c9-917c-4d542a8a0680">
+      </offers>
+      <offers id="5d8513f4-ccac-45c9-917c-4d542a8a0680">
         <name>Переобувка джипа R22</name>
         <vendor>Шинный двор</vendor>
-        <price>4760</price>
+        <price>7320</price>
         <currencyId>RUB</currencyId>
         <categoryId>da8e9df1-12ff-4069-ab87-1e8e76963cae</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-jeep-r22.jpg</picture>
         <description>Переобувка джипа R22</description>
-      </offer>
-      <offer id="6732c31b-ebc3-4db5-8b22-0d3a76f0430f">
+      </offers>
+      <offers id="6732c31b-ebc3-4db5-8b22-0d3a76f0430f">
         <name>Переобувка коммерческого транспорта R16</name>
         <vendor>Шинный двор</vendor>
-        <price>4080</price>
+        <price>5200</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r16.jpg</picture>
         <description>Переобувка коммерческого транспорта R16</description>
-      </offer>
-      <offer id="fdf42107-d5ca-4480-8128-486925053480">
+      </offers>
+      <offers id="fdf42107-d5ca-4480-8128-486925053480">
         <name>Переобувка коммерческого транспорта R17</name>
         <vendor>Шинный двор</vendor>
-        <price>4440</price>
+        <price>5520</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r17.jpg</picture>
         <description>Переобувка коммерческого транспорта R17</description>
-      </offer>
-      <offer id="b2341629-2d6f-46fe-89e1-89e345070fa3">
+      </offers>
+      <offers id="b2341629-2d6f-46fe-89e1-89e345070fa3">
         <name>Переобувка коммерческого транспорта R18</name>
         <vendor>Шинный двор</vendor>
-        <price>4560</price>
+        <price>5760</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r18.jpg</picture>
         <description>Переобувка коммерческого транспорта R18</description>
-      </offer>
-      <offer id="c047910b-32fd-485f-91cc-42e2096cbd22">
+      </offers>
+      <offers id="c047910b-32fd-485f-91cc-42e2096cbd22">
         <name>Переобувка коммерческого транспорта R19</name>
         <vendor>Шинный двор</vendor>
-        <price>4720</price>
+        <price>6000</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r19.jpg</picture>
         <description>Переобувка коммерческого транспорта R19</description>
-      </offer>
-      <offer id="0e831c47-4d87-4b23-8f19-bff3a7141787">
+      </offers>
+      <offers id="0e831c47-4d87-4b23-8f19-bff3a7141787">
         <name>Переобувка коммерческого транспорта R20</name>
         <vendor>Шинный двор</vendor>
-        <price>4720</price>
+        <price>6160</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r20.jpg</picture>
         <description>Переобувка коммерческого транспорта R20</description>
-      </offer>
-      <offer id="357a276d-00c3-4cef-b66b-da4a2fcffe42">
+      </offers>
+      <offers id="357a276d-00c3-4cef-b66b-da4a2fcffe42">
         <name>Переобувка коммерческого транспорта R21</name>
         <vendor>Шинный двор</vendor>
-        <price>5640</price>
+        <price>6440</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r21.jpg</picture>
         <description>Переобувка коммерческого транспорта R21</description>
-      </offer>
-      <offer id="8974b35d-d2f5-4168-a8f2-85a0645f43c3">
+      </offers>
+      <offers id="8974b35d-d2f5-4168-a8f2-85a0645f43c3">
         <name>Переобувка коммерческого транспорта R22</name>
         <vendor>Шинный двор</vendor>
-        <price>5800</price>
+        <price>7400</price>
         <currencyId>RUB</currencyId>
         <categoryId>8fcc777e-13aa-4e70-9dc5-dde92bc8f9db</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-commercial-r22.jpg</picture>
         <description>Переобувка коммерческого транспорта R22</description>
-      </offer>
-      <offer id="b96f1041-5d26-4faf-90fb-ae42dd429e1c">
+      </offers>
+      <offers id="b96f1041-5d26-4faf-90fb-ae42dd429e1c">
         <name>Переобувка легкового авто R13</name>
         <vendor>Шинный двор</vendor>
-        <price>1200</price>
+        <price>1920</price>
         <currencyId>RUB</currencyId>
         <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r13.jpg</picture>
         <description>Переобувка легкового авто R13</description>
-      </offer>
-      <offer id="398e98ac-42a0-4507-9645-bec921935d3e">
+      </offers>
+      <offers id="398e98ac-42a0-4507-9645-bec921935d3e">
         <name>Переобувка легкового авто R14</name>
         <vendor>Шинный двор</vendor>
-        <price>1680</price>
+        <price>2280</price>
         <currencyId>RUB</currencyId>
         <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r14.jpg</picture>
         <description>Переобувка легкового авто R14</description>
-      </offer>
-      <offer id="5c0dd910-a8e7-4f04-884b-42fc321c4a5c">
+      </offers>
+      <offers id="5c0dd910-a8e7-4f04-884b-42fc321c4a5c">
         <name>Переобувка легкового авто R15</name>
-        <vendor>Шинный двор</vendor>
-        <price>1820</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r15.jpg</picture>
-        <description>Переобувка легкового авто R15</description>
-      </offer>
-      <offer id="793e4654-ef61-490c-844e-d407841c66c5">
-        <name>Переобувка легкового авто R16</name>
-        <vendor>Шинный двор</vendor>
-        <price>1960</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r16.jpg</picture>
-        <description>Переобувка легкового авто R16</description>
-      </offer>
-      <offer id="037a4ed6-ab69-47c6-b95d-5b5702f7d581">
-        <name>Переобувка легкового авто R17</name>
         <vendor>Шинный двор</vendor>
         <price>2320</price>
         <currencyId>RUB</currencyId>
         <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r15.jpg</picture>
+        <description>Переобувка легкового авто R15</description>
+      </offers>
+      <offers id="793e4654-ef61-490c-844e-d407841c66c5">
+        <name>Переобувка легкового авто R16</name>
+        <vendor>Шинный двор</vendor>
+        <price>2720</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r16.jpg</picture>
+        <description>Переобувка легкового авто R16</description>
+      </offers>
+      <offers id="037a4ed6-ab69-47c6-b95d-5b5702f7d581">
+        <name>Переобувка легкового авто R17</name>
+        <vendor>Шинный двор</vendor>
+        <price>3040</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r17.jpg</picture>
         <description>Переобувка легкового авто R17</description>
-      </offer>
-      <offer id="5c60729c-f909-4661-b7b9-53fb1c658db0">
+      </offers>
+      <offers id="5c60729c-f909-4661-b7b9-53fb1c658db0">
         <name>Переобувка легкового авто R18</name>
-        <vendor>Шинный двор</vendor>
-        <price>2440</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r18.jpg</picture>
-        <description>Переобувка легкового авто R18</description>
-      </offer>
-      <offer id="9d762d14-73d6-4227-b7cb-4da57f5e9020">
-        <name>Переобувка легкового авто R19</name>
-        <vendor>Шинный двор</vendor>
-        <price>2600</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r19.jpg</picture>
-        <description>Переобувка легкового авто R19</description>
-      </offer>
-      <offer id="c8d84189-0fc9-4b7a-be54-7a0aa692a2e1">
-        <name>Переобувка легкового авто R20</name>
-        <vendor>Шинный двор</vendor>
-        <price>2600</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r20.jpg</picture>
-        <description>Переобувка легкового авто R20</description>
-      </offer>
-      <offer id="c8805a37-b146-450e-bfcb-a763f1fc4455">
-        <name>Переобувка легкового авто R21</name>
-        <vendor>Шинный двор</vendor>
-        <price>3120</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r21.jpg</picture>
-        <description>Переобувка легкового авто R21</description>
-      </offer>
-      <offer id="e386c7b8-e8f5-4319-b641-b0b7b5da46cc">
-        <name>Переобувка легкового авто R22</name>
         <vendor>Шинный двор</vendor>
         <price>3280</price>
         <currencyId>RUB</currencyId>
         <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r18.jpg</picture>
+        <description>Переобувка легкового авто R18</description>
+      </offers>
+      <offers id="9d762d14-73d6-4227-b7cb-4da57f5e9020">
+        <name>Переобувка легкового авто R19</name>
+        <vendor>Шинный двор</vendor>
+        <price>3520</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r19.jpg</picture>
+        <description>Переобувка легкового авто R19</description>
+      </offers>
+      <offers id="c8d84189-0fc9-4b7a-be54-7a0aa692a2e1">
+        <name>Переобувка легкового авто R20</name>
+        <vendor>Шинный двор</vendor>
+        <price>3680</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r20.jpg</picture>
+        <description>Переобувка легкового авто R20</description>
+      </offers>
+      <offers id="c8805a37-b146-450e-bfcb-a763f1fc4455">
+        <name>Переобувка легкового авто R21</name>
+        <vendor>Шинный двор</vendor>
+        <price>3960</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r21.jpg</picture>
+        <description>Переобувка легкового авто R21</description>
+      </offers>
+      <offers id="e386c7b8-e8f5-4319-b641-b0b7b5da46cc">
+        <name>Переобувка легкового авто R22</name>
+        <vendor>Шинный двор</vendor>
+        <price>4080</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6fa0d597-1879-4d64-8252-40b01a4f7e94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-legkovoi-r22.jpg</picture>
         <description>Переобувка легкового авто R22</description>
-      </offer>
-      <offer id="aec98298-07f5-4a91-a767-8ebe86300d91">
+      </offers>
+      <offers id="aec98298-07f5-4a91-a767-8ebe86300d91">
         <name>Переобувка микроавтобуса R15</name>
         <vendor>Шинный двор</vendor>
-        <price>2960</price>
+        <price>4560</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r15.jpg</picture>
         <description>Переобувка микроавтобуса R15</description>
-      </offer>
-      <offer id="8a8f1951-a67f-4eb5-858c-8455bbf18b32">
+      </offers>
+      <offers id="8a8f1951-a67f-4eb5-858c-8455bbf18b32">
         <name>Переобувка микроавтобуса R16</name>
         <vendor>Шинный двор</vendor>
-        <price>3100</price>
+        <price>4960</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r16.jpg</picture>
         <description>Переобувка микроавтобуса R16</description>
-      </offer>
-      <offer id="2293a30a-2488-4229-a606-d11eaab7b83b">
+      </offers>
+      <offers id="2293a30a-2488-4229-a606-d11eaab7b83b">
         <name>Переобувка микроавтобуса R17</name>
         <vendor>Шинный двор</vendor>
-        <price>3460</price>
+        <price>5280</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r17.jpg</picture>
         <description>Переобувка микроавтобуса R17</description>
-      </offer>
-      <offer id="14a1c47f-fe93-4392-9481-18d94d7e1613">
+      </offers>
+      <offers id="14a1c47f-fe93-4392-9481-18d94d7e1613">
         <name>Переобувка микроавтобуса R18</name>
         <vendor>Шинный двор</vendor>
-        <price>3580</price>
+        <price>5520</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r18.jpg</picture>
         <description>Переобувка микроавтобуса R18</description>
-      </offer>
-      <offer id="d2770cb6-608a-4674-bdf3-28dcdb969451">
+      </offers>
+      <offers id="d2770cb6-608a-4674-bdf3-28dcdb969451">
         <name>Переобувка микроавтобуса R19</name>
         <vendor>Шинный двор</vendor>
-        <price>3740</price>
+        <price>5760</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r19.jpg</picture>
         <description>Переобувка микроавтобуса R19</description>
-      </offer>
-      <offer id="d455e91a-ac85-4ddc-8532-e5ba39e9d2ce">
+      </offers>
+      <offers id="d455e91a-ac85-4ddc-8532-e5ba39e9d2ce">
         <name>Переобувка микроавтобуса R20</name>
         <vendor>Шинный двор</vendor>
-        <price>3740</price>
+        <price>5920</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r20.jpg</picture>
         <description>Переобувка микроавтобуса R20</description>
-      </offer>
-      <offer id="ab8c0fe9-35eb-47ce-8a5f-5e99fb218290">
+      </offers>
+      <offers id="ab8c0fe9-35eb-47ce-8a5f-5e99fb218290">
         <name>Переобувка микроавтобуса R21</name>
         <vendor>Шинный двор</vendor>
-        <price>4260</price>
+        <price>6200</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r21.jpg</picture>
         <description>Переобувка микроавтобуса R21</description>
-      </offer>
-      <offer id="80ab842c-40a3-4a46-8204-73069dd87d88">
+      </offers>
+      <offers id="80ab842c-40a3-4a46-8204-73069dd87d88">
         <name>Переобувка микроавтобуса R22</name>
         <vendor>Шинный двор</vendor>
-        <price>4420</price>
+        <price>7160</price>
         <currencyId>RUB</currencyId>
         <categoryId>9702b8fb-cac7-45cd-a670-dc9390f0fe94</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minibus-r22.jpg</picture>
         <description>Переобувка микроавтобуса R22</description>
-      </offer>
-      <offer id="cc53c0e2-e3b1-42f1-8fc4-772ae57a6a54">
+      </offers>
+      <offers id="cc53c0e2-e3b1-42f1-8fc4-772ae57a6a54">
         <name>Переобувка минивена R15</name>
         <vendor>Шинный двор</vendor>
-        <price>2560</price>
+        <price>4000</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r15.jpg</picture>
         <description>Переобувка минивена R15</description>
-      </offer>
-      <offer id="59a09f3d-2967-492e-98ec-9c95068410a9">
+      </offers>
+      <offers id="59a09f3d-2967-492e-98ec-9c95068410a9">
         <name>Переобувка минивена R16</name>
         <vendor>Шинный двор</vendor>
-        <price>2700</price>
+        <price>4400</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r16.jpg</picture>
         <description>Переобувка минивена R16</description>
-      </offer>
-      <offer id="9d5d7503-de60-4f90-809e-46cd922c6aec">
+      </offers>
+      <offers id="9d5d7503-de60-4f90-809e-46cd922c6aec">
         <name>Переобувка минивена R17</name>
         <vendor>Шинный двор</vendor>
-        <price>3060</price>
+        <price>4720</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r17.jpg</picture>
         <description>Переобувка минивена R17</description>
-      </offer>
-      <offer id="6c8c11c6-6bf1-4e98-9af4-1a5ead8a5644">
+      </offers>
+      <offers id="6c8c11c6-6bf1-4e98-9af4-1a5ead8a5644">
         <name>Переобувка минивена R18</name>
         <vendor>Шинный двор</vendor>
-        <price>3180</price>
+        <price>4960</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r18.jpg</picture>
         <description>Переобувка минивена R18</description>
-      </offer>
-      <offer id="a7603dcf-bf48-4a1e-8383-5f72d6503651">
+      </offers>
+      <offers id="a7603dcf-bf48-4a1e-8383-5f72d6503651">
         <name>Переобувка минивена R19</name>
         <vendor>Шинный двор</vendor>
-        <price>3340</price>
+        <price>5200</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r19.jpg</picture>
         <description>Переобувка минивена R19</description>
-      </offer>
-      <offer id="8c98a094-ffa0-49c5-9f85-020c595c7297">
+      </offers>
+      <offers id="8c98a094-ffa0-49c5-9f85-020c595c7297">
         <name>Переобувка минивена R20</name>
         <vendor>Шинный двор</vendor>
-        <price>3340</price>
+        <price>5360</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r20.jpg</picture>
         <description>Переобувка минивена R20</description>
-      </offer>
-      <offer id="824620b9-a3a2-477b-8c57-484cd089dc2e">
+      </offers>
+      <offers id="824620b9-a3a2-477b-8c57-484cd089dc2e">
         <name>Переобувка минивена R21</name>
         <vendor>Шинный двор</vendor>
-        <price>3860</price>
+        <price>5640</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r21.jpg</picture>
         <description>Переобувка минивена R21</description>
-      </offer>
-      <offer id="93b39443-e2cc-4129-8925-2aff55a618b3">
+      </offers>
+      <offers id="93b39443-e2cc-4129-8925-2aff55a618b3">
         <name>Переобувка минивена R22</name>
         <vendor>Шинный двор</vendor>
-        <price>4020</price>
+        <price>6600</price>
         <currencyId>RUB</currencyId>
         <categoryId>e0d2a8cf-925d-46b4-99e5-73c0eaee3223</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/pereobuvka-minnivan-r22.jpg</picture>
         <description>Переобувка минивена R22</description>
-      </offer>
-      <offer id="0343a21b-c8b4-4ea3-8deb-6af7d27bab5e">
+      </offers>
+      <offers id="0343a21b-c8b4-4ea3-8deb-6af7d27bab5e">
         <name>Ремонт литых дисков R13</name>
-        <vendor>Шинный двор</vendor>
-        <price>800</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r13.jpg</picture>
-        <description>Ремонт литых дисков R13</description>
-      </offer>
-      <offer id="2cac207c-cd54-4ea8-8849-62c589de44d7">
-        <name>Ремонт литых дисков R14</name>
-        <vendor>Шинный двор</vendor>
-        <price>900</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r14.jpg</picture>
-        <description>Ремонт литых дисков R14</description>
-      </offer>
-      <offer id="235b138d-5a52-49ad-a5ef-85d5f307e329">
-        <name>Ремонт литых дисков R15</name>
-        <vendor>Шинный двор</vendor>
-        <price>1000</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r15.jpg</picture>
-        <description>Ремонт литых дисков R15</description>
-      </offer>
-      <offer id="c67adf54-a932-4ce8-95a7-2007decd357c">
-        <name>Ремонт литых дисков R16</name>
         <vendor>Шинный двор</vendor>
         <price>1100</price>
         <currencyId>RUB</currencyId>
         <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r16.jpg</picture>
-        <description>Ремонт литых дисков R16</description>
-      </offer>
-      <offer id="5f2a57f9-e1f9-4967-ae63-01ff2ee7636f">
-        <name>Ремонт литых дисков R17</name>
-        <vendor>Шинный двор</vendor>
-        <price>1200</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r17.jpg</picture>
-        <description>Ремонт литых дисков R17</description>
-      </offer>
-      <offer id="59487949-6d48-4c90-a3af-a1f596531d7a">
-        <name>Ремонт литых дисков R18</name>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r13.jpg</picture>
+        <description>Ремонт литых дисков R13</description>
+      </offers>
+      <offers id="2cac207c-cd54-4ea8-8849-62c589de44d7">
+        <name>Ремонт литых дисков R14</name>
         <vendor>Шинный двор</vendor>
         <price>1300</price>
         <currencyId>RUB</currencyId>
         <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r18.jpg</picture>
-        <description>Ремонт литых дисков R18</description>
-      </offer>
-      <offer id="0518459d-91d2-49a4-99a3-bed2ab6bab03">
-        <name>Ремонт литых дисков R19</name>
-        <vendor>Шинный двор</vendor>
-        <price>1400</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r19.jpg</picture>
-        <description>Ремонт литых дисков R19</description>
-      </offer>
-      <offer id="f4ac16fd-52fb-4792-b4fe-8f2efdbb4f91">
-        <name>Ремонт литых дисков R20</name>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r14.jpg</picture>
+        <description>Ремонт литых дисков R14</description>
+      </offers>
+      <offers id="235b138d-5a52-49ad-a5ef-85d5f307e329">
+        <name>Ремонт литых дисков R15</name>
         <vendor>Шинный двор</vendor>
         <price>1500</price>
         <currencyId>RUB</currencyId>
         <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r15.jpg</picture>
+        <description>Ремонт литых дисков R15</description>
+      </offers>
+      <offers id="c67adf54-a932-4ce8-95a7-2007decd357c">
+        <name>Ремонт литых дисков R16</name>
+        <vendor>Шинный двор</vendor>
+        <price>1800</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r16.jpg</picture>
+        <description>Ремонт литых дисков R16</description>
+      </offers>
+      <offers id="5f2a57f9-e1f9-4967-ae63-01ff2ee7636f">
+        <name>Ремонт литых дисков R17</name>
+        <vendor>Шинный двор</vendor>
+        <price>1900</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r17.jpg</picture>
+        <description>Ремонт литых дисков R17</description>
+      </offers>
+      <offers id="59487949-6d48-4c90-a3af-a1f596531d7a">
+        <name>Ремонт литых дисков R18</name>
+        <vendor>Шинный двор</vendor>
+        <price>2100</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r18.jpg</picture>
+        <description>Ремонт литых дисков R18</description>
+      </offers>
+      <offers id="0518459d-91d2-49a4-99a3-bed2ab6bab03">
+        <name>Ремонт литых дисков R19</name>
+        <vendor>Шинный двор</vendor>
+        <price>2300</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r19.jpg</picture>
+        <description>Ремонт литых дисков R19</description>
+      </offers>
+      <offers id="f4ac16fd-52fb-4792-b4fe-8f2efdbb4f91">
+        <name>Ремонт литых дисков R20</name>
+        <vendor>Шинный двор</vendor>
+        <price>2500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r20.jpg</picture>
         <description>Ремонт литых дисков R20</description>
-      </offer>
-      <offer id="e52bca8d-1aa0-4c4a-aecc-d1757e09ca7b">
+      </offers>
+      <offers id="e52bca8d-1aa0-4c4a-aecc-d1757e09ca7b">
         <name>Ремонт литых дисков R21</name>
         <vendor>Шинный двор</vendor>
-        <price>1600</price>
+        <price>2600</price>
         <currencyId>RUB</currencyId>
         <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r21.jpg</picture>
         <description>Ремонт литых дисков R21</description>
-      </offer>
-      <offer id="7526103d-22b1-4be3-9fdb-1ece10cd4955">
+      </offers>
+      <offers id="7526103d-22b1-4be3-9fdb-1ece10cd4955">
         <name>Ремонт литых дисков R22</name>
         <vendor>Шинный двор</vendor>
-        <price>1700</price>
+        <price>3000</price>
         <currencyId>RUB</currencyId>
         <categoryId>6f959fff-7c6d-4137-a365-a04c01ebd93d</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-alloy-wheels-r22.jpg</picture>
         <description>Ремонт литых дисков R22</description>
-      </offer>
-      <offer id="0daed0c4-f6dd-4249-9d8c-34829acab26f">
+      </offers>
+      <offers id="0daed0c4-f6dd-4249-9d8c-34829acab26f">
         <name>Ремонт стальных дисков R13</name>
-        <vendor>Шинный двор</vendor>
-        <price>600</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r13.jpg</picture>
-        <description>Ремонт стальных дисков R13</description>
-      </offer>
-      <offer id="f8d60b68-3af4-474b-95bb-4bca81194900">
-        <name>Ремонт стальных дисков R14</name>
-        <vendor>Шинный двор</vendor>
-        <price>700</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r14.jpg</picture>
-        <description>Ремонт стальных дисков R14</description>
-      </offer>
-      <offer id="c9e385cc-590b-4c79-a21c-eab57485a547">
-        <name>Ремонт стальных дисков R15</name>
-        <vendor>Шинный двор</vendor>
-        <price>800</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r15.jpg</picture>
-        <description>Ремонт стальных дисков R15</description>
-      </offer>
-      <offer id="997ca462-41d5-403c-8d91-52edd1fd9a9b">
-        <name>Ремонт стальных дисков R16</name>
-        <vendor>Шинный двор</vendor>
-        <price>900</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r16.jpg</picture>
-        <description>Ремонт стальных дисков R16</description>
-      </offer>
-      <offer id="95405ec1-1b06-4256-b9ba-7e5d13260eb7">
-        <name>Ремонт стальных дисков R17</name>
         <vendor>Шинный двор</vendor>
         <price>1000</price>
         <currencyId>RUB</currencyId>
         <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r13.jpg</picture>
+        <description>Ремонт стальных дисков R13</description>
+      </offers>
+      <offers id="f8d60b68-3af4-474b-95bb-4bca81194900">
+        <name>Ремонт стальных дисков R14</name>
+        <vendor>Шинный двор</vendor>
+        <price>1100</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r14.jpg</picture>
+        <description>Ремонт стальных дисков R14</description>
+      </offers>
+      <offers id="c9e385cc-590b-4c79-a21c-eab57485a547">
+        <name>Ремонт стальных дисков R15</name>
+        <vendor>Шинный двор</vendor>
+        <price>1300</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r15.jpg</picture>
+        <description>Ремонт стальных дисков R15</description>
+      </offers>
+      <offers id="997ca462-41d5-403c-8d91-52edd1fd9a9b">
+        <name>Ремонт стальных дисков R16</name>
+        <vendor>Шинный двор</vendor>
+        <price>1500</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r16.jpg</picture>
+        <description>Ремонт стальных дисков R16</description>
+      </offers>
+      <offers id="95405ec1-1b06-4256-b9ba-7e5d13260eb7">
+        <name>Ремонт стальных дисков R17</name>
+        <vendor>Шинный двор</vendor>
+        <price>1700</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>749f780b-8838-4878-96db-1f066ff983cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/repair-steel-wheels-r17.jpg</picture>
         <description>Ремонт стальных дисков R17</description>
-      </offer>
-      <offer id="a2d5742b-4dc9-491e-bfa4-1603e279aae4">
+      </offers>
+      <offers id="a2d5742b-4dc9-491e-bfa4-1603e279aae4">
         <name>Сварка аргоном</name>
         <vendor>Шинный двор</vendor>
         <price>100</price>
@@ -1344,368 +1344,368 @@
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/svarka-argonom.jpg</picture>
         <description>Сварка аргоном</description>
-      </offer>
-      <offer id="f07c9e44-c264-4585-b15f-981ac0309a38">
+      </offers>
+      <offers id="f07c9e44-c264-4585-b15f-981ac0309a38">
         <name>Снятие колеса с джипа R16</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>360</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r16.jpg</picture>
         <description>Снятие колеса с джипа R16</description>
-      </offer>
-      <offer id="f9b7358e-2bc8-4a30-9637-fd263327680f">
+      </offers>
+      <offers id="f9b7358e-2bc8-4a30-9637-fd263327680f">
         <name>Снятие колеса с джипа R17</name>
         <vendor>Шинный двор</vendor>
-        <price>240</price>
+        <price>400</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r17.jpg</picture>
         <description>Снятие колеса с джипа R17</description>
-      </offer>
-      <offer id="1dbabe3b-9724-4e88-9ab7-0f1dddb0ec9d">
+      </offers>
+      <offers id="1dbabe3b-9724-4e88-9ab7-0f1dddb0ec9d">
         <name>Снятие колеса с джипа R18</name>
         <vendor>Шинный двор</vendor>
-        <price>240</price>
+        <price>420</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r18.jpg</picture>
         <description>Снятие колеса с джипа R18</description>
-      </offer>
-      <offer id="687557a3-c40a-4293-a24d-f39c5ed502db">
+      </offers>
+      <offers id="687557a3-c40a-4293-a24d-f39c5ed502db">
         <name>Снятие колеса с джипа R19</name>
         <vendor>Шинный двор</vendor>
-        <price>250</price>
+        <price>440</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r19.jpg</picture>
         <description>Снятие колеса с джипа R19</description>
-      </offer>
-      <offer id="2a16a6ed-fff2-4ee2-bc43-15b51337d935">
+      </offers>
+      <offers id="2a16a6ed-fff2-4ee2-bc43-15b51337d935">
         <name>Снятие колеса с джипа R20</name>
         <vendor>Шинный двор</vendor>
-        <price>250</price>
+        <price>450</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r20.jpg</picture>
         <description>Снятие колеса с джипа R20</description>
-      </offer>
-      <offer id="103e80c3-d857-416e-a44d-f13a4fdcd25b">
+      </offers>
+      <offers id="103e80c3-d857-416e-a44d-f13a4fdcd25b">
         <name>Снятие колеса с джипа R21</name>
         <vendor>Шинный двор</vendor>
-        <price>280</price>
+        <price>490</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r21.jpg</picture>
         <description>Снятие колеса с джипа R21</description>
-      </offer>
-      <offer id="e03fcef6-4009-4330-841e-a9c05be3fb18">
+      </offers>
+      <offers id="e03fcef6-4009-4330-841e-a9c05be3fb18">
         <name>Снятие колеса с джипа R22</name>
         <vendor>Шинный двор</vendor>
-        <price>290</price>
+        <price>570</price>
         <currencyId>RUB</currencyId>
         <categoryId>1d4d9aed-1a5c-4d9f-beb1-95b180bcc5c5</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-jeep-r22.jpg</picture>
         <description>Снятие колеса с джипа R22</description>
-      </offer>
-      <offer id="4f525dd9-1cdd-48e3-b50d-802d4501a67a">
+      </offers>
+      <offers id="4f525dd9-1cdd-48e3-b50d-802d4501a67a">
         <name>Снятие колеса с коммерческого транспорта R16</name>
         <vendor>Шинный двор</vendor>
-        <price>300</price>
+        <price>360</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r16.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R16</description>
-      </offer>
-      <offer id="6661cc07-ee24-4eb4-bb33-5edbb36f5de3">
+      </offers>
+      <offers id="6661cc07-ee24-4eb4-bb33-5edbb36f5de3">
         <name>Снятие колеса с коммерческого транспорта R17</name>
         <vendor>Шинный двор</vendor>
-        <price>340</price>
+        <price>400</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r17.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R17</description>
-      </offer>
-      <offer id="3d5113f3-eebe-433c-8896-9cd5b0307600">
+      </offers>
+      <offers id="3d5113f3-eebe-433c-8896-9cd5b0307600">
         <name>Снятие колеса с коммерческого транспорта R18</name>
         <vendor>Шинный двор</vendor>
-        <price>340</price>
+        <price>420</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r18.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R18</description>
-      </offer>
-      <offer id="f45bf6d3-77c7-492c-8f5c-37c38c2a2f41">
+      </offers>
+      <offers id="f45bf6d3-77c7-492c-8f5c-37c38c2a2f41">
         <name>Снятие колеса с коммерческого транспорта R19</name>
         <vendor>Шинный двор</vendor>
-        <price>350</price>
+        <price>440</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r19.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R19</description>
-      </offer>
-      <offer id="812218a4-a1fc-402f-a2a9-e9a225ad40b8">
+      </offers>
+      <offers id="812218a4-a1fc-402f-a2a9-e9a225ad40b8">
         <name>Снятие колеса с коммерческого транспорта R20</name>
         <vendor>Шинный двор</vendor>
-        <price>350</price>
+        <price>450</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r20.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R20</description>
-      </offer>
-      <offer id="72117aeb-2a75-4931-88cc-db3f5abd2af6">
+      </offers>
+      <offers id="72117aeb-2a75-4931-88cc-db3f5abd2af6">
         <name>Снятие колеса с коммерческого транспорта R21</name>
         <vendor>Шинный двор</vendor>
-        <price>380</price>
+        <price>490</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r21.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R21</description>
-      </offer>
-      <offer id="b0b76851-3af5-4388-8381-bf9dfbf74f01">
+      </offers>
+      <offers id="b0b76851-3af5-4388-8381-bf9dfbf74f01">
         <name>Снятие колеса с коммерческого транспорта R22</name>
         <vendor>Шинный двор</vendor>
-        <price>390</price>
+        <price>570</price>
         <currencyId>RUB</currencyId>
         <categoryId>2fb4b65e-6e31-483d-afac-52a2bc6f815c</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-commercial-r22.jpg</picture>
         <description>Снятие колеса с коммерческого транспорта R22</description>
-      </offer>
-      <offer id="b1ba1982-b3a9-4c20-a40a-b2608668e6eb">
+      </offers>
+      <offers id="b1ba1982-b3a9-4c20-a40a-b2608668e6eb">
         <name>Снятие колеса с легкового авто R13</name>
         <vendor>Шинный двор</vendor>
-        <price>100</price>
+        <price>140</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r13.jpg</picture>
         <description>Снятие колеса с легкового авто R13</description>
-      </offer>
-      <offer id="9e7d9df7-26bd-43ef-8c4e-36aa29d18b91">
+      </offers>
+      <offers id="9e7d9df7-26bd-43ef-8c4e-36aa29d18b91">
         <name>Снятие колеса с легкового авто R14</name>
         <vendor>Шинный двор</vendor>
-        <price>120</price>
+        <price>150</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r14.jpg</picture>
         <description>Снятие колеса с легкового авто R14</description>
-      </offer>
-      <offer id="476934b6-4c8f-4824-b3ef-ad336eb4b6d2">
+      </offers>
+      <offers id="476934b6-4c8f-4824-b3ef-ad336eb4b6d2">
         <name>Снятие колеса с легкового авто R15</name>
         <vendor>Шинный двор</vendor>
-        <price>120</price>
+        <price>150</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r15.jpg</picture>
         <description>Снятие колеса с легкового авто R15</description>
-      </offer>
-      <offer id="6fc9481a-82d8-4dd6-b1b0-88d19fc836f0">
+      </offers>
+      <offers id="6fc9481a-82d8-4dd6-b1b0-88d19fc836f0">
         <name>Снятие колеса с легкового авто R16</name>
         <vendor>Шинный двор</vendor>
-        <price>120</price>
+        <price>170</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r16.jpg</picture>
         <description>Снятие колеса с легкового авто R16</description>
-      </offer>
-      <offer id="d99091b4-3229-4d1d-9f45-a17bbb2c266a">
+      </offers>
+      <offers id="d99091b4-3229-4d1d-9f45-a17bbb2c266a">
         <name>Снятие колеса с легкового авто R17</name>
         <vendor>Шинный двор</vendor>
-        <price>160</price>
+        <price>210</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r17.jpg</picture>
         <description>Снятие колеса с легкового авто R17</description>
-      </offer>
-      <offer id="bc2a6d09-8b96-44f0-9860-ddd1bbe62c1b">
+      </offers>
+      <offers id="bc2a6d09-8b96-44f0-9860-ddd1bbe62c1b">
         <name>Снятие колеса с легкового авто R18</name>
         <vendor>Шинный двор</vendor>
-        <price>160</price>
+        <price>230</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r18.jpg</picture>
         <description>Снятие колеса с легкового авто R18</description>
-      </offer>
-      <offer id="c44be46d-cfc2-4ae6-bb56-00c0957e4967">
+      </offers>
+      <offers id="c44be46d-cfc2-4ae6-bb56-00c0957e4967">
         <name>Снятие колеса с легкового авто R19</name>
         <vendor>Шинный двор</vendor>
-        <price>170</price>
+        <price>250</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r19.jpg</picture>
         <description>Снятие колеса с легкового авто R19</description>
-      </offer>
-      <offer id="eed8dfe8-b909-4880-b89c-ef9fb464f3b5">
+      </offers>
+      <offers id="eed8dfe8-b909-4880-b89c-ef9fb464f3b5">
         <name>Снятие колеса с легкового авто R20</name>
         <vendor>Шинный двор</vendor>
-        <price>170</price>
+        <price>260</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r20.jpg</picture>
         <description>Снятие колеса с легкового авто R20</description>
-      </offer>
-      <offer id="b504ca82-c17d-4300-b9b3-6b5d72617f3d">
+      </offers>
+      <offers id="b504ca82-c17d-4300-b9b3-6b5d72617f3d">
         <name>Снятие колеса с легкового авто R21</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>300</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r21.jpg</picture>
         <description>Снятие колеса с легкового авто R21</description>
-      </offer>
-      <offer id="fe706065-aadd-4af1-9ae9-96ab4c03d5e8">
+      </offers>
+      <offers id="fe706065-aadd-4af1-9ae9-96ab4c03d5e8">
         <name>Снятие колеса с легкового авто R22</name>
         <vendor>Шинный двор</vendor>
-        <price>210</price>
+        <price>300</price>
         <currencyId>RUB</currencyId>
         <categoryId>8b9cabb9-9121-4ecc-bc78-ac51417bf104</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-legkovoi-r22.jpg</picture>
         <description>Снятие колеса с легкового авто R22</description>
-      </offer>
-      <offer id="b2c1dbfe-efd8-4a02-90f8-74bad4795f90">
+      </offers>
+      <offers id="b2c1dbfe-efd8-4a02-90f8-74bad4795f90">
         <name>Снятие колеса с микроавтобуса R15</name>
         <vendor>Шинный двор</vendor>
-        <price>190</price>
+        <price>320</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r15.jpg</picture>
         <description>Снятие колеса с микроавтобуса R15</description>
-      </offer>
-      <offer id="120d3aab-86fa-4990-beda-5a87338b72b7">
+      </offers>
+      <offers id="120d3aab-86fa-4990-beda-5a87338b72b7">
         <name>Снятие колеса с микроавтобуса R16</name>
         <vendor>Шинный двор</vendor>
-        <price>190</price>
+        <price>340</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r16.jpg</picture>
         <description>Снятие колеса с микроавтобуса R16</description>
-      </offer>
-      <offer id="a13714a0-523e-41e2-937b-251b7d907d0b">
+      </offers>
+      <offers id="a13714a0-523e-41e2-937b-251b7d907d0b">
         <name>Снятие колеса с микроавтобуса R17</name>
         <vendor>Шинный двор</vendor>
-        <price>230</price>
+        <price>380</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r17.jpg</picture>
         <description>Снятие колеса с микроавтобуса R17</description>
-      </offer>
-      <offer id="4f9d5cb5-2dfa-42a7-9bf6-0000cd86169e">
+      </offers>
+      <offers id="4f9d5cb5-2dfa-42a7-9bf6-0000cd86169e">
         <name>Снятие колеса с микроавтобуса R18</name>
         <vendor>Шинный двор</vendor>
-        <price>230</price>
+        <price>400</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r18.jpg</picture>
         <description>Снятие колеса с микроавтобуса R18</description>
-      </offer>
-      <offer id="be0d3b33-3c26-45eb-8fbc-3916743f3f39">
+      </offers>
+      <offers id="be0d3b33-3c26-45eb-8fbc-3916743f3f39">
         <name>Снятие колеса с микроавтобуса R19</name>
         <vendor>Шинный двор</vendor>
-        <price>240</price>
+        <price>420</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r19.jpg</picture>
         <description>Снятие колеса с микроавтобуса R19</description>
-      </offer>
-      <offer id="464cd4d2-e276-4386-b276-9701e4147e98">
+      </offers>
+      <offers id="464cd4d2-e276-4386-b276-9701e4147e98">
         <name>Снятие колеса с микроавтобуса R20</name>
         <vendor>Шинный двор</vendor>
-        <price>240</price>
+        <price>430</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r20.jpg</picture>
         <description>Снятие колеса с микроавтобуса R20</description>
-      </offer>
-      <offer id="967c07e1-c649-4d58-8ab4-3504cb1e4c13">
+      </offers>
+      <offers id="967c07e1-c649-4d58-8ab4-3504cb1e4c13">
         <name>Снятие колеса с микроавтобуса R21</name>
         <vendor>Шинный двор</vendor>
-        <price>270</price>
+        <price>470</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r21.jpg</picture>
         <description>Снятие колеса с микроавтобуса R21</description>
-      </offer>
-      <offer id="4d8e8f17-7d1d-4c44-a444-0b0b7648fb84">
+      </offers>
+      <offers id="4d8e8f17-7d1d-4c44-a444-0b0b7648fb84">
         <name>Снятие колеса с микроавтобуса R22</name>
         <vendor>Шинный двор</vendor>
-        <price>280</price>
+        <price>550</price>
         <currencyId>RUB</currencyId>
         <categoryId>1b69e45b-65c5-4e1d-8c07-45a8015d4a7f</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minibus-r22.jpg</picture>
         <description>Снятие колеса с микроавтобуса R22</description>
-      </offer>
-      <offer id="900c6201-fb69-43be-a9ce-1e3dfabf24fc">
+      </offers>
+      <offers id="900c6201-fb69-43be-a9ce-1e3dfabf24fc">
         <name>Снятие колеса с минивена R15</name>
-        <vendor>Шинный двор</vendor>
-        <price>170</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r15.jpg</picture>
-        <description>Снятие колеса с минивена R15</description>
-      </offer>
-      <offer id="cb97229e-72c4-471a-81f5-6c7b32d7d74c">
-        <name>Снятие колеса с минивена R16</name>
-        <vendor>Шинный двор</vendor>
-        <price>170</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r16.jpg</picture>
-        <description>Снятие колеса с минивена R16</description>
-      </offer>
-      <offer id="6c7d17de-4450-4c44-884d-8a35013aa490">
-        <name>Снятие колеса с минивена R17</name>
-        <vendor>Шинный двор</vendor>
-        <price>210</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r17.jpg</picture>
-        <description>Снятие колеса с минивена R17</description>
-      </offer>
-      <offer id="d0ca4ff0-b05b-41f0-bd93-056bbc930306">
-        <name>Снятие колеса с минивена R18</name>
-        <vendor>Шинный двор</vendor>
-        <price>210</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r18.jpg</picture>
-        <description>Снятие колеса с минивена R18</description>
-      </offer>
-      <offer id="747a2dad-d79d-4ae8-9460-d6b3b492b5e7">
-        <name>Снятие колеса с минивена R19</name>
-        <vendor>Шинный двор</vendor>
-        <price>220</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r19.jpg</picture>
-        <description>Снятие колеса с минивена R19</description>
-      </offer>
-      <offer id="ea72039e-7a22-4f0e-886f-e8843062f45c">
-        <name>Снятие колеса с минивена R20</name>
-        <vendor>Шинный двор</vendor>
-        <price>220</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r20.jpg</picture>
-        <description>Снятие колеса с минивена R20</description>
-      </offer>
-      <offer id="0c451a8e-0f3f-4b2c-b300-b41733bd0197">
-        <name>Снятие колеса с минивена R21</name>
-        <vendor>Шинный двор</vendor>
-        <price>250</price>
-        <currencyId>RUB</currencyId>
-        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
-        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r21.jpg</picture>
-        <description>Снятие колеса с минивена R21</description>
-      </offer>
-      <offer id="05654fcc-f9bb-445c-93dc-ab295c19adc3">
-        <name>Снятие колеса с минивена R22</name>
         <vendor>Шинный двор</vendor>
         <price>260</price>
         <currencyId>RUB</currencyId>
         <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r15.jpg</picture>
+        <description>Снятие колеса с минивена R15</description>
+      </offers>
+      <offers id="cb97229e-72c4-471a-81f5-6c7b32d7d74c">
+        <name>Снятие колеса с минивена R16</name>
+        <vendor>Шинный двор</vendor>
+        <price>280</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r16.jpg</picture>
+        <description>Снятие колеса с минивена R16</description>
+      </offers>
+      <offers id="6c7d17de-4450-4c44-884d-8a35013aa490">
+        <name>Снятие колеса с минивена R17</name>
+        <vendor>Шинный двор</vendor>
+        <price>320</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r17.jpg</picture>
+        <description>Снятие колеса с минивена R17</description>
+      </offers>
+      <offers id="d0ca4ff0-b05b-41f0-bd93-056bbc930306">
+        <name>Снятие колеса с минивена R18</name>
+        <vendor>Шинный двор</vendor>
+        <price>340</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r18.jpg</picture>
+        <description>Снятие колеса с минивена R18</description>
+      </offers>
+      <offers id="747a2dad-d79d-4ae8-9460-d6b3b492b5e7">
+        <name>Снятие колеса с минивена R19</name>
+        <vendor>Шинный двор</vendor>
+        <price>360</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r19.jpg</picture>
+        <description>Снятие колеса с минивена R19</description>
+      </offers>
+      <offers id="ea72039e-7a22-4f0e-886f-e8843062f45c">
+        <name>Снятие колеса с минивена R20</name>
+        <vendor>Шинный двор</vendor>
+        <price>370</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r20.jpg</picture>
+        <description>Снятие колеса с минивена R20</description>
+      </offers>
+      <offers id="0c451a8e-0f3f-4b2c-b300-b41733bd0197">
+        <name>Снятие колеса с минивена R21</name>
+        <vendor>Шинный двор</vendor>
+        <price>410</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
+        <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r21.jpg</picture>
+        <description>Снятие колеса с минивена R21</description>
+      </offers>
+      <offers id="05654fcc-f9bb-445c-93dc-ab295c19adc3">
+        <name>Снятие колеса с минивена R22</name>
+        <vendor>Шинный двор</vendor>
+        <price>490</price>
+        <currencyId>RUB</currencyId>
+        <categoryId>9a984c0c-9e24-46df-8040-8a0b8c82e904</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/snyatie-kolesa-minnivan-r22.jpg</picture>
         <description>Снятие колеса с минивена R22</description>
-      </offer>
-      <offer id="8b1bc65a-0da8-4736-a3e6-88fe237f3f67">
+      </offers>
+      <offers id="8b1bc65a-0da8-4736-a3e6-88fe237f3f67">
         <name>Хранение шин джипа R16</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1713,8 +1713,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r16.jpg</picture>
         <description>Хранение шин джипа R16</description>
-      </offer>
-      <offer id="be8d54f4-17e4-42b2-b044-7d630cc9b507">
+      </offers>
+      <offers id="be8d54f4-17e4-42b2-b044-7d630cc9b507">
         <name>Хранение шин джипа R17</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1722,8 +1722,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r17.jpg</picture>
         <description>Хранение шин джипа R17</description>
-      </offer>
-      <offer id="dbb55914-d19e-4ada-9f0a-fbdff2b55a73">
+      </offers>
+      <offers id="dbb55914-d19e-4ada-9f0a-fbdff2b55a73">
         <name>Хранение шин джипа R18</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1731,8 +1731,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r18.jpg</picture>
         <description>Хранение шин джипа R18</description>
-      </offer>
-      <offer id="88325a1c-a176-4165-af1f-6bde2e829f44">
+      </offers>
+      <offers id="88325a1c-a176-4165-af1f-6bde2e829f44">
         <name>Хранение шин джипа R19</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1740,8 +1740,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r19.jpg</picture>
         <description>Хранение шин джипа R19</description>
-      </offer>
-      <offer id="e8d8b8fc-0eeb-4128-867f-94fac21dc9b7">
+      </offers>
+      <offers id="e8d8b8fc-0eeb-4128-867f-94fac21dc9b7">
         <name>Хранение шин джипа R20</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1749,8 +1749,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r20.jpg</picture>
         <description>Хранение шин джипа R20</description>
-      </offer>
-      <offer id="33da13fc-0a4e-4973-87cf-987e434bde1f">
+      </offers>
+      <offers id="33da13fc-0a4e-4973-87cf-987e434bde1f">
         <name>Хранение шин джипа R21</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1758,8 +1758,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r21.jpg</picture>
         <description>Хранение шин джипа R21</description>
-      </offer>
-      <offer id="f009a4d8-fb77-4339-a525-a54d333c8371">
+      </offers>
+      <offers id="f009a4d8-fb77-4339-a525-a54d333c8371">
         <name>Хранение шин джипа R22</name>
         <vendor>Шинный двор</vendor>
         <price>400</price>
@@ -1767,8 +1767,8 @@
         <categoryId>93ccd0df-cd9e-46c2-b0e3-bec63d3be9cf</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-jeep-r22.jpg</picture>
         <description>Хранение шин джипа R22</description>
-      </offer>
-      <offer id="8db0bfa6-29df-4f67-8dd1-6d0a21574bf6">
+      </offers>
+      <offers id="8db0bfa6-29df-4f67-8dd1-6d0a21574bf6">
         <name>Хранение шин легкового авто R13</name>
         <vendor>Шинный двор</vendor>
         <price>300</price>
@@ -1776,8 +1776,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r13.jpg</picture>
         <description>Хранение шин легкового авто R13</description>
-      </offer>
-      <offer id="c8401359-3fb0-47e7-9b57-8c27e84ae02f">
+      </offers>
+      <offers id="c8401359-3fb0-47e7-9b57-8c27e84ae02f">
         <name>Хранение шин легкового авто R14</name>
         <vendor>Шинный двор</vendor>
         <price>300</price>
@@ -1785,8 +1785,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r14.jpg</picture>
         <description>Хранение шин легкового авто R14</description>
-      </offer>
-      <offer id="11aace6a-7dd1-48e2-a4cc-fea377facbfb">
+      </offers>
+      <offers id="11aace6a-7dd1-48e2-a4cc-fea377facbfb">
         <name>Хранение шин легкового авто R15</name>
         <vendor>Шинный двор</vendor>
         <price>300</price>
@@ -1794,8 +1794,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r15.jpg</picture>
         <description>Хранение шин легкового авто R15</description>
-      </offer>
-      <offer id="0b66c3c4-ea05-4cc8-80c9-065b3c73e9b8">
+      </offers>
+      <offers id="0b66c3c4-ea05-4cc8-80c9-065b3c73e9b8">
         <name>Хранение шин легкового авто R16</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1803,8 +1803,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r16.jpg</picture>
         <description>Хранение шин легкового авто R16</description>
-      </offer>
-      <offer id="5ba2588d-0998-4a7a-9eb6-e8a5d18264e4">
+      </offers>
+      <offers id="5ba2588d-0998-4a7a-9eb6-e8a5d18264e4">
         <name>Хранение шин легкового авто R17</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1812,8 +1812,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r17.jpg</picture>
         <description>Хранение шин легкового авто R17</description>
-      </offer>
-      <offer id="adcac034-51a0-4213-8bc2-ab3065642131">
+      </offers>
+      <offers id="adcac034-51a0-4213-8bc2-ab3065642131">
         <name>Хранение шин легкового авто R18</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1821,8 +1821,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r18.jpg</picture>
         <description>Хранение шин легкового авто R18</description>
-      </offer>
-      <offer id="a6e81d0b-ce9e-4e13-8598-dc6c27114ab0">
+      </offers>
+      <offers id="a6e81d0b-ce9e-4e13-8598-dc6c27114ab0">
         <name>Хранение шин легкового авто R19</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1830,8 +1830,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r19.jpg</picture>
         <description>Хранение шин легкового авто R19</description>
-      </offer>
-      <offer id="5a62095f-bd37-417f-a063-a59f5c21cb82">
+      </offers>
+      <offers id="5a62095f-bd37-417f-a063-a59f5c21cb82">
         <name>Хранение шин легкового авто R20</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1839,8 +1839,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r20.jpg</picture>
         <description>Хранение шин легкового авто R20</description>
-      </offer>
-      <offer id="05fbea0d-7dac-4e6e-9e83-6fa6694e2539">
+      </offers>
+      <offers id="05fbea0d-7dac-4e6e-9e83-6fa6694e2539">
         <name>Хранение шин легкового авто R21</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1848,8 +1848,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r21.jpg</picture>
         <description>Хранение шин легкового авто R21</description>
-      </offer>
-      <offer id="d21f073f-8097-4f6b-b607-84b0fb2248fb">
+      </offers>
+      <offers id="d21f073f-8097-4f6b-b607-84b0fb2248fb">
         <name>Хранение шин легкового авто R22</name>
         <vendor>Шинный двор</vendor>
         <price>400</price>
@@ -1857,8 +1857,8 @@
         <categoryId>b1e87bd9-67a5-424c-8a20-8e2d172b2417</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-legkovoi-r22.jpg</picture>
         <description>Хранение шин легкового авто R22</description>
-      </offer>
-      <offer id="37f29ac1-44a4-4d3b-88b6-b5652bd8b898">
+      </offers>
+      <offers id="37f29ac1-44a4-4d3b-88b6-b5652bd8b898">
         <name>Хранение шин микроавтобуса R16</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1866,8 +1866,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r16.jpg</picture>
         <description>Хранение шин микроавтобуса R16</description>
-      </offer>
-      <offer id="da86f362-d494-4269-9aac-ac67cd53a7d8">
+      </offers>
+      <offers id="da86f362-d494-4269-9aac-ac67cd53a7d8">
         <name>Хранение шин микроавтобуса R17</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1875,8 +1875,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r17.jpg</picture>
         <description>Хранение шин микроавтобуса R17</description>
-      </offer>
-      <offer id="170ef4d6-d586-432b-86e1-540df5583002">
+      </offers>
+      <offers id="170ef4d6-d586-432b-86e1-540df5583002">
         <name>Хранение шин микроавтобуса R18</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1884,8 +1884,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r18.jpg</picture>
         <description>Хранение шин микроавтобуса R18</description>
-      </offer>
-      <offer id="4b271cac-8044-40fd-9ba8-731e1d8e3335">
+      </offers>
+      <offers id="4b271cac-8044-40fd-9ba8-731e1d8e3335">
         <name>Хранение шин микроавтобуса R19</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1893,8 +1893,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r19.jpg</picture>
         <description>Хранение шин микроавтобуса R19</description>
-      </offer>
-      <offer id="e2dc3cef-ae26-4550-8391-65dc48a50b31">
+      </offers>
+      <offers id="e2dc3cef-ae26-4550-8391-65dc48a50b31">
         <name>Хранение шин микроавтобуса R20</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1902,8 +1902,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r20.jpg</picture>
         <description>Хранение шин микроавтобуса R20</description>
-      </offer>
-      <offer id="9e3e470e-591f-4cf8-a991-7fdb34df8c37">
+      </offers>
+      <offers id="9e3e470e-591f-4cf8-a991-7fdb34df8c37">
         <name>Хранение шин микроавтобуса R21</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1911,8 +1911,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r21.jpg</picture>
         <description>Хранение шин микроавтобуса R21</description>
-      </offer>
-      <offer id="5878447f-3e48-4f1f-8b58-9449a9732918">
+      </offers>
+      <offers id="5878447f-3e48-4f1f-8b58-9449a9732918">
         <name>Хранение шин микроавтобуса R22</name>
         <vendor>Шинный двор</vendor>
         <price>400</price>
@@ -1920,8 +1920,8 @@
         <categoryId>374554c8-0806-42df-892d-cffb891aa8b2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minibus-r22.jpg</picture>
         <description>Хранение шин микроавтобуса R22</description>
-      </offer>
-      <offer id="fb359125-7ad6-4d2d-9348-f2215da6a5c8">
+      </offers>
+      <offers id="fb359125-7ad6-4d2d-9348-f2215da6a5c8">
         <name>Хранение шин минивена R16</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1929,8 +1929,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r16.jpg</picture>
         <description>Хранение шин минивена R16</description>
-      </offer>
-      <offer id="49c868bb-0337-4cbb-8faf-d802da742b2d">
+      </offers>
+      <offers id="49c868bb-0337-4cbb-8faf-d802da742b2d">
         <name>Хранение шин минивена R17</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1938,8 +1938,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r17.jpg</picture>
         <description>Хранение шин минивена R17</description>
-      </offer>
-      <offer id="84ba5e05-629f-4795-a6bf-b9da136b5b32">
+      </offers>
+      <offers id="84ba5e05-629f-4795-a6bf-b9da136b5b32">
         <name>Хранение шин минивена R18</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1947,8 +1947,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r18.jpg</picture>
         <description>Хранение шин минивена R18</description>
-      </offer>
-      <offer id="c1b049f5-69ff-4eb0-b945-7fce7e9e37cd">
+      </offers>
+      <offers id="c1b049f5-69ff-4eb0-b945-7fce7e9e37cd">
         <name>Хранение шин минивена R19</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1956,8 +1956,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r19.jpg</picture>
         <description>Хранение шин минивена R19</description>
-      </offer>
-      <offer id="89b8d5f5-bb9b-4d8c-b533-1e062a602007">
+      </offers>
+      <offers id="89b8d5f5-bb9b-4d8c-b533-1e062a602007">
         <name>Хранение шин минивена R20</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1965,8 +1965,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r20.jpg</picture>
         <description>Хранение шин минивена R20</description>
-      </offer>
-      <offer id="24af4120-f4e1-4de9-8cb9-e77c58be989b">
+      </offers>
+      <offers id="24af4120-f4e1-4de9-8cb9-e77c58be989b">
         <name>Хранение шин минивена R21</name>
         <vendor>Шинный двор</vendor>
         <price>350</price>
@@ -1974,8 +1974,8 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r21.jpg</picture>
         <description>Хранение шин минивена R21</description>
-      </offer>
-      <offer id="85184ced-6628-4d7c-b75d-55742caf3d7c">
+      </offers>
+      <offers id="85184ced-6628-4d7c-b75d-55742caf3d7c">
         <name>Хранение шин минивена R22</name>
         <vendor>Шинный двор</vendor>
         <price>400</price>
@@ -1983,17 +1983,17 @@
         <categoryId>f742047d-f968-4d1d-8db9-ea67ddb42fc2</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/hranenie-shin-minnivan-r22.jpg</picture>
         <description>Хранение шин минивена R22</description>
-      </offer>
-      <offer id="ba8dd9f7-a40f-4c3e-8878-3529a30f149f">
+      </offers>
+      <offers id="ba8dd9f7-a40f-4c3e-8878-3529a30f149f">
         <name>Чистка дисков автомобиля</name>
         <vendor>Шинный двор</vendor>
-        <price>200</price>
+        <price>350</price>
         <currencyId>RUB</currencyId>
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/chistka-diskov-avto.jpeg</picture>
         <description>Чистка дисков автомобиля</description>
-      </offer>
-      <offer id="5175af5f-b369-4e45-8874-d7193301469f">
+      </offers>
+      <offers id="5175af5f-b369-4e45-8874-d7193301469f">
         <name>Шиповка резины</name>
         <vendor>Шинный двор</vendor>
         <price>25</price>
@@ -2001,7 +2001,7 @@
         <categoryId>d008b90e-11f5-4165-81ff-3d3198418a35</categoryId>
         <picture>https://wp.shdvor.pro/wp-content/uploads/2022/11/oshipovka-rezini.jpeg</picture>
         <description>Шиповка резины</description>
-      </offer>
+      </offers>
     </offers>
   </shop>
 </yml_catalog>

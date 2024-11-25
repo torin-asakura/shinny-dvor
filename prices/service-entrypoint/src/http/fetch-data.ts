@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import { Logger } from '@atls/logger'
-import fetch      from 'node-fetch'
+// import fetch      from 'node-fetch'
 
 const logger = new Logger('Fetch-data')
 
