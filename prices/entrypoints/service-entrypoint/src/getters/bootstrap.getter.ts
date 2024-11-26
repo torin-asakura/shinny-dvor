@@ -59,6 +59,7 @@ export const getBootstrap = (logger: Logger) => {
         logger,
       })
 
+      // TODO uncomment
       // const s3Client = getS3Client()
       //
       // const dateString = new Date().toISOString()
@@ -93,6 +94,7 @@ export const getBootstrap = (logger: Logger) => {
         logger,
       })
 
+      // TODO uncomment
       // await putObjectToS3({
       //   s3Client,
       //   xml: twoGisXml,
