@@ -1,13 +1,16 @@
 /* eslint-disable */
 
-import * as Sentry             from '@sentry/node'
+import * as Sentry               from '@sentry/node'
 
-import { API_URL }             from '../http/index.js'
-import { GOODS_LIST_PATH }     from '../http/index.js'
-import { GOODS_CATEGORY_PATH } from '../http/index.js'
-import { generateYandexXml }   from '../generator/index.js'
-import { generate2gisXml }     from '../generator/index.js'
-import { fetchData }           from '../http/index.js'
+import { API_URL }               from '../http/index.js'
+import { GOODS_LIST_PATH }       from '../http/index.js'
+import { GOODS_CATEGORY_PATH }   from '../http/index.js'
+import { generateYandexXml }     from '../generator/index.js'
+import { generate2gisXml }       from '../generator/index.js'
+import { getGoodsFetchPromises } from '../getters/index.js'
+import { getYandexData }         from '../getters/index.js'
+import { get2gisData }           from '../getters/index.js'
+import { fetchData }             from '../http/index.js'
 
 const sentryDsn =
   process.env.SENTRY_DSN ?? 'https://aeae54efe3df4eac9f5ccebb4aa67476@logger.atls.tech/4'
@@ -18,79 +21,32 @@ const getBootstrap = (logger: any) => {
   const bootstrap = async () => {
     logger.info('initializing')
 
-    const goodsResponse = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
-    const goodsCategoryResponse = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
+    const goodsData_json = await fetchData(`${API_URL}${GOODS_LIST_PATH}`)
+    const goodsCategoryData_json = await fetchData(`${API_URL}${GOODS_CATEGORY_PATH}`)
 
-    const jsonGoodsData: any = await goodsResponse
+    const goodsData_promises = getGoodsFetchPromises(goodsData_json.pages)
+    const goodsData_resolved = await Promise.all(goodsData_promises)
 
-    const jsonGoodsCategoryData: any = await goodsCategoryResponse
+    const [goodsData_yandex, goodsCategoryData_yandex] = getYandexData(
+      goodsData_resolved,
+      goodsCategoryData_json
+    )
 
-    const queryPromises: Array<Promise<any>> = [...Array(jsonGoodsData.pages)].map(async (
-      _,
-      index
-    ) => fetchData(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`))
+    const [goodsData_2gis, goodsCategoryData_2gis] = get2gisData(
+      goodsData_resolved,
+      goodsCategoryData_json
+    )
 
-    const retrievedData = await Promise.all(queryPromises)
+    if (goodsData_2gis.length && goodsCategoryData_2gis.length) {
+      generate2gisXml(goodsData_2gis, goodsCategoryData_2gis)
+    } else {
+      logger.error('2gis-data is empty')
+    }
 
-    const formattedGoodsData = retrievedData
-      .map((item) =>
-        // @ts-expect-error any
-        item.rows.map(({ id, group_id, name, price }) => ({
-          id,
-          group_id,
-          name,
-          price,
-        })))
-      .flat()
-
-    const formattedGoodsCategoryData = jsonGoodsCategoryData
-      // @ts-expect-error any
-      .filter((item) => !item.children.length)
-      // @ts-expect-error any
-      .map(({ id, name }) => ({ id, name }))
-      .flat()
-
-    const formattedGoodsCategoryData_2gis = jsonGoodsCategoryData
-      // @ts-expect-error any
-      .map(({ id, name }) => ({ id, name }))
-      .flat()
-
-    const formattedGoodsData_2gis = retrievedData
-      .map((item) => {
-        // @ts-expect-error any
-        return item.rows.map((row) => {
-          const { id, group_id, name, price } = row
-
-          const findedRow = formattedGoodsCategoryData_2gis.find(({ id }) => id === group_id)
-          if (findedRow) {
-            console.log(findedRow.name, name)
-          }
-
-          return {
-            id,
-            group_id,
-            name,
-            price,
-          }
-        })
-      })
-      .flat()
-
-    console.log(formattedGoodsCategoryData_2gis)
-
-    const formattedGoodsCategoryDataDeep = jsonGoodsCategoryData
-      // @ts-expect-error any
-      .filter((category) => category.children.length)
-      // @ts-expect-error any
-      .map((item) => item.children.map(({ id, name }) => ({ id, name })))
-      .flat()
-
-    const goodsData = formattedGoodsData
-    const goodsCategoryData = [...formattedGoodsCategoryData, ...formattedGoodsCategoryDataDeep]
-
-    if (goodsData.length && goodsCategoryData.length) {
-      // generateYandexXml(goodsData, goodsCategoryData)
-      generate2gisXml(goodsData, [...formattedGoodsCategoryData])
+    if (goodsData_yandex.length && goodsCategoryData_yandex.length) {
+      generateYandexXml(goodsData_yandex, goodsCategoryData_yandex)
+    } else {
+      logger.error('yandex-data is empty')
     }
   }
 

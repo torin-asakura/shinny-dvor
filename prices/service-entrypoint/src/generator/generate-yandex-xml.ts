@@ -8,22 +8,23 @@ import { PutObjectCommand }    from '@aws-sdk/client-s3'
 import { getYandexYmlData }    from '../getters/index.js'
 import { getYandexOffers }     from '../getters/index.js'
 import { getYandexCategories } from '../getters/index.js'
-import { get2gisCategories }   from '../getters/index.js'
-import { convertYmlDataToXml } from '../helpers/convert-yml-data-to-xml.helper.js'
+import { convertYmlDataToXml } from '../helpers/index.js'
 
-// @ts-expect-error any
 export const generateYandexXml = async (goodsData, goodsCategoryData) => {
   const logger = new Logger('yandex-xml-generator')
 
-  const twoGisCategories = get2gisCategories(goodsCategoryData)
+  const yandexCategories = getYandexCategories(goodsCategoryData)
+  const yandexOffers = getYandexOffers(goodsData)
+  const yandexYmlData = getYandexYmlData({ category: yandexCategories, offer: yandexOffers })
+  const yandexXml = convertYmlDataToXml(yandexYmlData)
 
-  // const yandexCategories = getYandexCategories(goodsCategoryData)
-  // const yandexOffers = getYandexOffers(goodsData)
-  // const yandexYmlData = getYandexYmlData({ categories: yandexCategories, offers: yandexOffers })
-  // const yandexXml = convertYmlDataToXml(yandexYmlData)
-  // await fs.writeFile('./src/result/yandex-prices.xml', yandexXml)
+  if (process.env.NODE_ENV === 'development') {
+    const xmlPath = './src/result/yandex-prices.xml'
+    await fs.writeFile(xmlPath, yandexXml)
+    logger.info(`write yandex-xml to ${xmlPath}`)
+  }
 
-  // console.log(`${xml}`)
+  // TODO uncomment
 
   // logger.debug(`Endpoint: ${process.env.FILES_STORAGE_REGION}`)
   //

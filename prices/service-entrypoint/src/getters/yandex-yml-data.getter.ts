@@ -1,4 +1,4 @@
-export const getYandexYmlData = ({ categories, offers }) => {
+export const getYandexYmlData = ({ category, offer }) => {
   const yml = {
     _declaration: {
       _attributes: {
@@ -9,10 +9,10 @@ export const getYandexYmlData = ({ categories, offers }) => {
     yml_catalog: {
       shop: {
         categories: {
-          categories,
+          category,
         },
         offers: {
-          offers,
+          offer,
         },
       },
     },
