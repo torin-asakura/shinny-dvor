@@ -1,6 +1,5 @@
-/* eslint-disable */
-
 import * as Sentry                    from '@sentry/node'
+
 import { Logger }                     from '@atls/logger'
 
 import { API_URL }                    from '../http/index.js'
@@ -27,7 +26,7 @@ const sentryDsn =
 
 if (process.env.NODE_ENV === 'production') Sentry.init({ dsn: sentryDsn })
 
-const getBootstrap = (logger: Logger) => {
+export const getBootstrap = (logger: Logger) => {
   try {
     const bootstrap = async (): Promise<void> => {
       logger.info('initializing')
@@ -115,5 +114,3 @@ const getBootstrap = (logger: Logger) => {
     return
   }
 }
-
-export { getBootstrap }

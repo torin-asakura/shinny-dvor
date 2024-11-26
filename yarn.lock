@@ -5637,18 +5637,62 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prices/service-entrypoint@workspace:prices/service-entrypoint":
+"@prices/domain-module@workspace:prices/core/domain-module":
   version: 0.0.0-use.local
-  resolution: "@prices/service-entrypoint@workspace:prices/service-entrypoint"
+  resolution: "@prices/domain-module@workspace:prices/core/domain-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/infrastructure-module@workspace:prices/core/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@prices/infrastructure-module@workspace:prices/core/infrastructure-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/service-entrypoint@workspace:prices/entrypoints/service-entrypoint":
+  version: 0.0.0-use.local
+  resolution: "@prices/service-entrypoint@workspace:prices/entrypoints/service-entrypoint"
   dependencies:
     "@atls/logger": "npm:^0.0.2"
     "@aws-sdk/client-s3": "npm:3.645.0"
     "@globals/config": "workspace:*"
     "@globals/data": "workspace:*"
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@grpc/proto-loader": "npm:0.7.13"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-fastify": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
     "@sentry/node": "npm:7.118.0"
+    "@types/amqplib": "npm:^0"
     "@types/node": "npm:22.1.0"
     "@types/node-cron": "npm:^3.0.11"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
     cron: "npm:3.1.7"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
     xml-js: "npm:1.6.11"
   languageName: unknown
   linkType: soft
@@ -9867,6 +9911,12 @@ __metadata:
   checksum: 10/afb50f5ff668af1cb66bc5cfebb55ed9a1d99e24901782ee83d00aed1a499835f9375a149cf27b17f79595ecfcc3d1de0cd5b020b210a5359c43eaf607c217de
   languageName: node
   linkType: hard
+
+"application-module-82dd5a@workspace:prices/core/application-module":
+  version: 0.0.0-use.local
+  resolution: "application-module-82dd5a@workspace:prices/core/application-module"
+  languageName: unknown
+  linkType: soft
 
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0

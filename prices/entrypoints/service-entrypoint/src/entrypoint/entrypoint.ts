@@ -13,4 +13,4 @@ const bootstrap = getBootstrap(logger)
 const cronTask = getCronTask(logger, bootstrap)
 
 cronTask.start()
-bootstrap()
+if (bootstrap) bootstrap()

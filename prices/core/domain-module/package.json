@@ -1,0 +1,20 @@
+{
+  "name": "@prices/domain-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@nestjs/common": "10.4.2",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}
