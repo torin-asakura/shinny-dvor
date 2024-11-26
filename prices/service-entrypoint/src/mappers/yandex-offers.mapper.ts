@@ -1,7 +1,9 @@
-import { imagesData } from '../images-data/index.js'
+import type { GoodsDataFormattedType } from '../interfaces/index.js'
+import type { YandexOffersType }       from '../interfaces/index.js'
 
-export const getYandexOffers = (goodsData) => {
-  // @ts-expect-error any
+import { imagesData }                  from '../images-data/index.js'
+
+export const mapYandexOffers = (goodsData: GoodsDataFormattedType): YandexOffersType => {
   const offers = goodsData.map(({ id, group_id, name, price }) => ({
     _attributes: {
       id,

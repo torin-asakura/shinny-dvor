@@ -1,11 +1,20 @@
-import { formatYandexGoodsData }             from '../formatters/index.js'
-import { formatYandexGoodsCategoryData }     from '../formatters/index.js'
-import { formatYandexGoodsCategoryDataDeep } from '../formatters/index.js'
+import type { GoodsDataType }                    from '../interfaces/index.js'
+import type { GoodsCategoryDataType }            from '../interfaces/index.js'
+import type { GoodsDataFormattedType }           from '../interfaces/index.js'
+import type { GoodsCategoriesDataFormattedType } from '../interfaces/index.js'
 
-export const getYandexData = (goodsData, goodsCategoryData) => {
-  const goodsData_yandexFormatted = formatYandexGoodsData(goodsData)
-  const goodsCategoryData_yandexFormatted = formatYandexGoodsCategoryData(goodsCategoryData)
-  const goodsCategoryDataDeep_yandexFormatted = formatYandexGoodsCategoryDataDeep(goodsCategoryData)
+import { mapYandexGoodsData }                    from '../mappers/index.js'
+import { mapYandexGoodsCategoryData }            from '../mappers/index.js'
+import { mapYandexGoodsCategoryDataDeep }        from '../mappers/index.js'
+
+export const getYandexData = (
+  goodsData: Array<GoodsDataType>,
+  goodsCategoryData: GoodsCategoryDataType
+): [GoodsDataFormattedType, GoodsCategoriesDataFormattedType] => {
+  const goodsData_yandexFormatted = mapYandexGoodsData(goodsData)
+
+  const goodsCategoryData_yandexFormatted = mapYandexGoodsCategoryData(goodsCategoryData)
+  const goodsCategoryDataDeep_yandexFormatted = mapYandexGoodsCategoryDataDeep(goodsCategoryData)
 
   const goodsCategoryData_yandexSummary = [
     ...goodsCategoryData_yandexFormatted,

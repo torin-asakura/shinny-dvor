@@ -1,7 +1,7 @@
-import { imagesData } from '../images-data/index.js'
+import type { GoodsDataFormattedType } from '../interfaces/index.js'
+import type { TwoGisOffersType }       from '../interfaces/index.js'
 
-export const get2gisOffers = (goodsData) => {
-  // @ts-expect-error any
+export const map2gisOffers = (goodsData: GoodsDataFormattedType): TwoGisOffersType => {
   const offers = goodsData.map(({ id, group_id, name, price }) => ({
     _attributes: {
       id,
