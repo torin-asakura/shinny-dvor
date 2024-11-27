@@ -5637,25 +5637,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prices/domain-module@workspace:prices/core/domain-module":
+"@prices/prices-application-module@workspace:*, @prices/prices-application-module@workspace:prices/contexts/prices/application-module":
   version: 0.0.0-use.local
-  resolution: "@prices/domain-module@workspace:prices/core/domain-module"
+  resolution: "@prices/prices-application-module@workspace:prices/contexts/prices/application-module"
   dependencies:
+    "@atls/logger": "npm:^0.0.2"
     "@nestjs/common": "npm:10.4.2"
+    "@prices/undici-adapter-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
+    xml-js: "npm:1.6.11"
   peerDependencies:
+    "@atls/logger": "*"
     "@nestjs/common": "*"
+    "@prices/undici-adapter-module": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
   linkType: soft
 
-"@prices/infrastructure-module@workspace:prices/core/infrastructure-module":
+"@prices/prices-infrastructure-module@workspace:*, @prices/prices-infrastructure-module@workspace:prices/contexts/prices/infrastructure-module":
   version: 0.0.0-use.local
-  resolution: "@prices/infrastructure-module@workspace:prices/core/infrastructure-module"
+  resolution: "@prices/prices-infrastructure-module@workspace:prices/contexts/prices/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@prices/prices-application-module": "workspace:*"
+    "@prices/undici-adapter-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
@@ -5682,6 +5689,7 @@ __metadata:
     "@nestjs/platform-fastify": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
+    "@prices/prices-infrastructure-module": "workspace:*"
     "@sentry/node": "npm:7.118.0"
     "@types/amqplib": "npm:^0"
     "@types/node": "npm:22.1.0"
@@ -5694,6 +5702,36 @@ __metadata:
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
     xml-js: "npm:1.6.11"
+  languageName: unknown
+  linkType: soft
+
+"@prices/storage-adapter-module@workspace:prices/adapters/storage-adapter":
+  version: 0.0.0-use.local
+  resolution: "@prices/storage-adapter-module@workspace:prices/adapters/storage-adapter"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/undici-adapter-module@workspace:*, @prices/undici-adapter-module@workspace:prices/adapters/undici-adapter":
+  version: 0.0.0-use.local
+  resolution: "@prices/undici-adapter-module@workspace:prices/adapters/undici-adapter"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -9911,12 +9949,6 @@ __metadata:
   checksum: 10/afb50f5ff668af1cb66bc5cfebb55ed9a1d99e24901782ee83d00aed1a499835f9375a149cf27b17f79595ecfcc3d1de0cd5b020b210a5359c43eaf607c217de
   languageName: node
   linkType: hard
-
-"application-module-82dd5a@workspace:prices/core/application-module":
-  version: 0.0.0-use.local
-  resolution: "application-module-82dd5a@workspace:prices/core/application-module"
-  languageName: unknown
-  linkType: soft
 
 "aproba@npm:^1.0.3 || ^2.0.0":
   version: 2.0.0

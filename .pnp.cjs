@@ -103,16 +103,20 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:globals/data"\
     },\
     {\
-      "name": "application-module-82dd5a",\
-      "reference": "workspace:prices/core/application-module"\
+      "name": "@prices/storage-adapter-module",\
+      "reference": "workspace:prices/adapters/storage-adapter"\
     },\
     {\
-      "name": "@prices/domain-module",\
-      "reference": "workspace:prices/core/domain-module"\
+      "name": "@prices/undici-adapter-module",\
+      "reference": "workspace:prices/adapters/undici-adapter"\
     },\
     {\
-      "name": "@prices/infrastructure-module",\
-      "reference": "workspace:prices/core/infrastructure-module"\
+      "name": "@prices/prices-application-module",\
+      "reference": "workspace:prices/contexts/prices/application-module"\
+    },\
+    {\
+      "name": "@prices/prices-infrastructure-module",\
+      "reference": "workspace:prices/contexts/prices/infrastructure-module"\
     },\
     {\
       "name": "@prices/service-entrypoint",\
@@ -332,9 +336,11 @@ const RAW_RUNTIME_STATE =
     ["@fragments/root-layout-fragment", ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/root-layout-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/root-layout-fragment", "workspace:fragments/root-layout-fragment"]],\
     ["@globals/config", ["workspace:globals/config"]],\
     ["@globals/data", ["virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#workspace:globals/data", "virtual:80892d716d9fd6108f03c570ae1ae249251aaca9a46f64f26cf421557ae1fc35a5554495bcc10131d2c0fc696591335f12772daacff9357e7f747899ffc80a64#workspace:globals/data", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:globals/data", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/data", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:globals/data", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#workspace:globals/data", "workspace:globals/data"]],\
-    ["@prices/domain-module", ["workspace:prices/core/domain-module"]],\
-    ["@prices/infrastructure-module", ["workspace:prices/core/infrastructure-module"]],\
+    ["@prices/prices-application-module", ["virtual:3d2b935c6c43026ea35ab9183526de19eaa62dbc3e0f84aedd2c010ecb22fed670d88d4f23a8ffd813798d489162a20dfa5b5d6f59433f4d37a4d24e738ea848#workspace:prices/contexts/prices/application-module", "workspace:prices/contexts/prices/application-module"]],\
+    ["@prices/prices-infrastructure-module", ["virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#workspace:prices/contexts/prices/infrastructure-module", "workspace:prices/contexts/prices/infrastructure-module"]],\
     ["@prices/service-entrypoint", ["workspace:prices/entrypoints/service-entrypoint"]],\
+    ["@prices/storage-adapter-module", ["workspace:prices/adapters/storage-adapter"]],\
+    ["@prices/undici-adapter-module", ["virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter", "workspace:prices/adapters/undici-adapter"]],\
     ["@query-client/application-module", ["virtual:46abbb83d2c384e10bda5ee78966ba3691018cb83055b45ee7dd10d2c357542f32ab694075a66d1b2d0f41155866a6bfb9b7269b32a4edd1bae13470b6487596#workspace:booking-telegram-bot/contexts/query-client/application-module", "workspace:booking-telegram-bot/contexts/query-client/application-module"]],\
     ["@query-client/infrastructure-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/query-client/infrastructure-module", "workspace:booking-telegram-bot/contexts/query-client/infrastructure-module"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
@@ -387,7 +393,6 @@ const RAW_RUNTIME_STATE =
     ["@ui/tooltip", ["virtual:0fc6f2e09e3cf1a36c606619ae061eaaf71528944f9a92c45a748515a8767101b0aa0838930528de2e8578a7d5bbf511879e72021652f9dc137d5c5e5bd9a741#workspace:ui/tooltip", "virtual:29896d760690d0f3e0a616d909d92d7c0af91beb38a7b0ebf6b4baf63aa7e9d028bb4f951657cb6535a7f8c96dd678cbc944328867732cb137fd8f8b4e7cf32d#workspace:ui/tooltip", "workspace:ui/tooltip"]],\
     ["@ui/utils", ["virtual:29896d760690d0f3e0a616d909d92d7c0af91beb38a7b0ebf6b4baf63aa7e9d028bb4f951657cb6535a7f8c96dd678cbc944328867732cb137fd8f8b4e7cf32d#workspace:ui/utils", "virtual:7275470f820713902e5324143c7d02c2db8b3fe3dfde11481865f2a902374e342b80211a770a24078fc64737ca8636cc13d4054453d161aa0ab23e4847cb87f9#workspace:ui/utils", "workspace:ui/utils"]],\
     ["@ui/wheel", ["virtual:097341399696ea774a668531e7f39dc460500b16dd8b4f098fa891169de9457880099cc4996abc571ad682532149e76bafd82eaddf4abc0e80bc3cfcca5c45ac#workspace:ui/wheel", "virtual:c0ef005aa9f53298f30d7cc23e368ed3c220a88451ed3f0becd92c9203d8af821f5ae063f604e07e26ee0b42e2eef7c3cda55f881d6a34c821bcc3d418590103#workspace:ui/wheel", "workspace:ui/wheel"]],\
-    ["application-module-82dd5a", ["workspace:prices/core/application-module"]],\
     ["shdvor", ["workspace:."]]\
   ],\
   "fallbackPool": [\
@@ -11920,24 +11925,81 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@prices/domain-module", [\
-      ["workspace:prices/core/domain-module", {\
-        "packageLocation": "./prices/core/domain-module/",\
+    ["@prices/prices-application-module", [\
+      ["virtual:3d2b935c6c43026ea35ab9183526de19eaa62dbc3e0f84aedd2c010ecb22fed670d88d4f23a8ffd813798d489162a20dfa5b5d6f59433f4d37a4d24e738ea848#workspace:prices/contexts/prices/application-module", {\
+        "packageLocation": "./.yarn/__virtual__/@prices-prices-application-module-virtual-8210af6e28/1/prices/contexts/prices/application-module/",\
         "packageDependencies": [\
-          ["@prices/domain-module", "workspace:prices/core/domain-module"],\
+          ["@prices/prices-application-module", "virtual:3d2b935c6c43026ea35ab9183526de19eaa62dbc3e0f84aedd2c010ecb22fed670d88d4f23a8ffd813798d489162a20dfa5b5d6f59433f4d37a4d24e738ea848#workspace:prices/contexts/prices/application-module"],\
+          ["@atls/logger", "npm:0.0.2"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@prices/undici-adapter-module", "virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter"],\
+          ["@types/atls__logger", null],\
+          ["@types/nestjs__common", null],\
+          ["@types/prices__undici-adapter-module", null],\
+          ["@types/reflect-metadata", null],\
+          ["@types/rxjs", null],\
           ["reflect-metadata", "npm:0.2.2"],\
-          ["rxjs", "npm:7.8.1"]\
+          ["rxjs", "npm:7.8.1"],\
+          ["xml-js", "npm:1.6.11"]\
+        ],\
+        "packagePeers": [\
+          "@nestjs/common",\
+          "@prices/undici-adapter-module",\
+          "@types/atls__logger",\
+          "@types/nestjs__common",\
+          "@types/prices__undici-adapter-module",\
+          "@types/reflect-metadata",\
+          "@types/rxjs",\
+          "reflect-metadata",\
+          "rxjs"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:prices/contexts/prices/application-module", {\
+        "packageLocation": "./prices/contexts/prices/application-module/",\
+        "packageDependencies": [\
+          ["@prices/prices-application-module", "workspace:prices/contexts/prices/application-module"],\
+          ["@atls/logger", "npm:0.0.2"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@prices/undici-adapter-module", "virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter"],\
+          ["reflect-metadata", "npm:0.2.2"],\
+          ["rxjs", "npm:7.8.1"],\
+          ["xml-js", "npm:1.6.11"]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
-    ["@prices/infrastructure-module", [\
-      ["workspace:prices/core/infrastructure-module", {\
-        "packageLocation": "./prices/core/infrastructure-module/",\
+    ["@prices/prices-infrastructure-module", [\
+      ["virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#workspace:prices/contexts/prices/infrastructure-module", {\
+        "packageLocation": "./.yarn/__virtual__/@prices-prices-infrastructure-module-virtual-2290b72d48/1/prices/contexts/prices/infrastructure-module/",\
         "packageDependencies": [\
-          ["@prices/infrastructure-module", "workspace:prices/core/infrastructure-module"],\
+          ["@prices/prices-infrastructure-module", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#workspace:prices/contexts/prices/infrastructure-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@prices/prices-application-module", "virtual:3d2b935c6c43026ea35ab9183526de19eaa62dbc3e0f84aedd2c010ecb22fed670d88d4f23a8ffd813798d489162a20dfa5b5d6f59433f4d37a4d24e738ea848#workspace:prices/contexts/prices/application-module"],\
+          ["@prices/undici-adapter-module", "virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter"],\
+          ["@types/nestjs__common", null],\
+          ["@types/reflect-metadata", null],\
+          ["@types/rxjs", null],\
+          ["reflect-metadata", "npm:0.2.2"],\
+          ["rxjs", "npm:7.8.1"]\
+        ],\
+        "packagePeers": [\
+          "@nestjs/common",\
+          "@types/nestjs__common",\
+          "@types/reflect-metadata",\
+          "@types/rxjs",\
+          "reflect-metadata",\
+          "rxjs"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:prices/contexts/prices/infrastructure-module", {\
+        "packageLocation": "./prices/contexts/prices/infrastructure-module/",\
+        "packageDependencies": [\
+          ["@prices/prices-infrastructure-module", "workspace:prices/contexts/prices/infrastructure-module"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@prices/prices-application-module", "virtual:3d2b935c6c43026ea35ab9183526de19eaa62dbc3e0f84aedd2c010ecb22fed670d88d4f23a8ffd813798d489162a20dfa5b5d6f59433f4d37a4d24e738ea848#workspace:prices/contexts/prices/application-module"],\
+          ["@prices/undici-adapter-module", "virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"]\
         ],\
@@ -11962,6 +12024,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/platform-fastify", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#npm:10.4.2"],\
           ["@nestjs/platform-socket.io", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#npm:10.4.2"],\
           ["@nestjs/websockets", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#npm:10.4.2"],\
+          ["@prices/prices-infrastructure-module", "virtual:f30b6e4d069afb979b6056bf69563c5025fdb64d1683e267559f015012d82881595c3db1dc801ec2c00a3f9c51b7183e9f3db673d28bc56b24ae16d055ff3387#workspace:prices/contexts/prices/infrastructure-module"],\
           ["@sentry/node", "npm:7.118.0"],\
           ["@types/amqplib", "npm:0.10.5"],\
           ["@types/node", "npm:22.1.0"],\
@@ -11974,6 +12037,56 @@ const RAW_RUNTIME_STATE =
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"],\
           ["xml-js", "npm:1.6.11"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@prices/storage-adapter-module", [\
+      ["workspace:prices/adapters/storage-adapter", {\
+        "packageLocation": "./prices/adapters/storage-adapter/",\
+        "packageDependencies": [\
+          ["@prices/storage-adapter-module", "workspace:prices/adapters/storage-adapter"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["reflect-metadata", "npm:0.2.2"],\
+          ["rxjs", "npm:7.8.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@prices/undici-adapter-module", [\
+      ["virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter", {\
+        "packageLocation": "./.yarn/__virtual__/@prices-undici-adapter-module-virtual-934d16824b/1/prices/adapters/undici-adapter/",\
+        "packageDependencies": [\
+          ["@prices/undici-adapter-module", "virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/undici-adapter"],\
+          ["@atls/logger", "npm:0.0.2"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["@types/atls__logger", null],\
+          ["@types/nestjs__common", null],\
+          ["@types/reflect-metadata", null],\
+          ["@types/rxjs", null],\
+          ["reflect-metadata", "npm:0.2.2"],\
+          ["rxjs", "npm:7.8.1"]\
+        ],\
+        "packagePeers": [\
+          "@atls/logger",\
+          "@nestjs/common",\
+          "@types/atls__logger",\
+          "@types/nestjs__common",\
+          "@types/reflect-metadata",\
+          "@types/rxjs",\
+          "reflect-metadata",\
+          "rxjs"\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["workspace:prices/adapters/undici-adapter", {\
+        "packageLocation": "./prices/adapters/undici-adapter/",\
+        "packageDependencies": [\
+          ["@prices/undici-adapter-module", "workspace:prices/adapters/undici-adapter"],\
+          ["@atls/logger", "npm:0.0.2"],\
+          ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
+          ["reflect-metadata", "npm:0.2.2"],\
+          ["rxjs", "npm:7.8.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -19316,15 +19429,6 @@ const RAW_RUNTIME_STATE =
           ["append-field", "npm:1.0.0"]\
         ],\
         "linkType": "HARD"\
-      }]\
-    ]],\
-    ["application-module-82dd5a", [\
-      ["workspace:prices/core/application-module", {\
-        "packageLocation": "./prices/core/application-module/",\
-        "packageDependencies": [\
-          ["application-module-82dd5a", "workspace:prices/core/application-module"]\
-        ],\
-        "linkType": "SOFT"\
       }]\
     ]],\
     ["aproba", [\

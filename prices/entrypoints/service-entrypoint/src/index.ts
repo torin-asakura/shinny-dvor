@@ -1,1 +1,1 @@
-export * from './prices-service-entrypoint.bootstrap.js'
+import './prices-service-entrypoint.bootstrap.js'
