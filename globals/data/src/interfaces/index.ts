@@ -6,5 +6,5 @@ export * from './price.interface.js'
 export * from './aqsi-data.interface.js'
 export * from './format-pages-data.interfaces.js'
 
-export * from './goods-category-data.interface.js
+export * from './goods-category-data.interface.js'
 export * from './goods-data.interface.js'
