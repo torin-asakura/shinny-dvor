@@ -8,6 +8,8 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@globals/data": "workspace:*",
+    "@prices/storage-adapter-module": "workspace:*",
     "xml-js": "1.6.11"
   },
   "devDependencies": {

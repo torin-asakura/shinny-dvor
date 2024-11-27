@@ -1,8 +1,10 @@
-// TODO interfaces
+import type { GoodsDataType }         from '../interfaces/index.js'
+import type { GoodsCategoryDataType } from '../interfaces/index.js'
+
 export abstract class QueryClientPort {
-  abstract getGoodsData(): Promise<any>
+  abstract getGoodsData(): Promise<GoodsDataType>
 
-  abstract getGoodsCategoryData(): Promise<any>
+  abstract getGoodsCategoryData(): Promise<GoodsCategoryDataType>
 
-  abstract getGoodsPageData(pageNumber: number): Promise<any>
+  abstract getGoodsPageData(pageNumber: number): Promise<Array<GoodsDataType>>
 }

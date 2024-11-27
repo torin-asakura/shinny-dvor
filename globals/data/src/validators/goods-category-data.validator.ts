@@ -1,6 +1,6 @@
 import type { GoodsCategoryDataType }       from '../interfaces/index.js'
 
-import { GoodsCategoryDataValidationError } from '../errors/index.js'
+import { GoodsCategoryDataValidationError } from '../error/index.js'
 
 export const goodsCategoryDataValidator = (goodsCategoryData_json: any): GoodsCategoryDataType => {
   for (const goodsCategoryDataItem of goodsCategoryData_json) {

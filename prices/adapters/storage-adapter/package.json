@@ -7,6 +7,9 @@
   "exports": {
     ".": "./src/index.ts"
   },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.645.0"
+  },
   "devDependencies": {
     "@nestjs/common": "10.4.2",
     "reflect-metadata": "0.2.2",

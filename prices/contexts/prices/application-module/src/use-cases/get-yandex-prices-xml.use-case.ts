@@ -1,3 +1,5 @@
+import type { QueryDataType }  from '../interfaces/index.js'
+
 import { Logger }              from '@atls/logger'
 import { Injectable }          from '@nestjs/common'
 
@@ -10,19 +12,16 @@ import { mapYandexCategories } from '../mappers/index.js'
 
 @Injectable()
 export class GetYandexPricesXmlUseCase {
-  constructor() {}
-
-  // TODO interface
-  async execute(queryData): Promise<any> {
+  async execute(queryData: QueryDataType): Promise<string> {
     const logger = new Logger('update-yandex-prices-use-case')
 
-    const [goodsData_yandex, goodsCategoryData_yandex] = getYandexData(
+    const [goodsDataYandex, goodsCategoryDataYandex] = getYandexData(
       queryData.goodsPagesData,
       queryData.goodsCategoryData
     )
 
-    const yandexCategories = mapYandexCategories(goodsCategoryData_yandex)
-    const yandexOffers = mapYandexOffers(goodsData_yandex)
+    const yandexCategories = mapYandexCategories(goodsCategoryDataYandex)
+    const yandexOffers = mapYandexOffers(goodsDataYandex)
 
     const yandexYmlData = formatYmlData(yandexCategories, yandexOffers)
     const yandexXml = formantYmlDataToXml(yandexYmlData)
@@ -32,5 +31,7 @@ export class GetYandexPricesXmlUseCase {
       xml: yandexXml,
       logger,
     })
+
+    return yandexXml
   }
 }

@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
+    "@globals/data": "workspace:*",
     "@sentry/node": "7.118.0",
     "@types/node-cron": "^3.0.11",
     "cron": "3.1.7"

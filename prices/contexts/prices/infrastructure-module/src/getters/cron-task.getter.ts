@@ -2,7 +2,10 @@ import type { Logger } from '@atls/logger'
 
 import { CronJob }     from 'cron'
 
-export const getCronTask = (logger: Logger, bootstrap: (() => Promise<void>) | undefined) => {
+export const getCronTask = (
+  logger: Logger,
+  bootstrap: (() => Promise<void>) | undefined
+): CronJob => {
   const cronTask = new CronJob('0 0 * * 0', () => {
     logger.info('task started')
     if (bootstrap) bootstrap()
