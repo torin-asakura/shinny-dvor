@@ -26,6 +26,7 @@
     "@nestjs/platform-fastify": "10.4.2",
     "@nestjs/platform-socket.io": "10.4.2",
     "@nestjs/websockets": "10.4.2",
+    "@operator-bot/api-infrastructure-module": "workspace:*",
     "@operator-bot/telegram-bot-context_infrastructure-module": "workspace:*",
     "@types/amqplib": "^0",
     "amqp-connection-manager": "4.1.14",
