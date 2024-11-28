@@ -1,5 +1,5 @@
 {
-  "name": "@operator-bot/api-context_infrastructure-module",
+  "name": "@operator-bot/api-infrastructure-module",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
@@ -8,7 +8,7 @@
     ".": "./src/index.ts"
   },
   "dependencies": {
-    "@operator-bot/api-context_application-module": "workspace:*",
+    "@operator-bot/api-application-module": "workspace:*",
     "@operator-bot/tgsnake-adapter": "workspace:*"
   },
   "devDependencies": {
