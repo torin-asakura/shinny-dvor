@@ -11,8 +11,8 @@ import { mapYandexOffers }     from '../mappers/index.js'
 import { mapYandexCategories } from '../mappers/index.js'
 
 @Injectable()
-export class GetYandexPricesXmlUseCase {
-  async execute(queryData: QueryDataType): Promise<string> {
+export class GetYandexPricesXmlService {
+  async process(queryData: QueryDataType): Promise<string> {
     const logger = new Logger('update-yandex-prices-use-case')
 
     const [goodsDataYandex, goodsCategoryDataYandex] = getYandexData(

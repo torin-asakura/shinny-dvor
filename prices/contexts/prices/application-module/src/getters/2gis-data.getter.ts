@@ -7,13 +7,13 @@ import { map2gisGoodsCategoryData }              from '../mappers/index.js'
 import { map2gisGoodsData }                      from '../mappers/index.js'
 
 export const get2gisData = (
-  goodsData: Array<GoodsDataType>,
+  goodsData: Array<GoodsDataType | null>,
   goodsCategoryData: GoodsCategoryDataType
 ): [GoodsDataFormattedType, GoodsCategoriesDataFormattedType] => {
-  const [goodsCategoryData_2gisFormatted, categoriesSpecification] =
+  const [goodsCategoryData2gisFormatted, categoriesSpecification] =
     map2gisGoodsCategoryData(goodsCategoryData)
 
-  const goodsData_2gisFormatted = map2gisGoodsData(goodsData, categoriesSpecification)
+  const goodsData2gisFormatted = map2gisGoodsData(goodsData, categoriesSpecification)
 
-  return [goodsData_2gisFormatted, goodsCategoryData_2gisFormatted]
+  return [goodsData2gisFormatted, goodsCategoryData2gisFormatted]
 }

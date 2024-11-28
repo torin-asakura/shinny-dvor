@@ -8,18 +8,17 @@ import { mapYandexGoodsCategoryData }            from '../mappers/index.js'
 import { mapYandexGoodsCategoryDataDeep }        from '../mappers/index.js'
 
 export const getYandexData = (
-  goodsData: Array<GoodsDataType>,
+  goodsData: Array<GoodsDataType | null>,
   goodsCategoryData: GoodsCategoryDataType
 ): [GoodsDataFormattedType, GoodsCategoriesDataFormattedType] => {
-  const goodsData_yandexFormatted = mapYandexGoodsData(goodsData)
+  const goodsDataYandexFormatted = mapYandexGoodsData(goodsData)
+  const goodsCategoryDataYandexFormatted = mapYandexGoodsCategoryData(goodsCategoryData)
+  const goodsCategoryDataDeepYandexFormatted = mapYandexGoodsCategoryDataDeep(goodsCategoryData)
 
-  const goodsCategoryData_yandexFormatted = mapYandexGoodsCategoryData(goodsCategoryData)
-  const goodsCategoryDataDeep_yandexFormatted = mapYandexGoodsCategoryDataDeep(goodsCategoryData)
-
-  const goodsCategoryData_yandexSummary = [
-    ...goodsCategoryData_yandexFormatted,
-    ...goodsCategoryDataDeep_yandexFormatted,
+  const goodsCategoryDataYandexSummary = [
+    ...goodsCategoryDataYandexFormatted,
+    ...goodsCategoryDataDeepYandexFormatted,
   ]
 
-  return [goodsData_yandexFormatted, goodsCategoryData_yandexSummary]
+  return [goodsDataYandexFormatted, goodsCategoryDataYandexSummary]
 }

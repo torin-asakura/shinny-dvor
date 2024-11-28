@@ -2,23 +2,27 @@ import type { GoodsDataType }          from '../interfaces/index.js'
 import type { GoodsDataFormattedType } from '../interfaces/index.js'
 
 export const map2gisGoodsData = (
-  goodsData: Array<GoodsDataType>,
+  goodsData: Array<GoodsDataType | null>,
   categoriesSpecification: Record<string, string>
 ): GoodsDataFormattedType => {
   const mappedGoodsData = goodsData
     .map((item) => {
-      return item.rows.map((row) => {
-        const { id, group_id, name, price } = row
+      if (item) {
+        return item.rows.map((row) => {
+          const { id, group_id: groupId, name, price } = row
 
-        const parentCategoryId = categoriesSpecification[group_id]
+          const parentCategoryId = categoriesSpecification[groupId]
 
-        return {
-          id,
-          group_id: parentCategoryId || group_id,
-          name,
-          price,
-        }
-      })
+          return {
+            id,
+            group_id: parentCategoryId || groupId,
+            name,
+            price,
+          }
+        })
+      }
+
+      return null
     })
     .flat()
 

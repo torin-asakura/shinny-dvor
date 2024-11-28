@@ -11,8 +11,8 @@ import { map2gisCategories }   from '../mappers/index.js'
 import { map2gisOffers }       from '../mappers/index.js'
 
 @Injectable()
-export class Get2gisPricesXmlUseCase {
-  async execute(queryData: QueryDataType): Promise<string> {
+export class Get2gisPricesXmlService {
+  async process(queryData: QueryDataType): Promise<string> {
     const logger = new Logger('update-2gis-prices-use-case')
 
     const [goodsData2gis, goodsCategoryData2gis] = get2gisData(

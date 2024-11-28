@@ -3,6 +3,6 @@ import type { GoodsDataType }         from './goods-data.interface.js'
 
 export type QueryDataType = {
   goodsData: GoodsDataType
-  goodsPagesData: Array<GoodsDataType>
+  goodsPagesData: Array<GoodsDataType | null>
   goodsCategoryData: GoodsCategoryDataType
 }
