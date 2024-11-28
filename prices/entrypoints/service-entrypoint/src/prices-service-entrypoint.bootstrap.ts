@@ -27,7 +27,9 @@ const bootstrap = async (): Promise<void> => {
   )
 
   app.enableShutdownHooks()
-  await app.listen(process.env.BOOKING_TELEGRAM_BOT_PORT || 3000)
+
+  const port = process.env.PRICES_PORT || 3000
+  await app.listen(port, '0.0.0.0')
 
   if (module.hot) {
     module.hot.accept()
