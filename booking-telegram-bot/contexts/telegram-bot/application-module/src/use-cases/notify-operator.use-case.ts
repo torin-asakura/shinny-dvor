@@ -15,6 +15,9 @@ export class NotifyOperatorUseCase {
   async process(appointmentData: OrmAppointmentDataType): Promise<void> {
     try {
       // TODO move fetch to helper/getter or other
+
+      // TODO некоторые значения в appointmentData - bigIng. нужно конвертировать их либо в строку, либо в число, для того, чтобы отправить json
+
       const operatorBotOrigin = process.env.OPERATOR_BOT_ORIGIN || 'http://localhost'
       const operatorBotPort = process.env.OPERATOR_BOT_PORT || 3000
       const fetchUrl = `${operatorBotOrigin}:${operatorBotPort}/notify-operator`
