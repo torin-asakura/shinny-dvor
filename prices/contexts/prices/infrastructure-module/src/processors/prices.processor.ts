@@ -5,6 +5,8 @@ import { Cron }                      from '@nestjs/schedule'
 import { Update2gisPricesUseCase }   from '@prices/prices-application-module'
 import { UpdateYandexPricesUseCase } from '@prices/prices-application-module'
 
+import { UPDATE_PRICES_CRON }        from '../constants/index.js'
+
 @Injectable()
 export class PricesProcessor implements OnModuleInit {
   constructor(
@@ -12,7 +14,7 @@ export class PricesProcessor implements OnModuleInit {
     private readonly updateYandexPricesUseCase: UpdateYandexPricesUseCase
   ) {}
 
-  @Cron('0 0 * * 0')
+  @Cron(UPDATE_PRICES_CRON)
   private async updatePricesData(): Promise<void> {
     await this.update2gisPricesUseCase.execute()
     await this.updateYandexPricesUseCase.execute()

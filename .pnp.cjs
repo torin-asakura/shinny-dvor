@@ -12034,7 +12034,6 @@ const RAW_RUNTIME_STATE =
           ["@types/node-cron", "npm:3.0.11"],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
-          ["cron", "npm:3.1.7"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"],\
           ["undici", "npm:5.28.4"]\
@@ -12060,7 +12059,6 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@sentry/node", "npm:7.118.0"],\
           ["@types/node-cron", "npm:3.0.11"],\
-          ["cron", "npm:3.1.7"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"],\
           ["undici", "npm:5.28.4"]\
