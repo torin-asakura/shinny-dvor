@@ -4,23 +4,22 @@ import { fetch }             from 'undici'
 
 import { NullResponseError } from '../exceptions/index.js'
 
-const logger = new Logger('fetch-service')
-
 @Injectable()
 export class FetchService {
-  async process(url: string): Promise<string> {
+  readonly name = 'fetch-service'
+
+  private readonly logger = new Logger(FetchService.name)
+
+  async get(url: string, headers: Record<string, string>): Promise<string> {
     const response = await fetch(url, {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json; charset=utf-8',
-        'x-client-key': `Application ${process.env.API_KEY}`,
-      },
+      headers,
     })
 
     const responseText = await response.text()
 
     if (responseText) {
-      logger.info(`successful fetching: ${url}`)
+      this.logger.debug(`successful fetching: ${url}`)
       return responseText
     }
 
