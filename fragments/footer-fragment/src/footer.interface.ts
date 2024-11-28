@@ -4,7 +4,6 @@ import type { ContactsDataType }  from '@globals/data'
 export interface ContactAddons {
   address: string
   email: string
-  linkFb: string
   linkVk: string
   fragmentId: string
   telephone: string

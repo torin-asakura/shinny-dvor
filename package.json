@@ -16,7 +16,7 @@
     "operator-bot/**/*"
   ],
   "devDependencies": {
-    "@atls/code-runtime": "1.1.0",
+    "@atls/code-runtime": "2.0.5",
     "@atls/prettier-plugin": "0.0.8",
     "@jest/core": "29.7.0",
     "@types/eslint": "8.56.10",
@@ -25,9 +25,10 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "@types/webpack": "5.28.5",
+    "eslint": "9.15.0",
     "prettier": "3.3.3",
     "typescript": "5.4.2"
   },
-  "packageManager": "yarn@4.1.0",
+  "packageManager": "yarn@4.5.2",
   "typecheckSkipLibCheck": true
 }

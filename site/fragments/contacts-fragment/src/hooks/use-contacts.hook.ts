@@ -11,12 +11,14 @@ export const useContacts: UseContactsType = (props) => {
 
   const contactsObj = extractFragment('contactAddons', 'info', contactsData)
 
+  const telegramContanctsObj = extractFragment('contactAddons', 'linkTelegram', contactsData)
+
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
   const telephone = contactsObj?.telephone
   const email = contactsObj?.email
   const linkVk = contactsObj?.linkVk
-  const linkFb = contactsObj?.linkFb
+  const linkTelegram = telegramContanctsObj?.address
 
   return {
     addressTitle,
@@ -27,6 +29,6 @@ export const useContacts: UseContactsType = (props) => {
     telephone,
     email,
     linkVk,
-    linkFb,
+    linkTelegram,
   }
 }

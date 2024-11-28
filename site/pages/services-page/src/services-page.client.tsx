@@ -16,14 +16,17 @@ import { getContactsData }              from '@globals/data'
 import { getFragmentsData }             from '@globals/data'
 import { getNavigationData }            from '@globals/data'
 import { getServicesData }              from '@globals/data'
+import { replaceServicePricesHelper }   from '@globals/data'
 
-export const ServicesPageClient: FC<ServicesPageClientProps> = () => {
+export const ServicesPageClient: FC<ServicesPageClientProps> = ({ servicesDataToReplace }) => {
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
-  const { services } = getServicesData()
+  const { services: baseServices } = getServicesData()
   const { carBodies } = getCarBodiesData()
+
+  const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
 
   return (
     <Column width='100%' alignItems='center'>
@@ -33,7 +36,7 @@ export const ServicesPageClient: FC<ServicesPageClientProps> = () => {
         availableRadiiData={availableRadii}
         fragmentsData={fragments}
         carBodiesData={carBodies}
-        servicesData={services}
+        servicesData={baseServices}
       />
       <AllServices fragmentsData={fragments} servicesData={services} />
       <Footer fragmentsData={fragments} contactsData={contacts} />

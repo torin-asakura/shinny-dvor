@@ -1,6 +1,6 @@
 {
   "name": "@site/app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "BSD-3-Clause",
   "type": "module",
   "exports": {
@@ -9,7 +9,7 @@
   "main": "src/index.ts",
   "scripts": {
     "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
-    "dev": "yarn next dev src",
+    "dev": "NODE_ENV=development yarn next dev src",
     "prepack": "run build",
     "start": "node dist/src/index.cjs"
   },
@@ -29,12 +29,14 @@
   "devDependencies": {
     "@fragments/global-error-fragment": "workspace:*",
     "@fragments/root-layout-fragment": "workspace:*",
+    "@globals/config": "workspace:*",
     "@globals/data": "workspace:*",
     "@site/booking-api": "workspace:*",
     "@site/contacts-page": "workspace:*",
     "@site/index-page": "workspace:*",
     "@site/service-page": "workspace:*",
     "@site/services-page": "workspace:*",
+    "@site/yandex-turbo-api": "workspace:*",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
