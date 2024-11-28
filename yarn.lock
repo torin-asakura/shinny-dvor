@@ -5590,12 +5590,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@operator-bot/api-context_application-module@workspace:*, @operator-bot/api-context_application-module@workspace:operator-bot/contexts/api-context/application-module":
+"@operator-bot/api-application-module@workspace:*, @operator-bot/api-application-module@workspace:operator-bot/contexts/api-context/application-module":
   version: 0.0.0-use.local
-  resolution: "@operator-bot/api-context_application-module@workspace:operator-bot/contexts/api-context/application-module"
+  resolution: "@operator-bot/api-application-module@workspace:operator-bot/contexts/api-context/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
-    "@operator-bot/api-context_infrastructure-module": "workspace:*"
+    "@operator-bot/api-infrastructure-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
@@ -5606,12 +5606,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@operator-bot/api-context_infrastructure-module@workspace:*, @operator-bot/api-context_infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module":
+"@operator-bot/api-infrastructure-module@workspace:*, @operator-bot/api-infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module":
   version: 0.0.0-use.local
-  resolution: "@operator-bot/api-context_infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module"
+  resolution: "@operator-bot/api-infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
-    "@operator-bot/api-context_application-module": "workspace:*"
+    "@operator-bot/api-application-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
@@ -5675,6 +5675,7 @@ __metadata:
     "@nestjs/platform-fastify": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
+    "@operator-bot/api-infrastructure-module": "workspace:*"
     "@operator-bot/telegram-bot-context_infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
     amqp-connection-manager: "npm:4.1.14"

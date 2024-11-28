@@ -111,11 +111,11 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:operator-bot/adapters/tgsnake-adapter"\
     },\
     {\
-      "name": "@operator-bot/api-context_application-module",\
+      "name": "@operator-bot/api-application-module",\
       "reference": "workspace:operator-bot/contexts/api-context/application-module"\
     },\
     {\
-      "name": "@operator-bot/api-context_infrastructure-module",\
+      "name": "@operator-bot/api-infrastructure-module",\
       "reference": "workspace:operator-bot/contexts/api-context/infrastructure-module"\
     },\
     {\
@@ -348,13 +348,13 @@ const RAW_RUNTIME_STATE =
     ["@fragments/root-layout-fragment", ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/root-layout-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/root-layout-fragment", "workspace:fragments/root-layout-fragment"]],\
     ["@globals/config", ["workspace:globals/config"]],\
     ["@globals/data", ["virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#workspace:globals/data", "virtual:583d30ceb27d73047a1b1745a3922924025f7cacd6311b2ecfc776cc2ecc436e32d34a29fa6a39b27a15acaca623e354cdc78dfd408466c89b543968c208d8b1#workspace:globals/data", "virtual:80892d716d9fd6108f03c570ae1ae249251aaca9a46f64f26cf421557ae1fc35a5554495bcc10131d2c0fc696591335f12772daacff9357e7f747899ffc80a64#workspace:globals/data", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:globals/data", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/data", "virtual:b3bd532929f9c4c43870fd70e102d3de280077e427e8e9d02118072475977ca7c412640ec0072769182a74ed64cc7164afa606101a1df41fd4c266b07ed88899#workspace:globals/data", "workspace:globals/data"]],\
-    ["@operator-bot/api-context_application-module", ["virtual:917742b42286cd6e66e1952c4912942e798cbc974c2489b0b5ea0f44d23257bb5b7d689f338fdba6e9d1c4a3d30fe632350ff6aa4cb4ff3f9dae50456ad9fdf5#workspace:operator-bot/contexts/api-context/application-module", "virtual:fc6bd8e870e48fc0faf4769e74e983a4734b5f6cdbfaaaf5fbca640d3e1068a8c1ab28380e56118f49d6c0ef51412a357db70ac112c150ed81c981981ff46a99#workspace:operator-bot/contexts/api-context/application-module", "workspace:operator-bot/contexts/api-context/application-module"]],\
-    ["@operator-bot/api-context_infrastructure-module", ["virtual:f6e83af470473ca184753013d33d74a14a8204dedc4ab308c38d224a683107ed6d2f8af34cc2aa6e9db76447a4934dceffbe6dc1b2ae79ac9522a93f4e0bc346#workspace:operator-bot/contexts/api-context/infrastructure-module", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/contexts/api-context/infrastructure-module", "workspace:operator-bot/contexts/api-context/infrastructure-module"]],\
+    ["@operator-bot/api-application-module", ["virtual:2a6e6a5014c5187316c3a1ef891b08d58c76c05bcb92575943ed1f66242b4524d0d9ba8360d9cf21552b4041e2dbfd2bf6fab296c7489afc14c7d495b6b06783#workspace:operator-bot/contexts/api-context/application-module", "virtual:e3fd6c918d6988174d9083924f36b63765ef785d005912cb6cfd2c56f3d8f3055cc35128ea521aa46fab23343b2d7a03a04fcb685c0750e9c3f3574a7951fdc7#workspace:operator-bot/contexts/api-context/application-module", "workspace:operator-bot/contexts/api-context/application-module"]],\
+    ["@operator-bot/api-infrastructure-module", ["virtual:09e293b9852a1eaf744ec0210c92a1cb63898c78472da63464b5454c68dd8765be4cb176e9c1877666a7840e09b7dc9520722f0577fb9842c631aa521eef9fa9#workspace:operator-bot/contexts/api-context/infrastructure-module", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/contexts/api-context/infrastructure-module", "workspace:operator-bot/contexts/api-context/infrastructure-module"]],\
     ["@operator-bot/i18n-adapter", ["virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/adapters/i18n-adapter", "workspace:operator-bot/adapters/i18n-adapter"]],\
     ["@operator-bot/service-entrypoint", ["workspace:operator-bot/entrypoints/service-entrypoint"]],\
     ["@operator-bot/telegram-bot-context_application-module", ["virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/contexts/telegram-bot-context/application-module", "workspace:operator-bot/contexts/telegram-bot-context/application-module"]],\
     ["@operator-bot/telegram-bot-context_infrastructure-module", ["virtual:823e7ef16b9e6ce7e6ab63c716416f0b2d44f364155a38ba6d3cbfbdc4b33b315608c026fa7cd30bdcf162ed7569b2e8e1fde8e578a8ffe23cee4061773b93a9#workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module", "workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"]],\
-    ["@operator-bot/tgsnake-adapter", ["virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter", "workspace:operator-bot/adapters/tgsnake-adapter"]],\
+    ["@operator-bot/tgsnake-adapter", ["virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter", "workspace:operator-bot/adapters/tgsnake-adapter"]],\
     ["@prices/service-entrypoint", ["workspace:prices/service-entrypoint"]],\
     ["@query-client/application-module", ["virtual:46abbb83d2c384e10bda5ee78966ba3691018cb83055b45ee7dd10d2c357542f32ab694075a66d1b2d0f41155866a6bfb9b7269b32a4edd1bae13470b6487596#workspace:booking-telegram-bot/contexts/query-client/application-module", "workspace:booking-telegram-bot/contexts/query-client/application-module"]],\
     ["@query-client/infrastructure-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/query-client/infrastructure-module", "workspace:booking-telegram-bot/contexts/query-client/infrastructure-module"]],\
@@ -12246,14 +12246,14 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["@operator-bot/api-context_application-module", [\
-      ["virtual:917742b42286cd6e66e1952c4912942e798cbc974c2489b0b5ea0f44d23257bb5b7d689f338fdba6e9d1c4a3d30fe632350ff6aa4cb4ff3f9dae50456ad9fdf5#workspace:operator-bot/contexts/api-context/application-module", {\
-        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-context_application-module-virtual-f6e83af470/1/operator-bot/contexts/api-context/application-module/",\
+    ["@operator-bot/api-application-module", [\
+      ["virtual:2a6e6a5014c5187316c3a1ef891b08d58c76c05bcb92575943ed1f66242b4524d0d9ba8360d9cf21552b4041e2dbfd2bf6fab296c7489afc14c7d495b6b06783#workspace:operator-bot/contexts/api-context/application-module", {\
+        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-application-module-virtual-7bc2d936ce/1/operator-bot/contexts/api-context/application-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_application-module", "virtual:917742b42286cd6e66e1952c4912942e798cbc974c2489b0b5ea0f44d23257bb5b7d689f338fdba6e9d1c4a3d30fe632350ff6aa4cb4ff3f9dae50456ad9fdf5#workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/api-application-module", "virtual:2a6e6a5014c5187316c3a1ef891b08d58c76c05bcb92575943ed1f66242b4524d0d9ba8360d9cf21552b4041e2dbfd2bf6fab296c7489afc14c7d495b6b06783#workspace:operator-bot/contexts/api-context/application-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_infrastructure-module", "virtual:f6e83af470473ca184753013d33d74a14a8204dedc4ab308c38d224a683107ed6d2f8af34cc2aa6e9db76447a4934dceffbe6dc1b2ae79ac9522a93f4e0bc346#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
@@ -12270,13 +12270,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:fc6bd8e870e48fc0faf4769e74e983a4734b5f6cdbfaaaf5fbca640d3e1068a8c1ab28380e56118f49d6c0ef51412a357db70ac112c150ed81c981981ff46a99#workspace:operator-bot/contexts/api-context/application-module", {\
-        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-context_application-module-virtual-ad1bf30040/1/operator-bot/contexts/api-context/application-module/",\
+      ["virtual:e3fd6c918d6988174d9083924f36b63765ef785d005912cb6cfd2c56f3d8f3055cc35128ea521aa46fab23343b2d7a03a04fcb685c0750e9c3f3574a7951fdc7#workspace:operator-bot/contexts/api-context/application-module", {\
+        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-application-module-virtual-09e293b985/1/operator-bot/contexts/api-context/application-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_application-module", "virtual:fc6bd8e870e48fc0faf4769e74e983a4734b5f6cdbfaaaf5fbca640d3e1068a8c1ab28380e56118f49d6c0ef51412a357db70ac112c150ed81c981981ff46a99#workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/api-application-module", "virtual:e3fd6c918d6988174d9083924f36b63765ef785d005912cb6cfd2c56f3d8f3055cc35128ea521aa46fab23343b2d7a03a04fcb685c0750e9c3f3574a7951fdc7#workspace:operator-bot/contexts/api-context/application-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_infrastructure-module", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:09e293b9852a1eaf744ec0210c92a1cb63898c78472da63464b5454c68dd8765be4cb176e9c1877666a7840e09b7dc9520722f0577fb9842c631aa521eef9fa9#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
@@ -12296,24 +12296,24 @@ const RAW_RUNTIME_STATE =
       ["workspace:operator-bot/contexts/api-context/application-module", {\
         "packageLocation": "./operator-bot/contexts/api-context/application-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_application-module", "workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/api-application-module", "workspace:operator-bot/contexts/api-context/application-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_infrastructure-module", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
     ]],\
-    ["@operator-bot/api-context_infrastructure-module", [\
-      ["virtual:f6e83af470473ca184753013d33d74a14a8204dedc4ab308c38d224a683107ed6d2f8af34cc2aa6e9db76447a4934dceffbe6dc1b2ae79ac9522a93f4e0bc346#workspace:operator-bot/contexts/api-context/infrastructure-module", {\
-        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-context_infrastructure-module-virtual-92fe7dc69c/1/operator-bot/contexts/api-context/infrastructure-module/",\
+    ["@operator-bot/api-infrastructure-module", [\
+      ["virtual:09e293b9852a1eaf744ec0210c92a1cb63898c78472da63464b5454c68dd8765be4cb176e9c1877666a7840e09b7dc9520722f0577fb9842c631aa521eef9fa9#workspace:operator-bot/contexts/api-context/infrastructure-module", {\
+        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-infrastructure-module-virtual-aa241de2ee/1/operator-bot/contexts/api-context/infrastructure-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_infrastructure-module", "virtual:f6e83af470473ca184753013d33d74a14a8204dedc4ab308c38d224a683107ed6d2f8af34cc2aa6e9db76447a4934dceffbe6dc1b2ae79ac9522a93f4e0bc346#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:09e293b9852a1eaf744ec0210c92a1cb63898c78472da63464b5454c68dd8765be4cb176e9c1877666a7840e09b7dc9520722f0577fb9842c631aa521eef9fa9#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_application-module", "virtual:917742b42286cd6e66e1952c4912942e798cbc974c2489b0b5ea0f44d23257bb5b7d689f338fdba6e9d1c4a3d30fe632350ff6aa4cb4ff3f9dae50456ad9fdf5#workspace:operator-bot/contexts/api-context/application-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-application-module", "virtual:e3fd6c918d6988174d9083924f36b63765ef785d005912cb6cfd2c56f3d8f3055cc35128ea521aa46fab23343b2d7a03a04fcb685c0750e9c3f3574a7951fdc7#workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
@@ -12330,13 +12330,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/contexts/api-context/infrastructure-module", {\
-        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-context_infrastructure-module-virtual-fc6bd8e870/1/operator-bot/contexts/api-context/infrastructure-module/",\
+      ["virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/contexts/api-context/infrastructure-module", {\
+        "packageLocation": "./.yarn/__virtual__/@operator-bot-api-infrastructure-module-virtual-2a6e6a5014/1/operator-bot/contexts/api-context/infrastructure-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_infrastructure-module", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_application-module", "virtual:fc6bd8e870e48fc0faf4769e74e983a4734b5f6cdbfaaaf5fbca640d3e1068a8c1ab28380e56118f49d6c0ef51412a357db70ac112c150ed81c981981ff46a99#workspace:operator-bot/contexts/api-context/application-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-application-module", "virtual:2a6e6a5014c5187316c3a1ef891b08d58c76c05bcb92575943ed1f66242b4524d0d9ba8360d9cf21552b4041e2dbfd2bf6fab296c7489afc14c7d495b6b06783#workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
@@ -12356,10 +12356,10 @@ const RAW_RUNTIME_STATE =
       ["workspace:operator-bot/contexts/api-context/infrastructure-module", {\
         "packageLocation": "./operator-bot/contexts/api-context/infrastructure-module/",\
         "packageDependencies": [\
-          ["@operator-bot/api-context_infrastructure-module", "workspace:operator-bot/contexts/api-context/infrastructure-module"],\
+          ["@operator-bot/api-infrastructure-module", "workspace:operator-bot/contexts/api-context/infrastructure-module"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
-          ["@operator-bot/api-context_application-module", "virtual:917742b42286cd6e66e1952c4912942e798cbc974c2489b0b5ea0f44d23257bb5b7d689f338fdba6e9d1c4a3d30fe632350ff6aa4cb4ff3f9dae50456ad9fdf5#workspace:operator-bot/contexts/api-context/application-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/api-application-module", "virtual:e3fd6c918d6988174d9083924f36b63765ef785d005912cb6cfd2c56f3d8f3055cc35128ea521aa46fab23343b2d7a03a04fcb685c0750e9c3f3574a7951fdc7#workspace:operator-bot/contexts/api-context/application-module"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"]\
         ],\
@@ -12463,6 +12463,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/platform-fastify", "virtual:823e7ef16b9e6ce7e6ab63c716416f0b2d44f364155a38ba6d3cbfbdc4b33b315608c026fa7cd30bdcf162ed7569b2e8e1fde8e578a8ffe23cee4061773b93a9#npm:10.4.2"],\
           ["@nestjs/platform-socket.io", "virtual:823e7ef16b9e6ce7e6ab63c716416f0b2d44f364155a38ba6d3cbfbdc4b33b315608c026fa7cd30bdcf162ed7569b2e8e1fde8e578a8ffe23cee4061773b93a9#npm:10.4.2"],\
           ["@nestjs/websockets", "virtual:823e7ef16b9e6ce7e6ab63c716416f0b2d44f364155a38ba6d3cbfbdc4b33b315608c026fa7cd30bdcf162ed7569b2e8e1fde8e578a8ffe23cee4061773b93a9#npm:10.4.2"],\
+          ["@operator-bot/api-infrastructure-module", "virtual:09e293b9852a1eaf744ec0210c92a1cb63898c78472da63464b5454c68dd8765be4cb176e9c1877666a7840e09b7dc9520722f0577fb9842c631aa521eef9fa9#workspace:operator-bot/contexts/api-context/infrastructure-module"],\
           ["@operator-bot/telegram-bot-context_infrastructure-module", "virtual:823e7ef16b9e6ce7e6ab63c716416f0b2d44f364155a38ba6d3cbfbdc4b33b315608c026fa7cd30bdcf162ed7569b2e8e1fde8e578a8ffe23cee4061773b93a9#workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"],\
           ["@types/amqplib", "npm:0.10.5"],\
           ["amqp-connection-manager", "virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#npm:4.1.14"],\
@@ -12516,7 +12517,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@operator-bot/i18n-adapter", "virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/adapters/i18n-adapter"],\
           ["@operator-bot/telegram-bot-context_application-module", "virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/contexts/telegram-bot-context/application-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
@@ -12540,7 +12541,7 @@ const RAW_RUNTIME_STATE =
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@operator-bot/i18n-adapter", "virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/adapters/i18n-adapter"],\
           ["@operator-bot/telegram-bot-context_application-module", "virtual:e75594dc25256d50d448786d1e389d7b2f1de7ecf542b1dec51b0bc04f6182c7a02ce7232da97236c7723e36961dfa989a56945a3741df4d392d3c34aad8b04a#workspace:operator-bot/contexts/telegram-bot-context/application-module"],\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["reflect-metadata", "npm:0.2.2"],\
           ["rxjs", "npm:7.8.1"]\
         ],\
@@ -12548,10 +12549,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@operator-bot/tgsnake-adapter", [\
-      ["virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter", {\
-        "packageLocation": "./.yarn/__virtual__/@operator-bot-tgsnake-adapter-virtual-41a477f83d/1/operator-bot/adapters/tgsnake-adapter/",\
+      ["virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter", {\
+        "packageLocation": "./.yarn/__virtual__/@operator-bot-tgsnake-adapter-virtual-91df702ac1/1/operator-bot/adapters/tgsnake-adapter/",\
         "packageDependencies": [\
-          ["@operator-bot/tgsnake-adapter", "virtual:f9e989f7c55f859df576623aae7bfe12bb908685598def332154e7d8f92a5e96b136e2201cf4530a4255d464cddc0c29e4d8b78da1445368c2e3c50fc2b68b8d#workspace:operator-bot/adapters/tgsnake-adapter"],\
+          ["@operator-bot/tgsnake-adapter", "virtual:a0e561ffc3820b54621f9957487b24ab488f4a1161b1028543e7374b78127792c5666e7619654b6d332b3eefc2d31e27faea6c38b50a7dbdb4c8d5c0481771d5#workspace:operator-bot/adapters/tgsnake-adapter"],\
           ["@nestjs/common", "virtual:1112baf6a94061c161a1d75f95bd253ae4dc50b4fc8b3fe0c694fc33381c23e47f7a433fa76bf1d1e250243ba3818001748adad2228f423360304fee0732a621#npm:10.4.2"],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
