@@ -1,1 +1,1 @@
-export * from './undici-adapter.module.js'
+export * from './fetcher-adapter.module.js'
