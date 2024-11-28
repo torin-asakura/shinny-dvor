@@ -19,15 +19,16 @@ export class GetAppointmentsUseCase extends OperatorUseCaseAbstractClass {
   async executeForOperator(ctx: FormattedContextType): Promise<void> {
     // TODO move fetch function to getters
 
+    // TODO move it into service
     const bookingTelegramBotOrigin = process.env.BOOKING_TELEGRAM_BOT_ORIGIN || 'http://localhost'
     const bookingTelegramBotPort = process.env.BOOKING_TELEGRAM_BOT_PORT || 3000
 
+    // TODO move fetch into adapter
     const fetchUrl = `${bookingTelegramBotOrigin}:${bookingTelegramBotPort}/get-appointments`
 
+    // TODO validate response (response.text())
     const response = await fetch(fetchUrl)
     const responseData = await response.json()
-
-    console.log(responseData)
 
     const titles = {
       carBodyTitle: this.i18n.carBodyTitle,
