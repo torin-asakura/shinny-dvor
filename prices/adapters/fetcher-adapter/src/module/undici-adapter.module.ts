@@ -5,7 +5,7 @@ import { Module }             from '@nestjs/common'
 import * as services          from '../services/index.js'
 
 @Module({})
-export class UndiciAdapterModule {
+export class FetcherAdapterModule {
   static register(): DynamicModule {
     const serviceProviders = Object.values(services)
 
@@ -14,7 +14,7 @@ export class UndiciAdapterModule {
 
     return {
       global: true,
-      module: UndiciAdapterModule,
+      module: FetcherAdapterModule,
       providers,
       exports,
     }

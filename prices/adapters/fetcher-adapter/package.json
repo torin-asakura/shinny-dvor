@@ -1,5 +1,5 @@
 {
-  "name": "@prices/undici-adapter-module",
+  "name": "@prices/fetcher-adapter-module",
   "version": "0.0.1",
   "private": true,
   "license": "BSD-3-Clause",
@@ -11,7 +11,8 @@
     "@globals/data": "workspace:*",
     "@sentry/node": "7.118.0",
     "@types/node-cron": "^3.0.11",
-    "cron": "3.1.7"
+    "cron": "3.1.7",
+    "undici": "5.28.4"
   },
   "devDependencies": {
     "@atls/logger": "^0.0.2",
