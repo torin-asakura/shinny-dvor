@@ -1,7 +1,7 @@
 import { PutObjectCommand }   from '@aws-sdk/client-s3'
 import { Injectable }         from '@nestjs/common'
 
-import { PutObjectToS3Error } from '../errors/index.js'
+import { PutObjectToS3Error } from '../exceptions/index.js'
 import { S3AdapterService }   from './s3-adapter.service.js'
 
 @Injectable()
@@ -18,6 +18,7 @@ export class PutObjectToS3Service {
         })
       )
     } catch (e) {
+      // eslint-disable-next-line no-console
       console.error(e)
       throw new PutObjectToS3Error(key)
     }
