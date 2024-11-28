@@ -15,7 +15,10 @@ export class GetGoodsPagesDataService {
 
   async process(pages: number): Promise<Array<ValidDataType | null>> {
     const responseTextPromises = [...Array(pages)].map(async (_, index) =>
-      this.fetchService.process(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`))
+      this.fetchService.get(`${API_URL}${GOODS_LIST_PATH}?pageNumber=${index}`, {
+        'Content-Type': 'application/json; charset=utf-8',
+        'x-client-key': `Application ${process.env.API_KEY}`,
+      }))
 
     const responsTextArray = await Promise.all(responseTextPromises)
 

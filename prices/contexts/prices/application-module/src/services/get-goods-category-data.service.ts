@@ -14,7 +14,10 @@ export class GetGoodsCategoryDataService {
   constructor(private readonly fetchService: FetchService) {}
 
   async process(): Promise<ValidDataType | null> {
-    const responseText = await this.fetchService.process(`${API_URL}${GOODS_CATEGORY_PATH}`)
+    const responseText = await this.fetchService.get(`${API_URL}${GOODS_CATEGORY_PATH}`, {
+      'Content-Type': 'application/json; charset=utf-8',
+      'x-client-key': `Application ${process.env.API_KEY}`,
+    })
 
     if (responseText) {
       return validateResponseHelper<ValidDataType>(responseText, goodsCategoryDataValidator)
