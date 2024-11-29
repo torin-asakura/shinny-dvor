@@ -4905,6 +4905,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/event-emitter@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@nestjs/event-emitter@npm:2.1.1"
+  dependencies:
+    eventemitter2: "npm:6.4.9"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    "@nestjs/core": ^8.0.0 || ^9.0.0 || ^10.0.0
+  checksum: 10/79b1ae873515a11b577d9e57b2c605b6aa9830ba60017cc54097c49e543dc23abcfe625425e375fa3525998b87319b1b1c0437a75deabdedf7ebeb02ab487e0c
+  languageName: node
+  linkType: hard
+
 "@nestjs/microservices@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/microservices@npm:10.4.2"
@@ -5595,12 +5607,16 @@ __metadata:
   resolution: "@operator-bot/api-application-module@workspace:operator-bot/contexts/api-context/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
     "@operator-bot/api-infrastructure-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    "@nestjs/event-emitter": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
@@ -5670,13 +5686,14 @@ __metadata:
     "@mikro-orm/sqlite": "npm:6.3.13"
     "@nestjs/common": "npm:10.4.2"
     "@nestjs/core": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
     "@nestjs/microservices": "npm:10.4.2"
     "@nestjs/platform-express": "npm:10.4.2"
     "@nestjs/platform-fastify": "npm:10.4.2"
     "@nestjs/platform-socket.io": "npm:10.4.2"
     "@nestjs/websockets": "npm:10.4.2"
     "@operator-bot/api-infrastructure-module": "workspace:*"
-    "@operator-bot/telegram-bot-context_infrastructure-module": "workspace:*"
+    "@operator-bot/telegram-bot-infrastructure-module": "workspace:*"
     "@types/amqplib": "npm:^0"
     amqp-connection-manager: "npm:4.1.14"
     amqplib: "npm:0.10.4"
@@ -5687,9 +5704,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@operator-bot/telegram-bot-context_application-module@workspace:*, @operator-bot/telegram-bot-context_application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module":
+"@operator-bot/telegram-bot-application-module@workspace:*, @operator-bot/telegram-bot-application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module":
   version: 0.0.0-use.local
-  resolution: "@operator-bot/telegram-bot-context_application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module"
+  resolution: "@operator-bot/telegram-bot-application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     reflect-metadata: "npm:0.2.2"
@@ -5701,18 +5718,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@operator-bot/telegram-bot-context_infrastructure-module@workspace:*, @operator-bot/telegram-bot-context_infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module":
+"@operator-bot/telegram-bot-infrastructure-module@workspace:*, @operator-bot/telegram-bot-infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module":
   version: 0.0.0-use.local
-  resolution: "@operator-bot/telegram-bot-context_infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"
+  resolution: "@operator-bot/telegram-bot-infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
     "@operator-bot/i18n-adapter": "workspace:*"
-    "@operator-bot/telegram-bot-context_application-module": "workspace:*"
+    "@operator-bot/telegram-bot-application-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@nestjs/event-emitter": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
@@ -12553,6 +12572,13 @@ __metadata:
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
   checksum: 10/49ff46c3a7facbad3decb31f597063e761785d7fdb3920d4989d7b08c97a61c2f51183e2f3a03130c9088df88d4b489b1b79ab632219901f184f85158508f4c8
+  languageName: node
+  linkType: hard
+
+"eventemitter2@npm:6.4.9":
+  version: 6.4.9
+  resolution: "eventemitter2@npm:6.4.9"
+  checksum: 10/b829b1c6b11e15926b635092b5ad62b4463d1c928859831dcae606e988cf41893059e3541f5a8209d21d2f15314422ddd4d84d20830b4bf44978608d15b06b08
   languageName: node
   linkType: hard
 
