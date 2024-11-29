@@ -4,7 +4,9 @@ import type { TelegramBotFormattedContextType }    from '../interfaces/index.js'
 
 import { checkFormattedContextHelper }             from '../helpers/index.js'
 
-const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormattedContextType => {
+export const getFormattedMessageContextGetter = (
+  ctx: TgsnakeContextType
+): TelegramBotFormattedContextType => {
   const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
     userId: ctx.message?.from?.id,
     userFirstName: ctx.message?.from?.firstname,
@@ -18,5 +20,3 @@ const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormatte
   const formattedContextChecked = checkFormattedContextHelper(formattedContext)
   return formattedContextChecked
 }
-
-export { getFormattedContextGetter }
