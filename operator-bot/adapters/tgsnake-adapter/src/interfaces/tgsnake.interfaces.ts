@@ -6,10 +6,10 @@ type TelegramBotFormattedContextType = {
   userId: bigint
   userFirstName: string
   userLastName?: string
-  messageText: string
+  messageText?: string
   accessHash: bigint
   messageId: number
-  chatId: bigint
+  chatId?: bigint
 }
 
 type TelegramBotFormattedContextKeyType = keyof TelegramBotFormattedContextType
