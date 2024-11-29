@@ -1,3 +1,6 @@
 export * from './tgsnake-adapter.service.js'
 export * from './on-command.service.js'
 export * from './send-message.service.js'
+export * from './send-message-to-operator.service.js'
+export * from './on-callback-data.service.js'
+export * from './edit-message.service.js'

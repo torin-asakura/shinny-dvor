@@ -7,7 +7,7 @@ import { TgsnakeAdapterService }                from './index.js'
 import { getRandomBigIntGetter }                from '../getters/index.js'
 
 @Injectable()
-class SendMessageService {
+export class SendMessageService {
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
   async process(ctx: TelegramBotFormattedContextType, text: string): Promise<void> {
@@ -25,5 +25,3 @@ class SendMessageService {
     )
   }
 }
-
-export { SendMessageService }
