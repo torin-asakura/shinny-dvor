@@ -2,7 +2,7 @@ import type { OnModuleInit }       from '@nestjs/common'
 
 import { Injectable }              from '@nestjs/common'
 
-import { StartCommandUseCase }     from '@operator-bot/telegram-bot-context_application-module'
+import { StartCommandUseCase }     from '@operator-bot/telegram-bot-application-module'
 import { OnTgsnakeCommandService } from '@operator-bot/tgsnake-adapter'
 
 @Injectable()
