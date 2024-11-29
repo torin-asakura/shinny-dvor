@@ -116,10 +116,7 @@ export class CreateAppointmentCommandProcessor implements OnModuleInit {
 
         await this.appointmentConversationSendEndMessageUseCase.process(ctx)
 
-        await this.appointmentConversationSendEndMessageUseCase.process(ctx)
-
         await this.notifyOperatorUseCase.process(formattedConversationData)
-        // TODO notify about notify result
 
         this.appointmentConversationRemoveConversationUseCase.process(ctx)
       } catch (error) {
