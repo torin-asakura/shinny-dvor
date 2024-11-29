@@ -2,11 +2,11 @@ import type { OnModuleInit }       from '@nestjs/common'
 
 import { Injectable }              from '@nestjs/common'
 
-import { GetAppointmentsUseCase }  from '@operator-bot/telegram-bot-context_application-module'
+import { GetAppointmentsUseCase }  from '@operator-bot/telegram-bot-application-module'
 import { OnTgsnakeCommandService } from '@operator-bot/tgsnake-adapter'
 
 @Injectable()
-export class GetAppointmentsProcessor implements OnModuleInit {
+export class GetAppointmentsCommandProcessor implements OnModuleInit {
   constructor(
     private readonly onTgsnakeCommandService: OnTgsnakeCommandService,
     private readonly getAppointmentsUseCase: GetAppointmentsUseCase
