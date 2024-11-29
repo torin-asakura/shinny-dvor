@@ -2,5 +2,3 @@
    --request POST \
    --data '{ "telegramUserId": 7780539101, "telegramFullName": "Kirill Ivanov", "timeSlotStart": 1732870800000, "timeSlotEnd": 1732872600000, "carBody": "Джип", "radii": "R14", "isApproved": false, "service": "Хранение шин", "commentary": true }' \
    http://localhost:3001/notify-operator
-
-
