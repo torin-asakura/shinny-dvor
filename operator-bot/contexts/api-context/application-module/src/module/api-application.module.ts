@@ -1,8 +1,8 @@
-import * as useCases          from '../use-cases/index.js'
-
 import type { DynamicModule } from '@nestjs/common'
 
 import { Module }             from '@nestjs/common'
+
+import * as useCases          from '../use-cases/index.js'
 
 @Module({})
 class ApiApplicationModule {
