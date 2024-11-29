@@ -1,8 +1,9 @@
 import type { Provider }          from '@nestjs/common'
 
-import { I18nPort }               from '@operator-bot/telegram-bot-context_application-module'
-import { TelegramClientPort }     from '@operator-bot/telegram-bot-context_application-module'
+import { I18nPort }               from '@operator-bot/telegram-bot-application-module'
+import { TelegramClientPort }     from '@operator-bot/telegram-bot-application-module'
 
+import * as listeners             from '../listeners/index.js'
 import * as processors            from '../processors/index.js'
 import { I18nPortImpl }           from '../ports/index.js'
 import { TelegramClientPortImpl } from '../ports/index.js'
@@ -17,4 +18,5 @@ export const telegramBotProviders: Array<Provider> = [
     useClass: I18nPortImpl,
   },
   ...Object.values(processors),
+  ...Object.values(listeners),
 ]
