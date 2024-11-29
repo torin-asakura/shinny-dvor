@@ -1,2 +1,5 @@
 export * from './start-command.use-case.js'
 export * from './get-appointments-command.use-case.js'
+export * from './notify-operator.use-case.js'
+export * from './confirm-appointment.use-case.js'
+export * from './cancel-appointment.use-case.js'
