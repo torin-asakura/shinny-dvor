@@ -7,6 +7,9 @@ export const formatYmlData = (
   category: CategoriesType,
   offer: YandexOffersType | TwoGisOffersType
 ): YmlDataType => {
+  const dateNow = new Date(Date.now())
+  const dateNowLocaleString = dateNow.toISOString().split('.')[0]
+
   const yml = {
     _declaration: {
       _attributes: {
@@ -15,7 +18,19 @@ export const formatYmlData = (
       },
     },
     yml_catalog: {
+      _attributes: {
+        date: dateNowLocaleString,
+      },
       shop: {
+        name: {
+          _text: 'Шинный двор',
+        },
+        company: {
+          _text: 'Шинный двор',
+        },
+        url: {
+          _text: 'https://shdvor.pro',
+        },
         categories: {
           category,
         },

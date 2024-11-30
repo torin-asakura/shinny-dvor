@@ -18,7 +18,7 @@ export const map2gisOffers = (goodsData: GoodsDataFormattedType): TwoGisOffersTy
           _text: price,
         },
         currencyId: {
-          _text: 'RUB',
+          _text: 'RUR',
         },
         categoryId: {
           _text: groupId,
