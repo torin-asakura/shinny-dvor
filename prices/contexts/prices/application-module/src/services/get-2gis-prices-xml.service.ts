@@ -23,6 +23,7 @@ export class Get2gisPricesXmlService {
     const twoGisCategories = map2gisCategories(goodsCategoryData2gis)
     const twoGisOffers = map2gisOffers(goodsData2gis)
     const twoGisYmlData = formatYmlData(twoGisCategories, twoGisOffers)
+
     const twoGisXml = formantYmlDataToXml(twoGisYmlData)
 
     await writeXmlHelper({
