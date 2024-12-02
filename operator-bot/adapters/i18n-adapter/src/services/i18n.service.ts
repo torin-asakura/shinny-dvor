@@ -1,10 +1,19 @@
 import { Injectable }  from '@nestjs/common'
+
 import { I18nContext } from 'nestjs-i18n'
 import { I18nService } from 'nestjs-i18n'
 
 @Injectable()
 class I18nAdapterService {
   constructor(private readonly i18n: I18nService) {}
+
+  get newAppointmentOperatorMessage(): string {
+    return this.getMessage('operator-messages.new-appointment')
+  }
+
+  get messageReceivedToOperatorClientMessage(): string {
+    return this.getMessage('client-messages.message-received-to-operator')
+  }
 
   getWelcome(): string {
     return this.getMessage('common.welcome')
@@ -32,6 +41,22 @@ class I18nAdapterService {
 
   getError_access(): string {
     return this.getMessage('error.access')
+  }
+
+  get cancelAppointmentOperatorButton(): string {
+    return this.getMessage('operator-buttons.cancel-appointment')
+  }
+
+  get confirmAppointmentOperatorButton(): string {
+    return this.getMessage('operator-buttons.confirm-appointment')
+  }
+
+  get cancelAppointmentClientMessage(): string {
+    return this.getMessage('client-messages.cancel-appointment')
+  }
+
+  get confirmAppointmentClientMessage(): string {
+    return this.getMessage('client-messages.confirm-appointment')
   }
 
   private getMessage(messagePath: string): string {

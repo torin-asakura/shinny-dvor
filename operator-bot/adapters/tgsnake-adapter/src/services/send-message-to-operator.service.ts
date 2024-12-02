@@ -1,6 +1,7 @@
 import type { TelegramBotFormattedContextType } from '../interfaces/index.js'
 
 import { Injectable }                           from '@nestjs/common'
+
 import { Raw }                                  from 'tgsnake'
 
 import { TgsnakeAdapterService }                from './index.js'
@@ -11,9 +12,6 @@ export class SendMessageToOperatorService {
   constructor(private readonly tgsnakeAdapterService: TgsnakeAdapterService) {}
 
   async process(text: string): Promise<void> {
-    console.log('send message to operator service')
-    console.log(text)
-
     const userId = BigInt(7780539101)
 
     const accessHash = BigInt(-4527249835120344293n)

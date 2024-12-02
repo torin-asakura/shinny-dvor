@@ -1,6 +1,7 @@
 import type { DynamicModule }           from '@nestjs/common'
 
 import { Module }                       from '@nestjs/common'
+import { FetcherAdapterModule }         from '@operator-bot/fetcher-adapter-module'
 
 import { I18nAdapterModule }            from '@operator-bot/i18n-adapter'
 import { TelegramBotApplicationModule } from '@operator-bot/telegram-bot-application-module'
@@ -21,6 +22,7 @@ export class TelegramBotInfrastructureModule {
       imports: [
         I18nAdapterModule.register(),
         TgsnakeAdapterModule.register(),
+        FetcherAdapterModule.register(),
         TelegramBotApplicationModule.register(),
       ],
     }

@@ -3068,6 +3068,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fastify/busboy@npm:^2.0.0":
+  version: 2.1.1
+  resolution: "@fastify/busboy@npm:2.1.1"
+  checksum: 10/2bb8a7eca8289ed14c9eb15239bc1019797454624e769b39a0b90ed204d032403adc0f8ed0d2aef8a18c772205fa7808cf5a1b91f21c7bfc7b6032150b1062c5
+  languageName: node
+  linkType: hard
+
 "@fastify/cors@npm:9.0.1":
   version: 9.0.1
   resolution: "@fastify/cors@npm:9.0.1"
@@ -5015,6 +5022,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/schedule@npm:4.1.1":
+  version: 4.1.1
+  resolution: "@nestjs/schedule@npm:4.1.1"
+  dependencies:
+    cron: "npm:3.1.7"
+    uuid: "npm:10.0.0"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    "@nestjs/core": ^8.0.0 || ^9.0.0 || ^10.0.0
+  checksum: 10/37bbd1cf5b521faeefc57197c5d222075388bf5a70b3e3e3fba26c161a639986b362f890e0d53671f191745ac4a4316db077afb2c643bbcaa62860578d1bdebb
+  languageName: node
+  linkType: hard
+
 "@nestjs/websockets@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/websockets@npm:10.4.2"
@@ -5638,6 +5658,26 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@operator-bot/fetcher-adapter-module@workspace:*, @operator-bot/fetcher-adapter-module@workspace:operator-bot/adapters/fetcher-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/fetcher-adapter-module@workspace:operator-bot/adapters/fetcher-adapter"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@sentry/node": "npm:7.118.0"
+    "@types/node-cron": "npm:^3.0.11"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+    undici: "npm:5.28.4"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
 "@operator-bot/i18n-adapter@workspace:*, @operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter":
   version: 0.0.0-use.local
   resolution: "@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter"
@@ -5724,6 +5764,7 @@ __metadata:
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     "@nestjs/event-emitter": "npm:2.1.1"
+    "@operator-bot/fetcher-adapter-module": "workspace:*"
     "@operator-bot/i18n-adapter": "workspace:*"
     "@operator-bot/telegram-bot-application-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
@@ -5799,18 +5840,111 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prices/service-entrypoint@workspace:prices/service-entrypoint":
+"@prices/fetcher-adapter-module@workspace:*, @prices/fetcher-adapter-module@workspace:prices/adapters/fetcher-adapter":
   version: 0.0.0-use.local
-  resolution: "@prices/service-entrypoint@workspace:prices/service-entrypoint"
+  resolution: "@prices/fetcher-adapter-module@workspace:prices/adapters/fetcher-adapter"
   dependencies:
     "@atls/logger": "npm:^0.0.2"
-    "@aws-sdk/client-s3": "npm:3.645.0"
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
     "@sentry/node": "npm:7.118.0"
-    "@types/node": "npm:22.1.0"
     "@types/node-cron": "npm:^3.0.11"
-    cron: "npm:3.1.7"
-    node-fetch: "npm:3.3.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+    undici: "npm:5.28.4"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/prices-application-module@workspace:*, @prices/prices-application-module@workspace:prices/contexts/prices/application-module":
+  version: 0.0.0-use.local
+  resolution: "@prices/prices-application-module@workspace:prices/contexts/prices/application-module"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@prices/fetcher-adapter-module": "workspace:*"
+    "@prices/storage-adapter-module": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
     xml-js: "npm:1.6.11"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    "@prices/fetcher-adapter-module": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/prices-infrastructure-module@workspace:*, @prices/prices-infrastructure-module@workspace:prices/contexts/prices/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@prices/prices-infrastructure-module@workspace:prices/contexts/prices/infrastructure-module"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/schedule": "npm:4.1.1"
+    "@prices/fetcher-adapter-module": "workspace:*"
+    "@prices/prices-application-module": "workspace:*"
+    "@prices/storage-adapter-module": "workspace:*"
+    "@types/node-cron": "npm:3.0.11"
+    cron: "npm:3.1.7"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@prices/service-entrypoint@workspace:prices/entrypoints/service-entrypoint":
+  version: 0.0.0-use.local
+  resolution: "@prices/service-entrypoint@workspace:prices/entrypoints/service-entrypoint"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@globals/config": "workspace:*"
+    "@globals/data": "workspace:*"
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@grpc/proto-loader": "npm:0.7.13"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-fastify": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
+    "@prices/prices-infrastructure-module": "workspace:*"
+    "@types/amqplib": "npm:^0"
+    "@types/node": "npm:22.1.0"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  languageName: unknown
+  linkType: soft
+
+"@prices/storage-adapter-module@workspace:*, @prices/storage-adapter-module@workspace:prices/adapters/storage-adapter":
+  version: 0.0.0-use.local
+  resolution: "@prices/storage-adapter-module@workspace:prices/adapters/storage-adapter"
+  dependencies:
+    "@aws-sdk/client-s3": "npm:3.645.0"
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
   languageName: unknown
   linkType: soft
 
@@ -8247,23 +8381,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/eslint@npm:*":
+"@types/eslint@npm:*, @types/eslint@npm:9.6.1":
   version: 9.6.1
   resolution: "@types/eslint@npm:9.6.1"
   dependencies:
     "@types/estree": "npm:*"
     "@types/json-schema": "npm:*"
   checksum: 10/719fcd255760168a43d0e306ef87548e1e15bffe361d5f4022b0f266575637acc0ecb85604ac97879ee8ae83c6a6d0613b0ed31d0209ddf22a0fe6d608fc56fe
-  languageName: node
-  linkType: hard
-
-"@types/eslint@npm:8.56.10":
-  version: 8.56.10
-  resolution: "@types/eslint@npm:8.56.10"
-  dependencies:
-    "@types/estree": "npm:*"
-    "@types/json-schema": "npm:*"
-  checksum: 10/0cdd914b944ebba51c35827d3ef95bc3e16eb82b4c2741f6437fa57cdb00a4407c77f89c220afe9e4c9566982ec8a0fb9b97c956ac3bd4623a3b6af32eed8424
   languageName: node
   linkType: hard
 
@@ -8402,7 +8526,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-cron@npm:^3.0.11":
+"@types/node-cron@npm:3.0.11, @types/node-cron@npm:^3.0.11":
   version: 3.0.11
   resolution: "@types/node-cron@npm:3.0.11"
   checksum: 10/a73f69bcca52a5f3b1671cfb00a8e4a1d150d0aef36a611564a2f94e66b6981bade577e267ceeeca6fcee241768902d55eb8cf3a81f9ef4ed767a23112fdb16d
@@ -11376,13 +11500,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"data-uri-to-buffer@npm:^4.0.0":
-  version: 4.0.1
-  resolution: "data-uri-to-buffer@npm:4.0.1"
-  checksum: 10/0d0790b67ffec5302f204c2ccca4494f70b4e2d940fea3d36b09f0bb2b8539c2e86690429eb1f1dc4bcc9e4df0644193073e63d9ee48ac9fce79ec1506e4aa4c
-  languageName: node
-  linkType: hard
-
 "data-urls@npm:^3.0.2":
   version: 3.0.2
   resolution: "data-urls@npm:3.0.2"
@@ -12937,16 +13054,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fetch-blob@npm:^3.1.2, fetch-blob@npm:^3.1.4":
-  version: 3.2.0
-  resolution: "fetch-blob@npm:3.2.0"
-  dependencies:
-    node-domexception: "npm:^1.0.0"
-    web-streams-polyfill: "npm:^3.0.3"
-  checksum: 10/5264ecceb5fdc19eb51d1d0359921f12730941e333019e673e71eb73921146dceabcb0b8f534582be4497312d656508a439ad0f5edeec2b29ab2e10c72a1f86b
-  languageName: node
-  linkType: hard
-
 "figlet@npm:^1.5.2":
   version: 1.8.0
   resolution: "figlet@npm:1.8.0"
@@ -13094,15 +13201,6 @@ __metadata:
     combined-stream: "npm:^1.0.8"
     mime-types: "npm:^2.1.12"
   checksum: 10/6adb1cff557328bc6eb8a68da205f9ae44ab0e88d4d9237aaf91eed591ffc64f77411efb9016af7d87f23d0a038c45a788aa1c6634e51175c4efa36c2bc53774
-  languageName: node
-  linkType: hard
-
-"formdata-polyfill@npm:^4.0.10":
-  version: 4.0.10
-  resolution: "formdata-polyfill@npm:4.0.10"
-  dependencies:
-    fetch-blob: "npm:^3.1.2"
-  checksum: 10/9b5001d2edef3c9449ac3f48bd4f8cc92e7d0f2e7c1a5c8ba555ad4e77535cc5cf621fabe49e97f304067037282dd9093b9160a3cb533e46420b446c4e6bc06f
   languageName: node
   linkType: hard
 
@@ -16446,24 +16544,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-domexception@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "node-domexception@npm:1.0.0"
-  checksum: 10/e332522f242348c511640c25a6fc7da4f30e09e580c70c6b13cb0be83c78c3e71c8d4665af2527e869fc96848924a4316ae7ec9014c091e2156f41739d4fa233
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:3.3.2":
-  version: 3.3.2
-  resolution: "node-fetch@npm:3.3.2"
-  dependencies:
-    data-uri-to-buffer: "npm:^4.0.0"
-    fetch-blob: "npm:^3.1.4"
-    formdata-polyfill: "npm:^4.0.10"
-  checksum: 10/24207ca8c81231c7c59151840e3fded461d67a31cf3e3b3968e12201a42f89ce4a0b5fb7079b1fa0a4655957b1ca9257553200f03a9f668b45ebad265ca5593d
-  languageName: node
-  linkType: hard
-
 "node-fetch@npm:^1.0.1":
   version: 1.7.3
   resolution: "node-fetch@npm:1.7.3"
@@ -18726,7 +18806,7 @@ __metadata:
     "@atls/code-runtime": "npm:2.0.5"
     "@atls/prettier-plugin": "npm:0.0.8"
     "@jest/core": "npm:29.7.0"
-    "@types/eslint": "npm:8.56.10"
+    "@types/eslint": "npm:9.6.1"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
@@ -20191,6 +20271,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici@npm:5.28.4":
+  version: 5.28.4
+  resolution: "undici@npm:5.28.4"
+  dependencies:
+    "@fastify/busboy": "npm:^2.0.0"
+  checksum: 10/a666a9f5ac4270c659fafc33d78b6b5039a0adbae3e28f934774c85dcc66ea91da907896f12b414bd6f578508b44d5dc206fa636afa0e49a4e1c9e99831ff065
+  languageName: node
+  linkType: hard
+
 "unique-filename@npm:^1.1.1":
   version: 1.1.1
   resolution: "unique-filename@npm:1.1.1"
@@ -20355,6 +20444,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uuid@npm:10.0.0":
+  version: 10.0.0
+  resolution: "uuid@npm:10.0.0"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: 10/35aa60614811a201ff90f8ca5e9ecb7076a75c3821e17f0f5ff72d44e36c2d35fcbc2ceee9c4ac7317f4cc41895da30e74f3885e30313bee48fda6338f250538
+  languageName: node
+  linkType: hard
+
 "uuid@npm:^9.0.0, uuid@npm:^9.0.1":
   version: 9.0.1
   resolution: "uuid@npm:9.0.1"
@@ -20449,7 +20547,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"web-streams-polyfill@npm:^3.0.3, web-streams-polyfill@npm:^3.2.1":
+"web-streams-polyfill@npm:^3.2.1":
   version: 3.3.3
   resolution: "web-streams-polyfill@npm:3.3.3"
   checksum: 10/8e7e13501b3834094a50abe7c0b6456155a55d7571312b89570012ef47ec2a46d766934768c50aabad10a9c30dd764a407623e8bfcc74fcb58495c29130edea9
