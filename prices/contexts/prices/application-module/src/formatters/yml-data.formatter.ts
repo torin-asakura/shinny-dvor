@@ -5,7 +5,7 @@ import type { YmlDataType }      from '../interfaces/index.js'
 
 export const formatYmlData = (
   category: CategoriesType,
-  offer: YandexOffersType | TwoGisOffersType
+  offer: TwoGisOffersType | YandexOffersType
 ): YmlDataType => {
   const dateNow = new Date(Date.now())
   const dateNowLocaleString = dateNow.toISOString().split('.')[0]
@@ -17,6 +17,7 @@ export const formatYmlData = (
         encoding: 'UTF-8',
       },
     },
+    _doctype: 'yml_catalog SYSTEM "shops.dtd"',
     yml_catalog: {
       _attributes: {
         date: dateNowLocaleString,
