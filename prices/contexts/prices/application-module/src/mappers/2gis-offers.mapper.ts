@@ -10,6 +10,7 @@ export const map2gisOffers = (goodsData: GoodsDataFormattedType): TwoGisOffersTy
       const outputItem = {
         _attributes: {
           id,
+          available: true,
         },
         name: {
           _text: name,
