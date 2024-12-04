@@ -24,7 +24,7 @@ services:
     image: node:22
     entrypoint: yarn workspace @booking-telegram-bot/service-entrypoint dev
     ports:
-      - '3000:3000'
+      - '3000'
     volumes:
       - ./:/workspace
       - yarn:/.yarn/berry

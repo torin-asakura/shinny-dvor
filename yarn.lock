@@ -2558,12 +2558,14 @@ __metadata:
   dependencies:
     "@booking-telegram-bot/api-application-module": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@booking-telegram-bot/api-application-module": "*"
     "@nestjs/common": "*"
+    "@nestjs/microservices": "*"
     "@telegram-bot/application-module": "*"
     reflect-metadata: "*"
     rxjs: "*"
@@ -5750,12 +5752,14 @@ __metadata:
   resolution: "@operator-bot/api-infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
     "@operator-bot/api-application-module": "workspace:*"
     "@operator-bot/tgsnake-adapter": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@nestjs/microservices": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
@@ -5867,6 +5871,7 @@ __metadata:
   dependencies:
     "@nestjs/common": "npm:10.4.2"
     "@nestjs/event-emitter": "npm:2.1.1"
+    "@nestjs/microservices": "npm:10.4.2"
     "@operator-bot/fetcher-adapter-module": "workspace:*"
     "@operator-bot/i18n-adapter": "workspace:*"
     "@operator-bot/telegram-bot-application-module": "workspace:*"
@@ -5876,6 +5881,7 @@ __metadata:
   peerDependencies:
     "@nestjs/common": "*"
     "@nestjs/event-emitter": "*"
+    "@nestjs/microservices": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
