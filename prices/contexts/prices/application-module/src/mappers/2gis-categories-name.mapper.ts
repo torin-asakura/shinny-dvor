@@ -17,10 +17,11 @@ export const map2gisCategoriesName = (
     }
   })
 
-  const mappedGoodsData = goodsData.map((goodsDataItem) => {
+  const mappedGoodsData = goodsData.map((goodsDataItem, index) => {
     if (goodsDataItem) {
       return {
         ...goodsDataItem,
+        id: (index + 1).toString(),
         group_id: simplifiedIdSpecification[goodsDataItem.group_id],
       }
     }
