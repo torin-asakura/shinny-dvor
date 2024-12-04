@@ -1,41 +1,43 @@
 volumes:
   yarn:
+  pgdata:
 
 services:
   yarn:
-    image: node:19
+    image: node:22
     working_dir: /workspace
     volumes:
       - ./:/workspace
       - yarn:/.yarn/berry
     entrypoint: yarn
 
-  site:
-    image: node:19
+  db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
     volumes:
-      - ./:/workspace
-      - yarn:/.yarn/berry
-    working_dir: /workspace
-    entrypoint: yarn workspace @site/app dev
+      - pgdata:/var/lib/postgresql/data
+
+  booking-telegram-bot:
+    image: node:22
+    entrypoint: yarn workspace @booking-telegram-bot/service-entrypoint dev
     ports:
       - '3000:3000'
-
-  blog:
-    image: node:19
     volumes:
       - ./:/workspace
       - yarn:/.yarn/berry
     working_dir: /workspace
-    entrypoint: yarn workspace @blog/app dev
+    environment:
+      DB_HOST: 'db'
+
+  operator-bot:
+    image: node:22
+    volumes:
+      - ./:/workspace
+      - yarn:/.yarn/berry
+    working_dir: /workspace
+    entrypoint: yarn workspace @operator-bot/service-entrypoint dev
     ports:
-      - '3000:3000'
-
-  prices:
-    image: node:19
-    volumes:
-      - ./:/workspace
-      - yarn:/.yarn/berry
-    working_dir: /workspace
-    entrypoint: yarn workspace @prices/service-entrypoint dev
-    env_file:
-      - ./.env
+      - '3001'
