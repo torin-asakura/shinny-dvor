@@ -4146,6 +4146,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@grpc/grpc-js@npm:*":
+  version: 1.12.4
+  resolution: "@grpc/grpc-js@npm:1.12.4"
+  dependencies:
+    "@grpc/proto-loader": "npm:^0.7.13"
+    "@js-sdsl/ordered-map": "npm:^4.4.2"
+  checksum: 10/b4cb9390e4b2c26cbdd831837513029f0e885de17cfc54f3518e9c49184e5d1978b3d1d2ea3022238bf58c22436a778af62521d59d9e898b133452ea8b2b4db0
+  languageName: node
+  linkType: hard
+
 "@grpc/grpc-js@npm:1.11.2":
   version: 1.11.2
   resolution: "@grpc/grpc-js@npm:1.11.2"
@@ -4924,6 +4934,49 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/microservices@npm:*":
+  version: 10.4.13
+  resolution: "@nestjs/microservices@npm:10.4.13"
+  dependencies:
+    iterare: "npm:1.2.1"
+    tslib: "npm:2.8.1"
+  peerDependencies:
+    "@grpc/grpc-js": "*"
+    "@nestjs/common": ^10.0.0
+    "@nestjs/core": ^10.0.0
+    "@nestjs/websockets": ^10.0.0
+    amqp-connection-manager: "*"
+    amqplib: "*"
+    cache-manager: "*"
+    ioredis: "*"
+    kafkajs: "*"
+    mqtt: "*"
+    nats: "*"
+    reflect-metadata: ^0.1.12 || ^0.2.0
+    rxjs: ^7.1.0
+  peerDependenciesMeta:
+    "@grpc/grpc-js":
+      optional: true
+    "@nestjs/websockets":
+      optional: true
+    amqp-connection-manager:
+      optional: true
+    amqplib:
+      optional: true
+    cache-manager:
+      optional: true
+    ioredis:
+      optional: true
+    kafkajs:
+      optional: true
+    mqtt:
+      optional: true
+    nats:
+      optional: true
+  checksum: 10/4139feb7edce4411bdf50a879d42f672a9259bb01e6c0b7abcd980ee9a6ad8331fe06fe31f061fffcd82a068c191f18f58da0d83cb5878832f26e8a27c70c658
+  languageName: node
+  linkType: hard
+
 "@nestjs/microservices@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/microservices@npm:10.4.2"
@@ -4964,6 +5017,22 @@ __metadata:
     nats:
       optional: true
   checksum: 10/bb6db42f99f132d3299f14cda0dab8df74135a2470fd59ab6e2aa91817b98c8875a55169a4ce708df26e72207c1a9b13bfce6c413a4da9bf4b8346502e580de8
+  languageName: node
+  linkType: hard
+
+"@nestjs/platform-express@npm:*":
+  version: 10.4.13
+  resolution: "@nestjs/platform-express@npm:10.4.13"
+  dependencies:
+    body-parser: "npm:1.20.3"
+    cors: "npm:2.8.5"
+    express: "npm:4.21.1"
+    multer: "npm:1.4.4-lts.1"
+    tslib: "npm:2.8.1"
+  peerDependencies:
+    "@nestjs/common": ^10.0.0
+    "@nestjs/core": ^10.0.0
+  checksum: 10/183fafada3061a5462814f096bb990e10d06201a924729de6f036411769e03bc6c2050a4b69e5fe35410bf81b72dd9d6b268ab77244febfe6f54045341fde1b3
   languageName: node
   linkType: hard
 
@@ -5008,6 +5077,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/platform-socket.io@npm:*":
+  version: 10.4.13
+  resolution: "@nestjs/platform-socket.io@npm:10.4.13"
+  dependencies:
+    socket.io: "npm:4.8.1"
+    tslib: "npm:2.8.1"
+  peerDependencies:
+    "@nestjs/common": ^10.0.0
+    "@nestjs/websockets": ^10.0.0
+    rxjs: ^7.1.0
+  checksum: 10/c27f79e8baae4cf493e5a13fc52726d9aed1fbd5e75d30dd07d8897c09bdf129d1e0ede120642d4d692b899e660df21cdb9b49934ad1e2a3f2e8110f476885f9
+  languageName: node
+  linkType: hard
+
 "@nestjs/platform-socket.io@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/platform-socket.io@npm:10.4.2"
@@ -5032,6 +5115,26 @@ __metadata:
     "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
     "@nestjs/core": ^8.0.0 || ^9.0.0 || ^10.0.0
   checksum: 10/37bbd1cf5b521faeefc57197c5d222075388bf5a70b3e3e3fba26c161a639986b362f890e0d53671f191745ac4a4316db077afb2c643bbcaa62860578d1bdebb
+  languageName: node
+  linkType: hard
+
+"@nestjs/websockets@npm:*":
+  version: 10.4.13
+  resolution: "@nestjs/websockets@npm:10.4.13"
+  dependencies:
+    iterare: "npm:1.2.1"
+    object-hash: "npm:3.0.0"
+    tslib: "npm:2.8.1"
+  peerDependencies:
+    "@nestjs/common": ^10.0.0
+    "@nestjs/core": ^10.0.0
+    "@nestjs/platform-socket.io": ^10.0.0
+    reflect-metadata: ^0.1.12 || ^0.2.0
+    rxjs: ^7.1.0
+  peerDependenciesMeta:
+    "@nestjs/platform-socket.io":
+      optional: true
+  checksum: 10/3f5f1b990ea6b7196e0527d21b678078ab34192a6454da0836c15771c0886c6e9844a3013b30ed10bf2a8bfdb0f53ed9f751ab44d820db83b5f1036183384c22
   languageName: node
   linkType: hard
 
@@ -10067,7 +10170,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"amqp-connection-manager@npm:4.1.14":
+"amqp-connection-manager@npm:*, amqp-connection-manager@npm:4.1.14":
   version: 4.1.14
   resolution: "amqp-connection-manager@npm:4.1.14"
   dependencies:
@@ -10075,6 +10178,17 @@ __metadata:
   peerDependencies:
     amqplib: "*"
   checksum: 10/502edfd40b9c26eeac0f094fb6603d106370790e1c343554a975a9174651f0fa35e4232f9fd26c418cd6604f1800f5849506166bf15fd61efe3762b08ea65dcc
+  languageName: node
+  linkType: hard
+
+"amqplib@npm:*":
+  version: 0.10.5
+  resolution: "amqplib@npm:0.10.5"
+  dependencies:
+    "@acuminous/bitsyntax": "npm:^0.1.2"
+    buffer-more-ints: "npm:~1.0.0"
+    url-parse: "npm:~1.5.10"
+  checksum: 10/bcf4bda790f8a356ba4c7d3054ae3ee397a48d6c4d51f1015f703dd7205c097ba9772577567a06eb470d13e0becdc4163c857299e50eb5a4bc888e3007832f87
   languageName: node
   linkType: hard
 
@@ -11331,6 +11445,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie@npm:0.7.1":
+  version: 0.7.1
+  resolution: "cookie@npm:0.7.1"
+  checksum: 10/aec6a6aa0781761bf55d60447d6be08861d381136a0fe94aa084fddd4f0300faa2b064df490c6798adfa1ebaef9e0af9b08a189c823e0811b8b313b3d9a03380
+  languageName: node
+  linkType: hard
+
 "cookie@npm:^0.5.0":
   version: 0.5.0
   resolution: "cookie@npm:0.5.0"
@@ -11338,7 +11459,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:^0.7.0":
+"cookie@npm:^0.7.0, cookie@npm:~0.7.2":
   version: 0.7.2
   resolution: "cookie@npm:0.7.2"
   checksum: 10/24b286c556420d4ba4e9bc09120c9d3db7d28ace2bd0f8ccee82422ce42322f73c8312441271e5eefafbead725980e5996cc02766dbb89a90ac7f5636ede608f
@@ -12033,6 +12154,24 @@ __metadata:
     engine.io-parser: "npm:~5.2.1"
     ws: "npm:~8.17.1"
   checksum: 10/df8562e5249cf122efad77b909fe804b36ac5769676f963c997d4d18c91e014c68bb40661ff92f641b978baa0297be4000c2f3c3d1ce237cd1771952ccc5f38a
+  languageName: node
+  linkType: hard
+
+"engine.io@npm:~6.6.0":
+  version: 6.6.2
+  resolution: "engine.io@npm:6.6.2"
+  dependencies:
+    "@types/cookie": "npm:^0.4.1"
+    "@types/cors": "npm:^2.8.12"
+    "@types/node": "npm:>=10.0.0"
+    accepts: "npm:~1.3.4"
+    base64id: "npm:2.0.0"
+    cookie: "npm:~0.7.2"
+    cors: "npm:~2.8.5"
+    debug: "npm:~4.3.1"
+    engine.io-parser: "npm:~5.2.1"
+    ws: "npm:~8.17.1"
+  checksum: 10/381c0a715362bebf32c95f0e4247899b53ff9f8c0074b03f88748cf17635a02948ea3eca27905df37130bc963747c0d286acc78c757e6fc085fe8b8e17d76e01
   languageName: node
   linkType: hard
 
@@ -12800,6 +12939,45 @@ __metadata:
     utils-merge: "npm:1.0.1"
     vary: "npm:~1.1.2"
   checksum: 10/3b1ee5bc5b1bd996f688702519cebc9b63a24e506965f6e1773268238cfa2c24ffdb38cc3fcb4fde66f77de1c0bebd9ee058dad06bb9c6f084b525f3c09164d3
+  languageName: node
+  linkType: hard
+
+"express@npm:4.21.1":
+  version: 4.21.1
+  resolution: "express@npm:4.21.1"
+  dependencies:
+    accepts: "npm:~1.3.8"
+    array-flatten: "npm:1.1.1"
+    body-parser: "npm:1.20.3"
+    content-disposition: "npm:0.5.4"
+    content-type: "npm:~1.0.4"
+    cookie: "npm:0.7.1"
+    cookie-signature: "npm:1.0.6"
+    debug: "npm:2.6.9"
+    depd: "npm:2.0.0"
+    encodeurl: "npm:~2.0.0"
+    escape-html: "npm:~1.0.3"
+    etag: "npm:~1.8.1"
+    finalhandler: "npm:1.3.1"
+    fresh: "npm:0.5.2"
+    http-errors: "npm:2.0.0"
+    merge-descriptors: "npm:1.0.3"
+    methods: "npm:~1.1.2"
+    on-finished: "npm:2.4.1"
+    parseurl: "npm:~1.3.3"
+    path-to-regexp: "npm:0.1.10"
+    proxy-addr: "npm:~2.0.7"
+    qs: "npm:6.13.0"
+    range-parser: "npm:~1.2.1"
+    safe-buffer: "npm:5.2.1"
+    send: "npm:0.19.0"
+    serve-static: "npm:1.16.2"
+    setprototypeof: "npm:1.2.0"
+    statuses: "npm:2.0.1"
+    type-is: "npm:~1.6.18"
+    utils-merge: "npm:1.0.1"
+    vary: "npm:~1.1.2"
+  checksum: 10/5d4a36dd03c1d1cce93172e9b185b5cd13a978d29ee03adc51cd278be7b4a514ae2b63e2fdaec0c00fdc95c6cfb396d9dd1da147917ffd337d6cd0778e08c9bc
   languageName: node
   linkType: hard
 
@@ -14253,7 +14431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ioredis@npm:5.4.1":
+"ioredis@npm:*, ioredis@npm:5.4.1":
   version: 5.4.1
   resolution: "ioredis@npm:5.4.1"
   dependencies:
@@ -15496,7 +15674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kafkajs@npm:2.2.4":
+"kafkajs@npm:*, kafkajs@npm:2.2.4":
   version: 2.2.4
   resolution: "kafkajs@npm:2.2.4"
   checksum: 10/75eb0d221397085f90e51f8a2d752495c9fa9c1b3a1a6db610cd7074fa8c52777f295832fd0a7c49cded5e574337a09fafa8c3f7cf1caa38f4dc9aa20fcfb7df
@@ -18996,6 +19174,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"socket.io@npm:4.8.1":
+  version: 4.8.1
+  resolution: "socket.io@npm:4.8.1"
+  dependencies:
+    accepts: "npm:~1.3.4"
+    base64id: "npm:~2.0.0"
+    cors: "npm:~2.8.5"
+    debug: "npm:~4.3.2"
+    engine.io: "npm:~6.6.0"
+    socket.io-adapter: "npm:~2.5.2"
+    socket.io-parser: "npm:~4.2.4"
+  checksum: 10/b9b362b7f63fc7ebb58482b8a3ade6c971da7783b7611dfeebaa8b02be23cb948137ec218491ccda8be57e434e97d65b64edf1e9811e5245b23a888d41636f4a
+  languageName: node
+  linkType: hard
+
 "socks-proxy-agent@npm:^6.0.0":
   version: 6.2.1
   resolution: "socks-proxy-agent@npm:6.2.1"
@@ -19986,7 +20179,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.6.1, tslib@npm:^2.6.2, tslib@npm:^2.6.3, tslib@npm:^2.7.0":
+"tslib@npm:2.8.1, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:^2.5.0, tslib@npm:^2.6.1, tslib@npm:^2.6.2, tslib@npm:^2.6.3, tslib@npm:^2.7.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
