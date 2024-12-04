@@ -12,6 +12,7 @@
     "booking-telegram-bot/**/*"
   ],
   "compilerOptions": {
+    "typeRoots": ["./globals/interfaces"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "declaration": false,
     "emitDecoratorMetadata": true,
