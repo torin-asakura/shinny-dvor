@@ -1,3 +1,3 @@
 export interface GtagProps {
-  gaTrackingId?: string
+  gaTrackingId: string
 }
