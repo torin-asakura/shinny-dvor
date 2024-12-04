@@ -16,7 +16,7 @@ import { NavigationEvents }       from './hooks/index.js'
 import { RoolLayoutProviders }    from './root-layout.providers.js'
 
 export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ children, messages }) => {
-  const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-TPXQGZP'
+  const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-T267QVHF'
 
   return (
     <html>
