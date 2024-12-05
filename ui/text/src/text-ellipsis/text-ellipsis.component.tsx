@@ -6,6 +6,6 @@ import { Text }                   from '../index.js'
 
 export const TextEllipsis = styled(Text)<TextEllipsisProps>(({ lineClamp }) => ({
   display: '-webkit-box',
-  '-webkit-line-clamp': `${lineClamp}`,
-  '-webkit-box-orient': 'vertical',
+  WebkitLineClamp: `${lineClamp}`,
+  WebkitBoxOrient: 'vertical',
 }))
