@@ -25,7 +25,7 @@ import { formattedDate }               from '@shared/utils'
 import { ReturnButton }                from './return-button/index.js'
 
 const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
-  const { postId, content, title, date, viewCount, contentAddons } = postData
+  const { postId, content, title, date, viewCount, contentAddons, featuredImage } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
@@ -48,8 +48,8 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
           <ImageBlock
             width={1606}
             height={480}
-            src={contentAddons?.image.mediaItemUrl}
-            alt={contentAddons?.image.altText}
+            src={featuredImage.node.mediaItemUrl}
+            alt={featuredImage.node.altText}
             style={{ opacity: 0.5 }}
           />
         </Box>
@@ -103,17 +103,17 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
         </Column>
       </Box>
       <Row justifyContent='center'>
-        <Layout flexBasis={[20, 20, 298]} flexShrink={0} />
-        <Column width={['100%', '100%', 843]}>
+        <Layout flexBasis={20} flexShrink={0} />
+        <Column width='100%' maxWidth={['100%', '100%', 843]}>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
-          <Row>
-            <Text lineHeight='medium'>
+          <Text lineHeight='medium' width='100%'>
+            <Row className='post-page__content-container'>
               <div dangerouslySetInnerHTML={{ __html: content }} />
-            </Text>
-          </Row>
+            </Row>
+          </Text>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
         </Column>
-        <Layout flexBasis={[20, 20, 298]} flexShrink={0} />
+        <Layout flexBasis={20} flexShrink={0} />
       </Row>
     </Column>
   )
