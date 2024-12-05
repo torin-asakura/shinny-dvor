@@ -133,10 +133,8 @@ const Initial: FC<InitialProps> = ({
   }
 
   const validatePhone = (value: string) => {
-    if (value.length > 12 && value.startsWith('+7', 0)) {
-      doNothing()
-    } else if (value.length >= 12 && !value.startsWith('+7', 0)) {
-      doNothing()
+    if (value.length === 10) {
+      setPhone(`+7${value}`)
     } else {
       setPhone(value)
     }
@@ -163,6 +161,7 @@ const Initial: FC<InitialProps> = ({
             <Input
               maxLength={12}
               value={name}
+              autoComplete='name'
               placeholder={yourNamePlaceholder}
               onChange={setName}
             />
@@ -180,6 +179,10 @@ const Initial: FC<InitialProps> = ({
             <Input
               value={phone}
               placeholder={yourPhonePlaceholder}
+              type='tel'
+              name='phone'
+              id='phone'
+              autoComplete='tel'
               onChange={(value) => {
                 validatePhone(value)
               }}
