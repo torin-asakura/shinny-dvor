@@ -73,8 +73,6 @@ export const Layer: FC<LayerProps> = ({
       if (event.key === 'Escape') close()
     }
 
-    document.addEventListener('keydown', handleEscape)
-
     return () => document.removeEventListener('keydown', handleEscape)
   })
 
