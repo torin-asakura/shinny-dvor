@@ -11,6 +11,7 @@ import { Box }                   from '@ui/layout'
 import { Row }                   from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Layout }                from '@ui/layout'
+import { Link }                  from '@ui/link'
 import { Text }                  from '@ui/text'
 import { extractFragment }       from '@globals/data'
 import { extractFragments }      from '@globals/data'
@@ -37,7 +38,7 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
           }: {
-            uri: ItemProps['uri']
+            uri: string
             servicesParams: {
               title: ItemProps['serviceName']
               averagePrice: ItemProps['averagePrice']
@@ -46,15 +47,15 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
               addon: ItemProps['addon']
             }
           }) => (
-            <Item
-              key={title}
-              uri={uri}
-              serviceName={serviceName}
-              averagePrice={averagePrice}
-              price={price}
-              image={image}
-              addon={addon}
-            />
+            <Link key={uri} href={uri}>
+              <Item
+                serviceName={serviceName}
+                averagePrice={averagePrice}
+                price={price}
+                image={image}
+                addon={addon}
+              />
+            </Link>
           ))}
         </Row>
         <Layout flexBasis={[50, 50, 80]} />

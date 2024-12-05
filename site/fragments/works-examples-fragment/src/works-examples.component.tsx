@@ -43,19 +43,22 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
 
   const sliderChildren = useMemo(
     () =>
-      slides.map(({
-        workResultParams: { fragmentId, photos, price, description, time },
-      }: {
-        workResultParams: {
-          fragmentId: string
-          photos: SlideProps['image']
-          price: SlideProps['price']
-          description: SlideProps['description']
-          time: SlideProps['time']
-        }
-      }) => (
+      slides.map((
+        {
+          workResultParams: { fragmentId, photos, price, description, time },
+        }: {
+          workResultParams: {
+            fragmentId: string
+            photos: SlideProps['image']
+            price: SlideProps['price']
+            description: SlideProps['description']
+            time: SlideProps['time']
+          }
+        },
+        index: number
+      ) => (
         <Slide
-          key={fragmentId}
+          key={`${fragmentId}-${index}`}
           description={description}
           price={price}
           time={time}
