@@ -10,10 +10,20 @@ const client = new ApolloClient({
 })
 
 export const generateMetadata = async () => {
-  const faviconResponse = await client.query({
+  const lightFaviconResponse = await client.query({
     query: gql`
       query GetFavicon {
-        mediaItemBy(uri: "/favicon/") {
+        mediaItemBy(uri: "/favicon-2/") {
+          sourceUrl
+        }
+      }
+    `,
+  })
+
+  const darkFaviconResponse = await client.query({
+    query: gql`
+      query GetFavicon {
+        mediaItemBy(uri: "/favicon_light/") {
           sourceUrl
         }
       }
@@ -23,19 +33,32 @@ export const generateMetadata = async () => {
   const appleTouchIconResponse = await client.query({
     query: gql`
       query GetFavicon {
-        mediaItemBy(uri: "/apple_touch_icon/") {
+        mediaItemBy(uri: "/apple_touch_icon-2/") {
           sourceUrl
         }
       }
     `,
   })
 
-  const iconUrl = faviconResponse.data.mediaItemBy?.sourceUrl
+  const lightIconUrl = lightFaviconResponse.data.mediaItemBy?.sourceUrl
+  const darkIconUrl = darkFaviconResponse.data.mediaItemBy?.sourceUrl
+
   const appleIconUrl = appleTouchIconResponse.data.mediaItemBy?.sourceUrl
 
   return {
     icons: {
-      icon: iconUrl,
+      icon: [
+        {
+          media: '(prefers-color-scheme: light)',
+          url: lightIconUrl,
+          href: lightIconUrl,
+        },
+        {
+          media: '(prefers-color-scheme: dark)',
+          url: darkIconUrl,
+          href: darkIconUrl,
+        },
+      ],
       apple: appleIconUrl,
     },
   }
