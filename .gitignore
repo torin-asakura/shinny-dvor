@@ -55,5 +55,5 @@ dist
 .yarn/install-state.gz
 
 # tgsnake cache files
-myapp.cache
-myapp.session
+*.cache
+*.session
