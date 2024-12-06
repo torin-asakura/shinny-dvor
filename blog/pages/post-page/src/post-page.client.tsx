@@ -37,7 +37,7 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   return (
     <>
       <PostPageStyles />
-      <Column width='100%' alignItems='center'>
+      <Column fill alignItems='center'>
         <Navigation
           navigationItemsType='blog-nav-item'
           backgroundColor='white'

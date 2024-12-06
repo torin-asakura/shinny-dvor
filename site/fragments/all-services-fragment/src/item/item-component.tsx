@@ -58,7 +58,7 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
             </Text>
           </Box>
           <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
-          <Column width='100%' alignItems='center'>
+          <Column fill alignItems='center'>
             <Layout flexBasis={32} flexShrink={0} />
             <Box minWidth={[180, 180, 232]} minHeight={[180, 180, 232]}>
               <ImageBlock width={232} height={232} src={image.sourceUrl} alt={image.altText} />

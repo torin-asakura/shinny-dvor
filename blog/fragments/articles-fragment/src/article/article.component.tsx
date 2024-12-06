@@ -104,7 +104,7 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
       </Box>
       <Row justifyContent='center'>
         <Layout flexBasis={20} flexShrink={0} />
-        <Column width='100%' maxWidth={['100%', '100%', 843]}>
+        <Column fill maxWidth={['100%', '100%', 843]}>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
           <Text lineHeight='medium' width='100%'>
             <Row className='post-page__content-container'>
