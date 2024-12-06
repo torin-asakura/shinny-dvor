@@ -5,6 +5,7 @@ export type BaseLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   active?: boolean
   theme?: ThemeType
   path?: string
+  width?: number | string
 }
 
 export type LinkProps = (props: BaseLinkProps) => JSX.Element

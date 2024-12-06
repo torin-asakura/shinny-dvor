@@ -18,25 +18,21 @@ const SocialLinks: FC<SocialLinksProps> = ({ linkTelegram, linkVk }) => {
 
   return (
     <Box width='100%' justifyContent='flex-end'>
-      <Link href={linkTelegram} target='_blank'>
-        <Box width={48} height={48} {...hoverTelegramProps}>
+      <Box width={48} height={48} borderRadius={24} overflow='hidden' {...hoverTelegramProps}>
+        <Link width='100%' href={linkTelegram} target='_blank'>
           <Button color='radius'>
-            <Layout>
-              <TelegramIcon width={36} height={36} color={hoverTelegram ? 'white' : 'black'} />
-            </Layout>
+            <TelegramIcon width={36} height={36} color={hoverTelegram ? 'white' : 'black'} />
           </Button>
-        </Box>
-      </Link>
+        </Link>
+      </Box>
       <Layout flexBasis={16} flexShrink={0} />
-      <Link href={linkVk} target='_blank'>
-        <Box width={48} height={48} {...hoverVkProps}>
+      <Box width={48} height={48} borderRadius={24} overflow='hidden' {...hoverVkProps}>
+        <Link width='100%' href={linkVk} target='_blank'>
           <Button color='radius'>
-            <Layout>
-              <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
-            </Layout>
+            <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
           </Button>
-        </Box>
-      </Link>
+        </Link>
+      </Box>
     </Box>
   )
 }

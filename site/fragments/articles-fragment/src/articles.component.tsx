@@ -11,7 +11,7 @@ import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
-import { NextLink }           from '@ui/link'
+import { Link }               from '@ui/link'
 import { Text }               from '@ui/text'
 import { extractFragment }    from '@globals/data'
 import { extractFragments }   from '@globals/data'
@@ -60,8 +60,9 @@ const Articles: FC<ArticlesProps> = forwardRef((
               {
                 // @ts-expect-error null | undefined
                 postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
-                  <NextLink
+                  <Link
                     key={uri}
+                    href={uri}
                     // @ts-expect-error not assignable
                     width={['auto', 'auto', '100%']}
                     path={`${linkBlog.contentAddons.content}/${uri}`}
@@ -72,7 +73,7 @@ const Articles: FC<ArticlesProps> = forwardRef((
                       excerpt={excerpt}
                       featuredImage={featuredImage}
                     />
-                  </NextLink>
+                  </Link>
                 ))
               }
             </Carousel>

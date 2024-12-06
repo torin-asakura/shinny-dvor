@@ -20,6 +20,8 @@ import { getFragmentsData }         from '@globals/data'
 import { getCarBodiesData }         from '@globals/data'
 import { getServicesData }          from '@globals/data'
 
+import { PostPageStyles }           from './post-page.style.js'
+
 // @ts-expect-error not exist
 export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { uri } = params
@@ -33,27 +35,30 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { contacts } = getContactsData()
 
   return (
-    <Column width='100%' alignItems='center'>
-      <Navigation
-        navigationItemsType='blog-nav-item'
-        backgroundColor='white'
-        availableRadiiData={availableRadii}
-        navigationData={navigation}
-        fragmentsData={fragments}
-        carBodiesData={carBodies}
-        servicesData={services}
-      />
-      <Article
-        // @ts-expect-error not assignable
-        postData={postBy}
-        // @ts-expect-error undefined
-        fragmentsData={fragments}
-      />
-      <Footer
-        fragmentsData={fragments}
-        contactsData={contacts}
-        navigationItemsType='blog-nav-item'
-      />
-    </Column>
+    <>
+      <PostPageStyles />
+      <Column fill alignItems='center'>
+        <Navigation
+          navigationItemsType='blog-nav-item'
+          backgroundColor='white'
+          availableRadiiData={availableRadii}
+          navigationData={navigation}
+          fragmentsData={fragments}
+          carBodiesData={carBodies}
+          servicesData={services}
+        />
+        <Article
+          // @ts-expect-error not assignable
+          postData={postBy}
+          // @ts-expect-error undefined
+          fragmentsData={fragments}
+        />
+        <Footer
+          fragmentsData={fragments}
+          contactsData={contacts}
+          navigationItemsType='blog-nav-item'
+        />
+      </Column>
+    </>
   )
 }

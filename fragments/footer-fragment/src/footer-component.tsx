@@ -12,7 +12,7 @@ import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
 import { Layout }           from '@ui/layout'
-import { NextLink }         from '@ui/link'
+import { NextNavLink }      from '@ui/link'
 import { Link }             from '@ui/link'
 import { FooterLogo }       from '@ui/logo'
 import { SocialLinks }      from '@ui/social-links'
@@ -72,13 +72,9 @@ export const Footer: FC<FooterProps> = memo(({
                     }: {
                       contentAddons: { title: string; content: string }
                     }) => (
-                      <NextLink key={title} path={content}>
-                        <Layout>
-                          <Text color='black' fontWeight='medium'>
-                            {title}
-                          </Text>
-                        </Layout>
-                      </NextLink>
+                      <NextNavLink key={title} path={content}>
+                        <Text fontWeight='medium'>{title}</Text>
+                      </NextNavLink>
                     ))}
                   </Box>
                 </Box>
@@ -93,13 +89,13 @@ export const Footer: FC<FooterProps> = memo(({
                 }: {
                   contentAddons: { title: string; content: string }
                 }) => (
-                  <NextLink key={title} path={content}>
+                  <NextNavLink key={title} path={content}>
                     <Layout>
                       <Text color='black' fontWeight='medium'>
                         {title}
                       </Text>
                     </Layout>
-                  </NextLink>
+                  </NextNavLink>
                 ))}
               </Box>
             </Box>
