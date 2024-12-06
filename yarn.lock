@@ -4896,6 +4896,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/core@npm:*":
+  version: 10.4.13
+  resolution: "@nestjs/core@npm:10.4.13"
+  dependencies:
+    "@nuxtjs/opencollective": "npm:0.3.2"
+    fast-safe-stringify: "npm:2.1.1"
+    iterare: "npm:1.2.1"
+    path-to-regexp: "npm:3.3.0"
+    tslib: "npm:2.8.1"
+    uid: "npm:2.0.2"
+  peerDependencies:
+    "@nestjs/common": ^10.0.0
+    "@nestjs/microservices": ^10.0.0
+    "@nestjs/platform-express": ^10.0.0
+    "@nestjs/websockets": ^10.0.0
+    reflect-metadata: ^0.1.12 || ^0.2.0
+    rxjs: ^7.1.0
+  peerDependenciesMeta:
+    "@nestjs/microservices":
+      optional: true
+    "@nestjs/platform-express":
+      optional: true
+    "@nestjs/websockets":
+      optional: true
+  checksum: 10/c3c56248f2d922554422e0ce83df3ef6e90494b1fe4162fe828fcef5181abd6e6c97046552a33b2cf164c01ce4689e8e2896d8340c727765d70156e088726154
+  languageName: node
+  linkType: hard
+
 "@nestjs/core@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/core@npm:10.4.2"
@@ -5856,10 +5884,12 @@ __metadata:
   resolution: "@operator-bot/telegram-bot-application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@nestjs/microservices": "*"
     reflect-metadata: "*"
     rxjs: "*"
   languageName: unknown
@@ -8265,11 +8295,13 @@ __metadata:
   resolution: "@telegram-bot/application-module@workspace:booking-telegram-bot/contexts/telegram-bot/application-module"
   dependencies:
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
     "@query-client/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
   peerDependencies:
     "@nestjs/common": "*"
+    "@nestjs/microservices": "*"
     "@query-client/application-module": "*"
     reflect-metadata: "*"
     rxjs: "*"
@@ -8284,6 +8316,7 @@ __metadata:
     "@booking-telegram-bot/mikro-orm-adapter": "workspace:*"
     "@booking-telegram-bot/tgsnake-adapter": "workspace:*"
     "@nestjs/common": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
     "@telegram-bot/application-module": "workspace:*"
     reflect-metadata: "npm:0.2.2"
     rxjs: "npm:7.8.1"
@@ -8292,6 +8325,7 @@ __metadata:
     "@booking-telegram-bot/mikro-orm-adapter": "*"
     "@booking-telegram-bot/tgsnake-adapter": "*"
     "@nestjs/common": "*"
+    "@nestjs/microservices": "*"
     "@telegram-bot/application-module": "*"
     reflect-metadata: "*"
     rxjs: "*"

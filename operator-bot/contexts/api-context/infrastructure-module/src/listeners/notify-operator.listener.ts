@@ -2,10 +2,11 @@ import { Injectable }   from '@nestjs/common'
 import { EventPattern } from '@nestjs/microservices'
 
 @Injectable()
-export class AppointmentCreatedListener {
-  @EventPattern('appointment_created')
+export class NotifyOperatorListener {
+  @EventPattern('notify_operator')
   async handleOrderCreatedEvent(body: Body) {
-    console.log('event on booking-telegram-bot')
+    // TODO use case
+    console.log('notify-operator-event')
     console.log(body)
   }
 }

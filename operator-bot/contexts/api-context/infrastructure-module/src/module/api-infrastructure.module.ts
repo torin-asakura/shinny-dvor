@@ -1,4 +1,5 @@
 import * as allControllers      from '../controllers/index.js'
+import * as listeners           from '../listeners/index.js'
 
 import type { DynamicModule }   from '@nestjs/common'
 
@@ -12,7 +13,8 @@ import { ApiApplicationModule } from '@operator-bot/api-application-module'
 export class ApiInfrastructureModule {
   static register(): DynamicModule {
     const controllerProviders = Object.values(allControllers)
-    const controllers = [...controllerProviders]
+    const listenerProviders = Object.values(listeners)
+    const controllers = [...controllerProviders, ...listenerProviders]
 
     return {
       global: true,

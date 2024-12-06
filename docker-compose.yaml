@@ -40,4 +40,4 @@ services:
     working_dir: /workspace
     entrypoint: yarn workspace @operator-bot/service-entrypoint dev
     ports:
-      - '3001'
+      - '3000'

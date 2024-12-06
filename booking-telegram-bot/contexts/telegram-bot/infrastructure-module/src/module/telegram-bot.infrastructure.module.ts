@@ -1,6 +1,8 @@
 import type { DynamicModule }           from '@nestjs/common'
 
 import { Module }                       from '@nestjs/common'
+import { ClientsModule }                from '@nestjs/microservices'
+import { Transport }                    from '@nestjs/microservices'
 
 import { I18nAdapterModule }            from '@booking-telegram-bot/i18n-adapter'
 import { MikroOrmAdapterModule }        from '@booking-telegram-bot/mikro-orm-adapter'

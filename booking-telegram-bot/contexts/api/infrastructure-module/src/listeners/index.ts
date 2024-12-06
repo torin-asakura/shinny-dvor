@@ -1,1 +1,1 @@
-export * from './appointment-created.listener.js'
+export * from './notify-client.listener.js'
