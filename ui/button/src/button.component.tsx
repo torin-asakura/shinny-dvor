@@ -11,11 +11,11 @@ import { useState }         from 'react'
 
 import { useHover }         from '@ui/utils'
 
-import { baseStyles }       from './button.styles.js'
-import { shapeStyles }      from './button.styles.js'
-import { appearanceStyles } from './styles/index.js'
+// import { baseStyles }       from './button.styles.js'
+// import { shapeStyles }      from './button.styles.js'
+// import { appearanceStyles } from './styles/index.js'
 
-export const ButtonElement = styled('button')<any>(baseStyles, shapeStyles, appearanceStyles)
+// export const ButtonElement = styled('button')<any>(baseStyles, shapeStyles, appearanceStyles)
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => {
   const [hover, hoverProps] = useHover()
