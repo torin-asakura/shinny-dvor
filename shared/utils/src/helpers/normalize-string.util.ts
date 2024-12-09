@@ -1,4 +1,4 @@
-const normalizeString = (string: string): string => {
+const normalizeString = (string: string | undefined): string => {
   if (string) {
     return string
       .replace(/(<p>|<\/p>)/g, '')
