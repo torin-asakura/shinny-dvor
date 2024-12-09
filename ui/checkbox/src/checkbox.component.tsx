@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { CheckboxProps } from './checkbox.interface.js'
 import type { FC }            from 'react'
 
-import type { CheckboxProps } from './checkbox.interface.js'
-
-import { memo }               from 'react'
 import React                  from 'react'
+import { memo }               from 'react'
 
 import { CheckIcon }          from '@ui/icons'
 
@@ -21,14 +20,14 @@ export const Checkbox: FC<CheckboxProps> = memo(({ children, active, onCheck }) 
     }
   }
 
-  return (
-    <Container onClick={handleClick}>
-      <Box checked={active}>
-        <Checkmark>
-          <CheckIcon width={17} height={18} />
-        </Checkmark>
-      </Box>
-      <Label>{children}</Label>
-    </Container>
-  )
+  return <h1>checkbox</h1>
 })
+
+// <Container onClick={handleClick}>
+//   <Box checked={active}>
+//     <Checkmark>
+//       <CheckIcon width={17} height={18} />
+//     </Checkmark>
+//   </Box>
+//   <Label>{children}</Label>
+// </Container>

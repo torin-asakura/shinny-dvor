@@ -1,6 +1,6 @@
 import type { styleFn }           from 'styled-system'
 
-import { createBaseStyles }       from '@atls-ui-parts/input'
+import { baseInputStyles }        from '@atls-ui-parts/input'
 import { createShapeStyles }      from '@atls-ui-parts/input'
 import { createAppearanceStyles } from '@atls-ui-parts/input'
 
@@ -13,7 +13,7 @@ export const shapeStyles: styleFn = ({ theme }) =>
     paddingRatio: 0,
   })
 
-export const baseStyles = createBaseStyles()
+export const baseStyles = baseInputStyles
 
 export const appearanceStyles = createAppearanceStyles({
   fontColor: 'black',

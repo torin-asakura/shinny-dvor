@@ -1,14 +1,20 @@
 import styled    from '@emotion/styled'
+
+import React     from 'react'
 import { color } from 'styled-system'
 
 import { Box }   from '@ui/layout'
 
-const Divider = styled(Box)(
-  ({ weight = 1, direction = 'horizontal' }) => ({
-    width: direction === 'horizontal' ? '100%' : weight,
-    height: direction === 'vertical' ? '100%' : weight,
-  }),
-  color
-)
+export const Divider = () => {
+  return <h1>divider</h1>
+}
 
-export { Divider }
+// const Divider = styled(Box)(
+//   ({ weight = 1, direction = 'horizontal' }) => ({
+//     width: direction === 'horizontal' ? '100%' : weight,
+//     height: direction === 'vertical' ? '100%' : weight,
+//   }),
+//   color
+// )
+//
+// export { Divider }
