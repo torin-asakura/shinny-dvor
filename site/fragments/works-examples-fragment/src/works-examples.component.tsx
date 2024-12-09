@@ -22,6 +22,7 @@ import { Column }                    from '@ui/layout'
 import { Pagination }                from '@ui/slider'
 import { Slider }                    from '@ui/slider'
 import { SwiperInstanceExporter }    from '@ui/slider'
+import { Swiper }                    from '@ui/slider'
 import { Slide }                     from '@ui/slider'
 import { SwiperSlide }               from '@ui/slider'
 import { Text }                      from '@ui/text'
@@ -91,7 +92,6 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
           <Layout flexBasis={[32, 32, 40]} />
           <Row justifyContent='center' alignItems='center' width={['auto', 'auto', 1440]}>
             <Slider>
-              <SwiperInstanceExporter swiper={controlsSwiper} setSwiper={setControlsSwiper} />
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
