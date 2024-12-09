@@ -8,14 +8,14 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/button": "workspace:0.0.1",
-    "@ui/card": "workspace:0.0.1",
-    "@ui/icons": "workspace:0.0.1",
-    "@ui/image": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/tooltip": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*",
+    "@ui/card": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/image": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/tooltip": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@emotion/css": "11.13.0",

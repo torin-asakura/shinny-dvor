@@ -8,8 +8,8 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/link": "0.1.3",
-    "@ui/progress-bar": "workspace:0.0.1",
+    "@atls-ui-parts/link": "1.0.3",
+    "@ui/progress-bar": "workspace:*",
     "@ui/text": "workspace:*",
     "@ui/theme": "workspace:*"
   },

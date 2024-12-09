@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "18.3.3",

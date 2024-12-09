@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/input": "0.1.1",
+    "@atls-ui-parts/input": "1.0.3",
     "@ui/divider": "workspace:*",
     "@ui/layout": "workspace:*"
   },

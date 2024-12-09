@@ -6,8 +6,7 @@ import { AnimatePresence }     from 'framer-motion'
 import { motion }              from 'framer-motion'
 import React                   from 'react'
 
-// what is a remove package?
-// 12 yrs old
+// TODO use atls condition maybe?
 
 const Condition = ({
   match,

@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/theme": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@badrap/bar-of-progress": "0.2.2",

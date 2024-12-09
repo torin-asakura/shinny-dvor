@@ -14,7 +14,7 @@
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@atls-ui-parts/checkbox": "0.1.1",
+    "@atls-ui-parts/checkbox": "1.0.2",
     "@emotion/react": "11.13.0",
     "@emotion/styled": "11.13.0",
     "@types/react": "18.3.3",

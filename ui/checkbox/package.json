@@ -8,12 +8,12 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/checkbox": "0.1.1",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/icons": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@atls-ui-parts/checkbox": "1.0.2",
+    "@ui/condition": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.13.0",

@@ -8,8 +8,8 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/carousel": "0.1.1",
-    "@ui/layout": "workspace:0.0.1"
+    "@atls-ui-parts/carousel": "1.0.2",
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.13.0",
