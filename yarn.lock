@@ -229,55 +229,87 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/card@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/card@npm:0.1.1"
+"@atls-ui-parts/button@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/button@npm:1.0.2"
   dependencies:
-    "@atls-ui-parts/dom": "npm:0.0.7"
-    "@atls-ui-parts/layout": "npm:0.1.1"
-    framer-motion: "npm:10.15.2"
-    react-scrolllock: "npm:5.0.1"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    "@atls-utils/use-hover": "npm:1.0.1"
+    "@vanilla-extract/recipes": "npm:0.5.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    react-dom: 18.2.0
-  checksum: 10/94e7bcdac7049556acab5f37f485e781bf80fef4fd8c7b8df0572b2325001d592df3004d93ae4763ea3b91d0e9223068e71a0597e9ef084cf61be8a8326f4a23
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/af67eb006a96c7b6d465d5e3cdf50f4ce812fc09d33ac848bcb9b0b3a2cd4e6a4dfab1e0c9356450694a8b18f8df5b814945471c18a70219c16dc1b7d5f26070
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/carousel@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/carousel@npm:0.1.1"
+"@atls-ui-parts/card@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/card@npm:1.0.2"
   dependencies:
-    "@atls-ui-parts/styles": "npm:0.1.1"
-    framer-motion: "npm:10.15.2"
+    "@atls-ui-parts/condition": "npm:1.0.1"
+    "@atls-ui-parts/dom": "npm:1.0.1"
+    "@atls-ui-parts/layout": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    framer-motion: "npm:11.2.11"
   peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  checksum: 10/6a2f2c816e288773fb6685f50a2f2cfacc41b03a528694ac187ec71bb367452b9bd8f84edd2c23a60d7e13213afc5ec24fb529d9df7c7b2f13d24d2a8c8673a0
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/15892b702a5683b217b3d608f259f42cd917f5cd66b5f9cab4778f7509c7fc8dfa7530e48ca5015ed5247b4aca6aea2e2526cf197869155c22680ee3ddc24f9c
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/checkbox@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/checkbox@npm:0.1.1"
+"@atls-ui-parts/carousel@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/carousel@npm:1.0.2"
   dependencies:
-    "@atls-ui-parts/styles": "npm:0.1.1"
+    "@atls-ui-parts/dom": "npm:1.0.1"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    framer-motion: "npm:11.2.11"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  checksum: 10/f36834c63dee04c437fa6cfbbe5579c77b488087bd2531f3587fd6bea8053ca2d61cb3f72bc5e2d9b1eba32ef30e2ad8ad19039d0981279310bbc1dfe935de28
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/aad4f30c2bba965b91368567f831f0d5bf980b963aca2996f9784befba6e8a981782f7c40d52d635989a59d9f078e172dc800a6f9ef55907bf51ec3e6efa63ca
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/dom@npm:*":
+"@atls-ui-parts/checkbox@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/checkbox@npm:1.0.2"
+  dependencies:
+    clsx: "npm:2.1.1"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/cc7684579edc22c8a32a78f2bab0be45ccc92595aef773ab5fc93c01ec09b7e9aa42c44d6e76f2db49cc085f55d006acf13f362a1b71c63988c3722342d7965c
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/condition@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-ui-parts/condition@npm:1.0.1"
+  dependencies:
+    framer-motion: "npm:11.2.11"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/612144f5e32c67b5f9a12eaa607eeac526fe1de8e39d71e081ea12480b47dbcd9eea1aa55a9ef42bc432d7dae03003a462479e5559e559fd4ed0f5ae9f6acbbf
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/dom@npm:1.0.1":
   version: 1.0.1
   resolution: "@atls-ui-parts/dom@npm:1.0.1"
   peerDependencies:
@@ -286,85 +318,69 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/dom@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@atls-ui-parts/dom@npm:0.0.7"
-  peerDependencies:
-    react: 18.2.0
-  checksum: 10/15f9765c2c4355e16e4c4098ee9eb197162ea9d6dab6d68310e1a56bda0ac31f79a250aef95e7b8027b4a96515ac118173f89fcd10b27b8b8e12562becc9e186
-  languageName: node
-  linkType: hard
-
-"@atls-ui-parts/events-state@npm:0.0.6":
-  version: 0.0.6
-  resolution: "@atls-ui-parts/events-state@npm:0.0.6"
-  peerDependencies:
-    react: 18.2.0
-  checksum: 10/951248e278251e16b5c01fa0f04c71ab390582d0719d525f31690a16d830b516db047fcbc58c7aa9fa6b70f4e2eceaa37665467f8f2440c0c495560b7cc91929
-  languageName: node
-  linkType: hard
-
-"@atls-ui-parts/input@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/input@npm:0.1.1"
+"@atls-ui-parts/input@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@atls-ui-parts/input@npm:1.0.3"
   dependencies:
-    "@atls-ui-parts/events-state": "npm:0.0.6"
-    "@atls-ui-parts/styles": "npm:0.1.1"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    "@vanilla-extract/recipes": "npm:0.5.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  checksum: 10/000f82aad000121adec4d7f241df1ae97b85d1c9abc5cf251a8d90d7c5ae744c77f96dcf00e53db98f5e9afd22716f8f6ce2c43be5041d5f4f33b64ad5ea8212
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/9c37f9f7b04784598cdc849b677df7cd92402424393484aec0c42c1efe85fd61a3d88a31ffb702226396739ec5a856ff91aa64a86114c4bc05b190a7889726ae
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/layout@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/layout@npm:0.1.1"
+"@atls-ui-parts/layout@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/layout@npm:1.0.2"
   dependencies:
-    "@emotion/is-prop-valid": "npm:1.2.1"
-    csstype: "npm:3.1.3"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-  checksum: 10/69596f6b403524a2eb4f6dcef023204d06c8dd8d175216352768bc7e9ec832e1bd8f98af30eb6d4359ff0665bf158fccfb6ad1eef2247797ccb6459ee351f988
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/5e25469a3e9ad288d4034efc5e11cb34f9c14fbcc8e03b9a50e35fb76d48c7ac524d305eba191460107292dd018068430d87dcc6f28a0d369acaed00ef1baa17
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/link@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@atls-ui-parts/link@npm:0.1.3"
+"@atls-ui-parts/link@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/link@npm:1.0.2"
   dependencies:
-    "@atls-ui-parts/text": "npm:0.1.3"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/css": 11.11.2
-    "@emotion/styled": 11.11.0
-    next: ^14.1.0
-    react: 18.2.0
-    styled-system: 5.1.5
-  checksum: 10/d147b616afc0a26ecd1ca6e827a75b85e438254be2b54bdcb2908756b27b8c267d02e28b837996eda2a0481ed03ff3a777d9316d7f114b037f7399dcdfac807d
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    next: "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/e1f7625f3a30b3f4d48ebcd4cae68a9bd93dcea28caf39a98328d44ca80aa648b07420dea91909162494e783ec7736ce4451657bf3cb99afb3de29d5272bacd5
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/select@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/select@npm:0.1.1"
+"@atls-ui-parts/select@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/select@npm:1.0.2"
   dependencies:
-    "@atls-ui-parts/styles": "npm:0.1.1"
-    downshift: "npm:7.6.2"
+    "@atls-utils/use-select": "npm:1.0.1"
+    clsx: "npm:2.1.1"
+    framer-motion: "npm:11.2.11"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.16.1
-    react: 18.2.0
-    react-dom: 18.2.0
-    react-laag: 2.0.5
-    styled-system: 5.1.5
-    styled-tools: 1.7.2
-  checksum: 10/6fa43c5b56b4152d9117f3c475599c6be52ee5df4223e2f0f56450931cfcd2753175a7d3db7099c2e1176a92682a908a2c4c44c13b67831f0fd95656b1949a41
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/4b88ca19919536cb24855a84127013cecfcfa6a4670ed1c408138db72c992fce3d8f6944bb88c73dbd2c375ae3114eefb6f827b0dadb5d00c4a063180d1ea8bb
   languageName: node
   linkType: hard
 
@@ -377,44 +393,93 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/swiper@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/swiper@npm:0.1.1"
+"@atls-ui-parts/swiper@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/swiper@npm:1.0.2"
   dependencies:
-    nanoid: "npm:4.0.2"
+    swiper: "npm:11.1.4"
   peerDependencies:
-    "@emotion/css": 11.11.2
-    react: 18.2.0
-    swiper: 9.4.1
-  checksum: 10/2ea49883fb91eab149e4ee22b9ef4ba54a8e24cb44b0d47714d4e9c5a2b3989c0c662e744ca72a520ad486612feb3571f6f3fdfb4d54c611812f1481d759664c
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/3a2e5d135b6cec8782db847174b757f29b07b50b006af752731dceb3f11a3e887c84fe2cb13c8d79650dd117a6385c23d11127565cd9aeb49a73400dd9205d82
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/text@npm:0.1.3":
-  version: 0.1.3
-  resolution: "@atls-ui-parts/text@npm:0.1.3"
+"@atls-ui-parts/text@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/text@npm:1.0.2"
   dependencies:
-    csstype: "npm:3.1.3"
+    "@atls-ui-parts/condition": "npm:1.0.1"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/react": 11.11.3
-    "@emotion/styled": 11.11.0
-    react: 18.2.0
-    styled-system: 5.1.5
-  checksum: 10/ddcbdcf03e0d4bcbfafaf88202bda1c4efbacf971af25206147cb7ea21cd51be0167ba2c949b17153c0eea1d534e4fb35f83343a1c990bc6075e2a4b6769ae37
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/c4d733736cbdd3603d16f19818e0066070588363db21fc315a6c3e523eaa0ab113061cfd05f2d857c930be10f367d32d827a0b628cf52af5a162e14cd32da7ff
   languageName: node
   linkType: hard
 
-"@atls-ui-parts/tooltip@npm:0.1.1":
-  version: 0.1.1
-  resolution: "@atls-ui-parts/tooltip@npm:0.1.1"
+"@atls-ui-parts/theme@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/theme@npm:1.0.2"
+  dependencies:
+    rainbow-sprinkles: "npm:0.17.2"
   peerDependencies:
-    "@emotion/styled": 11.11.0
-    framer-motion: 10.15.2
-    react: 18.2.0
-    react-dom: 18.2.0
-    react-laag: 2.0.5
-    styled-system: 5.1.5
-  checksum: 10/29c927ca0ef8b001a6cf5a429cca6cc5178023ede784858c9fab6926b5a7ea718e24063f6af086c61c157e6187743b1ffae16e8ead8df6dcc7b1b33311adb670
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+  checksum: 10/1517c67134825798c3b60d92241953fd30f57ea8a95f57d2b7a8c453ad914c4354b925865c01480c45fa3ed6d0b2830f10cab46b9077f6dbfc4caa8feb947065
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/tooltip@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/tooltip@npm:1.0.2"
+  dependencies:
+    "@atls-ui-parts/condition": "npm:1.0.1"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    framer-motion: "npm:11.2.11"
+    react-laag: "npm:2.0.5"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/11c04ac5dc1fdc1672deff661e85072bbb8e9cf6091b37a42719f694bca60da1ae1198994b87507f8230095487ce546cc9ed9f92a32821419c8dc4d9e1271dae
+  languageName: node
+  linkType: hard
+
+"@atls-utils/use-hover@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-utils/use-hover@npm:1.0.1"
+  dependencies:
+    "@types/react": "npm:18.2.48"
+    react: "npm:18.2.0"
+    react-dom: "npm:18.2.0"
+    react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/6ec97b7089fd700aebada95853dca9e97670df5d03b78e413f5273f85f84635af50cdd588ff82a58b9bdf14e4c3f0217c58cd113897b9dee9868fc0066e05ce1
+  languageName: node
+  linkType: hard
+
+"@atls-utils/use-select@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-utils/use-select@npm:1.0.1"
+  dependencies:
+    downshift: "npm:7.6.2"
+    framer-motion: "npm:11.2.11"
+    react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/c115c91f47f4c6b882688687ad032b86babe02fb8c2f034498fd6bc532d1bad790e0a46e6f67668817b28874fb59ad6650e4e61b0b80e9bc09907a2fd588ff80
   languageName: node
   linkType: hard
 
@@ -2795,15 +2860,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:1.2.1":
-  version: 1.2.1
-  resolution: "@emotion/is-prop-valid@npm:1.2.1"
-  dependencies:
-    "@emotion/memoize": "npm:^0.8.1"
-  checksum: 10/fe231c472d38b3bbe519bcc9a5585cd41c45604147f3a065e333caf0f695d668aa21bc4229e657c1b6ea7398e096899e6ad54662548c73f11f6ba594aebd76a1
-  languageName: node
-  linkType: hard
-
 "@emotion/is-prop-valid@npm:^0.8.2":
   version: 0.8.8
   resolution: "@emotion/is-prop-valid@npm:0.8.8"
@@ -2817,13 +2873,6 @@ __metadata:
   version: 0.7.4
   resolution: "@emotion/memoize@npm:0.7.4"
   checksum: 10/4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
-  languageName: node
-  linkType: hard
-
-"@emotion/memoize@npm:^0.8.1":
-  version: 0.8.1
-  resolution: "@emotion/memoize@npm:0.8.1"
-  checksum: 10/a19cc01a29fcc97514948eaab4dc34d8272e934466ed87c07f157887406bc318000c69ae6f813a9001c6a225364df04249842a50e692ef7a9873335fbcc141b0
   languageName: node
   linkType: hard
 
@@ -8453,6 +8502,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react@npm:18.2.48":
+  version: 18.2.48
+  resolution: "@types/react@npm:18.2.48"
+  dependencies:
+    "@types/prop-types": "npm:*"
+    "@types/scheduler": "npm:*"
+    csstype: "npm:^3.0.2"
+  checksum: 10/2e56ea6bd821ae96bd943f727a59d85384eaf5f8a3e6fce4fa1d34453e32d8eedda742432b3857fa0de7a4214bf84ce4239757eb52918e76452c00384731e585
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:18.3.3":
   version: 18.3.3
   resolution: "@types/react@npm:18.3.3"
@@ -8460,6 +8520,13 @@ __metadata:
     "@types/prop-types": "npm:*"
     csstype: "npm:^3.0.2"
   checksum: 10/68e203b7f1f91d6cf21f33fc7af9d6d228035a26c83f514981e54aa3da695d0ec6af10c277c6336de1dd76c4adbe9563f3a21f80c4462000f41e5f370b46e96c
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.23.0
+  resolution: "@types/scheduler@npm:0.23.0"
+  checksum: 10/874d753aa65c17760dfc460a91e6df24009bde37bfd427a031577b30262f7770c1b8f71a21366c7dbc76111967384cf4090a31d65315155180ef14bd7acccb32
   languageName: node
   linkType: hard
 
@@ -8678,10 +8745,10 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -8694,21 +8761,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/button@workspace:*, @ui/button@workspace:0.0.1, @ui/button@workspace:ui/button":
+"@ui/button@workspace:*, @ui/button@workspace:ui/button":
   version: 0.0.0-use.local
   resolution: "@ui/button@workspace:ui/button"
   dependencies:
     "@atls-ui-generators/button": "npm:0.0.22"
     "@atls-ui-parts/button": "npm:0.1.1"
-    "@atls-ui-parts/styles": "npm:0.1.1"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:0.0.1"
+    "@ui/condition": "workspace:*"
     "@ui/theme": "workspace:*"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -8722,19 +8788,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/card@workspace:*, @ui/card@workspace:0.0.1, @ui/card@workspace:ui/card":
+"@ui/card@workspace:*, @ui/card@workspace:ui/card":
   version: 0.0.0-use.local
   resolution: "@ui/card@workspace:ui/card"
   dependencies:
-    "@atls-ui-parts/card": "npm:0.1.1"
-    "@atls-ui-parts/dom": "npm:0.0.7"
+    "@atls-ui-parts/card": "npm:1.0.2"
+    "@atls-ui-parts/dom": "npm:1.0.1"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/condition": "workspace:*"
+    "@ui/layout": "workspace:*"
     framer-motion: "npm:11.3.22"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -8757,13 +8823,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/carousel@workspace:ui/carousel"
   dependencies:
-    "@atls-ui-parts/carousel": "npm:0.1.1"
+    "@atls-ui-parts/carousel": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/layout": "workspace:*"
     framer-motion: "npm:10.15.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -8777,21 +8843,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/checkbox@workspace:*, @ui/checkbox@workspace:0.0.1, @ui/checkbox@workspace:ui/checkbox":
+"@ui/checkbox@workspace:*, @ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
-    "@atls-ui-parts/checkbox": "npm:0.1.1"
+    "@atls-ui-parts/checkbox": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -8806,7 +8872,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/condition@workspace:*, @ui/condition@workspace:0.0.1, @ui/condition@workspace:ui/condition":
+"@ui/condition@workspace:*, @ui/condition@workspace:ui/condition":
   version: 0.0.0-use.local
   resolution: "@ui/condition@workspace:ui/condition"
   dependencies:
@@ -8826,7 +8892,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/divider@workspace:*, @ui/divider@workspace:0.0.1, @ui/divider@workspace:ui/divider":
+"@ui/divider@workspace:*, @ui/divider@workspace:ui/divider":
   version: 0.0.0-use.local
   resolution: "@ui/divider@workspace:ui/divider"
   dependencies:
@@ -8835,7 +8901,7 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/layout": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -8857,8 +8923,8 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/layout": "workspace:*"
     framer-motion: "npm:11.3.22"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
@@ -8890,7 +8956,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/icons@workspace:*, @ui/icons@workspace:0.0.1, @ui/icons@workspace:ui/icons":
+"@ui/icons@workspace:*, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
@@ -8913,7 +8979,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/image@workspace:*, @ui/image@workspace:0.0.1, @ui/image@workspace:ui/image":
+"@ui/image@workspace:*, @ui/image@workspace:ui/image":
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
@@ -8936,7 +9002,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/input@workspace:ui/input"
   dependencies:
-    "@atls-ui-parts/input": "npm:0.1.1"
+    "@atls-ui-parts/input": "npm:1.0.3"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -9011,11 +9077,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace:*, @ui/layout@workspace:0.0.1, @ui/layout@workspace:ui/layout":
+"@ui/layout@workspace:*, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
-    "@atls-ui-parts/layout": "npm:0.1.1"
+    "@atls-ui-parts/layout": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -9033,18 +9099,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/link@workspace:*, @ui/link@workspace:0.0.1, @ui/link@workspace:ui/link":
+"@ui/link@workspace:*, @ui/link@workspace:ui/link":
   version: 0.0.0-use.local
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
-    "@atls-ui-parts/link": "npm:0.1.3"
+    "@atls-ui-parts/link": "npm:1.0.2"
     "@emotion/css": "npm:11.13.0"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/progress-bar": "workspace:0.0.1"
+    "@ui/progress-bar": "workspace:*"
     "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
     next: "npm:14.2.5"
@@ -9062,7 +9128,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/logo@workspace:*, @ui/logo@workspace:0.0.1, @ui/logo@workspace:ui/logo":
+"@ui/logo@workspace:*, @ui/logo@workspace:ui/logo":
   version: 0.0.0-use.local
   resolution: "@ui/logo@workspace:ui/logo"
   dependencies:
@@ -9071,10 +9137,10 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/link": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -9093,7 +9159,7 @@ __metadata:
   dependencies:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/layout": "workspace:0.0.1"
+    "@ui/layout": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:^18.3.1"
   peerDependencies:
@@ -9102,13 +9168,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/progress-bar@workspace:*, @ui/progress-bar@workspace:0.0.1, @ui/progress-bar@workspace:ui/progress-bar":
+"@ui/progress-bar@workspace:*, @ui/progress-bar@workspace:ui/progress-bar":
   version: 0.0.0-use.local
   resolution: "@ui/progress-bar@workspace:ui/progress-bar"
   dependencies:
     "@badrap/bar-of-progress": "npm:0.2.2"
     "@emotion/css": "npm:11.13.0"
-    "@ui/theme": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
   peerDependencies:
     "@badrap/bar-of-progress": "*"
     "@emotion/css": "*"
@@ -9119,7 +9185,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/radio@workspace:ui/radio"
   dependencies:
-    "@atls-ui-parts/checkbox": "npm:0.1.1"
+    "@atls-ui-parts/checkbox": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -9147,18 +9213,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/select@workspace:ui/select"
   dependencies:
-    "@atls-ui-parts/button": "npm:0.1.1"
-    "@atls-ui-parts/select": "npm:0.1.1"
+    "@atls-ui-parts/button": "npm:1.0.2"
+    "@atls-ui-parts/select": "npm:1.0.2"
     "@emotion/css": "npm:11.13.0"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/checkbox": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/checkbox": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
     "@ui/theme": "workspace:*"
     downshift: "npm:9.0.7"
     framer-motion: "npm:11.3.22"
@@ -9186,21 +9252,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/slider@workspace:ui/slider"
   dependencies:
-    "@atls-ui-parts/dom": "npm:0.0.7"
-    "@atls-ui-parts/swiper": "npm:0.1.1"
+    "@atls-ui-parts/dom": "npm:1.0.1"
+    "@atls-ui-parts/swiper": "npm:1.0.2"
     "@emotion/css": "npm:11.13.0"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/prop-types": "npm:^15"
     "@types/react": "npm:18.3.3"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/divider": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/divider": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/utils": "workspace:*"
     framer-motion: "npm:11.3.22"
     prop-types: "npm:15.8.1"
     react: "npm:18.3.1"
@@ -9232,15 +9298,15 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:^5"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/condition": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/link": "workspace:0.0.1"
-    "@ui/logo": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/theme": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/condition": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/link": "workspace:*"
+    "@ui/logo": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -9261,9 +9327,9 @@ __metadata:
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     remove: "npm:0.1.5"
@@ -9280,11 +9346,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/text@workspace:*, @ui/text@workspace:0.0.1, @ui/text@workspace:ui/text":
+"@ui/text@workspace:*, @ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
   dependencies:
-    "@atls-ui-parts/text": "npm:0.1.3"
+    "@atls-ui-parts/text": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -9302,7 +9368,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/theme@workspace:*, @ui/theme@workspace:0.0.1, @ui/theme@workspace:ui/theme":
+"@ui/theme@workspace:*, @ui/theme@workspace:ui/theme":
   version: 0.0.0-use.local
   resolution: "@ui/theme@workspace:ui/theme"
   dependencies:
@@ -9324,11 +9390,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/tooltip@workspace:0.0.1, @ui/tooltip@workspace:ui/tooltip":
+"@ui/tooltip@workspace:*, @ui/tooltip@workspace:ui/tooltip":
   version: 0.0.0-use.local
   resolution: "@ui/tooltip@workspace:ui/tooltip"
   dependencies:
-    "@atls-ui-parts/tooltip": "npm:0.1.1"
+    "@atls-ui-parts/tooltip": "npm:1.0.2"
     "@emotion/react": "npm:11.13.0"
     "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
@@ -9353,7 +9419,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/utils@workspace:*, @ui/utils@workspace:0.0.1, @ui/utils@workspace:ui/utils":
+"@ui/utils@workspace:*, @ui/utils@workspace:ui/utils":
   version: 0.0.0-use.local
   resolution: "@ui/utils@workspace:ui/utils"
   dependencies:
@@ -9379,14 +9445,14 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:0.0.1"
-    "@ui/card": "workspace:0.0.1"
-    "@ui/icons": "workspace:0.0.1"
-    "@ui/image": "workspace:0.0.1"
-    "@ui/layout": "workspace:0.0.1"
-    "@ui/text": "workspace:0.0.1"
-    "@ui/tooltip": "workspace:0.0.1"
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*"
+    "@ui/card": "workspace:*"
+    "@ui/icons": "workspace:*"
+    "@ui/image": "workspace:*"
+    "@ui/layout": "workspace:*"
+    "@ui/text": "workspace:*"
+    "@ui/tooltip": "workspace:*"
+    "@ui/utils": "workspace:*"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-laag: "npm:2.0.5"
@@ -9400,6 +9466,15 @@ __metadata:
     styled-system: "*"
   languageName: unknown
   linkType: soft
+
+"@vanilla-extract/recipes@npm:0.5.2":
+  version: 0.5.2
+  resolution: "@vanilla-extract/recipes@npm:0.5.2"
+  peerDependencies:
+    "@vanilla-extract/css": ^1.0.0
+  checksum: 10/6e0c2f9d43a2677327f84394c4ff9d676d56286f62991a0f8b147c6d2d79c1948ce6395f31032d3d3dfaea03b48c2a5bbd947a05e09e771911e6ffb5cb20ca00
+  languageName: node
+  linkType: hard
 
 "@webassemblyjs/ast@npm:1.14.1, @webassemblyjs/ast@npm:^1.12.1":
   version: 1.14.1
@@ -10935,6 +11010,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10/cdfb57fa6c7649bbff98d9028c2f0de2f91c86f551179541cf784b1cfdc1562dcb951955f46d54d930a3879931a980e32a46b598acaea274728dbe068deca919
+  languageName: node
+  linkType: hard
+
 "cluster-key-slot@npm:^1.1.0":
   version: 1.1.2
   resolution: "cluster-key-slot@npm:1.1.2"
@@ -11316,7 +11398,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:3.1.3, csstype@npm:^3.0.2":
+"csstype@npm:^3.0.2":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade
@@ -13052,6 +13134,26 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10/0cbbe691961e523b21002bd85cd759f451434bdd91c65055503863a820137d9e1c2d92daf4a4e2e3289c5f59a52a87d6af0e31f5585ec1299659ee1b13da476b
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:11.2.11":
+  version: 11.2.11
+  resolution: "framer-motion@npm:11.2.11"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/2969da7c39bbbd206d5e2cd321fcb1bf8f8c5c13706b85779c4480fa63d0429063467374b896f94c04ca2594cbff96b9845c87ba5c052d90335d52d0cb554086
   languageName: node
   linkType: hard
 
@@ -16139,15 +16241,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:4.0.2":
-  version: 4.0.2
-  resolution: "nanoid@npm:4.0.2"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 10/8c0c267de44cddcad79c3361d2cbd281694c36bf7ab6a163f36dd8f6e6ee43e9783561302c55fab2986a2fa847e7a6b30fedabd1e117fdb8aecc5ab21555428d
-  languageName: node
-  linkType: hard
-
 "nanoid@npm:5.0.7":
   version: 5.0.7
   resolution: "nanoid@npm:5.0.7"
@@ -17649,6 +17742,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rainbow-sprinkles@npm:0.17.2":
+  version: 0.17.2
+  resolution: "rainbow-sprinkles@npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+  checksum: 10/9ca84affe20f70f3797cd69d3edace115017e92e2294f6d72fe4862703efe2364ff91f1f5e40c6d14b9096c7556d733633785c6747d9fad2c65e4e2ad8f17c06
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -17724,6 +17827,18 @@ __metadata:
     react: ^16.8 || ^17 || ^18
     react-dom: ^16.8 || ^17 || ^18
   checksum: 10/faabb87c12a2d37307ed7fb5fe3053f074497f3a9763498d817761b86559291bd7944e08ad247662c95b6abc8e5e92c1b294a7bae643c7e12898e17c1f3bdbaf
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:18.2.0":
+  version: 18.2.0
+  resolution: "react-dom@npm:18.2.0"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+    scheduler: "npm:^0.23.0"
+  peerDependencies:
+    react: ^18.2.0
+  checksum: 10/ca5e7762ec8c17a472a3605b6f111895c9f87ac7d43a610ab7024f68cd833d08eda0625ce02ec7178cc1f3c957cf0b9273cdc17aa2cd02da87544331c43b1d21
   languageName: node
   linkType: hard
 
@@ -17857,6 +17972,15 @@ __metadata:
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10/261137d3f3993eaa2368a83110466fc0e558bc2c7f7ae7ca52d94f03aac945f45146bd85e5f481044db1758a1dbb57879e2fcdd33924e2dde1bdc550ce73f7bf
+  languageName: node
+  linkType: hard
+
+"react@npm:18.2.0":
+  version: 18.2.0
+  resolution: "react@npm:18.2.0"
+  dependencies:
+    loose-envify: "npm:^1.1.0"
+  checksum: 10/b9214a9bd79e99d08de55f8bef2b7fc8c39630be97c4e29d7be173d14a9a10670b5325e94485f74cd8bff4966ef3c78ee53c79a7b0b9b70cba20aa8973acc694
   languageName: node
   linkType: hard
 
@@ -18373,7 +18497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.2":
+"scheduler@npm:^0.23.0, scheduler@npm:^0.23.2":
   version: 0.23.2
   resolution: "scheduler@npm:0.23.2"
   dependencies:
@@ -19396,6 +19520,13 @@ __metadata:
   dependencies:
     tslib: "npm:^2.0.3"
   checksum: 10/6e21c9e1b3cd5735eb2af679a99ec3efc78a14e3d4d5e3fd594e254b91cfd37185b3d1c6e41b22f53a2cdf5d1b963ce30c0fe8b78337e3fd43d0137084670a5f
+  languageName: node
+  linkType: hard
+
+"swiper@npm:11.1.4":
+  version: 11.1.4
+  resolution: "swiper@npm:11.1.4"
+  checksum: 10/c4ecf10dc447921ec8c58a8f9a2b76f1ca6dddbc81aff1caafb8c8504460c9e934a9f709113a757ca91dd0305d2e25337fc512206813ea333492415d7a144757
   languageName: node
   linkType: hard
 
