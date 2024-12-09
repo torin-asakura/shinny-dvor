@@ -3,13 +3,17 @@
 import { join } from 'path'
 import { dirname } from 'path'
 
+import { createVanillaExtractPlugin } from '@vanilla-extract/next-plugin'
+
 import { fileURLToPath } from 'url'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+const withVanillaExtract = createVanillaExtractPlugin()
+
 /** @type {import('next').NextConfig} */
-export default {
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -45,3 +49,5 @@ export default {
   },
   output: 'standalone',
 }
+
+export default withVanillaExtract(nextConfig)
