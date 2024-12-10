@@ -1,9 +1,8 @@
+import type { FooterProps }  from './footer.interface.js'
 import type { FC }           from 'react'
 
-import type { FooterProps }  from './footer.interface.js'
-
-import { memo }              from 'react'
 import React                 from 'react'
+import { memo }              from 'react'
 
 import { Divider }           from '@ui/divider'
 import { Box }               from '@ui/layout'
@@ -41,12 +40,6 @@ export const Footer: FC<FooterProps> = memo(({
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
         <Divider backgroundColor='gray' />
-        <TopContentPart
-          linkTelegram={linkTelegram}
-          linkVk={linkVk}
-          navigationItems={navigationItems}
-          mainPage={mainPage}
-        />
         <Divider backgroundColor='gray' />
         <BottomContentPart
           adress={adress}
@@ -59,3 +52,10 @@ export const Footer: FC<FooterProps> = memo(({
     </Box>
   )
 })
+
+// <TopContentPart
+//   linkTelegram={linkTelegram}
+//   linkVk={linkVk}
+//   navigationItems={navigationItems}
+//   mainPage={mainPage}
+// />
