@@ -6974,9 +6974,11 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/react-helmet": "npm:6.1.11"
+    "@vanilla-extract/css": "npm:1.16.1"
     "@vanilla-extract/next-plugin": "npm:2.4.7"
     graphql: "npm:16.9.0"
     next: "npm:14.2.5"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-helmet: "npm:6.1.0"
@@ -9510,12 +9512,17 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -9801,12 +9808,14 @@ __metadata:
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
+    "@vanilla-extract/css": "npm:1.16.1"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     remove: "npm:0.1.5"
   peerDependencies:
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
     react: "*"
     react-dom: "*"
     remove: "*"
@@ -9899,7 +9908,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vanilla-extract/css@npm:*, @vanilla-extract/css@npm:^1.16.1":
+"@vanilla-extract/css@npm:*, @vanilla-extract/css@npm:1.16.1, @vanilla-extract/css@npm:^1.16.1":
   version: 1.16.1
   resolution: "@vanilla-extract/css@npm:1.16.1"
   dependencies:
@@ -18534,6 +18543,16 @@ __metadata:
     "@vanilla-extract/css": ^1
     "@vanilla-extract/dynamic": ^2
   checksum: 10/9ca84affe20f70f3797cd69d3edace115017e92e2294f6d72fe4862703efe2364ff91f1f5e40c6d14b9096c7556d733633785c6747d9fad2c65e4e2ad8f17c06
+  languageName: node
+  linkType: hard
+
+"rainbow-sprinkles@npm:0.17.3":
+  version: 0.17.3
+  resolution: "rainbow-sprinkles@npm:0.17.3"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+  checksum: 10/63c668a58032a6914974e4e13c587338f70c1cd76d388ba133f920112c7f6e002b3ed6d98f6dc2c045f5522eafd78dc58aa6103b520150dcb8ca23b3b8744ce0
   languageName: node
   linkType: hard
 
