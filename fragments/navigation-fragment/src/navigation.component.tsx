@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { NavigationProps } from './navigation.interface.js'
 import type { FC }              from 'react'
 
-import type { NavigationProps } from './navigation.interface.js'
-
-import { useState }             from 'react'
 import React                    from 'react'
+import { useState }             from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -70,18 +69,22 @@ const Navigation: FC<NavigationProps> = ({
       <Box
         width='100%'
         zIndex={1000}
-        height={[80, 80, 104]}
+        height={{ mobile: 80, tablet: 80, desktop: 104 }}
         position='fixed'
         justifyContent='center'
         backgroundColor={getColorBackground(active!, scrollY)}
         style={{ transition: '.2s' }}
       >
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
-        <Box width={['100%', '100%', '1440px']}>
+        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 32 }} flexShrink={0} />
+        <Box width={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}>
           <Column width='100%'>
-            <Layout flexBasis={[20, 20, 28]} />
+            <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 28 }} />
             <Row justifyContent='space-between'>
-              <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
+              <Box
+                position='relative'
+                alignItems='center'
+                display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
+              >
                 <Button
                   size='ghost'
                   color='transparent'
@@ -103,25 +106,35 @@ const Navigation: FC<NavigationProps> = ({
                     navigation={navigationIndexItems}
                   />
                 </Drawer>
-                <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
+                <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 0 }} flexShrink={0} />
                 <Layout>
                   <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
                 </Layout>
               </Box>
-              <Layout display={['none', 'none', 'flex']}>
+              <Layout display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}>
                 <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
               </Layout>
-              <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
+              <Box
+                display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
+                width={410}
+                alignItems='center'
+              >
                 <NavigationList
                   scrollY={scrollY}
                   active={active}
                   navigation={navigationIndexItems}
                 />
               </Box>
-              <Box width={[176, 176, 201]} zIndex={1}>
+              <Box width={{ mobile: 176, tablet: 176, desktop: 201 }} zIndex={1}>
                 <Layout flexGrow={1} />
-                <Box width={[124, 124, 137]} height={[40, 40, 48]}>
-                  <Layout width='100%' display={['flex', 'flex', 'none']}>
+                <Box
+                  width={{ mobile: 124, tablet: 124, desktop: 137 }}
+                  height={{ mobile: 40, tablet: 40, desktop: 48 }}
+                >
+                  <Layout
+                    width='100%'
+                    display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
+                  >
                     <Button
                       size='small'
                       onClick={() => {
@@ -134,7 +147,10 @@ const Navigation: FC<NavigationProps> = ({
                       </Layout>
                     </Button>
                   </Layout>
-                  <Layout width='100%' display={['none', 'none', 'flex']}>
+                  <Layout
+                    width='100%'
+                    display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
+                  >
                     <Button
                       onClick={() => {
                         setVisible(true)
@@ -147,10 +163,10 @@ const Navigation: FC<NavigationProps> = ({
                 </Box>
               </Box>
             </Row>
-            <Layout flexBasis={[20, 20, 28]} />
+            <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 28 }} />
           </Column>
         </Box>
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 32 }} flexShrink={0} />
       </Box>
     </>
   )

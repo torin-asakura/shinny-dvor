@@ -7,10 +7,10 @@ import React                from 'react'
 import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
-import { ResponsiveBox }    from '@ui/layout'
+import { Box }              from '@ui/layout'
 import { Column }           from '@ui/layout'
 import { Row }              from '@ui/layout'
-import { ResponsiveLayout } from '@ui/layout'
+import { Layout }           from '@ui/layout'
 import { NextNavLink }      from '@ui/link'
 import { Link }             from '@ui/link'
 import { FooterLogo }       from '@ui/logo'
@@ -53,23 +53,23 @@ export const Footer: FC<FooterProps> = memo(({
   const { firstPart, secondPart } = stringSeparator(workingHours)
 
   return (
-    <ResponsiveBox width='100%' marginTop='auto'>
+    <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
         <Divider backgroundColor='gray' />
-        <ResponsiveBox maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }} width='100%'>
-          <ResponsiveLayout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        <Box maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }} width='100%'>
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
           <Column width='100%'>
-            <ResponsiveLayout flexBasis={{ mobile: 24, tablet: 24, desktop: 40 }} />
+            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 40 }} />
             <Row justifyContent='space-between' alignItems='center'>
-              <ResponsiveBox width='100%'>
+              <Box width='100%'>
                 <FooterLogo path={mainPage?.content} />
-                <ResponsiveBox
+                <Box
                   display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
                   width={392}
                   alignItems='center'
                 >
-                  <ResponsiveLayout flexBasis={60} />
-                  <ResponsiveBox width='100%' justifyContent='space-between' flexWrap='wrap'>
+                  <Layout flexBasis={60} />
+                  <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                     {navigationItems.map(({
                       contentAddons: { title, content },
                     }: {
@@ -79,80 +79,84 @@ export const Footer: FC<FooterProps> = memo(({
                         <Text fontWeight='medium'>{title}</Text>
                       </NextNavLink>
                     ))}
-                  </ResponsiveBox>
-                </ResponsiveBox>
-              </ResponsiveBox>
+                  </Box>
+                </Box>
+              </Box>
               <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
             </Row>
-            <ResponsiveLayout flexBasis={[24, 24, 40]} />
-            <ResponsiveBox width={90} height={136} display={['flex', 'flex', 'none']}>
-              <ResponsiveBox width='100%' justifyContent='space-between' flexWrap='wrap'>
+            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 40 }} />
+            <Box
+              width={90}
+              height={136}
+              display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
+            >
+              <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                 {navigationItems.map(({
                   contentAddons: { title, content },
                 }: {
                   contentAddons: { title: string; content: string }
                 }) => (
                   <NextNavLink key={title} path={content}>
-                    <ResponsiveLayout>
+                    <Layout>
                       <Text color='black' fontWeight='$medium'>
                         {title}
                       </Text>
-                    </ResponsiveLayout>
+                    </Layout>
                   </NextNavLink>
                 ))}
-              </ResponsiveBox>
-            </ResponsiveBox>
+              </Box>
+            </Box>
           </Column>
-          <ResponsiveLayout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
-        </ResponsiveBox>
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        </Box>
         <Divider backgroundColor='gray' />
-        <ResponsiveBox
+        <Box
           maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }}
           alignItems='center'
           width='100%'
         >
-          <ResponsiveLayout flexBasis={{ mobile: 20, tablet: 20, desktop: 84 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 84 }} flexShrink={0} />
           <Column width='100%'>
-            <ResponsiveLayout flexBasis={{ mobile: 24, tablet: 24, desktop: 32 }} />
+            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 32 }} />
             <Row
               justifyContent='space-between'
               alignItems='center'
-              display={['none', 'none', 'flex']}
+              display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
             >
-              <ResponsiveBox width='50%'>
+              <Box width='50%'>
                 <Column width={287}>
                   <Text fontWeight='medium'>{normalizeString(address)}</Text>
-                  <ResponsiveLayout flexBasis={10} />
+                  <Layout flexBasis={10} />
                   <Row>
-                    <ResponsiveLayout>
+                    <Layout>
                       <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                         {normalizeString(firstPart)}
                       </Text>
-                    </ResponsiveLayout>
-                    <ResponsiveLayout flexBasis={12} flexShrink={0} />
-                    <ResponsiveLayout>
+                    </Layout>
+                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout>
                       <Divider direction='vertical' backgroundColor='darkGray' />
-                    </ResponsiveLayout>
-                    <ResponsiveLayout flexBasis={12} flexShrink={0} />
-                    <ResponsiveLayout>
+                    </Layout>
+                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout>
                       <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                         {normalizeString(secondPart)}
                       </Text>
-                    </ResponsiveLayout>
+                    </Layout>
                   </Row>
                 </Column>
-                <ResponsiveLayout flexBasis={80} />
-                <ResponsiveLayout display='flex' flexDirection='column'>
+                <Layout flexBasis={80} />
+                <Layout display='flex' flexDirection='column'>
                   <Link href={`tel:${telephone}`}>
                     <Text fontWeight='medium'>{telephone}</Text>
                   </Link>
-                  <ResponsiveLayout flexBasis={8} />
+                  <Layout flexBasis={8} />
                   <Text fontSize='small' color='darkGray'>
                     {appointmentPhone}
                   </Text>
-                </ResponsiveLayout>
-              </ResponsiveBox>
-              <ResponsiveLayout>
+                </Layout>
+              </Box>
+              <Layout>
                 <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
                 <Space />
                 <Link
@@ -163,46 +167,49 @@ export const Footer: FC<FooterProps> = memo(({
                 >
                   <Text fontWeight='medium'>{by.get('title')}</Text>
                 </Link>
-              </ResponsiveLayout>
+              </Layout>
             </Row>
-            <Column justifyContent='space-between' display={['flex', 'flex', 'none']}>
-              <ResponsiveLayout>
+            <Column
+              justifyContent='space-between'
+              display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
+            >
+              <Layout>
                 <Text fontWeight='medium'>{normalizeString(address)}</Text>
-              </ResponsiveLayout>
-              <ResponsiveLayout flexBasis={8} flexShrink={0} />
+              </Layout>
+              <Layout flexBasis={8} flexShrink={0} />
               <Row>
-                <ResponsiveLayout>
+                <Layout>
                   <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                     {normalizeString(firstPart)}
                   </Text>
-                </ResponsiveLayout>
-                <ResponsiveLayout flexBasis={12} flexShrink={0} />
-                <ResponsiveLayout>
+                </Layout>
+                <Layout flexBasis={12} flexShrink={0} />
+                <Layout>
                   <Divider direction='vertical' backgroundColor='darkGray' />
-                </ResponsiveLayout>
-                <ResponsiveLayout flexBasis={12} flexShrink={0} />
-                <ResponsiveLayout>
+                </Layout>
+                <Layout flexBasis={12} flexShrink={0} />
+                <Layout>
                   <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                     {normalizeString(secondPart)}
                   </Text>
-                </ResponsiveLayout>
+                </Layout>
               </Row>
-              <ResponsiveLayout flexBasis={24} />
+              <Layout flexBasis={24} />
               <Row alignItems='flex-end' justifyContent='space-between'>
                 <Column>
-                  <ResponsiveLayout>
+                  <Layout>
                     <Link href={`tel:${telephone}`}>
                       <Text fontWeight='medium'>{telephone}</Text>
                     </Link>
-                  </ResponsiveLayout>
-                  <ResponsiveLayout flexBasis={8} flexShrink={0} />
-                  <ResponsiveLayout>
+                  </Layout>
+                  <Layout flexBasis={8} flexShrink={0} />
+                  <Layout>
                     <Text fontSize='small' color='darkGray'>
                       {appointmentPhone}
                     </Text>
-                  </ResponsiveLayout>
+                  </Layout>
                 </Column>
-                <ResponsiveLayout>
+                <Layout>
                   <Link
                     href={by.get('link')}
                     target='_blank'
@@ -213,14 +220,14 @@ export const Footer: FC<FooterProps> = memo(({
                     <Space />
                     <Text fontWeight='medium'>{by.get('title')}</Text>
                   </Link>
-                </ResponsiveLayout>
+                </Layout>
               </Row>
             </Column>
-            <ResponsiveLayout flexBasis={[24, 24, 32]} flexShrink={0} />
+            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 32 }} flexShrink={0} />
           </Column>
-          <ResponsiveLayout flexBasis={[20, 20, 80]} flexShrink={0} />
-        </ResponsiveBox>
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        </Box>
       </Column>
-    </ResponsiveBox>
+    </Box>
   )
 })
