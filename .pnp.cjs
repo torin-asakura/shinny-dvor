@@ -1889,6 +1889,329 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@atls/figma-file-loader", [\
+      ["npm:1.0.0", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-file-loader-npm-1.0.0-1d08690bde-10.zip/node_modules/@atls/figma-file-loader/",\
+        "packageDependencies": [\
+          ["@atls/figma-file-loader", "npm:1.0.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:1.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-file-loader-virtual-0f2c37988e/2/.yarn/berry/cache/@atls-figma-file-loader-npm-1.0.0-1d08690bde-10.zip/node_modules/@atls/figma-file-loader/",\
+        "packageDependencies": [\
+          ["@atls/figma-file-loader", "virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:1.0.0"],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-npm-2.0.2-473d72c555-10.zip/node_modules/@atls/figma-theme/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme", "npm:2.0.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:2.0.2", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-virtual-f0964c8ce7/2/.yarn/berry/cache/@atls-figma-theme-npm-2.0.2-473d72c555-10.zip/node_modules/@atls/figma-theme/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme", "virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:2.0.2"],\
+          ["@atls/figma-theme-borders-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-theme-colors-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-font-sizes-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-font-weights-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-fonts-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-theme-line-heights-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-radii-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-shadows-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"],\
+          ["prettier", "npm:2.8.8"]\
+        ],\
+        "packagePeers": [\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-borders-generator", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-borders-generator-npm-1.0.1-2d58950916-10.zip/node_modules/@atls/figma-theme-borders-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-borders-generator", "npm:1.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-borders-generator-virtual-4a03300b01/2/.yarn/berry/cache/@atls-figma-theme-borders-generator-npm-1.0.1-2d58950916-10.zip/node_modules/@atls/figma-theme-borders-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-borders-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-cli", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-cli-npm-2.0.2-18c3214370-10.zip/node_modules/@atls/figma-theme-cli/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-cli", "npm:2.0.2"],\
+          ["@atls/figma-file-loader", "virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:1.0.0"],\
+          ["@atls/figma-theme", "virtual:18c3214370a27c40127b15946f1864982c383390a81ffb83ff215f26166e0b8704b77ab7c23b5b6ead83588da41fdf20fc917d42423b9fec27589ac029e4bac4#npm:2.0.2"],\
+          ["commander", "npm:12.1.0"],\
+          ["figma-js", "npm:1.16.1-0"],\
+          ["npmlog", "npm:7.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-colors-generator", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-colors-generator-npm-2.0.1-5f4844e75d-10.zip/node_modules/@atls/figma-theme-colors-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-colors-generator", "npm:2.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-colors-generator-virtual-6a5034367f/2/.yarn/berry/cache/@atls-figma-theme-colors-generator-npm-2.0.1-5f4844e75d-10.zip/node_modules/@atls/figma-theme-colors-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-colors-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["camelcase", "npm:8.0.0"],\
+          ["color-namer", "npm:1.4.0"],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-font-sizes-generator", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-font-sizes-generator-npm-2.0.1-758129daaa-10.zip/node_modules/@atls/figma-theme-font-sizes-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-font-sizes-generator", "npm:2.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-font-sizes-generator-virtual-53dcb02f81/2/.yarn/berry/cache/@atls-figma-theme-font-sizes-generator-npm-2.0.1-758129daaa-10.zip/node_modules/@atls/figma-theme-font-sizes-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-font-sizes-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-font-weights-generator", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-font-weights-generator-npm-2.0.1-ca17ba4159-10.zip/node_modules/@atls/figma-theme-font-weights-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-font-weights-generator", "npm:2.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-font-weights-generator-virtual-717ce3ff3e/2/.yarn/berry/cache/@atls-figma-theme-font-weights-generator-npm-2.0.1-ca17ba4159-10.zip/node_modules/@atls/figma-theme-font-weights-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-font-weights-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-fonts-generator", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-fonts-generator-npm-1.0.1-4441f9df25-10.zip/node_modules/@atls/figma-theme-fonts-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-fonts-generator", "npm:1.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-fonts-generator-virtual-53b5e7bf27/2/.yarn/berry/cache/@atls-figma-theme-fonts-generator-npm-1.0.1-4441f9df25-10.zip/node_modules/@atls/figma-theme-fonts-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-fonts-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-generator-common", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-generator-common-npm-1.0.1-d9442ca3db-10.zip/node_modules/@atls/figma-theme-generator-common/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-generator-common", "npm:1.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-generator-common-virtual-98837e0b2b/2/.yarn/berry/cache/@atls-figma-theme-generator-common-npm-1.0.1-d9442ca3db-10.zip/node_modules/@atls/figma-theme-generator-common/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-line-heights-generator", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-line-heights-generator-npm-2.0.1-6431a37c86-10.zip/node_modules/@atls/figma-theme-line-heights-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-line-heights-generator", "npm:2.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-line-heights-generator-virtual-b4b645dd23/2/.yarn/berry/cache/@atls-figma-theme-line-heights-generator-npm-2.0.1-6431a37c86-10.zip/node_modules/@atls/figma-theme-line-heights-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-line-heights-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-radii-generator", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-radii-generator-npm-2.0.1-9d2d53a10b-10.zip/node_modules/@atls/figma-theme-radii-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-radii-generator", "npm:2.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-radii-generator-virtual-c50130e4bf/2/.yarn/berry/cache/@atls-figma-theme-radii-generator-npm-2.0.1-9d2d53a10b-10.zip/node_modules/@atls/figma-theme-radii-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-radii-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:2.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-theme-shadows-generator", [\
+      ["npm:1.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-theme-shadows-generator-npm-1.0.1-433eac8d61-10.zip/node_modules/@atls/figma-theme-shadows-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-shadows-generator", "npm:1.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-theme-shadows-generator-virtual-95d8de2df9/2/.yarn/berry/cache/@atls-figma-theme-shadows-generator-npm-1.0.1-433eac8d61-10.zip/node_modules/@atls/figma-theme-shadows-generator/",\
+        "packageDependencies": [\
+          ["@atls/figma-theme-shadows-generator", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:1.0.1"],\
+          ["@atls/figma-theme-generator-common", "virtual:4a03300b0107b335ad3fd534e42b905660b1f2fbcf5f704aec940523eb0e1b4a9ab8ad58fb639a7175b3f4afb0a3c53b7726d13781a6e03dab40455e2e08a3d1#npm:1.0.1"],\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/atls__figma-theme-generator-common", null],\
+          ["@types/figma-js", null],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/atls__figma-theme-generator-common",\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@atls/figma-utils", [\
+      ["npm:0.0.4", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-figma-utils-npm-0.0.4-023646ec32-10.zip/node_modules/@atls/figma-utils/",\
+        "packageDependencies": [\
+          ["@atls/figma-utils", "npm:0.0.4"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-figma-utils-virtual-66675c8ac8/2/.yarn/berry/cache/@atls-figma-utils-npm-0.0.4-023646ec32-10.zip/node_modules/@atls/figma-utils/",\
+        "packageDependencies": [\
+          ["@atls/figma-utils", "virtual:f0964c8ce76207c2fc91cd80ff5f9afcc3c834b2ad2ad4b1672bc22cde1cb2003b35f4dc498d3b56c22e0e356276cfd4e05a604ce6d5251a7e5f024bb045c4f3#npm:0.0.4"],\
+          ["@types/figma-js", null],\
+          ["color-namer", "npm:1.4.0"],\
+          ["figma-js", "npm:1.16.1-0"]\
+        ],\
+        "packagePeers": [\
+          "@types/figma-js",\
+          "figma-js"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@atls/logger", [\
       ["npm:0.0.2", {\
         "packageLocation": "../.yarn/berry/cache/@atls-logger-npm-0.0.2-f7740b719d-10.zip/node_modules/@atls/logger/",\
@@ -18511,6 +18834,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ui-theme-virtual-f7f1507ac7/1/ui/theme/",\
         "packageDependencies": [\
           ["@ui/theme", "virtual:00f8051cec0a545477e9af847ec972799362b59f0329907b9bf6daa5f9318202151f95b402c955338e2288ab7424c82410b1127faf4fd9f6b6904dcd8b9fd52a#workspace:ui/theme"],\
+          ["@atls/figma-theme-cli", "npm:2.0.2"],\
           ["@emotion/css", "npm:11.13.0"],\
           ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
           ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
@@ -18541,6 +18865,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ui-theme-virtual-efb4edd748/1/ui/theme/",\
         "packageDependencies": [\
           ["@ui/theme", "virtual:bc3e1322ddf61f17daca49f1545c2f7b82f988ca4d0a31ba26ac529d2fc46b9ff2fe65e98ac79e18325676e760e223714724bd87c34c4d60ac8ba12ca5fde2b1#workspace:ui/theme"],\
+          ["@atls/figma-theme-cli", "npm:2.0.2"],\
           ["@emotion/css", "npm:11.13.0"],\
           ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
           ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
@@ -18565,6 +18890,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui/theme/",\
         "packageDependencies": [\
           ["@ui/theme", "workspace:ui/theme"],\
+          ["@atls/figma-theme-cli", "npm:2.0.2"],\
           ["@emotion/css", "npm:11.13.0"],\
           ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
           ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
@@ -19613,6 +19939,13 @@ const RAW_RUNTIME_STATE =
           ["readable-stream", "npm:3.6.2"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:4.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/are-we-there-yet-npm-4.0.2-3da8ae8816-10.zip/node_modules/are-we-there-yet/",\
+        "packageDependencies": [\
+          ["are-we-there-yet", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["arg", [\
@@ -19884,6 +20217,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/axe-core-npm-4.10.2-46ed42027d-10.zip/node_modules/axe-core/",\
         "packageDependencies": [\
           ["axe-core", "npm:4.10.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["axios", [\
+      ["npm:1.7.9", {\
+        "packageLocation": "../.yarn/berry/cache/axios-npm-1.7.9-3c98466f87-10.zip/node_modules/axios/",\
+        "packageDependencies": [\
+          ["axios", "npm:1.7.9"],\
+          ["follow-redirects", "virtual:3c98466f874305529f1a16589101c28705aa489e7ec8ffcbfb5cc062090761c951973322264d8039ff40de705a591171bac1067843c49b197410972b4a9ed9f4#npm:1.15.9"],\
+          ["form-data", "npm:4.0.1"],\
+          ["proxy-from-env", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20437,6 +20782,13 @@ const RAW_RUNTIME_STATE =
           ["camelcase", "npm:6.3.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:8.0.0", {\
+        "packageLocation": "../.yarn/berry/cache/camelcase-npm-8.0.0-a3fa03dcc3-10.zip/node_modules/camelcase/",\
+        "packageDependencies": [\
+          ["camelcase", "npm:8.0.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["caniuse-lite", [\
@@ -20586,6 +20938,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/chownr-npm-2.0.0-638f1c9c61-10.zip/node_modules/chownr/",\
         "packageDependencies": [\
           ["chownr", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["chroma-js", [\
+      ["npm:1.4.1", {\
+        "packageLocation": "../.yarn/berry/cache/chroma-js-npm-1.4.1-cb90fab098-10.zip/node_modules/chroma-js/",\
+        "packageDependencies": [\
+          ["chroma-js", "npm:1.4.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20792,6 +21153,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["color-namer", [\
+      ["npm:1.4.0", {\
+        "packageLocation": "../.yarn/berry/cache/color-namer-npm-1.4.0-d77f6a7ac2-10.zip/node_modules/color-namer/",\
+        "packageDependencies": [\
+          ["color-namer", "npm:1.4.0"],\
+          ["chroma-js", "npm:1.4.1"],\
+          ["es6-weak-map", "npm:2.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["color-string", [\
       ["npm:1.9.1", {\
         "packageLocation": "../.yarn/berry/cache/color-string-npm-1.9.1-dc020e56be-10.zip/node_modules/color-string/",\
@@ -20843,6 +21215,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/commander-npm-10.0.1-f17613b72b-10.zip/node_modules/commander/",\
         "packageDependencies": [\
           ["commander", "npm:10.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:12.1.0", {\
+        "packageLocation": "../.yarn/berry/cache/commander-npm-12.1.0-65c868e907-10.zip/node_modules/commander/",\
+        "packageDependencies": [\
+          ["commander", "npm:12.1.0"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -21181,6 +21560,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/csstype-npm-3.1.3-e9a1c85013-10.zip/node_modules/csstype/",\
         "packageDependencies": [\
           ["csstype", "npm:3.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["d", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/d-npm-1.0.2-7abbb6ae36-10.zip/node_modules/d/",\
+        "packageDependencies": [\
+          ["d", "npm:1.0.2"],\
+          ["es5-ext", "npm:0.10.64"],\
+          ["type", "npm:2.7.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22104,6 +22494,55 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["es5-ext", [\
+      ["npm:0.10.64", {\
+        "packageLocation": "./.yarn/unplugged/es5-ext-npm-0.10.64-c30cdc3d60/node_modules/es5-ext/",\
+        "packageDependencies": [\
+          ["es5-ext", "npm:0.10.64"],\
+          ["es6-iterator", "npm:2.0.3"],\
+          ["es6-symbol", "npm:3.1.4"],\
+          ["esniff", "npm:2.0.1"],\
+          ["next-tick", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["es6-iterator", [\
+      ["npm:2.0.3", {\
+        "packageLocation": "../.yarn/berry/cache/es6-iterator-npm-2.0.3-4dadb0ccc1-10.zip/node_modules/es6-iterator/",\
+        "packageDependencies": [\
+          ["es6-iterator", "npm:2.0.3"],\
+          ["d", "npm:1.0.2"],\
+          ["es5-ext", "npm:0.10.64"],\
+          ["es6-symbol", "npm:3.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["es6-symbol", [\
+      ["npm:3.1.4", {\
+        "packageLocation": "../.yarn/berry/cache/es6-symbol-npm-3.1.4-7d67ac432c-10.zip/node_modules/es6-symbol/",\
+        "packageDependencies": [\
+          ["es6-symbol", "npm:3.1.4"],\
+          ["d", "npm:1.0.2"],\
+          ["ext", "npm:1.7.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["es6-weak-map", [\
+      ["npm:2.0.3", {\
+        "packageLocation": "../.yarn/berry/cache/es6-weak-map-npm-2.0.3-5e57e0b4e6-10.zip/node_modules/es6-weak-map/",\
+        "packageDependencies": [\
+          ["es6-weak-map", "npm:2.0.3"],\
+          ["d", "npm:1.0.2"],\
+          ["es5-ext", "npm:0.10.64"],\
+          ["es6-iterator", "npm:2.0.3"],\
+          ["es6-symbol", "npm:3.1.4"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["escalade", [\
       ["npm:3.2.0", {\
         "packageLocation": "../.yarn/berry/cache/escalade-npm-3.2.0-19b50dd48f-10.zip/node_modules/escalade/",\
@@ -22629,6 +23068,19 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["esniff", [\
+      ["npm:2.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/esniff-npm-2.0.1-26cea8766c-10.zip/node_modules/esniff/",\
+        "packageDependencies": [\
+          ["esniff", "npm:2.0.1"],\
+          ["d", "npm:1.0.2"],\
+          ["es5-ext", "npm:0.10.64"],\
+          ["event-emitter", "npm:0.3.5"],\
+          ["type", "npm:2.7.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["espree", [\
       ["npm:10.3.0", {\
         "packageLocation": "../.yarn/berry/cache/espree-npm-10.3.0-e5b10052f5-10.zip/node_modules/espree/",\
@@ -22709,6 +23161,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/etag-npm-1.8.1-54a3b989d9-10.zip/node_modules/etag/",\
         "packageDependencies": [\
           ["etag", "npm:1.8.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["event-emitter", [\
+      ["npm:0.3.5", {\
+        "packageLocation": "../.yarn/berry/cache/event-emitter-npm-0.3.5-f1e8b8edb5-10.zip/node_modules/event-emitter/",\
+        "packageDependencies": [\
+          ["event-emitter", "npm:0.3.5"],\
+          ["d", "npm:1.0.2"],\
+          ["es5-ext", "npm:0.10.64"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -22835,6 +23298,16 @@ const RAW_RUNTIME_STATE =
           ["type-is", "npm:1.6.18"],\
           ["utils-merge", "npm:1.0.1"],\
           ["vary", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["ext", [\
+      ["npm:1.7.0", {\
+        "packageLocation": "../.yarn/berry/cache/ext-npm-1.7.0-580588ab93-10.zip/node_modules/ext/",\
+        "packageDependencies": [\
+          ["ext", "npm:1.7.0"],\
+          ["type", "npm:2.7.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23129,6 +23602,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["figma-js", [\
+      ["npm:1.16.1-0", {\
+        "packageLocation": "../.yarn/berry/cache/figma-js-npm-1.16.1-0-220f93d983-10.zip/node_modules/figma-js/",\
+        "packageDependencies": [\
+          ["figma-js", "npm:1.16.1-0"],\
+          ["axios", "npm:1.7.9"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["figures", [\
       ["npm:3.2.0", {\
         "packageLocation": "../.yarn/berry/cache/figures-npm-3.2.0-85d357e955-10.zip/node_modules/figures/",\
@@ -23241,6 +23724,28 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/flatted-npm-3.3.1-458870f59b-10.zip/node_modules/flatted/",\
         "packageDependencies": [\
           ["flatted", "npm:3.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["follow-redirects", [\
+      ["npm:1.15.9", {\
+        "packageLocation": "../.yarn/berry/cache/follow-redirects-npm-1.15.9-539785d34c-10.zip/node_modules/follow-redirects/",\
+        "packageDependencies": [\
+          ["follow-redirects", "npm:1.15.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:3c98466f874305529f1a16589101c28705aa489e7ec8ffcbfb5cc062090761c951973322264d8039ff40de705a591171bac1067843c49b197410972b4a9ed9f4#npm:1.15.9", {\
+        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-e8bf3836d7/2/.yarn/berry/cache/follow-redirects-npm-1.15.9-539785d34c-10.zip/node_modules/follow-redirects/",\
+        "packageDependencies": [\
+          ["follow-redirects", "virtual:3c98466f874305529f1a16589101c28705aa489e7ec8ffcbfb5cc062090761c951973322264d8039ff40de705a591171bac1067843c49b197410972b4a9ed9f4#npm:1.15.9"],\
+          ["@types/debug", null],\
+          ["debug", null]\
+        ],\
+        "packagePeers": [\
+          "@types/debug",\
+          "debug"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23530,6 +24035,21 @@ const RAW_RUNTIME_STATE =
           ["console-control-strings", "npm:1.1.0"],\
           ["has-unicode", "npm:2.0.1"],\
           ["signal-exit", "npm:3.0.7"],\
+          ["string-width", "npm:4.2.3"],\
+          ["strip-ansi", "npm:6.0.1"],\
+          ["wide-align", "npm:1.1.5"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/gauge-npm-5.0.2-f269032fff-10.zip/node_modules/gauge/",\
+        "packageDependencies": [\
+          ["gauge", "npm:5.0.2"],\
+          ["aproba", "npm:2.0.0"],\
+          ["color-support", "npm:1.1.3"],\
+          ["console-control-strings", "npm:1.1.0"],\
+          ["has-unicode", "npm:2.0.1"],\
+          ["signal-exit", "npm:4.1.0"],\
           ["string-width", "npm:4.2.3"],\
           ["strip-ansi", "npm:6.0.1"],\
           ["wide-align", "npm:1.1.5"]\
@@ -27154,6 +27674,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["next-tick", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "../.yarn/berry/cache/next-tick-npm-1.1.0-e0eb60d6a4-10.zip/node_modules/next-tick/",\
+        "packageDependencies": [\
+          ["next-tick", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["no-case", [\
       ["npm:3.0.4", {\
         "packageLocation": "../.yarn/berry/cache/no-case-npm-3.0.4-12884c3d98-10.zip/node_modules/no-case/",\
@@ -27347,6 +27876,17 @@ const RAW_RUNTIME_STATE =
           ["are-we-there-yet", "npm:3.0.1"],\
           ["console-control-strings", "npm:1.1.0"],\
           ["gauge", "npm:4.0.4"],\
+          ["set-blocking", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:7.0.1", {\
+        "packageLocation": "../.yarn/berry/cache/npmlog-npm-7.0.1-a0f355f530-10.zip/node_modules/npmlog/",\
+        "packageDependencies": [\
+          ["npmlog", "npm:7.0.1"],\
+          ["are-we-there-yet", "npm:4.0.2"],\
+          ["console-control-strings", "npm:1.1.0"],\
+          ["gauge", "npm:5.0.2"],\
           ["set-blocking", "npm:2.0.0"]\
         ],\
         "linkType": "HARD"\
@@ -31416,6 +31956,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["tunnel-agent", "npm:0.6.0"],\
           ["safe-buffer", "npm:5.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["type", [\
+      ["npm:2.7.3", {\
+        "packageLocation": "../.yarn/berry/cache/type-npm-2.7.3-509458c133-10.zip/node_modules/type/",\
+        "packageDependencies": [\
+          ["type", "npm:2.7.3"]\
         ],\
         "linkType": "HARD"\
       }]\
