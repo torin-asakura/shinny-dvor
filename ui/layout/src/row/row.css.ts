@@ -8,12 +8,12 @@ const responsiveProperties = defineProperties({
   conditions: BREAKPOINT_CONDITIONS,
   defaultCondition: 'mobile',
   dynamicProperties: {
-    maxWidth: true,
     width: true,
+
     display: true,
-    alignItems: true,
+
     justifyContent: true,
-    flexWrap: true,
+    alignItems: true,
   },
 })
 

@@ -8,11 +8,16 @@ const responsiveProperties = defineProperties({
   conditions: BREAKPOINT_CONDITIONS,
   defaultCondition: 'mobile',
   dynamicProperties: {
+    width: true,
+
+    display: true,
+
+    flexGrow: true,
+    flexDirection: true,
     flexBasis: true,
     flexShrink: true,
   },
 })
 
 export const rainbowSprinkles = createRainbowSprinkles(responsiveProperties)
-
 export type Sprinkles = Parameters<typeof rainbowSprinkles>[0]
