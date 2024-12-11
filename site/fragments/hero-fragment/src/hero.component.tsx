@@ -1,8 +1,8 @@
 /* eslint-disable */
 
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -77,7 +77,7 @@ const Hero = forwardRef((
       </Layer>
       <Box
         ref={ref}
-        maxWidth={['100%', '100%', 1440]}
+        maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }}
         width='100%'
         height='100vh'
         justifyContent='center'
@@ -91,10 +91,14 @@ const Hero = forwardRef((
             style={{ opacity: 0.5 }}
           />
         </Box>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
-          <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
+          <Layout flexBasis={{ mobile: 120, tablet: 120, desktop: 367 }} flexGrow={1} />
+          <Column
+            width='100%'
+            maxWidth={{ mobile: 335, tablet: 335, desktop: 900 }}
+            height={{ mobile: 240, tablet: 240, desktop: 201 }}
+          >
             <Row>
               <Text
                 fontSize={['giant', 'giant', 'extra']}
@@ -118,7 +122,7 @@ const Hero = forwardRef((
             </Row>
           </Column>
           <Layout flexBasis={32} flexShrink={0} />
-          <Layout width={['100%', '100%', '180px']}>
+          <Layout width={{ mobile: '100%', tablet: '100%', desktop: 180 }}>
             <Button
               onClick={() => {
                 screenVar(INITIAL)
@@ -128,11 +132,15 @@ const Hero = forwardRef((
               {CTA}
             </Button>
           </Layout>
-          <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
+          <Layout flexBasis={{ mobile: 40, tablet: 40, desktop: 48 }} flexShrink={0} />
           <Divider backgroundColor='milkGray' />
-          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 30 }} flexShrink={0} />
           <Box width='100%'>
-            <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
+            <Box
+              width='100%'
+              display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
+              alignItems='center'
+            >
               <Link href='#services'>
                 <Row width={150}>
                   <Layout>
@@ -147,23 +155,32 @@ const Hero = forwardRef((
                 </Row>
               </Link>
             </Box>
-            <Row alignItems='center' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
-              <Box justifyContent={['flex-start', 'flex-start', 'flex-end']}>
+            <Row
+              alignItems='center'
+              justifyContent={{ mobile: 'flex-start', tablet: 'flex-start', desktop: 'flex-end' }}
+            >
+              <Box
+                justifyContent={{ mobile: 'flex-start', tablet: 'flex-start', desktop: 'flex-end' }}
+              >
                 <Link href={`tel:${phone}`}>
                   <Text color='white' fontWeight='medium'>
                     {phone}
                   </Text>
                 </Link>
               </Box>
-              <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
+              <Layout
+                flexBasis={{ mobile: 0, tablet: 0, desktop: 32 }}
+                flexShrink={0}
+                flexGrow={{ mobile: 1, tablet: 1, desktop: 0 }}
+              />
               <Box width={96} justifyContent='flex-end'>
                 <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} />
               </Box>
             </Row>
           </Box>
-          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
+          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 30 }} flexShrink={0} />
         </Column>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
       </Box>
     </>
   )
