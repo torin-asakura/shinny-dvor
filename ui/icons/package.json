@@ -11,7 +11,7 @@
     "generate-icons": "generate-icons src/ -i ./icons -r replacements.ts"
   },
   "devDependencies": {
-    "@atls-ui-generators/icons": "0.0.16",
+    "@atls-ui-generators/icons": "1.0.4",
     "@emotion/react": "11.13.0",
     "@emotion/styled": "11.13.0",
     "@types/react": "^18.3.3",
