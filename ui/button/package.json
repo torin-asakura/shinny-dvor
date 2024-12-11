@@ -11,12 +11,11 @@
     "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
   },
   "dependencies": {
-    "@atls-ui-generators/button": "0.0.22",
-    "@atls-ui-parts/button": "0.1.1",
-    "@atls-ui-parts/styles": "0.1.1",
-    "@ui/condition": "workspace:0.0.1",
+    "@atls-ui-generators/button": "1.0.2",
+    "@atls-ui-parts/button": "1.0.2",
+    "@ui/condition": "workspace:*",
     "@ui/theme": "workspace:*",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.13.0",
