@@ -9661,27 +9661,12 @@ __metadata:
   resolution: "@ui/link@workspace:ui/link"
   dependencies:
     "@atls-ui-parts/link": "npm:1.0.2"
-    "@emotion/css": "npm:11.13.0"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/progress-bar": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/theme": "workspace:*"
-    next: "npm:14.2.5"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/css": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     next: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
