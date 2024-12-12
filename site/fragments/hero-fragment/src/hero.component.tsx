@@ -21,7 +21,7 @@ import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
-const Hero = forwardRef((
+export const Hero = forwardRef((
   {
     uiData,
     fragmentsData,
@@ -77,12 +77,12 @@ const Hero = forwardRef((
       </Layer>
       <Box
         ref={ref}
-        maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }}
+        maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
         width='100%'
         height='100vh'
         justifyContent='center'
       >
-        <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
+        <Box backgroundColor='$black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock
             width={1440}
             height={800}
@@ -91,17 +91,17 @@ const Hero = forwardRef((
             style={{ opacity: 0.5 }}
           />
         </Box>
-        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={{ mobile: 120, tablet: 120, desktop: 367 }} flexGrow={1} />
+          <Layout flexBasis={{ mobile: '120px', tablet: '120px', desktop: '367px' }} flexGrow={1} />
           <Column
             width='100%'
-            maxWidth={{ mobile: 335, tablet: 335, desktop: 900 }}
-            height={{ mobile: 240, tablet: 240, desktop: 201 }}
+            maxWidth={{ mobile: '335px', tablet: '335px', desktop: '900px' }}
+            height={{ mobile: '240px', tablet: '240px', desktop: '201px' }}
           >
             <Row>
               <Text
-                fontSize={['giant', 'giant', 'extra']}
+                fontSize={{ mobile: '$giant', tablet: '$giant', desktop: '$extra' }}
                 lineHeight='grown'
                 fontWeight='bold'
                 color='white'
@@ -111,7 +111,7 @@ const Hero = forwardRef((
             </Row>
             <Row>
               <Text
-                fontSize={['giant', 'giant', 'extra']}
+                fontSize={{ mobile: '$giant', tablet: '$giant', desktop: '$extra' }}
                 lineHeight='grown'
                 fontWeight='bold'
                 color='white'
@@ -121,8 +121,8 @@ const Hero = forwardRef((
               </Text>
             </Row>
           </Column>
-          <Layout flexBasis={32} flexShrink={0} />
-          <Layout width={{ mobile: '100%', tablet: '100%', desktop: 180 }}>
+          <Layout flexBasis='32px' flexShrink={0} />
+          <Layout width={{ mobile: '100%', tablet: '100%', desktop: '180px' }}>
             <Button
               onClick={() => {
                 screenVar(INITIAL)
@@ -132,9 +132,9 @@ const Hero = forwardRef((
               {CTA}
             </Button>
           </Layout>
-          <Layout flexBasis={{ mobile: 40, tablet: 40, desktop: 48 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '48px' }} flexShrink={0} />
           <Divider backgroundColor='milkGray' />
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 30 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '30px' }} flexShrink={0} />
           <Box width='100%'>
             <Box
               width='100%'
@@ -142,15 +142,15 @@ const Hero = forwardRef((
               alignItems='center'
             >
               <Link href='#services'>
-                <Row width={150}>
+                <Row width='150px'>
                   <Layout>
                     <Text color='white' fontWeight='medium' fontFamily='primary'>
                       {anchor}
                     </Text>
                   </Layout>
-                  <Layout flexBasis={10} flexShrink={0} />
+                  <Layout flexBasis='10px' flexShrink={0} />
                   <Layout>
-                    <ArrowDownIcon width={20} height={20} />
+                    <ArrowDownIcon width='20px' height='20px' />
                   </Layout>
                 </Row>
               </Link>
@@ -169,21 +169,19 @@ const Hero = forwardRef((
                 </Link>
               </Box>
               <Layout
-                flexBasis={{ mobile: 0, tablet: 0, desktop: 32 }}
+                flexBasis={{ mobile: 0, tablet: 0, desktop: '32px' }}
                 flexShrink={0}
-                flexGrow={{ mobile: 1, tablet: 1, desktop: 0 }}
+                flexGrow={{ mobile: '1px', tablet: '1px', desktop: 0 }}
               />
-              <Box width={96} justifyContent='flex-end'>
+              <Box width='96px' justifyContent='flex-end'>
                 <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} />
               </Box>
             </Row>
           </Box>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 30 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '30px' }} flexShrink={0} />
         </Column>
-        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
       </Box>
     </>
   )
 })
-
-export { Hero }

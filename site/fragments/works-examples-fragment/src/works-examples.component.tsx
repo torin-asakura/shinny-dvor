@@ -1,16 +1,15 @@
 /* eslint-disable */
 
+import type { WorksExamplesProps }   from './works-examples.interface.js'
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'
 
-import type { WorksExamplesProps }   from './works-examples.interface.js'
-
+import React                         from 'react'
 import { Children }                  from 'react'
 import { useState }                  from 'react'
 import { forwardRef }                from 'react'
 import { useMemo }                   from 'react'
-import React                         from 'react'
 
 import { Button }                    from '@ui/button'
 import { ArrowLeftIcon }             from '@ui/icons'
@@ -73,32 +72,41 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   )
 
   return (
-    <Box ref={ref} width='100%' height={[609, 609, 976]} backgroundColor='fillGray'>
+    <Box
+      width='100%'
+      height={{ mobile: '609px', tablet: '609px', desktop: '976px' }}
+      // backgroundColor='$fillGray'
+      backgroundColor={{ mobile: '$fillGray', tablet: '$steel', desktop: '$fillGray' }}
+    >
       <Row justifyContent='center' alignItems='center' overflow='hidden'>
-        <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
+        <Layout flexBasis='20px' display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }} />
         <Column width='100%' alignItems='center'>
-          <Layout flexBasis={[20, 20, 100]} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '100px' }} />
           <Layout>
             <Text fontWeight='small' fontSize='giant' lineHeight='grown'>
               {title}
             </Text>
           </Layout>
-          <Layout flexBasis={[8, 8, 16]} />
+          <Layout flexBasis={{ mobile: '8px', tablet: '8px', desktop: '16px' }} />
           <Layout>
             <Text fontWeight='normal' fontSize='normal' color='darkGray'>
               {subTitle}
             </Text>
           </Layout>
-          <Layout flexBasis={[32, 32, 40]} />
-          <Row justifyContent='center' alignItems='center' width={['auto', 'auto', 1440]}>
+          <Layout flexBasis={{ mobile: '32px', tablet: '32px', desktop: '40px' }} />
+          <Row
+            justifyContent='center'
+            alignItems='center'
+            width={{ mobile: 'auto', tablet: 'auto', desktop: '1440px' }}
+          >
             <Slider>
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
             </Slider>
           </Row>
-          <Row maxWidth={200} justifyContent='center'>
-            <Layout width={32} height={32}>
+          <Row maxWidth='200px' justifyContent='center'>
+            <Layout width='32px' height='32px'>
               <Button
                 color='transparent'
                 size='ghost'
@@ -114,7 +122,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
               swiper={controlsSwiper}
               totalItems={sliderChildren.length}
             />
-            <Layout width={32} height={32}>
+            <Layout width='32px' height='32px'>
               <Button
                 color='transparent'
                 size='ghost'
@@ -126,9 +134,9 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
               </Button>
             </Layout>
           </Row>
-          <Layout flexBasis={[80, 80, 100]} />
+          <Layout flexBasis={{ mobile: '80px', tablet: '80px', desktop: '100px' }} />
         </Column>
-        <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
+        <Layout flexBasis='20px' display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }} />
       </Row>
     </Box>
   )

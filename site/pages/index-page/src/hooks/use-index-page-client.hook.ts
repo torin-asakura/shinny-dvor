@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import type { UseIndexPageClientType } from './use-index-page-client.interface.js'
 
 import { useEffect }                   from 'react'

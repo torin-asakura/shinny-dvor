@@ -10,10 +10,10 @@ import { WorkExamplesTabletCarousel } from './work-examples-tablet-carousel/inde
 
 export const WorkExamplesCarousel: FC<PropsWithChildren> = ({ children }) => (
   <>
-    <Layout display={['none', 'flex', 'none']}>
+    <Layout display={{ mobile: 'none', tablet: 'flex', desktop: 'none' }}>
       <WorkExamplesTabletCarousel>{children}</WorkExamplesTabletCarousel>
     </Layout>
-    <Layout display={['flex', 'none', 'none']}>
+    <Layout display={{ mobile: 'flex', tablet: 'none', desktop: 'none' }}>
       <WorkExamplesMobileCarousel>{children}</WorkExamplesMobileCarousel>
     </Layout>
   </>

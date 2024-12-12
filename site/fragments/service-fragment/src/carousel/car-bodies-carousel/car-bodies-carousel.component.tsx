@@ -11,10 +11,10 @@ import { CarBodiesTabletCarousel } from './car-bodies-tablet-carousel/index.js'
 
 export const CarBodiesCarousel: FC<PropsWithChildren> = ({ children }) => (
   <>
-    <Layout display={['none', 'flex', 'none']}>
+    <Layout display={{ mobile: 'none', tablet: 'flex', desktop: 'none' }}>
       <CarBodiesTabletCarousel>{children}</CarBodiesTabletCarousel>
     </Layout>
-    <Box display={['flex', 'none', 'none']} overflow='hidden'>
+    <Box display={{ mobile: 'flex', tablet: 'none', desktop: 'none' }} overflow='hidden'>
       <CarBodiesMobileCarousel>{children}</CarBodiesMobileCarousel>
     </Box>
   </>

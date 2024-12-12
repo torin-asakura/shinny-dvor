@@ -1,25 +1,22 @@
 /* eslint-disable */
 
+import type { ArticlesProps } from './articles.interface.js'
 import type { FC }            from 'react'
 
-import type { ArticlesProps } from './articles.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
 import { Column }             from '@ui/layout'
 import { Layout }             from '@ui/layout'
-import { Link }               from '@ui/link'
 import { Text }               from '@ui/text'
 import { extractFragment }    from '@globals/data'
 import { extractFragments }   from '@globals/data'
 
-import { Carousel }           from './carousel/index.js'
-import { PreviewArticle }     from './preview-article/index.js'
+import { ArticlesCarousel }   from './articles-carousel/index.js'
 
-const Articles: FC<ArticlesProps> = forwardRef((
+export const Articles: FC<ArticlesProps> = forwardRef((
   { postsData, fragmentsData, navigationData },
   ref: any
 ) => {
@@ -37,53 +34,35 @@ const Articles: FC<ArticlesProps> = forwardRef((
     <Box
       ref={ref}
       width='100%'
-      height={[569, 569, 693]}
-      backgroundColor='fillGray'
+      height={{ mobile: '569px', tablet: '569px', desktop: '693px' }}
+      backgroundColor='$fillGray'
       justifyContent='center'
     >
-      <Box width='100%' maxWidth={['100%', '100%', 1440]} justifyContent='space-between'>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
-        <Column fill overflow='hidden'>
-          <Layout flexBasis={[64, 64, 100]} />
+      <Box
+        width='100%'
+        maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
+        justifyContent='space-between'
+      >
+        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
+        <Column overflow='hidden'>
+          <Layout flexBasis={{ mobile: '64px', tablet: '64px', desktop: '100px' }} />
           <Layout>
             <Text
               lineHeight=''
               fontWeight='medium'
-              fontSize={['extraLarge', 'extraLarge', 'giant']}
+              fontSize={{ mobile: 'extraLarge', tablet: 'extraLarge', desktop: 'giant' }}
             >
               {latestPublications}
             </Text>
           </Layout>
-          <Layout flexBasis={[32, 32, 48]} />
+          <Layout flexBasis={{ mobile: '32px', tablet: '32px', desktop: '48px' }} />
           <Row overflow='hidden'>
-            <Carousel>
-              {
-                // @ts-expect-error null | undefined
-                postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
-                  <Link
-                    key={uri}
-                    href={uri}
-                    // @ts-expect-error not assignable
-                    width={['auto', 'auto', '100%']}
-                    path={`${linkBlog.contentAddons.content}/${uri}`}
-                  >
-                    <PreviewArticle
-                      title={title}
-                      date={date}
-                      excerpt={excerpt}
-                      featuredImage={featuredImage}
-                    />
-                  </Link>
-                ))
-              }
-            </Carousel>
+            <ArticlesCarousel postsData={postsData} linkBlog={linkBlog} />
           </Row>
-          <Layout flexBasis={[64, 64, 100]} />
+          <Layout flexBasis={{ mobile: '64px', tablet: '64px', desktop: '100px' }} />
         </Column>
-        <Layout flexBasis={[0, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={{ mobile: 0, tablet: '20px', desktop: '80px' }} flexShrink={0} />
       </Box>
     </Box>
   )
 })
-
-export { Articles }

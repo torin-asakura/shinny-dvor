@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
 
-import type { ContactsInformationProps } from './contacts-information.interface.js'
-
-import { memo }                          from 'react'
 import React                             from 'react'
+import { memo }                          from 'react'
 
 import { Layout }                        from '@ui/layout'
 import { Column }                        from '@ui/layout'
@@ -37,16 +36,16 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
           <Row>
             <Text fontWeight='medium'>{addressTitle}</Text>
           </Row>
-          <Layout flexBasis={8} />
+          <Layout flexBasis='8px' />
           <Row>
             <Text fontWeight='regular'>{address}</Text>
           </Row>
-          <Layout flexBasis={24} />
+          <Layout flexBasis='24px' />
           <Row>
             <Text fontWeight='medium'>{workingHoursTitle}</Text>
           </Row>
-          <Layout flexBasis={8} />
-          <Column height='auto' maxWidth={152}>
+          <Layout flexBasis='8px' />
+          <Column height='auto' maxWidth='152px'>
             <Text fontWeight='regular' lineHeight='medium'>
               {workingHours.split('|n|')[0]}
             </Text>
@@ -54,18 +53,18 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
               {workingHours.split('|n|')[1]}
             </Text>
           </Column>
-          <Layout flexBasis={24} />
+          <Layout flexBasis='24px' />
           <Row>
             <Text fontWeight='medium'>{contactsTitle}</Text>
           </Row>
-          <Layout flexBasis={8} />
+          <Layout flexBasis='8px' />
           <Column height='auto'>
             <Row>
               <Link href={`tel:${telephone}`}>
                 <Text fontWeight='regular'>{telephone}</Text>
               </Link>
             </Row>
-            <Layout flexBasis={10} />
+            <Layout flexBasis='10px' />
             <Row>
               <Link href={`mailto:${email}`}>
                 <Text fontWeight='regular'>{email}</Text>
@@ -74,7 +73,7 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
           </Column>
         </Layout>
       </Column>
-      <Box display={['none', 'none', 'flex']} width={112}>
+      <Box display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }} width='112px'>
         <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
       </Box>
     </Column>
