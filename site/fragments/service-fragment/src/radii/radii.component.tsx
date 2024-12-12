@@ -10,7 +10,7 @@ import { Layout }          from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Radio }           from '@ui/radio'
 
-const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
+export const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
   <Box width='100%' border='grey' borderRadius='little'>
     <Layout flexBasis={[20, 20, 24]} flexShrink={0} />
     <Column fill>
@@ -38,5 +38,3 @@ const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
     <Layout flexBasis={[8, 8, 24]} flexShrink={0} />
   </Box>
 )
-
-export { Radii }

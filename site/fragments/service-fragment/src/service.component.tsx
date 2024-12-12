@@ -1,38 +1,39 @@
 /* eslint-disable */
 
-import type { FC }              from 'react'
+import type { FC }                from 'react'
 
-import type { ServiceProps }    from './service.interface.js'
+import type { ServiceProps }      from './service.interface.js'
 
-import { useEffect }            from 'react'
-import { useState }             from 'react'
-import React                    from 'react'
+import { useEffect }              from 'react'
+import { useState }               from 'react'
+import React                      from 'react'
 
-import { Booking }              from '@fragments/booking-fragment'
-import { Accordion }            from '@ui/accordion'
-import { Button }               from '@ui/button'
-import { Condition }            from '@ui/condition'
-import { Divider }              from '@ui/divider'
-import { Layer }                from '@ui/layer'
-import { Box }                  from '@ui/layout'
-import { Row }                  from '@ui/layout'
-import { Column }               from '@ui/layout'
-import { Layout }               from '@ui/layout'
-import { Switch }               from '@ui/switch'
-import { Item }                 from '@ui/switch'
-import { Ruble }                from '@ui/text'
-import { Space }                from '@ui/text'
-import { Text }                 from '@ui/text'
-import { extractFragment }      from '@globals/data'
-import { serviceVar }           from '@store/services'
+import { Booking }                from '@fragments/booking-fragment'
+import { Accordion }              from '@ui/accordion'
+import { Button }                 from '@ui/button'
+import { Condition }              from '@ui/condition'
+import { Divider }                from '@ui/divider'
+import { Layer }                  from '@ui/layer'
+import { Box }                    from '@ui/layout'
+import { Row }                    from '@ui/layout'
+import { Column }                 from '@ui/layout'
+import { Layout }                 from '@ui/layout'
+import { Switch }                 from '@ui/switch'
+import { Item }                   from '@ui/switch'
+import { Ruble }                  from '@ui/text'
+import { Space }                  from '@ui/text'
+import { Text }                   from '@ui/text'
+import { extractFragment }        from '@globals/data'
+import { serviceVar }             from '@store/services'
 
-import { AdditionalService }    from './additional-service/index.js'
-import { CarBodiesCarousel }    from './carousel/index.js'
-import { WorkExamplesCarousel } from './carousel/index.js'
-import { Radii }                from './radii/index.js'
-import { ReturnButton }         from './return-button/index.js'
-import { WorkExample }          from './work-example/index.js'
-import { carBodyConverter }     from './helpers/index.js'
+import { AdditionalService }      from './additional-service/index.js'
+import { CarBodiesCarousel }      from './carousel/index.js'
+import { WorkExamplesCarousel }   from './carousel/index.js'
+import { Radii }                  from './radii/index.js'
+import { ReturnButton }           from './return-button/index.js'
+import { WorkExample }            from './work-example/index.js'
+import { carBodyConverter }       from './helpers/index.js'
+import { useServiceFragmentHook } from './hooks/use-service-fragment.hook.js'
 
 const Service: FC<ServiceProps> = ({
   servicesData,
@@ -57,17 +58,20 @@ const Service: FC<ServiceProps> = ({
 
   // @ts-expect-error null
   const [onCarBody, setOnCarBody] = useState<string>(carBodies[0])
+  const [carBodyRadii, setCarBodyRadii] = useState<Array<string>>([''])
+  const [selectedRadii, setSelectedRadii] = useState<string>(carBodyRadii[0])
+  const [visible, setVisible] = useState<boolean>(false)
+  const [isAdditionalService, setIsAdditionalService] = useState<boolean>(true)
+
   const carBody = carBodyConverter(onCarBody)
 
-  // @ts-expect-error undefined
-  const availableRadii = Object.entries(price)
-    .filter((item: any) => item[1]?.[carBody] !== null)
-    .map((item) => item[0])
-    .filter((item) => item.length < 4)
-
-  const [visible, setVisible] = useState<boolean>(false)
-  const [radius, setRadius] = useState<string>(availableRadii[0])
-  const [isAdditionalService, setIsAdditionalService] = useState<boolean>(true)
+  useServiceFragmentHook({
+    price,
+    carBody,
+    setCarBodyRadii,
+    setSelectedRadii,
+    onCarBody,
+  })
 
   const { title: goBack } = extractFragment('contentAddons', 'all-services', fragmentsData)
   const { title: signUp } = extractFragment('contentAddons', 'sign-up', fragmentsData)
@@ -94,14 +98,10 @@ const Service: FC<ServiceProps> = ({
     },
   ]
 
-  useEffect(() => {
-    if (!availableRadii.includes(radius)) setRadius(availableRadii[0])
-  }, [onCarBody])
-
   // @ts-expect-error null | undefined
   const defaultPrice = price[Object.keys(price)[1]]?.passenger
   // @ts-expect-error null | undefined
-  const servicePrice = price[radius]?.[carBody]
+  const servicePrice = price[selectedRadii]?.[carBody]
 
   return (
     <>
@@ -201,7 +201,11 @@ const Service: FC<ServiceProps> = ({
               </Box>
               <Layout flexBasis={[24, 24, 0]} />
               <Layout>
-                <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
+                <Radii
+                  items={carBodyRadii}
+                  selectedItem={selectedRadii}
+                  setSelectedItem={setSelectedRadii}
+                />
               </Layout>
               <Layout flexBasis={24} />
             </Condition>
