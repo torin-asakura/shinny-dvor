@@ -9932,27 +9932,11 @@ __metadata:
   resolution: "@ui/tooltip@workspace:ui/tooltip"
   dependencies:
     "@atls-ui-parts/tooltip": "npm:1.0.2"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    framer-motion: "npm:11.3.22"
-    global: "npm:4.4.0"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    react-laag: "npm:2.0.5"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    framer-motion: "*"
-    global: "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: "*"
     react-dom: "*"
-    react-laag: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
