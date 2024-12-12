@@ -1,12 +1,12 @@
-import type { RowProps }          from './row.interface.js'
-import type { FC }                from 'react'
-import type { PropsWithChildren } from 'react'
+import type { ResponsiveContainerProps } from '../responsive-container/index.js'
+import type { FC }                       from 'react'
+import type { PropsWithChildren }        from 'react'
 
-import { Row as BaseRow }         from '@atls-ui-parts/layout'
+import { Row as BaseRow }                from '@atls-ui-parts/layout'
 
-import React                      from 'react'
+import React                             from 'react'
 
-import { rainbowSprinkles }       from './row.css.js'
+import { rainbowSprinkles }              from '../responsive-container/index.js'
 
 export const Row: FC<PropsWithChildren<RowProps>> = ({ children, ...props }) => {
   const { className, style, otherProps } = rainbowSprinkles(props)
