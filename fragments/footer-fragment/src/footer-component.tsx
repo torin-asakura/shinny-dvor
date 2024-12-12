@@ -56,19 +56,19 @@ export const Footer: FC<FooterProps> = memo(({
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
         <Divider backgroundColor='gray' />
-        <Box maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }} width='100%'>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+        <Box maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }} width='100%'>
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
           <Column width='100%'>
-            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 40 }} />
+            <Layout flexBasis={{ mobile: '24px', tablet: '24px', desktop: '40px' }} />
             <Row justifyContent='space-between' alignItems='center'>
               <Box width='100%'>
                 <FooterLogo path={mainPage?.content} />
                 <Box
                   display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-                  width={392}
+                  width='392px'
                   alignItems='center'
                 >
-                  <Layout flexBasis={60} />
+                  <Layout flexBasis='60px' />
                   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
                     {navigationItems.map(({
                       contentAddons: { title, content },
@@ -84,10 +84,10 @@ export const Footer: FC<FooterProps> = memo(({
               </Box>
               <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
             </Row>
-            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 40 }} />
+            <Layout flexBasis={{ mobile: '24px', tablet: '24px', desktop: '40px' }} />
             <Box
-              width={90}
-              height={136}
+              width='90px'
+              height='136px'
               display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
             >
               <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
@@ -107,37 +107,37 @@ export const Footer: FC<FooterProps> = memo(({
               </Box>
             </Box>
           </Column>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
         </Box>
         <Divider backgroundColor='gray' />
         <Box
-          maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }}
+          maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
           alignItems='center'
           width='100%'
         >
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 84 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '84px' }} flexShrink={0} />
           <Column width='100%'>
-            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 32 }} />
+            <Layout flexBasis={{ mobile: '24px', tablet: '24px', desktop: '32px' }} />
             <Row
               justifyContent='space-between'
               alignItems='center'
               display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
             >
               <Box width='50%'>
-                <Column width={287}>
+                <Column width='287px'>
                   <Text fontWeight='medium'>{normalizeString(address)}</Text>
-                  <Layout flexBasis={10} />
+                  <Layout flexBasis='10px' />
                   <Row>
                     <Layout>
                       <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                         {normalizeString(firstPart)}
                       </Text>
                     </Layout>
-                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout flexBasis='12px' flexShrink={0} />
                     <Layout>
                       <Divider direction='vertical' backgroundColor='darkGray' />
                     </Layout>
-                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout flexBasis='12px' flexShrink={0} />
                     <Layout>
                       <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                         {normalizeString(secondPart)}
@@ -145,12 +145,12 @@ export const Footer: FC<FooterProps> = memo(({
                     </Layout>
                   </Row>
                 </Column>
-                <Layout flexBasis={80} />
+                <Layout flexBasis='80px' />
                 <Layout display='flex' flexDirection='column'>
                   <Link href={`tel:${telephone}`}>
                     <Text fontWeight='medium'>{telephone}</Text>
                   </Link>
-                  <Layout flexBasis={8} />
+                  <Layout flexBasis='8px' />
                   <Text fontSize='small' color='darkGray'>
                     {appointmentPhone}
                   </Text>
@@ -176,25 +176,25 @@ export const Footer: FC<FooterProps> = memo(({
               <Layout>
                 <Text fontWeight='medium'>{normalizeString(address)}</Text>
               </Layout>
-              <Layout flexBasis={8} flexShrink={0} />
+              <Layout flexBasis='8px' flexShrink={0} />
               <Row>
                 <Layout>
                   <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                     {normalizeString(firstPart)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={12} flexShrink={0} />
+                <Layout flexBasis='12px' flexShrink={0} />
                 <Layout>
                   <Divider direction='vertical' backgroundColor='darkGray' />
                 </Layout>
-                <Layout flexBasis={12} flexShrink={0} />
+                <Layout flexBasis='12px' flexShrink={0} />
                 <Layout>
                   <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
                     {normalizeString(secondPart)}
                   </Text>
                 </Layout>
               </Row>
-              <Layout flexBasis={24} />
+              <Layout flexBasis='24px' />
               <Row alignItems='flex-end' justifyContent='space-between'>
                 <Column>
                   <Layout>
@@ -202,7 +202,7 @@ export const Footer: FC<FooterProps> = memo(({
                       <Text fontWeight='medium'>{telephone}</Text>
                     </Link>
                   </Layout>
-                  <Layout flexBasis={8} flexShrink={0} />
+                  <Layout flexBasis='8px' flexShrink={0} />
                   <Layout>
                     <Text fontSize='small' color='darkGray'>
                       {appointmentPhone}
@@ -223,9 +223,12 @@ export const Footer: FC<FooterProps> = memo(({
                 </Layout>
               </Row>
             </Column>
-            <Layout flexBasis={{ mobile: 24, tablet: 24, desktop: 32 }} flexShrink={0} />
+            <Layout
+              flexBasis={{ mobile: '24px', tablet: '24px', desktop: '32px' }}
+              flexShrink={0}
+            />
           </Column>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
         </Box>
       </Column>
     </Box>

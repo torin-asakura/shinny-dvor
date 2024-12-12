@@ -3,6 +3,7 @@
 import type { Screen }     from '@store/booking'
 
 import { useReactiveVar }  from '@apollo/client'
+
 import React               from 'react'
 
 import { INITIAL }         from '@store/booking'
@@ -24,7 +25,7 @@ import { Initial }         from './initial/index.js'
 import { Invalid }         from './invalid/index.js'
 import { Success }         from './success/index.js'
 
-const Booking = ({
+export const Booking = ({
   setVisible,
   fragmentsData,
   availableRadiiData,
@@ -40,9 +41,9 @@ const Booking = ({
 
   return (
     <Row justifyContent='space-between' height='100%'>
-      <Layout flexBasis={[21, 21, 32]} />
+      <Layout flexBasis={{ mobile: '21px', tablet: '21px', desktop: '32px' }} />
       <Column width='100%' alignItems='center'>
-        <Layout flexBasis={[24, 24, 28]} flexShrink={0} />
+        <Layout flexBasis={{ mobile: '24px', tablet: '24px', desktop: '28px' }} flexShrink={0} />
         <Box width='100%' justifyContent='space-between' alignItems='center'>
           <Layout>
             <Logo path={mainPage.content} />
@@ -50,18 +51,18 @@ const Booking = ({
           <Layout>
             <Button size='normal' color='radius' onClick={() => setVisible(false)}>
               <Box
-                width={46}
-                height={46}
+                width='46px'
+                height='46px'
                 justifyContent='center'
                 alignItems='center'
                 {...hoverProps}
               >
-                <CloseIcon color={hover ? 'white' : 'black'} width={24} height={24} />
+                <CloseIcon color={hover ? 'white' : 'black'} width='24px' height='24px' />
               </Box>
             </Button>
           </Layout>
         </Box>
-        <Box width={['100%', '100%', 720]}>
+        <Box width={{ mobile: '100%', tablet: '100%', desktop: '720px' }}>
           <Condition match={screen === INITIAL}>
             <Initial
               fragmentsData={fragmentsData}
@@ -79,9 +80,7 @@ const Booking = ({
           </Condition>
         </Box>
       </Column>
-      <Layout flexBasis={[21, 21, 32]} />
+      <Layout flexBasis={{ mobile: '21px', tablet: '21px', desktop: '32px' }} />
     </Row>
   )
 }
-
-export { Booking }

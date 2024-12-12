@@ -1,8 +1,7 @@
 /* eslint-disable */
 
-import type { FC }           from 'react'
-
 import type { SuccessProps } from './success.interface.js'
+import type { FC }           from 'react'
 
 import React                 from 'react'
 
@@ -25,17 +24,17 @@ const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
 
   return (
     <Column width='100%'>
-      <Layout flexBasis={[40, 40, 44]} />
+      <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '44px' }} />
       <Layout>
         <Text fontWeight='medium' fontSize='giant'>
           {title}
         </Text>
       </Layout>
-      <Layout flexBasis={24} />
+      <Layout flexBasis='24px' />
       <Layout>
         <Text lineHeight='medium'>{content}</Text>
       </Layout>
-      <Layout flexBasis={32} />
+      <Layout flexBasis='32px' />
       <NextLink path='/'>
         <Box width='100%'>
           <Button
@@ -49,7 +48,7 @@ const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
           </Button>
         </Box>
       </NextLink>
-      <Layout flexBasis={[48, 48, 128]} />
+      <Layout flexBasis={{ mobile: '48px', tablet: '48px', desktop: '128px' }} />
     </Column>
   )
 }

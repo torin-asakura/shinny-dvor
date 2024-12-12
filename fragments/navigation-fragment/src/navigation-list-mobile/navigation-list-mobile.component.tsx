@@ -1,6 +1,5 @@
-import type { FC }                        from 'react'
-
 import type { NavigationListMobileProps } from './navigation-list-mobile.interface.js'
+import type { FC }                        from 'react'
 
 import React                              from 'react'
 
@@ -11,9 +10,13 @@ import { Column }                         from '@ui/layout'
 import { Item }                           from './item/index.js'
 import { getColorBackground }             from '../helpers/index.js'
 
-const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, navigation }) => (
+export const NavigationListMobile: FC<NavigationListMobileProps> = ({
+  scrollY,
+  active,
+  navigation,
+}) => (
   <Box backgroundColor={getColorBackground(active!, scrollY)} style={{ transition: '.2s' }}>
-    <Layout flexBasis={20} flexShrink={0} />
+    <Layout flexBasis='20px' flexShrink={0} />
     <Column fill>
       {navigation.map(({ contentAddons: { title, content } }, index) => (
         <React.Fragment key={title}>
@@ -27,9 +30,7 @@ const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, 
           <Layout flexBasis={navigation.length - 1 !== index ? 24 : 0} />
         </React.Fragment>
       ))}
-      <Layout flexBasis={32} />
+      <Layout flexBasis='32px' />
     </Column>
   </Box>
 )
-
-export { NavigationListMobile }

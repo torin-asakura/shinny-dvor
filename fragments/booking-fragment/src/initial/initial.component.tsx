@@ -1,17 +1,17 @@
 /* eslint-disable */
 
+import type { InitialProps }        from './initial.interface.js'
 import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
-import type { InitialProps }        from './initial.interface.js'
-
 import { useReactiveVar }           from '@apollo/client'
+
+import React                        from 'react'
 import { useCallback }              from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
-import React                        from 'react'
 
 import { INVALID }                  from '@store/booking'
 import { SUCCESS }                  from '@store/booking'
@@ -27,6 +27,7 @@ import { Item }                     from '@ui/switch'
 import { Text }                     from '@ui/text'
 import { extractFragment }          from '@globals/data'
 import { extractFragments }         from '@globals/data'
+// TODO for what?
 import { doNothing }                from '@shared/utils'
 import { screenVar }                from '@store/booking'
 import { serviceVar }               from '@store/services'
@@ -35,7 +36,7 @@ import { RadioList }                from '../radio-list/index.js'
 import { useSubmit }                from '../data/index.js'
 import { submitFormHook }           from './hooks/index.js'
 
-const Initial: FC<InitialProps> = ({
+export const Initial: FC<InitialProps> = ({
   fragmentsData,
   availableRadiiData,
   carBodiesData,
@@ -142,21 +143,21 @@ const Initial: FC<InitialProps> = ({
 
   return (
     <Column width='100%'>
-      <Layout flexBasis={[40, 40, 44]} />
+      <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '44px' }} />
       <Layout>
         <Text fontSize='giant' fontWeight='medium'>
           {signUpTitle}
         </Text>
       </Layout>
-      <Layout flexBasis={32} />
-      <Box width='100%' flexDirection={['column', 'column', 'row']}>
+      <Layout flexBasis='32px' />
+      <Box width='100%' flexDirection={{ mobile: 'column', tablet: 'column', desktop: 'row' }}>
         <Column fill>
           <Layout>
             <Text lineHeight='grown' color='darkGray'>
               {yourName}
             </Text>
           </Layout>
-          <Layout flexBasis={12} />
+          <Layout flexBasis='12px' />
           <Layout>
             <Input
               maxLength={12}
@@ -167,14 +168,14 @@ const Initial: FC<InitialProps> = ({
             />
           </Layout>
         </Column>
-        <Layout flexBasis={32} flexShrink={0} />
+        <Layout flexBasis='32px' flexShrink={0} />
         <Column fill>
           <Layout>
             <Text lineHeight='grown' color='darkGray'>
               {yourPhone}
             </Text>
           </Layout>
-          <Layout flexBasis={12} />
+          <Layout flexBasis='12px' />
           <Layout>
             <Input
               value={phone}
@@ -191,13 +192,13 @@ const Initial: FC<InitialProps> = ({
           </Layout>
         </Column>
       </Box>
-      <Layout flexBasis={32} />
+      <Layout flexBasis='32px' />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {carBodyTitle}
         </Text>
       </Layout>
-      <Layout flexBasis={16} />
+      <Layout flexBasis='16px' />
       <Layout display={['none', 'none', 'flex']}>
         <Switch active={selectedCarBody}>
           {carBodyItems.map((item: string) => (
@@ -207,35 +208,35 @@ const Initial: FC<InitialProps> = ({
           ))}
         </Switch>
       </Layout>
-      <Layout display={['flex', 'flex', 'none']}>
+      <Layout display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}>
         <RadioList
           items={carBodyItems}
           selectedItem={selectedCarBody}
           setSelectedItem={setSelectedCarBody}
-          width={161}
+          width='161px'
         />
       </Layout>
-      <Layout flexBasis={20} />
+      <Layout flexBasis='20px' />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {wheelDiameterTitle}
         </Text>
       </Layout>
-      <Layout flexBasis={16} />
+      <Layout flexBasis='16px' />
       <RadioList
         items={radiiItems}
         selectedItem={selectedRadius}
         setSelectedItem={setSelectedRadius}
         textTransform='uppercase'
-        width={['18%', '8%', '8%']}
+        width={{ mobile: '18%', tablet: '8%', desktop: '8%' }}
       />
-      <Layout flexBasis={20} />
+      <Layout flexBasis='20px' />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {repairTypeTitle}
         </Text>
       </Layout>
-      <Layout flexBasis={12} />
+      <Layout flexBasis='12px' />
       <Select
         items={repairTypeItems}
         value={selectedRepairTypes}
@@ -243,27 +244,31 @@ const Initial: FC<InitialProps> = ({
         setIsOpen={setIsOpen}
         onSelect={setSelectedRepairTypes}
       />
-      <Layout flexBasis={12} />
+      <Layout flexBasis='12px' />
       <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
-      <Layout flexBasis={32} />
+      <Layout flexBasis='32px' />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {commentTitle}
         </Text>
       </Layout>
-      <Layout flexBasis={12} />
+      <Layout flexBasis='12px' />
       <Layout>
         <Input value={comment} placeholder={commentPlaceholder} onChange={setComment} />
       </Layout>
-      <Layout flexBasis={32} />
+      <Layout flexBasis='32px' />
       <Box width='100%'>
         <Button disabled={isFormFilled} onClick={submitForm}>
           {signUpTitle}
         </Button>
       </Box>
-      <Layout flexBasis={[isOpen ? 200 : 48, isOpen ? 200 : 48, isOpen ? 228 : 128]} />
+      <Layout
+        flexBasis={{
+          mobile: isOpen ? '200px' : '48px',
+          tablet: isOpen ? '200px' : '48px',
+          desktop: isOpen ? '228px' : '128px',
+        }}
+      />
     </Column>
   )
 }
-
-export { Initial }

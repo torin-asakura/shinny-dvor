@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './item.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 
@@ -11,9 +10,9 @@ import { Text }           from '@ui/text'
 
 import { getColor }       from '../../helpers/index.js'
 
-const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
+export const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Column>
-    <Layout flexBasis={8} />
+    <Layout flexBasis='8px' />
     <Layout>
       <NextNavLink path={content}>
         <Text
@@ -27,5 +26,3 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
     </Layout>
   </Column>
 )
-
-export { Item }

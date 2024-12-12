@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import type { NavigationProps } from './navigation.interface.js'
 import type { FC }              from 'react'
 
@@ -27,7 +25,7 @@ import { NavigationList }       from './navigation-list/index.js'
 import { getColor }             from './helpers/index.js'
 import { getColorBackground }   from './helpers/index.js'
 
-const Navigation: FC<NavigationProps> = ({
+export const Navigation: FC<NavigationProps> = ({
   active,
   navigationData,
   availableRadiiData,
@@ -69,16 +67,16 @@ const Navigation: FC<NavigationProps> = ({
       <Box
         width='100%'
         zIndex={1000}
-        height={{ mobile: 80, tablet: 80, desktop: 104 }}
+        height={{ mobile: '80px', tablet: '80px', desktop: '104px' }}
         position='fixed'
         justifyContent='center'
         backgroundColor={getColorBackground(active!, scrollY)}
         style={{ transition: '.2s' }}
       >
-        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 32 }} flexShrink={0} />
+        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '32px' }} flexShrink={0} />
         <Box width={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}>
           <Column width='100%'>
-            <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 28 }} />
+            <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '28px' }} />
             <Row justifyContent='space-between'>
               <Box
                 position='relative'
@@ -92,7 +90,7 @@ const Navigation: FC<NavigationProps> = ({
                     setDrawer(!drawer)
                   }}
                 >
-                  <MenuIcon width={24} height={24} color={getColor(active!, scrollY)} />
+                  <MenuIcon width='24px' height='24px' color={getColor(active!, scrollY)} />
                 </Button>
                 <Drawer
                   active={drawer}
@@ -106,7 +104,7 @@ const Navigation: FC<NavigationProps> = ({
                     navigation={navigationIndexItems}
                   />
                 </Drawer>
-                <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 0 }} flexShrink={0} />
+                <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: 0 }} flexShrink={0} />
                 <Layout>
                   <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
                 </Layout>
@@ -116,7 +114,7 @@ const Navigation: FC<NavigationProps> = ({
               </Layout>
               <Box
                 display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-                width={410}
+                width='410px'
                 alignItems='center'
               >
                 <NavigationList
@@ -125,11 +123,11 @@ const Navigation: FC<NavigationProps> = ({
                   navigation={navigationIndexItems}
                 />
               </Box>
-              <Box width={{ mobile: 176, tablet: 176, desktop: 201 }} zIndex={1}>
+              <Box width={{ mobile: '176px', tablet: '176px', desktop: '201px' }} zIndex={1}>
                 <Layout flexGrow={1} />
                 <Box
-                  width={{ mobile: 124, tablet: 124, desktop: 137 }}
-                  height={{ mobile: 40, tablet: 40, desktop: 48 }}
+                  width={{ mobile: '124px', tablet: '124px', desktop: '137px' }}
+                  height={{ mobile: '40px', tablet: '40px', desktop: '48px' }}
                 >
                   <Layout
                     width='100%'
@@ -163,13 +161,11 @@ const Navigation: FC<NavigationProps> = ({
                 </Box>
               </Box>
             </Row>
-            <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 28 }} />
+            <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '28px' }} />
           </Column>
         </Box>
-        <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 32 }} flexShrink={0} />
+        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '32px' }} flexShrink={0} />
       </Box>
     </>
   )
 }
-
-export { Navigation }
