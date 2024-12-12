@@ -1,2 +1,1 @@
-export * from './condition.component.js'
-export * from './condition.interface.js'
+export * from '@atls-ui-parts/condition'
