@@ -302,6 +302,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/image@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-ui-parts/image@npm:1.0.1"
+  dependencies:
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/d17711a71211cecfcd070925a3e8f4771aa99903bd80bc5bbc960eb8362071af361ba8f674c960aa3e9c4b4d9fc5bf19d2fe71194a3b54ce817b2b4d824ad117
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/input@npm:1.0.3":
   version: 1.0.3
   resolution: "@atls-ui-parts/input@npm:1.0.3"
@@ -348,6 +363,20 @@ __metadata:
     react: "*"
     react-dom: "*"
   checksum: 10/e1f7625f3a30b3f4d48ebcd4cae68a9bd93dcea28caf39a98328d44ca80aa648b07420dea91909162494e783ec7736ce4451657bf3cb99afb3de29d5272bacd5
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/next-image@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-ui-parts/next-image@npm:1.0.1"
+  dependencies:
+    clsx: "npm:2.1.1"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/cbf85a037a2e6f6f0e5136609c4a538337ee4b1e45680e26f72b2e5b82dcc576dc93669bc17de5ee815356072c37e8c312c2dacfb56796d66463a46b9425a0f5
   languageName: node
   linkType: hard
 
@@ -9522,18 +9551,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/image@workspace:ui/image"
   dependencies:
-    "@types/react": "npm:18.3.3"
-    "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    next: "npm:14.2.5"
-    react: "npm:18.3.1"
-    react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
+    "@atls-ui-parts/image": "npm:1.0.1"
+    "@atls-ui-parts/next-image": "npm:1.0.1"
   peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     next: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
