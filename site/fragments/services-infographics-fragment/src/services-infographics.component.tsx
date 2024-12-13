@@ -1,18 +1,19 @@
 /* eslint-disable */
 
-import type { ServicesInfographicsProps } from './services-infographic.interface.js'
 import type { FC }                        from 'react'
 // TODO ?
 import type { LegacyRef }                 from 'react'
 
-import React                              from 'react'
+import type { ServicesInfographicsProps } from './services-infographic.interface.js'
+
 import { forwardRef }                     from 'react'
+import React                              from 'react'
 
 import { Box }                            from '@ui/layout'
 import { Wheel }                          from '@ui/wheel'
 import { extractFragment }                from '@globals/data'
 
-export const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
+const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
   { fragmentsData, uiData },
   ref: LegacyRef<HTMLDivElement>
 ) => {
@@ -43,17 +44,15 @@ export const ServicesInfographics: FC<ServicesInfographicsProps> = forwardRef((
     <Box
       ref={ref}
       width='100%'
-      minHeight={{ mobile: 640, tablet: 640, desktop: 800 }}
+      minHeight={[640, 640, 800]}
       justifyContent='center'
       alignItems='center'
     >
-      <Box
-        width={{ mobile: 335, tablet: 335, desktop: 440 }}
-        height={{ mobile: 335, tablet: 335, desktop: 440 }}
-        position='relative'
-      >
+      <Box width={[335, 335, 440]} height={[335, 335, 440]} position='relative'>
         <Wheel titles={titles} wheelImg={wheelImg} />
       </Box>
     </Box>
   )
 })
+
+export { ServicesInfographics }

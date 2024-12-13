@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import React                  from 'react'
+import type { ServicesProps } from './services.interface.js'
+
 import { forwardRef }         from 'react'
+import React                  from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
@@ -19,7 +20,7 @@ import { extractFragment }    from '@globals/data'
 
 import { ServicesList }       from './services-list/index.js'
 
-export const Services: FC<ServicesProps> = forwardRef((
+const Services: FC<ServicesProps> = forwardRef((
   { fragmentsData, availableRadiiData, servicesData },
   ref: any
 ) => {
@@ -32,21 +33,17 @@ export const Services: FC<ServicesProps> = forwardRef((
   return (
     <Box
       ref={ref}
-      maxWidth={{ mobile: '100%', tablet: '100%', desktop: 1440 }}
+      maxWidth={['100%', '100%', 1440]}
       width='100%'
       justifyContent='center'
       id='services'
     >
-      <Column>
-        <Layout flexBasis={{ mobile: 48, tablet: 48, desktop: 120 }} />
+      <Column fill>
+        <Layout flexBasis={[48, 48, 120]} />
         <Row>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Box width='100%' justifyContent='space-between'>
-            <Column
-              display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-              width='100%'
-              maxWidth={{ mobile: 335, tablet: '100%', desktop: 400 }}
-            >
+            <Column display={['none', 'none', 'flex']} width='100%' maxWidth={[335, '100%', 400]}>
               <Layout>
                 <Text fontWeight='medium' fontSize='giant' lineHeight='grown'>
                   {title}
@@ -68,9 +65,9 @@ export const Services: FC<ServicesProps> = forwardRef((
                 </NextLink>
               </Row>
             </Column>
-            <Layout flexBasis={{ mobile: 0, tablet: 0, desktop: 37 }} flexShrink={0} />
+            <Layout flexBasis={[0, 0, 37]} flexShrink={0} />
             <Column width='100%'>
-              <Column width='100%' display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}>
+              <Column width='100%' display={['flex', 'flex', 'none']}>
                 <Layout>
                   <Text fontWeight='medium' fontSize='extraLarge'>
                     {title}
@@ -100,10 +97,12 @@ export const Services: FC<ServicesProps> = forwardRef((
               </Column>
             </Column>
           </Box>
-          <Layout flexBasis={{ mobile: 20, tablet: 20, desktop: 80 }} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Row>
-        <Layout flexBasis={{ mobile: 48, tablet: 48, desktop: 120 }} />
+        <Layout flexBasis={[48, 48, 120]} />
       </Column>
     </Box>
   )
 })
+
+export { Services }

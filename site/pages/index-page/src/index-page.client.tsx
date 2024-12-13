@@ -1,11 +1,12 @@
 'use client'
 
-import type { IndexPageClientProps }  from './index-page.interfaces.js'
 import type { FC }                    from 'react'
 
-import React                          from 'react'
+import type { IndexPageClientProps }  from './index-page.interfaces.js'
+
 import { useRef }                     from 'react'
 import { useState }                   from 'react'
+import React                          from 'react'
 
 import { Footer }                     from '@fragments/footer-fragment'
 import { Navigation }                 from '@fragments/navigation-fragment'
@@ -50,5 +51,54 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplac
 
   const { getObserverOptions } = useIndexPageClient({ isLoaded, setActive, headerRef, setScrollY })
 
-  return <Footer fragmentsData={fragments} contactsData={contacts} />
+  return (
+    <Column ref={headerRef} width='100%' alignItems='center'>
+      <Box width='100%' justifyContent='center'>
+        <Column width='100%' alignItems='center'>
+          <Navigation
+            active={active}
+            navigationData={navigation}
+            availableRadiiData={availableRadii}
+            fragmentsData={fragments}
+            carBodiesData={carBodies}
+            servicesData={services}
+            scrollY={scrollY}
+          />
+          <Hero
+            fragmentsData={fragments}
+            uiData={ui}
+            contactsData={contacts}
+            availableRadiiData={availableRadii}
+            carBodiesData={carBodies}
+            servicesData={services}
+            navigationData={navigation}
+            {...getObserverOptions('hero')}
+          />
+        </Column>
+      </Box>
+      <Services
+        servicesData={services}
+        fragmentsData={fragments}
+        availableRadiiData={availableRadii}
+        {...getObserverOptions('services')}
+      />
+      <Articles
+        postsData={posts}
+        fragmentsData={fragments}
+        navigationData={navigation}
+        {...getObserverOptions('articles')}
+      />
+      <ServicesInfographics
+        uiData={ui}
+        fragmentsData={fragments}
+        {...getObserverOptions('infographics')}
+      />
+      <WorksExamples
+        workResultsData={workResults}
+        fragmentsData={fragments}
+        {...getObserverOptions('works-examples')}
+      />
+      <Footer fragmentsData={fragments} contactsData={contacts} />
+    </Column>
+  )
 }

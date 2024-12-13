@@ -1,5 +1,6 @@
-import type { AdditionalServiceProps } from './additional-service.interface.js'
 import type { FC }                     from 'react'
+
+import type { AdditionalServiceProps } from './additional-service.interface.js'
 
 import React                           from 'react'
 
@@ -11,35 +12,29 @@ import { Text }                        from '@ui/text'
 import { Ruble }                       from '@ui/text'
 import { Space }                       from '@ui/text'
 
-export const AdditionalService: FC<AdditionalServiceProps> = ({
+const AdditionalService: FC<AdditionalServiceProps> = ({
   isAdditionalService,
   setIsAdditionalService,
   additionalservice,
 }) => (
   <Box
     width='100%'
-    height={{ mobile: '88px', tablet: '88px', desktop: '104px' }}
-    backgroundColor='$fillGray'
-    borderRadius='$mini'
+    height={[88, 88, 104]}
+    backgroundColor='fillGray'
+    borderRadius='mini'
     alignItems='center'
   >
-    <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '24px' }} />
+    <Layout flexBasis={[20, 20, 24]} />
     <Checkbox active={isAdditionalService} onCheck={setIsAdditionalService}>
       <Column justifyContent='center'>
         <Layout>
-          <Text
-            fontSize={{ mobile: '$big', tablet: '$big', desktop: '$large' }}
-            fontWeight='$medium'
-          >
+          <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
             {additionalservice.title}
           </Text>
         </Layout>
-        <Layout flexBasis='4px' />
+        <Layout flexBasis={4} />
         <Layout>
-          <Text
-            fontSize={{ mobile: '$big', tablet: '$big', desktop: '$large' }}
-            fontWeight='$medium'
-          >
+          <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
             {additionalservice.price}
             <Space />
             <Ruble />
@@ -47,6 +42,8 @@ export const AdditionalService: FC<AdditionalServiceProps> = ({
         </Layout>
       </Column>
     </Checkbox>
-    <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '24px' }} />
+    <Layout flexBasis={[20, 20, 24]} />
   </Box>
 )
+
+export { AdditionalService }

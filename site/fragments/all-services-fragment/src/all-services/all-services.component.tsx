@@ -1,8 +1,9 @@
 /* eslint-disable */
 
+import type { FC }               from 'react'
+
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
-import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -23,19 +24,16 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
   const services = extractFragments('service-item', 'servicesParams', servicesData)
 
   return (
-    <Box
-      maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
-      marginTop={{ mobile: '80px', tablet: '80px', desktop: '104px' }}
-    >
-      <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
+    <Box maxWidth={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
+      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
-        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '32px' }} />
+        <Layout flexBasis={[20, 20, 32]} />
         <Text fontWeight='bold' fontSize={['giant', 'giant', 'extra']}>
           {title}
         </Text>
-        <Layout flexBasis={{ mobile: '12px', tablet: '12px', desktop: '16px' }} />
-        <Layout flexBasis='32px' />
-        <Row flexWrap='wrap' gap='32px'>
+        <Layout flexBasis={[12, 12, 16]} />
+        <Layout flexBasis={32} />
+        <Row flexWrap='wrap' style={{ gap: 32 }}>
           {services.map(({
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
@@ -60,9 +58,9 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
             </Link>
           ))}
         </Row>
-        <Layout flexBasis={{ mobile: '50px', tablet: '50px', desktop: '80px' }} />
+        <Layout flexBasis={[50, 50, 80]} />
       </Column>
-      <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '48px' }} flexShrink={0} />
+      <Layout flexBasis={[20, 20, 48]} flexShrink={0} />
     </Box>
   )
 }

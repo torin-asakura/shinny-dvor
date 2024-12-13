@@ -11,13 +11,13 @@ import { TabletCarousel }         from './tablet-carousel/index.js'
 
 export const Carousel: FC<PropsWithChildren> = ({ children }) => (
   <>
-    <Layout overflow='hidden' display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}>
+    <Layout overflow='hidden' display={['none', 'none', 'flex']}>
       <DesktopCarousel>{children}</DesktopCarousel>
     </Layout>
-    <Layout display={{ mobile: 'none', tablet: 'flex', desktop: 'none' }}>
+    <Layout display={['none', 'flex', 'none']}>
       <TabletCarousel>{children}</TabletCarousel>
     </Layout>
-    <Layout display={{ mobile: 'flex', tablet: 'none', desktop: 'none' }}>
+    <Layout display={['flex', 'none', 'none']}>
       <MobileCarousel>{children}</MobileCarousel>
     </Layout>
   </>

@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -21,7 +21,7 @@ import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
-export const Hero = forwardRef((
+const Hero = forwardRef((
   {
     uiData,
     fragmentsData,
@@ -77,12 +77,12 @@ export const Hero = forwardRef((
       </Layer>
       <Box
         ref={ref}
-        maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
+        maxWidth={['100%', '100%', 1440]}
         width='100%'
         height='100vh'
         justifyContent='center'
       >
-        <Box backgroundColor='$black' position='absolute' width='100%' height='100vh' zIndex='-1'>
+        <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock
             width={1440}
             height={800}
@@ -91,17 +91,13 @@ export const Hero = forwardRef((
             style={{ opacity: 0.5 }}
           />
         </Box>
-        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         <Column width='100%'>
-          <Layout flexBasis={{ mobile: '120px', tablet: '120px', desktop: '367px' }} flexGrow={1} />
-          <Column
-            width='100%'
-            maxWidth={{ mobile: '335px', tablet: '335px', desktop: '900px' }}
-            height={{ mobile: '240px', tablet: '240px', desktop: '201px' }}
-          >
+          <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
+          <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
             <Row>
               <Text
-                fontSize={{ mobile: '$giant', tablet: '$giant', desktop: '$extra' }}
+                fontSize={['giant', 'giant', 'extra']}
                 lineHeight='grown'
                 fontWeight='bold'
                 color='white'
@@ -111,7 +107,7 @@ export const Hero = forwardRef((
             </Row>
             <Row>
               <Text
-                fontSize={{ mobile: '$giant', tablet: '$giant', desktop: '$extra' }}
+                fontSize={['giant', 'giant', 'extra']}
                 lineHeight='grown'
                 fontWeight='bold'
                 color='white'
@@ -121,8 +117,8 @@ export const Hero = forwardRef((
               </Text>
             </Row>
           </Column>
-          <Layout flexBasis='32px' flexShrink={0} />
-          <Layout width={{ mobile: '100%', tablet: '100%', desktop: '180px' }}>
+          <Layout flexBasis={32} flexShrink={0} />
+          <Layout width={['100%', '100%', '180px']}>
             <Button
               onClick={() => {
                 screenVar(INITIAL)
@@ -132,56 +128,45 @@ export const Hero = forwardRef((
               {CTA}
             </Button>
           </Layout>
-          <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '48px' }} flexShrink={0} />
+          <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
           <Divider backgroundColor='milkGray' />
-          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '30px' }} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
           <Box width='100%'>
-            <Box
-              width='100%'
-              display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-              alignItems='center'
-            >
+            <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
               <Link href='#services'>
-                <Row width='150px'>
+                <Row width={150}>
                   <Layout>
                     <Text color='white' fontWeight='medium' fontFamily='primary'>
                       {anchor}
                     </Text>
                   </Layout>
-                  <Layout flexBasis='10px' flexShrink={0} />
+                  <Layout flexBasis={10} flexShrink={0} />
                   <Layout>
-                    <ArrowDownIcon width='20px' height='20px' />
+                    <ArrowDownIcon width={20} height={20} />
                   </Layout>
                 </Row>
               </Link>
             </Box>
-            <Row
-              alignItems='center'
-              justifyContent={{ mobile: 'flex-start', tablet: 'flex-start', desktop: 'flex-end' }}
-            >
-              <Box
-                justifyContent={{ mobile: 'flex-start', tablet: 'flex-start', desktop: 'flex-end' }}
-              >
+            <Row alignItems='center' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
+              <Box justifyContent={['flex-start', 'flex-start', 'flex-end']}>
                 <Link href={`tel:${phone}`}>
                   <Text color='white' fontWeight='medium'>
                     {phone}
                   </Text>
                 </Link>
               </Box>
-              <Layout
-                flexBasis={{ mobile: 0, tablet: 0, desktop: '32px' }}
-                flexShrink={0}
-                flexGrow={{ mobile: '1px', tablet: '1px', desktop: 0 }}
-              />
-              <Box width='96px' justifyContent='flex-end'>
+              <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
+              <Box width={96} justifyContent='flex-end'>
                 <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} />
               </Box>
             </Row>
           </Box>
-          <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '30px' }} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
         </Column>
-        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '80px' }} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       </Box>
     </>
   )
 })
+
+export { Hero }
