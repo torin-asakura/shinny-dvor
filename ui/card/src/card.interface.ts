@@ -1,4 +1,4 @@
 export interface CardProps {
-  active: boolean
+  opened: boolean
   onClose: () => any
 }
