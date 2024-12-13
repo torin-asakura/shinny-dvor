@@ -1,17 +1,17 @@
 /* eslint-disable */
 
-import type { InitialProps }        from './initial.interface.js'
 import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
-import { useReactiveVar }           from '@apollo/client'
+import type { InitialProps }        from './initial.interface.js'
 
-import React                        from 'react'
+import { useReactiveVar }           from '@apollo/client'
 import { useCallback }              from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
+import React                        from 'react'
 
 import { INVALID }                  from '@store/booking'
 import { SUCCESS }                  from '@store/booking'
@@ -27,7 +27,6 @@ import { Item }                     from '@ui/switch'
 import { Text }                     from '@ui/text'
 import { extractFragment }          from '@globals/data'
 import { extractFragments }         from '@globals/data'
-// TODO for what?
 import { doNothing }                from '@shared/utils'
 import { screenVar }                from '@store/booking'
 import { serviceVar }               from '@store/services'
@@ -36,7 +35,7 @@ import { RadioList }                from '../radio-list/index.js'
 import { useSubmit }                from '../data/index.js'
 import { submitFormHook }           from './hooks/index.js'
 
-export const Initial: FC<InitialProps> = ({
+const Initial: FC<InitialProps> = ({
   fragmentsData,
   availableRadiiData,
   carBodiesData,
@@ -143,21 +142,21 @@ export const Initial: FC<InitialProps> = ({
 
   return (
     <Column width='100%'>
-      <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '44px' }} />
+      <Layout flexBasis={[40, 40, 44]} />
       <Layout>
         <Text fontSize='giant' fontWeight='medium'>
           {signUpTitle}
         </Text>
       </Layout>
-      <Layout flexBasis='32px' />
-      <Box width='100%' flexDirection={{ mobile: 'column', tablet: 'column', desktop: 'row' }}>
+      <Layout flexBasis={32} />
+      <Box width='100%' flexDirection={['column', 'column', 'row']}>
         <Column fill>
           <Layout>
             <Text lineHeight='grown' color='darkGray'>
               {yourName}
             </Text>
           </Layout>
-          <Layout flexBasis='12px' />
+          <Layout flexBasis={12} />
           <Layout>
             <Input
               maxLength={12}
@@ -168,14 +167,14 @@ export const Initial: FC<InitialProps> = ({
             />
           </Layout>
         </Column>
-        <Layout flexBasis='32px' flexShrink={0} />
+        <Layout flexBasis={32} flexShrink={0} />
         <Column fill>
           <Layout>
             <Text lineHeight='grown' color='darkGray'>
               {yourPhone}
             </Text>
           </Layout>
-          <Layout flexBasis='12px' />
+          <Layout flexBasis={12} />
           <Layout>
             <Input
               value={phone}
@@ -192,13 +191,13 @@ export const Initial: FC<InitialProps> = ({
           </Layout>
         </Column>
       </Box>
-      <Layout flexBasis='32px' />
+      <Layout flexBasis={32} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {carBodyTitle}
         </Text>
       </Layout>
-      <Layout flexBasis='16px' />
+      <Layout flexBasis={16} />
       <Layout display={['none', 'none', 'flex']}>
         <Switch active={selectedCarBody}>
           {carBodyItems.map((item: string) => (
@@ -208,35 +207,35 @@ export const Initial: FC<InitialProps> = ({
           ))}
         </Switch>
       </Layout>
-      <Layout display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}>
+      <Layout display={['flex', 'flex', 'none']}>
         <RadioList
           items={carBodyItems}
           selectedItem={selectedCarBody}
           setSelectedItem={setSelectedCarBody}
-          width='161px'
+          width={161}
         />
       </Layout>
-      <Layout flexBasis='20px' />
+      <Layout flexBasis={20} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {wheelDiameterTitle}
         </Text>
       </Layout>
-      <Layout flexBasis='16px' />
+      <Layout flexBasis={16} />
       <RadioList
         items={radiiItems}
         selectedItem={selectedRadius}
         setSelectedItem={setSelectedRadius}
         textTransform='uppercase'
-        width={{ mobile: '18%', tablet: '8%', desktop: '8%' }}
+        width={['18%', '8%', '8%']}
       />
-      <Layout flexBasis='20px' />
+      <Layout flexBasis={20} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {repairTypeTitle}
         </Text>
       </Layout>
-      <Layout flexBasis='12px' />
+      <Layout flexBasis={12} />
       <Select
         items={repairTypeItems}
         value={selectedRepairTypes}
@@ -244,31 +243,27 @@ export const Initial: FC<InitialProps> = ({
         setIsOpen={setIsOpen}
         onSelect={setSelectedRepairTypes}
       />
-      <Layout flexBasis='12px' />
+      <Layout flexBasis={12} />
       <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
-      <Layout flexBasis='32px' />
+      <Layout flexBasis={32} />
       <Layout>
         <Text lineHeight='grown' color='darkGray'>
           {commentTitle}
         </Text>
       </Layout>
-      <Layout flexBasis='12px' />
+      <Layout flexBasis={12} />
       <Layout>
         <Input value={comment} placeholder={commentPlaceholder} onChange={setComment} />
       </Layout>
-      <Layout flexBasis='32px' />
+      <Layout flexBasis={32} />
       <Box width='100%'>
         <Button disabled={isFormFilled} onClick={submitForm}>
           {signUpTitle}
         </Button>
       </Box>
-      <Layout
-        flexBasis={{
-          mobile: isOpen ? '200px' : '48px',
-          tablet: isOpen ? '200px' : '48px',
-          desktop: isOpen ? '228px' : '128px',
-        }}
-      />
+      <Layout flexBasis={[isOpen ? 200 : 48, isOpen ? 200 : 48, isOpen ? 228 : 128]} />
     </Column>
   )
 }
+
+export { Initial }

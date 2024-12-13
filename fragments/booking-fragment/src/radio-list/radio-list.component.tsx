@@ -1,7 +1,8 @@
 /* eslint-disable */
 
-import type { RadioListProps } from './radio-list.interface.js'
 import type { FC }             from 'react'
+
+import type { RadioListProps } from './radio-list.interface.js'
 
 import React                   from 'react'
 

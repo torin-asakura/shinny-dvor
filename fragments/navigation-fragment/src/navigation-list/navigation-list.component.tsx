@@ -1,5 +1,6 @@
-import type { NavigationListProps } from './navigation-list.interface.js'
 import type { FC }                  from 'react'
+
+import type { NavigationListProps } from './navigation-list.interface.js'
 
 import React                        from 'react'
 
@@ -8,7 +9,7 @@ import { Layout }                   from '@ui/layout'
 
 import { Item }                     from './item/index.js'
 
-export const NavigationList: FC<NavigationListProps> = ({ active, scrollY, navigation }) => (
+const NavigationList: FC<NavigationListProps> = ({ active, scrollY, navigation }) => (
   <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
     {navigation.map(({ contentAddons: { title, content } }) => (
       <Layout key={title}>
@@ -17,3 +18,5 @@ export const NavigationList: FC<NavigationListProps> = ({ active, scrollY, navig
     ))}
   </Box>
 )
+
+export { NavigationList }

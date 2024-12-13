@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import React                from 'react'
+import type { FooterProps } from './footer.interface.js'
+
 import { memo }             from 'react'
+import React                from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -55,13 +56,163 @@ export const Footer: FC<FooterProps> = memo(({
   return (
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
-        <Divider backgroundColor='$gray' />
-        <Box
-          height={400}
-          maxWidth={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}
-          backgroundColor={['$gray', '$lightGray', '$steel']}
-          width='100%'
-        ></Box>
+        <Divider backgroundColor='gray' />
+        <Box maxWidth={['100%', '100%', 1440]} width='100%'>
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+          <Column width='100%'>
+            <Layout flexBasis={[24, 24, 40]} />
+            <Row justifyContent='space-between' alignItems='center'>
+              <Box width='100%'>
+                <FooterLogo path={mainPage?.content} />
+                <Box display={['none', 'none', 'flex']} width={392} alignItems='center'>
+                  <Layout flexBasis={60} />
+                  <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
+                    {navigationItems.map(({
+                      contentAddons: { title, content },
+                    }: {
+                      contentAddons: { title: string; content: string }
+                    }) => (
+                      <NextNavLink key={title} path={content}>
+                        <Text fontWeight='medium'>{title}</Text>
+                      </NextNavLink>
+                    ))}
+                  </Box>
+                </Box>
+              </Box>
+              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
+            </Row>
+            <Layout flexBasis={[24, 24, 40]} />
+            <Box width={90} height={136} display={['flex', 'flex', 'none']}>
+              <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
+                {navigationItems.map(({
+                  contentAddons: { title, content },
+                }: {
+                  contentAddons: { title: string; content: string }
+                }) => (
+                  <NextNavLink key={title} path={content}>
+                    <Layout>
+                      <Text color='black' fontWeight='medium'>
+                        {title}
+                      </Text>
+                    </Layout>
+                  </NextNavLink>
+                ))}
+              </Box>
+            </Box>
+          </Column>
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        </Box>
+        <Divider backgroundColor='gray' />
+        <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
+          <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
+          <Column width='100%'>
+            <Layout flexBasis={[24, 24, 32]} />
+            <Row
+              justifyContent='space-between'
+              alignItems='center'
+              display={['none', 'none', 'flex']}
+            >
+              <Box width='50%'>
+                <Column width={287}>
+                  <Text fontWeight='medium'>{normalizeString(address)}</Text>
+                  <Layout flexBasis={10} />
+                  <Row>
+                    <Layout>
+                      <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                        {normalizeString(firstPart)}
+                      </Text>
+                    </Layout>
+                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout>
+                      <Divider direction='vertical' backgroundColor='darkGray' />
+                    </Layout>
+                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout>
+                      <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                        {normalizeString(secondPart)}
+                      </Text>
+                    </Layout>
+                  </Row>
+                </Column>
+                <Layout flexBasis={80} />
+                <Layout display='flex' flexDirection='column'>
+                  <Link href={`tel:${telephone}`}>
+                    <Text fontWeight='medium'>{telephone}</Text>
+                  </Link>
+                  <Layout flexBasis={8} />
+                  <Text fontSize='small' color='darkGray'>
+                    {appointmentPhone}
+                  </Text>
+                </Layout>
+              </Box>
+              <Layout>
+                <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
+                <Space />
+                <Link
+                  href={by.get('link')}
+                  title={normalizeString(by.get('content'))}
+                  target='_blank'
+                  rel='me'
+                >
+                  <Text fontWeight='medium'>{by.get('title')}</Text>
+                </Link>
+              </Layout>
+            </Row>
+            <Column justifyContent='space-between' display={['flex', 'flex', 'none']}>
+              <Layout>
+                <Text fontWeight='medium'>{normalizeString(address)}</Text>
+              </Layout>
+              <Layout flexBasis={8} flexShrink={0} />
+              <Row>
+                <Layout>
+                  <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                    {normalizeString(firstPart)}
+                  </Text>
+                </Layout>
+                <Layout flexBasis={12} flexShrink={0} />
+                <Layout>
+                  <Divider direction='vertical' backgroundColor='darkGray' />
+                </Layout>
+                <Layout flexBasis={12} flexShrink={0} />
+                <Layout>
+                  <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                    {normalizeString(secondPart)}
+                  </Text>
+                </Layout>
+              </Row>
+              <Layout flexBasis={24} />
+              <Row alignItems='flex-end' justifyContent='space-between'>
+                <Column>
+                  <Layout>
+                    <Link href={`tel:${telephone}`}>
+                      <Text fontWeight='medium'>{telephone}</Text>
+                    </Link>
+                  </Layout>
+                  <Layout flexBasis={8} flexShrink={0} />
+                  <Layout>
+                    <Text fontSize='small' color='darkGray'>
+                      {appointmentPhone}
+                    </Text>
+                  </Layout>
+                </Column>
+                <Layout>
+                  <Link
+                    href={by.get('link')}
+                    target='_blank'
+                    rel='me'
+                    title={normalizeString(by.get('content'))}
+                  >
+                    <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
+                    <Space />
+                    <Text fontWeight='medium'>{by.get('title')}</Text>
+                  </Link>
+                </Layout>
+              </Row>
+            </Column>
+            <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
+          </Column>
+          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        </Box>
       </Column>
     </Box>
   )

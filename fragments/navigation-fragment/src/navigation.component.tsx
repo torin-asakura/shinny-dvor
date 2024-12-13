@@ -1,8 +1,11 @@
-import type { NavigationProps } from './navigation.interface.js'
+/* eslint-disable */
+
 import type { FC }              from 'react'
 
-import React                    from 'react'
+import type { NavigationProps } from './navigation.interface.js'
+
 import { useState }             from 'react'
+import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -25,7 +28,7 @@ import { NavigationList }       from './navigation-list/index.js'
 import { getColor }             from './helpers/index.js'
 import { getColorBackground }   from './helpers/index.js'
 
-export const Navigation: FC<NavigationProps> = ({
+const Navigation: FC<NavigationProps> = ({
   active,
   navigationData,
   availableRadiiData,
@@ -67,22 +70,18 @@ export const Navigation: FC<NavigationProps> = ({
       <Box
         width='100%'
         zIndex={1000}
-        height={{ mobile: '80px', tablet: '80px', desktop: '104px' }}
+        height={[80, 80, 104]}
         position='fixed'
         justifyContent='center'
         backgroundColor={getColorBackground(active!, scrollY)}
         style={{ transition: '.2s' }}
       >
-        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '32px' }} flexShrink={0} />
-        <Box width={{ mobile: '100%', tablet: '100%', desktop: '1440px' }}>
+        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Box width={['100%', '100%', '1440px']}>
           <Column width='100%'>
-            <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '28px' }} />
+            <Layout flexBasis={[20, 20, 28]} />
             <Row justifyContent='space-between'>
-              <Box
-                position='relative'
-                alignItems='center'
-                display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
-              >
+              <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
                 <Button
                   size='ghost'
                   color='transparent'
@@ -90,7 +89,7 @@ export const Navigation: FC<NavigationProps> = ({
                     setDrawer(!drawer)
                   }}
                 >
-                  <MenuIcon width='24px' height='24px' color={getColor(active!, scrollY)} />
+                  <MenuIcon width={24} height={24} color={getColor(active!, scrollY)} />
                 </Button>
                 <Drawer
                   active={drawer}
@@ -104,35 +103,25 @@ export const Navigation: FC<NavigationProps> = ({
                     navigation={navigationIndexItems}
                   />
                 </Drawer>
-                <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: 0 }} flexShrink={0} />
+                <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
                 <Layout>
                   <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
                 </Layout>
               </Box>
-              <Layout display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}>
+              <Layout display={['none', 'none', 'flex']}>
                 <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
               </Layout>
-              <Box
-                display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-                width='410px'
-                alignItems='center'
-              >
+              <Box display={['none', 'none', 'flex']} width={410} alignItems='center'>
                 <NavigationList
                   scrollY={scrollY}
                   active={active}
                   navigation={navigationIndexItems}
                 />
               </Box>
-              <Box width={{ mobile: '176px', tablet: '176px', desktop: '201px' }} zIndex={1}>
+              <Box width={[176, 176, 201]} zIndex={1}>
                 <Layout flexGrow={1} />
-                <Box
-                  width={{ mobile: '124px', tablet: '124px', desktop: '137px' }}
-                  height={{ mobile: '40px', tablet: '40px', desktop: '48px' }}
-                >
-                  <Layout
-                    width='100%'
-                    display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
-                  >
+                <Box width={[124, 124, 137]} height={[40, 40, 48]}>
+                  <Layout width='100%' display={['flex', 'flex', 'none']}>
                     <Button
                       size='small'
                       onClick={() => {
@@ -145,10 +134,7 @@ export const Navigation: FC<NavigationProps> = ({
                       </Layout>
                     </Button>
                   </Layout>
-                  <Layout
-                    width='100%'
-                    display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-                  >
+                  <Layout width='100%' display={['none', 'none', 'flex']}>
                     <Button
                       onClick={() => {
                         setVisible(true)
@@ -161,11 +147,13 @@ export const Navigation: FC<NavigationProps> = ({
                 </Box>
               </Box>
             </Row>
-            <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '28px' }} />
+            <Layout flexBasis={[20, 20, 28]} />
           </Column>
         </Box>
-        <Layout flexBasis={{ mobile: '20px', tablet: '20px', desktop: '32px' }} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
       </Box>
     </>
   )
 }
+
+export { Navigation }

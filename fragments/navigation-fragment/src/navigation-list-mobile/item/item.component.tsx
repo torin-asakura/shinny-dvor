@@ -1,5 +1,6 @@
-import type { ItemProps } from './item.interface.js'
 import type { FC }        from 'react'
+
+import type { ItemProps } from './item.interface.js'
 
 import React              from 'react'
 
@@ -9,7 +10,7 @@ import { Text }           from '@ui/text'
 
 import { getColor }       from '../../helpers/index.js'
 
-export const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
+const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Row>
     <NextNavLink path={content}>
       <Text color={Math.abs(scrollY!) < 100 ? getColor(active, scrollY) : ''} fontWeight='medium'>
@@ -18,3 +19,5 @@ export const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
     </NextNavLink>
   </Row>
 )
+
+export { Item }

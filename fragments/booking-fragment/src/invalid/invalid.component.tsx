@@ -1,7 +1,8 @@
 /* eslint-disable */
 
-import type { InvalidProps } from './invalid.interface.js'
 import type { FC }           from 'react'
+
+import type { InvalidProps } from './invalid.interface.js'
 
 import React                 from 'react'
 
@@ -14,7 +15,7 @@ import { Text }              from '@ui/text'
 import { extractFragment }   from '@globals/data'
 import { screenVar }         from '@store/booking'
 
-export const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
+const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
   const { title, content, highlightedtext } = extractFragment(
     'contentAddons',
     'error',
@@ -23,23 +24,25 @@ export const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
 
   return (
     <Column width='100%'>
-      <Layout flexBasis={{ mobile: '40px', tablet: '40px', desktop: '44px' }} />
+      <Layout flexBasis={[40, 40, 44]} />
       <Layout>
         <Text fontWeight='medium' fontSize='giant'>
           {title}
         </Text>
       </Layout>
-      <Layout flexBasis='24px' />
+      <Layout flexBasis={24} />
       <Layout>
         <Text lineHeight='medium'>{content}</Text>
       </Layout>
-      <Layout flexBasis='32px' />
+      <Layout flexBasis={32} />
       <Box width='100%'>
         <Button color='secondary' onClick={() => screenVar(INITIAL)}>
           {highlightedtext}
         </Button>
       </Box>
-      <Layout flexBasis={{ mobile: '48px', tablet: '48px', desktop: '128px' }} />
+      <Layout flexBasis={[48, 48, 128]} />
     </Column>
   )
 }
+
+export { Invalid }
