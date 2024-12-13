@@ -6,19 +6,15 @@ import React              from 'react'
 
 import { FooterLogoIcon } from '@ui/icons'
 import { Box }            from '@ui/layout'
-import { NextLink }       from '@ui/link'
+import { Link }           from '@ui/link'
 
-export const FooterLogo = () => {
-  return <h1>FooterLogo</h1>
-}
-
-// export const FooterLogo: FC<LogoProps> = ({ path }) => (
-//   <NextLink path={path}>
-//     <Box display={['flex', 'flex', 'none']}>
-//       <FooterLogoIcon width={148} height={48} />
-//     </Box>
-//     <Box display={['none', 'none', 'flex']}>
-//       <FooterLogoIcon width={198} height={64} />
-//     </Box>
-//   </NextLink>
-// )
+export const FooterLogo: FC<LogoProps> = ({ path }) => (
+  <Link href={path}>
+    <Box display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}>
+      <FooterLogoIcon width={148} height={48} />
+    </Box>
+    <Box display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}>
+      <FooterLogoIcon width={198} height={64} />
+    </Box>
+  </Link>
+)
