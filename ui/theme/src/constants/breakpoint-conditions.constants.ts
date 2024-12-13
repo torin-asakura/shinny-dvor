@@ -3,3 +3,5 @@ export const BREAKPOINT_CONDITIONS = {
   tablet: { '@media': 'screen and (min-width: 40em)' },
   desktop: { '@media': 'screen and (min-width: 52em)' },
 }
+
+export type BreakpointKey = keyof typeof BREAKPOINT_CONDITIONS

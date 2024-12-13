@@ -1,11 +1,17 @@
-import { BoxProps as BaseBoxProps } from '@atls-ui-parts/layout'
+import type { BreakpointKey } from '@ui/theme'
 
-import { Sprinkles }                from './responsive-container.css.js'
+import { Sprinkles }          from './responsive-container.css.js'
 
-export interface ResponsiveContainerProps
-  extends Omit<Sprinkles, 'backgroundColor' | 'borderRadius'> {
-  fill?: BaseBoxProps['fill']
-  style?: BaseBoxProps['style']
-  backgroundColor: Array<Sprinkles['backgroundColor']> | Sprinkles['backgroundColor']
-  borderRadius: Array<Sprinkles['borderRadius']> | Sprinkles['borderRadius']
+type SprinklesResponseObject = Partial<Record<BreakpointKey, any>>
+
+type SprinklesKey = keyof Sprinkles
+type SprinklesElement = Sprinkles[SprinklesKey]
+
+type SprinklesArrayElement = Exclude<SprinklesElement, SprinklesResponseObject>
+export type SprinklesArray = Array<SprinklesArrayElement>
+
+type SprinklesPropWithArray = SprinklesArray | SprinklesElement
+
+export type ResponsiveContainerProps = Sprinkles & {
+  [K in SprinklesKey]?: SprinklesPropWithArray
 }

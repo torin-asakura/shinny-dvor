@@ -11,7 +11,6 @@ import { rainbowSprinkles }              from '../responsive-container/index.js'
 
 export const Box: FC<PropsWithChildren<ResponsiveContainerProps>> = ({ children, ...props }) => {
   const mappedProps = PropsMapper.sprinklesProps(props)
-  console.log(mappedProps)
   const { className, style, otherProps } = rainbowSprinkles(mappedProps)
   return (
     <BaseBox className={className} style={style} {...otherProps}>
