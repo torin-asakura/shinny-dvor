@@ -4,9 +4,10 @@ import type { UseCarouselOptions }        from '../carousel.interface.js'
 
 import { useAddonNavigation }             from '@atls-ui-parts/carousel'
 import { useCarousel as useCarouselBase } from '@atls-ui-parts/carousel'
+
+import React                              from 'react'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
-import React                              from 'react'
 
 import { Container }                      from '../container/index.js'
 import { Slide }                          from '../slide/index.js'
@@ -29,37 +30,39 @@ export const useCarousel = ({
 
   const items = Children.map(children, (child) => <Slide>{child}</Slide>)
 
-  const { slides, activeSlide, slidesLength, slideToIndex, slideToTwoIndexes, wrapperOptions } =
-    useCarouselBase(containerRef, items, {
-      direction: 'horizontal',
-      slidesPerView,
-      spaceBetween,
-      dragElastic,
-      transitionDuration,
-      swipeThreshold,
-      centered,
-      loop,
-    })
+  // const { slides, activeSlide, slidesLength, slideToIndex, slideToTwoIndexes, wrapperOptions } =
+  //   useCarouselBase(containerRef, items, {
+  //     direction: 'horizontal',
+  //     slidesPerView,
+  //     spaceBetween,
+  //     dragElastic,
+  //     transitionDuration,
+  //     swipeThreshold,
+  //     centered,
+  //     loop,
+  //   })
 
-  const useControls = () =>
-    useAddonNavigation({
-      slidesLength,
-      activeSlide,
-      slideTo: slideToIndex,
-      slideToTwo: slideToTwoIndexes,
-      slidesPerView,
-      centered,
-      loop,
-    })
+  // const useControls = () =>
+  //   useAddonNavigation({
+  //     slidesLength,
+  //     activeSlide,
+  //     slideTo: slideToIndex,
+  //     slideToTwo: slideToTwoIndexes,
+  //     slidesPerView,
+  //     centered,
+  //     loop,
+  //   })
 
-  return {
-    carousel: (
-      <Container ref={containerRef} style={{ height, width }}>
-        <Wrapper ref={wrapperRef} direction='horizontal' {...wrapperOptions}>
-          {slides}
-        </Wrapper>
-      </Container>
-    ),
-    useControls,
-  }
+  return <h1>carousel</h1>
 }
+
+// return {
+//   carousel: (
+//     <Container ref={containerRef} style={{ height, width }}>
+//       <Wrapper ref={wrapperRef} direction='horizontal' {...wrapperOptions}>
+//         {slides}
+//       </Wrapper>
+//     </Container>
+//   ),
+//   useControls,
+// }
