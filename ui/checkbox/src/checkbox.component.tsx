@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { CheckboxProps } from './checkbox.interface.js'
 import type { FC }            from 'react'
 
-import React                  from 'react'
+import type { CheckboxProps } from './checkbox.interface.js'
+
 import { memo }               from 'react'
+import React                  from 'react'
 
 import { CheckIcon }          from '@ui/icons'
 

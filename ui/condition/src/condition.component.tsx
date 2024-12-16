@@ -2,9 +2,9 @@
 
 import type { ConditionProps } from './condition.interface.js'
 
-import React                   from 'react'
 import { AnimatePresence }     from 'framer-motion'
 import { motion }              from 'framer-motion'
+import React                   from 'react'
 
 // TODO use atls condition maybe?
 

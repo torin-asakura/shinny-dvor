@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'

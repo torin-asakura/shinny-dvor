@@ -1,5 +1,6 @@
-import type { RadiiProps } from './radii.interface.js'
 import type { FC }         from 'react'
+
+import type { RadiiProps } from './radii.interface.js'
 
 import React               from 'react'
 

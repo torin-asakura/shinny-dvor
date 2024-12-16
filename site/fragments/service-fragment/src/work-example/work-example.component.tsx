@@ -1,5 +1,6 @@
-import type { WorkExampleProps } from './work-example.interface.js'
 import type { FC }               from 'react'
+
+import type { WorkExampleProps } from './work-example.interface.js'
 
 import React                     from 'react'
 

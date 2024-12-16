@@ -1,7 +1,8 @@
 /* eslint-disable */
 
-import type { SuccessProps } from './success.interface.js'
 import type { FC }           from 'react'
+
+import type { SuccessProps } from './success.interface.js'
 
 import React                 from 'react'
 

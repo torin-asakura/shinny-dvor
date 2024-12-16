@@ -1,5 +1,6 @@
-import type { LogoProps } from './logo.interface.js'
 import type { FC }        from 'react'
+
+import type { LogoProps } from './logo.interface.js'
 
 import React              from 'react'
 

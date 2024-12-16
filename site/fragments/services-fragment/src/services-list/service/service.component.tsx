@@ -1,9 +1,10 @@
-import type { ServiceProps } from './service.interface.js'
 import type { FC }           from 'react'
 
-import React                 from 'react'
+import type { ServiceProps } from './service.interface.js'
+
 import { FormattedMessage }  from 'react-intl'
 import { useRouter }         from 'next/navigation.js'
+import React                 from 'react'
 
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'

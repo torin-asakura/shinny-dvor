@@ -1,5 +1,6 @@
-import type { SocialLinksProps } from './social-links.interface.js'
 import type { FC }               from 'react'
+
+import type { SocialLinksProps } from './social-links.interface.js'
 
 import React                     from 'react'
 

@@ -1,9 +1,10 @@
-import type { ItemProps }   from './item.interface.js'
 import type { FC }          from 'react'
 
-import React                from 'react'
+import type { ItemProps }   from './item.interface.js'
+
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
+import React                from 'react'
 
 import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'

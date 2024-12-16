@@ -1,13 +1,13 @@
 /* eslint-disable */
 
-import type { SelectProps }                from './select.interface.js'
 import type { FC }                         from 'react'
 
-import { useSelect }                       from '@atls-ui-parts/select'
+import type { SelectProps }                from './select.interface.js'
 
-import React                               from 'react'
+import { useSelect }                       from '@atls-ui-parts/select'
 import { useMultipleSelection }            from 'downshift'
 import { useSelect as useDownshiftSelect } from 'downshift'
+import React                               from 'react'
 
 import { DropDownIcon }                    from '@ui/icons'
 import { Layout }                          from '@ui/layout'

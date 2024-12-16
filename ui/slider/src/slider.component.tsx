@@ -1,16 +1,16 @@
 /* eslint-disable */
 
-import type { SliderProps }       from './slider.interface.js'
 import type { PropsWithChildren } from 'react'
 import type { FC }                from 'react'
 
-import { Swiper }                 from '@atls-ui-parts/swiper'
+import type { SliderProps }       from './slider.interface.js'
 
-import React                      from 'react'
+import { Swiper }                 from '@atls-ui-parts/swiper'
 // @ts-ignore
 import { Keyboard }               from 'swiper/modules'
 // @ts-ignore
 import { Navigation }             from 'swiper/modules'
+import React                      from 'react'
 
 export const Slider = () => {
   return <h1>Slider</h1>

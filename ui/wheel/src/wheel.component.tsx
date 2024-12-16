@@ -1,5 +1,6 @@
-import type { WheelProps }     from './wheel.interface.js'
 import type { FC }             from 'react'
+
+import type { WheelProps }     from './wheel.interface.js'
 
 import React                   from 'react'
 

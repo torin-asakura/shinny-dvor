@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { NavigationProps } from './navigation.interface.js'
 import type { FC }              from 'react'
 
-import React                    from 'react'
+import type { NavigationProps } from './navigation.interface.js'
+
 import { useState }             from 'react'
+import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'

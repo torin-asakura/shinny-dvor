@@ -4,10 +4,9 @@ import type { UseCarouselOptions }        from '../carousel.interface.js'
 
 import { useAddonNavigation }             from '@atls-ui-parts/carousel'
 import { useCarousel as useCarouselBase } from '@atls-ui-parts/carousel'
-
-import React                              from 'react'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
+import React                              from 'react'
 
 import { Container }                      from '../container/index.js'
 import { Slide }                          from '../slide/index.js'

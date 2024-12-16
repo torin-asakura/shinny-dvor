@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { AccordionProps } from './accordion.interface.js'
 import type { FC }             from 'react'
 
-import React                   from 'react'
+import type { AccordionProps } from './accordion.interface.js'
+
 import { useState }            from 'react'
+import React                   from 'react'
 
 import { Condition }           from '@ui/condition'
 import { DropDownIcon }        from '@ui/icons'

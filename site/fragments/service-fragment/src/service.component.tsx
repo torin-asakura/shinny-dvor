@@ -1,11 +1,12 @@
 /* eslint-disable */
 
-import type { ServiceProps }    from './service.interface.js'
 import type { FC }              from 'react'
 
-import React                    from 'react'
+import type { ServiceProps }    from './service.interface.js'
+
 import { useEffect }            from 'react'
 import { useState }             from 'react'
+import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { Accordion }            from '@ui/accordion'

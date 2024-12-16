@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
 
-import React                             from 'react'
+import type { ContactsInformationProps } from './contacts-information.interface.js'
+
 import { memo }                          from 'react'
+import React                             from 'react'
 
 import { Layout }                        from '@ui/layout'
 import { Column }                        from '@ui/layout'
