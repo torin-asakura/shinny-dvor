@@ -1,19 +1,19 @@
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 
-import { vars }                   from '@ui/theme'
+import { buttonColorsVars }       from '@ui/theme'
 
 const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -21,15 +21,15 @@ const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseDe
 const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -37,15 +37,15 @@ const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseHo
 const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -53,15 +53,15 @@ const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalsePr
 const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -69,15 +69,15 @@ const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseDi
 const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -85,13 +85,15 @@ const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseDefa
 const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -99,15 +101,15 @@ const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseHove
 const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -115,15 +117,15 @@ const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalsePres
 const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -131,15 +133,15 @@ const appearanceSizeLargeStylePrimaryStateHoverTextTrueIconFalseInverseFalseDisa
 const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -147,13 +149,15 @@ const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseDefa
 const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -161,15 +165,15 @@ const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseHove
 const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -177,15 +181,15 @@ const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalsePres
 const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -193,15 +197,15 @@ const appearanceSizeLargeStylePrimaryStatePressTextTrueIconFalseInverseFalseDisa
 const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -209,15 +213,15 @@ const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseD
 const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -225,15 +229,15 @@ const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseH
 const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -241,15 +245,15 @@ const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseP
 const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -257,15 +261,15 @@ const appearanceSizeLargeStylePrimaryStateDisabledTextTrueIconFalseInverseFalseD
 const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -273,15 +277,15 @@ const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -289,15 +293,15 @@ const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -305,15 +309,15 @@ const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -321,15 +325,15 @@ const appearanceSizeLargeStyleSecondaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -337,15 +341,15 @@ const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseDe
 const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -353,15 +357,15 @@ const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseHo
 const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -369,15 +373,15 @@ const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalsePr
 const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -385,15 +389,15 @@ const appearanceSizeLargeStyleSecondaryStateHoverTextTrueIconFalseInverseFalseDi
 const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -401,15 +405,15 @@ const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseDe
 const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -417,15 +421,15 @@ const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseHo
 const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -433,15 +437,15 @@ const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalsePr
 const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -449,15 +453,15 @@ const appearanceSizeLargeStyleSecondaryStatePressTextTrueIconFalseInverseFalseDi
 const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -465,15 +469,15 @@ const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -481,15 +485,15 @@ const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -497,15 +501,15 @@ const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -513,15 +517,15 @@ const appearanceSizeLargeStyleSecondaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -529,15 +533,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseD
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -545,15 +549,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseH
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -561,15 +565,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseP
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -577,15 +581,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseD
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -593,15 +597,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDef
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -609,15 +613,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseHov
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -625,15 +629,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalsePre
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -641,15 +645,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDis
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -657,15 +661,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseDef
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -673,15 +677,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseHov
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -689,15 +693,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalsePre
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -705,15 +709,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseFalseDis
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -721,15 +725,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -737,15 +741,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -753,15 +757,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -769,15 +773,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.default.border'
       ],
   })
@@ -785,15 +789,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.hover.border'
       ],
   })
@@ -801,15 +805,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -817,15 +821,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -833,15 +837,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconFalseInverseFalse
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.default.border'
       ],
   })
@@ -849,15 +853,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseDe
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.hover.border'
       ],
   })
@@ -865,15 +869,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseHo
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -881,15 +885,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalsePr
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -897,15 +901,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconFalseInverseFalseDi
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.default.border'
       ],
   })
@@ -913,15 +917,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseDe
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.hover.border'
       ],
   })
@@ -929,15 +933,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseHo
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -945,15 +949,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalsePr
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -961,15 +965,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconFalseInverseFalseDi
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.default.border'
       ],
   })
@@ -977,15 +981,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFals
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.hover.border'
       ],
   })
@@ -993,15 +997,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFals
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -1009,15 +1013,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFals
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -1025,15 +1029,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconFalseInverseFals
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -1041,15 +1045,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueDe
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.hover.border'
       ],
   })
@@ -1057,15 +1061,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueHo
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -1073,15 +1077,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTruePr
 const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -1089,15 +1093,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextFalseIconTrueInverseTrueDi
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -1105,13 +1109,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueDefa
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.hover.border'
       ],
   })
@@ -1119,15 +1125,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueHove
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -1135,15 +1141,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTruePres
 const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -1151,15 +1157,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextFalseIconTrueInverseTrueDisa
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -1167,13 +1173,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueDefa
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.hover.border'
       ],
   })
@@ -1181,15 +1189,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueHove
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -1197,15 +1205,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTruePres
 const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -1213,15 +1221,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextFalseIconTrueInverseTrueDisa
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -1229,15 +1237,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueD
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.hover.border'
       ],
   })
@@ -1245,15 +1253,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueH
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -1261,15 +1269,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueP
 const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -1277,15 +1285,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextFalseIconTrueInverseTrueD
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -1293,15 +1301,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueDe
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.hover.border'
       ],
   })
@@ -1309,15 +1317,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueHo
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -1325,15 +1333,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTruePr
 const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -1341,15 +1349,15 @@ const appearanceSizeLargeStyleTertiaryStateDefaultTextTrueIconFalseInverseTrueDi
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -1357,13 +1365,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueDefa
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.hover.border'
       ],
   })
@@ -1371,15 +1381,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueHove
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -1387,15 +1397,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTruePres
 const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -1403,15 +1413,15 @@ const appearanceSizeLargeStyleTertiaryStateHoverTextTrueIconFalseInverseTrueDisa
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -1419,13 +1429,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueDefa
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.hover.border'
       ],
   })
@@ -1433,15 +1445,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueHove
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -1449,15 +1461,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTruePres
 const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -1465,15 +1477,15 @@ const appearanceSizeLargeStyleTertiaryStatePressTextTrueIconFalseInverseTrueDisa
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -1481,15 +1493,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueD
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.hover.border'
       ],
   })
@@ -1497,15 +1509,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueH
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -1513,15 +1525,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueP
 const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -1529,15 +1541,15 @@ const appearanceSizeLargeStyleTertiaryStateDisabledTextTrueIconFalseInverseTrueD
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -1545,13 +1557,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseDefau
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -1559,15 +1573,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseHover
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -1575,15 +1589,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalsePress
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -1591,13 +1605,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconFalseInverseFalseDisab
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -1605,25 +1621,31 @@ const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalseDefault
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -1631,13 +1653,15 @@ const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalsePressed
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -1645,13 +1669,15 @@ const appearanceSizeLargeStyleLinkStateHoverTextTrueIconFalseInverseFalseDisable
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -1659,25 +1685,31 @@ const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalseDefault
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -1685,13 +1717,15 @@ const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalsePressed
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -1699,13 +1733,15 @@ const appearanceSizeLargeStyleLinkStatePressTextTrueIconFalseInverseFalseDisable
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.default.border'
       ],
   })
@@ -1713,25 +1749,31 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalseDefaul
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -1739,15 +1781,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalsePresse
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -1755,49 +1797,63 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseFalseDisabl
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -1805,49 +1861,63 @@ const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseFalseDisabled
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -1855,13 +1925,15 @@ const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseFalseDisabled
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.default.border'
       ],
   })
@@ -1869,25 +1941,31 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrueDefault
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -1895,13 +1973,15 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTruePressed
 const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -1909,111 +1989,143 @@ const appearanceSizeLargeStyleLinkStateDefaultTextTrueIconTrueInverseTrueDisable
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.disabled.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStateHoverTextTrueIconTrueInverseTrue.disabled.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.disabled.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleLinkStatePressTextTrueIconTrueInverseTrue.disabled.border'
+      ],
   })
 
 const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2021,15 +2133,15 @@ const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2037,15 +2149,15 @@ const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2053,15 +2165,15 @@ const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2069,15 +2181,15 @@ const appearanceSizeMediumStyleTertiaryStateDefaultTextTrueIconFalseInverseFalse
 const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2085,15 +2197,15 @@ const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDe
 const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2101,15 +2213,15 @@ const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseHo
 const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2117,15 +2229,15 @@ const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalsePr
 const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2133,15 +2245,15 @@ const appearanceSizeMediumStyleTertiaryStateHoverTextTrueIconFalseInverseFalseDi
 const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2149,15 +2261,15 @@ const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseDe
 const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2165,15 +2277,15 @@ const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseHo
 const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2181,15 +2293,15 @@ const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalsePr
 const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2197,15 +2309,15 @@ const appearanceSizeMediumStyleTertiaryStatePressTextTrueIconFalseInverseFalseDi
 const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2213,15 +2325,15 @@ const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2229,15 +2341,15 @@ const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2245,15 +2357,15 @@ const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2261,15 +2373,15 @@ const appearanceSizeMediumStyleTertiaryStateDisabledTextTrueIconFalseInverseFals
 const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2277,15 +2389,15 @@ const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseD
 const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2293,15 +2405,15 @@ const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseH
 const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2309,15 +2421,15 @@ const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseP
 const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2325,15 +2437,15 @@ const appearanceSizeSmallStyleTertiaryStateDefaultTextFalseIconTrueInverseFalseD
 const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2341,15 +2453,15 @@ const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseDef
 const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2357,15 +2469,15 @@ const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseHov
 const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2373,15 +2485,15 @@ const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalsePre
 const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2389,15 +2501,15 @@ const appearanceSizeSmallStyleTertiaryStateHoverTextFalseIconTrueInverseFalseDis
 const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2405,15 +2517,15 @@ const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseDef
 const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2421,15 +2533,15 @@ const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseHov
 const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2437,15 +2549,15 @@ const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalsePre
 const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2453,15 +2565,15 @@ const appearanceSizeSmallStyleTertiaryStatePressTextFalseIconTrueInverseFalseDis
 const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2469,15 +2581,15 @@ const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse
 const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.hover.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2485,15 +2597,15 @@ const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse
 const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2501,15 +2613,15 @@ const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse
 const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2517,15 +2629,15 @@ const appearanceSizeSmallStyleTertiaryStateDisabledTextFalseIconTrueInverseFalse
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2533,13 +2645,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseDefau
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2547,15 +2661,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseHover
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2563,15 +2677,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalsePress
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2579,15 +2693,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseFalseDisab
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2595,13 +2709,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseDefau
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2609,15 +2725,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseHover
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2625,15 +2741,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalsePress
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2641,13 +2757,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseFalseDisab
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2655,25 +2773,31 @@ const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalseDefault
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2681,13 +2805,15 @@ const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalsePressed
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2695,13 +2821,15 @@ const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseFalseDisable
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2709,25 +2837,31 @@ const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalseDefault
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2735,13 +2869,15 @@ const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalsePressed
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2749,13 +2885,15 @@ const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseFalseDisable
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2763,25 +2901,31 @@ const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalseDefault
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2789,13 +2933,15 @@ const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalsePressed
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2803,13 +2949,15 @@ const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseFalseDisable
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2817,25 +2965,31 @@ const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalseDefault
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2843,13 +2997,15 @@ const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalsePressed
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2857,15 +3013,15 @@ const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseFalseDisable
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.default.border'
       ],
   })
@@ -2873,13 +3029,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseDefa
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.hover.border'
       ],
   })
@@ -2887,15 +3045,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseHove
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.pressed.border'
       ],
   })
@@ -2903,15 +3061,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalsePres
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalse.disabled.border'
       ],
   })
@@ -2919,15 +3077,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseFalseDisa
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.default.border'
       ],
   })
@@ -2935,13 +3093,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseDefa
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.hover.border'
       ],
   })
@@ -2949,15 +3109,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseHove
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalsePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.pressed.border'
       ],
   })
@@ -2965,15 +3125,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalsePres
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalse.disabled.border'
       ],
   })
@@ -2981,13 +3141,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseFalseDisa
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -2995,25 +3157,31 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrueDefaul
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -3021,15 +3189,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTruePresse
 const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -3037,13 +3205,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextFalseIconTrueInverseTrueDisabl
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -3051,25 +3221,31 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrueDefaul
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -3077,15 +3253,15 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTruePresse
 const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -3093,49 +3269,63 @@ const appearanceSizeLargeStyleSizeStateDefaultTextTrueIconFalseInverseTrueDisabl
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -3143,49 +3333,63 @@ const appearanceSizeLargeStyleSizeStateHoverTextFalseIconTrueInverseTrueDisabled
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -3193,49 +3397,63 @@ const appearanceSizeLargeStyleSizeStateHoverTextTrueIconFalseInverseTrueDisabled
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -3243,49 +3461,63 @@ const appearanceSizeLargeStyleSizeStatePressTextFalseIconTrueInverseTrueDisabled
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.default.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.default.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.default.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.default.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.hover.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.hover.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.pressed.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.pressed.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.pressed.border'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.pressed.border'
+      ],
   })
 
 const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.disabled.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.disabled.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
@@ -3293,15 +3525,15 @@ const appearanceSizeLargeStyleSizeStatePressTextTrueIconFalseInverseTrueDisabled
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.default.border'
       ],
   })
@@ -3309,13 +3541,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueDefau
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.hover.border'
       ],
   })
@@ -3323,15 +3557,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueHover
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.pressed.border'
       ],
   })
@@ -3339,15 +3573,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTruePress
 const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrue.disabled.border'
       ],
   })
@@ -3355,15 +3589,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextFalseIconTrueInverseTrueDisab
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrueDefaultStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.default.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.default.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.default.border'
       ],
   })
@@ -3371,13 +3605,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrueDefau
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrueHoverStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors['button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.hover.font'],
+      buttonColorsVars.colors[
+        'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.hover.font'
+      ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.hover.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.hover.border'
       ],
   })
@@ -3385,15 +3621,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrueHover
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTruePressedStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.pressed.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.pressed.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.pressed.border'
       ],
   })
@@ -3401,15 +3637,15 @@ const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTruePress
 const appearanceSizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrueDisabledStyles =
   createAppearanceStyles({
     fontColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.disabled.font'
       ],
     backgroundColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.disabled.background'
       ],
     borderColor:
-      vars.colors[
+      buttonColorsVars.colors[
         'button.sizeLargeStyleSizeStateDisabledTextTrueIconFalseInverseTrue.disabled.border'
       ],
   })
