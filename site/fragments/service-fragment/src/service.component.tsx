@@ -1,12 +1,11 @@
 /* eslint-disable */
 
+import type { ServiceProps }    from './service.interface.js'
 import type { FC }              from 'react'
 
-import type { ServiceProps }    from './service.interface.js'
-
+import React                    from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
-import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { Accordion }            from '@ui/accordion'
@@ -134,9 +133,9 @@ const Service: FC<ServiceProps> = ({
             <Layout flexBasis={32} />
             <Layout>
               <Text
-                fontWeight='medium'
-                fontSize={['extraLarge', 'extraLarge', 'giant']}
-                lineHeight='grown'
+                fontWeight='$medium'
+                fontSize={['$extraLarge', '$extraLarge', '$giant']}
+                lineHeight='$grown'
                 display='inline'
               >
                 {serviceName}
@@ -187,9 +186,9 @@ const Service: FC<ServiceProps> = ({
                           }}
                         >
                           <Text
-                            color={onCarBody === item ? 'white' : 'black'}
-                            fontWeight='bold'
-                            fontSize='small'
+                            color={onCarBody === item ? '$white' : '$black'}
+                            fontWeight='$bold'
+                            fontSize='$small'
                           >
                             {item}
                           </Text>
@@ -211,7 +210,7 @@ const Service: FC<ServiceProps> = ({
               <Layout flexBasis={24} />
             </Condition>
             <Row>
-              <Text fontSize={['xl', 'giant', 'giant']} fontWeight='medium'>
+              <Text fontSize={['$xl', '$giant', '$giant']} fontWeight='$medium'>
                 {servicePrice !== undefined && servicePrice}
                 <Space />
                 <Ruble />
@@ -221,11 +220,11 @@ const Service: FC<ServiceProps> = ({
                 <Condition match={Boolean(addon)}>
                   <Box
                     height={28}
-                    backgroundColor='lightGray'
+                    backgroundColor='$lightGray'
                     padding='6px 10px'
-                    borderRadius='normal'
+                    borderRadius='$normal'
                   >
-                    <Text color='darkGray'>{addon}</Text>
+                    <Text color='$darkGray'>{addon}</Text>
                   </Box>
                 </Condition>
               </Column>
@@ -238,7 +237,7 @@ const Service: FC<ServiceProps> = ({
                 {
                   // @ts-expect-error null | undefined
                   description.split('|n|').map((item: string) => (
-                    <Text key={item} lineHeight='medium'>
+                    <Text key={item} lineHeight='$medium'>
                       {item}
                     </Text>
                   ))
@@ -254,8 +253,8 @@ const Service: FC<ServiceProps> = ({
                   <Box
                     width='100%'
                     justifyContent='center'
-                    borderRadius='little'
-                    backgroundColor='lightGray'
+                    borderRadius='$little'
+                    backgroundColor='$lightGray'
                   >
                     {workExamplesData?.map(({ image, title, price: cost }, index) => (
                       <React.Fragment key={title}>
@@ -316,7 +315,7 @@ const Service: FC<ServiceProps> = ({
                   serviceVar({ radius, carBody: onCarBody, serviceName })
                 }}
               >
-                <Text fontWeight='medium'>
+                <Text fontWeight='$medium'>
                   {signUp}
                   <Space />
                   {servicePrice !== undefined && servicePrice}

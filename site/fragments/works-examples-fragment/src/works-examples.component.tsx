@@ -1,16 +1,15 @@
 /* eslint-disable */
 
+import type { WorksExamplesProps }   from './works-examples.interface.js'
 import type { SlideProps }           from '@ui/slider'
 import type { FC }                   from 'react'
 import type { Swiper as SwiperCore } from 'swiper'
 
-import type { WorksExamplesProps }   from './works-examples.interface.js'
-
+import React                         from 'react'
 import { Children }                  from 'react'
 import { useState }                  from 'react'
 import { forwardRef }                from 'react'
 import { useMemo }                   from 'react'
-import React                         from 'react'
 
 import { Button }                    from '@ui/button'
 import { ArrowLeftIcon }             from '@ui/icons'
@@ -72,19 +71,20 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
   )
 
   return (
-    <Box ref={ref} width='100%' height={[609, 609, 976]} backgroundColor='fillGray'>
+    <Box ref={ref} width='100%' height={[609, 609, 976]} backgroundColor='$fillGray'>
       <Row justifyContent='center' alignItems='center' overflow='hidden'>
         <Layout flexBasis={20} display={['flex', 'flex', 'none']} />
         <Column width='100%' alignItems='center'>
           <Layout flexBasis={[20, 20, 100]} />
           <Layout>
-            <Text fontWeight='small' fontSize='giant' lineHeight='grown'>
+            {/* TODO check <Text fontWeight='$small' fontSize='$giant' lineHeight='$grown'> */}
+            <Text fontWeight='$normal' fontSize='$giant' lineHeight='$grown'>
               {title}
             </Text>
           </Layout>
           <Layout flexBasis={[8, 8, 16]} />
           <Layout>
-            <Text fontWeight='normal' fontSize='normal' color='darkGray'>
+            <Text fontWeight='$normal' fontSize='$normal' color='$darkGray'>
               {subTitle}
             </Text>
           </Layout>

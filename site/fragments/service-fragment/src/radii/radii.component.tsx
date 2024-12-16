@@ -1,6 +1,5 @@
-import type { FC }         from 'react'
-
 import type { RadiiProps } from './radii.interface.js'
+import type { FC }         from 'react'
 
 import React               from 'react'
 
@@ -11,7 +10,7 @@ import { Row }             from '@ui/layout'
 import { Radio }           from '@ui/radio'
 
 const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
-  <Box width='100%' border='grey' borderRadius='little'>
+  <Box width='100%' border='$grey' borderRadius='$little'>
     <Layout flexBasis={[20, 20, 24]} flexShrink={0} />
     <Column fill>
       <Layout flexBasis={24} />

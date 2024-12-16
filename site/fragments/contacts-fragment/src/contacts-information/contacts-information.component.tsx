@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ContactsInformationProps } from './contacts-information.interface.js'
 import type { FC }                       from 'react'
 
-import type { ContactsInformationProps } from './contacts-information.interface.js'
-
-import { memo }                          from 'react'
 import React                             from 'react'
+import { memo }                          from 'react'
 
 import { Layout }                        from '@ui/layout'
 import { Column }                        from '@ui/layout'
@@ -35,40 +34,40 @@ export const ContactsInformation: FC<ContactsInformationProps> = memo((props) =>
       <Column width='100%'>
         <Layout flexDirection='column'>
           <Row>
-            <Text fontWeight='medium'>{addressTitle}</Text>
+            <Text fontWeight='$medium'>{addressTitle}</Text>
           </Row>
           <Layout flexBasis={8} />
           <Row>
-            <Text fontWeight='regular'>{address}</Text>
+            <Text fontWeight='$normal'>{address}</Text>
           </Row>
           <Layout flexBasis={24} />
           <Row>
-            <Text fontWeight='medium'>{workingHoursTitle}</Text>
+            <Text fontWeight='$medium'>{workingHoursTitle}</Text>
           </Row>
           <Layout flexBasis={8} />
           <Column height='auto' maxWidth={152}>
-            <Text fontWeight='regular' lineHeight='medium'>
+            <Text fontWeight='$normal' lineHeight='$medium'>
               {workingHours.split('|n|')[0]}
             </Text>
-            <Text fontWeight='regular' lineHeight='medium'>
+            <Text fontWeight='$normal' lineHeight='$medium'>
               {workingHours.split('|n|')[1]}
             </Text>
           </Column>
           <Layout flexBasis={24} />
           <Row>
-            <Text fontWeight='medium'>{contactsTitle}</Text>
+            <Text fontWeight='$medium'>{contactsTitle}</Text>
           </Row>
           <Layout flexBasis={8} />
           <Column height='auto'>
             <Row>
               <Link href={`tel:${telephone}`}>
-                <Text fontWeight='regular'>{telephone}</Text>
+                <Text fontWeight='$normal'>{telephone}</Text>
               </Link>
             </Row>
             <Layout flexBasis={10} />
             <Row>
               <Link href={`mailto:${email}`}>
-                <Text fontWeight='regular'>{email}</Text>
+                <Text fontWeight='$normal'>{email}</Text>
               </Link>
             </Row>
           </Column>

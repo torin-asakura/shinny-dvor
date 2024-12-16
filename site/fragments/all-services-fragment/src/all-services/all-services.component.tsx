@@ -1,9 +1,8 @@
 /* eslint-disable */
 
-import type { FC }               from 'react'
-
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -28,7 +27,7 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
       <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />
-        <Text fontWeight='bold' fontSize={['giant', 'giant', 'extra']}>
+        <Text fontWeight='$bold' fontSize={['$giant', '$giant', '$extra']}>
           {title}
         </Text>
         <Layout flexBasis={[12, 12, 16]} />

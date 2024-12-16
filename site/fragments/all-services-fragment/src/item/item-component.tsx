@@ -1,10 +1,9 @@
+import type { ItemProps }   from './item.interface.js'
 import type { FC }          from 'react'
 
-import type { ItemProps }   from './item.interface.js'
-
+import React                from 'react'
 import { FormattedMessage } from 'react-intl'
 import { motion }           from 'framer-motion'
-import React                from 'react'
 
 import { Condition }        from '@ui/condition'
 import { ImageBlock }       from '@ui/image'
@@ -49,7 +48,7 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
             top={16}
             right={0}
           >
-            <Text fontSize='atom' color='primaryBlue'>
+            <Text fontSize='$atom' color='$primaryBlue'>
               <FormattedMessage id='all_services.average_price' defaultMessage='в среднем' />
               <Space />
               {averagePrice}
@@ -67,11 +66,11 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
             <Row>
               <Row width={['100%', '100%', 232]} height={52}>
                 <Text
-                  color={hover ? 'blue' : 'black'}
+                  color={hover ? '$blue' : '$black'}
                   display='inline'
-                  lineHeight='grown'
-                  fontWeight='medium'
-                  fontSize='large'
+                  lineHeight='$grown'
+                  fontWeight='$medium'
+                  fontSize='$large'
                 >
                   {serviceName}
                 </Text>
@@ -80,10 +79,10 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
             <Layout flexBasis={8} />
             <Layout width='100%'>
               <Text
-                color={hover ? 'blue' : 'black'}
-                lineHeight='grown'
-                fontWeight='medium'
-                fontSize='large'
+                color={hover ? '$blue' : '$black'}
+                lineHeight='$grown'
+                fontWeight='$medium'
+                fontSize='$large'
               >
                 {cost}
                 <Space />
@@ -92,7 +91,7 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
               <Layout flexBasis={8} />
               <Condition match={!!addon}>
                 <Box backgroundColor='lightGray' padding='4px 7px' borderRadius='normal'>
-                  <Text lineHeight='grown' color='darkGray' fontSize='atom'>
+                  <Text lineHeight='$grown' color='$darkGray' fontSize='$atom'>
                     {addon}
                   </Text>
                 </Box>

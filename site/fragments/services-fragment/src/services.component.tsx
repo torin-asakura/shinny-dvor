@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import type { ServicesProps } from './services.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
@@ -45,13 +44,13 @@ const Services: FC<ServicesProps> = forwardRef((
           <Box width='100%' justifyContent='space-between'>
             <Column display={['none', 'none', 'flex']} width='100%' maxWidth={[335, '100%', 400]}>
               <Layout>
-                <Text fontWeight='medium' fontSize='giant' lineHeight='grown'>
+                <Text fontWeight='$medium' fontSize='$giant' lineHeight='$grown'>
                   {title}
                 </Text>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
-                <Text lineHeight='grown'>{subTitle}</Text>
+                <Text lineHeight='$grown'>{subTitle}</Text>
                 <Layout flexBasis={24} />
               </Layout>
               <Layout flexBasis={24} />
@@ -69,13 +68,13 @@ const Services: FC<ServicesProps> = forwardRef((
             <Column width='100%'>
               <Column width='100%' display={['flex', 'flex', 'none']}>
                 <Layout>
-                  <Text fontWeight='medium' fontSize='extraLarge'>
+                  <Text fontWeight='$medium' fontSize='$extraLarge'>
                     {title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
-                  <Text lineHeight='grown'>{subTitle}</Text>
+                  <Text lineHeight='$grown'>{subTitle}</Text>
                 </Layout>
                 <Layout flexBasis={24} />
                 <Row>

@@ -1,9 +1,8 @@
+import type { ContactsProps }  from './contacts.interface.js'
 import type { FC }             from 'react'
 
-import type { ContactsProps }  from './contacts.interface.js'
-
-import { memo }                from 'react'
 import React                   from 'react'
+import { memo }                from 'react'
 
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
@@ -27,7 +26,7 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         <Column width='100%'>
           <Layout flexBasis={[20, 20, 32]} />
           <Layout>
-            <Text fontWeight='bold' fontSize='extra'>
+            <Text fontWeight='$bold' fontSize='$extra'>
               {contactsTitle}
             </Text>
           </Layout>

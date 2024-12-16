@@ -1,8 +1,8 @@
 /* eslint-disable */
 
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -97,20 +97,20 @@ const Hero = forwardRef((
           <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
             <Row>
               <Text
-                fontSize={['giant', 'giant', 'extra']}
-                lineHeight='grown'
-                fontWeight='bold'
-                color='white'
+                fontSize={['$giant', '$giant', '$extra']}
+                lineHeight='$grown'
+                fontWeight='$bold'
+                color='$white'
               >
                 {title.get('title')}
               </Text>
             </Row>
             <Row>
               <Text
-                fontSize={['giant', 'giant', 'extra']}
-                lineHeight='grown'
-                fontWeight='bold'
-                color='white'
+                fontSize={['$giant', '$giant', '$extra']}
+                lineHeight='$grown'
+                fontWeight='$bold'
+                color='$white'
                 opacity={0.5}
               >
                 {title.get('highlighted')}
@@ -136,7 +136,7 @@ const Hero = forwardRef((
               <Link href='#services'>
                 <Row width={150}>
                   <Layout>
-                    <Text color='white' fontWeight='medium' fontFamily='primary'>
+                    <Text color='$white' fontWeight='$medium' fontFamily='primary'>
                       {anchor}
                     </Text>
                   </Layout>
@@ -150,7 +150,7 @@ const Hero = forwardRef((
             <Row alignItems='center' justifyContent={['flex-start', 'flex-start', 'flex-end']}>
               <Box justifyContent={['flex-start', 'flex-start', 'flex-end']}>
                 <Link href={`tel:${phone}`}>
-                  <Text color='white' fontWeight='medium'>
+                  <Text color='$white' fontWeight='$medium'>
                     {phone}
                   </Text>
                 </Link>

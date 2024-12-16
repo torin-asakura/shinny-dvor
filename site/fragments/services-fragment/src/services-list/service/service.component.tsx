@@ -1,10 +1,9 @@
+import type { ServiceProps } from './service.interface.js'
 import type { FC }           from 'react'
 
-import type { ServiceProps } from './service.interface.js'
-
+import React                 from 'react'
 import { FormattedMessage }  from 'react-intl'
 import { useRouter }         from 'next/navigation.js'
-import React                 from 'react'
 
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'
@@ -39,9 +38,9 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
               <Text
                 textAlign='start'
                 whiteSpace='normal'
-                fontWeight='medium'
-                fontSize='xl'
-                color={hover ? 'blue' : 'black'}
+                fontWeight='$medium'
+                fontSize='$xl'
+                color={hover ? '$blue' : '$black'}
               >
                 {title}
               </Text>
@@ -55,7 +54,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
                       textAlign='start'
                       whiteSpace='normal'
                       wordWrap='break-word'
-                      lineHeight='medium'
+                      lineHeight='$medium'
                     >
                       {item}
                     </Text>
@@ -68,7 +67,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
             <Condition match={Boolean(hover)}>
               <Button color='secondary' size='normal'>
                 <Row justifyContent='center'>
-                  <Text fontWeight='medium'>
+                  <Text fontWeight='$medium'>
                     <FormattedMessage id='service.by' defaultMessage='от' />
                     <Space />
                     {cost}
