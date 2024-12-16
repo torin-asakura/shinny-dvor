@@ -188,7 +188,7 @@ const Service: FC<ServiceProps> = ({
                         >
                           <Text
                             color={onCarBody === item ? '$white' : '$black'}
-                            fontWeight='$bold'
+                            fontWeight='$semiBold'
                             fontSize='$small'
                           >
                             {item}

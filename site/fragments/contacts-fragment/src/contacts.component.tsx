@@ -27,7 +27,7 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         <Column width='100%'>
           <Layout flexBasis={[20, 20, 32]} />
           <Layout>
-            <Text fontWeight='$bold' fontSize='$extra'>
+            <Text fontWeight='$semiBold' fontSize='$extra'>
               {contactsTitle}
             </Text>
           </Layout>

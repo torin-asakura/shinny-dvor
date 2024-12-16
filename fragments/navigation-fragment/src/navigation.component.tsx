@@ -130,7 +130,7 @@ const Navigation: FC<NavigationProps> = ({
                       }}
                     >
                       <Layout>
-                        <Text fontWeight='$bold'>{signUp?.title}</Text>
+                        <Text fontWeight='$semiBold'>{signUp?.title}</Text>
                       </Layout>
                     </Button>
                   </Layout>
@@ -141,7 +141,7 @@ const Navigation: FC<NavigationProps> = ({
                         screenVar(INITIAL)
                       }}
                     >
-                      <Text fontWeight='$bold'>{signUp?.title}</Text>
+                      <Text fontWeight='$semiBold'>{signUp?.title}</Text>
                     </Button>
                   </Layout>
                 </Box>

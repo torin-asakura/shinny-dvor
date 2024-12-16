@@ -86,17 +86,17 @@ const Slide: FC<SlideProps> = ({
         <Condition match={swiperSlide.isActive}>
           <Row display={['none', 'none', 'flex']}>
             <Layout>
-              <Text fontSize='normal' color='darkGray'>
+              <Text fontSize='$normal' color='$darkGray'>
                 {description}
               </Text>
             </Layout>
             <Layout flexGrow={1} />
             <Layout>
-              <Text fontSize='normal' color='darkGray'>
+              <Text fontSize='$normal' color='$darkGray'>
                 {priceTitle}
               </Text>
               <Space />
-              <Text fontSize='normal' color='black' fontWeight='medium'>
+              <Text fontSize='$normal' color='$black' fontWeight='$medium'>
                 {price}
                 <Space />
                 <Ruble />
@@ -104,11 +104,11 @@ const Slide: FC<SlideProps> = ({
             </Layout>
             <Layout flexBasis={40} />
             <Layout>
-              <Text fontSize='normal' color='darkGray'>
+              <Text fontSize='$normal' color='$darkGray'>
                 {timeTitle}
               </Text>
               <Space />
-              <Text fontSize='normal' color='black' fontWeight='medium'>
+              <Text fontSize='$normal' color='$black' fontWeight='$medium'>
                 {time}
               </Text>
             </Layout>
@@ -117,20 +117,20 @@ const Slide: FC<SlideProps> = ({
         <Layout display={['flex', 'flex', 'none']}>
           <Column fill>
             <Row>
-              <Text lineHeight='grown' fontSize='normal' color='darkGray'>
+              <Text lineHeight='$grown' fontSize='$normal' color='$darkGray'>
                 {description}
               </Text>
             </Row>
             <Layout flexBasis={16} />
-            <Box width='100%' backgroundColor='lightGray' height={1} />
+            <Box width='100%' backgroundColor='$lightGray' height={1} />
             <Layout flexBasis={16} />
             <Row>
               <Layout>
-                <Text fontSize='normal' color='darkGray'>
+                <Text fontSize='$normal' color='$darkGray'>
                   {priceTitle}
                 </Text>
                 <Space />
-                <Text fontSize='normal' color='black' fontWeight='medium'>
+                <Text fontSize='$normal' color='$black' fontWeight='$medium'>
                   {price}
                   <Space />
                   <Ruble />
@@ -138,11 +138,11 @@ const Slide: FC<SlideProps> = ({
               </Layout>
               <Layout flexBasis={40} />
               <Layout width='100%' justifyContent='flex-end'>
-                <Text fontSize='normal' color='darkGray'>
+                <Text fontSize='$normal' color='$darkGray'>
                   {timeTitle}
                 </Text>
                 <Space />
-                <Text fontSize='normal' color='black' fontWeight='medium'>
+                <Text fontSize='$normal' color='$black' fontWeight='$medium'>
                   {time}
                 </Text>
               </Layout>

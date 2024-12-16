@@ -99,7 +99,7 @@ const Hero = forwardRef((
               <Text
                 fontSize={['$giant', '$giant', '$extra']}
                 lineHeight='$grown'
-                fontWeight='$bold'
+                fontWeight='$semiBold'
                 color='$white'
               >
                 {title.get('title')}
@@ -109,7 +109,7 @@ const Hero = forwardRef((
               <Text
                 fontSize={['$giant', '$giant', '$extra']}
                 lineHeight='$grown'
-                fontWeight='$bold'
+                fontWeight='$semiBold'
                 color='$white'
                 opacity={0.5}
               >
