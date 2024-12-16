@@ -5,6 +5,7 @@ const legacy = {
   little: '16px',
   small: '20px',
   default: '24px',
+  big: '50px',
   normal: '2222px',
   leftSide: '4px 0px 0px 4px',
   topSide: '16px 16px 0px 0px',
