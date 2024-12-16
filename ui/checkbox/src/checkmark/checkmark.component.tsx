@@ -1,16 +1,12 @@
-/* eslint-disable */
+import React, {PropsWithChildren} from 'react';
+import {baseStyles, appearanceStyles, shapeStyles} from './checkmark.css.js';
 
-import { createCheckBaseStyles }       from '@atls-ui-parts/checkbox'
-import { createCheckAppearanceStyles } from '@atls-ui-parts/checkbox'
-import { createCheckShapeStyles }      from '@atls-ui-parts/checkbox'
-import styled                          from '@emotion/styled'
+const Checkmark: React.FC<PropsWithChildren> = ({children}) => {
+    return (
+        <div className={`${baseStyles} ${appearanceStyles} ${shapeStyles}`}>
+            {children}
+        </div>
+    );
+};
 
-export const Checkmark = styled.div(
-  createCheckBaseStyles(),
-  createCheckAppearanceStyles({
-    color: 'white',
-  }),
-  createCheckShapeStyles({
-    size: 20,
-  })
-)
+export {Checkmark};

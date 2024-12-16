@@ -9410,27 +9410,21 @@ __metadata:
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
     "@atls-ui-parts/checkbox": "npm:1.0.2"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
-    "@ui/utils": "workspace:*"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/recipes": "npm:0.5.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -9504,7 +9498,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/icons@workspace:*, @ui/icons@workspace:ui/icons":
+"@ui/icons@workspace:*, @ui/icons@workspace:0.0.1, @ui/icons@workspace:ui/icons":
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
@@ -9627,7 +9621,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/layout@workspace:*, @ui/layout@workspace:ui/layout":
+"@ui/layout@workspace:*, @ui/layout@workspace:0.0.1, @ui/layout@workspace:ui/layout":
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
