@@ -1,9 +1,9 @@
-import type { ResponsiveContainerProps } from '../responsive-container/index.js'
 import type { FC }                       from 'react'
 import type { PropsWithChildren }        from 'react'
 
-import { Box as BaseBox }                from '@atls-ui-parts/layout'
+import type { ResponsiveContainerProps } from '../responsive-container/index.js'
 
+import { Box as BaseBox }                from '@atls-ui-parts/layout'
 import React                             from 'react'
 
 import { PropsMapper }                   from '../mappers/props.mapper.js'

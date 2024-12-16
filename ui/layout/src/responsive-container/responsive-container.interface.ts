@@ -5,13 +5,21 @@ import { Sprinkles }          from './responsive-container.css.js'
 type SprinklesResponseObject = Partial<Record<BreakpointKey, any>>
 
 type SprinklesKey = keyof Sprinkles
-type SprinklesElement = Sprinkles[SprinklesKey]
+type SprinklesElement<T extends SprinklesKey> = Sprinkles[T]
 
-type SprinklesArrayElement = Exclude<SprinklesElement, SprinklesResponseObject>
-export type SprinklesArray = Array<SprinklesArrayElement>
+type SprinklesArrayElement<T extends SprinklesKey> = Exclude<
+  SprinklesElement<T>,
+  SprinklesResponseObject
+>
+export type SprinklesArray<T extends SprinklesKey> = Array<SprinklesArrayElement<T>>
 
-type SprinklesPropWithArray = SprinklesArray | SprinklesElement
+type SprinklesPropWithArray<T extends SprinklesKey> = SprinklesArray<T> | SprinklesElement<T>
 
 export type ResponsiveContainerProps = Sprinkles & {
-  [K in SprinklesKey]?: SprinklesPropWithArray
+  [K in SprinklesKey]?: SprinklesPropWithArray<K>
+} & {
+  style?: React.CSSProperties
+  fill?: boolean
+  ref?: React.MutableRefObject<HTMLDivElement | null>
+  className?: string
 }

@@ -22,6 +22,8 @@ const responsiveContainerProperties = defineProperties({
 
     marginTop: true,
     padding: true,
+    paddingTop: true,
+    paddingBottom: true,
     top: true,
     right: true,
 
@@ -38,6 +40,7 @@ const responsiveContainerProperties = defineProperties({
   staticProperties: {
     backgroundColor: vars.colors,
     borderRadius: vars.radii,
+    border: vars.borders,
   },
 })
 
