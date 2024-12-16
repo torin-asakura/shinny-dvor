@@ -1,22 +1,24 @@
-import { style }  from '@vanilla-extract/css'
-import { recipe } from '@vanilla-extract/recipes'
-
-import { vars }   from '@ui/theme'
+import {style} from '@vanilla-extract/css';
+import {recipe} from '@vanilla-extract/recipes';
 
 export const positionStyles = style({
-  margin: '24px',
-})
+    margin: '24px',
+});
 
 export const appearanceStyles = style({
-  color: vars.colors.black,
-})
+    color: 'black',
+});
 
 export const shapeStyles = style({
-  fontSize: vars.fontSizes.large,
-  fontWeight: vars.fontWeights.medium,
-  fontFamily: vars.fonts.primary,
-})
+    fontSize: '22px',
+    fontWeight: '500',
+    fontFamily: 'primary',
+});
 
 export const labelStyles = recipe({
-  base: [positionStyles, appearanceStyles, shapeStyles],
-})
+    base: [
+        positionStyles,
+        appearanceStyles,
+        shapeStyles
+    ],
+});

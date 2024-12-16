@@ -1,13 +1,12 @@
-import { PropsWithChildren } from 'react'
-import { memo }              from 'react'
-import React                 from 'react'
+import React, {PropsWithChildren} from 'react';
+import {labelStyles} from './label.css.js';
 
-import { labelStyles }       from './label.css.js'
+const Label: React.FC<PropsWithChildren> = ({children, ...props}) => {
+    return (
+        <div className={labelStyles()} {...props}>
+            {children}
+        </div>
+    );
+};
 
-const Label = memo(({ children, ...props }: PropsWithChildren) => (
-  <div className={labelStyles()} {...props}>
-    {children}
-  </div>
-))
-
-export { Label }
+export {Label};

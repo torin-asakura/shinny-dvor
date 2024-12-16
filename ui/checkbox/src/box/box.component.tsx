@@ -1,16 +1,14 @@
-import type { BoxProps } from './box.interface.js'
+import React, {PropsWithChildren} from 'react';
+import {box} from './box.css.js';
 
-import { memo }          from 'react'
-import React             from 'react'
+import type {BoxProps} from './box.interface.js';
 
-import { box }           from './box.css.js'
+const Box: React.FC<PropsWithChildren<BoxProps>> = ({checked = false, size = 'medium', children, ...props}) => {
+    return (
+        <div className={box({checked, size})} {...props}>
+            {children}
+        </div>
+    );
+};
 
-const Box = memo(({ checked = false, size = 'medium', children, ...props }: BoxProps) => {
-  return (
-    <div className={box({ checked, size })} {...props}>
-      {children}
-    </div>
-  )
-})
-
-export { Box }
+export {Box};

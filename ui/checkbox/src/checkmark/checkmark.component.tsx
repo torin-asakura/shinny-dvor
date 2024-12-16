@@ -1,13 +1,12 @@
-import { PropsWithChildren } from 'react'
-import { memo }              from 'react'
-import React                 from 'react'
+import React, {PropsWithChildren} from 'react';
+import {baseStyles, appearanceStyles, shapeStyles} from './checkmark.css.js';
 
-import { baseStyles }        from './checkmark.css.js'
-import { appearanceStyles }  from './checkmark.css.js'
-import { shapeStyles }       from './checkmark.css.js'
+const Checkmark: React.FC<PropsWithChildren> = ({children}) => {
+    return (
+        <div className={`${baseStyles} ${appearanceStyles} ${shapeStyles}`}>
+            {children}
+        </div>
+    );
+};
 
-const Checkmark = memo(({ children }: PropsWithChildren) => (
-  <div className={`${baseStyles} ${appearanceStyles} ${shapeStyles}`}>{children}</div>
-))
-
-export { Checkmark }
+export {Checkmark};

@@ -1,41 +1,39 @@
-import { style }  from '@vanilla-extract/css'
-import { recipe } from '@vanilla-extract/recipes'
-
-import { vars }   from '@ui/theme'
+import {style} from '@vanilla-extract/css';
+import {recipe} from '@vanilla-extract/recipes';
 
 export const baseStyle = style({
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: vars.radii.micro,
-})
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4
+});
 
 export const sizeVariants = {
-  medium: style({
-    width: '20px',
-    height: '20px',
-  }),
-}
+    medium: style({
+        width: '20px',
+        height: '20px',
+    })
+};
 
 export const checkedVariants = {
-  true: style({
-    border: vars.borders.blue,
-    backgroundColor: vars.colors.primaryBlue,
-  }),
-  false: style({
-    border: vars.borders.outerspace,
-    backgroundColor: vars.colors.white,
-  }),
-}
+    true: style({
+        border: '1px solid blue',
+        backgroundColor: 'blue',
+    }),
+    false: style({
+        border: '1px solid gray',
+        backgroundColor: 'white',
+    }),
+};
 
 export const box = recipe({
-  base: [baseStyle],
-  variants: {
-    size: sizeVariants,
-    checked: checkedVariants,
-  },
-  defaultVariants: {
-    size: 'medium',
-    checked: false,
-  },
-})
+    base: [baseStyle],
+    variants: {
+        size: sizeVariants,
+        checked: checkedVariants,
+    },
+    defaultVariants: {
+        size: 'medium',
+        checked: false,
+    },
+});

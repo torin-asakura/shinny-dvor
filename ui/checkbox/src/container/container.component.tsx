@@ -1,14 +1,13 @@
-import { memo }           from 'react'
-import React              from 'react'
+import React from 'react';
+import {baseStyles, shapeStyles} from './container.css.js';
+import {ContainerProps} from "./container.interfaces.js";
 
-import { ContainerProps } from './container.interfaces.js'
-import { baseStyles }     from './container.css.js'
-import { shapeStyles }    from './container.css.js'
+const Container: React.FC<ContainerProps> = ({children, onClick}) => {
+    return (
+        <div onClick={onClick} className={`${baseStyles} ${shapeStyles}`}>
+            {children}
+        </div>
+    );
+};
 
-const Container = memo(({ children, onClick }: ContainerProps) => (
-  <div onClick={onClick} className={`${baseStyles} ${shapeStyles}`}>
-    {children}
-  </div>
-))
-
-export { Container }
+export {Container};
