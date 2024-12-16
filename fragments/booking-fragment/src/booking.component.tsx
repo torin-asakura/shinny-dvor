@@ -1,8 +1,7 @@
-/* eslint-disable */
-
 import type { Screen }     from '@store/booking'
 
 import { useReactiveVar }  from '@apollo/client'
+
 import React               from 'react'
 
 import { INITIAL }         from '@store/booking'

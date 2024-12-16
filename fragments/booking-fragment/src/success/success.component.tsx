@@ -1,8 +1,7 @@
 /* eslint-disable */
 
-import type { FC }           from 'react'
-
 import type { SuccessProps } from './success.interface.js'
+import type { FC }           from 'react'
 
 import React                 from 'react'
 
@@ -27,13 +26,13 @@ const Success: FC<SuccessProps> = ({ setVisible, fragmentsData }) => {
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
       <Layout>
-        <Text fontWeight='medium' fontSize='giant'>
+        <Text fontWeight='$medium' fontSize='$giant'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={24} />
       <Layout>
-        <Text lineHeight='medium'>{content}</Text>
+        <Text lineHeight='$medium'>{content}</Text>
       </Layout>
       <Layout flexBasis={32} />
       <NextLink path='/'>

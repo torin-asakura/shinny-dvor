@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { NavigationProps } from './navigation.interface.js'
 import type { FC }              from 'react'
 
-import type { NavigationProps } from './navigation.interface.js'
-
-import { useState }             from 'react'
 import React                    from 'react'
+import { useState }             from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { INITIAL }              from '@store/booking'
@@ -130,7 +129,7 @@ const Navigation: FC<NavigationProps> = ({
                       }}
                     >
                       <Layout>
-                        <Text fontWeight='bold'>{signUp?.title}</Text>
+                        <Text fontWeight='$bold'>{signUp?.title}</Text>
                       </Layout>
                     </Button>
                   </Layout>
@@ -141,7 +140,7 @@ const Navigation: FC<NavigationProps> = ({
                         screenVar(INITIAL)
                       }}
                     >
-                      <Text fontWeight='bold'>{signUp?.title}</Text>
+                      <Text fontWeight='$bold'>{signUp?.title}</Text>
                     </Button>
                   </Layout>
                 </Box>

@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import type { FooterProps } from './footer.interface.js'
-
-import { memo }             from 'react'
 import React                from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -73,7 +72,7 @@ export const Footer: FC<FooterProps> = memo(({
                       contentAddons: { title: string; content: string }
                     }) => (
                       <NextNavLink key={title} path={content}>
-                        <Text fontWeight='medium'>{title}</Text>
+                        <Text fontWeight='$medium'>{title}</Text>
                       </NextNavLink>
                     ))}
                   </Box>
@@ -91,7 +90,7 @@ export const Footer: FC<FooterProps> = memo(({
                 }) => (
                   <NextNavLink key={title} path={content}>
                     <Layout>
-                      <Text color='black' fontWeight='medium'>
+                      <Text color='$black' fontWeight='$medium'>
                         {title}
                       </Text>
                     </Layout>
@@ -102,7 +101,7 @@ export const Footer: FC<FooterProps> = memo(({
           </Column>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Box>
-        <Divider backgroundColor='gray' />
+        <Divider backgroundColor='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
           <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
           <Column width='100%'>
@@ -114,11 +113,11 @@ export const Footer: FC<FooterProps> = memo(({
             >
               <Box width='50%'>
                 <Column width={287}>
-                  <Text fontWeight='medium'>{normalizeString(address)}</Text>
+                  <Text fontWeight='$medium'>{normalizeString(address)}</Text>
                   <Layout flexBasis={10} />
                   <Row>
                     <Layout>
-                      <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                      <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                         {normalizeString(firstPart)}
                       </Text>
                     </Layout>
@@ -128,7 +127,7 @@ export const Footer: FC<FooterProps> = memo(({
                     </Layout>
                     <Layout flexBasis={12} flexShrink={0} />
                     <Layout>
-                      <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                      <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                         {normalizeString(secondPart)}
                       </Text>
                     </Layout>
@@ -137,16 +136,16 @@ export const Footer: FC<FooterProps> = memo(({
                 <Layout flexBasis={80} />
                 <Layout display='flex' flexDirection='column'>
                   <Link href={`tel:${telephone}`}>
-                    <Text fontWeight='medium'>{telephone}</Text>
+                    <Text fontWeight='$medium'>{telephone}</Text>
                   </Link>
                   <Layout flexBasis={8} />
-                  <Text fontSize='small' color='darkGray'>
+                  <Text fontSize='$small' color='$darkGray'>
                     {appointmentPhone}
                   </Text>
                 </Layout>
               </Box>
               <Layout>
-                <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
+                <Text color='$darkGray'>{normalizeString(by.get('content'))}</Text>
                 <Space />
                 <Link
                   href={by.get('link')}
@@ -154,18 +153,18 @@ export const Footer: FC<FooterProps> = memo(({
                   target='_blank'
                   rel='me'
                 >
-                  <Text fontWeight='medium'>{by.get('title')}</Text>
+                  <Text fontWeight='$medium'>{by.get('title')}</Text>
                 </Link>
               </Layout>
             </Row>
             <Column justifyContent='space-between' display={['flex', 'flex', 'none']}>
               <Layout>
-                <Text fontWeight='medium'>{normalizeString(address)}</Text>
+                <Text fontWeight='$medium'>{normalizeString(address)}</Text>
               </Layout>
               <Layout flexBasis={8} flexShrink={0} />
               <Row>
                 <Layout>
-                  <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                  <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                     {normalizeString(firstPart)}
                   </Text>
                 </Layout>
@@ -175,7 +174,7 @@ export const Footer: FC<FooterProps> = memo(({
                 </Layout>
                 <Layout flexBasis={12} flexShrink={0} />
                 <Layout>
-                  <Text whiteSpace='noWrap' fontSize='small' color='darkGray'>
+                  <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                     {normalizeString(secondPart)}
                   </Text>
                 </Layout>
@@ -185,12 +184,12 @@ export const Footer: FC<FooterProps> = memo(({
                 <Column>
                   <Layout>
                     <Link href={`tel:${telephone}`}>
-                      <Text fontWeight='medium'>{telephone}</Text>
+                      <Text fontWeight='$medium'>{telephone}</Text>
                     </Link>
                   </Layout>
                   <Layout flexBasis={8} flexShrink={0} />
                   <Layout>
-                    <Text fontSize='small' color='darkGray'>
+                    <Text fontSize='$small' color='$darkGray'>
                       {appointmentPhone}
                     </Text>
                   </Layout>
@@ -202,9 +201,9 @@ export const Footer: FC<FooterProps> = memo(({
                     rel='me'
                     title={normalizeString(by.get('content'))}
                   >
-                    <Text color='darkGray'>{normalizeString(by.get('content'))}</Text>
+                    <Text color='$darkGray'>{normalizeString(by.get('content'))}</Text>
                     <Space />
-                    <Text fontWeight='medium'>{by.get('title')}</Text>
+                    <Text fontWeight='$medium'>{by.get('title')}</Text>
                   </Link>
                 </Layout>
               </Row>

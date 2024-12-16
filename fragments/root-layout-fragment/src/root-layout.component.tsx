@@ -1,13 +1,14 @@
 import '@ui/theme'
 
-import type { RootLayoutProps }   from './root-layout.interfaces.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
+import type { RootLayoutProps }   from './root-layout.interfaces.js'
+
 import { IBM_Plex_Sans }          from 'next/font/google'
 import { Suspense }               from 'react'
 import { memo }                   from 'react'
+import React                      from 'react'
 
 import { ApolloWrapper }          from '@globals/data/apollo'
 import { Gtag }                   from '@ui/gtag'

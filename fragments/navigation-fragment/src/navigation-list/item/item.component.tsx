@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './item.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 
@@ -19,7 +18,7 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
         <Text
           // @ts-expect-error undefined
           color={Math.abs(scrollY!) < 100 ? getColor(active, scrollY) : ''}
-          fontWeight='medium'
+          fontWeight='$medium'
         >
           {title}
         </Text>

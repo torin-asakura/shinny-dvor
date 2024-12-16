@@ -1,17 +1,17 @@
 /* eslint-disable */
 
+import type { InitialProps }        from './initial.interface.js'
 import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
-import type { InitialProps }        from './initial.interface.js'
-
 import { useReactiveVar }           from '@apollo/client'
+
+import React                        from 'react'
 import { useCallback }              from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
-import React                        from 'react'
 
 import { INVALID }                  from '@store/booking'
 import { SUCCESS }                  from '@store/booking'
@@ -144,7 +144,7 @@ const Initial: FC<InitialProps> = ({
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
       <Layout>
-        <Text fontSize='giant' fontWeight='medium'>
+        <Text fontSize='$giant' fontWeight='$medium'>
           {signUpTitle}
         </Text>
       </Layout>
@@ -152,7 +152,7 @@ const Initial: FC<InitialProps> = ({
       <Box width='100%' flexDirection={['column', 'column', 'row']}>
         <Column fill>
           <Layout>
-            <Text lineHeight='grown' color='darkGray'>
+            <Text lineHeight='$grown' color='$darkGray'>
               {yourName}
             </Text>
           </Layout>
@@ -170,7 +170,7 @@ const Initial: FC<InitialProps> = ({
         <Layout flexBasis={32} flexShrink={0} />
         <Column fill>
           <Layout>
-            <Text lineHeight='grown' color='darkGray'>
+            <Text lineHeight='$grown' color='$darkGray'>
               {yourPhone}
             </Text>
           </Layout>
@@ -193,7 +193,7 @@ const Initial: FC<InitialProps> = ({
       </Box>
       <Layout flexBasis={32} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {carBodyTitle}
         </Text>
       </Layout>
@@ -217,7 +217,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={20} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {wheelDiameterTitle}
         </Text>
       </Layout>
@@ -231,7 +231,7 @@ const Initial: FC<InitialProps> = ({
       />
       <Layout flexBasis={20} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {repairTypeTitle}
         </Text>
       </Layout>
@@ -244,10 +244,10 @@ const Initial: FC<InitialProps> = ({
         onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
-      <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
+      <Divider backgroundColor={selectedRepairTypes.length ? '$primaryBlue' : '$gray'} />
       <Layout flexBasis={32} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {commentTitle}
         </Text>
       </Layout>
