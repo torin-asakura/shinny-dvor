@@ -37,8 +37,8 @@ const Pagination: FC<PaginationProps> = ({ activeItem, totalItems, swiper }) => 
           <TransitionBox
             minWidth={calculatedActiveItem === index ? 22 : 10}
             height={10}
-            backgroundColor={calculatedActiveItem === index ? 'primaryBlue' : 'lightGray'}
-            borderRadius={50}
+            backgroundColor={calculatedActiveItem === index ? '$primaryBlue' : '$lightGray'}
+            borderRadius='$big'
             cursor='pointer'
             onClick={() => {
               handleClick(index)
