@@ -11,7 +11,7 @@
     "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
   },
   "dependencies": {
-    "@atls-ui-generators/button": "0.0.22",
+    "@atls-ui-generators/button": "1.0.2",
     "@atls-ui-parts/button": "1.0.2",
     "@ui/condition": "workspace:*",
     "@ui/theme": "workspace:*",
