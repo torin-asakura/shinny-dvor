@@ -18273,15 +18273,17 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ui/progress-bar", "virtual:0142ddd73e37990b0bcb688bdfad44c69fbc10fb267f215bffc15d60906be1d7c4407677e8ee9303f1f0e30c58699a2eccd72c2dbe1bd272eb67c6a643a4eae8#workspace:ui/progress-bar"],\
           ["@badrap/bar-of-progress", "npm:0.2.2"],\
-          ["@emotion/css", "npm:11.13.0"],\
           ["@types/badrap__bar-of-progress", null],\
-          ["@types/emotion__css", null],\
-          ["@ui/theme", "virtual:a349f1bca18ecda9a2eae8cb50c08356052df43313b1e07fb21dce71deabdebdebd2c5d827a55dc07eca5c4fb83d9a789d4bac4b986d5482840ea859e18955e6#workspace:ui/theme"]\
+          ["@types/vanilla-extract__css", null],\
+          ["@types/vanilla-extract__dynamic", null],\
+          ["@ui/theme", "virtual:a349f1bca18ecda9a2eae8cb50c08356052df43313b1e07fb21dce71deabdebdebd2c5d827a55dc07eca5c4fb83d9a789d4bac4b986d5482840ea859e18955e6#workspace:ui/theme"],\
+          ["@vanilla-extract/css", "npm:1.16.1"],\
+          ["@vanilla-extract/dynamic", "npm:2.1.2"]\
         ],\
         "packagePeers": [\
-          "@emotion/css",\
           "@types/badrap__bar-of-progress",\
-          "@types/emotion__css"\
+          "@types/vanilla-extract__css",\
+          "@types/vanilla-extract__dynamic"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -18290,8 +18292,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ui/progress-bar", "workspace:ui/progress-bar"],\
           ["@badrap/bar-of-progress", "npm:0.2.2"],\
-          ["@emotion/css", "npm:11.13.0"],\
-          ["@ui/theme", "virtual:a349f1bca18ecda9a2eae8cb50c08356052df43313b1e07fb21dce71deabdebdebd2c5d827a55dc07eca5c4fb83d9a789d4bac4b986d5482840ea859e18955e6#workspace:ui/theme"]\
+          ["@ui/theme", "virtual:a349f1bca18ecda9a2eae8cb50c08356052df43313b1e07fb21dce71deabdebdebd2c5d827a55dc07eca5c4fb83d9a789d4bac4b986d5482840ea859e18955e6#workspace:ui/theme"],\
+          ["@vanilla-extract/css", "npm:1.16.1"],\
+          ["@vanilla-extract/dynamic", "npm:2.1.2"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -18857,7 +18860,8 @@ const RAW_RUNTIME_STATE =
           "@types/emotion__react",\
           "@types/emotion__styled",\
           "@types/remove",\
-          "@types/vanilla-extract__css"\
+          "@types/vanilla-extract__css",\
+          "@vanilla-extract/css"\
         ],\
         "linkType": "SOFT"\
       }],\
