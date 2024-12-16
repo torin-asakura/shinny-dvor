@@ -1,12 +1,13 @@
 import type { IconProps } from '../icons.interfaces.js'
 
-import { vars }           from '@ui/theme'
-
-import React              from 'react'
 import { clsx }           from 'clsx'
 import { memo }           from 'react'
+import React              from 'react'
+
+import { vars }           from '@ui/theme'
 
 import { iconSprinkles }  from '../icon.css.js'
+
 export const FacebookIcon = memo((props: IconProps) => {
   const { className, style, otherProps } = iconSprinkles(props)
   return (

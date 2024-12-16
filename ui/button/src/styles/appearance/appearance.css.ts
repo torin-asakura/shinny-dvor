@@ -1,5 +1,6 @@
-import { vars } from '@ui/theme'
 import { createAppearanceStyles } from '@atls-ui-parts/button'
+
+import { vars }                   from '@ui/theme'
 
 const appearanceSizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalseDefaultStyles =
   createAppearanceStyles({
