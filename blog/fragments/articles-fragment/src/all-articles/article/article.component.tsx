@@ -1,9 +1,8 @@
+import type { ArticleProps } from './article.interface.js'
 import type { FC }           from 'react'
 
-import type { ArticleProps } from './article.interface.js'
-
-import { memo }              from 'react'
 import React                 from 'react'
+import { memo }              from 'react'
 
 import { ImageBlock }        from '@ui/image'
 import { Box }               from '@ui/layout'
@@ -36,17 +35,17 @@ const Article: FC<ArticleProps> = memo(({ featuredImage, date, title, excerpt }:
         </Box>
         <Layout flexBasis={24} />
         <Layout>
-          <Text color={hover ? 'blue' : 'black'} lineHeight='grown'>
+          <Text color={hover ? '$blue' : '$black'} lineHeight='$grown'>
             {formattedDate(date)}
           </Text>
         </Layout>
         <Layout flexBasis={8} />
         <Layout>
           <Text
-            color={hover ? 'blue' : 'black'}
-            lineHeight='grown'
-            fontWeight='medium'
-            fontSize='large'
+            color={hover ? '$blue' : '$black'}
+            lineHeight='$grown'
+            fontWeight='$medium'
+            fontSize='$large'
           >
             {title}
           </Text>

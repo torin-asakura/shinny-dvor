@@ -1,14 +1,13 @@
 /* eslint-disable */
 
+import type { ArticleProps }           from './article.interface.js'
 import type { FC }                     from 'react'
 
-import type { ArticleProps }           from './article.interface.js'
-
+import React                           from 'react'
 import { FormattedPlural }             from 'react-intl'
 import { FormattedMessage }            from 'react-intl'
 import { memo }                        from 'react'
 import { useEffect }                   from 'react'
-import React                           from 'react'
 
 import { Divider }                     from '@ui/divider'
 import { ImageBlock }                  from '@ui/image'
@@ -63,14 +62,14 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
             <Box>
               <Column>
                 <Layout>
-                  <Text fontWeight='medium' fontSize='giant' lineHeight='grown' color='white'>
+                  <Text fontWeight='$medium' fontSize='$giant' lineHeight='$grown' color='$white'>
                     {title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={[16, 16, 24]} />
                 <Row>
                   <Layout>
-                    <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
+                    <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
                       {viewCount}
                       <Space />
                       <FormattedPlural
@@ -90,7 +89,7 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
                   </Layout>
                   <Layout flexBasis={24} />
                   <Layout>
-                    <Text fontWeight='medium' color='charcoal' lineHeight='grown'>
+                    <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
                       {formattedDate(date)}
                     </Text>
                   </Layout>
@@ -106,7 +105,7 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
         <Layout flexBasis={20} flexShrink={0} />
         <Column fill maxWidth={['100%', '100%', 843]}>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
-          <Text lineHeight='medium' width='100%'>
+          <Text lineHeight='$medium' width='100%'>
             <Row className='post-page__content-container'>
               <div dangerouslySetInnerHTML={{ __html: content }} />
             </Row>

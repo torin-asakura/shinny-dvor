@@ -1,9 +1,8 @@
+import type { AllArticlesProps } from './all-articles.interface.js'
 import type { FC }               from 'react'
 
-import type { AllArticlesProps } from './all-articles.interface.js'
-
-import { memo }                  from 'react'
 import React                     from 'react'
+import { memo }                  from 'react'
 
 import { Box }                   from '@ui/layout'
 import { Row }                   from '@ui/layout'
@@ -24,7 +23,7 @@ const AllArticles: FC<AllArticlesProps> = memo(({ fragmentsData, postsData }: Al
       <Column width='100%' height='auto'>
         <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
         <Layout>
-          <Text fontWeight='bold' fontSize='extra'>
+          <Text fontWeight='$bold' fontSize='$extra'>
             {titlePage}
           </Text>
         </Layout>
