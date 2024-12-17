@@ -213,6 +213,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/button@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/button@npm:0.1.1"
+  dependencies:
+    "@atls-ui-parts/styles": "npm:0.1.1"
+  peerDependencies:
+    "@emotion/styled": 11.11.0
+    react: 18.2.0
+    styled-system: 5.1.5
+    styled-tools: 1.7.2
+  checksum: 10/d48ffa07e5d136ba3cfdf7e67a5c6ce8ef59b522cddea2211b51f7e10946bc4f7b9e928dd19aaad3d84c2ef4b91b300c3c63bf78045431e6310b65e2157ad14e
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/button@npm:1.0.2":
   version: 1.0.2
   resolution: "@atls-ui-parts/button@npm:1.0.2"
@@ -406,6 +420,15 @@ __metadata:
     react: "*"
     react-dom: "*"
   checksum: 10/4b88ca19919536cb24855a84127013cecfcfa6a4670ed1c408138db72c992fce3d8f6944bb88c73dbd2c375ae3114eefb6f827b0dadb5d00c4a063180d1ea8bb
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/styles@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@atls-ui-parts/styles@npm:0.1.1"
+  peerDependencies:
+    styled-system: 5.1.5
+  checksum: 10/a275b47e183ea7cdde78fa4bf2f42787b8e256a02ed3ab13c8bbb685e70349c7522d1b2042ea9bc72918a0b3e4360025de769441f07c67a9fa0ab917b3a6e2e7
   languageName: node
   linkType: hard
 
@@ -9405,7 +9428,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/checkbox@workspace:*, @ui/checkbox@workspace:ui/checkbox":
+"@ui/checkbox@workspace:*, @ui/checkbox@workspace:0.0.1, @ui/checkbox@workspace:ui/checkbox":
   version: 0.0.0-use.local
   resolution: "@ui/checkbox@workspace:ui/checkbox"
   dependencies:
@@ -9708,26 +9731,21 @@ __metadata:
   resolution: "@ui/radio@workspace:ui/radio"
   dependencies:
     "@atls-ui-parts/checkbox": "npm:1.0.2"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
-    "@ui/utils": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/recipes": "npm:0.5.2"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -9735,38 +9753,28 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/select@workspace:ui/select"
   dependencies:
-    "@atls-ui-parts/button": "npm:1.0.2"
+    "@atls-ui-parts/button": "npm:0.1.1"
     "@atls-ui-parts/select": "npm:1.0.2"
-    "@emotion/css": "npm:11.13.0"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
+    "@atls-utils/use-select": "npm:1.0.1"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/checkbox": "workspace:*"
-    "@ui/icons": "workspace:*"
-    "@ui/layout": "workspace:*"
-    "@ui/text": "workspace:*"
+    "@ui/checkbox": "workspace:0.0.1"
+    "@ui/icons": "workspace:0.0.1"
+    "@ui/layout": "workspace:0.0.1"
+    "@ui/text": "workspace:0.0.1"
     "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    "@vanilla-extract/recipes": "npm:0.5.2"
     downshift: "npm:9.0.7"
-    framer-motion: "npm:11.3.22"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    react-laag: "npm:2.0.5"
-    remove: "npm:0.1.5"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     downshift: "*"
-    framer-motion: "*"
     react: "*"
     react-dom: "*"
-    react-laag: "*"
-    remove: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -9868,7 +9876,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@ui/text@workspace:*, @ui/text@workspace:ui/text":
+"@ui/text@workspace:*, @ui/text@workspace:0.0.1, @ui/text@workspace:ui/text":
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
   dependencies:
