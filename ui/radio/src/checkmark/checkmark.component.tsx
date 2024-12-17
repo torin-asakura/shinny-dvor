@@ -1,8 +1,7 @@
-import React                        from 'react'
+import { memo }                      from 'react'
+import React                         from 'react'
 
-import { memo }               from 'react'
-
-import { Text }                     from '@ui/text'
+import { Text }                      from '@ui/text'
 
 import { CheckmarkProps }            from './checkmark.interfaces.js'
 import { checkmarkAppearanceStyles } from './checkmark.css.js'

@@ -1,12 +1,9 @@
-import React                                        from 'react'
+import { memo }             from 'react'
+import React                from 'react'
 
-import { memo }                               from 'react'
-
-import { ContainerProps }                            from './container.interface.js'
-import { baseStyles }                                from './container.css.js'
-
-import { shapeStyles }                   from './container.css.js'
-
+import { ContainerProps }   from './container.interface.js'
+import { baseStyles }       from './container.css.js'
+import { shapeStyles }      from './container.css.js'
 import { appearanceStyles } from './container.css.js'
 
 export const Container = memo(({ checked, children, ...props }: ContainerProps) => (
