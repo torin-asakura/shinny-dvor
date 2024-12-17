@@ -15,8 +15,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
   const [pressed, setPressed] = useState<boolean>(false)
   const [hover, hoverProps] = useHover()
 
-  console.log(size)
-
   const onMouseDown = (): void => {
     setPressed(true)
   }
