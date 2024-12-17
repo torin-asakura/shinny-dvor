@@ -39,7 +39,7 @@ export const NavigationDesktopVariant: FC<NavigationDesktopVariantProps> = ({
                 screenVar(INITIAL)
               }}
             >
-              <Text fontWeight='$semiBold'>{signUp?.title}</Text>
+              {signUp?.title}
             </Button>
           </Layout>
         </Box>
