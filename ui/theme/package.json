@@ -7,9 +7,6 @@
     ".": "./src/index.ts"
   },
   "main": "src/index.ts",
-  "scripts": {
-    "generate-theme": "generate-theme vqze2qxVpYJDKtablQExoA -o ./src/theme"
-  },
   "dependencies": {
     "@atls/figma-theme-cli": "2.0.5"
   },
