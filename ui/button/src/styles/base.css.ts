@@ -5,7 +5,7 @@ export const baseStyles = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  wordBreak: 'break-word',
+  // wordBreak: 'break-word',
   cursor: 'pointer',
   outline: 'none',
   padding: 0,

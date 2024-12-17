@@ -9,7 +9,7 @@ import { useHover }         from '@ui/utils'
 import { buttonStyles }     from './styles/index.js'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
-  { children, icon, iconPlacement, size = 'huge', variant, disabled, ...props },
+  { children, icon, iconPlacement, size, variant, disabled, ...props },
   ref
 ) => {
   const [pressed, setPressed] = useState<boolean>(false)

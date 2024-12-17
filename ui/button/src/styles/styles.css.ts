@@ -19,7 +19,7 @@ export const buttonStyles = recipe({
   },
 
   defaultVariants: {
-    variant: 'sizeLargeStylePrimaryStateDefaultTextTrueIconFalseInverseFalse',
-    size: 'medium',
+    variant: 'common',
+    size: 'common',
   },
 })
