@@ -1,0 +1,28 @@
+{
+  "name": "@operator-bot/telegram-bot-infrastructure-module",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@operator-bot/fetcher-adapter-module": "workspace:*",
+    "@operator-bot/i18n-adapter": "workspace:*",
+    "@operator-bot/telegram-bot-application-module": "workspace:*",
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+  },
+  "devDependencies": {
+    "@nestjs/common": "10.4.2",
+    "@nestjs/event-emitter": "2.1.1",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@nestjs/common": "*",
+    "@nestjs/event-emitter": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}

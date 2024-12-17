@@ -12,7 +12,8 @@
     "globals/**/*",
     "fragments/**/*",
     "prices/**/*",
-    "booking-telegram-bot/**/*"
+    "booking-telegram-bot/**/*",
+    "operator-bot/**/*"
   ],
   "devDependencies": {
     "@atls/code-runtime": "2.0.7",

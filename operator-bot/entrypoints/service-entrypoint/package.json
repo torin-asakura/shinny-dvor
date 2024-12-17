@@ -1,0 +1,40 @@
+{
+  "name": "@operator-bot/service-entrypoint",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "yarn service build",
+    "dev": "ENVIRONMENT=dev yarn service dev ",
+    "prepack": "run build && cp -r ../../adapters/i18n-adapter/src/locals/ ./dist/",
+    "start": "node dist/index.js"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "1.11.2",
+    "@grpc/proto-loader": "0.7.13",
+    "@mikro-orm/core": "6.3.13",
+    "@mikro-orm/sqlite": "6.3.13",
+    "@nestjs/common": "10.4.2",
+    "@nestjs/core": "10.4.2",
+    "@nestjs/event-emitter": "2.1.1",
+    "@nestjs/microservices": "10.4.2",
+    "@nestjs/platform-express": "10.4.2",
+    "@nestjs/platform-fastify": "10.4.2",
+    "@nestjs/platform-socket.io": "10.4.2",
+    "@nestjs/websockets": "10.4.2",
+    "@operator-bot/api-infrastructure-module": "workspace:*",
+    "@operator-bot/telegram-bot-infrastructure-module": "workspace:*",
+    "@types/amqplib": "^0",
+    "amqp-connection-manager": "4.1.14",
+    "amqplib": "0.10.4",
+    "ioredis": "5.4.1",
+    "kafkajs": "2.2.4",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  }
+}

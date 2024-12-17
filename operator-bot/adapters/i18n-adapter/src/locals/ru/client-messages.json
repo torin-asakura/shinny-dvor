@@ -1,0 +1,5 @@
+{
+  "cancel-appointment": "cancel-appointment-client-message",
+  "confirm-appointment": "confirm-appointment-client-message",
+  "message-received-to-operator": "message-received-to-operator-client-message"
+}

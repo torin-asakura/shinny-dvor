@@ -1,0 +1,47 @@
+{
+  "name": "@operator-bot/i18n-adapter",
+  "version": "0.0.1",
+  "private": true,
+  "license": "BSD-3-Clause",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "src/index.ts",
+  "dependencies": {
+    "class-validator": "0.14.1",
+    "hbs": "4.2.0",
+    "nestjs-i18n": "10.4.9"
+  },
+  "devDependencies": {
+    "@grpc/grpc-js": "1.11.2",
+    "@nestjs/common": "10.4.2",
+    "@nestjs/core": "10.4.2",
+    "@nestjs/microservices": "10.4.2",
+    "@nestjs/platform-express": "10.4.2",
+    "@nestjs/platform-socket.io": "10.4.2",
+    "@nestjs/websockets": "10.4.2",
+    "@types/hbs": "^4",
+    "amqp-connection-manager": "4.1.14",
+    "amqplib": "0.10.4",
+    "ioredis": "5.4.1",
+    "kafkajs": "2.2.4",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.1"
+  },
+  "peerDependencies": {
+    "@grpc/grpc-js": "*",
+    "@nestjs/common": "*",
+    "@nestjs/core": "*",
+    "@nestjs/microservices": "*",
+    "@nestjs/platform-express": "*",
+    "@nestjs/platform-socket.io": "*",
+    "@nestjs/websockets": "*",
+    "amqp-connection-manager": "*",
+    "amqplib": "*",
+    "ioredis": "*",
+    "kafkajs": "*",
+    "reflect-metadata": "*",
+    "rxjs": "*"
+  }
+}

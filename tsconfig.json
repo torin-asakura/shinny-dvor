@@ -9,7 +9,8 @@
     "shared/**/*",
     "globals/**/*",
     "fragments/**/*",
-    "booking-telegram-bot/**/*"
+    "booking-telegram-bot/**/*",
+    "operator-bot/**/*"
   ],
   "compilerOptions": {
     "typeRoots": ["./globals/interfaces"],

@@ -16,6 +16,7 @@ import { AppointmentConversationSendEndMessageUseCase }     from '@telegram-bot/
 import { AppointmentConversationRemoveConversationUseCase } from '@telegram-bot/application-module'
 import { AppointmentConversationCatchErrorUseCase }         from '@telegram-bot/application-module'
 import { AppointmentEntityRepository }                      from '@telegram-bot/application-module'
+import { NotifyOperatorUseCase }                            from '@telegram-bot/application-module'
 // TODO move it into that layer (infra)
 import { getUserFullName }                                  from '@telegram-bot/application-module/getters'
 // TODO move it into that layer (infra)
@@ -37,7 +38,8 @@ export class CreateAppointmentCommandProcessor implements OnModuleInit {
     private readonly appointmentConversationGetApprovalUseCase: AppointmentConversationGetApprovalUseCase,
     private readonly appointmentConversationSendEndMessageUseCase: AppointmentConversationSendEndMessageUseCase,
     private readonly appointmentConversationRemoveConversationUseCase: AppointmentConversationRemoveConversationUseCase,
-    private readonly appointmentConversationCatchErrorUseCase: AppointmentConversationCatchErrorUseCase
+    private readonly appointmentConversationCatchErrorUseCase: AppointmentConversationCatchErrorUseCase,
+    private readonly notifyOperatorUseCase: NotifyOperatorUseCase
   ) {}
 
   async onModuleInit(): Promise<void> {
@@ -113,6 +115,8 @@ export class CreateAppointmentCommandProcessor implements OnModuleInit {
         await this.appointmentEntityRepository.writeData(formattedConversationData)
 
         await this.appointmentConversationSendEndMessageUseCase.process(ctx)
+
+        await this.notifyOperatorUseCase.process(formattedConversationData)
 
         this.appointmentConversationRemoveConversationUseCase.process(ctx)
       } catch (error) {

@@ -4912,6 +4912,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/event-emitter@npm:2.1.1":
+  version: 2.1.1
+  resolution: "@nestjs/event-emitter@npm:2.1.1"
+  dependencies:
+    eventemitter2: "npm:6.4.9"
+  peerDependencies:
+    "@nestjs/common": ^8.0.0 || ^9.0.0 || ^10.0.0
+    "@nestjs/core": ^8.0.0 || ^9.0.0 || ^10.0.0
+  checksum: 10/79b1ae873515a11b577d9e57b2c605b6aa9830ba60017cc54097c49e543dc23abcfe625425e375fa3525998b87319b1b1c0437a75deabdedf7ebeb02ab487e0c
+  languageName: node
+  linkType: hard
+
 "@nestjs/microservices@npm:10.4.2":
   version: 10.4.2
   resolution: "@nestjs/microservices@npm:10.4.2"
@@ -5621,6 +5633,177 @@ __metadata:
   checksum: 10/f887b4135be56c9ef6e29f040c9f75f34709e38c11897d59d284d7e73175a2dd2c6267c18061144e81a0045fc461b7813769db2e49c42a8d6becc58b1456d55c
   languageName: node
   linkType: hard
+
+"@operator-bot/api-application-module@workspace:*, @operator-bot/api-application-module@workspace:operator-bot/contexts/api-context/application-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/api-application-module@workspace:operator-bot/contexts/api-context/application-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
+    "@operator-bot/api-infrastructure-module": "workspace:*"
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    "@nestjs/event-emitter": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/api-infrastructure-module@workspace:*, @operator-bot/api-infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/api-infrastructure-module@workspace:operator-bot/contexts/api-context/infrastructure-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    "@operator-bot/api-application-module": "workspace:*"
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/fetcher-adapter-module@workspace:*, @operator-bot/fetcher-adapter-module@workspace:operator-bot/adapters/fetcher-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/fetcher-adapter-module@workspace:operator-bot/adapters/fetcher-adapter"
+  dependencies:
+    "@atls/logger": "npm:^0.0.2"
+    "@globals/data": "workspace:*"
+    "@nestjs/common": "npm:10.4.2"
+    "@sentry/node": "npm:7.118.0"
+    "@types/node-cron": "npm:^3.0.11"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+    undici: "npm:5.28.4"
+  peerDependencies:
+    "@atls/logger": "*"
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/i18n-adapter@workspace:*, @operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/i18n-adapter@workspace:operator-bot/adapters/i18n-adapter"
+  dependencies:
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
+    "@types/hbs": "npm:^4"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
+    class-validator: "npm:0.14.1"
+    hbs: "npm:4.2.0"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    nestjs-i18n: "npm:10.4.9"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@grpc/grpc-js": "*"
+    "@nestjs/common": "*"
+    "@nestjs/core": "*"
+    "@nestjs/microservices": "*"
+    "@nestjs/platform-express": "*"
+    "@nestjs/platform-socket.io": "*"
+    "@nestjs/websockets": "*"
+    amqp-connection-manager: "*"
+    amqplib: "*"
+    ioredis: "*"
+    kafkajs: "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/service-entrypoint@workspace:operator-bot/entrypoints/service-entrypoint":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/service-entrypoint@workspace:operator-bot/entrypoints/service-entrypoint"
+  dependencies:
+    "@grpc/grpc-js": "npm:1.11.2"
+    "@grpc/proto-loader": "npm:0.7.13"
+    "@mikro-orm/core": "npm:6.3.13"
+    "@mikro-orm/sqlite": "npm:6.3.13"
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/core": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
+    "@nestjs/microservices": "npm:10.4.2"
+    "@nestjs/platform-express": "npm:10.4.2"
+    "@nestjs/platform-fastify": "npm:10.4.2"
+    "@nestjs/platform-socket.io": "npm:10.4.2"
+    "@nestjs/websockets": "npm:10.4.2"
+    "@operator-bot/api-infrastructure-module": "workspace:*"
+    "@operator-bot/telegram-bot-infrastructure-module": "workspace:*"
+    "@types/amqplib": "npm:^0"
+    amqp-connection-manager: "npm:4.1.14"
+    amqplib: "npm:0.10.4"
+    ioredis: "npm:5.4.1"
+    kafkajs: "npm:2.2.4"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/telegram-bot-application-module@workspace:*, @operator-bot/telegram-bot-application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/telegram-bot-application-module@workspace:operator-bot/contexts/telegram-bot-context/application-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/telegram-bot-infrastructure-module@workspace:*, @operator-bot/telegram-bot-infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/telegram-bot-infrastructure-module@workspace:operator-bot/contexts/telegram-bot-context/infrastructure-module"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    "@nestjs/event-emitter": "npm:2.1.1"
+    "@operator-bot/fetcher-adapter-module": "workspace:*"
+    "@operator-bot/i18n-adapter": "workspace:*"
+    "@operator-bot/telegram-bot-application-module": "workspace:*"
+    "@operator-bot/tgsnake-adapter": "workspace:*"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    "@nestjs/event-emitter": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
+
+"@operator-bot/tgsnake-adapter@workspace:*, @operator-bot/tgsnake-adapter@workspace:operator-bot/adapters/tgsnake-adapter":
+  version: 0.0.0-use.local
+  resolution: "@operator-bot/tgsnake-adapter@workspace:operator-bot/adapters/tgsnake-adapter"
+  dependencies:
+    "@nestjs/common": "npm:10.4.2"
+    reflect-metadata: "npm:0.2.2"
+    rxjs: "npm:7.8.1"
+    tgsnake: "npm:3.3.1"
+  peerDependencies:
+    "@nestjs/common": "*"
+    reflect-metadata: "*"
+    rxjs: "*"
+  languageName: unknown
+  linkType: soft
 
 "@peculiar/asn1-schema@npm:^2.3.13, @peculiar/asn1-schema@npm:^2.3.8":
   version: 2.3.13
@@ -12474,6 +12657,13 @@ __metadata:
   version: 5.0.1
   resolution: "event-target-shim@npm:5.0.1"
   checksum: 10/49ff46c3a7facbad3decb31f597063e761785d7fdb3920d4989d7b08c97a61c2f51183e2f3a03130c9088df88d4b489b1b79ab632219901f184f85158508f4c8
+  languageName: node
+  linkType: hard
+
+"eventemitter2@npm:6.4.9":
+  version: 6.4.9
+  resolution: "eventemitter2@npm:6.4.9"
+  checksum: 10/b829b1c6b11e15926b635092b5ad62b4463d1c928859831dcae606e988cf41893059e3541f5a8209d21d2f15314422ddd4d84d20830b4bf44978608d15b06b08
   languageName: node
   linkType: hard
 
