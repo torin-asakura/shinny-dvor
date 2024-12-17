@@ -2,6 +2,7 @@ import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
 import { Text as BaseText }       from '@atls-ui-parts/text'
+
 import React                      from 'react'
 
 import { PropsMapper }            from '../mappers/props.mapper.js'

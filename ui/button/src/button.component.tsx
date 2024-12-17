@@ -1,41 +1,48 @@
-/* eslint-disable */
+import type { ButtonProps } from './button.interfaces.js'
 
-import type { FC }          from 'react'
-
-import type { ButtonProps } from './button.interface.js'
-
-import { Content }          from '@atls-ui-parts/button'
-import styled               from '@emotion/styled'
-import { useState }         from 'react'
 import React                from 'react'
+import { forwardRef }       from 'react'
+import { useState }         from 'react'
 
 import { useHover }         from '@ui/utils'
 
-// import { baseStyles }       from './button.styles.js'
-// import { shapeStyles }      from './button.styles.js'
-// import { appearanceStyles } from './styles/index.js'
+import { buttonStyles }     from './styles/index.js'
 
-// export const ButtonElement = styled('button')<any>(baseStyles, shapeStyles, appearanceStyles)
-
-export const Button: FC<ButtonProps> = ({ children, ...props }) => {
-  const [hover, hoverProps] = useHover()
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
+  { children, icon, iconPlacement, size = 'huge', variant, disabled, ...props },
+  ref
+) => {
   const [pressed, setPressed] = useState<boolean>(false)
+  const [hover, hoverProps] = useHover()
 
-  return <h1>button</h1>
-}
+  console.log(size)
 
-// <ButtonElement
-//   $fill
-//   hover={hover}
-//   pressed={pressed}
-//   onMouseDown={() => {
-//     setPressed(true)
-//   }}
-//   onMouseUp={() => {
-//     setPressed(false)
-//   }}
-//   {...props}
-//   {...hoverProps}
-// >
-//   <Content>{children}</Content>
-// </ButtonElement>
+  const onMouseDown = (): void => {
+    setPressed(true)
+  }
+
+  const onMouseUp = (): void => {
+    setPressed(false)
+  }
+
+  return (
+    <button
+      ref={ref}
+      type='button'
+      disabled={disabled}
+      className={buttonStyles({
+        size,
+        variant,
+        pressed: pressed ? `${variant}Pressed` : undefined,
+        hover: hover ? `${variant}Hover` : undefined,
+        disabled: disabled ? `${variant}Disabled` : undefined,
+      })}
+      onMouseDown={onMouseDown}
+      onMouseUp={onMouseUp}
+      {...hoverProps}
+      {...props}
+    >
+      {children}
+    </button>
+  )
+})

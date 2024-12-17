@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "generate-styles": "generate-styles src/styles/appearance -t ../../ui/theme/src/theme/colors.ts"
+    "generate-styles": "generate-styles src/styles -t ../../ui/theme/src/theme/colors.ts"
   },
   "dependencies": {
     "@atls-ui-generators/button": "1.0.2",
@@ -18,21 +18,17 @@
     "@ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/react": "11.13.0",
-    "@emotion/styled": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@types/styled-system": "5.1.22",
+    "@vanilla-extract/css": "1.16.1",
+    "@vanilla-extract/recipes": "0.5.5",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "styled-system": "5.1.5",
-    "styled-tools": "1.7.2"
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/recipes": "*",
     "react": "*",
-    "react-dom": "*",
-    "styled-system": "*"
+    "react-dom": "*"
   }
 }

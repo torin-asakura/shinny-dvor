@@ -60,7 +60,9 @@ export const NavigationCommonVariant: FC<NavigationCommonVariantProps> = ({
         <Box width={[124, 124, 137]} height={[40, 40, 48]}>
           <Layout width='100%' display={['flex', 'flex', 'none']}>
             <Button
-              size='small'
+              // TODO uncomment
+              // size='small'
+              size='normal'
               onClick={() => {
                 setVisible(true)
                 screenVar(INITIAL)
