@@ -1,14 +1,13 @@
 import '@ui/theme'
 
+import type { RootLayoutProps }   from './root-layout.interfaces.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import type { RootLayoutProps }   from './root-layout.interfaces.js'
-
+import React                      from 'react'
 import { IBM_Plex_Sans }          from 'next/font/google'
 import { Suspense }               from 'react'
 import { memo }                   from 'react'
-import React                      from 'react'
 
 import { ApolloWrapper }          from '@globals/data/apollo'
 import { Gtag }                   from '@ui/gtag'
@@ -19,6 +18,7 @@ import { RoolLayoutProviders }    from './root-layout.providers.js'
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['cyrillic', 'latin'],
+  variable: '--font-ibm-plex-sans',
   weight: ['400', '500', '600'],
   display: 'swap',
 })
@@ -27,7 +27,7 @@ export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ childr
   const gaTrackingId = process.env.GA_TRACKING_ID || 'GTM-T267QVHF'
 
   return (
-    <html className={ibmPlexSans.className}>
+    <html className={`${ibmPlexSans.className} ${ibmPlexSans.variable}`}>
       <body id={GLOBAL_THEME_ID}>
         <ApolloWrapper>
           <RoolLayoutProviders messages={messages}>

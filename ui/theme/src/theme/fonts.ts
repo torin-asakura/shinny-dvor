@@ -1,5 +1,5 @@
 export const fonts = {
-  primary: 'IBM Plex Sans',
+  primary: 'var(--font-ibm-plex-sans)',
   secondary: 'TT Mussels',
   tertiary: 'Inter',
   quadruple: 'TT Lakes',
