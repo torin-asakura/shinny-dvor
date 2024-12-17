@@ -1,32 +1,32 @@
-import { style } from '@vanilla-extract/css'
+import { style }  from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
+
+import { vars }    from '@ui/theme'
 
 export const baseStyles = style({
   display: 'flex',
   width: '100%',
   justifyContent: 'center',
-  cursor: "pointer"
+  cursor: 'pointer',
 })
 
 export const shapeStyles = style({
   height: '40px',
-  borderRadius: 20,
+  borderRadius: vars.radii.small,
 })
 
-// TODO: change colors
 export const appearanceStyles = recipe({
   base: {
-    color: 'black',
+    color: vars.colors.black,
   },
   variants: {
     checked: {
       true: {
-        backgroundColor: 'blue',
+        backgroundColor: vars.colors.primaryBlue,
       },
       false: {
-        backgroundColor: 'lightGray',
+        backgroundColor: vars.colors.lightGray,
       },
     },
   },
 })
-

@@ -1,26 +1,23 @@
-import type {FC} from 'react'
+import type { RadioProps } from './radio.interface.js'
 
-import type {RadioProps} from './radio.interface.js'
+import { memo }            from 'react'
+import React              from 'react'
 
-import React from 'react'
+import { Layout }          from '@ui/layout'
+import { Column }          from '@ui/layout'
 
-import {Layout} from '@ui/layout'
-import {Column} from '@ui/layout'
+import { Checkmark }       from './checkmark/index.js'
+import { Container }       from './container/index.js'
 
-import {Container} from './container/index.js'
-import {Checkmark} from "./checkmark/index.js";
+const Radio = memo(({ children, checked, textTransform = 'lowercase' }: RadioProps) => (
+  <Column width='100%'>
+    <Container checked={checked}>
+      <Checkmark checked={checked} textTransform={textTransform}>
+        {children}
+      </Checkmark>
+    </Container>
+    <Layout flexBasis={12} />
+  </Column>
+))
 
-const Radio: FC<RadioProps> = ({children, checked, textTransform = 'lowercase'}) => {
-    return (
-        <Column width='100%'>
-            <Container checked={checked}>
-                <Checkmark checked={checked} textTransform={textTransform}>
-                    {children}
-                </Checkmark>
-            </Container>
-            <Layout flexBasis={12}/>
-        </Column>
-    )
-}
-
-export {Radio}
+export { Radio }
