@@ -1,6 +1,6 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from 'react'
 
-export interface CheckmarkProps extends PropsWithChildren{
-    checked: boolean
-    textTransform?: 'uppercase' | 'lowercase'
+export interface CheckmarkProps extends PropsWithChildren {
+  checked: boolean
+  textTransform?: 'uppercase' | 'lowercase'
 }

@@ -1,5 +1,5 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from 'react'
 
-export interface ContainerProps extends PropsWithChildren{
+export interface ContainerProps extends PropsWithChildren {
   checked?: boolean
 }

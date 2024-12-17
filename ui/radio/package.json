@@ -10,7 +10,8 @@
   "dependencies": {
     "@atls-ui-parts/checkbox": "1.0.2",
     "@ui/layout": "workspace:*",
-    "@ui/text": "workspace:*"
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "18.3.3",

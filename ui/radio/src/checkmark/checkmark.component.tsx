@@ -1,16 +1,20 @@
-import React, { FC } from 'react'
-import {checkmarkAppearanceStyles} from './checkmark.css.js'
-import { Text } from '@ui/text'
-import {CheckmarkProps} from "./checkmark.interfaces.js";
+import React                        from 'react'
 
-export const Checkmark: FC<CheckmarkProps> = ({ checked, textTransform = 'lowercase', children }) => {
-    return (
-        <div
-            className={checkmarkAppearanceStyles({checked})}
-        >
-            <Text textTransform={textTransform} fontSize="small" fontWeight="medium">
-                {children}
-            </Text>
-        </div>
-    )
-}
+import { memo }               from 'react'
+
+import { Text }                     from '@ui/text'
+
+import { CheckmarkProps }            from './checkmark.interfaces.js'
+import { checkmarkAppearanceStyles } from './checkmark.css.js'
+
+export const Checkmark = memo(({
+  checked,
+  textTransform = 'lowercase',
+  children,
+}: CheckmarkProps) => (
+  <div className={checkmarkAppearanceStyles({ checked })}>
+    <Text textTransform={textTransform} fontSize='$small' fontWeight='$medium'>
+      {children}
+    </Text>
+  </div>
+))
