@@ -2,8 +2,9 @@ import type { SelectProps }     from './select.interface.js'
 
 import { useSelect }            from '@atls-utils/use-select'
 import { useMultipleSelection } from 'downshift'
-import { memo }                 from 'react'
 import React                    from 'react'
+
+import { memo }           from 'react'
 
 import { Layout }               from '@ui/layout'
 import { Text }                 from '@ui/text'
