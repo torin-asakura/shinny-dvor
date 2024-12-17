@@ -1,10 +1,10 @@
-import type { CSSObject } from '@emotion/react'
+import { style } from '@vanilla-extract/css'
 
-export const baseItemStyles: CSSObject = {
+export const menuItemBase = style({
   display: 'flex',
   boxSizing: 'border-box',
   width: '100%',
   cursor: 'pointer',
   hyphens: 'auto',
   alignItems: 'center',
-}
+})
