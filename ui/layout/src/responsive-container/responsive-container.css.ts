@@ -41,6 +41,7 @@ const responsiveContainerProperties = defineProperties({
     backgroundColor: vars.colors,
     borderRadius: vars.radii,
     border: vars.borders,
+    boxShadow: vars.shadows,
   },
 })
 

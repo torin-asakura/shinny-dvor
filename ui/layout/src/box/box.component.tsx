@@ -9,11 +9,16 @@ import React                             from 'react'
 import { PropsMapper }                   from '../mappers/props.mapper.js'
 import { rainbowSprinkles }              from '../responsive-container/index.js'
 
-export const Box: FC<PropsWithChildren<ResponsiveContainerProps>> = ({ children, ...props }) => {
+export const Box: FC<PropsWithChildren<ResponsiveContainerProps>> = ({
+  passref,
+  children,
+  ...props
+}) => {
   const mappedProps = PropsMapper.sprinklesProps(props)
   const { className, style, otherProps } = rainbowSprinkles(mappedProps)
+
   return (
-    <BaseBox className={className} style={style} {...otherProps}>
+    <BaseBox ref={passref} className={className} style={style} {...otherProps}>
       {children}
     </BaseBox>
   )
