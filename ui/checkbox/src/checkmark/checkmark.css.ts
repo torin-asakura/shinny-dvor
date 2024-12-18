@@ -1,6 +1,6 @@
 import { style } from '@vanilla-extract/css'
 
-import { vars }   from '@ui/theme'
+import { vars }  from '@ui/theme'
 
 export const baseStyles = style({
   display: 'flex',

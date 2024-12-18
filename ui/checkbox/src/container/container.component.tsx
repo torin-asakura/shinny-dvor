@@ -1,6 +1,5 @@
+import { memo }           from 'react'
 import React              from 'react'
-
-import { memo }     from 'react'
 
 import { ContainerProps } from './container.interfaces.js'
 import { baseStyles }     from './container.css.js'

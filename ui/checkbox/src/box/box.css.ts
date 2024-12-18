@@ -1,7 +1,7 @@
 import { style }  from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-import { vars }    from '@ui/theme'
+import { vars }   from '@ui/theme'
 
 export const baseStyle = style({
   display: 'inline-flex',
