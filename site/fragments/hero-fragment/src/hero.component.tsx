@@ -76,13 +76,13 @@ const Hero = forwardRef((
         />
       </Layer>
       <Box
-        ref={ref}
+        passref={ref}
         maxWidth={['100%', '100%', 1440]}
         width='100%'
         height='100vh'
         justifyContent='center'
       >
-        <Box backgroundColor='black' position='absolute' width='100%' height='100vh' zIndex='-1'>
+        <Box backgroundColor='$black' position='absolute' width='100%' height='100vh' zIndex='-1'>
           <ImageBlock
             width={1440}
             height={800}
@@ -129,14 +129,14 @@ const Hero = forwardRef((
             </Button>
           </Layout>
           <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
-          <Divider backgroundColor='milkGray' />
+          <Divider backgroundColor='$milkGray' />
           <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
           <Box width='100%'>
             <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
               <Link href='#services'>
                 <Row width={150}>
                   <Layout>
-                    <Text color='$white' fontWeight='$medium' fontFamily='primary'>
+                    <Text color='$white' fontWeight='$medium' fontFamily='$primary'>
                       {anchor}
                     </Text>
                   </Layout>

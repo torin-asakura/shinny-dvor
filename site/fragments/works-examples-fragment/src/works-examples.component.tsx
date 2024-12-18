@@ -101,7 +101,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
           <Row maxWidth={200} justifyContent='center'>
             <Layout width={32} height={32}>
               <Button
-                color='transparent'
+                variant='transparent'
                 size='ghost'
                 onClick={(): void => {
                   controlsSwiper?.slidePrev()
@@ -117,7 +117,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
             />
             <Layout width={32} height={32}>
               <Button
-                color='transparent'
+                variant='transparent'
                 size='ghost'
                 onClick={(): void => {
                   controlsSwiper?.slideNext()
