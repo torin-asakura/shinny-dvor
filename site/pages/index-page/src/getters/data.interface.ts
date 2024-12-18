@@ -1,7 +1,5 @@
 import type { ServicesDataToReplaceType } from '@globals/data'
 
-import { MutableRefObject }               from 'react'
-
 import { getNavigationData }              from '@globals/data'
 import { getBlogPostsData }               from '@globals/data'
 import { getAvailableRadiiData }          from '@globals/data'
@@ -12,14 +10,10 @@ import { getUiData }                      from '@globals/data'
 import { getWorkResultsData }             from '@globals/data'
 import { getCarBodiesData }               from '@globals/data'
 
-export type UseIndexPageClientType = ({
+export type GetData = ({
   servicesDataToReplace,
-  setActive,
-  setScrollY,
 }: {
   servicesDataToReplace: ServicesDataToReplaceType
-  setActive: React.Dispatch<React.SetStateAction<number>>
-  setScrollY: React.Dispatch<React.SetStateAction<number>>
 }) => {
   navigation: ReturnType<typeof getNavigationData>['navigation']
   fragments: ReturnType<typeof getFragmentsData>['fragments']
@@ -30,6 +24,4 @@ export type UseIndexPageClientType = ({
   ui: ReturnType<typeof getUiData>['ui']
   workResults: ReturnType<typeof getWorkResultsData>['workResults']
   carBodies: ReturnType<typeof getCarBodiesData>['carBodies']
-  headerRef: MutableRefObject<HTMLDivElement | null>
-  getObserverOptions: (id: string) => { ref: any }
 }
