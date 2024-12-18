@@ -10,4 +10,5 @@ export interface NavigationDesktopVariantProps {
   signUp: {
     title?: string
   }
+  scrollY?: number
 }

@@ -20,6 +20,7 @@ export const NavigationDesktopVariant: FC<NavigationDesktopVariantProps> = ({
   navigationIndexItems,
   setVisible,
   signUp,
+  scrollY,
 }) => {
   return (
     <>

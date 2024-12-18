@@ -90,6 +90,7 @@ const Navigation: FC<NavigationProps> = ({
                 navigationIndexItems={navigationIndexItems}
                 setVisible={setVisible}
                 signUp={signUp}
+                scrollY={scrollY}
               />
             </Row>
             <Layout flexBasis={[20, 20, 28]} />
