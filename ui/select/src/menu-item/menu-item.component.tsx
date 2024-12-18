@@ -1,14 +1,14 @@
-import { forwardRef }       from 'react'
-import { memo } from 'react'
-import React               from 'react'
+import { forwardRef }    from 'react'
+import { memo }          from 'react'
+import React             from 'react'
 
-import { Checkbox }        from '@ui/checkbox'
-import { Layout }          from '@ui/layout'
-import { Row }             from '@ui/layout'
-import { Text }            from '@ui/text'
+import { Checkbox }      from '@ui/checkbox'
+import { Layout }        from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Text }          from '@ui/text'
 
-import { MenuItemProps }   from './menu-item.interface.js'
-import { menuItemBase }    from './menu-item.css.js'
+import { MenuItemProps } from './menu-item.interface.js'
+import { menuItemBase }  from './menu-item.css.js'
 
 export const MenuItem = memo(
   forwardRef<HTMLLIElement, MenuItemProps>((
