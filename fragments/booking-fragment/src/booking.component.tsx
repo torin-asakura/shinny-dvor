@@ -1,6 +1,7 @@
 import type { Screen }     from '@store/booking'
 
 import { useReactiveVar }  from '@apollo/client'
+
 import React               from 'react'
 
 import { INITIAL }         from '@store/booking'
@@ -46,7 +47,7 @@ const Booking = ({
             <Logo path={mainPage.content} />
           </Layout>
           <Layout>
-            <Button size='normal' color='radius' onClick={() => setVisible(false)}>
+            <Button color='radius' onClick={() => setVisible(false)}>
               <Box
                 width={46}
                 height={46}

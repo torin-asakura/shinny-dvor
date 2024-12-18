@@ -60,8 +60,7 @@ export const NavigationCommonVariant: FC<NavigationCommonVariantProps> = ({
         <Box width={[124, 124, 137]} height={[40, 40, 48]}>
           <Layout width='100%' display={['flex', 'flex', 'none']}>
             <Button
-              // TODO какой стиль small был в изначальном варианте? в текущем дизайне таких размеров не вижу
-              // size='small'
+              size='small'
               onClick={() => {
                 setVisible(true)
                 screenVar(INITIAL)
