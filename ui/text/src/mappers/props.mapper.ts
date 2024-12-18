@@ -1,15 +1,12 @@
+import type { ResponsiveTextProps }      from '../responsive-text/index.js'
+import type { Sprinkles }                from '../responsive-text/index.js'
 import type { BreakpointKey }            from '@ui/theme'
-
-import type { ResponsiveContainerProps } from '../responsive-container/index.js'
-import type { Sprinkles }                from '../responsive-container/index.js'
-import type { SprinklesArray }           from '../responsive-container/index.js'
 
 import { BREAKPOINT_CONDITIONS }         from '@ui/theme'
 
 import { WITHOUT_PIXELS_PROPERTY_NAMES } from './props.constants.js'
 
-type PropKey = keyof ResponsiveContainerProps
-// type MappedArrayType = { [K in BreakpointKey]?: number | string | undefined }
+type PropKey = keyof ResponsiveTextProps
 type MappedArrayType = Partial<Record<BreakpointKey, number | string | undefined>>
 
 enum PropVaueTypes {
@@ -19,7 +16,7 @@ enum PropVaueTypes {
 }
 
 export class PropsMapper {
-  static sprinklesProps(props: ResponsiveContainerProps): Sprinkles {
+  static sprinklesProps(props: ResponsiveTextProps): Sprinkles {
     const mappedProps: Sprinkles = {}
 
     Object.entries(props).forEach(([unknownPropKey, propValue]) => {
@@ -30,8 +27,10 @@ export class PropsMapper {
 
       switch (propValueType) {
         case PropVaueTypes.Array:
-          // @ts-expect-error complex union type
-          mappedProps[propKey] = this.mapArrayPropValue(propKey, propValue as SprinklesArray)
+          mappedProps[propKey] = this.mapArrayPropValue(
+            propKey,
+            propValue as Array<number | string | null | undefined>
+          )
           break
         case PropVaueTypes.Pixels:
           mappedProps[propKey] = `${propValue as number}px`
