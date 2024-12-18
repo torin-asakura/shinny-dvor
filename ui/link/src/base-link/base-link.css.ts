@@ -1,8 +1,6 @@
 import { style }         from '@vanilla-extract/css'
 import { styleVariants } from '@vanilla-extract/css'
 
-import { vars }          from '@ui/theme'
-
 export const baseLink = style({
   textDecoration: 'none',
   cursor: 'pointer',
@@ -15,16 +13,16 @@ export const linkVariants = styleVariants({
     height: '100%',
   },
   active: {
-    color: vars.colors.darkBlue,
-    borderBottom: vars.colors.blue,
+    color: 'darkBlue',
+    borderBottom: 'blue',
     paddingBottom: '8px',
   },
   default: {
-    color: vars.colors.black,
+    color: 'black',
     ':hover': {
-      color: vars.colors.blue,
-      backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
+      color: 'blue',
+      backgroundColor: 'transparent',
+      borderRadius: 4,
     },
   },
 })

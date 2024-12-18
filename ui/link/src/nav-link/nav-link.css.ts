@@ -1,8 +1,6 @@
 import { style }         from '@vanilla-extract/css'
 import { styleVariants } from '@vanilla-extract/css'
 
-import { vars }          from '@ui/theme'
-
 export const baseNavLink = style({
   paddingLeft: 0,
   paddingRight: 0,
@@ -10,23 +8,23 @@ export const baseNavLink = style({
 
 export const navLink = styleVariants({
   active: {
-    color: vars.colors.blue,
+    color: 'blue',
     ':hover': {
-      color: vars.colors.blue,
-      backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
+      color: 'blue',
+      backgroundColor: 'transparent',
+      borderRadius: 4,
       transition: '0.35s',
     },
     '& svg > path:only-of-type': {
-      fill: vars.colors.blue,
+      fill: 'blue',
     },
   },
   default: {
-    color: vars.colors.black,
+    color: 'black',
     ':hover': {
-      color: vars.colors.blue,
-      backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
+      color: 'blue',
+      backgroundColor: 'transparent',
+      borderRadius: 4,
       transition: '0.35s',
     },
   },
