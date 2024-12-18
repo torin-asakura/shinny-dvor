@@ -13,10 +13,14 @@ import { getWorkResultsData }             from '@globals/data'
 import { getCarBodiesData }               from '@globals/data'
 
 export type UseIndexPageClientType = ({
+  headerRef,
+  isLoaded,
   servicesDataToReplace,
   setActive,
   setScrollY,
 }: {
+  headerRef: MutableRefObject<HTMLDivElement | null>
+  isLoaded: MutableRefObject<boolean>
   servicesDataToReplace: ServicesDataToReplaceType
   setActive: React.Dispatch<React.SetStateAction<number>>
   setScrollY: React.Dispatch<React.SetStateAction<number>>
@@ -30,6 +34,5 @@ export type UseIndexPageClientType = ({
   ui: ReturnType<typeof getUiData>['ui']
   workResults: ReturnType<typeof getWorkResultsData>['workResults']
   carBodies: ReturnType<typeof getCarBodiesData>['carBodies']
-  headerRef: MutableRefObject<HTMLDivElement | null>
   getObserverOptions: (id: string) => { ref: any }
 }

@@ -1,12 +1,12 @@
 'use client'
 
-import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
-import React                         from 'react'
+import type { IndexPageClientProps } from './index-page.interfaces.js'
+
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
-import { useEffect }                 from 'react'
+import React                         from 'react'
 
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
@@ -21,6 +21,9 @@ import { Column }                    from '@ui/layout'
 import { useIndexPageClient }        from './hooks/index.js'
 
 export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplace }) => {
+  const headerRef = useRef<HTMLDivElement | null>(null)
+  const isLoaded = useRef<boolean>(false)
+
   const [active, setActive] = useState<number>(0)
   const [scrollY, setScrollY] = useState<number>(0)
 
@@ -34,16 +37,17 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplac
     ui,
     workResults,
     carBodies,
-    headerRef,
     getObserverOptions,
   } = useIndexPageClient({
+    headerRef,
+    isLoaded,
     servicesDataToReplace,
     setActive,
     setScrollY,
   })
 
   return (
-    <Column ref={headerRef} width='100%' alignItems='center'>
+    <Column passref={headerRef} width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <Navigation
