@@ -1,6 +1,8 @@
-const fontWeights = {
-  normal: 400,
-  medium: 500,
-  bold: 600,
+export const fontWeights = {
+  normal: '400',
+  medium: '500',
+  semiBold: '600',
+  bold: '700',
+  extraBold: '800',
+  heavy: '900',
 }
-export { fontWeights }
