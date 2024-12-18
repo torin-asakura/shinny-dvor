@@ -1,10 +1,10 @@
-import type { FC }       from 'react'
-
 import type { MapProps } from './map.interface.js'
 
+import { FC }            from 'react'
+import { memo }          from 'react'
 import React             from 'react'
 
-const Map: FC<MapProps> = ({ width, height }) => (
+const Map: FC<MapProps> = memo(({ width, height }) => (
   <iframe
     title='map'
     loading='lazy'
@@ -13,6 +13,6 @@ const Map: FC<MapProps> = ({ width, height }) => (
     height={height}
     frameBorder='0'
   />
-)
+))
 
 export { Map }
