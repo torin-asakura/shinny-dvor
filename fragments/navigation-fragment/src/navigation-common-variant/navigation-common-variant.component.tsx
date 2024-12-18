@@ -1,5 +1,6 @@
-import type { NavigationCommonVariantProps } from './navigation-common-variant.interfaces.js'
 import type { FC }                           from 'react'
+
+import type { NavigationCommonVariantProps } from './navigation-common-variant.interfaces.js'
 
 import React                                 from 'react'
 

@@ -1,5 +1,6 @@
-import type { NavigationDesktopVariantProps } from './navigation-desktop-variant.interfaces.js'
 import type { FC }                            from 'react'
+
+import type { NavigationDesktopVariantProps } from './navigation-desktop-variant.interfaces.js'
 
 import React                                  from 'react'
 
