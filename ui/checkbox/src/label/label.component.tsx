@@ -1,8 +1,8 @@
-import { memo }                    from 'react'
 import { PropsWithChildren } from 'react'
-import React                      from 'react'
+import { memo }              from 'react'
+import React                 from 'react'
 
-import { labelStyles }            from './label.css.js'
+import { labelStyles }       from './label.css.js'
 
 const Label = memo(({ children, ...props }: PropsWithChildren) => (
   <div className={labelStyles()} {...props}>
