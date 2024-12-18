@@ -2,6 +2,12 @@ import { createAppearanceStyles } from '@atls-ui-parts/button'
 
 import { vars }                   from '@ui/theme'
 
+const appearanceTransparentStyles = createAppearanceStyles({
+  fontColor: vars.colors['button.primary.default.font'],
+  backgroundColor: vars.colors['transparent'],
+  borderColor: vars.colors['button.primary.default.border'],
+})
+
 const appearancePrimaryDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['button.primary.default.font'],
   backgroundColor: vars.colors['button.primary.default.background'],
@@ -117,6 +123,7 @@ const appearanceSizeDisabledStyles = createAppearanceStyles({
 })
 
 export const appearanceVariant = {
+  transparent: appearanceTransparentStyles,
   primary: appearancePrimaryDefaultStyles,
   secondary: appearanceSecondaryDefaultStyles,
   tertiary: appearanceTertiaryDefaultStyles,
@@ -125,6 +132,7 @@ export const appearanceVariant = {
 }
 
 export const appearanceHover = {
+  transparentHover: appearanceTransparentStyles,
   primaryHover: appearancePrimaryHoverStyles,
   secondaryHover: appearanceSecondaryHoverStyles,
   tertiaryHover: appearanceTertiaryHoverStyles,
@@ -133,6 +141,7 @@ export const appearanceHover = {
 }
 
 export const appearancePressed = {
+  transparentPressed: appearanceTransparentStyles,
   primaryPressed: appearancePrimaryPressedStyles,
   secondaryPressed: appearanceSecondaryPressedStyles,
   tertiaryPressed: appearanceTertiaryPressedStyles,
@@ -141,8 +150,10 @@ export const appearancePressed = {
 }
 
 export const appearanceDisabled = {
+  transparentDisabled: appearanceTransparentStyles,
   primaryDisabled: appearancePrimaryDisabledStyles,
   secondaryDisabled: appearanceSecondaryDisabledStyles,
   tertiaryDisabled: appearanceTertiaryDisabledStyles,
   sizeDisabled: appearanceSizeDisabledStyles,
+  linkDisabled: appearanceLinkPressedStyles,
 }
