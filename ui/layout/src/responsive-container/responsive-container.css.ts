@@ -2,6 +2,7 @@ import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
 import { BREAKPOINT_CONDITIONS }  from '@ui/theme'
+import { vars }                   from '@ui/theme'
 
 const responsiveContainerProperties = defineProperties({
   conditions: BREAKPOINT_CONDITIONS,
