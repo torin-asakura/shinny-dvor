@@ -1,4 +1,5 @@
 import { createShapeStyles } from '@atls-ui-parts/button'
+import { style }             from '@vanilla-extract/css'
 
 import { vars }              from '@ui/theme'
 
@@ -38,9 +39,15 @@ const largeStyles = createShapeStyles({
   paddingRight: vars.spaces['g24'],
 })
 
+const fillStyles = style({
+  height: '100%',
+  width: '100%',
+})
+
 export const shapeStyles = {
   ghost: ghostStyles,
   small: smallStyles,
   common: commonStyles,
   large: largeStyles,
+  fill: fillStyles,
 }
