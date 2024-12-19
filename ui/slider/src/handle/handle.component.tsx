@@ -1,6 +1,5 @@
+import { memo }            from 'react'
 import React               from 'react'
-
-import { memo }      from 'react'
 
 import { DoubleArrowIcon } from '@ui/icons'
 import { Box }             from '@ui/layout'

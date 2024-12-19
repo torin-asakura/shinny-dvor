@@ -1,14 +1,14 @@
 import type { PaginationProps } from './pagination.interface.js'
 
-import { FC }                    from 'react'
-import { memo }              from 'react'
+import { FC }                   from 'react'
+import { memo }                 from 'react'
 import { useMemo }              from 'react'
 import React                    from 'react'
 
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'
 
-import { TransitionContainer }   from '../transition-container/index.js'
+import { TransitionContainer }  from '../transition-container/index.js'
 
 const Pagination: FC<PaginationProps> = memo(({ activeItem, totalItems, swiper }) => {
   const calculatedActiveItem = useMemo(() => {
