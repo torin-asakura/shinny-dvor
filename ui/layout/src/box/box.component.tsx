@@ -1,9 +1,8 @@
 import type { ResponsiveContainerProps } from '../responsive-container/index.js'
 
 import { Box as BaseBox }                from '@atls-ui-parts/layout'
-
-import React                             from 'react'
 import { forwardRef }                    from 'react'
+import React                             from 'react'
 
 import { PropsMapper }                   from '../mappers/props.mapper.js'
 import { rainbowSprinkles }              from '../responsive-container/index.js'
