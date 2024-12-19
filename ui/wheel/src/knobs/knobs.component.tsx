@@ -7,12 +7,22 @@ import React               from 'react'
 import { Container }       from './container/index.js'
 import { Knob }            from './knob/index.js'
 
-const Knobs: FC<KnobsProps> = ({ titles }) => (
+export const Knobs: FC<KnobsProps> = ({ titles }) => (
   <Container>
-    <Knob left={[235, 235, 281]} top={[24, 24, 26]} text={titles.get('titleTop')} />
-    <Knob left={[43, 43, 65]} top={[108, 108, 151]} text={titles.get('titleMiddle')} />
-    <Knob left={[92, 92, 129]} top={[185, 185, 259]} text={titles.get('titleBottom')} />
+    <Knob
+      left={{ mobile: '235px', tablet: '235px', desktop: '281px' }}
+      top={{ mobile: '24px', tablet: '24px', desktop: '26px' }}
+      text={titles.get('titleTop')}
+    />
+    <Knob
+      left={{ mobile: '43px', tablet: '43px', desktop: '65px' }}
+      top={{ mobile: '108px', tablet: '108px', desktop: '151px' }}
+      text={titles.get('titleMiddle')}
+    />
+    <Knob
+      left={{ mobile: '92px', tablet: '92px', desktop: '129px' }}
+      top={{ mobile: '185px', tablet: '185px', desktop: '259px' }}
+      text={titles.get('titleBottom')}
+    />
   </Container>
 )
-
-export { Knobs }

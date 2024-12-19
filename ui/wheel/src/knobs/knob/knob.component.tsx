@@ -16,11 +16,12 @@ import { Text }           from '@ui/text'
 import { useHover }       from '@ui/utils'
 import { usePopover }     from '@ui/utils'
 
+import { Sprinkles }      from './container/container.css.js'
 import { Container }      from './container/index.js'
 import { InnerCircle }    from './inner-circle/index.js'
 import { OuterCircle }    from './outer-circle/index.js'
 
-const Knob: FC<KnobProps> = ({ text, ...props }) => {
+export const Knob: FC<KnobProps & Sprinkles> = ({ text, ...props }) => {
   const [hover, hoverProps] = useHover()
   const [card, setCard] = useState<boolean>(false)
   const [active, setActive] = useState<boolean>(false)
@@ -37,16 +38,16 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
         </Layout>
         {render(
           <Box
-            backgroundColor='white'
+            backgroundColor='$white'
             width={304}
-            boxShadow='transparentBlack'
-            borderRadius='extra'
+            boxShadow='$transparentBlack'
+            borderRadius='$extra'
             {...layerProps}
           >
             <Layout flexBasis={12} flexShrink={0} />
             <Column fill>
               <Layout flexBasis={10} />
-              <Text fontSize='small' lineHeight='default'>
+              <Text fontSize='$small' lineHeight='$default'>
                 {text}
               </Text>
               <Layout flexBasis={10} />
@@ -73,13 +74,13 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
             setActive(false)
           }}
         >
-          <Box backgroundColor='white' borderRadius='topSide' boxShadow='lightGrey'>
+          <Box backgroundColor='$white' borderRadius='$topSide' boxShadow='$lightGrey'>
             <Layout flexBasis={20} flexShrink={0} />
             <Column fill>
               <Layout flexBasis={20} />
               <Row>
                 <Layout>
-                  <Text lineHeight='medium'>{text}</Text>
+                  <Text lineHeight='$medium'>{text}</Text>
                 </Layout>
                 <Layout flexBasis={8} flexShrink={0} />
                 <Layout alignItems='flex-start'>
@@ -104,5 +105,3 @@ const Knob: FC<KnobProps> = ({ text, ...props }) => {
     </Container>
   )
 }
-
-export { Knob }
