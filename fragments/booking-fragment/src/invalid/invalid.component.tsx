@@ -26,13 +26,13 @@ const Invalid: FC<InvalidProps> = ({ fragmentsData }) => {
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
       <Layout>
-        <Text fontWeight='medium' fontSize='giant'>
+        <Text fontWeight='$medium' fontSize='$giant'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={24} />
       <Layout>
-        <Text lineHeight='medium'>{content}</Text>
+        <Text lineHeight='$medium'>{content}</Text>
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
