@@ -47,7 +47,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplac
   })
 
   return (
-    <Column passref={headerRef} width='100%' alignItems='center'>
+    <Column ref={headerRef} width='100%' alignItems='center'>
       <Box width='100%' justifyContent='center'>
         <Column width='100%' alignItems='center'>
           <Navigation

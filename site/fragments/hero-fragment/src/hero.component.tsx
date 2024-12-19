@@ -76,7 +76,7 @@ const Hero = forwardRef((
         />
       </Layer>
       <Box
-        passref={ref}
+        ref={ref}
         maxWidth={['100%', '100%', 1440]}
         width='100%'
         height='100vh'
