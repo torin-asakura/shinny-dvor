@@ -10,6 +10,10 @@ export const baseLink = style({
 })
 
 export const linkVariants = styleVariants({
+  fill: {
+    width: '100%',
+    height: '100%',
+  },
   active: {
     color: vars.colors.darkBlue,
     borderBottom: vars.colors.blue,
