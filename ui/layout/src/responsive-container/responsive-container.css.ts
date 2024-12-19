@@ -33,7 +33,6 @@ const responsiveContainerProperties = defineProperties({
     alignItems: true,
 
     flexGrow: true,
-    flexDirection: true,
     flexBasis: true,
     flexShrink: true,
   },

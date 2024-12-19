@@ -1,8 +1,9 @@
-import type { BreakpointKey } from '@ui/theme'
+import type { BreakpointKey }     from '@ui/theme'
+import type { PropsWithChildren } from 'react'
 
-import { BoxProps }           from '@atls-ui-parts/layout'
+import { BoxProps }               from '@atls-ui-parts/layout'
 
-import { Sprinkles }          from './responsive-container.css.js'
+import { Sprinkles }              from './responsive-container.css.js'
 
 type SprinklesResponseObject = Partial<Record<BreakpointKey, any>>
 
@@ -21,14 +22,10 @@ export type ResponsiveContainerCssProps = Sprinkles & {
   [K in SprinklesKey]?: SprinklesPropWithArray<K>
 }
 
-export type ResponsiveContainerProps = ResponsiveContainerCssProps & {
-  style?: React.CSSProperties
-  fill?: boolean
-  passref?: React.MutableRefObject<HTMLDivElement | null>
-  className?: string
-  /**
-   * @deprecated use passref to pass ref
-   */
-  ref?: React.MutableRefObject<HTMLDivElement | null>
-  onClick?: BoxProps['onClick']
-}
+export type ResponsiveContainerProps = PropsWithChildren &
+  ResponsiveContainerCssProps & {
+    style?: React.CSSProperties
+    fill?: boolean
+    className?: string
+    onClick?: BoxProps['onClick']
+  }
