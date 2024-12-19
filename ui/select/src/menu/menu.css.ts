@@ -1,6 +1,9 @@
-import { style } from '@vanilla-extract/css'
+import { style }                                   from '@vanilla-extract/css'
+import { createRainbowSprinkles }                   from 'rainbow-sprinkles'
 
-import { vars }  from '@ui/theme'
+import { defineProperties } from 'rainbow-sprinkles'
+
+import { vars }                                    from '@ui/theme'
 
 export const menuBase = style({
   display: 'flex',
@@ -22,3 +25,12 @@ export const menuAppearance = style({
   backgroundColor: vars.colors.white,
   boxShadow: vars.shadows.shark,
 })
+
+const menuDynamicProperties = defineProperties({
+  dynamicProperties: {
+    width: true,
+  },
+})
+
+export const menuSprinkles = createRainbowSprinkles(menuDynamicProperties)
+export type MenuSprinkles = Parameters<typeof menuSprinkles>[0]
