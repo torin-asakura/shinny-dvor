@@ -1,6 +1,5 @@
-import type { FC }               from 'react'
-
 import type { SocialLinksProps } from './social-links.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -10,31 +9,41 @@ import { VkIcon }                from '@ui/icons'
 import { Box }                   from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { Link }                  from '@ui/link'
+import { useHover }              from '@ui/utils'
 
-export const SocialLinksDark = () => {
-  return <h1>SocialLinksDark</h1>
+export const SocialLinksDark: FC<SocialLinksProps> = ({ linkTelegram, linkVk }) => {
+  const [hoverTelegram, hoverTelegramProps] = useHover()
+  const [hoverVk, hoverVkProps] = useHover()
+
+  return (
+    <Box justifyContent='flex-end'>
+      <Box
+        width={48}
+        height={48}
+        borderRadius='$large.semiSmall'
+        overflow='hidden'
+        {...hoverTelegramProps}
+      >
+        <Link fill href={linkTelegram} target='_blank'>
+          <Button size='fill' variant='tertiary'>
+            <TelegramIcon width={36} height={36} color={hoverTelegram ? 'white' : 'black'} />
+          </Button>
+        </Link>
+      </Box>
+      <Layout flexBasis={16} flexShrink={0} />
+      <Box
+        width={48}
+        height={48}
+        borderRadius='$large.semiSmall'
+        overflow='hidden'
+        {...hoverVkProps}
+      >
+        <Link fill href={linkVk} target='_blank'>
+          <Button size='fill' variant='tertiary'>
+            <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
+          </Button>
+        </Link>
+      </Box>
+    </Box>
+  )
 }
-
-// export const SocialLinksDark: FC<SocialLinksProps> = ({ linkTelegram, linkVk }) => (
-//   <Box width='100%' justifyContent='flex-end'>
-//     <Link href={linkTelegram} target='_blank'>
-//       <Box width={40}>
-//         <Button color='darkSocial' size='small'>
-//           <Layout>
-//             <TelegramIcon width={28} height={28} color='white' />
-//           </Layout>
-//         </Button>
-//       </Box>
-//     </Link>
-//     <Layout flexBasis={16} flexShrink={0} />
-//     <Link href={linkVk} target='_blank'>
-//       <Box width={40}>
-//         <Button color='darkSocial' size='small'>
-//           <Layout>
-//             <VkIcon width={21} height={12} color='white' />
-//           </Layout>
-//         </Button>
-//       </Box>
-//     </Link>
-//   </Box>
-// )
