@@ -1,1 +1,2 @@
-export * from './image.component.js'
+export { NextImage } from '@atls-ui-parts/next-image'
+export { Image as ImageBlock } from '@atls-ui-parts/image'

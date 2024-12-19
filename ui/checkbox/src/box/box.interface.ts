@@ -1,3 +1,8 @@
-export interface BoxProps {
+import { PropsWithChildren } from 'react'
+
+export type CheckboxSize = 'medium'
+
+export interface BoxProps extends PropsWithChildren {
   checked?: boolean
+  size?: CheckboxSize
 }

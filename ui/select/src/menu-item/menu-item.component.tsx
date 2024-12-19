@@ -1,48 +1,39 @@
-import type { FC }            from 'react'
+import { forwardRef }    from 'react'
+import { memo }          from 'react'
+import React             from 'react'
 
-import type { MenuItemProps } from './menu-item.interface.js'
+import { Checkbox }      from '@ui/checkbox'
+import { Layout }        from '@ui/layout'
+import { Row }           from '@ui/layout'
+import { Text }          from '@ui/text'
 
-import styled                 from '@emotion/styled'
-import React                  from 'react'
+import { MenuItemProps } from './menu-item.interface.js'
+import { menuItemBase }  from './menu-item.css.js'
 
-import { Checkbox }           from '@ui/checkbox'
-import { Layout }             from '@ui/layout'
-import { Column }             from '@ui/layout'
-import { Row }                from '@ui/layout'
-import { Text }               from '@ui/text'
+export const MenuItem = memo(
+  forwardRef<HTMLLIElement, MenuItemProps>((
+    { children, selectedItems, addSelectedItem, removeSelectedItem, ...props },
+    ref
+  ) => {
+    const handleCheck = (newState: boolean): void => {
+      if (newState) addSelectedItem(children)
+      if (!newState) removeSelectedItem(children)
+    }
 
-import { baseItemStyles }     from './menu-item.styles.js'
-
-const Container = styled.li(baseItemStyles)
-
-const MenuItem: FC<MenuItemProps> = ({
-  children,
-  selectedItems,
-  addSelectedItem,
-  removeSelectedItem,
-  ...props
-}) => {
-  const handleCheck = (newState: boolean): void => {
-    if (newState) addSelectedItem(children)
-    if (!newState) removeSelectedItem(children)
-  }
-
-  return (
-    <Container {...props}>
-      <Column width='100%'>
+    return (
+      <li ref={ref} className={menuItemBase} {...props}>
         <Row>
           <Layout flexBasis={16} flexShrink={0} />
           <Checkbox active={selectedItems?.includes(children)} onCheck={handleCheck}>
             <Layout>
-              <Text fontSize='normal' color='black'>
+              <Text fontSize='$medium' color='$black'>
                 {children}
               </Text>
             </Layout>
           </Checkbox>
           <Layout flexBasis={16} flexShrink={0} />
         </Row>
-      </Column>
-    </Container>
-  )
-}
-export { MenuItem }
+      </li>
+    )
+  })
+)
