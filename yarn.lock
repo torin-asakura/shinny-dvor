@@ -180,26 +180,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@atls-ui-generators/icons@npm:0.0.16":
-  version: 0.0.16
-  resolution: "@atls-ui-generators/icons@npm:0.0.16"
+"@atls-ui-generators/icons@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@atls-ui-generators/icons@npm:1.0.4"
   dependencies:
-    "@atls-ui-generators/utils": "npm:0.0.6"
+    "@atls-ui-generators/utils": "npm:0.0.7"
     "@atls/config-prettier": "npm:0.0.5"
     "@atls/prettier-plugin": "npm:0.0.7"
     "@babel/standalone": "npm:7.22.20"
-    "@svgr/core": "npm:5.5.0"
+    "@svgr/core": "npm:8.1.0"
     camelcase: "npm:6.3.0"
     commander: "npm:9.5.0"
     fs-extra-promise: "npm:1.0.1"
     glob: "npm:8.0.3"
     glob-promise: "npm:5.0.0"
     prettier: "npm:2.8.8"
-  peerDependencies:
-    glob: 8.0.3
   bin:
     generate-icons: dist/generator.js
-  checksum: 10/9ac903e7475abe4c142f9c44694daf72ff8aeb5e5d69252c140f462b51a33c8bdc997851cd1208218b1f4da07c7e84a016ca29921c1b971ad69a0b8e389c3b73
+  checksum: 10/349c8d2a532d348cae53fb6950bed1fb40b667f0439db4ba6f2ba7775cb0faa54b3c5ca5bd74db8c8f5d1b8fc6670d04a001d9c51649901366548f0609cb3cc7
   languageName: node
   linkType: hard
 
@@ -212,6 +210,18 @@ __metadata:
     camelcase: "npm:6.3.0"
     prettier: "npm:2.8.8"
   checksum: 10/5d462ebb355479eaf6a5bcee632f65b0bc68596db4f18bea68cd976fcb17dd0f362b1e648ec71a6714c725d5451885371e404b7d2c6ce6379afbcdd6a9239dbe
+  languageName: node
+  linkType: hard
+
+"@atls-ui-generators/utils@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@atls-ui-generators/utils@npm:0.0.7"
+  dependencies:
+    "@atls/config-prettier": "npm:0.0.5"
+    "@atls/prettier-plugin": "npm:0.0.7"
+    camelcase: "npm:6.3.0"
+    prettier: "npm:2.8.8"
+  checksum: 10/e02d8f4eab50f8411502601ec32a97533452a14b2944db67b134b4c4851cfc88040963daeb91810b86fea2a135e1e6d80603e20d4e3b3188f40c80cd7fa88b5c
   languageName: node
   linkType: hard
 
@@ -277,6 +287,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-ui-parts/condition@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@atls-ui-parts/condition@npm:1.0.1"
+  dependencies:
+    framer-motion: "npm:11.2.11"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/612144f5e32c67b5f9a12eaa607eeac526fe1de8e39d71e081ea12480b47dbcd9eea1aa55a9ef42bc432d7dae03003a462479e5559e559fd4ed0f5ae9f6acbbf
+  languageName: node
+  linkType: hard
+
 "@atls-ui-parts/dom@npm:*":
   version: 1.0.1
   resolution: "@atls-ui-parts/dom@npm:1.0.1"
@@ -331,6 +353,22 @@ __metadata:
     react: 18.2.0
     styled-system: 5.1.5
   checksum: 10/69596f6b403524a2eb4f6dcef023204d06c8dd8d175216352768bc7e9ec832e1bd8f98af30eb6d4359ff0665bf158fccfb6ad1eef2247797ccb6459ee351f988
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/layout@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/layout@npm:1.0.2"
+  dependencies:
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/5e25469a3e9ad288d4034efc5e11cb34f9c14fbcc8e03b9a50e35fb76d48c7ac524d305eba191460107292dd018068430d87dcc6f28a0d369acaed00ef1baa17
   languageName: node
   linkType: hard
 
@@ -401,6 +439,36 @@ __metadata:
     react: 18.2.0
     styled-system: 5.1.5
   checksum: 10/ddcbdcf03e0d4bcbfafaf88202bda1c4efbacf971af25206147cb7ea21cd51be0167ba2c949b17153c0eea1d534e4fb35f83343a1c990bc6075e2a4b6769ae37
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/text@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/text@npm:1.0.2"
+  dependencies:
+    "@atls-ui-parts/condition": "npm:1.0.1"
+    "@atls-ui-parts/theme": "npm:1.0.2"
+    clsx: "npm:2.1.1"
+    rainbow-sprinkles: "npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+    react-dom: "*"
+  checksum: 10/c4d733736cbdd3603d16f19818e0066070588363db21fc315a6c3e523eaa0ab113061cfd05f2d857c930be10f367d32d827a0b628cf52af5a162e14cd32da7ff
+  languageName: node
+  linkType: hard
+
+"@atls-ui-parts/theme@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@atls-ui-parts/theme@npm:1.0.2"
+  dependencies:
+    rainbow-sprinkles: "npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    react: "*"
+  checksum: 10/1517c67134825798c3b60d92241953fd30f57ea8a95f57d2b7a8c453ad914c4354b925865c01480c45fa3ed6d0b2830f10cab46b9077f6dbfc4caa8feb947065
   languageName: node
   linkType: hard
 
@@ -2363,7 +2431,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/types@npm:^7.0.0, @babel/types@npm:^7.12.6, @babel/types@npm:^7.16.8, @babel/types@npm:^7.18.13, @babel/types@npm:^7.20.7, @babel/types@npm:^7.21.3, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.3.3":
+"@babel/types@npm:^7.0.0, @babel/types@npm:^7.16.8, @babel/types@npm:^7.18.13, @babel/types@npm:^7.20.7, @babel/types@npm:^7.21.3, @babel/types@npm:^7.25.9, @babel/types@npm:^7.26.0, @babel/types@npm:^7.3.3":
   version: 7.26.0
   resolution: "@babel/types@npm:7.26.0"
   dependencies:
@@ -2779,7 +2847,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/hash@npm:^0.9.2":
+"@emotion/hash@npm:^0.9.0, @emotion/hash@npm:^0.9.2":
   version: 0.9.2
   resolution: "@emotion/hash@npm:0.9.2"
   checksum: 10/379bde2830ccb0328c2617ec009642321c0e009a46aa383dfbe75b679c6aea977ca698c832d225a893901f29d7b3eef0e38cf341f560f6b2b56f1ff23c172387
@@ -7732,26 +7800,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-plugin-add-jsx-attribute@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@svgr/babel-plugin-add-jsx-attribute@npm:5.4.0"
-  checksum: 10/1c538cf312b486598c6aea17f9b72d7fc308eb5dd32effd804630206a185493b8a828ff980ceb29d57d8319c085614c7cea967be709c71ae77702a4c30037011
-  languageName: node
-  linkType: hard
-
 "@svgr/babel-plugin-remove-jsx-attribute@npm:8.0.0":
   version: 8.0.0
   resolution: "@svgr/babel-plugin-remove-jsx-attribute@npm:8.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/ff992893c6c4ac802713ba3a97c13be34e62e6d981c813af40daabcd676df68a72a61bd1e692bb1eda3587f1b1d700ea462222ae2153bb0f46886632d4f88d08
-  languageName: node
-  linkType: hard
-
-"@svgr/babel-plugin-remove-jsx-attribute@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@svgr/babel-plugin-remove-jsx-attribute@npm:5.4.0"
-  checksum: 10/ad2231bfcb14daa944201df66236c222cde05a07c4cffaecab1d36d33f606b6caf17bda21844fc435780c1a27195e49beb8397536fe5e7545dfffcfbbcecb7f8
   languageName: node
   linkType: hard
 
@@ -7764,26 +7818,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-plugin-remove-jsx-empty-expression@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@svgr/babel-plugin-remove-jsx-empty-expression@npm:5.0.1"
-  checksum: 10/175c8f13ddcb0744f7c3910ebed3799cfb961a75bff130e1ed2071c87ca8b8df8964825c988e511b2e3c5dbf48ad3d4fbbb6989edc53294253df40cf2a24375e
-  languageName: node
-  linkType: hard
-
 "@svgr/babel-plugin-replace-jsx-attribute-value@npm:8.0.0":
   version: 8.0.0
   resolution: "@svgr/babel-plugin-replace-jsx-attribute-value@npm:8.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/1edda65ef4f4dd8f021143c8ec276a08f6baa6f733b8e8ee2e7775597bf6b97afb47fdeefd579d6ae6c959fe2e634f55cd61d99377631212228c8cfb351b8921
-  languageName: node
-  linkType: hard
-
-"@svgr/babel-plugin-replace-jsx-attribute-value@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@svgr/babel-plugin-replace-jsx-attribute-value@npm:5.0.1"
-  checksum: 10/68f4e2a5b95eca44e22fce485dc2ddd10adabe2b38f6db3ef9071b35e84bf379685f7acab6c05b7a82f722328c02f6424f8252c6dd5c2c4ed2f00104072b1dfe
   languageName: node
   linkType: hard
 
@@ -7796,26 +7836,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-plugin-svg-dynamic-title@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@svgr/babel-plugin-svg-dynamic-title@npm:5.4.0"
-  checksum: 10/c46feb52454acea32031d1d881a81334f2e5f838ed25a2d9014acb5e9541d404405911e86dbee8bee9f1e43c9e07118123a07dc297962dbed0c4c5a86bdc4be9
-  languageName: node
-  linkType: hard
-
 "@svgr/babel-plugin-svg-em-dimensions@npm:8.0.0":
   version: 8.0.0
   resolution: "@svgr/babel-plugin-svg-em-dimensions@npm:8.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/be0e2d391164428327d9ec469a52cea7d93189c6b0e2c290999e048f597d777852f701c64dca44cd45b31ed14a7f859520326e2e4ad7c3a4545d0aa235bc7e9a
-  languageName: node
-  linkType: hard
-
-"@svgr/babel-plugin-svg-em-dimensions@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@svgr/babel-plugin-svg-em-dimensions@npm:5.4.0"
-  checksum: 10/0d19b26147bbba932bd973258dab4a80a7ea6b9d674713186f0e10fa21a9e3aa4327326b2bf1892e8051712bce0ea30561eb187ca27bb241d33c350cea51ac88
   languageName: node
   linkType: hard
 
@@ -7828,26 +7854,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/babel-plugin-transform-react-native-svg@npm:^5.4.0":
-  version: 5.4.0
-  resolution: "@svgr/babel-plugin-transform-react-native-svg@npm:5.4.0"
-  checksum: 10/8ac5dc9fb2dee24addc74dbcb169860c95a69247606f986eabb0618fb300dd08e8f220891b758e62c051428ba04d8dd50f2c2bf877e15fa190e6d384d1ccd2ad
-  languageName: node
-  linkType: hard
-
 "@svgr/babel-plugin-transform-svg-component@npm:8.0.0":
   version: 8.0.0
   resolution: "@svgr/babel-plugin-transform-svg-component@npm:8.0.0"
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/86ca139c0be0e7df05f103c5f10874387ada1434ca0286584ba9cd367c259d74bf9c86700b856449f46cf674bd6f0cf18f8f034f6d3f0e2ce5e5435c25dbff4b
-  languageName: node
-  linkType: hard
-
-"@svgr/babel-plugin-transform-svg-component@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/babel-plugin-transform-svg-component@npm:5.5.0"
-  checksum: 10/fcd5502c69303550eae36cdd659629799159d3598e57b06432a08aa7112ff5b6d6a3a0f8d3ce90c44754b8d333c2f5515724ad580cd8bdb6885295142039b0eb
   languageName: node
   linkType: hard
 
@@ -7866,33 +7878,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 10/3a67930f080b8891e1e8e2595716b879c944d253112bae763dce59807ba23454d162216c8d66a0a0e3d4f38a649ecd6c387e545d1e1261dd69a68e9a3392ee08
-  languageName: node
-  linkType: hard
-
-"@svgr/babel-preset@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/babel-preset@npm:5.5.0"
-  dependencies:
-    "@svgr/babel-plugin-add-jsx-attribute": "npm:^5.4.0"
-    "@svgr/babel-plugin-remove-jsx-attribute": "npm:^5.4.0"
-    "@svgr/babel-plugin-remove-jsx-empty-expression": "npm:^5.0.1"
-    "@svgr/babel-plugin-replace-jsx-attribute-value": "npm:^5.0.1"
-    "@svgr/babel-plugin-svg-dynamic-title": "npm:^5.4.0"
-    "@svgr/babel-plugin-svg-em-dimensions": "npm:^5.4.0"
-    "@svgr/babel-plugin-transform-react-native-svg": "npm:^5.4.0"
-    "@svgr/babel-plugin-transform-svg-component": "npm:^5.5.0"
-  checksum: 10/90185ff3761b942e806eb127e2802e9b161f8c471de510c0d989aa9c1669f1328c258a1bf1924c8977faddd534107c36e8f49e416088b30c721f9919aea12255
-  languageName: node
-  linkType: hard
-
-"@svgr/core@npm:5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/core@npm:5.5.0"
-  dependencies:
-    "@svgr/plugin-jsx": "npm:^5.5.0"
-    camelcase: "npm:^6.2.0"
-    cosmiconfig: "npm:^7.0.0"
-  checksum: 10/fc8621b8542052cdc38c031884d970ea25b325ae1ac4bebf72fba6351052ff13f490c029b6bb0d59f83d02ebbda9df938f94ca3bd442b731cf2c2f5e7adca561
   languageName: node
   linkType: hard
 
@@ -7919,15 +7904,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@svgr/hast-util-to-babel-ast@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/hast-util-to-babel-ast@npm:5.5.0"
-  dependencies:
-    "@babel/types": "npm:^7.12.6"
-  checksum: 10/a46c77510d0e5b08cf910959fb2199155932bcbf2a3280b737e2be2f8f7526abb70ebd790fe61be97e652008bc6a8e90b2e55dd8d61aaaae9fc69d3c104b4836
-  languageName: node
-  linkType: hard
-
 "@svgr/plugin-jsx@npm:8.1.0":
   version: 8.1.0
   resolution: "@svgr/plugin-jsx@npm:8.1.0"
@@ -7939,18 +7915,6 @@ __metadata:
   peerDependencies:
     "@svgr/core": "*"
   checksum: 10/0418a9780753d3544912ee2dad5d2cf8d12e1ba74df8053651b3886aeda54d5f0f7d2dece0af5e0d838332c4f139a57f0dabaa3ca1afa4d1a765efce6a7656f2
-  languageName: node
-  linkType: hard
-
-"@svgr/plugin-jsx@npm:^5.5.0":
-  version: 5.5.0
-  resolution: "@svgr/plugin-jsx@npm:5.5.0"
-  dependencies:
-    "@babel/core": "npm:^7.12.3"
-    "@svgr/babel-preset": "npm:^5.5.0"
-    "@svgr/hast-util-to-babel-ast": "npm:^5.5.0"
-    svg-parser: "npm:^2.0.2"
-  checksum: 10/e053f8dd6bfcd72377b432dd5b1db3c89d503d29839639a87f85b597a680d0b69e33a4db376f5a1074a89615f7157cd36f63f94bdb4083a0fd5bbe918c7fcb9b
   languageName: node
   linkType: hard
 
@@ -8894,20 +8858,25 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/icons@workspace:ui/icons"
   dependencies:
-    "@atls-ui-generators/icons": "npm:0.0.16"
+    "@atls-ui-generators/icons": "npm:1.0.4"
     "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:^18.3.3"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    clsx: "npm:2.1.1"
     glob: "npm:11.0.0"
     glob-promise: "npm:6.0.7"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
-    "@atls-ui-generators/icons": 0.0.16
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    clsx: "*"
     glob: "*"
     glob-promise: "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -9015,21 +8984,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/layout@workspace:ui/layout"
   dependencies:
-    "@atls-ui-parts/layout": "npm:0.1.1"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
+    "@atls-ui-parts/layout": "npm:1.0.2"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -9284,21 +9251,19 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/text@workspace:ui/text"
   dependencies:
-    "@atls-ui-parts/text": "npm:0.1.3"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
+    "@atls-ui-parts/text": "npm:1.0.2"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -9400,6 +9365,33 @@ __metadata:
     styled-system: "*"
   languageName: unknown
   linkType: soft
+
+"@vanilla-extract/css@npm:1.16.1":
+  version: 1.16.1
+  resolution: "@vanilla-extract/css@npm:1.16.1"
+  dependencies:
+    "@emotion/hash": "npm:^0.9.0"
+    "@vanilla-extract/private": "npm:^1.0.6"
+    css-what: "npm:^6.1.0"
+    cssesc: "npm:^3.0.0"
+    csstype: "npm:^3.0.7"
+    dedent: "npm:^1.5.3"
+    deep-object-diff: "npm:^1.1.9"
+    deepmerge: "npm:^4.2.2"
+    lru-cache: "npm:^10.4.3"
+    media-query-parser: "npm:^2.0.2"
+    modern-ahocorasick: "npm:^1.0.0"
+    picocolors: "npm:^1.0.0"
+  checksum: 10/0301a4cf0ca874acc94f264686209c3dce60bad468421515b3f6ccde57a92c0d3997e772d19d9a924e34395e1e1fe890fe8447ed421e3d0ee01175231d2fc663
+  languageName: node
+  linkType: hard
+
+"@vanilla-extract/private@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@vanilla-extract/private@npm:1.0.6"
+  checksum: 10/50463610da0fc9069b3e2b33b6222ea2f005487432db9110ea430e474e29b3b756bcd1fffd47b87536358829d47bce6510398f050b5f6de07ee1e4e92eeade5a
+  languageName: node
+  linkType: hard
 
 "@webassemblyjs/ast@npm:1.14.1, @webassemblyjs/ast@npm:^1.12.1":
   version: 1.14.1
@@ -10933,6 +10925,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clsx@npm:2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10/cdfb57fa6c7649bbff98d9028c2f0de2f91c86f551179541cf784b1cfdc1562dcb951955f46d54d930a3879931a980e32a46b598acaea274728dbe068deca919
+  languageName: node
+  linkType: hard
+
 "cluster-key-slot@npm:^1.1.0":
   version: 1.1.2
   resolution: "cluster-key-slot@npm:1.1.2"
@@ -11291,6 +11290,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-what@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "css-what@npm:6.1.0"
+  checksum: 10/c67a3a2d0d81843af87f8bf0a4d0845b0f952377714abbb2884e48942409d57a2110eabee003609d02ee487b054614bdfcfc59ee265728ff105bd5aa221c1d0e
+  languageName: node
+  linkType: hard
+
+"cssesc@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "cssesc@npm:3.0.0"
+  bin:
+    cssesc: bin/cssesc
+  checksum: 10/0e161912c1306861d8f46e1883be1cbc8b1b2879f0f509287c0db71796e4ddfb97ac96bdfca38f77f452e2c10554e1bb5678c99b07a5cf947a12778f73e47e12
+  languageName: node
+  linkType: hard
+
 "cssom@npm:^0.5.0":
   version: 0.5.0
   resolution: "cssom@npm:0.5.0"
@@ -11314,7 +11329,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:3.1.3, csstype@npm:^3.0.2":
+"csstype@npm:3.1.3, csstype@npm:^3.0.2, csstype@npm:^3.0.7":
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10/f593cce41ff5ade23f44e77521e3a1bcc2c64107041e1bf6c3c32adc5187d0d60983292fda326154d20b01079e24931aa5b08e4467cc488b60bb1e7f6d478ade
@@ -11451,7 +11466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dedent@npm:^1.0.0":
+"dedent@npm:^1.0.0, dedent@npm:^1.5.3":
   version: 1.5.3
   resolution: "dedent@npm:1.5.3"
   peerDependencies:
@@ -11474,6 +11489,13 @@ __metadata:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: 10/ec12d074aef5ae5e81fa470b9317c313142c9e8e2afe3f8efa124db309720db96d1d222b82b84c834e5f87e7a614b44a4684b6683583118b87c833b3be40d4d8
+  languageName: node
+  linkType: hard
+
+"deep-object-diff@npm:^1.1.9":
+  version: 1.1.9
+  resolution: "deep-object-diff@npm:1.1.9"
+  checksum: 10/b9771cc1ca08a34e408309eaab967bd2ab697684abdfa1262f4283ced8230a9ace966322f356364ff71a785c6e9cc356b7596582e900da5726e6b87d4b2a1463
   languageName: node
   linkType: hard
 
@@ -13007,6 +13029,26 @@ __metadata:
     react-dom:
       optional: true
   checksum: 10/0cbbe691961e523b21002bd85cd759f451434bdd91c65055503863a820137d9e1c2d92daf4a4e2e3289c5f59a52a87d6af0e31f5585ec1299659ee1b13da476b
+  languageName: node
+  linkType: hard
+
+"framer-motion@npm:11.2.11":
+  version: 11.2.11
+  resolution: "framer-motion@npm:11.2.11"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    "@emotion/is-prop-valid": "*"
+    react: ^18.0.0
+    react-dom: ^18.0.0
+  peerDependenciesMeta:
+    "@emotion/is-prop-valid":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10/2969da7c39bbbd206d5e2cd321fcb1bf8f8c5c13706b85779c4480fa63d0429063467374b896f94c04ca2594cbff96b9845c87ba5c052d90335d52d0cb554086
   languageName: node
   linkType: hard
 
@@ -15570,7 +15612,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0":
+"lru-cache@npm:^10.0.1, lru-cache@npm:^10.2.0, lru-cache@npm:^10.4.3":
   version: 10.4.3
   resolution: "lru-cache@npm:10.4.3"
   checksum: 10/e6e90267360476720fa8e83cc168aa2bf0311f3f2eea20a6ba78b90a885ae72071d9db132f40fda4129c803e7dcec3a6b6a6fbb44ca90b081630b810b5d6a41a
@@ -15707,6 +15749,15 @@ __metadata:
   version: 0.2.2
   resolution: "map-cache@npm:0.2.2"
   checksum: 10/3067cea54285c43848bb4539f978a15dedc63c03022abeec6ef05c8cb6829f920f13b94bcaf04142fc6a088318e564c4785704072910d120d55dbc2e0c421969
+  languageName: node
+  linkType: hard
+
+"media-query-parser@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "media-query-parser@npm:2.0.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.12.5"
+  checksum: 10/9dff3ed135149944717a8687567f4fda1d39d28637f265c6ce7efe5ed55cd88ed49136c912ee0c7f3a6e5debc50b1ff969db609d862318f1af97f48752b08b0b
   languageName: node
   linkType: hard
 
@@ -16031,6 +16082,13 @@ __metadata:
   dependencies:
     obliterator: "npm:^2.0.1"
   checksum: 10/d7b8a85767072389502e8235e251ddb3be7fcd173f41b20f6d848e21a0d569f0c2ca0992b20f204fc23b112a4dd3fcc25c00de65406214912a62a1000c21fab9
+  languageName: node
+  linkType: hard
+
+"modern-ahocorasick@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "modern-ahocorasick@npm:1.1.0"
+  checksum: 10/299d19120cd9b4944b546d3914acbaf388c5bf606a2aeb2682c054e492ddf2aaf0096630e5cdda4c069f13394b8ebe9ccfa733be40fe50b1d9c031f0de6213d8
   languageName: node
   linkType: hard
 
@@ -17581,6 +17639,26 @@ __metadata:
   version: 4.0.4
   resolution: "quick-format-unescaped@npm:4.0.4"
   checksum: 10/591eca457509a99368b623db05248c1193aa3cedafc9a077d7acab09495db1231017ba3ad1b5386e5633271edd0a03b312d8640a59ee585b8516a42e15438aa7
+  languageName: node
+  linkType: hard
+
+"rainbow-sprinkles@npm:0.17.2":
+  version: 0.17.2
+  resolution: "rainbow-sprinkles@npm:0.17.2"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+  checksum: 10/9ca84affe20f70f3797cd69d3edace115017e92e2294f6d72fe4862703efe2364ff91f1f5e40c6d14b9096c7556d733633785c6747d9fad2c65e4e2ad8f17c06
+  languageName: node
+  linkType: hard
+
+"rainbow-sprinkles@npm:0.17.3":
+  version: 0.17.3
+  resolution: "rainbow-sprinkles@npm:0.17.3"
+  peerDependencies:
+    "@vanilla-extract/css": ^1
+    "@vanilla-extract/dynamic": ^2
+  checksum: 10/63c668a58032a6914974e4e13c587338f70c1cd76d388ba133f920112c7f6e002b3ed6d98f6dc2c045f5522eafd78dc58aa6103b520150dcb8ca23b3b8744ce0
   languageName: node
   linkType: hard
 
@@ -19309,7 +19387,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svg-parser@npm:^2.0.2, svg-parser@npm:^2.0.4":
+"svg-parser@npm:^2.0.4":
   version: 2.0.4
   resolution: "svg-parser@npm:2.0.4"
   checksum: 10/ec196da6ea21481868ab26911970e35488361c39ead1c6cdd977ba16c885c21a91ddcbfd113bfb01f79a822e2a751ef85b2f7f95e2cb9245558ebce12c34af1f
