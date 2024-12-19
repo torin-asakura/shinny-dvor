@@ -1,15 +1,13 @@
-import type { WrapperProps }                           from './wrapper.interfaces.js'
+import type { WrapperProps } from './wrapper.interfaces.js'
 
-import { memo }                                        from 'react'
-import React                                          from 'react'
+import { memo }              from 'react'
+import React                 from 'react'
 
-import { Layout }                                      from '@ui/layout'
+import { Layout }            from '@ui/layout'
 
-import { wrapperActive }                               from './wrapper.css.js'
-
-import { wrapperBase }                  from './wrapper.css.js'
-
-import { wrapperInactive } from './wrapper.css.js'
+import { wrapperActive }     from './wrapper.css.js'
+import { wrapperBase }       from './wrapper.css.js'
+import { wrapperInactive }   from './wrapper.css.js'
 
 const Wrapper = memo(({ children, active }: WrapperProps) => (
   <>

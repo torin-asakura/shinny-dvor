@@ -1,8 +1,7 @@
-import { style }                       from '@vanilla-extract/css'
+import { style }                 from '@vanilla-extract/css'
 
-import { BREAKPOINT_CONDITIONS }       from '@ui/theme'
-
-import { vars } from '@ui/theme'
+import { BREAKPOINT_CONDITIONS } from '@ui/theme'
+import { vars }                  from '@ui/theme'
 
 export const baseContainerStyles = style({
   borderRadius: vars.radii.little,
