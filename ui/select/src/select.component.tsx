@@ -46,7 +46,10 @@ const Select = memo(({
         <Arrow isOpen={isOpen} />
       </Button>
       {renderMenu(
-        <Menu {...menuProps}>
+        <Menu
+          style={{ width: menuProps.triggerBounds ? menuProps.triggerBounds?.width : 'auto' }}
+          {...menuProps}
+        >
           {items.map((item) => (
             <MenuItem
               selectedItems={selectedItems}

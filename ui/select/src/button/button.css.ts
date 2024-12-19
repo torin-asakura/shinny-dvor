@@ -7,7 +7,7 @@ export const baseStyles = style({
   display: 'flex',
   position: 'relative',
   width: '100%',
-  justifyContent: 'flex-start',
+  justifyContent: 'space-between',
 })
 
 export const appearanceStyles = styleVariants({
