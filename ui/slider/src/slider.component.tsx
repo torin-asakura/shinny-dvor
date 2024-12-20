@@ -1,11 +1,11 @@
-import { Swiper }                 from '@atls-ui-parts/swiper'
-// @ts-expect-error
-import { Keyboard }               from 'swiper/modules'
-// @ts-expect-error
-import { Navigation }             from 'swiper/modules'
-import { memo }                    from 'react'
+import { Swiper }            from '@atls-ui-parts/swiper'
 import { PropsWithChildren } from 'react'
-import React                      from 'react'
+// @ts-expect-error
+import { Keyboard }          from 'swiper/modules'
+// @ts-expect-error
+import { Navigation }        from 'swiper/modules'
+import { memo }              from 'react'
+import React                 from 'react'
 
 export const Slider = memo(({ children }: PropsWithChildren) => (
   <Swiper
