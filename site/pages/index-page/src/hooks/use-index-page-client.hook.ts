@@ -13,7 +13,6 @@ export const useIndexPageClient: UseIndexPageClientType = ({
   servicesDataToReplace,
 }) => {
   const scrollHandler = (): void => {
-    console.log(headerRef.current)
     const y = headerRef!.current!.getBoundingClientRect()
     setScrollY(y.y)
   }
