@@ -10,6 +10,7 @@ const responsiveContainerProperties = defineProperties({
   dynamicProperties: {
     width: true,
     height: true,
+
     maxHeight: true,
     minWidth: true,
     minHeight: true,
@@ -37,10 +38,14 @@ const responsiveContainerProperties = defineProperties({
     flexShrink: true,
   },
   staticProperties: {
+    width: vars.spaces,
+    height: vars.spaces,
+
     backgroundColor: vars.colors,
     borderRadius: vars.radii,
     border: vars.borders,
     boxShadow: vars.shadows,
+    gap: vars.spaces,
   },
 })
 
