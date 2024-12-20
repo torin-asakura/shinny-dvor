@@ -1,9 +1,8 @@
-import { style }                                   from '@vanilla-extract/css'
-import { createRainbowSprinkles }                   from 'rainbow-sprinkles'
+import { style }                  from '@vanilla-extract/css'
+import { createRainbowSprinkles } from 'rainbow-sprinkles'
+import { defineProperties }       from 'rainbow-sprinkles'
 
-import { defineProperties } from 'rainbow-sprinkles'
-
-import { vars }                                    from '@ui/theme'
+import { vars }                   from '@ui/theme'
 
 export const menuBase = style({
   display: 'flex',
