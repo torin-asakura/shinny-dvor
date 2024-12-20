@@ -80,6 +80,30 @@ const appearanceTertiaryDisabledStyles = createAppearanceStyles({
   borderColor: vars.colors['button.tertiary.disabled.border'],
 })
 
+const appearanceInverseDefaultStyles = createAppearanceStyles({
+  fontColor: vars.colors['button.inverse.default.font'],
+  backgroundColor: vars.colors['button.inverse.default.background'],
+  borderColor: vars.colors['button.inverse.default.border'],
+})
+
+const appearanceInverseHoverStyles = createAppearanceStyles({
+  fontColor: vars.colors['button.inverse.hover.font'],
+  backgroundColor: vars.colors['button.inverse.hover.background'],
+  borderColor: vars.colors['button.inverse.hover.border'],
+})
+
+const appearanceInversePressedStyles = createAppearanceStyles({
+  fontColor: vars.colors['button.inverse.press.font'],
+  backgroundColor: vars.colors['button.inverse.press.background'],
+  borderColor: vars.colors['button.inverse.press.border'],
+})
+
+const appearanceInverseDisabledStyles = createAppearanceStyles({
+  fontColor: vars.colors['button.inverse.disabled.font'],
+  backgroundColor: vars.colors['button.inverse.disabled.background'],
+  borderColor: vars.colors['button.inverse.disabled.border'],
+})
+
 const appearanceLinkDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['button.link.default.font'],
   backgroundColor: vars.colors['button.link.default.background'],
@@ -127,6 +151,7 @@ export const appearanceVariant = {
   primary: appearancePrimaryDefaultStyles,
   secondary: appearanceSecondaryDefaultStyles,
   tertiary: appearanceTertiaryDefaultStyles,
+  inverse: appearanceInverseDefaultStyles,
   link: appearanceLinkDefaultStyles,
   size: appearanceSizeDefaultStyles,
 }
@@ -136,6 +161,7 @@ export const appearanceHover = {
   primaryHover: appearancePrimaryHoverStyles,
   secondaryHover: appearanceSecondaryHoverStyles,
   tertiaryHover: appearanceTertiaryHoverStyles,
+  inverseHover: appearanceInverseHoverStyles,
   linkHover: appearanceLinkHoverStyles,
   sizeHover: appearanceSizeHoverStyles,
 }
@@ -145,6 +171,7 @@ export const appearancePressed = {
   primaryPressed: appearancePrimaryPressedStyles,
   secondaryPressed: appearanceSecondaryPressedStyles,
   tertiaryPressed: appearanceTertiaryPressedStyles,
+  inversePressed: appearanceInversePressedStyles,
   linkPressed: appearanceLinkPressedStyles,
   sizePressed: appearanceSizePressedStyles,
 }
@@ -154,6 +181,7 @@ export const appearanceDisabled = {
   primaryDisabled: appearancePrimaryDisabledStyles,
   secondaryDisabled: appearanceSecondaryDisabledStyles,
   tertiaryDisabled: appearanceTertiaryDisabledStyles,
+  inverseDisabled: appearanceInverseDisabledStyles,
   sizeDisabled: appearanceSizeDisabledStyles,
   linkDisabled: appearanceLinkPressedStyles,
 }
