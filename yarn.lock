@@ -9070,7 +9070,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*, @types/prop-types@npm:^15":
+"@types/prop-types@npm:*":
   version: 15.7.14
   resolution: "@types/prop-types@npm:15.7.14"
   checksum: 10/d0c5407b9ccc3dd5fae0ccf9b1007e7622ba5e6f1c18399b4f24dff33619d469da4b9fa918a374f19dc0d9fe6a013362aab0b844b606cfc10676efba3f5f736d
@@ -9351,25 +9351,23 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/accordion@workspace:ui/accordion"
   dependencies:
-    "@emotion/css": "npm:11.13.0"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
     "@ui/condition": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 
@@ -9769,13 +9767,16 @@ __metadata:
     "@vanilla-extract/css": "npm:1.16.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     "@vanilla-extract/recipes": "npm:0.5.2"
+    clsx: "npm:2.1.1"
     downshift: "npm:9.0.7"
+    framer-motion: "npm:11.2.11"
     rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
+    clsx: "*"
     downshift: "*"
     rainbow-sprinkles: "*"
     react: "*"
@@ -9789,37 +9790,25 @@ __metadata:
   dependencies:
     "@atls-ui-parts/dom": "npm:1.0.1"
     "@atls-ui-parts/swiper": "npm:1.0.2"
-    "@emotion/css": "npm:11.13.0"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
-    "@types/prop-types": "npm:^15"
     "@types/react": "npm:18.3.3"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
     "@ui/condition": "workspace:*"
-    "@ui/divider": "workspace:*"
     "@ui/icons": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/text": "workspace:*"
-    "@ui/utils": "workspace:*"
-    framer-motion: "npm:11.3.22"
-    prop-types: "npm:15.8.1"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
     react: "npm:18.3.1"
     react-before-after-slider: "npm:1.0.4"
     react-compare-image: "npm:3.4.0"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
     swiper: "npm:9.4.1"
   peerDependencies:
-    "@emotion/css": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
-    framer-motion: "*"
-    prop-types: "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     react: "*"
     react-before-after-slider: "*"
     react-dom: "*"
-    styled-system: "*"
     swiper: "*"
   languageName: unknown
   linkType: soft
@@ -9888,13 +9877,16 @@ __metadata:
     "@atls-ui-parts/text": "npm:1.0.2"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
+    "@ui/theme": "workspace:*"
     "@vanilla-extract/css": "npm:1.16.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown
@@ -9912,6 +9904,7 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@types/styled-system": "npm:5.1.22"
     "@vanilla-extract/css": "npm:1.16.1"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     remove: "npm:0.1.5"
@@ -18843,7 +18836,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:15.8.1, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
