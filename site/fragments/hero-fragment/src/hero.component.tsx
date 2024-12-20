@@ -1,8 +1,8 @@
 /* eslint-disable */
 
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -16,12 +16,12 @@ import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
 import { Layout }          from '@ui/layout'
 import { Link }            from '@ui/link'
-import { SocialLinksDark } from '@ui/social-links'
+import { SocialLinks }     from '@ui/social-links'
 import { Text }            from '@ui/text'
 import { extractFragment } from '@globals/data'
 import { screenVar }       from '@store/booking'
 
-const Hero = forwardRef((
+export const Hero = forwardRef((
   {
     uiData,
     fragmentsData,
@@ -129,7 +129,7 @@ const Hero = forwardRef((
             </Button>
           </Layout>
           <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
-          <Divider backgroundColor='$milkGray' />
+          <Divider color='$milkGray' />
           <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
           <Box width='100%'>
             <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
@@ -156,9 +156,7 @@ const Hero = forwardRef((
                 </Link>
               </Box>
               <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
-              <Box width={96} justifyContent='flex-end'>
-                <SocialLinksDark linkTelegram={linkTelegram} linkVk={linkVk} />
-              </Box>
+              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} variant='dark' />
             </Row>
           </Box>
           <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
@@ -168,5 +166,3 @@ const Hero = forwardRef((
     </>
   )
 })
-
-export { Hero }

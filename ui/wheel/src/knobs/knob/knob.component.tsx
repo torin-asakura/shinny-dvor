@@ -1,9 +1,8 @@
+import type { KnobProps } from './knob.interface.js'
 import type { FC }        from 'react'
 
-import type { KnobProps } from './knob.interface.js'
-
-import { useState }       from 'react'
 import React              from 'react'
+import { useState }       from 'react'
 
 import { Button }         from '@ui/button'
 import { Card }           from '@ui/card'
@@ -92,7 +91,7 @@ export const Knob: FC<KnobProps & Sprinkles> = ({ text, ...props }) => {
                       setCard(false)
                     }}
                   >
-                    <CloseIcon color='darkGray' width={24} height={24} />
+                    <CloseIcon color='$darkGray' width={24} height={24} />
                   </Button>
                 </Layout>
               </Row>

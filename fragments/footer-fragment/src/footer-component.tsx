@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import type { FooterProps } from './footer.interface.js'
-
-import { memo }             from 'react'
 import React                from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -56,7 +55,7 @@ export const Footer: FC<FooterProps> = memo(({
   return (
     <Box width='100%' marginTop='auto'>
       <Column width='100%' alignItems='center'>
-        <Divider backgroundColor='gray' />
+        <Divider color='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} width='100%'>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
           <Column width='100%'>
@@ -102,7 +101,7 @@ export const Footer: FC<FooterProps> = memo(({
           </Column>
           <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
         </Box>
-        <Divider backgroundColor='$gray' />
+        <Divider color='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
           <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
           <Column width='100%'>
@@ -124,7 +123,7 @@ export const Footer: FC<FooterProps> = memo(({
                     </Layout>
                     <Layout flexBasis={12} flexShrink={0} />
                     <Layout>
-                      <Divider direction='vertical' backgroundColor='darkGray' />
+                      <Divider direction='vertical' color='$darkGray' />
                     </Layout>
                     <Layout flexBasis={12} flexShrink={0} />
                     <Layout>
@@ -171,7 +170,7 @@ export const Footer: FC<FooterProps> = memo(({
                 </Layout>
                 <Layout flexBasis={12} flexShrink={0} />
                 <Layout>
-                  <Divider direction='vertical' backgroundColor='darkGray' />
+                  <Divider direction='vertical' color='$darkGray' />
                 </Layout>
                 <Layout flexBasis={12} flexShrink={0} />
                 <Layout>
