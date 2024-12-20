@@ -3,47 +3,18 @@ import type { FC }               from 'react'
 
 import React                     from 'react'
 
-import { Button }                from '@ui/button'
-import { VkIcon }                from '@ui/icons'
 import { TelegramIcon }          from '@ui/icons'
+import { VkIcon }                from '@ui/icons'
 import { Box }                   from '@ui/layout'
-import { Layout }                from '@ui/layout'
-import { Link }                  from '@ui/link'
-import { useHover }              from '@ui/utils'
 
-export const SocialLinks: FC<SocialLinksProps> = ({ linkTelegram, linkVk }) => {
-  const [hoverTelegram, hoverTelegramProps] = useHover()
-  const [hoverVk, hoverVkProps] = useHover()
+import { IconPart }              from './icon-part/index.js'
 
+export const SocialLinks: FC<SocialLinksProps> = ({ linkTelegram, linkVk, variant }) => {
+  const isDark = variant === 'dark'
   return (
-    <Box width='100%' justifyContent='flex-end'>
-      <Box
-        width={48}
-        height={48}
-        borderRadius='$large.semiSmall'
-        overflow='hidden'
-        {...hoverTelegramProps}
-      >
-        <Link fill href={linkTelegram} target='_blank'>
-          <Button size='fill' variant='tertiary'>
-            <TelegramIcon width={36} height={36} color={hoverTelegram ? 'white' : 'black'} />
-          </Button>
-        </Link>
-      </Box>
-      <Layout flexBasis={16} flexShrink={0} />
-      <Box
-        width={48}
-        height={48}
-        borderRadius='$large.semiSmall'
-        overflow='hidden'
-        {...hoverVkProps}
-      >
-        <Link fill href={linkVk} target='_blank'>
-          <Button size='fill' variant='tertiary'>
-            <VkIcon width={28} height={28} color={hoverVk ? 'white' : 'black'} />
-          </Button>
-        </Link>
-      </Box>
+    <Box justifyContent='flex-end' gap='$g16'>
+      <IconPart Icon={TelegramIcon} href={linkTelegram} size={36} dark={isDark} />
+      <IconPart Icon={VkIcon} href={linkVk} dark={isDark} />
     </Box>
   )
 }
