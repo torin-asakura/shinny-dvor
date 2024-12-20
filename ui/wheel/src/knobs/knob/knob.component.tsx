@@ -67,7 +67,7 @@ export const Knob: FC<KnobProps & Sprinkles> = ({ text, ...props }) => {
           </OuterCircle>
         </Layout>
         <Card
-          active={card}
+          opened={card}
           onClose={(): void => {
             setCard(false)
             setActive(false)
@@ -84,14 +84,14 @@ export const Knob: FC<KnobProps & Sprinkles> = ({ text, ...props }) => {
                 <Layout flexBasis={8} flexShrink={0} />
                 <Layout alignItems='flex-start'>
                   <Button
-                    color='transparent'
+                    variant='transparent'
                     size='ghost'
                     onClick={(): void => {
                       setActive(false)
                       setCard(false)
                     }}
                   >
-                    <CloseIcon color='$darkGray' width={24} height={24} />
+                    <CloseIcon color='darkGray' width={24} height={24} />
                   </Button>
                 </Layout>
               </Row>
