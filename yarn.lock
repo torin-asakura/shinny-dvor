@@ -508,6 +508,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@atls-utils/use-popover@npm:1.0.3":
+  version: 1.0.3
+  resolution: "@atls-utils/use-popover@npm:1.0.3"
+  dependencies:
+    react-laag: "npm:2.0.5"
+  peerDependencies:
+    react: "*"
+    react-dom: "*"
+  checksum: 10/57713ded1dd6b50afb212d4d0af348d4e057c33aa11a8eec1a9cf0bd8f2467914f533c2170bc51b8b01408bcdb19884231f69788e62ed0bbf728c3e1e0a1c4e1
+  languageName: node
+  linkType: hard
+
 "@atls-utils/use-select@npm:1.0.1":
   version: 1.0.1
   resolution: "@atls-utils/use-select@npm:1.0.1"
@@ -9950,6 +9962,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/utils@workspace:ui/utils"
   dependencies:
+    "@atls-utils/use-hover": "npm:1.0.1"
+    "@atls-utils/use-popover": "npm:1.0.3"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
     react: "npm:18.3.1"

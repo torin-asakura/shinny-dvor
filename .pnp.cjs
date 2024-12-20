@@ -1799,6 +1799,33 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@atls-utils/use-popover", [\
+      ["npm:1.0.3", {\
+        "packageLocation": "../.yarn/berry/cache/@atls-utils-use-popover-npm-1.0.3-76686c7761-10.zip/node_modules/@atls-utils/use-popover/",\
+        "packageDependencies": [\
+          ["@atls-utils/use-popover", "npm:1.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:044a51b00ea102a9f50e9b683e8f8f765031841da6d83414fd53a595bb1039cdf2e1d91094818fbf4a01e9b182d4d36c0da14f264f1921646e4a5982685ac22d#npm:1.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/@atls-utils-use-popover-virtual-fe360e9662/2/.yarn/berry/cache/@atls-utils-use-popover-npm-1.0.3-76686c7761-10.zip/node_modules/@atls-utils/use-popover/",\
+        "packageDependencies": [\
+          ["@atls-utils/use-popover", "virtual:044a51b00ea102a9f50e9b683e8f8f765031841da6d83414fd53a595bb1039cdf2e1d91094818fbf4a01e9b182d4d36c0da14f264f1921646e4a5982685ac22d#npm:1.0.3"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
+          ["react-laag", "virtual:1b1ef149da45aa70a0b43301f6b3273283c80986e32b908457a67e703df2a442e16b80e71f2ba9e6fa7e21a020f77ed38454998693e8a766f214c614f78d1f6f#npm:2.0.5"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@atls-utils/use-select", [\
       ["npm:1.0.1", {\
         "packageLocation": "../.yarn/berry/cache/@atls-utils-use-select-npm-1.0.1-21fe9e57b1-10.zip/node_modules/@atls-utils/use-select/",\
@@ -19254,6 +19281,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ui-utils-virtual-9e1e7a6656/1/ui/utils/",\
         "packageDependencies": [\
           ["@ui/utils", "virtual:29896d760690d0f3e0a616d909d92d7c0af91beb38a7b0ebf6b4baf63aa7e9d028bb4f951657cb6535a7f8c96dd678cbc944328867732cb137fd8f8b4e7cf32d#workspace:ui/utils"],\
+          ["@atls-utils/use-hover", "virtual:968bb818fa320c861ad6a97805a5d94afddad3931927baf55bd30ac8bc4c0cf9286cc40457718c08a61165ff541809d17f853d5d3bfa5f6709c51e17bda983e6#npm:1.0.1"],\
+          ["@atls-utils/use-popover", "virtual:044a51b00ea102a9f50e9b683e8f8f765031841da6d83414fd53a595bb1039cdf2e1d91094818fbf4a01e9b182d4d36c0da14f264f1921646e4a5982685ac22d#npm:1.0.3"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-laag", null],\
@@ -19275,6 +19304,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@ui-utils-virtual-044a51b00e/1/ui/utils/",\
         "packageDependencies": [\
           ["@ui/utils", "virtual:7275470f820713902e5324143c7d02c2db8b3fe3dfde11481865f2a902374e342b80211a770a24078fc64737ca8636cc13d4054453d161aa0ab23e4847cb87f9#workspace:ui/utils"],\
+          ["@atls-utils/use-hover", "virtual:968bb818fa320c861ad6a97805a5d94afddad3931927baf55bd30ac8bc4c0cf9286cc40457718c08a61165ff541809d17f853d5d3bfa5f6709c51e17bda983e6#npm:1.0.1"],\
+          ["@atls-utils/use-popover", "virtual:044a51b00ea102a9f50e9b683e8f8f765031841da6d83414fd53a595bb1039cdf2e1d91094818fbf4a01e9b182d4d36c0da14f264f1921646e4a5982685ac22d#npm:1.0.3"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/react-laag", null],\
@@ -19295,6 +19326,8 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui/utils/",\
         "packageDependencies": [\
           ["@ui/utils", "workspace:ui/utils"],\
+          ["@atls-utils/use-hover", "virtual:968bb818fa320c861ad6a97805a5d94afddad3931927baf55bd30ac8bc4c0cf9286cc40457718c08a61165ff541809d17f853d5d3bfa5f6709c51e17bda983e6#npm:1.0.1"],\
+          ["@atls-utils/use-popover", "virtual:044a51b00ea102a9f50e9b683e8f8f765031841da6d83414fd53a595bb1039cdf2e1d91094818fbf4a01e9b182d4d36c0da14f264f1921646e4a5982685ac22d#npm:1.0.3"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["react", "npm:18.3.1"],\
