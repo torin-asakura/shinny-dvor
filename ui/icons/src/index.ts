@@ -1,3 +1,5 @@
+export * from '../icons.interfaces.js'
+
 export * from './ArrowDown.icon.js'
 export * from './ArrowLeft.icon.js'
 export * from './ArrowRight.icon.js'
