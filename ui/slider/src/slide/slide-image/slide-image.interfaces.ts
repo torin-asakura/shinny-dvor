@@ -1,22 +1,22 @@
-import {SwiperProps} from "@atls-ui-parts/swiper";
+import { SwiperProps } from '@atls-ui-parts/swiper'
 
 interface SlideData {
-    isActive: boolean
-    isVisible: boolean
-    isPrev: boolean
-    isNext: boolean
+  isActive: boolean
+  isVisible: boolean
+  isPrev: boolean
+  isNext: boolean
 }
 
 interface Swiper {
-    firstPhoto: {
-        sourceUrl: string
-    }
-    secondPhoto: {
-        sourceUrl: string
-    }
+  firstPhoto: {
+    sourceUrl: string
+  }
+  secondPhoto: {
+    sourceUrl: string
+  }
 }
 
 export interface SlideImageProps {
-    swiperSlide: SlideData,
-    image: Swiper
+  swiperSlide: SlideData
+  image: Swiper
 }
