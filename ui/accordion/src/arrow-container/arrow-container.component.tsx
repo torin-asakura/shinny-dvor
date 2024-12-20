@@ -1,11 +1,22 @@
-import type { ArrowContainerProps } from './arrow-container.interface.js'
+import type { ArrowContainerProps }                 from './arrow-container.interface.js'
 
-import styled                       from '@emotion/styled'
+import { forwardRef }                               from 'react'
+import React                                        from 'react'
 
-import { Box }                      from '@ui/layout'
+import { arrowBase }                                 from './arrow-container.css.js'
 
-import { baseContainerStyles }      from './arrow-container.styles.js'
+import { ArrowSprinkles }                 from './arrow-container.css.js'
 
-const ArrowContainer = styled(Box)<ArrowContainerProps>(baseContainerStyles)
+import { arrowSprinkles } from './arrow-container.css.js'
 
-export { ArrowContainer }
+export const ArrowContainer = forwardRef<HTMLDivElement, ArrowContainerProps & ArrowSprinkles>((
+  { isOpen, ...props },
+  ref
+) => {
+  const { className, style, otherProps } = arrowSprinkles({
+    transform: `rotate(${isOpen ? 180 : 0}deg)`,
+    ...props,
+  })
+
+  return <div ref={ref} className={`${arrowBase} ${className}`} style={style} {...otherProps} />
+})
