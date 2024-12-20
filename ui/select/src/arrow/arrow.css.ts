@@ -1,14 +1,17 @@
-import { style } from '@vanilla-extract/css'
+import { style }                  from '@vanilla-extract/css'
+import { createRainbowSprinkles } from 'rainbow-sprinkles'
+import { defineProperties }       from 'rainbow-sprinkles'
 
 export const baseContainerStyles = style({
   transition: '.35s',
   cursor: 'pointer',
 })
 
-export const openStyles = style({
-  transform: 'rotate(180deg)',
+const arrowDynamicProperties = defineProperties({
+  dynamicProperties: {
+    transform: true,
+  },
 })
 
-export const closedStyles = style({
-  transform: 'rotate(0deg)',
-})
+export const arrowSprinkles = createRainbowSprinkles(arrowDynamicProperties)
+export type ArrowSprinkles = Parameters<typeof arrowSprinkles>[0]

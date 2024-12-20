@@ -1,30 +1,32 @@
-import { PropsWithChildren } from 'react'
-import { forwardRef }        from 'react'
-import { memo }              from 'react'
-import React                 from 'react'
+import { forwardRef }     from 'react'
+import { memo }           from 'react'
+import React              from 'react'
 
-import { menuBase }          from './menu.css.js'
-import { menuSprinkles }     from './menu.css.js'
-import { menuShape }         from './menu.css.js'
-import { menuAppearance }    from './menu.css.js'
-
-interface MenuProps extends PropsWithChildren {
-  triggerBounds?: { width: number }
-}
+import { MenuSprinkles }  from './menu.css.js'
+import { MenuProps }      from './menu.interfaces.js'
+import { menuBase }       from './menu.css.js'
+import { menuSprinkles }  from './menu.css.js'
+import { menuShape }      from './menu.css.js'
+import { menuAppearance } from './menu.css.js'
 
 export const Menu = memo(
-  forwardRef<HTMLDivElement, MenuProps>(({ children, triggerBounds, ...props }, ref) => {
-    const dynamicClasses = menuSprinkles({
-      width: triggerBounds?.width || 'auto',
+  forwardRef<HTMLUListElement, MenuProps & MenuSprinkles>((
+    { children, triggerBounds, ...props },
+    ref
+  ) => {
+    const { className, style, otherProps } = menuSprinkles({
+      width: triggerBounds ? `${triggerBounds.width}px` : 'auto',
+      ...props,
     })
     return (
-      <div
+      <ul
         ref={ref}
-        className={`${menuBase} ${menuShape} ${menuAppearance} ${dynamicClasses}`}
-        {...props}
+        className={`${menuBase} ${menuShape} ${menuAppearance} ${className}`}
+        style={style}
+        {...otherProps}
       >
         {children}
-      </div>
+      </ul>
     )
   })
 )

@@ -12,6 +12,7 @@ export const menuBase = style({
   outline: 'none',
   padding: 0,
   zIndex: 9999,
+  width: "auto"
 })
 
 export const menuShape = style({
