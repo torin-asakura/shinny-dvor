@@ -10,9 +10,11 @@ export const menuBase = style({
   flexDirection: 'column',
   listStyleType: 'none',
   outline: 'none',
-  padding: 0,
   zIndex: 9999,
-  width: "auto"
+})
+
+export const menuListBase = style({
+  padding: 0,
 })
 
 export const menuShape = style({
@@ -26,11 +28,11 @@ export const menuAppearance = style({
   boxShadow: vars.shadows.shark,
 })
 
-const menuDynamicProperties = defineProperties({
+const menuListDynamicProperties = defineProperties({
   dynamicProperties: {
     width: true,
   },
 })
 
-export const menuSprinkles = createRainbowSprinkles(menuDynamicProperties)
-export type MenuSprinkles = Parameters<typeof menuSprinkles>[0]
+export const menuListSprinkles = createRainbowSprinkles(menuListDynamicProperties)
+export type MenuSprinkles = Parameters<typeof menuListSprinkles>[0]
