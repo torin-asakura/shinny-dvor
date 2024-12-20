@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { NavigationProps }     from './navigation.interface.js'
 import type { FC }                  from 'react'
 
-import type { NavigationProps }     from './navigation.interface.js'
-
-import { useState }                 from 'react'
 import React                        from 'react'
+import { useState }                 from 'react'
 
 import { Booking }                  from '@fragments/booking-fragment'
 import { INITIAL }                  from '@store/booking'
@@ -45,7 +44,6 @@ const Navigation: FC<NavigationProps> = ({
   return (
     <>
       <Layer
-        scroll
         visible={visible}
         onClose={() => {
           setVisible(true)

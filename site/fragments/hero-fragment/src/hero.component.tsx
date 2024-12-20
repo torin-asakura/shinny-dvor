@@ -60,7 +60,6 @@ export const Hero = forwardRef((
   return (
     <>
       <Layer
-        scroll
         visible={visible}
         onClose={() => {
           setVisible(true)

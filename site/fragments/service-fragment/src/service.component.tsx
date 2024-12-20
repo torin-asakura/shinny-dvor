@@ -105,7 +105,6 @@ const Service: FC<ServiceProps> = ({
   return (
     <>
       <Layer
-        scroll
         visible={visible}
         onClose={() => {
           setVisible(true)
