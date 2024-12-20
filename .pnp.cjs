@@ -18233,45 +18233,29 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@ui/layer", "virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:ui/layer"],\
           ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
-          ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
           ["@types/emotion__react", null],\
-          ["@types/emotion__styled", null],\
           ["@types/framer-motion", null],\
-          ["@types/global", null],\
-          ["@types/nanoid", null],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
-          ["@types/react-scrolllock", null],\
-          ["@types/styled-system", "npm:5.1.23"],\
-          ["@types/styled-tools", null],\
+          ["@types/vanilla-extract__css", null],\
           ["@ui/button", "virtual:7275470f820713902e5324143c7d02c2db8b3fe3dfde11481865f2a902374e342b80211a770a24078fc64737ca8636cc13d4054453d161aa0ab23e4847cb87f9#workspace:ui/button"],\
           ["@ui/layout", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:ui/layout"],\
-          ["@ui/theme", "virtual:b68620209e17172c72d2ccd5563eb0cc4dd4d6d9a9f0c9a853be2dd50f14af96cc3710cb0caa4df6e671aa96bf3c2757d9e836ddd61cf9337ee9588d69a43c7a#workspace:ui/theme"],\
+          ["@ui/theme", "virtual:9cd48aab692ba0ab8385132c5de2711a2f760cdcdcfe7c301544dcc03ce3c86a4a0e700ea5c09910dbc4ccea8bd7d8d89743d0dd822c8af11db7245a11b0ad91#workspace:ui/theme"],\
+          ["@vanilla-extract/css", "npm:1.16.1"],\
           ["framer-motion", "virtual:de199f8a4de479ed5a2ca4ddfd36d246cba19176c2a69bc1a1404e18c03e38728469b6f611939acd854f49d6f04f299d2fc85710cb84e787d6f9c95e6bf93465#npm:11.3.22"],\
-          ["global", "npm:4.4.0"],\
-          ["nanoid", "npm:5.0.7"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
-          ["react-scrolllock", "virtual:a37b24c4c5823622024122816e4d9142298187096e21cfad67e009762c2e61bbf475e0d0727c3c8d5d6298bf7a7a32d3f154bb16d56d105b7c035aa82fd3ea3a#npm:5.0.1"],\
-          ["styled-system", "npm:5.1.5"],\
-          ["styled-tools", "npm:1.7.2"]\
+          ["react-scrolllock", "virtual:a37b24c4c5823622024122816e4d9142298187096e21cfad67e009762c2e61bbf475e0d0727c3c8d5d6298bf7a7a32d3f154bb16d56d105b7c035aa82fd3ea3a#npm:5.0.1"]\
         ],\
         "packagePeers": [\
           "@emotion/react",\
-          "@emotion/styled",\
           "@types/emotion__react",\
-          "@types/emotion__styled",\
           "@types/framer-motion",\
-          "@types/global",\
-          "@types/nanoid",\
           "@types/react-dom",\
-          "@types/react-scrolllock",\
           "@types/react",\
-          "@types/styled-system",\
-          "@types/styled-tools",\
+          "@types/vanilla-extract__css",\
           "react-dom",\
-          "react",\
-          "styled-system"\
+          "react"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -18279,22 +18263,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./ui/layer/",\
         "packageDependencies": [\
           ["@ui/layer", "workspace:ui/layer"],\
-          ["@emotion/react", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
-          ["@emotion/styled", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:11.13.0"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
-          ["@types/styled-system", "npm:5.1.22"],\
           ["@ui/button", "virtual:7275470f820713902e5324143c7d02c2db8b3fe3dfde11481865f2a902374e342b80211a770a24078fc64737ca8636cc13d4054453d161aa0ab23e4847cb87f9#workspace:ui/button"],\
           ["@ui/layout", "virtual:fa4b14909a2454b8e2cf01845c2ece79a8b49976c6a5b7adcc217781c5337260b8b4afd79b3b6a320a1ed360d82cafa798fce11c9f4af82cee44cd0834c0266b#workspace:ui/layout"],\
-          ["@ui/theme", "virtual:b68620209e17172c72d2ccd5563eb0cc4dd4d6d9a9f0c9a853be2dd50f14af96cc3710cb0caa4df6e671aa96bf3c2757d9e836ddd61cf9337ee9588d69a43c7a#workspace:ui/theme"],\
+          ["@ui/theme", "virtual:00f8051cec0a545477e9af847ec972799362b59f0329907b9bf6daa5f9318202151f95b402c955338e2288ab7424c82410b1127faf4fd9f6b6904dcd8b9fd52a#workspace:ui/theme"],\
+          ["@vanilla-extract/css", "npm:1.16.1"],\
           ["framer-motion", "virtual:de199f8a4de479ed5a2ca4ddfd36d246cba19176c2a69bc1a1404e18c03e38728469b6f611939acd854f49d6f04f299d2fc85710cb84e787d6f9c95e6bf93465#npm:11.3.22"],\
-          ["global", "npm:4.4.0"],\
-          ["nanoid", "npm:5.0.7"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
-          ["react-scrolllock", "virtual:a37b24c4c5823622024122816e4d9142298187096e21cfad67e009762c2e61bbf475e0d0727c3c8d5d6298bf7a7a32d3f154bb16d56d105b7c035aa82fd3ea3a#npm:5.0.1"],\
-          ["styled-system", "npm:5.1.5"],\
-          ["styled-tools", "npm:1.7.2"]\
+          ["react-scrolllock", "virtual:a37b24c4c5823622024122816e4d9142298187096e21cfad67e009762c2e61bbf475e0d0727c3c8d5d6298bf7a7a32d3f154bb16d56d105b7c035aa82fd3ea3a#npm:5.0.1"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -22583,15 +22561,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["dom-walk", [\
-      ["npm:0.1.2", {\
-        "packageLocation": "../.yarn/berry/cache/dom-walk-npm-0.1.2-7d20a1a8d8-10.zip/node_modules/dom-walk/",\
-        "packageDependencies": [\
-          ["dom-walk", "npm:0.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["domelementtype", [\
       ["npm:2.3.0", {\
         "packageLocation": "../.yarn/berry/cache/domelementtype-npm-2.3.0-02de7cbfba-10.zip/node_modules/domelementtype/",\
@@ -25006,17 +24975,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/glob-to-regexp-npm-0.4.1-cd697e0fc7-10.zip/node_modules/glob-to-regexp/",\
         "packageDependencies": [\
           ["glob-to-regexp", "npm:0.4.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["global", [\
-      ["npm:4.4.0", {\
-        "packageLocation": "../.yarn/berry/cache/global-npm-4.4.0-888ee8033d-10.zip/node_modules/global/",\
-        "packageDependencies": [\
-          ["global", "npm:4.4.0"],\
-          ["min-document", "npm:2.19.0"],\
-          ["process", "npm:0.11.10"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -27965,16 +27923,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["min-document", [\
-      ["npm:2.19.0", {\
-        "packageLocation": "../.yarn/berry/cache/min-document-npm-2.19.0-458cdb3d84-10.zip/node_modules/min-document/",\
-        "packageDependencies": [\
-          ["min-document", "npm:2.19.0"],\
-          ["dom-walk", "npm:0.1.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["minimatch", [\
       ["npm:10.0.1", {\
         "packageLocation": "../.yarn/berry/cache/minimatch-npm-10.0.1-eabcc0d3a0-10.zip/node_modules/minimatch/",\
@@ -28276,13 +28224,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/nanoid-npm-3.3.8-d22226208b-10.zip/node_modules/nanoid/",\
         "packageDependencies": [\
           ["nanoid", "npm:3.3.8"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:5.0.7", {\
-        "packageLocation": "../.yarn/berry/cache/nanoid-npm-5.0.7-3671c17ef0-10.zip/node_modules/nanoid/",\
-        "packageDependencies": [\
-          ["nanoid", "npm:5.0.7"]\
         ],\
         "linkType": "HARD"\
       }]\

@@ -9627,33 +9627,22 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/layer@workspace:ui/layer"
   dependencies:
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
     "@ui/button": "workspace:*"
     "@ui/layout": "workspace:*"
     "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
     framer-motion: "npm:11.3.22"
-    global: "npm:4.4.0"
-    nanoid: "npm:5.0.7"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     react-scrolllock: "npm:5.0.1"
-    styled-system: "npm:5.1.5"
-    styled-tools: "npm:1.7.2"
   peerDependencies:
     "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
     framer-motion: "*"
-    global: "*"
-    nanoid: "*"
     react: "*"
     react-dom: "*"
-    react-scrolllock: "*"
-    styled-system: "*"
-    styled-tools: "*"
   languageName: unknown
   linkType: soft
 
@@ -12572,13 +12561,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom-walk@npm:^0.1.0":
-  version: 0.1.2
-  resolution: "dom-walk@npm:0.1.2"
-  checksum: 10/19eb0ce9c6de39d5e231530685248545d9cd2bd97b2cb3486e0bfc0f2a393a9addddfd5557463a932b52fdfcf68ad2a619020cd2c74a5fe46fbecaa8e80872f3
-  languageName: node
-  linkType: hard
-
 "domelementtype@npm:^2.3.0":
   version: 2.3.0
   resolution: "domelementtype@npm:2.3.0"
@@ -14656,16 +14638,6 @@ __metadata:
     minipass: "npm:^4.2.4"
     path-scurry: "npm:^1.6.1"
   checksum: 10/e5fa8a58adf53525bca42d82a1fad9e6800032b7e4d372209b80cfdca524dd9a7dbe7d01a92d7ed20d89c572457f12c250092bc8817cb4f1c63efefdf9b658c0
-  languageName: node
-  linkType: hard
-
-"global@npm:4.4.0":
-  version: 4.4.0
-  resolution: "global@npm:4.4.0"
-  dependencies:
-    min-document: "npm:^2.19.0"
-    process: "npm:^0.11.10"
-  checksum: 10/9c057557c8f5a5bcfbeb9378ba4fe2255d04679452be504608dd5f13b54edf79f7be1db1031ea06a4ec6edd3b9f5f17d2d172fb47e6c69dae57fd84b7e72b77f
   languageName: node
   linkType: hard
 
@@ -17167,15 +17139,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"min-document@npm:^2.19.0":
-  version: 2.19.0
-  resolution: "min-document@npm:2.19.0"
-  dependencies:
-    dom-walk: "npm:^0.1.0"
-  checksum: 10/4e45a0686c81cc04509989235dc6107e2678a59bb48ce017d3c546d7d9a18d782e341103e66c78081dd04544704e2196e529905c41c2550bca069b69f95f07c8
-  languageName: node
-  linkType: hard
-
 "minimatch@npm:^10.0.0":
   version: 10.0.1
   resolution: "minimatch@npm:10.0.1"
@@ -17464,15 +17427,6 @@ __metadata:
   version: 0.0.8
   resolution: "mute-stream@npm:0.0.8"
   checksum: 10/a2d2e79dde87e3424ffc8c334472c7f3d17b072137734ca46e6f221131f1b014201cc593b69a38062e974fb2394d3d1cb4349f80f012bbf8b8ac1b28033e515f
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:5.0.7":
-  version: 5.0.7
-  resolution: "nanoid@npm:5.0.7"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 10/25ab0b0cf9082ae6747f0f55cec930e6c1cc5975103aa3a5fda44be5720eff57d9b25a8a9850274bfdde8def964b49bf03def71c6aa7ad1cba32787819b79f60
   languageName: node
   linkType: hard
 
