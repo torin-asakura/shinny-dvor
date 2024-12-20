@@ -1,17 +1,17 @@
 /* eslint-disable */
 
+import type { InitialProps }        from './initial.interface.js'
 import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
-import type { InitialProps }        from './initial.interface.js'
-
 import { useReactiveVar }           from '@apollo/client'
+
+import React                        from 'react'
 import { useCallback }              from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
-import React                        from 'react'
 
 import { INVALID }                  from '@store/booking'
 import { SUCCESS }                  from '@store/booking'
@@ -199,13 +199,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={16} />
       <Layout display={['none', 'none', 'flex']}>
-        <Switch active={selectedCarBody}>
-          {carBodyItems.map((item: string) => (
-            <Item value={item} onSelect={setSelectedCarBody}>
-              {item}
-            </Item>
-          ))}
-        </Switch>
+        <Switch active={selectedCarBody} items={carBodyItems} onSelect={setSelectedCarBody} />
       </Layout>
       <Layout display={['flex', 'flex', 'none']}>
         <RadioList

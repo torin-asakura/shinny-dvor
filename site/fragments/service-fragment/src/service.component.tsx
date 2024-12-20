@@ -1,12 +1,11 @@
 /* eslint-disable */
 
+import type { ServiceProps }    from './service.interface.js'
 import type { FC }              from 'react'
 
-import type { ServiceProps }    from './service.interface.js'
-
+import React                    from 'react'
 import { useEffect }            from 'react'
 import { useState }             from 'react'
-import React                    from 'react'
 
 import { Booking }              from '@fragments/booking-fragment'
 import { Accordion }            from '@ui/accordion'
@@ -145,23 +144,14 @@ const Service: FC<ServiceProps> = ({
             <Condition match={variant === 'primary' || variant === 'tertiary'}>
               <Layout flexBasis={28} />
               <Layout display={['none', 'none', 'flex']}>
-                <Switch active={onCarBody}>
-                  {
-                    // @ts-expect-error null | undefined
-                    carBodies.map((item: string) => (
-                      <Item key={item} value={item} onSelect={setOnCarBody}>
-                        {item}
-                      </Item>
-                    ))
-                  }
-                </Switch>
+                <Switch active={onCarBody} items={carBodies} onSelect={setOnCarBody} />
               </Layout>
               <Layout flexBasis={24} />
               <Box
                 height={48}
                 alignItems='center'
-                borderRadius='default'
-                backgroundColor='fillGray'
+                borderRadius='$default'
+                backgroundColor='$fillGray'
                 display={['flex', 'flex', 'none']}
               >
                 <CarBodiesCarousel>
@@ -174,8 +164,8 @@ const Service: FC<ServiceProps> = ({
                         height='100%'
                         alignItems='center'
                         justifyContent='center'
-                        borderRadius='small'
-                        backgroundColor={onCarBody === item ? 'primaryBlue' : 'fillGray'}
+                        borderRadius='$small'
+                        backgroundColor={onCarBody === item ? '$primaryBlue' : '$fillGray'}
                       >
                         <Button
                           color='transparent'

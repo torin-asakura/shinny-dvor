@@ -1,4 +1,4 @@
 export interface ItemProps {
-  onSelect: (value: any) => any
+  onSelect: React.Dispatch<React.SetStateAction<string>>
   value: string
 }

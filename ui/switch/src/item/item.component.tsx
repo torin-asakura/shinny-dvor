@@ -1,7 +1,6 @@
+import type { ItemProps }         from './item.interface.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
-
-import type { ItemProps }         from './item.interface.js'
 
 import React                      from 'react'
 
@@ -11,7 +10,7 @@ import { Text }                   from '@ui/text'
 
 import { useActive }              from '../context/index.js'
 
-export const Item: FC<PropsWithChildren<ItemProps>> = ({ children, onSelect, value }) => {
+export const SwitchItem: FC<PropsWithChildren<ItemProps>> = ({ children, onSelect, value }) => {
   const active = useActive()
 
   if (!active) {
@@ -28,11 +27,11 @@ export const Item: FC<PropsWithChildren<ItemProps>> = ({ children, onSelect, val
       height='100%'
       alignItems='center'
       justifyContent='center'
-      borderRadius='small'
-      backgroundColor={active === value ? 'primaryBlue' : ''}
+      borderRadius='$small'
+      backgroundColor={active === value ? '$primaryBlue' : '$transparent'}
     >
-      <Button color='transparent' size='small' height='100%' width='100%' onClick={handleClick}>
-        <Text color={active === value ? 'white' : 'black'} fontWeight='bold' fontSize='small'>
+      <Button variant='transparent' size='fill' onClick={handleClick}>
+        <Text color={active === value ? '$white' : '$black'} fontWeight='$semiBold'>
           {children}
         </Text>
       </Button>
