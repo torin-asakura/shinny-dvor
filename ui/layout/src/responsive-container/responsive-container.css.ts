@@ -24,7 +24,9 @@ const responsiveContainerProperties = defineProperties({
     marginTop: true,
     padding: true,
     paddingTop: true,
+    paddingRight: true,
     paddingBottom: true,
+    paddingLeft: true,
     top: true,
     right: true,
 
@@ -46,6 +48,10 @@ const responsiveContainerProperties = defineProperties({
     border: vars.borders,
     boxShadow: vars.shadows,
     gap: vars.spaces,
+  },
+  shorthands: {
+    paddingX: ['paddingLeft', 'paddingRight'],
+    paddingY: ['paddingTop', 'paddingBottom'],
   },
 })
 
