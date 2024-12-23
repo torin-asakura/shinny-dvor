@@ -2,13 +2,13 @@
 
 'use client'
 
+import type { PostPageClientProps } from './post-page.interfaces.js'
 import type { FC }                  from 'react'
 
-import type { PostPageClientProps } from './post-page.interfaces.js'
+import { Article }                  from '@blog/article-fragment'
 
 import React                        from 'react'
 
-import { Article }                  from '@blog/articles-fragment'
 import { Footer }                   from '@fragments/footer-fragment'
 import { Navigation }               from '@fragments/navigation-fragment'
 import { Column }                   from '@ui/layout'
@@ -34,6 +34,8 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { postBy } = getPostData(uri)
   const { contacts } = getContactsData()
 
+  console.log(postBy)
+
   return (
     <>
       <PostPageStyles />
@@ -47,12 +49,7 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
           carBodiesData={carBodies}
           servicesData={services}
         />
-        <Article
-          // @ts-expect-error not assignable
-          postData={postBy}
-          // @ts-expect-error undefined
-          fragmentsData={fragments}
-        />
+        <Article postData={postBy} fragmentsData={fragments} />
         <Footer
           fragmentsData={fragments}
           contactsData={contacts}
