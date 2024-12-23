@@ -8,7 +8,6 @@ import { useState }                 from 'react'
 
 import { Booking }                  from '@fragments/booking-fragment'
 import { INITIAL }                  from '@store/booking'
-import { Layer }                    from '@ui/layer'
 import { Box }                      from '@ui/layout'
 import { Column }                   from '@ui/layout'
 import { Row }                      from '@ui/layout'
@@ -43,21 +42,15 @@ const Navigation: FC<NavigationProps> = ({
 
   return (
     <>
-      <Layer
+      <Booking
         visible={visible}
-        onClose={() => {
-          setVisible(true)
-        }}
-      >
-        <Booking
-          setVisible={setVisible}
-          fragmentsData={fragmentsData}
-          availableRadiiData={availableRadiiData}
-          carBodiesData={carBodiesData}
-          servicesData={servicesData}
-          navigationData={navigationData}
-        />
-      </Layer>
+        setVisible={setVisible}
+        fragmentsData={fragmentsData}
+        availableRadiiData={availableRadiiData}
+        carBodiesData={carBodiesData}
+        servicesData={servicesData}
+        navigationData={navigationData}
+      />
       <Box
         width='100%'
         zIndex={1000}

@@ -17,7 +17,6 @@
     "@ui/divider": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/image": "workspace:*",
-    "@ui/layer": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/link": "workspace:*",
     "@ui/social-links": "workspace:*",

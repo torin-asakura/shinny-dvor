@@ -104,23 +104,17 @@ const Service: FC<ServiceProps> = ({
 
   return (
     <>
-      <Layer
+      <Booking
         visible={visible}
-        onClose={() => {
-          setVisible(true)
-        }}
-      >
-        <Booking
-          setVisible={setVisible}
-          fragmentsData={fragmentsData}
-          availableRadiiData={availableRadiiData}
-          carBodiesData={carBodiesData}
-          servicesData={servicesData}
-          navigationData={navigationData}
-          // @ts-expect-error null | undefined
-          additionalService={isAdditionalService ? additionalservice.title : ''}
-        />
-      </Layer>
+        setVisible={setVisible}
+        fragmentsData={fragmentsData}
+        availableRadiiData={availableRadiiData}
+        carBodiesData={carBodiesData}
+        servicesData={servicesData}
+        navigationData={navigationData}
+        // @ts-expect-error null | undefined
+        additionalService={isAdditionalService ? additionalservice.title : ''}
+      />
       <Box width='100%' maxWidth={['100%', '100%', 1440]} marginTop={[80, 80, 104]}>
         <Row>
           <Layout flexBasis={[20, 20, 299]} flexShrink={[0, 0, 1]} />

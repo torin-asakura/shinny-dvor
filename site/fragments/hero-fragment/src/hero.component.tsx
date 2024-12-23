@@ -10,7 +10,6 @@ import { Button }          from '@ui/button'
 import { Divider }         from '@ui/divider'
 import { ArrowDownIcon }   from '@ui/icons'
 import { ImageBlock }      from '@ui/image'
-import { Layer }           from '@ui/layer'
 import { Box }             from '@ui/layout'
 import { Row }             from '@ui/layout'
 import { Column }          from '@ui/layout'
@@ -59,21 +58,15 @@ export const Hero = forwardRef((
 
   return (
     <>
-      <Layer
+      <Booking
         visible={visible}
-        onClose={() => {
-          setVisible(true)
-        }}
-      >
-        <Booking
-          setVisible={setVisible}
-          fragmentsData={fragmentsData}
-          availableRadiiData={availableRadiiData}
-          carBodiesData={carBodiesData}
-          servicesData={servicesData}
-          navigationData={navigationData}
-        />
-      </Layer>
+        setVisible={setVisible}
+        fragmentsData={fragmentsData}
+        availableRadiiData={availableRadiiData}
+        carBodiesData={carBodiesData}
+        servicesData={servicesData}
+        navigationData={navigationData}
+      />
       <Box
         ref={ref}
         maxWidth={['100%', '100%', 1440]}
