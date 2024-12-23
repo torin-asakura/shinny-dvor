@@ -1,14 +1,11 @@
-/* eslint-disable */
-
+import type { ArticleProps }           from './article-fragment.interface.js'
 import type { FC }                     from 'react'
 
-import type { ArticleProps }           from './article.interface.js'
-
+import React                           from 'react'
 import { FormattedPlural }             from 'react-intl'
 import { FormattedMessage }            from 'react-intl'
 import { memo }                        from 'react'
 import { useEffect }                   from 'react'
-import React                           from 'react'
 
 import { Divider }                     from '@ui/divider'
 import { ImageBlock }                  from '@ui/image'
@@ -24,7 +21,7 @@ import { formattedDate }               from '@shared/utils'
 
 import { ReturnButton }                from './return-button/index.js'
 
-const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
+export const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
   const { postId, content, title, date, viewCount, contentAddons, featuredImage } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
@@ -37,9 +34,9 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
 
   return (
     <Column width='100%' height='auto' marginTop={[80, 80, 104]}>
-      <Box minHeight={[440, 440, 480]} width='100%' position='relative' justifyContent='center'>
+      <Box height={[440, 440, 480]} width='$fill' position='relative' justifyContent='center'>
         <Box
-          backgroundColor='black'
+          backgroundColor='$black'
           position='absolute'
           width='100%'
           height={[440, 440, 480]}
@@ -53,53 +50,48 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
             style={{ opacity: 0.5 }}
           />
         </Box>
-        <Layout flexBasis={[20, 20, 83]} />
-        <Column width={['100%', '100%', '1280px']}>
-          <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
-          <Column justifyContent='space-between'>
-            <Box width={102}>
-              <ReturnButton title={goBack} />
-            </Box>
-            <Box>
-              <Column>
+        <Column
+          width='$fill'
+          maxWidth='$g1240'
+          height='$fill'
+          justifyContent='space-between'
+          paddingY={[32, 32, 48]}
+          paddingX={[20, 20, 83]}
+        >
+          <ReturnButton title={goBack} />
+          <Box>
+            <Column>
+              <Layout>
+                <Text fontWeight='$medium' fontSize='$giant' lineHeight='$grown' color='$white'>
+                  {title}
+                </Text>
+              </Layout>
+              <Layout flexBasis={[16, 16, 24]} />
+              <Row gap='$g24'>
                 <Layout>
-                  <Text fontWeight='$medium' fontSize='$giant' lineHeight='$grown' color='$white'>
-                    {title}
+                  <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
+                    {viewCount}
+                    <Space />
+                    <FormattedPlural
+                      value={viewCount}
+                      zero={<FormattedMessage id='article.views' />}
+                      one={<FormattedMessage id='article.view' />}
+                      two={<FormattedMessage id='article.viewed' />}
+                      few={<FormattedMessage id='article.views' />}
+                      many={<FormattedMessage id='article.views' />}
+                      other={<FormattedMessage id='article.views' />}
+                    />
                   </Text>
                 </Layout>
-                <Layout flexBasis={[16, 16, 24]} />
-                <Row>
-                  <Layout>
-                    <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
-                      {viewCount}
-                      <Space />
-                      <FormattedPlural
-                        value={viewCount}
-                        zero={<FormattedMessage id='article.views' />}
-                        one={<FormattedMessage id='article.view' />}
-                        two={<FormattedMessage id='article.viewed' />}
-                        few={<FormattedMessage id='article.views' />}
-                        many={<FormattedMessage id='article.views' />}
-                        other={<FormattedMessage id='article.views' />}
-                      />
-                    </Text>
-                  </Layout>
-                  <Layout flexBasis={24} />
-                  <Layout>
-                    <Divider direction='vertical' weight={2} backgroundColor='charcoal' />
-                  </Layout>
-                  <Layout flexBasis={24} />
-                  <Layout>
-                    <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
-                      {formattedDate(date)}
-                    </Text>
-                  </Layout>
-                </Row>
-              </Column>
-              <Layout flexBasis={[20, 20, 100]} />
-            </Box>
-          </Column>
-          <Layout flexBasis={[32, 32, 48]} flexShrink={0} />
+                <Divider direction='vertical' weight={2} color='$charcoal' />
+                <Layout>
+                  <Text fontWeight='$medium' color='$charcoal' lineHeight='$grown'>
+                    {formattedDate(date)}
+                  </Text>
+                </Layout>
+              </Row>
+            </Column>
+          </Box>
         </Column>
       </Box>
       <Row justifyContent='center'>
@@ -118,5 +110,3 @@ const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
     </Column>
   )
 })
-
-export { Article }
