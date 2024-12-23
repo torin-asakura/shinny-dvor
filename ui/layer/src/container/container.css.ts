@@ -1,11 +1,13 @@
 import { style } from '@vanilla-extract/css'
 
+import { vars }  from '@ui/theme'
+
 export const baseStyles = style({
-  width: '100%',
-  height: '100vh',
+  width: vars.spaces.fill,
+  height: vars.spaces.fill,
   position: 'fixed',
-  backgroundColor: 'red',
+  backgroundColor: vars.colors.white,
   display: 'flex',
-  zIndex: 9999,
+  zIndex: vars.spaces.zIndexSecondLayer,
   overflowY: 'scroll',
 })
