@@ -20,6 +20,14 @@ const ghostStyles = createShapeStyles({
   paddingRight: vars.spaces['zero'],
 })
 
+const roundStyles = createShapeStyles({
+  size: vars.spaces['g48'],
+  rounding: vars.radii['large.huge'],
+  fontFamily: vars.fonts['primary'],
+  fontSize: vars.fontSizes['normal.reduced'],
+  fontWeight: vars.fontWeights['semiBold'],
+})
+
 const commonStyles = createShapeStyles({
   size: vars.spaces['g48'],
   rounding: vars.radii['large.huge'],
@@ -49,6 +57,7 @@ const fillStyles = style({
 export const shapeStyles = {
   ghost: ghostStyles,
   small: smallStyles,
+  round: roundStyles,
   common: commonStyles,
   large: largeStyles,
   fill: fillStyles,
