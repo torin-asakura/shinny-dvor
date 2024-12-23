@@ -7220,6 +7220,7 @@ __metadata:
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
     "@site/services-page": "workspace:*"
+    "@site/test-page": "workspace:*"
     "@site/yandex-turbo-api": "workspace:*"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
@@ -7599,8 +7600,6 @@ __metadata:
   resolution: "@site/services-page@workspace:site/pages/services-page"
   dependencies:
     "@apollo/client": "npm:3.11.3"
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@fragments/footer-fragment": "workspace:*"
     "@fragments/navigation-fragment": "workspace:*"
     "@globals/config": "workspace:*"
@@ -7612,26 +7611,53 @@ __metadata:
     "@store/services": "workspace:*"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/react-helmet": "npm:6.1.11"
-    "@types/styled-system": "npm:^5"
     "@ui/condition": "workspace:*"
     "@ui/layout": "workspace:*"
     graphql: "npm:16.9.0"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    react-helmet: "npm:6.1.0"
     react-intl: "npm:6.6.8"
-    styled-system: "npm:5.1.5"
   peerDependencies:
     "@apollo/client": "*"
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
     graphql: "*"
     react: "*"
     react-dom: "*"
-    react-helmet: "*"
     react-intl: "*"
-    styled-system: "*"
+  languageName: unknown
+  linkType: soft
+
+"@site/test-page@workspace:*, @site/test-page@workspace:site/pages/test-page":
+  version: 0.0.0-use.local
+  resolution: "@site/test-page@workspace:site/pages/test-page"
+  dependencies:
+    "@apollo/client": "npm:3.11.3"
+    "@blog/articles-fragment": "workspace:*"
+    "@fragments/booking-fragment": "workspace:*"
+    "@fragments/footer-fragment": "workspace:*"
+    "@fragments/global-error-fragment": "workspace:*"
+    "@fragments/navigation-fragment": "workspace:*"
+    "@fragments/root-layout-fragment": "workspace:*"
+    "@globals/data": "workspace:*"
+    "@site/all-services-fragment": "workspace:*"
+    "@site/articles-fragment": "workspace:*"
+    "@site/contacts-fragment": "workspace:*"
+    "@site/hero-fragment": "workspace:*"
+    "@site/service-fragment": "workspace:*"
+    "@site/services-fragment": "workspace:*"
+    "@site/services-infographics-fragment": "workspace:*"
+    "@site/works-examples-fragment": "workspace:*"
+    "@types/react": "npm:18.3.3"
+    "@types/react-dom": "npm:18.3.0"
+    graphql: "npm:16.9.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
+    react-intl: "npm:6.6.8"
+  peerDependencies:
+    "@apollo/client": "*"
+    graphql: "*"
+    react: "*"
+    react-dom: "*"
+    react-intl: "*"
   languageName: unknown
   linkType: soft
 

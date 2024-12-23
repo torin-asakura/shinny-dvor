@@ -1,5 +1,5 @@
 {
-  "name": "@site/services-page",
+  "name": "@site/test-page",
   "version": "0.0.1",
   "license": "BSD-3-Clause",
   "type": "module",
@@ -8,17 +8,21 @@
   },
   "main": "src/index.ts",
   "dependencies": {
+    "@blog/articles-fragment": "workspace:*",
+    "@fragments/booking-fragment": "workspace:*",
     "@fragments/footer-fragment": "workspace:*",
+    "@fragments/global-error-fragment": "workspace:*",
     "@fragments/navigation-fragment": "workspace:*",
-    "@globals/config": "workspace:*",
+    "@fragments/root-layout-fragment": "workspace:*",
     "@globals/data": "workspace:*",
-    "@shared/utils": "workspace:*",
     "@site/all-services-fragment": "workspace:*",
     "@site/articles-fragment": "workspace:*",
+    "@site/contacts-fragment": "workspace:*",
+    "@site/hero-fragment": "workspace:*",
     "@site/service-fragment": "workspace:*",
-    "@store/services": "workspace:*",
-    "@ui/condition": "workspace:*",
-    "@ui/layout": "workspace:*"
+    "@site/services-fragment": "workspace:*",
+    "@site/services-infographics-fragment": "workspace:*",
+    "@site/works-examples-fragment": "workspace:*"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",
