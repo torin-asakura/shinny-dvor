@@ -43,16 +43,20 @@ export const Booking: FC<BookingProps> = ({
 
   return (
     <Layer visible={visible}>
-      <Row justifyContent='space-between' height='100%'>
-        <Layout flexBasis={[21, 21, 32]} />
+      <Row
+        justifyContent='space-between'
+        height='100%'
+        paddingY={[21, 21, 32]}
+        paddingX={[24, 24, 28]}
+      >
         <Column width='100%' alignItems='center'>
-          <Layout flexBasis={[24, 24, 28]} flexShrink={0} />
+          <Layout flexShrink={0} />
           <Box width='100%' justifyContent='space-between' alignItems='center'>
             <Layout>
               <Logo path={mainPage.content} />
             </Layout>
             <Layout>
-              <Button color='radius' onClick={() => setVisible(false)}>
+              <Button variant='tertiary' size='round' onClick={() => setVisible(false)}>
                 <Box
                   width={46}
                   height={46}
@@ -83,7 +87,6 @@ export const Booking: FC<BookingProps> = ({
             </Condition>
           </Box>
         </Column>
-        <Layout flexBasis={[21, 21, 32]} />
       </Row>
     </Layer>
   )
