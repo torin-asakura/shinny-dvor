@@ -90,7 +90,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
           </Layout>
           <Layout flexBasis={[32, 32, 40]} />
           <Row justifyContent='center' alignItems='center' width={['auto', 'auto', 1440]}>
-            <Slider>
+            <Slider onSwiper={setControlsSwiper}>
               {Children.map(sliderChildren, (child) => (
                 <SwiperSlide>{child}</SwiperSlide>
               ))}
