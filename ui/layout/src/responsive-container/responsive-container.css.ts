@@ -41,6 +41,7 @@ const responsiveContainerProperties = defineProperties({
   },
   staticProperties: {
     width: vars.spaces,
+    maxWidth: vars.spaces,
     height: vars.spaces,
 
     backgroundColor: vars.colors,

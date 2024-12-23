@@ -1,11 +1,12 @@
 import type { ButtonProps } from './button.interfaces.js'
 
+import React                from 'react'
 import { forwardRef }       from 'react'
 import { useState }         from 'react'
-import React                from 'react'
 
 import { useHover }         from '@ui/utils'
 
+import { IconPlacement }    from './button.interfaces.js'
 import { buttonStyles }     from './styles/index.js'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
@@ -40,7 +41,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
       {...hoverProps}
       {...props}
     >
+      {icon && iconPlacement === IconPlacement.LEFT && icon}
       {children}
+      {icon && iconPlacement === IconPlacement.RIGHT && icon}
     </button>
   )
 })

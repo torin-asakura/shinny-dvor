@@ -16,6 +16,7 @@ const smallStyles = createShapeStyles({
 const ghostStyles = createShapeStyles({
   size: 'auto',
   fontFamily: vars.fonts['primary'],
+  fontSize: vars.fontSizes['normal.reduced'],
   paddingLeft: vars.spaces['zero'],
   paddingRight: vars.spaces['zero'],
 })
