@@ -21,7 +21,6 @@
     "react-dom": "18.3.1"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
     "@vanilla-extract/css": "*",
     "framer-motion": "*",
     "react": "*",
