@@ -8,7 +8,8 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@blog/articles-fragment": "workspace:*",
+    "@blog/all-articles-fragment": "workspace:*",
+    "@blog/article-fragment": "workspace:*",
     "@fragments/booking-fragment": "workspace:*",
     "@fragments/footer-fragment": "workspace:*",
     "@fragments/global-error-fragment": "workspace:*",
@@ -22,7 +23,8 @@
     "@site/service-fragment": "workspace:*",
     "@site/services-fragment": "workspace:*",
     "@site/services-infographics-fragment": "workspace:*",
-    "@site/works-examples-fragment": "workspace:*"
+    "@site/works-examples-fragment": "workspace:*",
+    "@ui/layout": "workspace:*"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",
