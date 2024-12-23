@@ -25,9 +25,9 @@ export const SlideDescription = memo(({
           {description}
         </Text>
       </Row>
-      <Layout flexBasis={16} />
-      <Box width='100%' backgroundColor='$lightGray' height={1} />
-      <Layout flexBasis={16} />
+      <Layout flexBasis='16px' />
+      <Box width='100%' backgroundColor='$lightGray' height='1px' />
+      <Layout flexBasis='16px' />
       <Row>
         <Layout>
           <Text fontSize='$normal' color='$darkGray'>
@@ -40,7 +40,7 @@ export const SlideDescription = memo(({
             <Ruble />
           </Text>
         </Layout>
-        <Layout flexBasis={40} />
+        <Layout flexBasis='40px' />
         <Layout width='100%' justifyContent='flex-end'>
           <Text fontSize='$normal' color='$darkGray'>
             {timeTitle}

@@ -9492,24 +9492,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@ui/drawer@workspace:ui/drawer"
   dependencies:
-    "@emotion/react": "npm:11.13.0"
-    "@emotion/styled": "npm:11.13.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
-    "@types/styled-system": "npm:5.1.22"
-    "@ui/button": "workspace:*"
     "@ui/layout": "workspace:*"
+    "@ui/theme": "workspace:*"
+    "@vanilla-extract/css": "npm:1.16.1"
+    "@vanilla-extract/dynamic": "npm:2.1.2"
     framer-motion: "npm:11.3.22"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
-    styled-system: "npm:5.1.5"
   peerDependencies:
-    "@emotion/react": "*"
-    "@emotion/styled": "*"
+    "@vanilla-extract/css": "*"
+    "@vanilla-extract/dynamic": "*"
     framer-motion: "*"
     react: "*"
     react-dom: "*"
-    styled-system: "*"
   languageName: unknown
   linkType: soft
 

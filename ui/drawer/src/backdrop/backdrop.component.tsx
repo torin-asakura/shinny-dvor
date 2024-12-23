@@ -1,9 +1,10 @@
-import styled                 from '@emotion/styled'
+import { memo }               from 'react'
+import React                  from 'react'
 
-import { Box }                from '@ui/layout'
+import { BoxProps }           from '@ui/layout'
 
-import { baseBackdropStyles } from './backdrop.styles.js'
+import { baseBackdropStyles } from './backdrop.css.js'
 
-const Backdrop = styled(Box)(baseBackdropStyles)
-
-export { Backdrop }
+export const Backdrop = memo(({ ...props }: BoxProps) => (
+  <div className={`${baseBackdropStyles}`} {...props} />
+))

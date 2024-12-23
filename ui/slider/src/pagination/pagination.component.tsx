@@ -29,7 +29,7 @@ const Pagination: FC<PaginationProps> = memo(({ activeItem, totalItems, swiper }
       {[...new Array(totalItems)].map((_, index) => (
         <React.Fragment key={`${index + 1}-key`}>
           <TransitionContainer
-              isHighlighted={calculatedActiveItem === index}
+            isHighlighted={calculatedActiveItem === index}
             onClick={() => {
               handleClick(index)
             }}

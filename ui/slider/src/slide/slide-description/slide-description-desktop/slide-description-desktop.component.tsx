@@ -22,7 +22,7 @@ export const SlideDescriptionDesktop = memo(({
         {description}
       </Text>
     </Layout>
-    <Layout flexGrow={1} />
+    <Layout flexGrow='1' />
     <Layout>
       <Text fontSize='$normal' color='$darkGray'>
         {priceTitle}
@@ -34,7 +34,7 @@ export const SlideDescriptionDesktop = memo(({
         <Ruble />
       </Text>
     </Layout>
-    <Layout flexBasis={40} />
+    <Layout flexBasis='40px' />
     <Layout>
       <Text fontSize='$normal' color='$darkGray'>
         {timeTitle}

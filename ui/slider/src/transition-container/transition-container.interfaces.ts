@@ -1,6 +1,6 @@
-import {PropsWithChildren} from "react";
+import { PropsWithChildren } from 'react'
 
-export interface TransitionContainerProps extends PropsWithChildren{
-    isHighlighted: boolean
-    onClick: VoidFunction
+export interface TransitionContainerProps extends PropsWithChildren {
+  isHighlighted: boolean
+  onClick: VoidFunction
 }
