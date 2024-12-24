@@ -1,4 +1,4 @@
-export { Space } from '@atls-ui-parts/text'
+export { Space, TextProps } from '@atls-ui-parts/text'
 
 export * from './text/index.js'
 export * from './ruble/index.js'

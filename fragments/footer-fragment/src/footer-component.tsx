@@ -37,14 +37,14 @@ export const Footer: FC<FooterProps> = memo(({
   const navigationItems = extractFragments(navigationItemsType, 'contentAddons', navigation)
   const mainPage = extractFragment('contentAddons', 'main', navigation)
 
-  const telegramContanctsObj = extractFragment('contactAddons', 'linkTelegram', contactsData)
+  const telegramContactsObj = extractFragment('contactAddons', 'linkTelegram', contactsData)
 
   const appointmentPhone = footerObj?.title
   const telephone = contactsObj?.telephone
   const address = contactsObj?.address
   const workingHours = contactsObj?.workinghours
   const linkVk = contactsObj?.linkVk
-  const linkTelegram = telegramContanctsObj?.address
+  const linkTelegram = telegramContactsObj?.address
   const by = new Map()
   by.set('title', byObj?.title)
   by.set('content', byObj?.highlightedtext)
