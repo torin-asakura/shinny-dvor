@@ -36,7 +36,7 @@ const Initial: FC<InitialProps> = ({
   fragmentsData,
   availableRadiiData,
   carBodiesData,
-  servicesData,
+  servicesData
 }) => {
   const service = useReactiveVar<IService>(serviceVar)
 

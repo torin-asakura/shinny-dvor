@@ -33,8 +33,7 @@ export const Booking: FC<BookingProps> = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
-  navigationData,
-  additionalService,
+  navigationData
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
   const [hover, hoverProps] = useHover()
@@ -76,7 +75,6 @@ export const Booking: FC<BookingProps> = ({
                 availableRadiiData={availableRadiiData}
                 carBodiesData={carBodiesData}
                 servicesData={servicesData}
-                additionalService={additionalService}
               />
             </Condition>
             <Condition match={screen === SUCCESS}>
