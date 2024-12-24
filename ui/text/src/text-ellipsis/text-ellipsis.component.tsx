@@ -1,17 +1,17 @@
-import React from 'react'
+import { Text }              from '@atls-ui-parts/text'
+import { memo }              from 'react'
+import React                 from 'react'
 
-export const TextEllipsis = () => {
-  return <>text-ellipsis</>
-}
+import { TextEllipsisProps } from './text-ellipsis.interface.js'
+import { baseEllipsisStyle } from './text-ellipsis.css.js'
 
-// import type { TextEllipsisProps } from './text-ellipsis.interface.js'
-//
-// import styled                     from '@emotion/styled'
-//
-// import { Text }                   from '../index.js'
-//
-// export const TextEllipsis = styled(Text)<TextEllipsisProps>(({ lineClamp }) => ({
-//   display: '-webkit-box',
-//   WebkitLineClamp: `${lineClamp}`,
-//   WebkitBoxOrient: 'vertical',
-// }))
+export const TextEllipsis = memo(({ lineClamp, children, ...props }: TextEllipsisProps) => {
+  const dynamicEllipsisStyle = {
+    WebkitLineClamp: lineClamp.toString(),
+  }
+  return (
+    <Text className={baseEllipsisStyle} style={dynamicEllipsisStyle} {...props}>
+      {children}
+    </Text>
+  )
+})

@@ -18,7 +18,7 @@ export const Accordion = memo(({ children, text }: AccordionProps) => {
   const [active, setActive] = useState<boolean>(false)
 
   return (
-    <Column width='100%'>
+    <Column fill>
       <TriggerContainer
         onClick={() => {
           setActive(!active)
