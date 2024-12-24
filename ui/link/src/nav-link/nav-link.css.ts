@@ -13,7 +13,6 @@ export const navLink = styleVariants({
     color: vars.colors.white,
     ':hover': {
       color: vars.colors.white,
-      borderBottom: `2px solid ${vars.colors.white}`,
       backgroundColor: vars.colors.transparent,
       transition: '0.35s',
     },
@@ -25,10 +24,8 @@ export const navLink = styleVariants({
     color: vars.colors.black,
     ':hover': {
       color: vars.colors.blue,
-      borderBottom: `2px solid ${vars.colors.blue}`,
       backgroundColor: vars.colors.transparent,
       transition: '0.35s',
-      paddingBottom: '8px',
     },
   },
 })

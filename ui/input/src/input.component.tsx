@@ -1,5 +1,4 @@
 import type { InputProps }    from './input.interfaces.js'
-import type { RawInputProps } from './input.interfaces.js'
 
 import { RawInput }           from '@atls-ui-parts/input'
 

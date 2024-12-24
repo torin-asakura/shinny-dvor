@@ -1,9 +1,8 @@
 /* eslint-disable */
 
 import type { InitialProps }        from './initial.interface.js'
-import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
-import type { KeyboardEvent }       from 'react'
+import type {KeyboardEvent} from 'react'
 import type { FC }                  from 'react'
 
 import { useReactiveVar }           from '@apollo/client'
@@ -23,11 +22,9 @@ import { Layout }                   from '@ui/layout'
 import { Box }                      from '@ui/layout'
 import { Select }                   from '@ui/select'
 import { Switch }                   from '@ui/switch'
-import { Item }                     from '@ui/switch'
 import { Text }                     from '@ui/text'
 import { extractFragment }          from '@globals/data'
 import { extractFragments }         from '@globals/data'
-import { doNothing }                from '@shared/utils'
 import { screenVar }                from '@store/booking'
 import { serviceVar }               from '@store/services'
 
@@ -40,7 +37,6 @@ const Initial: FC<InitialProps> = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
-  additionalService,
 }) => {
   const service = useReactiveVar<IService>(serviceVar)
 
@@ -132,14 +128,6 @@ const Initial: FC<InitialProps> = ({
     }
   }
 
-  const validatePhone = (value: string) => {
-    if (value.length === 10) {
-      setPhone(`+7${value}`)
-    } else {
-      setPhone(value)
-    }
-  }
-
   return (
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
@@ -163,7 +151,7 @@ const Initial: FC<InitialProps> = ({
               value={name}
               autoComplete='name'
               placeholder={yourNamePlaceholder}
-              onChange={setName}
+              onChangeValue={setName}
             />
           </Layout>
         </Column>
@@ -183,9 +171,7 @@ const Initial: FC<InitialProps> = ({
               name='phone'
               id='phone'
               autoComplete='tel'
-              onChange={(value) => {
-                validatePhone(value)
-              }}
+              onChangeValue={setPhone}
               onKeyPress={handleKeyPress}
             />
           </Layout>
@@ -238,7 +224,7 @@ const Initial: FC<InitialProps> = ({
         onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
-      <Divider backgroundColor={selectedRepairTypes.length ? '$primaryBlue' : '$gray'} />
+      <Divider color={selectedRepairTypes.length ? '$primaryBlue' : '$gray'} />
       <Layout flexBasis={32} />
       <Layout>
         <Text lineHeight='$grown' color='$darkGray'>
@@ -247,7 +233,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={12} />
       <Layout>
-        <Input value={comment} placeholder={commentPlaceholder} onChange={setComment} />
+        <Input value={comment} placeholder={commentPlaceholder} onChangeValue={setComment} />
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
