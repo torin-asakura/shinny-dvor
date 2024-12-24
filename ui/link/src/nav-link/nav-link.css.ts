@@ -10,11 +10,11 @@ export const baseNavLink = style({
 
 export const navLink = styleVariants({
   active: {
-    color: vars.colors.blue,
+    color: vars.colors.white,
     ':hover': {
-      color: vars.colors.blue,
+      color: vars.colors.white,
+      borderBottom: `2px solid ${vars.colors.white}`,
       backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
       transition: '0.35s',
     },
     '& svg > path:only-of-type': {
@@ -25,8 +25,8 @@ export const navLink = styleVariants({
     color: vars.colors.black,
     ':hover': {
       color: vars.colors.blue,
+      borderBottom: `2px solid ${vars.colors.blue}`,
       backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
       transition: '0.35s',
     },
   },
