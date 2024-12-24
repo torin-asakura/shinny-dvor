@@ -1,22 +1,28 @@
-import type { InputProps } from './input.interfaces.js'
+import type { InputProps }    from './input.interfaces.js'
+import type { RawInputProps } from './input.interfaces.js'
 
-import { RawInput }        from '@atls-ui-parts/input'
+import { RawInput }           from '@atls-ui-parts/input'
 
-import React               from 'react'
-import { forwardRef }      from 'react'
+import React                  from 'react'
+import { ChangeEvent }        from 'react'
+import { forwardRef }         from 'react'
 
-import { Divider }         from '@ui/divider'
-import { Layout }          from '@ui/layout'
-import { Column }          from '@ui/layout'
+import { Divider }            from '@ui/divider'
+import { Column }             from '@ui/layout'
 
-import { baseStyles }      from './input.css.js'
+import { baseStyles }         from './input.css.js'
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((
-  { type, disabled, value, onChange, onChangeNative, ...props },
+  { type, disabled, value, onChange, onChangeValue, ...props },
   ref
 ) => {
-  const onChangeValue = (e) => {
-    onChange(e.target.value)
+  const onChangeRaw = (e: ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e)
+    }
+    if (onChangeValue) {
+      onChangeValue(e.target.value)
+    }
   }
 
   return (
@@ -27,7 +33,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((
         type={type}
         disabled={disabled}
         value={value}
-        onChange={onChangeValue}
+        onChange={onChangeRaw}
         {...props}
       />
       <Divider color={value !== '' ? '$primaryBlue' : '$gray'} />
