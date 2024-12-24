@@ -1,11 +1,14 @@
-import React           from 'react'
+import type { SliderPartProps } from './slider-part.interface.js'
+import type { FC }              from 'react'
 
-import { Row }         from '@ui/layout'
-import { Slider }      from '@ui/slider'
-import { SwiperSlide } from '@ui/slider'
-import { Slide }       from '@ui/slider'
+import React                    from 'react'
 
-export const SliderPart = ({
+import { Row }                  from '@ui/layout'
+import { Slider }               from '@ui/slider'
+import { SwiperSlide }          from '@ui/slider'
+import { Slide }                from '@ui/slider'
+
+export const SliderPart: FC<SliderPartProps> = ({
   slides,
   setControlsSwiper,
   priceTitle,
@@ -13,7 +16,7 @@ export const SliderPart = ({
   setActiveIndex,
 }) => {
   return (
-    <Row justifyContent='center' alignItems='center' width={['auto', 'auto', 1440]}>
+    <Row justifyContent='center' alignItems='center' width='$fill' maxWidth={1440}>
       <Slider onSwiper={setControlsSwiper}>
         {slides.map((
           { workResultParams: { fragmentId, photos, price, description, time } },

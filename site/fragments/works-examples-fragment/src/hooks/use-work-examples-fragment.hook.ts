@@ -1,11 +1,16 @@
-import type { Swiper as SwiperCore } from 'swiper'
+import type { Swiper as SwiperCore }    from 'swiper'
 
-import { useState }                  from 'react'
+import { useState }                     from 'react'
 
-import { extractFragment }           from '@globals/data'
-import { extractFragments }          from '@globals/data'
+import { extractFragment }              from '@globals/data'
+import { extractFragments }             from '@globals/data'
 
-export const useWorkExamplesFragment = ({ fragmentsData, workResultsData }) => {
+import { UseWorkExamplesFragmentProps } from './use-work-examples-fragment.interface.js'
+
+export const useWorkExamplesFragment = ({
+  fragmentsData,
+  workResultsData,
+}: UseWorkExamplesFragmentProps) => {
   const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
