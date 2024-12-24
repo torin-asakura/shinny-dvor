@@ -88,13 +88,18 @@ export const Hero = forwardRef((
           <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
           <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
             <Row>
-              <Text fontSize='$giant' lineHeight='$grown' fontWeight='$semiBold' color='$white'>
+              <Text
+                fontSize={['$giant', '$giant', '$extra']}
+                lineHeight='$grown'
+                fontWeight='$semiBold'
+                color='$white'
+              >
                 {title.get('title')}
               </Text>
             </Row>
             <Row>
               <Text
-                fontSize='$giant'
+                fontSize={['$giant', '$giant', '$extra']}
                 lineHeight='$grown'
                 fontWeight='$semiBold'
                 color='$white'

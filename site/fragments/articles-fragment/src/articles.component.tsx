@@ -46,7 +46,7 @@ const Articles: FC<ArticlesProps> = forwardRef((
         <Column fill overflow='hidden'>
           <Layout flexBasis={[64, 64, 100]} />
           <Layout>
-            <Text fontWeight='$medium' fontSize='$extraLarge'>
+            <Text fontWeight='$medium' fontSize={['$extraLarge', '$extraLarge', '$giant']}>
               {latestPublications}
             </Text>
           </Layout>
