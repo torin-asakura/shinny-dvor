@@ -7,7 +7,7 @@ export const baseStyles = style({
   display: 'flex',
   position: 'relative',
   width: '100%',
-  justifyContent: 'flex-start',
+  justifyContent: 'space-between',
 })
 
 export const appearanceStyles = styleVariants({
@@ -26,5 +26,5 @@ export const appearanceStyles = styleVariants({
 export const shapeStyles = style({
   height: 26,
   padding: 0,
-  fontSize: vars.fontSizes.normal,
+  fontSize: vars.fontSizes['normal.reduced'],
 })

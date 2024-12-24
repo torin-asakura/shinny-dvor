@@ -1,14 +1,6 @@
-import React from 'react'
+import { memo } from 'react'
+import React    from 'react'
 
-export const Ruble = () => {
-  return <>ruble</>
-}
+import { span } from './ruble.css.js'
 
-// const Span = styled.span(
-//   () => ({
-//     display: 'inline-flex',
-//   }),
-//   color
-// )
-//
-// export const Ruble = (): JSX.Element => createElement(Span, {}, '\u20BD')
+export const Ruble = memo(() => <span className={span}>{'\u20BD'}</span>)

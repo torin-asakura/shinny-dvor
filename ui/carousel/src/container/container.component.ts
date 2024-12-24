@@ -1,6 +1,0 @@
-export { Container } from '@atls-ui-parts/carousel'
-
-// import { createContainerBaseStyles } from '@atls-ui-parts/carousel'
-// import styled                        from '@emotion/styled'
-//
-// export const Container = styled.div(createContainerBaseStyles())

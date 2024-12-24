@@ -26,7 +26,7 @@ export const MenuItem = memo(
           <Layout flexBasis={16} flexShrink={0} />
           <Checkbox active={selectedItems?.includes(children)} onCheck={handleCheck}>
             <Layout>
-              <Text fontSize='$medium' color='$black'>
+              <Text fontSize='$normal.reduced' color='$black'>
                 {children}
               </Text>
             </Layout>

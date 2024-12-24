@@ -10,40 +10,31 @@
   "dependencies": {
     "@atls-ui-parts/dom": "1.0.1",
     "@atls-ui-parts/swiper": "1.0.2",
-    "@ui/button": "workspace:*",
     "@ui/condition": "workspace:*",
-    "@ui/divider": "workspace:*",
     "@ui/icons": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/text": "workspace:*",
-    "@ui/utils": "workspace:*"
+    "@ui/theme": "workspace:*"
   },
   "devDependencies": {
-    "@emotion/css": "11.13.0",
-    "@emotion/react": "11.13.0",
-    "@emotion/styled": "11.13.0",
-    "@types/prop-types": "^15",
     "@types/react": "18.3.3",
-    "@types/styled-system": "5.1.22",
-    "framer-motion": "11.3.22",
-    "prop-types": "15.8.1",
+    "@vanilla-extract/css": "1.16.1",
+    "@vanilla-extract/dynamic": "2.1.2",
+    "nanoid": "4.0.2",
+    "rainbow-sprinkles": "0.17.3",
     "react": "18.3.1",
     "react-before-after-slider": "1.0.4",
     "react-compare-image": "3.4.0",
     "react-dom": "18.3.1",
-    "styled-system": "5.1.5",
     "swiper": "9.4.1"
   },
   "peerDependencies": {
-    "@emotion/css": "*",
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
-    "framer-motion": "*",
-    "prop-types": "*",
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/dynamic": "*",
+    "rainbow-sprinkles": "*",
     "react": "*",
     "react-before-after-slider": "*",
     "react-dom": "*",
-    "styled-system": "*",
     "swiper": "*"
   }
 }
