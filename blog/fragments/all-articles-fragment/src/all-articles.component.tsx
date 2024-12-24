@@ -5,7 +5,7 @@ import React                     from 'react'
 import { memo }                  from 'react'
 
 import { Box }                   from '@ui/layout'
-import { Row }                   from '@ui/layout'
+import { Grid }                  from '@ui/layout'
 import { Column }                from '@ui/layout'
 import { Layout }                from '@ui/layout'
 import { Text }                  from '@ui/text'
@@ -20,23 +20,37 @@ export const AllArticles: FC<AllArticlesProps> = memo(({
   const titlePage = extractFragment('contentAddons', 'blog', fragmentsData).title
 
   return (
-    <Box width='$fill' height='auto'>
-      <Column width='100%' height='auto'>
-        <Text fontWeight='$semiBold' fontSize='$extra'>
-          {titlePage}
-        </Text>
-        <Row flexWrap='wrap'>
-          {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
-            <Article
-              uri={uri}
-              title={title}
-              date={date}
-              excerpt={excerpt}
-              featuredImage={featuredImage}
-            />
-          ))}
-        </Row>
-      </Column>
-    </Box>
+    <Column
+      width='$fill'
+      height='auto'
+      maxWidth='$g1440'
+      paddingX={['$g20', '$g48', '$g80']}
+      gap={['$g24', '$g32', '$g48']}
+      alignItems='center'
+      justifySelf='center'
+    >
+      <Text width='$fill' fontWeight='$semiBold' fontSize='$extra'>
+        {titlePage}
+      </Text>
+      <Grid
+        width='$fill'
+        gap='$g32'
+        gridTemplateColumns={{
+          mobile: 'repeat(1, 1fr)',
+          tablet: 'repeat(2, 1fr)',
+          desktop: 'repeat(3, 1fr)',
+        }}
+      >
+        {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
+          <Article
+            uri={uri}
+            title={title}
+            date={date}
+            excerpt={excerpt}
+            featuredImage={featuredImage}
+          />
+        ))}
+      </Grid>
+    </Column>
   )
 })

@@ -25,14 +25,16 @@ export const Article: FC<ArticleProps> = memo(({
 
   return (
     <NextLink key={uri} path={uri}>
-      <Box width={['100%', '100%', 405]} cursor='pointer'>
+      <Box width='$fill'>
         <Column width='100%' gap='$g24' {...hoverProps}>
-          <ImageBlock
-            width={405}
-            height={260}
-            src={featuredImage.node.mediaItemUrl}
-            alt={featuredImage.node.altText}
-          />
+          <Box width='$fill' aspectRatio='2/1'>
+            <ImageBlock
+              width='100%'
+              height='100%'
+              src={featuredImage.node.mediaItemUrl}
+              alt={featuredImage.node.altText}
+            />
+          </Box>
           <Column gap='$g8'>
             <Text color={hover ? '$blue' : '$black'} lineHeight='$grown'>
               {formattedDate(date)}
