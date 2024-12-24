@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import type { ServicesProps } from './services.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
@@ -56,13 +55,9 @@ const Services: FC<ServicesProps> = forwardRef((
               </Layout>
               <Layout flexBasis={24} />
               <Row>
-                <NextLink path='/services'>
-                  <Layout width={180}>
-                    <Button color='secondary' size='large'>
-                      {allServicesTitle}
-                    </Button>
-                  </Layout>
-                </NextLink>
+                <Button variant='secondary' size='large'>
+                  <NextLink path='/services'>{allServicesTitle}</NextLink>
+                </Button>
               </Row>
             </Column>
             <Layout flexBasis={[0, 0, 37]} flexShrink={0} />
@@ -79,20 +74,14 @@ const Services: FC<ServicesProps> = forwardRef((
                 </Layout>
                 <Layout flexBasis={24} />
                 <Row>
-                  <NextLink path='/services'>
-                    <Box width={180} height={56}>
-                      <Button color='secondary' size='large'>
-                        {allServicesTitle}
-                      </Button>
-                    </Box>
-                  </NextLink>
+                  <Button variant='secondary' size='large'>
+                    <NextLink path='/services'>{allServicesTitle}</NextLink>
+                  </Button>
                 </Row>
                 <Layout flexBasis={32} />
               </Column>
               <Column width='100%'>
-                <Layout>
-                  <Divider backgroundColor='gray' />
-                </Layout>
+                <Divider color='$gray' />
                 <ServicesList services={services} />
               </Column>
             </Column>

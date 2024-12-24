@@ -1,10 +1,9 @@
+import type { ServiceProps } from './service.interface.js'
 import type { FC }           from 'react'
 
-import type { ServiceProps } from './service.interface.js'
-
+import React                 from 'react'
 import { FormattedMessage }  from 'react-intl'
 import { useRouter }         from 'next/navigation.js'
-import React                 from 'react'
 
 import { Button }            from '@ui/button'
 import { Condition }         from '@ui/condition'
@@ -26,7 +25,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
   return (
     <Button
       size='ghost'
-      color='transparent'
+      variant='transparent'
       onClick={(): void => {
         router.push(uri)
       }}
@@ -56,6 +55,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
                       whiteSpace='normal'
                       wordWrap='break-word'
                       lineHeight='$medium'
+                      color='$darkGray'
                     >
                       {item}
                     </Text>
@@ -66,7 +66,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
           </Column>
           <Column justifyContent='center' width={200} display={['none', 'none', 'flex']}>
             <Condition match={Boolean(hover)}>
-              <Button color='secondary' size='normal'>
+              <Button variant='secondary' size='common'>
                 <Row justifyContent='center'>
                   <Text fontWeight='$medium'>
                     <FormattedMessage id='service.by' defaultMessage='от' />
@@ -81,7 +81,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
           </Column>
         </Row>
         <Layout flexBasis={[24, 24, 30]} />
-        <Divider backgroundColor='gray' />
+        <Divider color='$gray' />
       </Column>
     </Button>
   )
