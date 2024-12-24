@@ -29,8 +29,8 @@ const Slide = memo(({
   const swiper = useSwiper()
 
   useEffect(() => {
-    setActiveIndex(swiper.realIndex)
-  }, [swiper.realIndex, setActiveIndex])
+    setActiveIndex(swiper.activeIndex)
+  }, [swiper.activeIndex, setActiveIndex])
 
   return (
     <Wrapper active={swiperSlide.isActive}>
