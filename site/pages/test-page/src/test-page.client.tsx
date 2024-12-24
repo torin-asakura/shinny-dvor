@@ -1,9 +1,8 @@
 'use client'
 
-import { AllArticles }                from '@blog/all-articles-fragment'
-
 import React                          from 'react'
 
+import { AllArticles }                from '@blog/all-articles-fragment'
 import { Box }                        from '@ui/layout'
 import { getAvailableRadiiData }      from '@globals/data'
 import { getCarBodiesData }           from '@globals/data'
@@ -27,9 +26,5 @@ export const TestPageClient = ({ servicesDataToReplace }) => {
 
   const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
 
-  return (
-    <Box maxWidth={1440}>
-      <AllArticles postsData={posts} fragmentsData={fragments} />
-    </Box>
-  )
+  return <AllArticles postsData={posts} fragmentsData={fragments} />
 }
