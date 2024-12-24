@@ -9689,11 +9689,13 @@ __metadata:
     "@types/react-dom": "npm:18.3.0"
     "@ui/theme": "workspace:*"
     "@vanilla-extract/css": "npm:1.16.1"
+    clsx: "npm:2.1.1"
     rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
     "@vanilla-extract/css": "*"
+    clsx: "*"
     rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"

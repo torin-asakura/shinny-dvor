@@ -46,9 +46,7 @@ export const Article: FC<ArticleProps> = memo(({
               {title}
             </Text>
             <Box>
-              <Text height={52} style={{ textOverflow: 'ellipsis' }}>
-                {normalizeString(excerpt)}
-              </Text>
+              <TextEllipsis lineClamp={2}>{normalizeString(excerpt)}</TextEllipsis>
             </Box>
           </Column>
         </Column>
