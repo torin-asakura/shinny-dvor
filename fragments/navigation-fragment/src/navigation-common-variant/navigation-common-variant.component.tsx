@@ -32,7 +32,7 @@ export const NavigationCommonVariant: FC<NavigationCommonVariantProps> = ({
       <Box position='relative' alignItems='center' display={['flex', 'flex', 'none']}>
         <Button
           size='ghost'
-          color='transparent'
+          variant='transparent'
           onClick={() => {
             setDrawer(!drawer)
           }}
@@ -51,7 +51,7 @@ export const NavigationCommonVariant: FC<NavigationCommonVariantProps> = ({
             navigation={navigationIndexItems}
           />
         </Drawer>
-        <Layout flexBasis={[20, 20, 0]} flexShrink={0} />
+        <Layout width={[20, 20, 0]} flexShrink={0} />
         <Layout>
           <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
         </Layout>

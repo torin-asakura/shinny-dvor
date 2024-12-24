@@ -28,6 +28,7 @@ export const navLink = styleVariants({
       borderBottom: `2px solid ${vars.colors.blue}`,
       backgroundColor: vars.colors.transparent,
       transition: '0.35s',
+      paddingBottom: '8px',
     },
   },
 })

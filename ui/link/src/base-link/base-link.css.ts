@@ -22,7 +22,6 @@ export const linkVariants = styleVariants({
     ':hover': {
       color: vars.colors.blue,
       backgroundColor: vars.colors.transparent,
-      paddingBottom: '8px',
     },
   },
 })
