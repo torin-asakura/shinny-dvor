@@ -10,6 +10,7 @@ const responsiveContainerProperties = defineProperties({
   dynamicProperties: {
     width: true,
     height: true,
+    aspectRatio: true,
 
     maxHeight: true,
     minWidth: true,
@@ -34,6 +35,7 @@ const responsiveContainerProperties = defineProperties({
     flexWrap: true,
     justifyContent: true,
     alignItems: true,
+    justifySelf: true,
 
     flexGrow: true,
     flexBasis: true,
@@ -43,6 +45,12 @@ const responsiveContainerProperties = defineProperties({
     width: vars.spaces,
     maxWidth: vars.spaces,
     height: vars.spaces,
+
+    padding: vars.spaces,
+    paddingTop: vars.spaces,
+    paddingRight: vars.spaces,
+    paddingBottom: vars.spaces,
+    paddingLeft: vars.spaces,
 
     backgroundColor: vars.colors,
     borderRadius: vars.radii,

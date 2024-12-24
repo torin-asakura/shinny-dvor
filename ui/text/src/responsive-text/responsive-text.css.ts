@@ -15,6 +15,8 @@ const responsiveTextProperties = defineProperties({
     textAlign: true,
   },
   staticProperties: {
+    width: vars.spaces,
+
     color: vars.colors,
     fontFamily: vars.fonts,
     fontWeight: vars.fontWeights,

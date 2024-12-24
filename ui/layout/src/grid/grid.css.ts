@@ -14,10 +14,14 @@ const gridProperties = defineProperties({
   conditions: BREAKPOINT_CONDITIONS,
   defaultCondition: 'mobile',
   dynamicProperties: {
+    gridAutoFlow: true,
     gridAutoColumns: true,
     gridAutoRows: true,
+
+    gridTemplateColumns: true,
   },
   staticProperties: {
+    width: vars.spaces,
     gap: vars.spaces,
   },
 })
