@@ -2,7 +2,7 @@
 
 import React                          from 'react'
 
-import { AllArticles }                from '@blog/all-articles-fragment'
+import { WorksExamples }              from '@site/works-examples-fragment'
 import { Box }                        from '@ui/layout'
 import { getAvailableRadiiData }      from '@globals/data'
 import { getCarBodiesData }           from '@globals/data'
@@ -13,9 +13,11 @@ import { getServicesData }            from '@globals/data'
 import { getPostData }                from '@globals/data'
 import { getBlogPostsData }           from '@globals/data'
 import { replaceServicePricesHelper } from '@globals/data'
+import { getWorkResultsData }         from '@globals/data'
 
 export const TestPageClient = ({ servicesDataToReplace }) => {
   const { fragments } = getFragmentsData()
+  const { workResults } = getWorkResultsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
@@ -26,5 +28,5 @@ export const TestPageClient = ({ servicesDataToReplace }) => {
 
   const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
 
-  return <AllArticles postsData={posts} fragmentsData={fragments} />
+  return <WorksExamples fragmentsData={fragments} workResultsData={workResults} />
 }
