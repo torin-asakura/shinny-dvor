@@ -1,5 +1,8 @@
-import type { InputProps as BaseInputProps } from '@atls-ui-parts/input'
+import { RawInput } from '@atls-ui-parts/input'
 
-export interface InputProps extends BaseInputProps {
+type RawInputProps = React.ComponentProps<typeof RawInput>
+
+export interface InputProps extends RawInputProps {
   size?: 26
+  onChangeValue?: React.Dispatch<React.SetStateAction<string>>
 }
