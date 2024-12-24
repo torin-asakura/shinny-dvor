@@ -45,8 +45,8 @@ const largeStyles = createShapeStyles({
   fontFamily: vars.fonts['primary'],
   fontSize: vars.fontSizes['normal.reduced'],
   fontWeight: vars.fontWeights['semiBold'],
-  paddingLeft: vars.spaces['g24'],
-  paddingRight: vars.spaces['g24'],
+  paddingLeft: vars.spaces['g48'],
+  paddingRight: vars.spaces['g48'],
 })
 
 const fillStyles = style({

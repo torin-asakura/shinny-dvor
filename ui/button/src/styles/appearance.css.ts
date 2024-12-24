@@ -35,13 +35,13 @@ const appearancePrimaryDisabledStyles = createAppearanceStyles({
 const appearanceSecondaryDefaultStyles = createAppearanceStyles({
   fontColor: vars.colors['button.secondary.default.font'],
   backgroundColor: vars.colors['button.secondary.default.background'],
-  borderColor: vars.colors['button.secondary.default.border'],
+  borderColor: `${vars.colors['button.secondary.default.border']} !important`,
 })
 
 const appearanceSecondaryHoverStyles = createAppearanceStyles({
   fontColor: vars.colors['button.secondary.hover.font'],
   backgroundColor: vars.colors['button.secondary.hover.background'],
-  borderColor: vars.colors['button.secondary.hover.border'],
+  borderColor: `${vars.colors['button.secondary.hover.border']} !important`,
 })
 
 const appearanceSecondaryPressedStyles = createAppearanceStyles({

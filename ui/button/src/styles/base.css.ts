@@ -9,5 +9,6 @@ export const baseStyles = style({
   cursor: 'pointer',
   outline: 'none',
   padding: 0,
-  border: '1px solid transparent',
+  border: '1px solid',
+  borderColor: 'transparent',
 })

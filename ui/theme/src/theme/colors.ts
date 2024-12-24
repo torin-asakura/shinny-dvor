@@ -88,7 +88,7 @@ export const colors = {
   'button.primary.disabled.border': 'none',
   'button.secondary.default.background': 'rgba(0, 0, 0, 0.00)',
   'button.secondary.default.font': 'rgba(37, 44, 50, 1)',
-  'button.secondary.default.border': 'rgba(37, 44, 50, 0.12)',
+  'button.secondary.default.border': 'rgba(123, 131, 138, 1)',
   'button.secondary.hover.background': 'rgba(0, 0, 0, 0.00)',
   'button.secondary.hover.font': 'rgba(48, 100, 235, 1)',
   'button.secondary.hover.border': 'rgba(48, 100, 235, 1)',
