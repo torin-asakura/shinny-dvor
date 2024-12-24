@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css'
 
 export const wrapperBase = style({
+  width: '100%',
   transition: 'transform 0.3s',
 })
 

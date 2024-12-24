@@ -1,7 +1,7 @@
+import React                                from 'react'
 import { FC }                               from 'react'
 import { default as BaseReactCompareImage } from 'react-compare-image'
 import { memo }                             from 'react'
-import React                                from 'react'
 
 import { Box }                              from '@ui/layout'
 
@@ -11,12 +11,12 @@ import { SlideImageProps }                  from './slide-image.interfaces.js'
 const ReactCompareImage = BaseReactCompareImage as unknown as FC<any>
 
 export const SlideImage = memo(({ swiperSlide, image }: SlideImageProps) => (
-  <Box>
+  <Box fill>
     <Box
-      width={960}
-      display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
-      justifyContent='center'
+      fill
       alignItems='center'
+      justifyContent='center'
+      display={{ mobile: 'none', tablet: 'none', desktop: 'flex' }}
     >
       <ReactCompareImage
         handle={swiperSlide.isActive && <Handle />}
@@ -24,13 +24,11 @@ export const SlideImage = memo(({ swiperSlide, image }: SlideImageProps) => (
         leftImage={image.firstPhoto.sourceUrl}
         rightImage={image.secondPhoto.sourceUrl}
         sliderPositionPercentage={0.49}
-        rightImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
-        leftImageCss={{ objectFit: 'fill', objectPosition: 'center' }}
         sliderLineColor='linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, #FFFFFF 27.6%, #FFFFFF 71.87%, rgba(255, 255, 255, 0.2) 100%)'
       />
     </Box>
     <Box
-      width={425}
+      fill
       display={{ mobile: 'flex', tablet: 'flex', desktop: 'none' }}
       justifyContent='center'
       alignItems='center'

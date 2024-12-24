@@ -18,7 +18,8 @@ export const mediaContainerStyle = style({
       height: '240px',
     },
     [BREAKPOINT_CONDITIONS.desktop['@media']]: {
-      width: '960px',
+      width: '100%',
+      maxWidth: '960px',
       height: '540px',
     },
   },
