@@ -12,8 +12,8 @@ export const appearanceStyles = style({
 })
 
 export const shapeStyles = style({
-  fontSize: vars.fontSizes.large,
-  fontWeight: vars.fontWeights.medium,
+  fontSize: vars.fontSizes.normal,
+  fontWeight: vars.fontWeights.normal,
   fontFamily: vars.fonts.primary,
 })
 

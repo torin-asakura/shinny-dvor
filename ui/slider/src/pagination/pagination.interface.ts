@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 // @ts-ignore
 import type { Swiper } from 'swiper'
 

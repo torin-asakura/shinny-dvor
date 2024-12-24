@@ -1,3 +1,5 @@
-export interface RendererProps {
+import { PropsWithChildren } from 'react'
+
+export interface RendererProps extends PropsWithChildren {
   active: boolean
 }
