@@ -1,5 +1,6 @@
-import type { KnobDesktopVariantProps } from './knob-dektop-variant.interface.js'
 import type { FC }                      from 'react'
+
+import type { KnobDesktopVariantProps } from './knob-dektop-variant.interface.js'
 
 import React                            from 'react'
 

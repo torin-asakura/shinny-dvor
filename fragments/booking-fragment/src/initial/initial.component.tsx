@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 import type { Service as IService } from '@store/services'
-import type { KeyboardEvent }        from 'react'
+import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
 import type { InitialProps }        from './initial.interface.js'

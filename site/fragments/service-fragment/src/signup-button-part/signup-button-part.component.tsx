@@ -1,5 +1,6 @@
-import type { SignupButtonPartProps } from './signup-button-part.interface.js'
 import type { FC }                    from 'react'
+
+import type { SignupButtonPartProps } from './signup-button-part.interface.js'
 
 import React                          from 'react'
 

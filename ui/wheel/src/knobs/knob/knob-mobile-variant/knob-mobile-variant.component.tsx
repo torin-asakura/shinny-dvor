@@ -1,5 +1,6 @@
-import type { KnobMobileVariantProps } from './knob-mobile-variant.interface.js'
 import type { FC }                     from 'react'
+
+import type { KnobMobileVariantProps } from './knob-mobile-variant.interface.js'
 
 import React                           from 'react'
 

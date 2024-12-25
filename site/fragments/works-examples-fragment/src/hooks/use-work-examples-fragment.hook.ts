@@ -1,6 +1,7 @@
+import type { Swiper as SwiperCore }              from 'swiper'
+
 import type { SlidesType }                        from '../works-examples.interface.js'
 import type { UseWorkExamplesFragmentReturnType } from './use-work-examples-fragment.interface.js'
-import type { Swiper as SwiperCore }              from 'swiper'
 
 import { useState }                               from 'react'
 
