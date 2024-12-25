@@ -13,6 +13,7 @@ const responsiveTextProperties = defineProperties({
     display: true,
     opacity: true,
     textAlign: true,
+    overflow: true,
   },
   staticProperties: {
     color: vars.colors,

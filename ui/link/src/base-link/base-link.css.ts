@@ -15,13 +15,11 @@ export const linkVariants = styleVariants({
     height: '100%',
   },
   active: {
-    color: vars.colors.darkBlue
+    color: vars.colors.darkBlue,
+    paddingBottom: '8px',
+    borderBottom: '2px solid rgba(38, 89, 220, 1)',
   },
   default: {
     color: vars.colors.black,
-    ':hover': {
-      color: vars.colors.blue,
-      backgroundColor: vars.colors.transparent,
-    },
   },
 })

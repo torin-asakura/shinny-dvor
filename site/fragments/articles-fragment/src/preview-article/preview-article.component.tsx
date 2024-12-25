@@ -44,7 +44,7 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
       </Layout>
       <Layout flexBasis={8} />
       <Row width={[300, 300, '100%']} maxHeight={52}>
-        <TextEllipsis lineHeight='medium' color='darkGray' overflow='hidden' lineClamp={2}>
+        <TextEllipsis lineHeight='$medium' color='$darkGray' overflow='hidden' lineClamp={2}>
           {normalizeString(excerpt)}
         </TextEllipsis>
       </Row>
