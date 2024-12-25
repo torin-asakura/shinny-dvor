@@ -15,7 +15,6 @@ export const spaces = {
   g80: '80px',
   g1240: '1240px',
   g1440: '1440px',
-  g1240: '1240px',
   zIndexSecondLayer: '1000',
   zIndexFirstLayer: '9999',
 }

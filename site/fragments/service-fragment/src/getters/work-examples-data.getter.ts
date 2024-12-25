@@ -1,7 +1,7 @@
-import type { WorkExamplesType }     from '../hooks/index.js'
-import type { PriceType }            from '../hooks/index.js'
-import type { ImageType }            from '../hooks/index.js'
-import type { WorkExamplesDataType } from '../hooks/index.js'
+import type { WorkExamplesType }     from '../service.interface.js'
+import type { PriceType }            from '../service.interface.js'
+import type { ImageType }            from '../service.interface.js'
+import type { WorkExamplesDataType } from '../service.interface.js'
 
 interface Props {
   workexamples: WorkExamplesType

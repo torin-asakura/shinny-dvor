@@ -1,6 +1,5 @@
-import type { FC }                     from 'react'
-
 import type { AdditionalServiceProps } from './additional-service.interface.js'
+import type { FC }                     from 'react'
 
 import React                           from 'react'
 
@@ -29,13 +28,13 @@ const AdditionalService: FC<AdditionalServiceProps> = ({
       <Column justifyContent='center'>
         <Layout>
           <Text fontSize={['$big', '$big', '$large']} fontWeight='$medium'>
-            {additionalservice.title}
+            {additionalservice?.title}
           </Text>
         </Layout>
         <Layout flexBasis={4} />
         <Layout>
           <Text fontSize={['$big', '$big', '$large']} fontWeight='$medium'>
-            {additionalservice.price}
+            {additionalservice?.price}
             <Space />
             <Ruble />
           </Text>

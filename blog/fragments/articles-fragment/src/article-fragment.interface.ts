@@ -1,36 +1,9 @@
-interface FeaturedImageInt {
-  node: ImageInt
-}
+import type { FragmentsDataType } from '@globals/data'
+import type { PostByType }        from '@globals/data'
 
-interface ContentAddonsInt {
-  image: ImageInt
-}
-
-interface ImageInt {
-  mediaItemUrl: string
-  altText: string
-}
-
-interface Fragment {
-  contentAddons: {
-    title: string
-    content: string
-    fragmentId: string
-    highlightedText: string
-  }
-}
-
-interface Post {
-  postId: number
-  content: string
-  title: string
-  date: string
-  viewCount: number
-  featuredImage: FeaturedImageInt
-  contentAddons: ContentAddonsInt
-}
+export type RequiredPostByType = globals.NonNullableObject<PostByType>
 
 export interface ArticleProps {
-  fragmentsData: Array<Fragment>
-  postData: Post
+  fragmentsData: FragmentsDataType
+  postData: RequiredPostByType
 }

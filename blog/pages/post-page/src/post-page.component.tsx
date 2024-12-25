@@ -20,10 +20,7 @@ const PostPage: PostPageProps = async ({ params }) => {
         uri,
       }}
     >
-      <PostPageClient
-        // @ts-expect-error not assignable
-        params={params}
-      />
+      <PostPageClient params={params} />
     </PreloadQuery>
   )
 }

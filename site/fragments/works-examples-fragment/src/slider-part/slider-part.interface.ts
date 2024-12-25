@@ -1,12 +1,10 @@
-import type { Swiper } from 'swiper'
+import type { SlidesType } from '../works-examples.interface.js'
+import type { Swiper }     from 'swiper'
 
 export interface SliderPartProps {
-  // TODO
-  slides: any
-  setControlsSwiper: React.Dispatch<React.SetStateAction<Swiper | null>>
-  // TODO
-  priceTitle: any
-  // TODO
-  timeTitle: any
-  setActiveIndex: React.Dispatch<React.SetStateAction<number>>
+  slides: Array<SlidesType>
+  setControlsSwiper: globals.SetState<Swiper | null>
+  priceTitle: string
+  timeTitle: string
+  setActiveIndex: globals.SetState<number>
 }

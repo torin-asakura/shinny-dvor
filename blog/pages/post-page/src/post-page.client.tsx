@@ -2,9 +2,9 @@
 
 'use client'
 
-import type { FC }                  from 'react'
-
 import type { PostPageClientProps } from './post-page.interfaces.js'
+import type { RequiredPostByType }   from './post-page.interfaces.js'
+import type { FC }                  from 'react'
 
 import React                        from 'react'
 
@@ -22,7 +22,6 @@ import { getServicesData }          from '@globals/data'
 
 import { PostPageStyles }           from './post-page.style.js'
 
-// @ts-expect-error not exist
 export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { uri } = params
 
@@ -33,8 +32,6 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { services } = getServicesData()
   const { postBy } = getPostData(uri)
   const { contacts } = getContactsData()
-
-  console.log(postBy)
 
   return (
     <>
@@ -49,7 +46,7 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
           carBodiesData={carBodies}
           servicesData={services}
         />
-        <Article postData={postBy} fragmentsData={fragments} />
+        <Article postData={postBy as RequiredPostByType} fragmentsData={fragments} />
         <Footer
           fragmentsData={fragments}
           contactsData={contacts}

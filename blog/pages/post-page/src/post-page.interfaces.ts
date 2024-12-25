@@ -1,10 +1,12 @@
-import type { SEOInt }  from '@globals/data'
-import type { DataInt } from '@globals/data'
+import type { SEOInt }     from '@globals/data'
+import type { PostByType } from '@globals/data'
+
+export type RequiredPostByType = globals.NonNullableObject<PostByType>
 
 export interface PostPageClientProps {
-  ogCover: string
-  SEO: SEOInt
-  data: DataInt
+  params: {
+    uri: string
+  }
 }
 
 type ParamsType = {

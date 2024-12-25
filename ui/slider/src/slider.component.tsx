@@ -1,20 +1,23 @@
 import { Swiper }      from '@atls-ui-parts/swiper'
-// @ts-expect-error
+
+import React           from 'react'
+// @ts-ignore
 import { Keyboard }    from 'swiper/modules'
-// @ts-expect-error
+// @ts-ignore
 import { Navigation }  from 'swiper/modules'
 import { memo }        from 'react'
-import React           from 'react'
 
 import { SliderProps } from './slider.interfaces.js'
 
 export const Slider = memo(({ onSwiper, children }: SliderProps) => (
   <Swiper
+    // @ts-ignore
     onSwiper={onSwiper}
     loop
     centeredSlides
     loopAddBlankSlides={false}
     allowTouchMove={false}
+    // @ts-ignore
     modules={[Keyboard, Navigation]}
     style={{}}
     keyboard={{

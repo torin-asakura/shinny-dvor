@@ -41,7 +41,7 @@ export const useService = ({
   }, [onCarBody])
 
   const defaultPrice = getDefaultPrice(price)
-  const servicePrice = getServicePrice(price, radius, carBody)
+  const servicePrice = getServicePrice(price as object, radius, carBody)
 
   return {
     visible,

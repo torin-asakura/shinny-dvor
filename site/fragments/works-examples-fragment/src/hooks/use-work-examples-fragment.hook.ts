@@ -1,24 +1,33 @@
-import type { Swiper as SwiperCore }    from 'swiper'
+import type { SlidesType }                        from '../works-examples.interface.js'
+import type { UseWorkExamplesFragmentReturnType } from './use-work-examples-fragment.interface.js'
+import type { Swiper as SwiperCore }              from 'swiper'
 
-import { useState }                     from 'react'
+import { useState }                               from 'react'
 
-import { extractFragment }              from '@globals/data'
-import { extractFragments }             from '@globals/data'
+import { extractFragment }                        from '@globals/data'
+import { extractFragments }                       from '@globals/data'
 
-import { UseWorkExamplesFragmentProps } from './use-work-examples-fragment.interface.js'
+import { UseWorkExamplesFragmentProps }           from './use-work-examples-fragment.interface.js'
 
 export const useWorkExamplesFragment = ({
   fragmentsData,
   workResultsData,
-}: UseWorkExamplesFragmentProps) => {
+}: UseWorkExamplesFragmentProps): UseWorkExamplesFragmentReturnType => {
   const [controlsSwiper, setControlsSwiper] = useState<SwiperCore | null>(null)
   const [activeIndex, setActiveIndex] = useState<number>(0)
 
-  const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData)
-  const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData).content
-  const priceTitle = extractFragment('contentAddons', 'price-title', fragmentsData).title
-  const timeTitle = extractFragment('contentAddons', 'time-title', fragmentsData).title
-  const slides = extractFragments('work-result-item', 'workResultParams', workResultsData)
+  const { title } = extractFragment('contentAddons', 'work-examples', fragmentsData) as {
+    title: string
+  }
+  const subTitle = extractFragment('contentAddons', 'work-examples', fragmentsData)
+    .content as string
+  const priceTitle = extractFragment('contentAddons', 'price-title', fragmentsData).title as string
+  const timeTitle = extractFragment('contentAddons', 'time-title', fragmentsData).title as string
+  const slides = extractFragments(
+    'work-result-item',
+    'workResultParams',
+    workResultsData
+  ) as Array<SlidesType>
 
   return {
     controlsSwiper,

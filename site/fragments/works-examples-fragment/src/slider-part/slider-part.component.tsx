@@ -1,6 +1,5 @@
-import type { FC }              from 'react'
-
 import type { SliderPartProps } from './slider-part.interface.js'
+import type { FC }              from 'react'
 
 import React                    from 'react'
 

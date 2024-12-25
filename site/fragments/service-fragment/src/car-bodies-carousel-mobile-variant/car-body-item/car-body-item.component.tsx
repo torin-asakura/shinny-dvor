@@ -1,6 +1,5 @@
-import type { FC }               from 'react'
-
 import type { CarBodyItemProps } from './car-body-item.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -24,8 +23,6 @@ export const CarBodyItem: FC<CarBodyItemProps> = ({ item, onCarBody, setOnCarBod
         <Button
           variant='transparent'
           size='fill'
-          height='100%'
-          width='100%'
           onClick={() => {
             setOnCarBody(item)
           }}

@@ -1,18 +1,27 @@
-import React           from 'react'
+import type { KnobMobileVariantProps } from './knob-mobile-variant.interface.js'
+import type { FC }                     from 'react'
 
-import { Button }      from '@ui/button'
-import { Card }        from '@ui/card'
-import { CloseIcon }   from '@ui/icons'
-import { Layout }      from '@ui/layout'
-import { Box }         from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Row }         from '@ui/layout'
-import { Text }        from '@ui/text'
+import React                           from 'react'
 
-import { InnerCircle } from '../inner-circle/index.js'
-import { OuterCircle } from '../outer-circle/index.js'
+import { Button }                      from '@ui/button'
+import { Card }                        from '@ui/card'
+import { CloseIcon }                   from '@ui/icons'
+import { Layout }                      from '@ui/layout'
+import { Box }                         from '@ui/layout'
+import { Column }                      from '@ui/layout'
+import { Row }                         from '@ui/layout'
+import { Text }                        from '@ui/text'
 
-export const KnobMobileVariant = ({ card, setCard, active, setActive, text }) => {
+import { InnerCircle }                 from '../inner-circle/index.js'
+import { OuterCircle }                 from '../outer-circle/index.js'
+
+export const KnobMobileVariant: FC<KnobMobileVariantProps> = ({
+  card,
+  setCard,
+  active,
+  setActive,
+  text,
+}) => {
   return (
     <Layout display={['flex', 'flex', 'none']}>
       <Layout

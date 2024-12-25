@@ -36,3 +36,6 @@ export type WorkExamplesDataType = Array<{
   title: TitleType
   price: PriceType
 }>
+
+export type RequiredAdditionalService =
+  globals.NonNullableObject<ServiceDataType>['servicesParams']['additionalservice']

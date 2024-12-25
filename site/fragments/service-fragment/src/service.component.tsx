@@ -1,8 +1,6 @@
-/* eslint-disable */
-
-import type { FC }                         from 'react'
-
 import type { ServiceProps }               from './service.interface.js'
+import type { RequiredAdditionalService }  from './service.interface.js'
+import type { FC }                         from 'react'
 
 import React                               from 'react'
 
@@ -12,7 +10,6 @@ import { Divider }                         from '@ui/divider'
 import { Box }                             from '@ui/layout'
 import { Row }                             from '@ui/layout'
 import { Column }                          from '@ui/layout'
-import { Layout }                          from '@ui/layout'
 import { Text }                            from '@ui/text'
 import { serviceVar }                      from '@store/services'
 
@@ -77,7 +74,6 @@ export const Service: FC<ServiceProps> = ({
         carBodiesData={carBodiesData}
         servicesData={servicesData}
         navigationData={navigationData}
-        additionalService={isAdditionalService ? additionalservice.title : ''}
       />
       <Box
         width='$fill'
@@ -142,11 +138,17 @@ export const Service: FC<ServiceProps> = ({
                 />
               </Condition>
 
-              <Condition match={variant === 'primary' && additionalservice.title !== null}>
+              <Condition
+                match={
+                  variant === 'primary' &&
+                  Boolean(additionalservice?.title) &&
+                  Boolean(additionalservice?.price)
+                }
+              >
                 <AdditionalService
                   isAdditionalService={isAdditionalService}
                   setIsAdditionalService={setIsAdditionalService}
-                  additionalservice={additionalservice}
+                  additionalservice={additionalservice as RequiredAdditionalService}
                 />
               </Condition>
             </Column>

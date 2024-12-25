@@ -1,4 +1,4 @@
-import type { CarBodiesType } from '../hooks/index.js'
+import type { CarBodiesType } from '../service.interface.js'
 
 export const getInitialCarBody = (carBodies: CarBodiesType): string => {
   if (carBodies && carBodies[0]) {

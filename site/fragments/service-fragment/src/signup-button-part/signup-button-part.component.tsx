@@ -1,6 +1,5 @@
-import type { FC }                    from 'react'
-
 import type { SignupButtonPartProps } from './signup-button-part.interface.js'
+import type { FC }                    from 'react'
 
 import React                          from 'react'
 
@@ -25,7 +24,7 @@ export const SignupButtonPart: FC<SignupButtonPartProps> = ({
         style={{ width: '100%' }}
         onClick={() => {
           setVisible(true)
-          serviceVar({ radius, carBody: onCarBody, serviceName })
+          serviceVar({ radius, carBody: onCarBody, serviceName: serviceName || '' })
         }}
       >
         <Text fontWeight='$medium'>

@@ -1,12 +1,11 @@
+import type { ArticleProps }           from './article-fragment.interface.js'
 import type { FC }                     from 'react'
 
-import type { ArticleProps }           from './article-fragment.interface.js'
-
+import React                           from 'react'
 import { FormattedPlural }             from 'react-intl'
 import { FormattedMessage }            from 'react-intl'
 import { memo }                        from 'react'
 import { useEffect }                   from 'react'
-import React                           from 'react'
 
 import { Divider }                     from '@ui/divider'
 import { ImageBlock }                  from '@ui/image'
@@ -23,7 +22,7 @@ import { formattedDate }               from '@shared/utils'
 import { ReturnButton }                from './return-button/index.js'
 
 export const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
-  const { postId, content, title, date, viewCount, contentAddons, featuredImage } = postData
+  const { postId, content, title, date, viewCount, featuredImage } = postData
 
   const goBack = extractFragment('contentAddons', 'blog', fragmentsData).title
 
@@ -99,7 +98,7 @@ export const Article: FC<ArticleProps> = memo(({ fragmentsData, postData }) => {
         <Layout flexBasis={20} flexShrink={0} />
         <Column fill maxWidth={['100%', '100%', 843]}>
           <Layout flexBasis={[48, 48, 80]} flexShrink={0} />
-          <Text lineHeight='$medium' width='100%'>
+          <Text lineHeight='$medium' width='$fill'>
             <Row className='post-page__content-container'>
               <div dangerouslySetInnerHTML={{ __html: content }} />
             </Row>

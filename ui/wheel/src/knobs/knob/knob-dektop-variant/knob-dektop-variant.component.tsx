@@ -1,14 +1,23 @@
-import React           from 'react'
+import type { KnobDesktopVariantProps } from './knob-dektop-variant.interface.js'
+import type { FC }                      from 'react'
 
-import { Box }         from '@ui/layout'
-import { Layout }      from '@ui/layout'
-import { Column }      from '@ui/layout'
-import { Text }        from '@ui/text'
+import React                            from 'react'
 
-import { InnerCircle } from '../inner-circle/index.js'
-import { OuterCircle } from '../outer-circle/index.js'
+import { Box }                          from '@ui/layout'
+import { Layout }                       from '@ui/layout'
+import { Column }                       from '@ui/layout'
+import { Text }                         from '@ui/text'
 
-export const KnobDesktopVariant = ({ triggerProps, hover, render, layerProps, text }) => {
+import { InnerCircle }                  from '../inner-circle/index.js'
+import { OuterCircle }                  from '../outer-circle/index.js'
+
+export const KnobDesktopVariant: FC<KnobDesktopVariantProps> = ({
+  triggerProps,
+  hover,
+  render,
+  layerProps,
+  text,
+}) => {
   return (
     <Layout display={['none', 'none', 'flex']}>
       <Layout {...triggerProps}>

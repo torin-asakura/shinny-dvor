@@ -1,6 +1,8 @@
-import { extractFragment } from '@globals/data'
+import type { FragmentsDataType } from '@globals/data'
 
-export const getWorkExamplesTitle = (fragmentsData) => {
+import { extractFragment }        from '@globals/data'
+
+export const getWorkExamplesTitle = (fragmentsData: FragmentsDataType): string => {
   const { title: workExamplesTitle } = extractFragment(
     'contentAddons',
     'work-examples-title',

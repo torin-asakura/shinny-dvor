@@ -1,4 +1,4 @@
-import type { PriceType } from '../hooks/index.js'
+import type { PriceType } from '../service.interface.js'
 
 interface Props {
   price: PriceType

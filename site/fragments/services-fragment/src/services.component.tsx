@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import type { ServicesProps } from './services.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
@@ -31,13 +30,7 @@ const Services: FC<ServicesProps> = forwardRef((
   const allServicesTitle = extractFragment('contentAddons', 'all-services', fragmentsData).title
 
   return (
-    <Box
-      ref={ref}
-      maxWidth={['100%', '100%', 1440]}
-      width='100%'
-      justifyContent='center'
-      id='services'
-    >
+    <Box ref={ref} maxWidth={['100%', '100%', 1440]} width='100%' justifyContent='center'>
       <Column fill>
         <Layout flexBasis={[48, 48, 120]} />
         <Row>
