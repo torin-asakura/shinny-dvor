@@ -2,8 +2,7 @@
 
 import React                          from 'react'
 
-import { ServicesInfographics }       from '@site/services-infographics-fragment'
-import { WorksExamples }              from '@site/works-examples-fragment'
+import { Service }                    from '@site/service-fragment'
 import { Box }                        from '@ui/layout'
 import { getAvailableRadiiData }      from '@globals/data'
 import { getCarBodiesData }           from '@globals/data'
@@ -16,6 +15,7 @@ import { getBlogPostsData }           from '@globals/data'
 import { replaceServicePricesHelper } from '@globals/data'
 import { getWorkResultsData }         from '@globals/data'
 import { getUiData }                  from '@globals/data'
+import { getServiceByData }           from '@globals/data'
 
 export const TestPageClient = ({ servicesDataToReplace }) => {
   const { fragments } = getFragmentsData()
@@ -25,11 +25,21 @@ export const TestPageClient = ({ servicesDataToReplace }) => {
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
   const { services: baseServices } = getServicesData()
+  const { serviceBy: baseServiceBy } = getServiceByData('pereobuvka')
   const { postBy } = getPostData('hranenie-shin')
   const { posts } = getBlogPostsData()
   const { carBodies } = getCarBodiesData()
 
   const services = replaceServicePricesHelper(baseServices, servicesDataToReplace)
 
-  return <WorksExamples fragmentsData={fragments} workResultsData={workResults} />
+  return (
+    <Service
+      servicesData={services}
+      availableRadiiData={availableRadii}
+      fragmentsData={fragments}
+      carBodiesData={carBodies}
+      serviceData={baseServiceBy}
+      navigationData={navigation}
+    />
+  )
 }

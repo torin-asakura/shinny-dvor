@@ -8,6 +8,7 @@ import { GET_SERVICES }        from '@globals/data'
 import { GET_WORK_RESULTS }    from '@globals/data'
 import { GET_BLOG_POST }       from '@globals/data'
 import { GET_UI }              from '@globals/data'
+import { GET_SERVICE_BY }      from '@globals/data'
 import { getAqsiData }         from '@globals/data'
 import { getServerClient }     from '@globals/data/apollo'
 
@@ -23,6 +24,7 @@ export const runTestPageServerQueries = async () => {
     client.query({ query: GET_FRAGMENTS }),
     client.query({ query: GET_BLOG_POSTS }),
     client.query({ query: GET_BLOG_POST, variables: { uri: 'hranenie-shin' } }),
+    client.query({ query: GET_SERVICE_BY, variables: { uri: 'pereobuvka' } }),
     client.query({ query: GET_CAR_BODIES }),
     client.query({ query: GET_SERVICES }),
   ])
