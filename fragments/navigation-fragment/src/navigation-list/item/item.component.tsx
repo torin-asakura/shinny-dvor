@@ -13,6 +13,7 @@ import { getColor }       from '../../helpers/index.js'
 
 const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Column>
+    <Layout flexBasis={8} />
     <Layout>
       <NextNavLink path={content}>
         <Text

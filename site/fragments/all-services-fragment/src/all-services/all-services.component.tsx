@@ -33,7 +33,7 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
         </Text>
         <Layout flexBasis={[12, 12, 16]} />
         <Layout flexBasis={32} />
-        <Row flexWrap='wrap' style={{ gap: 32 }}>
+        <Row flexWrap='wrap' gap={32}>
           {services.map(({
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
