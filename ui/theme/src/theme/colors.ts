@@ -3,7 +3,7 @@ const legacy = {
   // white: 'rgba(255, 255, 255, 1)',
   transparent: 'rgba(255, 255, 255, 0)',
   gray: 'rgba(37, 44, 50, 0.12)',
-  lightGray: 'rgba(37, 44, 50, 0.06)',
+  lightGray: 'rgba(249, 249, 249, 1)',
   charcoal: 'rgba(255, 255, 255, 0.6)',
   steel: 'rgba(37, 44, 50, 0.7)',
   milkGray: 'rgba(255, 255, 255, 0.2)',

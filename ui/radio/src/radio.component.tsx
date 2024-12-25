@@ -1,7 +1,7 @@
 import type { RadioProps } from './radio.interface.js'
 
-import { memo }            from 'react'
 import React               from 'react'
+import { memo }            from 'react'
 
 import { Layout }          from '@ui/layout'
 import { Column }          from '@ui/layout'
@@ -16,7 +16,6 @@ const Radio = memo(({ children, checked, textTransform = 'lowercase' }: RadioPro
         {children}
       </Checkmark>
     </Container>
-    <Layout flexBasis={12} />
   </Column>
 ))
 

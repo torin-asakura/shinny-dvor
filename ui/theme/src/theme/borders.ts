@@ -1,4 +1,5 @@
 export const borders = {
+  none: 'none',
   shark: '1px solid rgba(37, 44, 50, 0.12)',
   rollingstone: '1px solid rgba(123, 131, 138, 1)',
   white: '2px solid rgba(255, 255, 255, 1)',

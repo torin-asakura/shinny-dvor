@@ -10,7 +10,15 @@ import { IconPlacement }    from './button.interfaces.js'
 import { buttonStyles }     from './styles/index.js'
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
-  { children, icon, iconPlacement, size = 'common', variant = 'primary', disabled, ...props },
+  {
+    children,
+    icon,
+    iconPlacement = IconPlacement.LEFT,
+    size = 'common',
+    variant = 'primary',
+    disabled,
+    ...props
+  },
   ref
 ) => {
   const [pressed, setPressed] = useState<boolean>(false)
