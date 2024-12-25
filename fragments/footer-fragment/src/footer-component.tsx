@@ -57,7 +57,7 @@ export const Footer: FC<FooterProps> = memo(({
       <Column width='100%' alignItems='center'>
         <Divider color='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} width='100%'>
-          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 40]} />
             <Row justifyContent='space-between' alignItems='center'>
@@ -99,11 +99,11 @@ export const Footer: FC<FooterProps> = memo(({
               </Box>
             </Box>
           </Column>
-          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
         </Box>
         <Divider color='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
-          <Layout flexBasis={[20, 20, 84]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 84]} flexShrink='0' />
           <Column width='100%'>
             <Layout flexBasis={[24, 24, 32]} />
             <Row
@@ -121,11 +121,11 @@ export const Footer: FC<FooterProps> = memo(({
                         {normalizeString(firstPart)}
                       </Text>
                     </Layout>
-                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout flexBasis={12} flexShrink='0' />
                     <Layout>
                       <Divider direction='vertical' color='$darkGray' />
                     </Layout>
-                    <Layout flexBasis={12} flexShrink={0} />
+                    <Layout flexBasis={12} flexShrink='0' />
                     <Layout>
                       <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                         {normalizeString(secondPart)}
@@ -161,18 +161,18 @@ export const Footer: FC<FooterProps> = memo(({
               <Layout>
                 <Text fontWeight='$medium'>{normalizeString(address)}</Text>
               </Layout>
-              <Layout flexBasis={8} flexShrink={0} />
+              <Layout flexBasis={8} flexShrink='0' />
               <Row>
                 <Layout>
                   <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                     {normalizeString(firstPart)}
                   </Text>
                 </Layout>
-                <Layout flexBasis={12} flexShrink={0} />
+                <Layout flexBasis={12} flexShrink='0' />
                 <Layout>
                   <Divider direction='vertical' color='$darkGray' />
                 </Layout>
-                <Layout flexBasis={12} flexShrink={0} />
+                <Layout flexBasis={12} flexShrink='0' />
                 <Layout>
                   <Text whiteSpace='nowrap' fontSize='$small' color='$darkGray'>
                     {normalizeString(secondPart)}
@@ -187,7 +187,7 @@ export const Footer: FC<FooterProps> = memo(({
                       <Text fontWeight='$medium'>{telephone}</Text>
                     </Link>
                   </Layout>
-                  <Layout flexBasis={8} flexShrink={0} />
+                  <Layout flexBasis={8} flexShrink='0' />
                   <Layout>
                     <Text fontSize='$small' color='$darkGray'>
                       {appointmentPhone}
@@ -208,9 +208,9 @@ export const Footer: FC<FooterProps> = memo(({
                 </Layout>
               </Row>
             </Column>
-            <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
+            <Layout flexBasis={[24, 24, 32]} flexShrink='0' />
           </Column>
-          <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
         </Box>
       </Column>
     </Box>

@@ -54,13 +54,13 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
                   <Ruble />
                 </Text>
               </Box>
-              <Layout flexBasis={[24, 32, 32]} flexShrink={0} />
+              <Layout flexBasis={[24, 32, 32]} flexShrink='0' />
               <Column fill alignItems='center'>
-                <Layout flexBasis={32} flexShrink={0} />
+                <Layout flexBasis={32} flexShrink='0' />
                 <Box minWidth={[180, 180, 232]} minHeight={[180, 180, 232]}>
                   <ImageBlock width={232} height={232} src={image.sourceUrl} alt={image.altText} />
                 </Box>
-                <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
+                <Layout flexBasis={[24, 24, 32]} flexShrink='0' />
                 <Row>
                   <Row width={['100%', '100%', 232]} height={52}>
                     <Text
@@ -95,9 +95,9 @@ const Item: FC<ItemProps> = ({ averagePrice, serviceName, price, image, addon })
                     </Box>
                   </Condition>
                 </Layout>
-                <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
+                <Layout flexBasis={[24, 24, 32]} flexShrink='0' />
               </Column>
-              <Layout flexBasis={[24, 24, 32]} flexShrink={0} />
+              <Layout flexBasis={[24, 24, 32]} flexShrink='0' />
             </Box>
           </Column>
         </Box>

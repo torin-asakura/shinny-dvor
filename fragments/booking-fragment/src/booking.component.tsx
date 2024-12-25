@@ -49,7 +49,7 @@ export const Booking: FC<BookingProps> = ({
         paddingX={[24, 24, 28]}
       >
         <Column width='100%' alignItems='center'>
-          <Layout flexShrink={0} />
+          <Layout flexShrink='0' />
           <Box width='100%' justifyContent='space-between' alignItems='center'>
             <Layout>
               <Logo path={mainPage.content} />

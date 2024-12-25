@@ -51,7 +51,7 @@ export const NavigationCommonVariant: FC<NavigationCommonVariantProps> = ({
             navigation={navigationIndexItems}
           />
         </Drawer>
-        <Layout width={[20, 20, 0]} flexShrink={0} />
+        <Layout width={[20, 20, 0]} flexShrink='0' />
         <Layout>
           <Logo path={mainNavigationItem.content} color={getColor(active!, scrollY)} />
         </Layout>

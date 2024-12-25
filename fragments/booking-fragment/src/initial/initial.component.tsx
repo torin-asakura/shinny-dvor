@@ -155,7 +155,7 @@ const Initial: FC<InitialProps> = ({
             />
           </Layout>
         </Column>
-        <Layout flexBasis={32} flexShrink={0} />
+        <Layout flexBasis={32} flexShrink='0' />
         <Column fill>
           <Layout>
             <Text lineHeight='$grown' color='$darkGray'>
