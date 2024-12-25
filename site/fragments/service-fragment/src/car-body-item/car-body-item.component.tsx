@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './car-body-item.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 

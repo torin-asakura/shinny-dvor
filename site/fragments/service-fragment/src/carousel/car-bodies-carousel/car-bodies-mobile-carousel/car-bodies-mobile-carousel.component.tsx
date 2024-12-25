@@ -10,7 +10,7 @@ export const CarBodiesMobileCarousel: FC<PropsWithChildren> = ({ children }) => 
     spaceBetween: 16,
     centered: false,
     height: 40,
-    width: 335,
+    width: 640,
     loop: false,
   })
 

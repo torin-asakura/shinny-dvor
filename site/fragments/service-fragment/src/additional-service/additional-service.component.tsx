@@ -1,6 +1,5 @@
-import type { FC }                     from 'react'
-
 import type { AdditionalServiceProps } from './additional-service.interface.js'
+import type { FC }                     from 'react'
 
 import React                           from 'react'
 
@@ -20,11 +19,11 @@ const AdditionalService: FC<AdditionalServiceProps> = ({
   <Box
     width='100%'
     height={[88, 88, 104]}
-    backgroundColor='fillGray'
-    borderRadius='mini'
+    backgroundColor='$alabaster'
+    borderRadius='$mini'
     alignItems='center'
+    padding={[20, 20, 24]}
   >
-    <Layout flexBasis={[20, 20, 24]} />
     <Checkbox active={isAdditionalService} onCheck={setIsAdditionalService}>
       <Column justifyContent='center'>
         <Layout>
@@ -42,7 +41,6 @@ const AdditionalService: FC<AdditionalServiceProps> = ({
         </Layout>
       </Column>
     </Checkbox>
-    <Layout flexBasis={[20, 20, 24]} />
   </Box>
 )
 
