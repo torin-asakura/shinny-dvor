@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import type { ServicesProps } from './services.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'
@@ -20,10 +19,7 @@ import { extractFragment }    from '@globals/data'
 
 import { ServicesList }       from './services-list/index.js'
 
-const Services: FC<ServicesProps> = forwardRef((
-  { fragmentsData, availableRadiiData, servicesData },
-  ref: any
-) => {
+const Services: FC<ServicesProps> = forwardRef(({ fragmentsData, servicesData }, ref: any) => {
   const services = extractFragments('service-item', 'servicesParams', servicesData)
 
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)

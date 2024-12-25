@@ -1,8 +1,8 @@
 /* eslint-disable */
 
+import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
-import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -84,8 +84,7 @@ export const Hero = forwardRef((
           />
         </Box>
         <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
-        <Column width='100%'>
-          <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
+        <Column width='100%' justifyContent='flex-end'>
           <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
             <Row>
               <Text
