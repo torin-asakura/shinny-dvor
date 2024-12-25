@@ -15,7 +15,7 @@ import { Gtag }                   from '@ui/gtag'
 import { GLOBAL_THEME_ID }        from '@ui/theme'
 
 import { NavigationEvents }       from './hooks/index.js'
-import { RoolLayoutProviders }    from './root-layout.providers.js'
+import { RootLayoutProviders }    from './root-layout.providers.js'
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ['cyrillic', 'latin'],
@@ -31,12 +31,12 @@ export const RootLayout: FC<PropsWithChildren<RootLayoutProps>> = memo(({ childr
     <html className={`${ibmPlexSans.className} ${ibmPlexSans.variable}`}>
       <body id={GLOBAL_THEME_ID}>
         <ApolloWrapper>
-          <RoolLayoutProviders messages={messages}>
+          <RootLayoutProviders messages={messages}>
             {children}
             <Suspense fallback={null}>
               <NavigationEvents />
             </Suspense>
-          </RoolLayoutProviders>
+          </RootLayoutProviders>
         </ApolloWrapper>
         <Gtag gaTrackingId={gaTrackingId} />
       </body>
