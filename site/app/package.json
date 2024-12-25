@@ -36,7 +36,6 @@
     "@site/index-page": "workspace:*",
     "@site/service-page": "workspace:*",
     "@site/services-page": "workspace:*",
-    "@site/test-page": "workspace:*",
     "@site/yandex-turbo-api": "workspace:*",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
