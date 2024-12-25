@@ -1,5 +1,6 @@
-import type { ServicePricePartProps } from './service-price-part.interface.js'
 import type { FC }                    from 'react'
+
+import type { ServicePricePartProps } from './service-price-part.interface.js'
 
 import React                          from 'react'
 

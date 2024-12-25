@@ -1,6 +1,7 @@
-import type { SwitchProps }       from './switch.interface.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
+
+import type { SwitchProps }       from './switch.interface.js'
 
 import React                      from 'react'
 

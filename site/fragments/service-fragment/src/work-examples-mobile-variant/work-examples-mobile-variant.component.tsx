@@ -1,5 +1,6 @@
-import type { WorkExamplesMobileVariantProps } from './work-examples-mobile-variant.interface.js'
 import type { FC }                             from 'react'
+
+import type { WorkExamplesMobileVariantProps } from './work-examples-mobile-variant.interface.js'
 
 import React                                   from 'react'
 

@@ -1,7 +1,7 @@
-import React                                from 'react'
 import { FC }                               from 'react'
 import { default as BaseReactCompareImage } from 'react-compare-image'
 import { memo }                             from 'react'
+import React                                from 'react'
 
 import { Box }                              from '@ui/layout'
 

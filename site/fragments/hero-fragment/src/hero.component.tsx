@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -148,7 +148,13 @@ export const Hero = forwardRef((
                 </Link>
               </Box>
               <Layout flexBasis={[0, 0, 32]} flexShrink='0' flexGrow={[1, 1, 0]} />
-              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} variant='dark' buttonSize={40} size={30} />
+              <SocialLinks
+                linkTelegram={linkTelegram}
+                linkVk={linkVk}
+                variant='dark'
+                buttonSize={40}
+                size={30}
+              />
             </Row>
           </Box>
           <Layout flexBasis={[20, 20, 30]} flexShrink='0' />

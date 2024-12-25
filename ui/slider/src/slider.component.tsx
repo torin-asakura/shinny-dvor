@@ -1,11 +1,10 @@
 import { Swiper }      from '@atls-ui-parts/swiper'
-
-import React           from 'react'
 // @ts-expect-error
 import { Keyboard }    from 'swiper/modules'
 // @ts-expect-error
 import { Navigation }  from 'swiper/modules'
 import { memo }        from 'react'
+import React           from 'react'
 
 import { SliderProps } from './slider.interfaces.js'
 

@@ -1,5 +1,6 @@
-import type { IconPartProps } from './icon-part.interfaces.js'
 import type { FC }            from 'react'
+
+import type { IconPartProps } from './icon-part.interfaces.js'
 
 import React                  from 'react'
 
@@ -8,7 +9,7 @@ import { Box }                from '@ui/layout'
 import { Link }               from '@ui/link'
 import { useHover }           from '@ui/utils'
 
-export const IconPart: FC<IconPartProps> = ({ Icon, href, buttonSize = '$g48',  size, dark }) => {
+export const IconPart: FC<IconPartProps> = ({ Icon, href, buttonSize = '$g48', size, dark }) => {
   const [hover, hoverProps] = useHover()
   const buttonVariant = dark ? 'inverse' : 'tertiary'
 

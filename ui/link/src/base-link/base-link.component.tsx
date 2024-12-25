@@ -1,6 +1,6 @@
+import { memo }          from 'react'
 import React             from 'react'
 import clsx              from 'clsx'
-import { memo }          from 'react'
 
 import { BaseLinkProps } from './base-link.interfaces.js'
 import { baseLink }      from './base-link.css.js'

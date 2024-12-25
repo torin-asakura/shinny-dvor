@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { NavigationProps }     from './navigation.interface.js'
 import type { FC }                  from 'react'
 
-import React                        from 'react'
+import type { NavigationProps }     from './navigation.interface.js'
+
 import { useState }                 from 'react'
+import React                        from 'react'
 
 import { Booking }                  from '@fragments/booking-fragment'
 import { Box }                      from '@ui/layout'
@@ -66,14 +67,14 @@ const Navigation: FC<NavigationProps> = ({
             <Row justifyContent='space-between'>
               <Layout display={['flex', 'flex', 'none']}>
                 <NavigationCommonVariant
-                    drawer={drawer}
-                    setDrawer={setDrawer}
-                    active={active}
-                    navigationIndexItems={navigationIndexItems}
-                    mainNavigationItem={mainNavigationItem}
-                    setVisible={setVisible}
-                    signUp={signUp}
-                    scrollY={scrollY}
+                  drawer={drawer}
+                  setDrawer={setDrawer}
+                  active={active}
+                  navigationIndexItems={navigationIndexItems}
+                  mainNavigationItem={mainNavigationItem}
+                  setVisible={setVisible}
+                  signUp={signUp}
+                  scrollY={scrollY}
                 />
               </Layout>
 

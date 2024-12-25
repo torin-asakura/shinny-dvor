@@ -1,10 +1,11 @@
 /* eslint-disable */
 
-import type { ServicesProps } from './services.interface.js'
 import type { FC }            from 'react'
 
-import React                  from 'react'
+import type { ServicesProps } from './services.interface.js'
+
 import { forwardRef }         from 'react'
+import React                  from 'react'
 
 import { Button }             from '@ui/button'
 import { Divider }            from '@ui/divider'

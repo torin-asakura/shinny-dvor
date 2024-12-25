@@ -1,5 +1,6 @@
-import type { PaginationPartProps } from './pagination-part.interface.js'
 import type { FC }                  from 'react'
+
+import type { PaginationPartProps } from './pagination-part.interface.js'
 
 import React                        from 'react'
 

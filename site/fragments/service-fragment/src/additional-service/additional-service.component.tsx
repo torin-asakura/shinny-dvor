@@ -1,5 +1,6 @@
-import type { AdditionalServiceProps } from './additional-service.interface.js'
 import type { FC }                     from 'react'
+
+import type { AdditionalServiceProps } from './additional-service.interface.js'
 
 import React                           from 'react'
 

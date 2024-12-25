@@ -1,10 +1,10 @@
 import type { BreakpointKey }            from '@ui/theme'
 
-
 import { BREAKPOINT_CONDITIONS }         from '@ui/theme'
 
+import { ResponsiveTextProps }            from '../responsive-text/index.js'
+import { Sprinkles } from '../responsive-text/index.js'
 import { WITHOUT_PIXELS_PROPERTY_NAMES } from './props.constants.js'
-import {ResponsiveTextProps, Sprinkles} from "../responsive-text/index.js";
 
 type PropKey = keyof ResponsiveTextProps
 // type MappedArrayType = { [K in BreakpointKey]?: number | string | undefined }
@@ -28,7 +28,10 @@ export class PropsMapper {
 
       switch (propValueType) {
         case PropVaueTypes.Array:
-          mappedProps[propKey] = this.mapArrayPropValue(propKey, propValue as Array<number | string | null | undefined>)
+          mappedProps[propKey] = this.mapArrayPropValue(
+            propKey,
+            propValue as Array<number | string | null | undefined>
+          )
           break
         case PropVaueTypes.Pixels:
           mappedProps[propKey] = `${propValue as number}px`

@@ -1,10 +1,9 @@
 import type { PropsWithChildren } from 'react'
 
 import { Box as BaseBox }         from '@atls-ui-parts/layout'
-
-import React                      from 'react'
 import { clsx }                   from 'clsx'
 import { forwardRef }             from 'react'
+import React                      from 'react'
 
 import { Sprinkles }              from './grid.css.js'
 import { rainbowSprinkles }       from './grid.css.js'

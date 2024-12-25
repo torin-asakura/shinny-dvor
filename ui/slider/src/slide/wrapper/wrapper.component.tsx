@@ -1,7 +1,7 @@
 import type { WrapperProps } from './wrapper.interfaces.js'
 
-import React                 from 'react'
 import { memo }              from 'react'
+import React                 from 'react'
 
 import { Layout }            from '@ui/layout'
 

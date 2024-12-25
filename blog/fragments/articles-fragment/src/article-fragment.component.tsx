@@ -1,11 +1,12 @@
-import type { ArticleProps }           from './article-fragment.interface.js'
 import type { FC }                     from 'react'
 
-import React                           from 'react'
+import type { ArticleProps }           from './article-fragment.interface.js'
+
 import { FormattedPlural }             from 'react-intl'
 import { FormattedMessage }            from 'react-intl'
 import { memo }                        from 'react'
 import { useEffect }                   from 'react'
+import React                           from 'react'
 
 import { Divider }                     from '@ui/divider'
 import { ImageBlock }                  from '@ui/image'

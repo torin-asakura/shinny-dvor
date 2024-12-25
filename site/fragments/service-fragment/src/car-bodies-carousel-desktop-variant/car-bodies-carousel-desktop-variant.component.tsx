@@ -1,5 +1,6 @@
-import type { CarBodiesCarouselDesktopVariantProps } from './car-bodies-carousel-desktop-variant.interface.js'
 import type { FC }                                   from 'react'
+
+import type { CarBodiesCarouselDesktopVariantProps } from './car-bodies-carousel-desktop-variant.interface.js'
 
 import React                                         from 'react'
 

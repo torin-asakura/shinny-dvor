@@ -2,13 +2,13 @@
 
 'use client'
 
-import type { IndexPageProps }   from './index-page.interfaces.js'
 import type { FC }               from 'react'
 
-import { AllArticles }           from '@blog/all-articles-fragment'
+import type { IndexPageProps }   from './index-page.interfaces.js'
 
 import React                     from 'react'
 
+import { AllArticles }           from '@blog/all-articles-fragment'
 import { Footer }                from '@fragments/footer-fragment'
 import { Navigation }            from '@fragments/navigation-fragment'
 import { Column }                from '@ui/layout'

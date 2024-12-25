@@ -1,7 +1,8 @@
 /* eslint-disable */
 
-import type { ServiceProps }               from './service.interface.js'
 import type { FC }                         from 'react'
+
+import type { ServiceProps }               from './service.interface.js'
 
 import React                               from 'react'
 

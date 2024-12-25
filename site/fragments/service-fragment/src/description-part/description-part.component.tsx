@@ -1,5 +1,6 @@
-import type { DescriptionProps } from './description-part.interface.js'
 import type { FC }               from 'react'
+
+import type { DescriptionProps } from './description-part.interface.js'
 
 import React                     from 'react'
 
