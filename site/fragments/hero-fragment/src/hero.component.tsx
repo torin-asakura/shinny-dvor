@@ -83,7 +83,7 @@ export const Hero = forwardRef((
             style={{ opacity: 0.5 }}
           />
         </Box>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
         <Column width='100%'>
           <Layout flexBasis={[120, 120, 367]} flexGrow={1} />
           <Column width='100%' maxWidth={[335, 335, 900]} height={[240, 240, 201]}>
@@ -103,13 +103,13 @@ export const Hero = forwardRef((
                 lineHeight='$grown'
                 fontWeight='$semiBold'
                 color='$white'
-                opacity={0.5}
+                opacity='0.5'
               >
                 {title.get('highlighted')}
               </Text>
             </Row>
           </Column>
-          <Layout flexBasis={32} flexShrink={0} />
+          <Layout flexBasis={32} flexShrink='0' />
           <Layout width={['100%', '100%', '180px']}>
             <Button
               onClick={() => {
@@ -120,9 +120,9 @@ export const Hero = forwardRef((
               {CTA}
             </Button>
           </Layout>
-          <Layout flexBasis={[40, 40, 48]} flexShrink={0} />
+          <Layout flexBasis={[40, 40, 48]} flexShrink='0' />
           <Divider color='$milkGray' />
-          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 30]} flexShrink='0' />
           <Box width='100%'>
             <Box width='100%' display={['none', 'none', 'flex']} alignItems='center'>
               <Link href='#services'>
@@ -132,7 +132,7 @@ export const Hero = forwardRef((
                       {anchor}
                     </Text>
                   </Layout>
-                  <Layout flexBasis={10} flexShrink={0} />
+                  <Layout flexBasis={10} flexShrink='0' />
                   <Layout>
                     <ArrowDownIcon width={20} height={20} />
                   </Layout>
@@ -147,13 +147,13 @@ export const Hero = forwardRef((
                   </Text>
                 </Link>
               </Box>
-              <Layout flexBasis={[0, 0, 32]} flexShrink={0} flexGrow={[1, 1, 0]} />
-              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} variant='dark' />
+              <Layout flexBasis={[0, 0, 32]} flexShrink='0' flexGrow={[1, 1, 0]} />
+              <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} variant='dark' buttonSize={40} size={30} />
             </Row>
           </Box>
-          <Layout flexBasis={[20, 20, 30]} flexShrink={0} />
+          <Layout flexBasis={[20, 20, 30]} flexShrink='0' />
         </Column>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
       </Box>
     </>
   )
