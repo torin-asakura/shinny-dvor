@@ -3,7 +3,6 @@ import { createRainbowSprinkles } from 'rainbow-sprinkles'
 import { defineProperties }       from 'rainbow-sprinkles'
 
 import { BREAKPOINT_CONDITIONS }  from '@ui/theme'
-import { vars }                   from '@ui/theme'
 
 export const baseContainerStyles = style({
   position: 'absolute',

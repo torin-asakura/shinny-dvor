@@ -14,7 +14,6 @@ export const navLink = styleVariants({
     ':hover': {
       color: vars.colors.blue,
       backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
       transition: '0.35s',
     },
     '& svg > path:only-of-type': {
@@ -26,7 +25,6 @@ export const navLink = styleVariants({
     ':hover': {
       color: vars.colors.blue,
       backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
       transition: '0.35s',
     },
   },

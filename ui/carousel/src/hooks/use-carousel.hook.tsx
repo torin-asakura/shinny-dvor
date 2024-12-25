@@ -27,7 +27,7 @@ export const useCarousel = ({
   const items = Children.map(children, (child) => <Slide>{child}</Slide>)
 
   if (!items) {
-    return null
+    return { carousel: children }
   }
 
   const { slides, activeSlide, slidesLength, slideToIndex, slideToTwoIndexes, wrapperOptions } =

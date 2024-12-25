@@ -40,6 +40,7 @@ const responsiveContainerProperties = defineProperties({
     flexGrow: true,
     flexBasis: true,
     flexShrink: true,
+    transition: true,
   },
   staticProperties: {
     width: vars.spaces,

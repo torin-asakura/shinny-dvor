@@ -1,5 +1,5 @@
 export const spaces = {
-  zero: '0',
+  		zero: '0',
   fill: '100%',
   g8: '8px',
   g10: '10px',
@@ -15,5 +15,7 @@ export const spaces = {
   g80: '80px',
   g1240: '1240px',
   g1440: '1440px',
+  g1240: '1240px',
   zIndexSecondLayer: '1000',
+  zIndexFirstLayer: '9999',
 }

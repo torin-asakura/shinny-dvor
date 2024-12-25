@@ -17,7 +17,7 @@ export const useScrollBlock: UseScrollBlock = () => {
     if (!body || !body.style || scrollBlocked.current) return
     if (document == undefined) return
 
-    const scrollBarWidth = window.offsetWidth - html.clientWidth
+    const scrollBarWidth = window.innerWidth - html.clientWidth
     const bodyPaddingRight =
       parseInt(window.getComputedStyle(body).getPropertyValue('padding-right')) || 0
 

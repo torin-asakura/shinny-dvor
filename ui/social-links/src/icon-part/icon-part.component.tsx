@@ -8,7 +8,7 @@ import { Box }                from '@ui/layout'
 import { Link }               from '@ui/link'
 import { useHover }           from '@ui/utils'
 
-export const IconPart: FC<IconPartProps> = ({ Icon, href, size, dark }) => {
+export const IconPart: FC<IconPartProps> = ({ Icon, href, buttonSize = '$g48',  size, dark }) => {
   const [hover, hoverProps] = useHover()
   const buttonVariant = dark ? 'inverse' : 'tertiary'
 
@@ -22,8 +22,8 @@ export const IconPart: FC<IconPartProps> = ({ Icon, href, size, dark }) => {
 
   return (
     <Box
-      width='$g48'
-      height='$g48'
+      width={buttonSize}
+      height={buttonSize}
       borderRadius='$large.semiSmall'
       overflow='hidden'
       {...hoverProps}

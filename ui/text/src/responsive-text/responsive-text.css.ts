@@ -13,6 +13,8 @@ const responsiveTextProperties = defineProperties({
     display: true,
     opacity: true,
     textAlign: true,
+    overflow: true,
+    textTransform: true
   },
   staticProperties: {
     width: vars.spaces,

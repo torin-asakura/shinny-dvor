@@ -11,7 +11,6 @@ export const getColorBackground = (step: number, scrollY?: number): ReturnType =
       if (Math.abs(scrollY!) > 100) {
         return WHITE_COLOR_NAME
       }
-      // TODO check trancparent color on layout
       return TRANSPARENT_COLOR_NAME
 
     case 1:

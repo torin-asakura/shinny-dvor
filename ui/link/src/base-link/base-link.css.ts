@@ -16,15 +16,10 @@ export const linkVariants = styleVariants({
   },
   active: {
     color: vars.colors.darkBlue,
-    borderBottom: vars.colors.blue,
     paddingBottom: '8px',
+    borderBottom: '2px solid rgba(38, 89, 220, 1)',
   },
   default: {
     color: vars.colors.black,
-    ':hover': {
-      color: vars.colors.blue,
-      backgroundColor: vars.colors.transparent,
-      borderRadius: vars.radii.mini,
-    },
   },
 })

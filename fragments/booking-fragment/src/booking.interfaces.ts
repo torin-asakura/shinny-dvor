@@ -4,10 +4,6 @@ import { getCarBodiesData }      from '@globals/data'
 import { getServicesData }       from '@globals/data'
 import { getNavigationData }     from '@globals/data'
 
-type AdditionServiceType = NonNullable<
-  NonNullable<NonNullable<ReturnType<typeof getServicesData>['services']>[0]>['servicesParams']
->['additionalservice']
-
 export interface BookingProps {
   visible: boolean
   setVisible: React.Dispatch<React.SetStateAction<boolean>>
@@ -16,5 +12,4 @@ export interface BookingProps {
   carBodiesData: ReturnType<typeof getCarBodiesData>['carBodies']
   servicesData: ReturnType<typeof getServicesData>['services']
   navigationData: ReturnType<typeof getNavigationData>['navigation']
-  additionalService?: AdditionServiceType
 }

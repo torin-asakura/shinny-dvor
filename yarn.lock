@@ -9717,12 +9717,14 @@ __metadata:
     "@vanilla-extract/dynamic": "npm:2.1.2"
     clsx: "npm:2.1.1"
     next: "npm:14.2.5"
+    rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
     next: "*"
+    rainbow-sprinkles: "*"
     react: "*"
     react-dom: "*"
   languageName: unknown

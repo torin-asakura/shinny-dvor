@@ -7,7 +7,6 @@ import React                        from 'react'
 import { useState }                 from 'react'
 
 import { Booking }                  from '@fragments/booking-fragment'
-import { INITIAL }                  from '@store/booking'
 import { Box }                      from '@ui/layout'
 import { Column }                   from '@ui/layout'
 import { Row }                      from '@ui/layout'
@@ -58,23 +57,25 @@ const Navigation: FC<NavigationProps> = ({
         position='fixed'
         justifyContent='center'
         backgroundColor={getColorBackground(active!, scrollY)}
-        style={{ transition: '.2s' }}
+        transition='.2s'
       >
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink='0' />
         <Box width={['100%', '100%', '1440px']}>
           <Column width='100%'>
             <Layout flexBasis={[20, 20, 28]} />
             <Row justifyContent='space-between'>
-              <NavigationCommonVariant
-                drawer={drawer}
-                setDrawer={setDrawer}
-                active={active}
-                navigationIndexItems={navigationIndexItems}
-                mainNavigationItem={mainNavigationItem}
-                setVisible={setVisible}
-                signUp={signUp}
-                scrollY={scrollY}
-              />
+              <Layout display={['flex', 'flex', 'none']}>
+                <NavigationCommonVariant
+                    drawer={drawer}
+                    setDrawer={setDrawer}
+                    active={active}
+                    navigationIndexItems={navigationIndexItems}
+                    mainNavigationItem={mainNavigationItem}
+                    setVisible={setVisible}
+                    signUp={signUp}
+                    scrollY={scrollY}
+                />
+              </Layout>
 
               <NavigationDesktopVariant
                 active={active}
@@ -88,7 +89,7 @@ const Navigation: FC<NavigationProps> = ({
             <Layout flexBasis={[20, 20, 28]} />
           </Column>
         </Box>
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink='0' />
       </Box>
     </>
   )

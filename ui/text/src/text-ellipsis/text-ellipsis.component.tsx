@@ -1,24 +1,28 @@
-import type { PropsWithChildren } from 'react'
+import { Text as BaseText }                      from '@atls-ui-parts/text'
+import { memo }                                  from 'react'
+import { PropsWithChildren }               from 'react'
+import React                                    from 'react'
 
-import { Text }                   from '@atls-ui-parts/text'
+import { TextEllipsisProps }                    from './text-ellipsis.interface.js'
+import { rainbowSprinkles }                      from '../responsive-text/index.js'
+import { ResponsiveTextProps } from '../responsive-text/index.js'
+import { baseEllipsisStyle }                    from './text-ellipsis.css.js'
 
-import React                      from 'react'
-import { memo }                   from 'react'
+export const TextEllipsis: React.FC<PropsWithChildren<ResponsiveTextProps & TextEllipsisProps>> =
+  memo(({ lineClamp, children, ...props }) => {
+    const dynamicEllipsisStyle = {
+      WebkitLineClamp: lineClamp.toString(),
+    }
 
-import { TextEllipsisProps }      from './text-ellipsis.interface.js'
-import { baseEllipsisStyle }      from './text-ellipsis.css.js'
+    const { className, otherProps } = rainbowSprinkles(props)
 
-export const TextEllipsis = memo(({
-  lineClamp,
-  children,
-  ...props
-}: PropsWithChildren<TextEllipsisProps>) => {
-  const dynamicEllipsisStyle = {
-    WebkitLineClamp: lineClamp.toString(),
-  }
-  return (
-    <Text className={baseEllipsisStyle} style={dynamicEllipsisStyle} {...props}>
-      {children}
-    </Text>
-  )
-})
+    return (
+      <BaseText
+        className={`${baseEllipsisStyle} ${className}`}
+        style={dynamicEllipsisStyle}
+        {...otherProps}
+      >
+        {children}
+      </BaseText>
+    )
+  })

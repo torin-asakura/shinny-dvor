@@ -8,6 +8,6 @@ export const baseStyles = style({
   position: 'fixed',
   backgroundColor: vars.colors.white,
   display: 'flex',
-  zIndex: vars.spaces.zIndexSecondLayer,
+  zIndex: vars.spaces.zIndexFirstLayer,
   overflowY: 'scroll',
 })

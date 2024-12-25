@@ -33,8 +33,7 @@ export const Booking: FC<BookingProps> = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
-  navigationData,
-  additionalService,
+  navigationData
 }) => {
   const screen = useReactiveVar<Screen>(screenVar)
   const [hover, hoverProps] = useHover()
@@ -50,7 +49,7 @@ export const Booking: FC<BookingProps> = ({
         paddingX={[24, 24, 28]}
       >
         <Column width='100%' alignItems='center'>
-          <Layout flexShrink={0} />
+          <Layout flexShrink='0' />
           <Box width='100%' justifyContent='space-between' alignItems='center'>
             <Layout>
               <Logo path={mainPage.content} />
@@ -76,7 +75,6 @@ export const Booking: FC<BookingProps> = ({
                 availableRadiiData={availableRadiiData}
                 carBodiesData={carBodiesData}
                 servicesData={servicesData}
-                additionalService={additionalService}
               />
             </Condition>
             <Condition match={screen === SUCCESS}>

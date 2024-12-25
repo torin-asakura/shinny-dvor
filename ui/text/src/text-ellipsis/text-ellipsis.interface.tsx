@@ -1,5 +1,3 @@
-import type { TextProps } from '../index.js'
-
-export interface TextEllipsisProps extends TextProps {
+export interface TextEllipsisProps {
   lineClamp: number
 }
