@@ -7493,6 +7493,7 @@ __metadata:
     "@ui/radio": "workspace:*"
     "@ui/switch": "workspace:*"
     "@ui/text": "workspace:*"
+    "@ui/utils": "workspace:*"
     graphql: "npm:16.9.0"
     next: "npm:14.2.5"
     react: "npm:18.3.1"
