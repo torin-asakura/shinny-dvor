@@ -1,8 +1,8 @@
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
 import { motion }                 from 'framer-motion'
+import React                      from 'react'
 
 import { baseStyles }             from './container.css.js'
 

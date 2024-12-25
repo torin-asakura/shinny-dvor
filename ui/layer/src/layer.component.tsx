@@ -1,12 +1,13 @@
 'use client'
 
-import type { LayerProps }        from './layer.interface.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
+import type { LayerProps }        from './layer.interface.js'
+
 import { AnimatePresence }        from 'framer-motion'
 import { useEffect }              from 'react'
+import React                      from 'react'
 
 import { Box }                    from '@ui/layout'
 

@@ -18,7 +18,7 @@ enum PropVaueTypes {
 
 export class PropsMapper {
   static sprinklesProps(props: ResponsiveContainerCssProps): Sprinkles {
-    const mappedProps: Sprinkles = {}
+    const mappedProps: Record<string, unknown> = {}
 
     Object.entries(props).forEach(([unknownPropKey, propValue]) => {
       if (!propValue) return
