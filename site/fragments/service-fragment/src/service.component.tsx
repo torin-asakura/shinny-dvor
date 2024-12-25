@@ -78,7 +78,13 @@ export const Service: FC<ServiceProps> = ({
         navigationData={navigationData}
         additionalService={isAdditionalService ? additionalservice.title : ''}
       />
-      <Box width='$fill' maxWidth={842}>
+      <Box
+        width='$fill'
+        maxWidth={882}
+        paddingX={[20, 20, 20]}
+        marginTop={[100, 100, 144]}
+        paddingBottom={['$g32', '$g32', '$g80']}
+      >
         <Row>
           <Column width='100%' gap={[20, 20, 32]}>
             <ReturnButton title={goBack} />
