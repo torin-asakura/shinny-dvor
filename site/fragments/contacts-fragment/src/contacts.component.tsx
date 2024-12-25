@@ -36,7 +36,8 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         <Layout flexBasis={[20, 20, 80]} />
       </Row>
       <Row
-        padding={[20, 20, 80]}
+        paddingRight={[20, 20, 80]}
+        paddingLeft={[20, 20, 80]}
         paddingTop='0 !important'
         paddingBottom='0 !important'
         justifyContent='space-between'

@@ -59,7 +59,7 @@ const Navigation: FC<NavigationProps> = ({
         backgroundColor={getColorBackground(active!, scrollY)}
         transition='.2s'
       >
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink='0' />
         <Box width={['100%', '100%', '1440px']}>
           <Column width='100%'>
             <Layout flexBasis={[20, 20, 28]} />
@@ -89,7 +89,7 @@ const Navigation: FC<NavigationProps> = ({
             <Layout flexBasis={[20, 20, 28]} />
           </Column>
         </Box>
-        <Layout flexBasis={[20, 20, 32]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 32]} flexShrink='0' />
       </Box>
     </>
   )
