@@ -1,12 +1,12 @@
 import type { IconProps } from '../icons.interfaces.js'
 
+import React              from 'react'
 import { clsx }           from 'clsx'
 import { memo }           from 'react'
-import React              from 'react'
 
 import { iconSprinkles }  from '../icon.css.js'
 
-export const DoubleArrowIcon = memo((props: IconProps) => {
+export const DoubleArrowIcon = memo(({ color, ...props }: IconProps) => {
   const { className, style, otherProps } = iconSprinkles(props)
   return (
     <svg
