@@ -1,6 +1,8 @@
 import type { PaginationProps } from './pagination.interface.js'
 
 import { FC }                   from 'react'
+import { useEffect }            from 'react'
+import { useState }             from 'react'
 import { memo }                 from 'react'
 import { useMemo }              from 'react'
 import React                    from 'react'
@@ -10,19 +12,33 @@ import { Row }                  from '@ui/layout'
 
 import { TransitionContainer }  from '../transition-container/index.js'
 
-const Pagination: FC<PaginationProps> = memo(({ activeItem, totalItems, swiper }) => {
+const Pagination: FC<PaginationProps> = memo(({ activeItem = 0, totalItems, swiper }) => {
+  const [internalActiveItem, setInternalActiveItem] = useState<number>(activeItem)
+
   const calculatedActiveItem = useMemo(() => {
-    const maxIndex = totalItems - 1
-    if (!activeItem) return 0
-    if (activeItem > maxIndex) {
-      return activeItem - maxIndex * Math.floor(activeItem / maxIndex) - 1
-    }
-    return activeItem
-  }, [activeItem, totalItems])
+    return internalActiveItem >= 0 && internalActiveItem < totalItems ? internalActiveItem : 0
+  }, [internalActiveItem, totalItems])
 
   const handleClick = (index: number): void => {
-    swiper?.slideTo(index)
+    if (swiper) {
+      swiper.slideTo(index)
+      setInternalActiveItem(index)
+    }
   }
+
+  useEffect(() => {
+    if (!swiper) return
+
+    const handleSlideChange = () => {
+      setInternalActiveItem(swiper.realIndex)
+    }
+
+    swiper.on('slideChange', handleSlideChange)
+
+    return () => {
+      swiper.off('slideChange', handleSlideChange)
+    }
+  }, [swiper])
 
   return (
     <Row height={32} justifyContent='center' alignItems='center'>
@@ -30,9 +46,7 @@ const Pagination: FC<PaginationProps> = memo(({ activeItem, totalItems, swiper }
         <React.Fragment key={`${index + 1}-key`}>
           <TransitionContainer
             isHighlighted={calculatedActiveItem === index}
-            onClick={() => {
-              handleClick(index)
-            }}
+            onClick={() => handleClick(index)}
           />
           <Layout flexBasis={12} flexShrink={0} />
         </React.Fragment>

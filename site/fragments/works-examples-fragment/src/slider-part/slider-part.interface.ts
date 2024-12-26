@@ -1,5 +1,6 @@
-import type { SlidesType } from '../works-examples.interface.js'
 import type { Swiper }     from 'swiper'
+
+import type { SlidesType } from '../works-examples.interface.js'
 
 export interface SliderPartProps {
   slides: Array<SlidesType>
