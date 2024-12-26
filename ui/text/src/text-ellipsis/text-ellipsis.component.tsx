@@ -10,11 +10,11 @@ import { baseEllipsisStyle }   from './text-ellipsis.css.js'
 
 export const TextEllipsis: React.FC<PropsWithChildren<ResponsiveTextProps & TextEllipsisProps>> =
   memo(({ lineClamp, children, ...props }) => {
+    const { className, style, otherProps } = rainbowSprinkles(props)
     const dynamicEllipsisStyle = {
       WebkitLineClamp: lineClamp.toString(),
+      ...style,
     }
-
-    const { className, otherProps } = rainbowSprinkles(props)
 
     return (
       <BaseText

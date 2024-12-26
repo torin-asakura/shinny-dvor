@@ -17,7 +17,7 @@ const RadioList: FC<RadioListProps> = ({
   textTransform = 'lowercase',
   width = '100%',
 }) => (
-  <Row justifyContent='space-between' flexWrap='wrap'>
+  <Row justifyContent='space-between' flexWrap='wrap' gap={12}>
     {items.map((title) => (
       <Box
         width={width}

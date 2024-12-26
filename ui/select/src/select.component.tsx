@@ -6,7 +6,9 @@ import { memo }                 from 'react'
 import React                    from 'react'
 
 import { Layout }               from '@ui/layout'
-import { Text }                 from '@ui/text'
+import { Text }                  from '@ui/text'
+
+import { TextEllipsis }    from '@ui/text'
 
 import { Arrow }                from './arrow/index.js'
 import { Button }               from './button/index.js'
@@ -41,7 +43,9 @@ const Select = memo(({
   return (
     <>
       <Button isSelected={!!selectedItem} value={value} {...buttonProps}>
-        <Text textAlign='start'>{value?.join(', ') || selectedItem || placeholder}</Text>
+        <TextEllipsis lineClamp={1} textAlign='start'>
+          {value?.join(', ') || selectedItem || placeholder}
+        </TextEllipsis>
         <Layout flexGrow={1} />
         <Arrow isOpen={isOpen} />
       </Button>
