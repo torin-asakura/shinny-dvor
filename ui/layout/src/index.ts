@@ -4,4 +4,4 @@ export * from './row/index.js'
 export * from './column/index.js'
 export * from './grid/index.js'
 
-export { BoxProps } from '@atls-ui-parts/layout'
+export type { ResponsiveContainerProps as BoxProps } from './responsive-container/index.js'

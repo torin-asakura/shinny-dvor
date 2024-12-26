@@ -5,7 +5,7 @@ export interface SignupButtonPartProps {
   radius: string
   onCarBody: string
   serviceName?: string | null
-  setVisible: globals.SetState<boolean>
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>
   serviceVar: ReactiveVar<Service>
   signUp: string
   servicePrice: string

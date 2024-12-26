@@ -1,7 +1,7 @@
 export interface KnobMobileVariantProps {
   card: boolean
-  setCard: globals.SetState<boolean>
+  setCard: React.Dispatch<React.SetStateAction<boolean>>
   active: boolean
-  setActive: globals.SetState<boolean>
+  setActive: React.Dispatch<React.SetStateAction<boolean>>
   text?: string
 }

@@ -1,5 +1,5 @@
 export interface CarBodyItemProps {
   item: string
   onCarBody: string
-  setOnCarBody: globals.SetState<string>
+  setOnCarBody: React.Dispatch<React.SetStateAction<string>>
 }
