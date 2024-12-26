@@ -1,7 +1,6 @@
-import type { FC }                         from 'react'
-
 import type { ServiceProps }               from './service.interface.js'
 import type { RequiredAdditionalService }  from './service.interface.js'
+import type { FC }                         from 'react'
 
 import React                               from 'react'
 
@@ -119,7 +118,9 @@ export const Service: FC<ServiceProps> = ({
 
               <ServicePricePart servicePrice={servicePrice} addon={addon} />
 
-              <Divider color='$gray' />
+              <Box>
+                <Divider color='$gray' />
+              </Box>
 
               <DescriptionPart description={description} />
 

@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { FooterProps } from './footer.interface.js'
 import type { FC }          from 'react'
 
-import type { FooterProps } from './footer.interface.js'
-
-import { memo }             from 'react'
 import React                from 'react'
+import { memo }             from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Box }              from '@ui/layout'
@@ -81,27 +80,25 @@ export const Footer: FC<FooterProps> = memo(({
               </Box>
               <SocialLinks linkTelegram={linkTelegram} linkVk={linkVk} />
             </Row>
-            <Layout flexBasis={[24, 24, 40]} />
-            <Box width={90} height={136} display={['flex', 'flex', 'none']}>
-              <Box width='100%' justifyContent='space-between' flexWrap='wrap'>
-                {navigationItems.map(({
-                  contentAddons: { title, content },
-                }: {
-                  contentAddons: { title: string; content: string }
-                }) => (
+            <Column width='100%' paddingY='$g24' gap='$g20' display={['flex', 'flex', 'none']}>
+              {navigationItems.map(({
+                contentAddons: { title, content },
+              }: {
+                contentAddons: { title: string; content: string }
+              }) => (
+                <Box>
                   <NextNavLink key={title} path={content}>
-                    <Layout>
-                      <Text color='$black' fontWeight='$medium'>
-                        {title}
-                      </Text>
-                    </Layout>
+                    <Text fontWeight='$medium'>{title}</Text>
                   </NextNavLink>
-                ))}
-              </Box>
-            </Box>
+                </Box>
+              ))}
+            </Column>
           </Column>
           <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
         </Box>
+
+        <Box flexBasis={[0, 0, 32]}></Box>
+
         <Divider color='$gray' />
         <Box maxWidth={['100%', '100%', 1440]} alignItems='center' width='100%'>
           <Layout flexBasis={[20, 20, 84]} flexShrink='0' />

@@ -1,9 +1,8 @@
 /* eslint-disable */
 
-import type { FC }               from 'react'
-
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -47,15 +46,17 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
               addon: ItemProps['addon']
             }
           }) => (
-            <Link key={uri} href={uri}>
-              <Item
-                serviceName={serviceName}
-                averagePrice={averagePrice}
-                price={price}
-                image={image}
-                addon={addon}
-              />
-            </Link>
+            <Box width={['$fill', '$fill', 'auto']}>
+              <Link key={uri} href={uri} style={{ width: '100%' }}>
+                <Item
+                  serviceName={serviceName}
+                  averagePrice={averagePrice}
+                  price={price}
+                  image={image}
+                  addon={addon}
+                />
+              </Link>
+            </Box>
           ))}
         </Row>
         <Layout flexBasis={[50, 50, 80]} />

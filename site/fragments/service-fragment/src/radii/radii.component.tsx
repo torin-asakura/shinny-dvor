@@ -1,6 +1,5 @@
-import type { FC }         from 'react'
-
 import type { RadiiProps } from './radii.interface.js'
+import type { FC }         from 'react'
 
 import React               from 'react'
 
@@ -9,16 +8,11 @@ import { Row }             from '@ui/layout'
 import { Radio }           from '@ui/radio'
 
 export const Radii: FC<RadiiProps> = ({ items, selectedItem, setSelectedItem }) => (
-  <Box
-    width='$fill'
-    border={['$none', '$shark', '$shark']}
-    borderRadius='$little'
-    padding={['0', '$g24', '$g24']}
-  >
+  <Box width='$fill' border='$shark' borderRadius='$little' padding={['$g20', '$g20', '$g24']}>
     <Row flexWrap={['wrap', 'wrap', 'nowrap']} gap='$g12'>
       {items.map((title) => (
         <Box
-          width={['$g64', '$g64', '$fill']}
+          width={['$g56', '$g56', '$fill']}
           onClick={(): void => {
             setSelectedItem(title)
           }}
