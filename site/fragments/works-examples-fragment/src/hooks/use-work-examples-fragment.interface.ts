@@ -1,8 +1,7 @@
+import type { SlidesType }           from '../works-examples.interface.js'
 import type { FragmentsDataType }    from '@globals/data'
 import type { WorkResultsDataType }  from '@globals/data'
 import type { Swiper as SwiperCore } from 'swiper'
-
-import type { SlidesType }           from '../works-examples.interface.js'
 
 export interface UseWorkExamplesFragmentProps {
   fragmentsData: FragmentsDataType
@@ -11,9 +10,9 @@ export interface UseWorkExamplesFragmentProps {
 
 export interface UseWorkExamplesFragmentReturnType {
   controlsSwiper: SwiperCore | null
-  setControlsSwiper: globals.SetState<SwiperCore | null>
+  setControlsSwiper: React.Dispatch<React.SetStateAction<SwiperCore | null>>
   activeIndex: number
-  setActiveIndex: globals.SetState<number>
+  setActiveIndex: React.Dispatch<React.SetStateAction<number>>
   title: string
   subTitle: string
   priceTitle: string

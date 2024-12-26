@@ -14,18 +14,18 @@ export interface UseServiceProps {
 
 export interface UseServiceReturnType {
   visible: boolean
-  setVisible: globals.SetState<boolean>
+  setVisible: React.Dispatch<React.SetStateAction<boolean>>
   onCarBody: string
-  setOnCarBody: globals.SetState<string>
+  setOnCarBody: React.Dispatch<React.SetStateAction<string>>
   radius: string
-  setRadius: globals.SetState<string>
+  setRadius: React.Dispatch<React.SetStateAction<string>>
   availableRadii: Array<string>
   servicePrice: string
   defaultPrice: number
   workExamplesTitle: string
   workExamplesData: WorkExamplesDataType
   isAdditionalService: boolean
-  setIsAdditionalService: globals.SetState<boolean>
+  setIsAdditionalService: React.Dispatch<React.SetStateAction<boolean>>
   signUp: string
   goBack: string
 }

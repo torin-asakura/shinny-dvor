@@ -1,7 +1,6 @@
+import type { BoxProps }          from '@atls-ui-parts/layout'
 import type { BreakpointKey }     from '@ui/theme'
 import type { PropsWithChildren } from 'react'
-
-import { BoxProps }               from '@atls-ui-parts/layout'
 
 import { Sprinkles }              from './responsive-container.css.js'
 
