@@ -64,29 +64,24 @@ const Navigation: FC<NavigationProps> = ({
         <Box width={['100%', '100%', '1440px']}>
           <Column width='100%'>
             <Layout flexBasis={[20, 20, 28]} />
-            <Row justifyContent='space-between'>
-              <Layout display={['flex', 'flex', 'none']}>
-                <NavigationCommonVariant
-                  drawer={drawer}
-                  setDrawer={setDrawer}
-                  active={active}
-                  navigationIndexItems={navigationIndexItems}
-                  mainNavigationItem={mainNavigationItem}
-                  setVisible={setVisible}
-                  signUp={signUp}
-                  scrollY={scrollY}
-                />
-              </Layout>
-
-              <NavigationDesktopVariant
-                active={active}
-                mainNavigationItem={mainNavigationItem}
-                navigationIndexItems={navigationIndexItems}
-                setVisible={setVisible}
-                signUp={signUp}
-                scrollY={scrollY}
-              />
-            </Row>
+            <NavigationCommonVariant
+              drawer={drawer}
+              setDrawer={setDrawer}
+              active={active}
+              navigationIndexItems={navigationIndexItems}
+              mainNavigationItem={mainNavigationItem}
+              setVisible={setVisible}
+              signUp={signUp}
+              scrollY={scrollY}
+            />
+            <NavigationDesktopVariant
+              active={active}
+              mainNavigationItem={mainNavigationItem}
+              navigationIndexItems={navigationIndexItems}
+              setVisible={setVisible}
+              signUp={signUp}
+              scrollY={scrollY}
+            />
             <Layout flexBasis={[20, 20, 28]} />
           </Column>
         </Box>
