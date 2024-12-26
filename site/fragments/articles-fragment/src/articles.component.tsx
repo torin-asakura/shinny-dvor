@@ -1,11 +1,10 @@
 /* eslint-disable */
 
+import type { ArticlesProps } from './articles.interface.js'
 import type { FC }            from 'react'
 
-import type { ArticlesProps } from './articles.interface.js'
-
-import { forwardRef }         from 'react'
 import React                  from 'react'
+import { forwardRef }         from 'react'
 
 import { Box }                from '@ui/layout'
 import { Row }                from '@ui/layout'
@@ -58,10 +57,9 @@ const Articles: FC<ArticlesProps> = forwardRef((
                 postsData.slice(0, 4).map(({ uri, title, date, excerpt, featuredImage }) => (
                   <Link
                     key={uri}
-                    href={uri}
+                    href={`${linkBlog.contentAddons.content}/${uri}`}
                     // @ts-expect-error not assignable
                     width={['auto', 'auto', '100%']}
-                    path={`${linkBlog.contentAddons.content}/${uri}`}
                   >
                     <PreviewArticle
                       title={title}
