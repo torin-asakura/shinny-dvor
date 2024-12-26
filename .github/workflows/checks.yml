@@ -1,7 +1,7 @@
 name: Checks
 
 on:
-  - pull_request
+  pull_request:
 
 jobs:
   check:
@@ -9,4 +9,4 @@ jobs:
     uses: atls/shared/.github/workflows/checks.yaml@master
     permissions: write-all
     with:
-      node-version: '19'
+      node-version: '22'

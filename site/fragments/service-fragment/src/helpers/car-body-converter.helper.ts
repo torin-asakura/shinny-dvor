@@ -2,7 +2,7 @@ import { useIntl }   from 'react-intl'
 
 import { CarBodies } from '../service.interface.js'
 
-const carBodyConverter = (carBody: string): string => {
+export const carBodyConverter = (carBody: string): '' | `${CarBodies}` => {
   // eslint-disable-next-line
   const intl = useIntl()
 
@@ -18,5 +18,3 @@ const carBodyConverter = (carBody: string): string => {
 
   return ''
 }
-
-export { carBodyConverter }
