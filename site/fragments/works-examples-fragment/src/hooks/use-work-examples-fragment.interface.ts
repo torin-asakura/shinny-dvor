@@ -1,7 +1,8 @@
-import type { SlidesType }           from '../works-examples.interface.js'
 import type { FragmentsDataType }    from '@globals/data'
 import type { WorkResultsDataType }  from '@globals/data'
 import type { Swiper as SwiperCore } from 'swiper'
+
+import type { SlidesType }           from '../works-examples.interface.js'
 
 export interface UseWorkExamplesFragmentProps {
   fragmentsData: FragmentsDataType
