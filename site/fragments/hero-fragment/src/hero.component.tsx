@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import React               from 'react'
 import { useState }        from 'react'
 import { forwardRef }      from 'react'
+import React               from 'react'
 
 import { Booking }         from '@fragments/booking-fragment'
 import { INITIAL }         from '@store/booking'
@@ -111,6 +111,7 @@ export const Hero = forwardRef((
           <Layout flexBasis={32} flexShrink='0' />
           <Layout width={['100%', '100%', '180px']}>
             <Button
+              style={{ width: '100%' }}
               onClick={() => {
                 screenVar(INITIAL)
                 setVisible(true)
@@ -146,7 +147,7 @@ export const Hero = forwardRef((
                   </Text>
                 </Link>
               </Box>
-              <Layout flexBasis={[0, 0, 32]} flexShrink='0' flexGrow={[1, 1, 0]} />
+              <Layout flexBasis={[0, 0, 32]} flexShrink='0' flexGrow={['1', '1', '0']} />
               <SocialLinks
                 linkTelegram={linkTelegram}
                 linkVk={linkVk}

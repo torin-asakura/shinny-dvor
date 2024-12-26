@@ -13,7 +13,7 @@ import { getColorBackground }             from '../helpers/index.js'
 
 const NavigationListMobile: FC<NavigationListMobileProps> = ({ scrollY, active, navigation }) => (
   <Box backgroundColor={getColorBackground(active!, scrollY)} style={{ transition: '.2s' }}>
-    <Layout flexBasis={20} flexShrink={0} />
+    <Layout flexBasis={20} flexShrink='0' />
     <Column fill>
       {navigation.map(({ contentAddons: { title, content } }, index) => (
         <React.Fragment key={title}>

@@ -22,7 +22,7 @@ export const MenuIcon = memo((props: IconProps) => {
       {...props}
     >
       <path
-        fill='#fff'
+        fill={vars.colors[props.color as keyof typeof vars.colors] || props.color || '#fff'}
         fillRule='evenodd'
         d='M3.625 6c0-.483.392-.875.875-.875h16a.875.875 0 0 1 0 1.75h-16A.875.875 0 0 1 3.625 6m0 6c0-.483.392-.875.875-.875h16a.875.875 0 0 1 0 1.75h-16A.875.875 0 0 1 3.625 12m.875 5.125a.875.875 0 0 0 0 1.75h16a.875.875 0 0 0 0-1.75z'
         clipRule='evenodd'
