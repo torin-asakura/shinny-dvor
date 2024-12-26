@@ -6,9 +6,8 @@ import { memo }                 from 'react'
 import React                    from 'react'
 
 import { Layout }               from '@ui/layout'
-import { Text }                  from '@ui/text'
-
-import { TextEllipsis }    from '@ui/text'
+import { Text }                 from '@ui/text'
+import { TextEllipsis }         from '@ui/text'
 
 import { Arrow }                from './arrow/index.js'
 import { Button }               from './button/index.js'
