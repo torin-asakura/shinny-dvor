@@ -48,9 +48,5 @@
   },
   "peerDependencies": {
     "react-helmet": "*"
-  },
-  "packConfiguration": {
-    "buildpackVersion": "0.1.0",
-    "builderTag": "bookworm-20.17"
   }
 }
