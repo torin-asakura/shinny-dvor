@@ -1,24 +1,20 @@
-/* eslint-disable */
+import type { SelectProps }     from './select.interface.js'
 
-import type { FC }                         from 'react'
+import { useSelect }            from '@atls-utils/use-select'
+import { useMultipleSelection } from 'downshift'
+import { memo }                 from 'react'
+import React                    from 'react'
 
-import type { SelectProps }                from './select.interface.js'
+import { Layout }               from '@ui/layout'
+import { Text }                 from '@ui/text'
+import { TextEllipsis }         from '@ui/text'
 
-import { useSelect }                       from '@atls-ui-parts/select'
-import { useMultipleSelection }            from 'downshift'
-import { useSelect as useDownshiftSelect } from 'downshift'
-import React                               from 'react'
+import { Arrow }                from './arrow/index.js'
+import { Button }               from './button/index.js'
+import { MenuItem }             from './menu-item/index.js'
+import { Menu }                 from './menu/index.js'
 
-import { DropDownIcon }                    from '@ui/icons'
-import { Layout }                          from '@ui/layout'
-import { Text }                            from '@ui/text'
-
-import { ArrowContainer }                  from './arrow-container/index.js'
-import { Button }                          from './button/index.js'
-import { MenuItem }                        from './menu-item/index.js'
-import { Menu }                            from './menu/index.js'
-
-const Select: FC<SelectProps> = ({
+const Select = memo(({
   items,
   selectedDefault,
   value,
@@ -26,7 +22,7 @@ const Select: FC<SelectProps> = ({
   onSelect,
   placeholder,
   setIsOpen,
-}) => {
+}: SelectProps) => {
   const { addSelectedItem, removeSelectedItem, selectedItems } = useMultipleSelection({
     initialSelectedItems: selectedDefault !== undefined ? [selectedDefault] : [],
   })
@@ -38,24 +34,6 @@ const Select: FC<SelectProps> = ({
   const { buttonProps, menuProps, renderMenu, selectedItem, isOpen } = useSelect({
     items,
     onChange,
-    stateReducer: (state, actionAndChanges) => {
-      const { changes, type } = actionAndChanges
-      if (type === useDownshiftSelect.stateChangeTypes.ItemClick) {
-        return {
-          ...changes,
-          isOpen: true,
-        }
-      }
-
-      return changes
-    },
-    onStateChange: ({ type, selectedItem: selected }) => {
-      if (type === useDownshiftSelect.stateChangeTypes.ItemClick) {
-        if (selected) {
-          addSelectedItem(selected)
-        }
-      }
-    },
   })
 
   if (isOpen && setIsOpen) setIsOpen(true)
@@ -64,11 +42,11 @@ const Select: FC<SelectProps> = ({
   return (
     <>
       <Button isSelected={!!selectedItem} value={value} {...buttonProps}>
-        <Text textAlign='start'>{value?.join(', ') || selectedItem || placeholder}</Text>
+        <TextEllipsis lineClamp={1} textAlign='start'>
+          {value?.join(', ') || selectedItem || placeholder}
+        </TextEllipsis>
         <Layout flexGrow={1} />
-        <ArrowContainer isOpen={isOpen}>
-          <DropDownIcon width={16} height={16} />
-        </ArrowContainer>
+        <Arrow isOpen={isOpen} />
       </Button>
       {renderMenu(
         <Menu {...menuProps}>
@@ -85,6 +63,6 @@ const Select: FC<SelectProps> = ({
       )}
     </>
   )
-}
+})
 
 export { Select }

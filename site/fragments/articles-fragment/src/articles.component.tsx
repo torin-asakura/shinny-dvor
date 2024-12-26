@@ -38,19 +38,15 @@ const Articles: FC<ArticlesProps> = forwardRef((
       ref={ref}
       width='100%'
       height={[569, 569, 693]}
-      backgroundColor='fillGray'
+      backgroundColor='$fillGray'
       justifyContent='center'
     >
       <Box width='100%' maxWidth={['100%', '100%', 1440]} justifyContent='space-between'>
-        <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
         <Column fill overflow='hidden'>
           <Layout flexBasis={[64, 64, 100]} />
           <Layout>
-            <Text
-              lineHeight=''
-              fontWeight='medium'
-              fontSize={['extraLarge', 'extraLarge', 'giant']}
-            >
+            <Text fontWeight='$medium' fontSize={['$extraLarge', '$extraLarge', '$giant']}>
               {latestPublications}
             </Text>
           </Layout>
@@ -80,7 +76,7 @@ const Articles: FC<ArticlesProps> = forwardRef((
           </Row>
           <Layout flexBasis={[64, 64, 100]} />
         </Column>
-        <Layout flexBasis={[0, 20, 80]} flexShrink={0} />
+        <Layout flexBasis={[0, 20, 80]} flexShrink='0' />
       </Box>
     </Box>
   )

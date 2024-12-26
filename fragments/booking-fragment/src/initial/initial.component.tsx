@@ -1,6 +1,5 @@
 /* eslint-disable */
 
-import type { ReactiveVar }         from '@apollo/client'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
@@ -23,11 +22,9 @@ import { Layout }                   from '@ui/layout'
 import { Box }                      from '@ui/layout'
 import { Select }                   from '@ui/select'
 import { Switch }                   from '@ui/switch'
-import { Item }                     from '@ui/switch'
 import { Text }                     from '@ui/text'
 import { extractFragment }          from '@globals/data'
 import { extractFragments }         from '@globals/data'
-import { doNothing }                from '@shared/utils'
 import { screenVar }                from '@store/booking'
 import { serviceVar }               from '@store/services'
 
@@ -40,7 +37,6 @@ const Initial: FC<InitialProps> = ({
   availableRadiiData,
   carBodiesData,
   servicesData,
-  additionalService,
 }) => {
   const service = useReactiveVar<IService>(serviceVar)
 
@@ -132,19 +128,11 @@ const Initial: FC<InitialProps> = ({
     }
   }
 
-  const validatePhone = (value: string) => {
-    if (value.length === 10) {
-      setPhone(`+7${value}`)
-    } else {
-      setPhone(value)
-    }
-  }
-
   return (
     <Column width='100%'>
       <Layout flexBasis={[40, 40, 44]} />
       <Layout>
-        <Text fontSize='giant' fontWeight='medium'>
+        <Text fontSize='$giant' fontWeight='$medium'>
           {signUpTitle}
         </Text>
       </Layout>
@@ -152,7 +140,7 @@ const Initial: FC<InitialProps> = ({
       <Box width='100%' flexDirection={['column', 'column', 'row']}>
         <Column fill>
           <Layout>
-            <Text lineHeight='grown' color='darkGray'>
+            <Text lineHeight='$grown' color='$darkGray'>
               {yourName}
             </Text>
           </Layout>
@@ -163,14 +151,14 @@ const Initial: FC<InitialProps> = ({
               value={name}
               autoComplete='name'
               placeholder={yourNamePlaceholder}
-              onChange={setName}
+              onChangeValue={setName}
             />
           </Layout>
         </Column>
-        <Layout flexBasis={32} flexShrink={0} />
+        <Layout flexBasis={32} flexShrink='0' />
         <Column fill>
           <Layout>
-            <Text lineHeight='grown' color='darkGray'>
+            <Text lineHeight='$grown' color='$darkGray'>
               {yourPhone}
             </Text>
           </Layout>
@@ -183,9 +171,7 @@ const Initial: FC<InitialProps> = ({
               name='phone'
               id='phone'
               autoComplete='tel'
-              onChange={(value) => {
-                validatePhone(value)
-              }}
+              onChangeValue={setPhone}
               onKeyPress={handleKeyPress}
             />
           </Layout>
@@ -193,19 +179,13 @@ const Initial: FC<InitialProps> = ({
       </Box>
       <Layout flexBasis={32} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {carBodyTitle}
         </Text>
       </Layout>
       <Layout flexBasis={16} />
       <Layout display={['none', 'none', 'flex']}>
-        <Switch active={selectedCarBody}>
-          {carBodyItems.map((item: string) => (
-            <Item value={item} onSelect={setSelectedCarBody}>
-              {item}
-            </Item>
-          ))}
-        </Switch>
+        <Switch active={selectedCarBody} items={carBodyItems} onSelect={setSelectedCarBody} />
       </Layout>
       <Layout display={['flex', 'flex', 'none']}>
         <RadioList
@@ -217,7 +197,7 @@ const Initial: FC<InitialProps> = ({
       </Layout>
       <Layout flexBasis={20} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {wheelDiameterTitle}
         </Text>
       </Layout>
@@ -231,7 +211,7 @@ const Initial: FC<InitialProps> = ({
       />
       <Layout flexBasis={20} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {repairTypeTitle}
         </Text>
       </Layout>
@@ -244,20 +224,20 @@ const Initial: FC<InitialProps> = ({
         onSelect={setSelectedRepairTypes}
       />
       <Layout flexBasis={12} />
-      <Divider backgroundColor={selectedRepairTypes.length ? 'primaryBlue' : 'gray'} />
+      <Divider color={selectedRepairTypes.length ? '$primaryBlue' : '$gray'} />
       <Layout flexBasis={32} />
       <Layout>
-        <Text lineHeight='grown' color='darkGray'>
+        <Text lineHeight='$grown' color='$darkGray'>
           {commentTitle}
         </Text>
       </Layout>
       <Layout flexBasis={12} />
       <Layout>
-        <Input value={comment} placeholder={commentPlaceholder} onChange={setComment} />
+        <Input value={comment} placeholder={commentPlaceholder} onChangeValue={setComment} />
       </Layout>
       <Layout flexBasis={32} />
       <Box width='100%'>
-        <Button disabled={isFormFilled} onClick={submitForm}>
+        <Button disabled={isFormFilled} style={{ width: '100%' }} onClick={submitForm}>
           {signUpTitle}
         </Button>
       </Box>

@@ -22,7 +22,7 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
 
   return (
     <Column maxWidth={[300, 300, 405]} fill {...hoverProps}>
-      <Box width='100%' height={[200, 260, 260]} backgroundColor='gray'>
+      <Box width='100%' height={[200, 260, 260]} backgroundColor='$gray'>
         <ImageBlock
           width={405}
           height={260}
@@ -32,19 +32,19 @@ const PreviewArticle: FC<PreviewArticleProps> = ({ title, date, excerpt, feature
       </Box>
       <Layout flexBasis={24} />
       <Layout width='100%'>
-        <Text color={hover ? 'blue' : 'black'} lineHeight='grown'>
+        <Text color={hover ? '$blue' : '$black'} lineHeight='$grown'>
           {formattedDate(date)}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
       <Layout width='100%'>
-        <Text color={hover ? 'blue' : 'black'} fontWeight='medium' fontSize='big'>
+        <Text color={hover ? '$blue' : '$black'} fontWeight='$medium' fontSize='$big'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={8} />
       <Row width={[300, 300, '100%']} maxHeight={52}>
-        <TextEllipsis lineHeight='medium' color='darkGray' overflow='hidden' lineClamp={2}>
+        <TextEllipsis lineHeight='$medium' color='$darkGray' overflow='hidden' lineClamp={2}>
           {normalizeString(excerpt)}
         </TextEllipsis>
       </Row>

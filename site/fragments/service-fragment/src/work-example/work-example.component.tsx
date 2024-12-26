@@ -17,18 +17,20 @@ const WorkExample: FC<WorkExampleProps> = ({ image, title, price }: WorkExampleP
   <Row width={[300, 300, 385]} height={[282, 282, 430]}>
     <Column fill height='auto'>
       <Layout flexBasis={[0, 0, 24]} />
-      <Box width={[300, 300, 385]} height={[230, 230, 320]} borderRadius='mini' overflow='hidden'>
+      <Box width={[300, 300, 385]} height={[230, 230, 320]} borderRadius='$mini' overflow='hidden'>
         <ImageBlock width={405} height={100} src={image.sourceUrl} alt={image.altText} />
       </Box>
       <Layout flexBasis={16} flexShrink={0} />
       <Layout>
-        <Text fontWeight='medium' fontSize='normal' color='text.primary'>
+        {/* TODO check <Text fontWeight='$medium' fontSize='$normal' color='$text.primary'> */}
+        <Text fontWeight='$medium' fontSize='$normal'>
           {title}
         </Text>
       </Layout>
       <Layout flexBasis={8} flexShrink={0} />
       <Layout>
-        <Text fontWeight='medium' fontSize='normal' color='text.primary'>
+        {/* TODO check <Text fontWeight='medium' fontSize='normal' color='text.primary'> */}
+        <Text fontWeight='$medium' fontSize='$normal'>
           {price}
           <Space />
           <Ruble />

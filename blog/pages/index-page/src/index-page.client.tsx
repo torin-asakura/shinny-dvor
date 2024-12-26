@@ -1,4 +1,4 @@
-// move it directive to fragment level
+// TODO move it directive to fragment level
 
 'use client'
 
@@ -8,7 +8,7 @@ import type { IndexPageProps }   from './index-page.interfaces.js'
 
 import React                     from 'react'
 
-import { AllArticles }           from '@blog/articles-fragment'
+import { AllArticles }           from '@blog/all-articles-fragment'
 import { Footer }                from '@fragments/footer-fragment'
 import { Navigation }            from '@fragments/navigation-fragment'
 import { Column }                from '@ui/layout'

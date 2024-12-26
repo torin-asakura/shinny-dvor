@@ -1,7 +1,3 @@
-/* eslint-disable */
-
-import type { FC }            from 'react'
-
 import type { CheckboxProps } from './checkbox.interface.js'
 
 import { memo }               from 'react'
@@ -14,7 +10,7 @@ import { Checkmark }          from './checkmark/index.js'
 import { Container }          from './container/index.js'
 import { Label }              from './label/index.js'
 
-export const Checkbox: FC<CheckboxProps> = memo(({ children, active, onCheck }) => {
+export const Checkbox = memo(({ children, active, onCheck }: CheckboxProps) => {
   const handleClick = () => {
     if (onCheck) {
       onCheck(!active)

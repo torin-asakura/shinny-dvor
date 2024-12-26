@@ -1,9 +1,8 @@
 /* eslint-disable */
 
-import type { FC }               from 'react'
-
 import type { ItemProps }        from '../item/index.js'
 import type { AllServicesProps } from './all-services.interface.js'
+import type { FC }               from 'react'
 
 import React                     from 'react'
 
@@ -25,15 +24,15 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
 
   return (
     <Box maxWidth={['100%', '100%', '1440px']} marginTop={[80, 80, 104]}>
-      <Layout flexBasis={[20, 20, 80]} flexShrink={0} />
+      <Layout flexBasis={[20, 20, 80]} flexShrink='0' />
       <Column width='100%'>
         <Layout flexBasis={[20, 20, 32]} />
-        <Text fontWeight='bold' fontSize={['giant', 'giant', 'extra']}>
+        <Text fontWeight='$semiBold' fontSize={['$giant', '$giant', '$extra']}>
           {title}
         </Text>
         <Layout flexBasis={[12, 12, 16]} />
         <Layout flexBasis={32} />
-        <Row flexWrap='wrap' style={{ gap: 32 }}>
+        <Row flexWrap='wrap' gap={32}>
           {services.map(({
             uri,
             servicesParams: { title: serviceName, averagePrice, price, image, addon },
@@ -47,20 +46,22 @@ export const AllServices: FC<AllServicesProps> = ({ fragmentsData, servicesData 
               addon: ItemProps['addon']
             }
           }) => (
-            <Link key={uri} href={uri}>
-              <Item
-                serviceName={serviceName}
-                averagePrice={averagePrice}
-                price={price}
-                image={image}
-                addon={addon}
-              />
-            </Link>
+            <Box width={['$fill', '$fill', 'auto']}>
+              <Link key={uri} href={uri} style={{ width: '100%' }}>
+                <Item
+                  serviceName={serviceName}
+                  averagePrice={averagePrice}
+                  price={price}
+                  image={image}
+                  addon={addon}
+                />
+              </Link>
+            </Box>
           ))}
         </Row>
         <Layout flexBasis={[50, 50, 80]} />
       </Column>
-      <Layout flexBasis={[20, 20, 48]} flexShrink={0} />
+      <Layout flexBasis={[20, 20, 48]} flexShrink='0' />
     </Box>
   )
 }

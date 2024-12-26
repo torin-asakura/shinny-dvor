@@ -18,8 +18,8 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
       <NextNavLink path={content}>
         <Text
           // @ts-expect-error undefined
-          color={Math.abs(scrollY!) < 100 ? getColor(active, scrollY) : ''}
-          fontWeight='medium'
+          color={Math.abs(scrollY!) < 100 ? `$${getColor(active, scrollY)}` : ''}
+          fontWeight='$medium'
         >
           {title}
         </Text>

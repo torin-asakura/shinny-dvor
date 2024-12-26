@@ -20,10 +20,7 @@ import { extractFragment }    from '@globals/data'
 
 import { ServicesList }       from './services-list/index.js'
 
-const Services: FC<ServicesProps> = forwardRef((
-  { fragmentsData, availableRadiiData, servicesData },
-  ref: any
-) => {
+const Services: FC<ServicesProps> = forwardRef(({ fragmentsData, servicesData }, ref: any) => {
   const services = extractFragments('service-item', 'servicesParams', servicesData)
 
   const { title } = extractFragment('contentAddons', 'our-services', fragmentsData)
@@ -31,13 +28,7 @@ const Services: FC<ServicesProps> = forwardRef((
   const allServicesTitle = extractFragment('contentAddons', 'all-services', fragmentsData).title
 
   return (
-    <Box
-      ref={ref}
-      maxWidth={['100%', '100%', 1440]}
-      width='100%'
-      justifyContent='center'
-      id='services'
-    >
+    <Box ref={ref} maxWidth={['100%', '100%', 1440]} width='100%' justifyContent='center'>
       <Column fill>
         <Layout flexBasis={[48, 48, 120]} />
         <Row>
@@ -45,54 +36,44 @@ const Services: FC<ServicesProps> = forwardRef((
           <Box width='100%' justifyContent='space-between'>
             <Column display={['none', 'none', 'flex']} width='100%' maxWidth={[335, '100%', 400]}>
               <Layout>
-                <Text fontWeight='medium' fontSize='giant' lineHeight='grown'>
+                <Text fontWeight='$medium' fontSize='$giant' lineHeight='$grown'>
                   {title}
                 </Text>
               </Layout>
               <Layout flexBasis={24} />
               <Layout>
-                <Text lineHeight='grown'>{subTitle}</Text>
+                <Text lineHeight='$grown'>{subTitle}</Text>
                 <Layout flexBasis={24} />
               </Layout>
               <Layout flexBasis={24} />
               <Row>
-                <NextLink path='/services'>
-                  <Layout width={180}>
-                    <Button color='secondary' size='large'>
-                      {allServicesTitle}
-                    </Button>
-                  </Layout>
-                </NextLink>
+                <Button variant='secondary' size='large'>
+                  <NextLink path='/services'>{allServicesTitle}</NextLink>
+                </Button>
               </Row>
             </Column>
             <Layout flexBasis={[0, 0, 37]} flexShrink={0} />
             <Column width='100%'>
               <Column width='100%' display={['flex', 'flex', 'none']}>
                 <Layout>
-                  <Text fontWeight='medium' fontSize='extraLarge'>
+                  <Text fontWeight='$medium' fontSize='$extraLarge'>
                     {title}
                   </Text>
                 </Layout>
                 <Layout flexBasis={16} />
                 <Layout>
-                  <Text lineHeight='grown'>{subTitle}</Text>
+                  <Text lineHeight='$grown'>{subTitle}</Text>
                 </Layout>
                 <Layout flexBasis={24} />
                 <Row>
-                  <NextLink path='/services'>
-                    <Box width={180} height={56}>
-                      <Button color='secondary' size='large'>
-                        {allServicesTitle}
-                      </Button>
-                    </Box>
-                  </NextLink>
+                  <Button variant='secondary' size='large'>
+                    <NextLink path='/services'>{allServicesTitle}</NextLink>
+                  </Button>
                 </Row>
                 <Layout flexBasis={32} />
               </Column>
               <Column width='100%'>
-                <Layout>
-                  <Divider backgroundColor='gray' />
-                </Layout>
+                <Divider color='$gray' />
                 <ServicesList services={services} />
               </Column>
             </Column>

@@ -1,16 +1,13 @@
-/* eslint-disable */
-
 import type { UseCarouselOptions }        from '../carousel.interface.js'
 
+import { Container }                      from '@atls-ui-parts/carousel'
+import { Slide }                          from '@atls-ui-parts/carousel'
+import { Wrapper }                        from '@atls-ui-parts/carousel'
 import { useAddonNavigation }             from '@atls-ui-parts/carousel'
 import { useCarousel as useCarouselBase } from '@atls-ui-parts/carousel'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
 import React                              from 'react'
-
-import { Container }                      from '../container/index.js'
-import { Slide }                          from '../slide/index.js'
-import { Wrapper }                        from '../wrapper/index.js'
 
 export const useCarousel = ({
   children,
@@ -29,16 +26,24 @@ export const useCarousel = ({
 
   const items = Children.map(children, (child) => <Slide>{child}</Slide>)
 
+  if (!items) {
+    return { carousel: children }
+  }
+
   const { slides, activeSlide, slidesLength, slideToIndex, slideToTwoIndexes, wrapperOptions } =
-    useCarouselBase(containerRef, items, {
-      direction: 'horizontal',
-      slidesPerView,
-      spaceBetween,
-      dragElastic,
-      transitionDuration,
-      swipeThreshold,
-      centered,
-      loop,
+    useCarouselBase({
+      ref: containerRef,
+      items,
+      options: {
+        direction: 'horizontal',
+        slidesPerView,
+        spaceBetween,
+        dragElastic,
+        transitionDuration,
+        swipeThreshold,
+        centered,
+        loop,
+      },
     })
 
   const useControls = () =>

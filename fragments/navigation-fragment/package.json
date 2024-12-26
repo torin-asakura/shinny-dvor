@@ -18,7 +18,6 @@
     "@ui/divider": "workspace:*",
     "@ui/drawer": "workspace:*",
     "@ui/icons": "workspace:*",
-    "@ui/layer": "workspace:*",
     "@ui/layout": "workspace:*",
     "@ui/link": "workspace:*",
     "@ui/logo": "workspace:*",

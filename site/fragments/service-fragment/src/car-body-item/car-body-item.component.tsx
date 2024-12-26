@@ -10,7 +10,7 @@ import { Layout }         from '@ui/layout'
 import { Text }           from '@ui/text'
 
 const CarBodyItem: FC<ItemProps> = ({ item }) => (
-  <Box borderRadius='small' justifyContent='space-between' alignItems='center'>
+  <Box borderRadius='$small' justifyContent='space-between' alignItems='center'>
     <Layout flexBasis={12} />
     <CheckIcon width={24} height={24} />
     <Layout flexBasis={6} />

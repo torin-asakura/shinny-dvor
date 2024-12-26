@@ -13,9 +13,7 @@ const Image: FC<ImageProps> = ({ wheelImg }) => (
     <ImageBlock
       width={440}
       height={440}
-      // @ts-expect-error undefined
       src={wheelImg.get('sourceUrl')}
-      // @ts-expect-error undefined
       alt={wheelImg.get('altText')}
     />
   </Container>

@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@blog/articles-fragment": "workspace:*",
+    "@blog/article-fragment": "workspace:*",
     "@fragments/footer-fragment": "workspace:*",
     "@fragments/navigation-fragment": "workspace:*",
     "@globals/config": "workspace:*",

@@ -1,6 +1,3 @@
-import * as theme from './theme/index.js'
-
-export * from './theme.provider.js'
+export * from './theme.css.js'
+export * from './constants/index.js'
 export * from './theme.interfaces.js'
-
-export { theme }

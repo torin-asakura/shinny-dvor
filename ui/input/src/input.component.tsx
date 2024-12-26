@@ -1,49 +1,40 @@
-/* eslint-disable */
+import type { InputProps } from './input.interfaces.js'
 
-import type { ForwardRefRenderFunction } from 'react'
+import { RawInput }        from '@atls-ui-parts/input'
+import { ChangeEvent }     from 'react'
+import { forwardRef }      from 'react'
+import React               from 'react'
 
-import type { InputProps }               from './input.interfaces.js'
+import { Divider }         from '@ui/divider'
+import { Column }          from '@ui/layout'
 
-import { RawInput as RawInputElement }   from '@atls-ui-parts/input'
-import { useChangeValue }                from '@atls-ui-parts/input'
-import styled                            from '@emotion/styled'
-import { forwardRef }                    from 'react'
-import React                             from 'react'
+import { baseStyles }      from './input.css.js'
 
-import { Divider }                       from '@ui/divider'
-import { Layout }                        from '@ui/layout'
-import { Column }                        from '@ui/layout'
-
-import { baseStyles }                    from './input.styles.js'
-import { shapeStyles }                   from './input.styles.js'
-import { additionalAppearanceStyles }    from './input.styles.js'
-import { appearanceStyles }              from './input.styles.js'
-
-export const InputElement = styled.div<any>(baseStyles, shapeStyles, appearanceStyles)
-const RawInput = styled(RawInputElement)(additionalAppearanceStyles)
-
-export const InputWithoutRef: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
-  { value, size, type = 'text', disabled, onChange, onChangeNative, ...props },
+export const Input = forwardRef<HTMLInputElement, InputProps>((
+  { type, disabled, value, onChange, onChangeValue, ...props },
   ref
 ) => {
-  const changeValue = useChangeValue(disabled, onChange, onChangeNative)
+  const onChangeRaw = (e: ChangeEvent<HTMLInputElement>) => {
+    if (onChange) {
+      onChange(e)
+    }
+    if (onChangeValue) {
+      onChangeValue(e.target.value)
+    }
+  }
 
   return (
-    <Column width='100%'>
-      <InputElement {...props} type={type} size={size}>
-        <RawInput
-          ref={ref}
-          type={type}
-          disabled={disabled}
-          value={value}
-          onChange={changeValue}
-          {...props}
-        />
-      </InputElement>
-      <Layout flexBasis={16} />
-      <Divider backgroundColor={value !== '' ? 'primaryBlue' : 'gray'} />
+    <Column width='100%' gap='$g16'>
+      <RawInput
+        ref={ref}
+        className={baseStyles}
+        type={type}
+        disabled={disabled}
+        value={value}
+        onChange={onChangeRaw}
+        {...props}
+      />
+      <Divider color={value !== '' ? '$primaryBlue' : '$gray'} />
     </Column>
   )
-}
-
-export const Input = forwardRef<HTMLInputElement, InputProps>(InputWithoutRef)
+})

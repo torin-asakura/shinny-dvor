@@ -8,15 +8,15 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@ui/button": "workspace:0.0.1",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/icons": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1",
-    "@ui/link": "workspace:0.0.1",
-    "@ui/logo": "workspace:0.0.1",
-    "@ui/text": "workspace:0.0.1",
-    "@ui/theme": "workspace:0.0.1",
-    "@ui/utils": "workspace:0.0.1"
+    "@ui/button": "workspace:*",
+    "@ui/condition": "workspace:*",
+    "@ui/icons": "workspace:*",
+    "@ui/layout": "workspace:*",
+    "@ui/link": "workspace:*",
+    "@ui/logo": "workspace:*",
+    "@ui/text": "workspace:*",
+    "@ui/theme": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@emotion/react": "11.13.0",

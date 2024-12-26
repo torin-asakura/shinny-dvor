@@ -20,29 +20,28 @@ const AdditionalService: FC<AdditionalServiceProps> = ({
   <Box
     width='100%'
     height={[88, 88, 104]}
-    backgroundColor='fillGray'
-    borderRadius='mini'
+    backgroundColor='$alabaster'
+    borderRadius='$mini'
     alignItems='center'
+    padding={[20, 20, 24]}
   >
-    <Layout flexBasis={[20, 20, 24]} />
     <Checkbox active={isAdditionalService} onCheck={setIsAdditionalService}>
       <Column justifyContent='center'>
         <Layout>
-          <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
-            {additionalservice.title}
+          <Text fontSize={['$big', '$big', '$large']} fontWeight='$medium'>
+            {additionalservice?.title}
           </Text>
         </Layout>
         <Layout flexBasis={4} />
         <Layout>
-          <Text fontSize={['big', 'big', 'large']} fontWeight='medium'>
-            {additionalservice.price}
+          <Text fontSize={['$big', '$big', '$large']} fontWeight='$medium'>
+            {additionalservice?.price}
             <Space />
             <Ruble />
           </Text>
         </Layout>
       </Column>
     </Checkbox>
-    <Layout flexBasis={[20, 20, 24]} />
   </Box>
 )
 

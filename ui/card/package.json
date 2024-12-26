@@ -8,32 +8,20 @@
   },
   "main": "src/index.ts",
   "dependencies": {
-    "@atls-ui-parts/card": "0.1.1",
-    "@atls-ui-parts/dom": "0.0.7",
-    "@ui/condition": "workspace:0.0.1",
-    "@ui/layout": "workspace:0.0.1"
+    "@atls-ui-parts/card": "1.0.2"
   },
   "devDependencies": {
-    "@emotion/react": "11.13.0",
-    "@emotion/styled": "11.13.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
-    "@types/styled-system": "5.1.22",
     "framer-motion": "11.3.22",
     "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-scrolllock": "5.0.1",
-    "styled-system": "5.1.5",
-    "styled-tools": "1.7.2"
+    "react-dom": "18.3.1"
   },
   "peerDependencies": {
-    "@emotion/react": "*",
-    "@emotion/styled": "*",
+    "@vanilla-extract/css": "*",
+    "@vanilla-extract/dynamic": "*",
     "framer-motion": "*",
     "react": "*",
-    "react-dom": "*",
-    "react-scrolllock": "*",
-    "styled-system": "*",
-    "styled-tools": "*"
+    "react-dom": "*"
   }
 }

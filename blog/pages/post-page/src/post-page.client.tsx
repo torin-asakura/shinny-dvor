@@ -5,10 +5,11 @@
 import type { FC }                  from 'react'
 
 import type { PostPageClientProps } from './post-page.interfaces.js'
+import type { RequiredPostByType }  from './post-page.interfaces.js'
 
 import React                        from 'react'
 
-import { Article }                  from '@blog/articles-fragment'
+import { Article }                  from '@blog/article-fragment'
 import { Footer }                   from '@fragments/footer-fragment'
 import { Navigation }               from '@fragments/navigation-fragment'
 import { Column }                   from '@ui/layout'
@@ -22,7 +23,6 @@ import { getServicesData }          from '@globals/data'
 
 import { PostPageStyles }           from './post-page.style.js'
 
-// @ts-expect-error not exist
 export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
   const { uri } = params
 
@@ -47,12 +47,7 @@ export const PostPageClient: FC<PostPageClientProps> = ({ params }) => {
           carBodiesData={carBodies}
           servicesData={services}
         />
-        <Article
-          // @ts-expect-error not assignable
-          postData={postBy}
-          // @ts-expect-error undefined
-          fragmentsData={fragments}
-        />
+        <Article postData={postBy as RequiredPostByType} fragmentsData={fragments} />
         <Footer
           fragmentsData={fragments}
           contactsData={contacts}

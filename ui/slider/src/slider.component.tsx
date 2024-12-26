@@ -1,24 +1,24 @@
-/* eslint-disable */
-
-import type { PropsWithChildren } from 'react'
-import type { FC }                from 'react'
-
-import type { SliderProps }       from './slider.interface.js'
-
-import { Swiper }                 from '@atls-ui-parts/swiper'
+import { Swiper }      from '@atls-ui-parts/swiper'
 // @ts-ignore
-import { Keyboard }               from 'swiper/modules'
+import { Keyboard }    from 'swiper/modules'
 // @ts-ignore
-import { Navigation }             from 'swiper/modules'
-import React                      from 'react'
+import { Navigation }  from 'swiper/modules'
+import { memo }        from 'react'
+import React           from 'react'
 
-export const Slider: FC<PropsWithChildren<SliderProps>> = ({ children }) => (
+import { SliderProps } from './slider.interfaces.js'
+
+export const Slider = memo(({ onSwiper, children }: SliderProps) => (
   <Swiper
+    // @ts-ignore
+    onSwiper={onSwiper}
     loop
     centeredSlides
     loopAddBlankSlides={false}
     allowTouchMove={false}
+    // @ts-ignore
     modules={[Keyboard, Navigation]}
+    style={{}}
     keyboard={{
       enabled: true,
     }}
@@ -34,15 +34,15 @@ export const Slider: FC<PropsWithChildren<SliderProps>> = ({ children }) => (
       768: {
         slidesPerView: 1,
         spaceBetween: 0,
-        initialSlide: 2,
+        initialSlide: 0,
       },
       1024: {
         slidesPerView: 1.5,
         spaceBetween: 40,
-        initialSlide: 0,
+        initialSlide: 2,
       },
     }}
   >
     {children}
   </Swiper>
-)
+))

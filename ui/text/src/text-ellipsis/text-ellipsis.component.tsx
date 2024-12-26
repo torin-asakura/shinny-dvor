@@ -1,11 +1,28 @@
-import type { TextEllipsisProps } from './text-ellipsis.interface.js'
+import { Text as BaseText }    from '@atls-ui-parts/text'
+import { PropsWithChildren }   from 'react'
+import { memo }                from 'react'
+import React                   from 'react'
 
-import styled                     from '@emotion/styled'
+import { ResponsiveTextProps } from '../responsive-text/index.js'
+import { TextEllipsisProps }   from './text-ellipsis.interface.js'
+import { rainbowSprinkles }    from '../responsive-text/index.js'
+import { baseEllipsisStyle }   from './text-ellipsis.css.js'
 
-import { Text }                   from '../index.js'
+export const TextEllipsis: React.FC<PropsWithChildren<ResponsiveTextProps & TextEllipsisProps>> =
+  memo(({ lineClamp, children, ...props }) => {
+    const { className, style, otherProps } = rainbowSprinkles(props)
+    const dynamicEllipsisStyle = {
+      WebkitLineClamp: lineClamp.toString(),
+      ...style,
+    }
 
-export const TextEllipsis = styled(Text)<TextEllipsisProps>(({ lineClamp }) => ({
-  display: '-webkit-box',
-  WebkitLineClamp: `${lineClamp}`,
-  WebkitBoxOrient: 'vertical',
-}))
+    return (
+      <BaseText
+        className={`${baseEllipsisStyle} ${className}`}
+        style={dynamicEllipsisStyle}
+        {...otherProps}
+      >
+        {children}
+      </BaseText>
+    )
+  })

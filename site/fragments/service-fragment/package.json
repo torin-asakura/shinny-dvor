@@ -24,7 +24,8 @@
     "@ui/link": "workspace:*",
     "@ui/radio": "workspace:*",
     "@ui/switch": "workspace:*",
-    "@ui/text": "workspace:*"
+    "@ui/text": "workspace:*",
+    "@ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@apollo/client": "3.11.3",

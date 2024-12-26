@@ -26,7 +26,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
   return (
     <Button
       size='ghost'
-      color='transparent'
+      variant='transparent'
       onClick={(): void => {
         router.push(uri)
       }}
@@ -39,9 +39,9 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
               <Text
                 textAlign='start'
                 whiteSpace='normal'
-                fontWeight='medium'
-                fontSize='xl'
-                color={hover ? 'blue' : 'black'}
+                fontWeight='$medium'
+                fontSize='$xl'
+                color={hover ? '$blue' : '$black'}
               >
                 {title}
               </Text>
@@ -55,7 +55,8 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
                       textAlign='start'
                       whiteSpace='normal'
                       wordWrap='break-word'
-                      lineHeight='medium'
+                      lineHeight='$medium'
+                      color='$darkGray'
                     >
                       {item}
                     </Text>
@@ -66,9 +67,9 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
           </Column>
           <Column justifyContent='center' width={200} display={['none', 'none', 'flex']}>
             <Condition match={Boolean(hover)}>
-              <Button color='secondary' size='normal'>
+              <Button variant='secondary' size='common'>
                 <Row justifyContent='center'>
-                  <Text fontWeight='medium'>
+                  <Text fontWeight='$medium'>
                     <FormattedMessage id='service.by' defaultMessage='от' />
                     <Space />
                     {cost}
@@ -81,7 +82,7 @@ const Service: FC<ServiceProps> = ({ uri, title, description, price }) => {
           </Column>
         </Row>
         <Layout flexBasis={[24, 24, 30]} />
-        <Divider backgroundColor='gray' />
+        <Divider color='$gray' />
       </Column>
     </Button>
   )

@@ -1,18 +1,25 @@
-import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
 import type { CardProps }         from './card.interface.js'
 
+import { Backdrop }               from '@atls-ui-parts/card'
+import { Renderer }               from '@atls-ui-parts/card'
+import { FC }                     from 'react'
 import { motion }                 from 'framer-motion'
+import { memo }                   from 'react'
 import React                      from 'react'
 
-import { Backdrop }               from './backdrop/index.js'
-import { Renderer }               from './renderer/index.js'
-
-const Card: FC<PropsWithChildren<CardProps>> = ({ children, active, onClose }) => (
-  <Renderer active={active}>
+export const Card: FC<PropsWithChildren<CardProps>> = memo(({ children, opened, onClose }) => (
+  <Renderer opened={opened}>
     <motion.div
-      style={{ position: 'fixed', left: 0, bottom: 0, width: '100%', height: '100%', zIndex: 800 }}
+      style={{
+        position: 'fixed',
+        left: 0,
+        bottom: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 800,
+      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -29,6 +36,4 @@ const Card: FC<PropsWithChildren<CardProps>> = ({ children, active, onClose }) =
       {children}
     </motion.div>
   </Renderer>
-)
-
-export { Card }
+))

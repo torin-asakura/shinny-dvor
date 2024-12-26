@@ -9,7 +9,7 @@ import React                      from 'react'
 import { Backdrop }               from './backdrop/index.js'
 import { Renderer }               from './renderer/index.js'
 
-const Drawer: FC<PropsWithChildren<DrawerProps>> = ({ children, active, onClose }) => (
+export const Drawer: FC<PropsWithChildren<DrawerProps>> = ({ children, active, onClose }) => (
   <Renderer active={active}>
     <motion.div
       style={{ position: 'fixed', left: 0, top: 0, width: '100%', height: '100%', zIndex: 800 }}
@@ -30,5 +30,3 @@ const Drawer: FC<PropsWithChildren<DrawerProps>> = ({ children, active, onClose 
     </motion.div>
   </Renderer>
 )
-
-export { Drawer }
