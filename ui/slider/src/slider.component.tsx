@@ -10,6 +10,7 @@ import { SliderProps } from './slider.interfaces.js'
 
 export const Slider = memo(({ onSwiper, children }: SliderProps) => (
   <Swiper
+    initialSlide={2}
     // @ts-ignore
     onSwiper={onSwiper}
     loop
@@ -29,17 +30,14 @@ export const Slider = memo(({ onSwiper, children }: SliderProps) => (
       640: {
         slidesPerView: 1,
         spaceBetween: 0,
-        initialSlide: 2,
       },
       768: {
         slidesPerView: 1,
         spaceBetween: 0,
-        initialSlide: 0,
       },
       1024: {
         slidesPerView: 1.5,
         spaceBetween: 40,
-        initialSlide: 2,
       },
     }}
   >
