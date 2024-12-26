@@ -5309,7 +5309,6 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
           ["react-helmet", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:6.1.0"],\
-          ["recompose", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.30.0"],\
           ["sharp", "npm:0.33.5"],\
           ["styled-system", "npm:5.1.5"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"]\
@@ -12235,6 +12234,14 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/api", "npm:1.9.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:0.57.0", {\
+        "packageLocation": "../.yarn/berry/cache/@opentelemetry-api-logs-npm-0.57.0-df0d9cec23-10.zip/node_modules/@opentelemetry/api-logs/",\
+        "packageDependencies": [\
+          ["@opentelemetry/api-logs", "npm:0.57.0"],\
+          ["@opentelemetry/api", "npm:1.9.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@opentelemetry/context-async-hooks", [\
@@ -12318,6 +12325,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:0.57.0", {\
+        "packageLocation": "../.yarn/berry/cache/@opentelemetry-instrumentation-npm-0.57.0-7eab2df960-10.zip/node_modules/@opentelemetry/instrumentation/",\
+        "packageDependencies": [\
+          ["@opentelemetry/instrumentation", "npm:0.57.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:526172c89e2c519c9e83e63bc512274735345e50041385db21b092d3fb273900709c8ffed5679e0bfe21eab53d1c99d11787202d1a5a33782573ffaa8184e8c2#npm:0.53.0", {\
         "packageLocation": "./.yarn/__virtual__/@opentelemetry-instrumentation-virtual-5370e2e449/2/.yarn/berry/cache/@opentelemetry-instrumentation-npm-0.53.0-e20337344d-10.zip/node_modules/@opentelemetry/instrumentation/",\
         "packageDependencies": [\
@@ -12343,6 +12357,25 @@ const RAW_RUNTIME_STATE =
           ["@opentelemetry/instrumentation", "virtual:6f4f73aca6c8d042d78b6a1073ef5c0b00c96fbc65eb2559c178e9bf6e3dee45eef5974dc8203be854b0da3b288e6a674d8326e6d0db4660100ec93c8020bebf#npm:0.56.0"],\
           ["@opentelemetry/api", "npm:1.9.0"],\
           ["@opentelemetry/api-logs", "npm:0.56.0"],\
+          ["@types/opentelemetry__api", null],\
+          ["@types/shimmer", "npm:1.2.0"],\
+          ["import-in-the-middle", "npm:1.11.3"],\
+          ["require-in-the-middle", "npm:7.4.0"],\
+          ["semver", "npm:7.6.3"],\
+          ["shimmer", "npm:1.2.1"]\
+        ],\
+        "packagePeers": [\
+          "@opentelemetry/api",\
+          "@types/opentelemetry__api"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:edc9e8748b246858106c299c17ecfd51a774e8aa26caa2a2adc4f947615fa2ba57506dafeb4b47686d7eb878f9ec06e391a1be5fbea185d4577b20a3739c11d1#npm:0.57.0", {\
+        "packageLocation": "./.yarn/__virtual__/@opentelemetry-instrumentation-virtual-132df1b243/2/.yarn/berry/cache/@opentelemetry-instrumentation-npm-0.57.0-7eab2df960-10.zip/node_modules/@opentelemetry/instrumentation/",\
+        "packageDependencies": [\
+          ["@opentelemetry/instrumentation", "virtual:edc9e8748b246858106c299c17ecfd51a774e8aa26caa2a2adc4f947615fa2ba57506dafeb4b47686d7eb878f9ec06e391a1be5fbea185d4577b20a3739c11d1#npm:0.57.0"],\
+          ["@opentelemetry/api", "npm:1.9.0"],\
+          ["@opentelemetry/api-logs", "npm:0.57.0"],\
           ["@types/opentelemetry__api", null],\
           ["@types/shimmer", "npm:1.2.0"],\
           ["import-in-the-middle", "npm:1.11.3"],\
@@ -14178,9 +14211,9 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@sentry/opentelemetry", "virtual:3e08d3c88c66ca068aace3ea0d49364fba18849d30e3288a7dbd3c38879cf72ffa6e03f1f56f2f3cfc4128f531002f44c922cf9795a362924fc654fa321d1484#npm:8.47.0"],\
           ["@opentelemetry/api", "npm:1.9.0"],\
-          ["@opentelemetry/core", null],\
-          ["@opentelemetry/instrumentation", null],\
-          ["@opentelemetry/sdk-trace-base", null],\
+          ["@opentelemetry/core", "virtual:6f4f73aca6c8d042d78b6a1073ef5c0b00c96fbc65eb2559c178e9bf6e3dee45eef5974dc8203be854b0da3b288e6a674d8326e6d0db4660100ec93c8020bebf#npm:1.30.0"],\
+          ["@opentelemetry/instrumentation", "virtual:edc9e8748b246858106c299c17ecfd51a774e8aa26caa2a2adc4f947615fa2ba57506dafeb4b47686d7eb878f9ec06e391a1be5fbea185d4577b20a3739c11d1#npm:0.57.0"],\
+          ["@opentelemetry/sdk-trace-base", "virtual:6f4f73aca6c8d042d78b6a1073ef5c0b00c96fbc65eb2559c178e9bf6e3dee45eef5974dc8203be854b0da3b288e6a674d8326e6d0db4660100ec93c8020bebf#npm:1.30.0"],\
           ["@opentelemetry/semantic-conventions", "npm:1.28.0"],\
           ["@sentry/core", "npm:8.47.0"],\
           ["@types/opentelemetry__api", null],\
@@ -14191,9 +14224,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@opentelemetry/api",\
-          "@opentelemetry/core",\
-          "@opentelemetry/instrumentation",\
-          "@opentelemetry/sdk-trace-base",\
           "@opentelemetry/semantic-conventions",\
           "@types/opentelemetry__api",\
           "@types/opentelemetry__core",\
@@ -14479,7 +14509,6 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
           ["react-helmet", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:6.1.0"],\
-          ["recompose", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.30.0"],\
           ["sharp", "npm:0.33.5"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"]\
         ],\
@@ -21598,15 +21627,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["change-emitter", [\
-      ["npm:0.1.6", {\
-        "packageLocation": "../.yarn/berry/cache/change-emitter-npm-0.1.6-9daba4f281-10.zip/node_modules/change-emitter/",\
-        "packageDependencies": [\
-          ["change-emitter", "npm:0.1.6"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["char-regex", [\
       ["npm:1.0.2", {\
         "packageLocation": "../.yarn/berry/cache/char-regex-npm-1.0.2-ecade5f97f-10.zip/node_modules/char-regex/",\
@@ -22144,15 +22164,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/cookie-signature-npm-1.0.6-93f325f7f0-10.zip/node_modules/cookie-signature/",\
         "packageDependencies": [\
           ["cookie-signature", "npm:1.0.6"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["core-js", [\
-      ["npm:1.2.7", {\
-        "packageLocation": "../.yarn/berry/cache/core-js-npm-1.2.7-88c984873f-10.zip/node_modules/core-js/",\
-        "packageDependencies": [\
-          ["core-js", "npm:1.2.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -24401,20 +24412,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["fbjs", [\
-      ["npm:0.8.18", {\
-        "packageLocation": "../.yarn/berry/cache/fbjs-npm-0.8.18-79fe681dcf-10.zip/node_modules/fbjs/",\
-        "packageDependencies": [\
-          ["fbjs", "npm:0.8.18"],\
-          ["core-js", "npm:1.2.7"],\
-          ["isomorphic-fetch", "npm:2.2.1"],\
-          ["loose-envify", "npm:1.4.0"],\
-          ["object-assign", "npm:4.1.1"],\
-          ["promise", "npm:7.3.1"],\
-          ["setimmediate", "npm:1.0.5"],\
-          ["ua-parser-js", "npm:0.7.39"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.0.5", {\
         "packageLocation": "../.yarn/berry/cache/fbjs-npm-3.0.5-6d6394df80-10.zip/node_modules/fbjs/",\
         "packageDependencies": [\
@@ -25617,13 +25614,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["hoist-non-react-statics", [\
-      ["npm:2.5.5", {\
-        "packageLocation": "../.yarn/berry/cache/hoist-non-react-statics-npm-2.5.5-e15c7ba611-10.zip/node_modules/hoist-non-react-statics/",\
-        "packageDependencies": [\
-          ["hoist-non-react-statics", "npm:2.5.5"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:3.3.2", {\
         "packageLocation": "../.yarn/berry/cache/hoist-non-react-statics-npm-3.3.2-e7b709e6c1-10.zip/node_modules/hoist-non-react-statics/",\
         "packageDependencies": [\
@@ -26394,13 +26384,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["is-stream", [\
-      ["npm:1.1.0", {\
-        "packageLocation": "../.yarn/berry/cache/is-stream-npm-1.1.0-818ecbf6bb-10.zip/node_modules/is-stream/",\
-        "packageDependencies": [\
-          ["is-stream", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:2.0.1", {\
         "packageLocation": "../.yarn/berry/cache/is-stream-npm-2.0.1-c802db55e7-10.zip/node_modules/is-stream/",\
         "packageDependencies": [\
@@ -26545,17 +26528,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/isexe-npm-3.1.1-9c0061eead-10.zip/node_modules/isexe/",\
         "packageDependencies": [\
           ["isexe", "npm:3.1.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["isomorphic-fetch", [\
-      ["npm:2.2.1", {\
-        "packageLocation": "../.yarn/berry/cache/isomorphic-fetch-npm-2.2.1-46b4db5d7b-10.zip/node_modules/isomorphic-fetch/",\
-        "packageDependencies": [\
-          ["isomorphic-fetch", "npm:2.2.1"],\
-          ["node-fetch", "npm:1.7.3"],\
-          ["whatwg-fetch", "npm:3.6.20"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -28718,15 +28690,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["node-fetch", [\
-      ["npm:1.7.3", {\
-        "packageLocation": "../.yarn/berry/cache/node-fetch-npm-1.7.3-eb8372f991-10.zip/node_modules/node-fetch/",\
-        "packageDependencies": [\
-          ["node-fetch", "npm:1.7.3"],\
-          ["encoding", "npm:0.1.13"],\
-          ["is-stream", "npm:1.1.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:2.7.0", {\
         "packageLocation": "../.yarn/berry/cache/node-fetch-npm-2.7.0-587d57004e-10.zip/node_modules/node-fetch/",\
         "packageDependencies": [\
@@ -30697,15 +30660,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["react-lifecycles-compat", [\
-      ["npm:3.0.4", {\
-        "packageLocation": "../.yarn/berry/cache/react-lifecycles-compat-npm-3.0.4-d5e285a39e-10.zip/node_modules/react-lifecycles-compat/",\
-        "packageDependencies": [\
-          ["react-lifecycles-compat", "npm:3.0.4"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["react-side-effect", [\
       ["npm:2.1.2", {\
         "packageLocation": "../.yarn/berry/cache/react-side-effect-npm-2.1.2-c18e5fd8bd-10.zip/node_modules/react-side-effect/",\
@@ -30802,34 +30756,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["rechoir", "npm:0.8.0"],\
           ["resolve", "patch:resolve@npm%3A1.22.9#optional!builtin<compat/resolve>::version=1.22.9&hash=c3c19d"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["recompose", [\
-      ["npm:0.30.0", {\
-        "packageLocation": "../.yarn/berry/cache/recompose-npm-0.30.0-55700f15a5-10.zip/node_modules/recompose/",\
-        "packageDependencies": [\
-          ["recompose", "npm:0.30.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.30.0", {\
-        "packageLocation": "./.yarn/__virtual__/recompose-virtual-462799a78a/2/.yarn/berry/cache/recompose-npm-0.30.0-55700f15a5-10.zip/node_modules/recompose/",\
-        "packageDependencies": [\
-          ["recompose", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:0.30.0"],\
-          ["@babel/runtime", "npm:7.26.0"],\
-          ["@types/react", "npm:18.3.3"],\
-          ["change-emitter", "npm:0.1.6"],\
-          ["fbjs", "npm:0.8.18"],\
-          ["hoist-non-react-statics", "npm:2.5.5"],\
-          ["react", "npm:18.3.1"],\
-          ["react-lifecycles-compat", "npm:3.0.4"],\
-          ["symbol-observable", "npm:1.2.0"]\
-        ],\
-        "packagePeers": [\
-          "@types/react",\
-          "react"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -32547,13 +32473,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["symbol-observable", [\
-      ["npm:1.2.0", {\
-        "packageLocation": "../.yarn/berry/cache/symbol-observable-npm-1.2.0-9e812a0a39-10.zip/node_modules/symbol-observable/",\
-        "packageDependencies": [\
-          ["symbol-observable", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:4.0.0", {\
         "packageLocation": "../.yarn/berry/cache/symbol-observable-npm-4.0.0-5c36594410-10.zip/node_modules/symbol-observable/",\
         "packageDependencies": [\
@@ -33300,13 +33219,6 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ua-parser-js", [\
-      ["npm:0.7.39", {\
-        "packageLocation": "../.yarn/berry/cache/ua-parser-js-npm-0.7.39-2ad5c9d325-10.zip/node_modules/ua-parser-js/",\
-        "packageDependencies": [\
-          ["ua-parser-js", "npm:0.7.39"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:1.0.39", {\
         "packageLocation": "../.yarn/berry/cache/ua-parser-js-npm-1.0.39-3d3fb8d47d-10.zip/node_modules/ua-parser-js/",\
         "packageDependencies": [\
@@ -33927,15 +33839,6 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["whatwg-encoding", "npm:2.0.0"],\
           ["iconv-lite", "npm:0.6.3"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["whatwg-fetch", [\
-      ["npm:3.6.20", {\
-        "packageLocation": "../.yarn/berry/cache/whatwg-fetch-npm-3.6.20-a6f79b98c4-10.zip/node_modules/whatwg-fetch/",\
-        "packageDependencies": [\
-          ["whatwg-fetch", "npm:3.6.20"]\
         ],\
         "linkType": "HARD"\
       }]\
