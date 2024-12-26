@@ -23,7 +23,7 @@ export const SliderPart: FC<SliderPartProps> = ({
           { workResultParams: { fragmentId, photos, price, description, time } },
           index: number
         ) => (
-          <SwiperSlide>
+          <SwiperSlide key={`${fragmentId}-${index}`}>
             <Slide
               key={`${fragmentId}-${index}`}
               description={description}

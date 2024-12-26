@@ -49,6 +49,12 @@ export const useWorkExamplesFragment = ({
     }
   }, [controlsSwiper])
 
+  useEffect(() => {
+    if (controlsSwiper) {
+      controlsSwiper.update()
+    }
+  }, [slides, controlsSwiper])
+
   return {
     controlsSwiper,
     setControlsSwiper,
