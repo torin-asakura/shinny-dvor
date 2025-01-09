@@ -18,7 +18,10 @@ export const runPostPageServerQuerires: PostPageServerProps = async ({ params })
   await client.query({ query: GET_CONTACTS })
   await client.query({ query: GET_NAVIGATION })
   await client.query({ query: GET_AVAILABLE_RADII })
-  await client.query({ query: GET_BLOG_POST, variables: { uri } })
+
+  const queryResult = await client.query({ query: GET_BLOG_POST, variables: { uri } })
+  console.log(`GET_BLOG_POST queryResult:\n`, queryResult)
+
   await client.query({ query: GET_CAR_BODIES })
   await client.query({ query: GET_SERVICES })
 }
