@@ -16,7 +16,9 @@ export const yandexTurboApiHandle = async (
 
   const responseUrl = getResponseUrl(pathname)
 
-  const response = await fetch(responseUrl)
+  const response = await fetch(responseUrl, {
+    cache: 'no-store',
+  })
   const responseText = await response.text()
 
   const bodyHtmlString = getBodyHtmlString(responseText)

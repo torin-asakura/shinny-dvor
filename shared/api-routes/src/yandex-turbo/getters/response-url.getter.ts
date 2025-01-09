@@ -6,5 +6,6 @@ const getResponseOrigin = (): string => {
 export const getResponseUrl = (pathname: string): string => {
   const responseOrigin = getResponseOrigin()
   const responseUrl = new URL(pathname, responseOrigin)
+  responseUrl.searchParams.append('yandex-turbo', 'true')
   return responseUrl.href
 }
