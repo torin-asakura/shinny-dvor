@@ -2725,6 +2725,7 @@ __metadata:
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/config": "workspace:*"
     "@globals/data": "workspace:*"
+    "@shared/api-routes": "workspace:*"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -7272,6 +7273,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@shared/api-routes@workspace:*, @shared/api-routes@workspace:shared/api-routes":
+  version: 0.0.0-use.local
+  resolution: "@shared/api-routes@workspace:shared/api-routes"
+  languageName: unknown
+  linkType: soft
+
 "@shared/utils@workspace:*, @shared/utils@workspace:shared/utils":
   version: 0.0.0-use.local
   resolution: "@shared/utils@workspace:shared/utils"
@@ -7355,12 +7362,12 @@ __metadata:
     "@fragments/root-layout-fragment": "workspace:*"
     "@globals/config": "workspace:*"
     "@globals/data": "workspace:*"
+    "@shared/api-routes": "workspace:*"
     "@site/booking-api": "workspace:*"
     "@site/contacts-page": "workspace:*"
     "@site/index-page": "workspace:*"
     "@site/service-page": "workspace:*"
     "@site/services-page": "workspace:*"
-    "@site/yandex-turbo-api": "workspace:*"
     "@types/node": "npm:22.1.0"
     "@types/react": "npm:18.3.3"
     "@types/react-dom": "npm:18.3.0"
@@ -7446,6 +7453,7 @@ __metadata:
     "@ui/map": "workspace:*"
     "@ui/social-links": "workspace:*"
     "@ui/text": "workspace:*"
+    next: "npm:14.2.21"
     react: "npm:18.3.1"
     react-dom: "npm:18.3.1"
     styled-system: "npm:5.1.5"
@@ -7453,6 +7461,7 @@ __metadata:
     "@apollo/client": "*"
     "@emotion/react": "*"
     "@emotion/styled": "*"
+    next: "*"
     react: "*"
     react-dom: "*"
     styled-system: "*"
@@ -7791,14 +7800,6 @@ __metadata:
     react: "*"
     react-dom: "*"
     styled-system: "*"
-  languageName: unknown
-  linkType: soft
-
-"@site/yandex-turbo-api@workspace:*, @site/yandex-turbo-api@workspace:site/api/yandex-turbo":
-  version: 0.0.0-use.local
-  resolution: "@site/yandex-turbo-api@workspace:site/api/yandex-turbo"
-  dependencies:
-    "@globals/data": "workspace:*"
   languageName: unknown
   linkType: soft
 
