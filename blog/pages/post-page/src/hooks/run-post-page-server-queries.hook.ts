@@ -14,28 +14,11 @@ export const runPostPageServerQuerires: PostPageServerProps = async ({ params })
   const client = getServerClient()
   const { uri } = params
 
-  const processQuery = async (queryData: Parameters<typeof client.query>[0]): Promise<void> => {
-    const { error } = await client.query(queryData)
-
-    if (error) {
-      error.graphQLErrors.forEach((error) => {
-        console.log(error.message)
-        console.log(error.extensions)
-        console.log(error.locations)
-        console.log(error.path)
-      })
-      console.log(error.cause?.locations)
-      console.log(error.cause?.path)
-    }
-  }
-
-  await processQuery({ query: GET_FRAGMENTS })
-  await processQuery({ query: GET_CONTACTS })
-  await processQuery({ query: GET_NAVIGATION })
-  await processQuery({ query: GET_AVAILABLE_RADII })
-
-  await processQuery({ query: GET_BLOG_POST, variables: { uri } })
-
-  await processQuery({ query: GET_CAR_BODIES })
-  await processQuery({ query: GET_SERVICES })
+  await client.query({ query: GET_FRAGMENTS })
+  await client.query({ query: GET_CONTACTS })
+  await client.query({ query: GET_NAVIGATION })
+  await client.query({ query: GET_AVAILABLE_RADII })
+  await client.query({ query: GET_BLOG_POST, variables: { uri } })
+  await client.query({ query: GET_CAR_BODIES })
+  await client.query({ query: GET_SERVICES })
 }
