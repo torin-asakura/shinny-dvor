@@ -44,4 +44,4 @@ body:
     validations:
       required: true
 
-projects: ["torin-asakura/6"]
+projects: ['torin-asakura/6']
