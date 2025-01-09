@@ -1,10 +1,11 @@
+import type { ContactsProps }  from './contacts.interface.js'
 import type { FC }             from 'react'
 
-import type { ContactsProps }  from './contacts.interface.js'
-
-import { memo }                from 'react'
 import React                   from 'react'
+import { useSearchParams }     from 'next/navigation'
+import { memo }                from 'react'
 
+import { Condition }           from '@ui/condition'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
@@ -17,8 +18,11 @@ import { MapComponent }        from './map/index.js'
 import { useContacts }         from './hooks/index.js'
 
 const Contacts: FC<ContactsProps> = memo((props) => {
+  const searchParams = useSearchParams()
   const contactsInformationData = useContacts(props)
   const { contactsTitle } = contactsInformationData
+
+  const yandexTurbo = searchParams.get('yandex-turbo')
 
   return (
     <Column width='100%' maxWidth={1440} marginTop={[80, 80, 104]}>
@@ -39,7 +43,9 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         justifyContent='space-between'
       >
         <ContactsInformation contactsData={contactsInformationData} />
-        <MapComponent />
+        <Condition match={!Boolean(yandexTurbo)}>
+          <MapComponent />
+        </Condition>
       </Row>
       <Layout flexBasis={[24, 24, 0]} />
       <Box width='100%' height={270} display={['flex', 'flex', 'none']}>
