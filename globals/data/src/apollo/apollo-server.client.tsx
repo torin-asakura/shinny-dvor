@@ -2,13 +2,17 @@
 
 'use server'
 
-import { HttpLink }                from '@apollo/client'
 import { ApolloClient }            from '@apollo/experimental-nextjs-app-support'
 import { InMemoryCache }           from '@apollo/experimental-nextjs-app-support'
+import { from }                    from '@apollo/client'
 import { defaultDataIdFromObject } from '@apollo/client'
 import { registerApolloClient }    from '@apollo/experimental-nextjs-app-support'
 
-import { GRAPHQL_API_URL }         from './apollo.constants.js'
+import { getApolloErrorLink }      from '../getters/index.js'
+import { getApolloHttpLink }       from '../getters/index.js'
+
+const errorLink = getApolloErrorLink()
+const httpLink = getApolloHttpLink()
 
 const { getClient, PreloadQuery } = registerApolloClient(
   () =>
@@ -39,10 +43,7 @@ const { getClient, PreloadQuery } = registerApolloClient(
       }),
       connectToDevTools: true,
       // @ts-ignore
-      link: new HttpLink({
-        uri: GRAPHQL_API_URL,
-        credentials: 'include',
-      }),
+      link: from([errorLink, httpLink]),
     })
 )
 
