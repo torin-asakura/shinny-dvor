@@ -12,18 +12,18 @@ export const getApolloErrorLink = (): ApolloLink => {
 
     if (graphQLErrors) {
       graphQLErrors.forEach(({ message, locations, path, extensions }) => {
-        console.log(`[GraphQL error]: Message: ${message}`)
-        console.log(`Location: ${locations}`)
-        console.log(`Path: ${path}`)
-        console.log(`Extenstions: ${extensions}`)
+        console.debug(`[GraphQL error]: Message: ${message}`)
+        console.debug(`Location: ${locations}`)
+        console.debug(`Path: ${path}`)
+        console.debug(`Extenstions: ${extensions}`)
       })
     }
     if (cause) {
       const { message, extensions, locations, path } = cause
-      console.log(`Cause: ${message}`)
-      console.log(`Extenstions: ${extensions}`)
-      console.log(`Locatoins: ${locations}`)
-      console.log(`Path: ${path}`)
+      console.debug(`Cause: ${message}`)
+      console.debug(`Extenstions: ${extensions}`)
+      console.debug(`Locatoins: ${locations}`)
+      console.debug(`Path: ${path}`)
     }
   })
 
