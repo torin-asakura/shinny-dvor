@@ -2,7 +2,7 @@ import type { ContactsProps }  from './contacts.interface.js'
 import type { FC }             from 'react'
 
 import React                   from 'react'
-import { useSearchParams }     from 'next/navigation'
+import { useSearchParams }     from 'next/navigation.js'
 import { memo }                from 'react'
 
 import { Condition }           from '@ui/condition'
