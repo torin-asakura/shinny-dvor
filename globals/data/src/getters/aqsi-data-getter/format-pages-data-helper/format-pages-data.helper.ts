@@ -1,5 +1,6 @@
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
+import { JsonParseError }              from '../error/index.js'
 import { getRowsData }                 from './rows-data.getter.js'
 
 const checkResponseDataValidity = (responseData: any): boolean => {
@@ -18,8 +19,12 @@ export const formatPagesDataHelper = async (
   for await (const pageResponse of pageResponses) {
     const responseText = await pageResponse.text()
     if (responseText) {
-      const pageData = JSON.parse(responseText)
-      responsesData.push(pageData)
+      try {
+        const pageData = JSON.parse(responseText)
+        responsesData.push(pageData)
+      } catch (error) {
+        console.error('Error on globals_aqsi-data-getter, parse json')
+      }
     }
   }
 
