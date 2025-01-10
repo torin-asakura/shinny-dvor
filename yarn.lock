@@ -9919,6 +9919,7 @@ __metadata:
     "@vanilla-extract/css": "npm:1.16.1"
     "@vanilla-extract/dynamic": "npm:2.1.2"
     nanoid: "npm:4.0.2"
+    next: "npm:14.2.21"
     rainbow-sprinkles: "npm:0.17.3"
     react: "npm:18.3.1"
     react-before-after-slider: "npm:1.0.4"
@@ -9928,6 +9929,7 @@ __metadata:
   peerDependencies:
     "@vanilla-extract/css": "*"
     "@vanilla-extract/dynamic": "*"
+    next: "*"
     rainbow-sprinkles: "*"
     react: "*"
     react-before-after-slider: "*"
