@@ -1,9 +1,9 @@
+import type { Sprinkles }      from './container.css.js'
 import type { ContainerProps } from './container.interface.js'
 
 import { forwardRef }          from 'react'
 import React                   from 'react'
 
-import { Sprinkles }           from './container.css.js'
 import { baseContainerStyles } from './container.css.js'
 import { rainbowSprinkles }    from './container.css.js'
 

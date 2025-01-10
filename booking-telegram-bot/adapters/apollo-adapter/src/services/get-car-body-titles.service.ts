@@ -1,5 +1,6 @@
 import type { ReturnDataType }   from '../interfaces/index.js'
 import type { ReturnTitlesType } from '../interfaces/index.js'
+import type { ArrayElement }     from '@globals/data'
 
 import { Injectable }            from '@nestjs/common'
 
@@ -15,7 +16,9 @@ class GetCarBodyTitlesService {
   async process(): ReturnTitlesType {
     const carBodiesData = await this.getCarBodiesData()
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return carBodiesData.map((singleCarData: any) => singleCarData.contentAddons.title)
+    return carBodiesData.map(
+      (singleCarData: ArrayElement<typeof carBodiesData>) => singleCarData.contentAddons.title
+    )
   }
 
   private async getCarBodiesData(): ReturnDataType {

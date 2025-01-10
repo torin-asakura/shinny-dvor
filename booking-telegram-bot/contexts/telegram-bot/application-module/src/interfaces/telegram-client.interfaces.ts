@@ -1,4 +1,4 @@
-type TelegramBotFormattedContextType = {
+export type TelegramBotFormattedContextType = {
   userId: bigint
   userFirstName: string
   userLastName?: string
@@ -8,10 +8,7 @@ type TelegramBotFormattedContextType = {
   chatId: bigint
 }
 
-type CreateConversationReturnType = {
-  data: Record<string, any>
-  waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => Promise<any>
+export type CreateConversationReturnType = {
+  data: object
+  waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => Promise<object>
 }
-
-export type { TelegramBotFormattedContextType }
-export type { CreateConversationReturnType }

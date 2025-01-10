@@ -2,14 +2,13 @@ import type { Swiper as SwiperCore }              from 'swiper'
 
 import type { SlidesType }                        from '../works-examples.interface.js'
 import type { UseWorkExamplesFragmentReturnType } from './use-work-examples-fragment.interface.js'
+import type { UseWorkExamplesFragmentProps }      from './use-work-examples-fragment.interface.js'
 
 import { useEffect }                              from 'react'
 import { useState }                               from 'react'
 
 import { extractFragment }                        from '@globals/data'
 import { extractFragments }                       from '@globals/data'
-
-import { UseWorkExamplesFragmentProps }           from './use-work-examples-fragment.interface.js'
 
 export const useWorkExamplesFragment = ({
   fragmentsData,
@@ -32,7 +31,7 @@ export const useWorkExamplesFragment = ({
   ) as Array<SlidesType>
 
   useEffect(() => {
-    const handleSlideChange = () => {
+    const handleSlideChange = (): void => {
       if (controlsSwiper) {
         setActiveIndex(controlsSwiper.realIndex)
       }
@@ -42,7 +41,7 @@ export const useWorkExamplesFragment = ({
       controlsSwiper.on('slideChange', handleSlideChange)
     }
 
-    return () => {
+    return (): void => {
       if (controlsSwiper) {
         controlsSwiper.off('slideChange', handleSlideChange)
       }

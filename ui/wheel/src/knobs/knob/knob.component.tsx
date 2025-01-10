@@ -1,5 +1,6 @@
 import type { FC }            from 'react'
 
+import type { Sprinkles }     from './container/container.css.js'
 import type { KnobProps }     from './knob.interface.js'
 
 import { useState }           from 'react'
@@ -8,7 +9,6 @@ import React                  from 'react'
 import { useHover }           from '@ui/utils'
 import { usePopover }         from '@ui/utils'
 
-import { Sprinkles }          from './container/container.css.js'
 import { Container }          from './container/index.js'
 import { KnobDesktopVariant } from './knob-dektop-variant/index.js'
 import { KnobMobileVariant }  from './knob-mobile-variant/index.js'

@@ -18,24 +18,22 @@ export const SignupButtonPart: FC<SignupButtonPartProps> = ({
   servicePrice,
   onCarBody,
   serviceName,
-}) => {
-  return (
-    <Box width='100%' height={48}>
-      <Button
-        style={{ width: '100%' }}
-        onClick={() => {
-          setVisible(true)
-          serviceVar({ radius, carBody: onCarBody, serviceName: serviceName || '' })
-        }}
-      >
-        <Text fontWeight='$medium'>
-          {signUp}
-          <Space />
-          {servicePrice !== undefined && servicePrice}
-          <Space />
-          <Ruble />
-        </Text>
-      </Button>
-    </Box>
-  )
-}
+}) => (
+  <Box width='100%' height={48}>
+    <Button
+      style={{ width: '100%' }}
+      onClick={() => {
+        setVisible(true)
+        serviceVar({ radius, carBody: onCarBody, serviceName: serviceName || '' })
+      }}
+    >
+      <Text fontWeight='$medium'>
+        {signUp}
+        <Space />
+        {servicePrice !== undefined && servicePrice}
+        <Space />
+        <Ruble />
+      </Text>
+    </Button>
+  </Box>
+)

@@ -1,6 +1,5 @@
-import type { FC }        from 'react'
-
 import type { ItemProps } from './item.interface.js'
+import type { FC }        from 'react'
 
 import React              from 'react'
 
@@ -14,7 +13,10 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Row>
     <NextNavLink path={content}>
       <Text
-        color={Math.abs(scrollY!) < 100 ? `$${getColor(active, scrollY)}` : null}
+        color={
+          // eslint-disable-next-line react/jsx-no-leaked-render
+          Math.abs(Number(scrollY)) < 100 ? `$${getColor(active, scrollY)}` : null
+        }
         fontWeight='$medium'
       >
         {title}

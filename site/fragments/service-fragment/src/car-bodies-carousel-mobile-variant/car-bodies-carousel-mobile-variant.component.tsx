@@ -1,6 +1,5 @@
-import type { FC }                                  from 'react'
-
 import type { CarBodiesCarouselMobileVariantProps } from './car-bodies-carousel-mobile-variant.interface.js'
+import type { FC }                                  from 'react'
 
 import React                                        from 'react'
 
@@ -13,22 +12,31 @@ export const CarBodiesCarouselMobileVariant: FC<CarBodiesCarouselMobileVariantPr
   carBodies,
   onCarBody,
   setOnCarBody,
-}) => {
-  return (
-    <Box
-      height={48}
-      alignItems='center'
-      borderRadius='$default'
-      backgroundColor='$fillGray'
-      display={['flex', 'flex', 'none']}
-    >
-      <CarBodiesCarousel>
-        {carBodies &&
+}) => (
+  <Box
+    height={48}
+    alignItems='center'
+    borderRadius='$default'
+    backgroundColor='$fillGray'
+    display={['flex', 'flex', 'none']}
+  >
+    <CarBodiesCarousel>
+      {
+        // eslint-disable-next-line react/jsx-no-leaked-render
+        carBodies &&
           carBodies.map(
-            (item: string | null) =>
-              item && <CarBodyItem item={item} onCarBody={onCarBody} setOnCarBody={setOnCarBody} />
-          )}
-      </CarBodiesCarousel>
-    </Box>
-  )
-}
+            (item: string | null, index) =>
+              item && (
+                <CarBodyItem
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`car-bodies-carousel-${index}`}
+                  item={item}
+                  setOnCarBody={setOnCarBody}
+                  onCarBody={onCarBody}
+                />
+              )
+          )
+      }
+    </CarBodiesCarousel>
+  </Box>
+)

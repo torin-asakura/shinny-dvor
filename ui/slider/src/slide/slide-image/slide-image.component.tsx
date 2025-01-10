@@ -1,14 +1,16 @@
-import { FC }                               from 'react'
+import type { ReactCompareImageProps }      from './slide-image.interfaces.js'
+import type { SlideImageProps }             from './slide-image.interfaces.js'
+import type { FC }                          from 'react'
+
+import React                                from 'react'
 import { default as BaseReactCompareImage } from 'react-compare-image'
 import { memo }                             from 'react'
-import React                                from 'react'
 
 import { Box }                              from '@ui/layout'
 
 import { Handle }                           from '../../handle/index.js'
-import { SlideImageProps }                  from './slide-image.interfaces.js'
 
-const ReactCompareImage = BaseReactCompareImage as unknown as FC<any>
+const ReactCompareImage = BaseReactCompareImage as unknown as FC<ReactCompareImageProps>
 
 export const SlideImage = memo(({ swiperSlide, image }: SlideImageProps) => (
   <Box fill>
@@ -34,7 +36,7 @@ export const SlideImage = memo(({ swiperSlide, image }: SlideImageProps) => (
       alignItems='center'
     >
       <ReactCompareImage
-        handle={swiperSlide.isActive && <Handle />}
+        handle={swiperSlide.isActive ? <Handle /> : <></>}
         leftImage={image.firstPhoto.sourceUrl}
         rightImage={image.secondPhoto.sourceUrl}
         sliderPositionPercentage={0.4}

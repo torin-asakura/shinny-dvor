@@ -27,7 +27,7 @@ type OnMessageReturnType = Composer
 type OnCommandReturnType = Composer
 
 type CreateConversationReturnType = {
-  data: Record<string, any>
+  data: object
   waitMessage: (callback: WaitMessageCallbackType) => WaitMessageType
 }
 

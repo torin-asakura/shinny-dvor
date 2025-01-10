@@ -1,14 +1,13 @@
 import type { ServicesDataToReplaceType } from '@globals/data'
-
-import { getNavigationData }              from '@globals/data'
-import { getBlogPostsData }               from '@globals/data'
-import { getAvailableRadiiData }          from '@globals/data'
-import { getContactsData }                from '@globals/data'
-import { getServicesData }                from '@globals/data'
-import { getFragmentsData }               from '@globals/data'
-import { getUiData }                      from '@globals/data'
-import { getWorkResultsData }             from '@globals/data'
-import { getCarBodiesData }               from '@globals/data'
+import type { getNavigationData }         from '@globals/data'
+import type { getBlogPostsData }          from '@globals/data'
+import type { getAvailableRadiiData }     from '@globals/data'
+import type { getContactsData }           from '@globals/data'
+import type { getServicesData }           from '@globals/data'
+import type { getFragmentsData }          from '@globals/data'
+import type { getUiData }                 from '@globals/data'
+import type { getWorkResultsData }        from '@globals/data'
+import type { getCarBodiesData }          from '@globals/data'
 
 export type GetData = ({
   servicesDataToReplace,

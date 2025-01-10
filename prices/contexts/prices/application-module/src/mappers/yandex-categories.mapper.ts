@@ -3,11 +3,10 @@ import type { CategoriesType }                   from '../interfaces/index.js'
 
 export const mapYandexCategories = (
   goodsCategoryData: GoodsCategoriesDataFormattedType
-): CategoriesType => {
-  return goodsCategoryData.map(({ id, name }) => ({
+): CategoriesType =>
+  goodsCategoryData.map(({ id, name }) => ({
     _attributes: {
       id,
     },
     _text: name,
   }))
-}

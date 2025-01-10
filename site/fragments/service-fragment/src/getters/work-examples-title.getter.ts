@@ -9,5 +9,5 @@ export const getWorkExamplesTitle = (fragmentsData: FragmentsDataType): string =
     fragmentsData
   )
 
-  return workExamplesTitle
+  return workExamplesTitle as string
 }

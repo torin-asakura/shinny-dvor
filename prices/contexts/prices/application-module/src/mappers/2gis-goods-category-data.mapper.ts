@@ -11,8 +11,8 @@ export const map2gisGoodsCategoryData = (
       const { id, name, children } = item
 
       if (children) {
-        children.forEach(({ id, parent }) => {
-          categoriesSpecification[id] = parent
+        children.forEach(({ id: childrenId, parent }) => {
+          categoriesSpecification[childrenId] = parent
         })
       }
 

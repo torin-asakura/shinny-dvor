@@ -1,15 +1,15 @@
-import { memo }                  from 'react'
-import React                     from 'react'
+import type { SlideDescriptionProps } from './slide-description.interfaces.js'
 
-import { Box }                   from '@ui/layout'
-import { Column }                from '@ui/layout'
-import { Layout }                from '@ui/layout'
-import { Row }                   from '@ui/layout'
-import { Ruble }                 from '@ui/text'
-import { Space }                 from '@ui/text'
-import { Text }                  from '@ui/text'
+import { memo }                       from 'react'
+import React                          from 'react'
 
-import { SlideDescriptionProps } from './slide-description.interfaces.js'
+import { Box }                        from '@ui/layout'
+import { Column }                     from '@ui/layout'
+import { Layout }                     from '@ui/layout'
+import { Row }                        from '@ui/layout'
+import { Ruble }                      from '@ui/text'
+import { Space }                      from '@ui/text'
+import { Text }                       from '@ui/text'
 
 export const SlideDescription = memo(({
   description,

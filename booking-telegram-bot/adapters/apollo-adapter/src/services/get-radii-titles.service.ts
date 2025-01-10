@@ -1,5 +1,6 @@
 import type { ReturnDataType }   from '../interfaces/index.js'
 import type { ReturnTitlesType } from '../interfaces/index.js'
+import type { ArrayElement }     from '@globals/data'
 
 import { Injectable }            from '@nestjs/common'
 
@@ -15,7 +16,9 @@ class GetRadiiTitlesService {
   async process(): ReturnTitlesType {
     const radiiData = await this.getRadiiData()
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
+    return radiiData.map(
+      (singleRadiiData: ArrayElement<typeof radiiData>) => singleRadiiData.contentAddons.title
+    )
   }
 
   private async getRadiiData(): ReturnDataType {

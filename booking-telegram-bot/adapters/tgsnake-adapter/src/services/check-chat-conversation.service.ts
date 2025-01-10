@@ -8,7 +8,7 @@ class CheckChatConversationService {
 
   process(chatId: bigint): boolean {
     const { conversation } = this.tgsnakeAdapterService.conversation as unknown as {
-      conversation: Map<bigint, any>
+      conversation: Map<bigint, object>
     }
 
     if (conversation.get(chatId)) {

@@ -1,1 +1,1 @@
-export * from './booking-data.interface.js'
+export type * from './booking-data.interface.js'

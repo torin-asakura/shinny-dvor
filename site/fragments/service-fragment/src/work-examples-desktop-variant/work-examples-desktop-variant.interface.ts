@@ -1,4 +1,4 @@
-import { WorkExamplesDataType } from '../service.interface.js'
+import type { WorkExamplesDataType } from '../service.interface.js'
 
 export interface WorkExamplesDesktopVariantProps {
   workExamplesTitle: string

@@ -1,5 +1,3 @@
-import { SwiperProps } from '@atls-ui-parts/swiper'
-
 interface SlideData {
   isActive: boolean
   isVisible: boolean
@@ -19,4 +17,25 @@ interface Swiper {
 export interface SlideImageProps {
   swiperSlide: SlideData
   image: Swiper
+}
+
+export interface ReactCompareImageProps {
+  aspectRatio?: 'taller' | 'wider'
+  handle?: React.ReactNode
+  handleSize?: number
+  hover?: boolean
+  leftImage: string
+  leftImageAlt?: string
+  leftImageCss?: object
+  leftImageLabel?: string
+  onSliderPositionChange?: (position: number) => void
+  rightImage: string
+  rightImageAlt?: string
+  rightImageCss?: object
+  rightImageLabel?: string
+  skeleton?: React.ReactNode
+  sliderLineColor?: string
+  sliderLineWidth?: number
+  sliderPositionPercentage?: number
+  vertical?: boolean
 }

@@ -1,16 +1,15 @@
-import { PropsWithChildren }   from 'react'
-import { forwardRef }          from 'react'
-import React                   from 'react'
+import type { PropsWithChildren } from 'react'
 
-import { baseContainerStyles } from './container.css.js'
+import { forwardRef }             from 'react'
+import React                      from 'react'
+
+import { baseContainerStyles }    from './container.css.js'
 
 export const Container = forwardRef<HTMLDivElement, PropsWithChildren>((
   { children, ...props },
   ref
-) => {
-  return (
-    <div ref={ref} className={baseContainerStyles} {...props}>
-      {children}
-    </div>
-  )
-})
+) => (
+  <div ref={ref} className={baseContainerStyles} {...props}>
+    {children}
+  </div>
+))

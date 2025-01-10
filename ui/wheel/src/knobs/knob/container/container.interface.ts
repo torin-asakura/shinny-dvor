@@ -1,3 +1,3 @@
 import type { PropsWithChildren } from 'react'
 
-export interface ContainerProps extends PropsWithChildren {}
+export type ContainerProps = PropsWithChildren

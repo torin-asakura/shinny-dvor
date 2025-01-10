@@ -1,1 +1,1 @@
-export * from './knob-dektop-variant.component.js'
+export * from './knob-desktop-variant.component.js'

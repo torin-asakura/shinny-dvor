@@ -1,7 +1,7 @@
 import type { OrmAppointmentDataType } from '@telegram-bot/application-module/interfaces'
 
 type GetFormattedAppointmentDataType = (
-  rawAppointmentData: Record<string, any>,
+  rawAppointmentData: object,
   telegramUserId: bigint,
   telegramFullName: string
 ) => OrmAppointmentDataType

@@ -11,10 +11,8 @@ export const CarBodiesCarouselDesktopVariant: FC<CarBodiesCarouselDesktopVariant
   onCarBody,
   carBodies,
   setOnCarBody,
-}) => {
-  return (
-    <Layout display={['none', 'none', 'flex']}>
-      <Switch active={onCarBody} items={carBodies} onSelect={setOnCarBody} />
-    </Layout>
-  )
-}
+}) => (
+  <Layout display={['none', 'none', 'flex']}>
+    <Switch active={onCarBody} items={carBodies} onSelect={setOnCarBody} />
+  </Layout>
+)

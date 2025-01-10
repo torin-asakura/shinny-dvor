@@ -1,1 +1,1 @@
-export * from './tgsnake.interfaces.js'
+export type * from './tgsnake.interfaces.js'

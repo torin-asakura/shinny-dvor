@@ -1,7 +1,7 @@
 export interface SlideDescriptionProps {
   description: string
   priceTitle: string
-  price: string | number
+  price: number | string
   timeTitle: string
   time: string
 }

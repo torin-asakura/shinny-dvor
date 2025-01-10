@@ -1,1 +1,1 @@
-export * from './apollo-adapter.interfaces.js'
+export type * from './apollo-adapter.interfaces.js'
