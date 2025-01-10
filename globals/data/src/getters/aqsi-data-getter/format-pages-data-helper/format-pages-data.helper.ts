@@ -1,6 +1,5 @@
 import type { FormattedPagesDataType } from '../../../interfaces/index.js'
 
-import { JsonParseError }              from '../error/index.js'
 import { getRowsData }                 from './rows-data.getter.js'
 
 const checkResponseDataValidity = (responseData: any): boolean => {
