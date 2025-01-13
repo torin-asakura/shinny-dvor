@@ -18,8 +18,12 @@ export const formatPagesDataHelper = async (
   for await (const pageResponse of pageResponses) {
     const responseText = await pageResponse.text()
     if (responseText) {
-      const pageData = JSON.parse(responseText)
-      responsesData.push(pageData)
+      try {
+        const pageData = JSON.parse(responseText)
+        responsesData.push(pageData)
+      } catch (error) {
+        console.error('Error on globals_aqsi-data-getter, parse json')
+      }
     }
   }
 

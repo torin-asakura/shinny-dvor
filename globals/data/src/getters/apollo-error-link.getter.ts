@@ -21,9 +21,9 @@ export const getApolloErrorLink = (): ApolloLink => {
     if (cause) {
       const { message, extensions, locations, path } = cause
       console.debug(`Cause: ${message}`)
-      console.debug(`Extenstions: ${extensions}`)
-      console.debug(`Locatoins: ${locations}`)
-      console.debug(`Path: ${path}`)
+      console.debug(`Location:`, locations)
+      console.debug(`Path:`, path)
+      console.debug(`Extenstions:`, extensions)
     }
   })
 
