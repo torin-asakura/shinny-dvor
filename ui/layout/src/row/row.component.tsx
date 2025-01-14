@@ -1,11 +1,9 @@
-import type { FC }                       from 'react'
-import type { PropsWithChildren }        from 'react'
-
 import type { ResponsiveContainerProps } from '../responsive-container/index.js'
 
 import { Row as BaseRow }                from '@atls-ui-parts/layout'
-import { forwardRef }                    from 'react'
+
 import React                             from 'react'
+import { forwardRef }                    from 'react'
 
 import { PropsMapper }                   from '../mappers/props.mapper.js'
 import { rainbowSprinkles }              from '../responsive-container/index.js'

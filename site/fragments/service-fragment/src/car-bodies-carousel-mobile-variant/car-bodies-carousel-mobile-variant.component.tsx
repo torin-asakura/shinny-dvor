@@ -6,7 +6,7 @@ import React                                        from 'react'
 import { Box }                                      from '@ui/layout'
 
 import { CarBodiesCarousel }                        from '../carousel/index.js'
-import { CarBodyItem }                              from './car-body-item/index.js'
+import { CarBodiesPart }                            from './car-bodies-part/car-bodies-part.component.js'
 
 export const CarBodiesCarouselMobileVariant: FC<CarBodiesCarouselMobileVariantProps> = ({
   carBodies,
@@ -21,22 +21,7 @@ export const CarBodiesCarouselMobileVariant: FC<CarBodiesCarouselMobileVariantPr
     display={['flex', 'flex', 'none']}
   >
     <CarBodiesCarousel>
-      {
-        // eslint-disable-next-line react/jsx-no-leaked-render
-        carBodies &&
-          carBodies.map(
-            (item: string | null, index) =>
-              item && (
-                <CarBodyItem
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={`car-bodies-carousel-${index}`}
-                  item={item}
-                  setOnCarBody={setOnCarBody}
-                  onCarBody={onCarBody}
-                />
-              )
-          )
-      }
+      <CarBodiesPart carBodies={carBodies} onCarBody={onCarBody} setOnCarBody={setOnCarBody} />
     </CarBodiesCarousel>
   </Box>
 )

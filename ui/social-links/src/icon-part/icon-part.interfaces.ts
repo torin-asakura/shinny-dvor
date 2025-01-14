@@ -1,7 +1,7 @@
 export interface IconPartProps {
   Icon: React.ElementType
   href: string
-  buttonSize?: string | number
-  size?: string | number
+  buttonSize?: number | string
+  size?: number | string
   dark?: boolean
 }

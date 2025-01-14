@@ -1,5 +1,6 @@
-import type { client } from '../client/index.js'
 import type { gql }    from '@apollo/client'
+
+import type { client } from '../client/index.js'
 
 export type GetTitlesFunctionType = () => Promise<Array<string>>
 

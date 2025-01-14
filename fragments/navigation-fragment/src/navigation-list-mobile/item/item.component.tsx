@@ -13,11 +13,11 @@ const Item: FC<ItemProps> = ({ active, content, title, scrollY }) => (
   <Row>
     <NextNavLink path={content}>
       <Text
+        fontWeight='$medium'
         color={
           // eslint-disable-next-line react/jsx-no-leaked-render
           Math.abs(Number(scrollY)) < 100 ? `$${getColor(active, scrollY)}` : null
         }
-        fontWeight='$medium'
       >
         {title}
       </Text>

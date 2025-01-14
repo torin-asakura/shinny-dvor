@@ -7,7 +7,7 @@ export const getObserverOptionsGetter: GetObserverOptionsGetter = ({
   isLoaded,
   setActive,
 }): ((id: string) => Return) => {
-  const onIntersection = (id: string) => {
+  const onIntersection = (id: string): void => {
     const order = ['hero', 'services', 'articles', 'infographics', 'works-examples']
     if (isLoaded.current) {
       setActive(order.indexOf(id))

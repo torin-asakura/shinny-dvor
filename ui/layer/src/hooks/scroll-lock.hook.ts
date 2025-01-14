@@ -5,21 +5,24 @@ import type { UseScrollBlock } from './scroll-lock.interface.js'
 import { useRef }              from 'react'
 
 export const useScrollBlock: UseScrollBlock = () => {
+  const scrollBlocked = useRef(false)
+
   if (typeof window !== 'object') return []
 
   const safeDocument: Document = document
 
-  const scrollBlocked = useRef(false)
   const html = safeDocument.documentElement
   const { body } = safeDocument
 
   const blockScroll = (): void => {
-    if (!body || !body.style || scrollBlocked.current) return
-    if (document == undefined) return
+    if (!body) return
+    if (!body.style) return
+    if (scrollBlocked.current) return
+    if (document === undefined) return
 
     const scrollBarWidth = window.innerWidth - html.clientWidth
     const bodyPaddingRight =
-      parseInt(window.getComputedStyle(body).getPropertyValue('padding-right')) || 0
+      parseInt(window.getComputedStyle(body).getPropertyValue('padding-right'), 10) || 0
 
     html.style.position = 'relative'
     html.style.overflow = 'hidden'
@@ -31,7 +34,9 @@ export const useScrollBlock: UseScrollBlock = () => {
   }
 
   const allowScroll = (): void => {
-    if (!body || !body.style || !scrollBlocked.current) return
+    if (!body) return
+    if (!body.style) return
+    if (!scrollBlocked.current) return
 
     html.style.position = ''
     html.style.overflow = ''

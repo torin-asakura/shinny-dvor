@@ -1,2 +1,2 @@
 export * from './responsive-text.css.js'
-export * from './responsive-text.interface.js'
+export type * from './responsive-text.interface.js'

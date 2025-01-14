@@ -1,2 +1,2 @@
 export * from './slide.component.js'
-export * from './slide.interface.js'
+export type * from './slide.interface.js'

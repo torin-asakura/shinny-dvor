@@ -1,5 +1,6 @@
-import type { PropsType }                 from '../service-page.interfaces.js'
 import type { ServicesDataToReplaceType } from '@globals/data'
+
+import type { PropsType }                 from '../service-page.interfaces.js'
 
 import { GET_CONTACTS }                   from '@globals/data'
 import { GET_BLOG_POSTS }                 from '@globals/data'

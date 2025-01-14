@@ -5,6 +5,7 @@ import type { TelegramBotFormattedContextType }    from '@booking-telegram-bot/t
 import { checkFormattedContextHelper }             from '../helpers/index.js'
 
 const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormattedContextType => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
     userId: ctx.message?.from?.id,
     userFirstName: ctx.message?.from?.firstname,

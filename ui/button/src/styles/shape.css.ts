@@ -1,3 +1,5 @@
+/* eslint-disable dot-notation */
+
 import { createShapeStyles } from '@atls-ui-parts/button'
 import { style }             from '@vanilla-extract/css'
 

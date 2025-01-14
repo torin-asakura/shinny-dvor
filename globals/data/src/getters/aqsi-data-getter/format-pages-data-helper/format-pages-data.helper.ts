@@ -22,7 +22,8 @@ export const formatPagesDataHelper = async (
       try {
         const pageData = JSON.parse(responseText)
         responsesData.push(pageData)
-      } catch (error) {
+      } catch {
+        // eslint-disable-next-line no-console
         console.error('Error on globals_aqsi-data-getter, parse json')
       }
     }

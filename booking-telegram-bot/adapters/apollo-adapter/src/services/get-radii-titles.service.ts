@@ -15,7 +15,6 @@ class GetRadiiTitlesService {
 
   async process(): ReturnTitlesType {
     const radiiData = await this.getRadiiData()
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
     return radiiData.map(
       (singleRadiiData: ArrayElement<typeof radiiData>) => singleRadiiData.contentAddons.title
     )
