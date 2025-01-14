@@ -1,6 +1,5 @@
-import type { Swiper }     from 'swiper'
-
 import type { SlidesType } from '../works-examples.interface.js'
+import type { Swiper }     from 'swiper'
 
 export interface SliderPartProps {
   slides: Array<SlidesType>
@@ -8,4 +7,5 @@ export interface SliderPartProps {
   priceTitle: string
   timeTitle: string
   setActiveIndex: React.Dispatch<React.SetStateAction<number>>
+  isYandexTurbo?: boolean
 }

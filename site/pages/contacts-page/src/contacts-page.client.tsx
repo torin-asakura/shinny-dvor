@@ -1,8 +1,7 @@
 'use client'
 
-import type { FC }                      from 'react'
-
 import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
+import type { FC }                      from 'react'
 
 import React                            from 'react'
 
@@ -17,7 +16,7 @@ import { getAvailableRadiiData }        from '@globals/data'
 import { getCarBodiesData }             from '@globals/data'
 import { getServicesData }              from '@globals/data'
 
-export const ContactsPageClient: FC<ContactsPageClientProps> = () => {
+export const ContactsPageClient: FC<ContactsPageClientProps> = ({ isYandexTurbo }) => {
   const { fragments } = getFragmentsData()
   const { contacts } = getContactsData()
   const { navigation } = getNavigationData()
@@ -35,7 +34,7 @@ export const ContactsPageClient: FC<ContactsPageClientProps> = () => {
         carBodiesData={carBodies}
         servicesData={services}
       />
-      <Contacts fragmentsData={fragments} contactsData={contacts} />
+      <Contacts fragmentsData={fragments} contactsData={contacts} isYandexTurbo={isYandexTurbo} />
       <Footer fragmentsData={fragments} contactsData={contacts} />
     </Column>
   )
