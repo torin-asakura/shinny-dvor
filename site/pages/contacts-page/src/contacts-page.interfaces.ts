@@ -5,8 +5,13 @@ export interface ContactsPageClientProps {
   ogCover: string
   SEO: SEOInt
   data: DataInt
+  isYandexTurbo?: boolean
 }
 
-export type ContactsPageProps = () => Promise<JSX.Element>
+export interface ContactsPageProps {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
+export type ContactsPageInt = () => Promise<JSX.Element>
 
 export type ContactsPageServerProps = () => Promise<ContactsPageClientProps>

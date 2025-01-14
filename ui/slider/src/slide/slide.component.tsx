@@ -2,9 +2,10 @@ import type { SlideProps }         from './slide.interface.js'
 
 import { useSwiperSlide }          from '@atls-ui-parts/swiper'
 import { useSwiper }               from '@atls-ui-parts/swiper'
+
+import React                       from 'react'
 import { memo }                    from 'react'
 import { useEffect }               from 'react'
-import React                       from 'react'
 
 import { Condition }               from '@ui/condition'
 import { Layout }                  from '@ui/layout'
@@ -24,6 +25,7 @@ const Slide = memo(({
   image,
   priceTitle,
   timeTitle,
+  isYandexTurbo,
 }: SlideProps) => {
   const swiperSlide = useSwiperSlide()
   const swiper = useSwiper()
@@ -36,7 +38,7 @@ const Slide = memo(({
     <Wrapper active={swiperSlide.isActive}>
       <Column fill>
         <Container>
-          <SlideImage swiperSlide={swiperSlide} image={image} />
+          <SlideImage swiperSlide={swiperSlide} image={image} isYandexTurbo={isYandexTurbo} />
         </Container>
         <Layout flexBasis={20} flexShrink={0} />
         <Condition match={swiperSlide.isActive}>

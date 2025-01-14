@@ -19,4 +19,5 @@ interface Swiper {
 export interface SlideImageProps {
   swiperSlide: SlideData
   image: Swiper
+  isYandexTurbo?: boolean
 }

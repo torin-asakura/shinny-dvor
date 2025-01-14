@@ -1,6 +1,5 @@
-import type { FC }              from 'react'
-
 import type { SliderPartProps } from './slider-part.interface.js'
+import type { FC }              from 'react'
 
 import React                    from 'react'
 
@@ -15,6 +14,7 @@ export const SliderPart: FC<SliderPartProps> = ({
   priceTitle,
   timeTitle,
   setActiveIndex,
+  isYandexTurbo,
 }) => {
   return (
     <Row justifyContent='center' alignItems='center' width='$fill' maxWidth={1440}>
@@ -33,6 +33,7 @@ export const SliderPart: FC<SliderPartProps> = ({
               priceTitle={priceTitle}
               timeTitle={timeTitle}
               setActiveIndex={setActiveIndex}
+              isYandexTurbo={isYandexTurbo}
             />
           </SwiperSlide>
         ))}

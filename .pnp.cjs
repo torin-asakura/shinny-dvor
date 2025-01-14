@@ -127,16 +127,16 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:prices/entrypoints/service-entrypoint"\
     },\
     {\
+      "name": "@shared/api-routes",\
+      "reference": "workspace:shared/api-routes"\
+    },\
+    {\
       "name": "@shared/utils",\
       "reference": "workspace:shared/utils"\
     },\
     {\
       "name": "@site/booking-api",\
       "reference": "workspace:site/api/booking"\
-    },\
-    {\
-      "name": "@site/yandex-turbo-api",\
-      "reference": "workspace:site/api/yandex-turbo"\
     },\
     {\
       "name": "@site/app",\
@@ -348,6 +348,7 @@ const RAW_RUNTIME_STATE =
     ["@prices/storage-adapter-module", ["virtual:2b8e84b0671354dd807883c4bda084e2209bbe2fb8bf76073788be441916d498b2ab79496b692002fe431d5397fd9f9ac07cf4859f1e9719e8e14e31e3cac8a1#workspace:prices/adapters/storage-adapter", "workspace:prices/adapters/storage-adapter"]],\
     ["@query-client/application-module", ["virtual:46abbb83d2c384e10bda5ee78966ba3691018cb83055b45ee7dd10d2c357542f32ab694075a66d1b2d0f41155866a6bfb9b7269b32a4edd1bae13470b6487596#workspace:booking-telegram-bot/contexts/query-client/application-module", "workspace:booking-telegram-bot/contexts/query-client/application-module"]],\
     ["@query-client/infrastructure-module", ["virtual:2b0a1b856e25cc4ef5b41762d37206161e4e872004b8bfc64070e75e6a6e9b4bc43cbe3bd76f52d326e70ca157fcd90675c6d655327b04cf8bde20b36e75627b#workspace:booking-telegram-bot/contexts/query-client/infrastructure-module", "workspace:booking-telegram-bot/contexts/query-client/infrastructure-module"]],\
+    ["@shared/api-routes", ["workspace:shared/api-routes"]],\
     ["@shared/utils", ["workspace:shared/utils"]],\
     ["@site/all-services-fragment", ["virtual:2610a174c4d29ac784e76cecba27b42be4ae9e87c805598162f01492cee00300c43c2cfda4f583113f382b73b2cf8884b964bfc2f76543cac01326ced6c72a6b#workspace:site/fragments/all-services-fragment", "workspace:site/fragments/all-services-fragment"]],\
     ["@site/app", ["workspace:site/app"]],\
@@ -363,7 +364,6 @@ const RAW_RUNTIME_STATE =
     ["@site/services-infographics-fragment", ["virtual:3ac8bd8c7755348c39a17aa6ee04b16a5f61b90e19e58c0b08fef42a5b8f06713f8aa68037d0c6b682f79bfe500251d4eff9c7ab436c5d27c0f42e322890c71c#workspace:site/fragments/services-infographics-fragment", "workspace:site/fragments/services-infographics-fragment"]],\
     ["@site/services-page", ["virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/services-page", "workspace:site/pages/services-page"]],\
     ["@site/works-examples-fragment", ["virtual:3ac8bd8c7755348c39a17aa6ee04b16a5f61b90e19e58c0b08fef42a5b8f06713f8aa68037d0c6b682f79bfe500251d4eff9c7ab436c5d27c0f42e322890c71c#workspace:site/fragments/works-examples-fragment", "workspace:site/fragments/works-examples-fragment"]],\
-    ["@site/yandex-turbo-api", ["workspace:site/api/yandex-turbo"]],\
     ["@store/actions", ["virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:store/actions", "workspace:store/actions"]],\
     ["@store/booking", ["virtual:440922e3611ccb34d524d7728c0356611cecca33df78df3a72e350cf7f3d61365c49bee0705d7cdea6d70844bd326025e74984be0bfe180685e4fe5b4f7a6b42#workspace:store/booking", "virtual:c37bef6451d2aa6a4b83b33425145d2cf0c74b225619164e3f396583813d8128bfcbdbc8fc32785bb3e7d6b4dc0f2d797f2a9310678207e20199a5b421bbffc7#workspace:store/booking", "workspace:store/booking"]],\
     ["@store/services", ["virtual:b31447be08cb5fc5956c2781e3d1bed57ccde829086dcd20db1295d90fc9000df1a601c5b30c5b332ac61a90a507b6f212b17b1e232e98e0bc8f4c993523b76d#workspace:store/services", "workspace:store/services"]],\
@@ -5296,6 +5296,7 @@ const RAW_RUNTIME_STATE =
           ["@fragments/root-layout-fragment", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:fragments/root-layout-fragment"],\
           ["@globals/config", "workspace:globals/config"],\
           ["@globals/data", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#workspace:globals/data"],\
+          ["@shared/api-routes", "workspace:shared/api-routes"],\
           ["@types/node", "npm:22.1.0"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -14359,6 +14360,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@shared/api-routes", [\
+      ["workspace:shared/api-routes", {\
+        "packageLocation": "./shared/api-routes/",\
+        "packageDependencies": [\
+          ["@shared/api-routes", "workspace:shared/api-routes"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@shared/utils", [\
       ["workspace:shared/utils", {\
         "packageLocation": "./shared/utils/",\
@@ -14491,12 +14501,12 @@ const RAW_RUNTIME_STATE =
           ["@fragments/root-layout-fragment", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:fragments/root-layout-fragment"],\
           ["@globals/config", "workspace:globals/config"],\
           ["@globals/data", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:globals/data"],\
+          ["@shared/api-routes", "workspace:shared/api-routes"],\
           ["@site/booking-api", "workspace:site/api/booking"],\
           ["@site/contacts-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/contacts-page"],\
           ["@site/index-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/index-page"],\
           ["@site/service-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/service-page"],\
           ["@site/services-page", "virtual:8502a75ffd04362160a567ceaedffded421d5627a4f7cad126746b1d42df0c4f2b7cac2ffc8918a15597ef9e59c640ddf3ce2a03da7b9ea803d43247dea8e631#workspace:site/pages/services-page"],\
-          ["@site/yandex-turbo-api", "workspace:site/api/yandex-turbo"],\
           ["@types/node", "npm:22.1.0"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -15500,16 +15510,6 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:8f6fa9a28e735490150d8793b4c44ed24272ca7b0bcf30c429ae737011bd24ed5d9c0e514bb7fc3e05eb7435dff6babbcab6918f25eadaaee50d5cd89f6fe82b#npm:18.3.1"],\
           ["styled-system", "npm:5.1.5"],\
           ["swiper", "npm:11.1.9"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@site/yandex-turbo-api", [\
-      ["workspace:site/api/yandex-turbo", {\
-        "packageLocation": "./site/api/yandex-turbo/",\
-        "packageDependencies": [\
-          ["@site/yandex-turbo-api", "workspace:site/api/yandex-turbo"],\
-          ["@globals/data", "virtual:0b551479c51494036c55129252d978739bae752e4f84800656ea534a0d040ff10507bfd9964f3561d948fd832047e6ca28b31f79d9b16e4b33ffa156830baeaf#workspace:globals/data"]\
         ],\
         "linkType": "SOFT"\
       }]\

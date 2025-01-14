@@ -1,9 +1,8 @@
+import type { WorksExamplesProps } from './works-examples.interface.js'
 import type { FC }                 from 'react'
 
-import type { WorksExamplesProps } from './works-examples.interface.js'
-
-import { forwardRef }              from 'react'
 import React                       from 'react'
+import { forwardRef }              from 'react'
 
 import { Box }                     from '@ui/layout'
 import { Row }                     from '@ui/layout'
@@ -16,7 +15,7 @@ import { TitlePart }               from './title-part/index.js'
 import { useWorkExamplesFragment } from './hooks/index.js'
 
 export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
-  { fragmentsData, workResultsData },
+  { fragmentsData, workResultsData, isYandexTurbo },
   ref: any
 ) => {
   const {
@@ -49,6 +48,7 @@ export const WorksExamples: FC<WorksExamplesProps> = forwardRef((
             priceTitle={priceTitle}
             timeTitle={timeTitle}
             setActiveIndex={setActiveIndex}
+            isYandexTurbo={isYandexTurbo}
           />
 
           <PaginationPart
