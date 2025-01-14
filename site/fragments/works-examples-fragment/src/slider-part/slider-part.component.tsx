@@ -1,6 +1,5 @@
-import type { FC }              from 'react'
-
 import type { SliderPartProps } from './slider-part.interface.js'
+import type { FC }              from 'react'
 
 import React                    from 'react'
 
@@ -15,28 +14,30 @@ export const SliderPart: FC<SliderPartProps> = ({
   priceTitle,
   timeTitle,
   setActiveIndex,
-}) => (
-  <Row justifyContent='center' alignItems='center' width='$fill' maxWidth={1440}>
-    <Slider onSwiper={setControlsSwiper}>
-      {slides.map((
-        { workResultParams: { fragmentId, photos, price, description, time } },
-        index: number
-      ) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <SwiperSlide key={`${fragmentId}-${index}`}>
-          <Slide
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${fragmentId}-${index}`}
-            description={description}
-            price={price}
-            time={time}
-            image={photos}
-            priceTitle={priceTitle}
-            timeTitle={timeTitle}
-            setActiveIndex={setActiveIndex}
-          />
-        </SwiperSlide>
-      ))}
-    </Slider>
-  </Row>
-)
+  isYandexTurbo,
+}) => {
+  return (
+    <Row justifyContent='center' alignItems='center' width='$fill' maxWidth={1440}>
+      <Slider onSwiper={setControlsSwiper}>
+        {slides.map((
+          { workResultParams: { fragmentId, photos, price, description, time } },
+          index: number
+        ) => (
+          <SwiperSlide key={`${fragmentId}-${index}`}>
+            <Slide
+              key={`${fragmentId}-${index}`}
+              description={description}
+              price={price}
+              time={time}
+              image={photos}
+              priceTitle={priceTitle}
+              timeTitle={timeTitle}
+              setActiveIndex={setActiveIndex}
+              isYandexTurbo={isYandexTurbo}
+            />
+          </SwiperSlide>
+        ))}
+      </Slider>
+    </Row>
+  )
+}

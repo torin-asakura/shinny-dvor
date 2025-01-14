@@ -21,4 +21,5 @@ export type SlidesType = {
 export interface WorksExamplesProps {
   fragmentsData: FragmentsDataType
   workResultsData: WorkResultsDataType
+  isYandexTurbo?: boolean
 }

@@ -1,12 +1,11 @@
 'use client'
 
+import type { IndexPageClientProps } from './index-page.interfaces.js'
 import type { FC }                   from 'react'
 
-import type { IndexPageClientProps } from './index-page.interfaces.js'
-
+import React                         from 'react'
 import { useRef }                    from 'react'
 import { useState }                  from 'react'
-import React                         from 'react'
 
 import { Footer }                    from '@fragments/footer-fragment'
 import { Navigation }                from '@fragments/navigation-fragment'
@@ -20,7 +19,10 @@ import { Column }                    from '@ui/layout'
 
 import { useIndexPageClient }        from './hooks/index.js'
 
-export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplace }) => {
+export const IndexPageClient: FC<IndexPageClientProps> = ({
+  servicesDataToReplace,
+  isYandexTurbo,
+}) => {
   const headerRef = useRef<HTMLDivElement | null>(null)
   const isLoaded = useRef<boolean>(false)
 
@@ -91,6 +93,7 @@ export const IndexPageClient: FC<IndexPageClientProps> = ({ servicesDataToReplac
       <WorksExamples
         workResultsData={workResults}
         fragmentsData={fragments}
+        isYandexTurbo={isYandexTurbo}
         {...getObserverOptions('works-examples')}
       />
       <Footer fragmentsData={fragments} contactsData={contacts} />

@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "build": "yarn next build src --no-lint ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
+    "build": "yarn next build src --no-lint && rm ./src/.next/standalone/package.json ; cp -r ./src/.next/standalone ./dist && cp -r ./src/.next/static ./dist/src/.next/static && mv ./dist/src/server.js ./dist/src/index.cjs",
     "cleanup": "rm -rf dist",
     "dev": "yarn next dev src",
     "prepack": "run build",
@@ -36,6 +36,7 @@
     "@fragments/root-layout-fragment": "workspace:*",
     "@globals/config": "workspace:*",
     "@globals/data": "workspace:*",
+    "@shared/api-routes": "workspace:*",
     "@types/node": "22.1.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",

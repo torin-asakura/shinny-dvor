@@ -1,10 +1,12 @@
-import type { FC }             from 'react'
+'use client'
 
 import type { ContactsProps }  from './contacts.interface.js'
+import type { FC }             from 'react'
 
-import { memo }                from 'react'
 import React                   from 'react'
+import { memo }                from 'react'
 
+import { Condition }           from '@ui/condition'
 import { Box }                 from '@ui/layout'
 import { Column }              from '@ui/layout'
 import { Row }                 from '@ui/layout'
@@ -17,6 +19,7 @@ import { MapComponent }        from './map/index.js'
 import { useContacts }         from './hooks/index.js'
 
 const Contacts: FC<ContactsProps> = memo((props) => {
+  const { isYandexTurbo } = props
   const contactsInformationData = useContacts(props)
   const { contactsTitle } = contactsInformationData
 
@@ -39,7 +42,9 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         justifyContent='space-between'
       >
         <ContactsInformation contactsData={contactsInformationData} />
-        <MapComponent />
+        <Condition match={!Boolean(isYandexTurbo)}>
+          <MapComponent />
+        </Condition>
       </Row>
       <Layout flexBasis={[24, 24, 0]} />
       <Box width='100%' height={270} display={['flex', 'flex', 'none']}>

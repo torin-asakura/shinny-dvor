@@ -1,1 +1,1 @@
-export { yandexTurboApiHandle as GET } from '@site/yandex-turbo-api'
+export { yandexTurboApiHandle as GET } from '@shared/api-routes'
