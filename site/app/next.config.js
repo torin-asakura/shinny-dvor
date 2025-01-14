@@ -24,6 +24,7 @@ const nextConfig = {
       },
     ],
   },
+
   experimental: {
     instrumentationHook: true,
     externalDir: true,
