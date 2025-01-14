@@ -25,6 +25,7 @@ const Slide = memo(({
   image,
   priceTitle,
   timeTitle,
+  isYandexTurbo,
 }: SlideProps) => {
   const swiperSlide = useSwiperSlide()
   const swiper = useSwiper()
@@ -37,7 +38,7 @@ const Slide = memo(({
     <Wrapper active={swiperSlide.isActive}>
       <Column fill>
         <Container>
-          <SlideImage swiperSlide={swiperSlide} image={image} />
+          <SlideImage swiperSlide={swiperSlide} image={image} isYandexTurbo={isYandexTurbo} />
         </Container>
         <Layout flexBasis={20} flexShrink={0} />
         <Condition match={swiperSlide.isActive}>

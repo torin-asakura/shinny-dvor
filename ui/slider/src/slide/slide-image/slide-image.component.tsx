@@ -1,7 +1,6 @@
 import React                                from 'react'
 import { FC }                               from 'react'
 import { default as BaseReactCompareImage } from 'react-compare-image'
-import { useSearchParams }                  from 'next/navigation.js'
 import { memo }                             from 'react'
 
 import { Condition }                        from '@ui/condition'
@@ -12,13 +11,10 @@ import { SlideImageProps }                  from './slide-image.interfaces.js'
 
 const ReactCompareImage = BaseReactCompareImage as unknown as FC<any>
 
-export const SlideImage = memo(({ swiperSlide, image }: SlideImageProps) => {
-  const searchParams = useSearchParams()
-  const yandexTurbo = searchParams.get('yandex-turbo')
-
+export const SlideImage = memo(({ swiperSlide, image, isYandexTurbo }: SlideImageProps) => {
   return (
     <Box fill>
-      <Condition match={!Boolean(yandexTurbo)}>
+      <Condition match={!Boolean(isYandexTurbo)}>
         <Box
           fill
           alignItems='center'

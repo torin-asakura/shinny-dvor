@@ -7,13 +7,18 @@ export interface SeoProps {
   SEO: SEOInt
 }
 
+export interface IndexPageProps {
+  searchParams: { [key: string]: string | string[] | undefined }
+}
+
 export interface IndexPageClientProps {
   servicesDataToReplace: ServicesDataToReplaceType
   ogCover: string
   SEO: SEOInt
   data: DataInt
+  isYandexTurbo?: boolean
 }
 
-export type IndexPageProps = () => Promise<JSX.Element>
+export type IndexPageInt = () => Promise<JSX.Element>
 
 export type IndexPageServerProps = () => Promise<IndexPageClientProps>

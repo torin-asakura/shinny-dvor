@@ -4,6 +4,7 @@ export interface SlideProps {
   time: string
   priceTitle: string
   timeTitle: string
+  isYandexTurbo?: boolean
   image: {
     firstPhoto: {
       sourceUrl: string

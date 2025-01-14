@@ -1,14 +1,17 @@
 import type { ContactsPageProps }       from './contacts-page.interfaces.js'
+import type { FC }                      from 'react'
 
 import React                            from 'react'
 
 import { ContactsPageClient }           from './contacts-page.client.js'
 import { runContactsPageServerQueries } from './hooks/index.js'
 
-const ContactsPage: ContactsPageProps = async () => {
+const ContactsPage: FC<ContactsPageProps> = async ({ searchParams }) => {
+  const isYandexTurbo = Boolean(searchParams['yandex-turbo'])
+
   await runContactsPageServerQueries()
   // @ts-expect-error not assignable
-  return <ContactsPageClient />
+  return <ContactsPageClient isYandexTurbo={isYandexTurbo} />
 }
 
 export default ContactsPage
