@@ -1,6 +1,7 @@
 {
   "include": [
     "project.types.d.ts",
+    "**/next.config.js",
     "site/**/*",
     "ui/**/*",
     "blog/**/*",
