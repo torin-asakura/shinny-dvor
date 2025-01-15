@@ -1,11 +1,10 @@
 import type { SliderProps } from './slider.interfaces.js'
 
 import { Swiper }           from '@atls-ui-parts/swiper'
-
-import React                from 'react'
 import { Keyboard }         from 'swiper/modules'
 import { Navigation }       from 'swiper/modules'
 import { memo }             from 'react'
+import React                from 'react'
 
 export const Slider = memo(({ onSwiper, children }: SliderProps) => (
   <Swiper

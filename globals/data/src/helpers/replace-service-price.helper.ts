@@ -1,7 +1,8 @@
 /* eslint-disable no-continue */
 
-import type { RequiredReplaceServicePriceHelperType } from './replace-service-price.interface.js'
 import type { ServicesDataToReplaceType }             from '@globals/data'
+
+import type { RequiredReplaceServicePriceHelperType } from './replace-service-price.interface.js'
 
 export const replaceServicePriceHelper = <T>(
   service: RequiredReplaceServicePriceHelperType & T,

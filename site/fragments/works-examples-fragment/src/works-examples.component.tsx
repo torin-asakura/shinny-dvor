@@ -1,9 +1,10 @@
-import type { WorksExamplesProps } from './works-examples.interface.js'
 import type { FC }                 from 'react'
 import type { ForwardedRef }       from 'react'
 
-import React                       from 'react'
+import type { WorksExamplesProps } from './works-examples.interface.js'
+
 import { forwardRef }              from 'react'
+import React                       from 'react'
 
 import { Box }                     from '@ui/layout'
 import { Row }                     from '@ui/layout'

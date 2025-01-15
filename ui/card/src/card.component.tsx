@@ -1,13 +1,13 @@
-import type { CardProps }         from './card.interface.js'
 import type { PropsWithChildren } from 'react'
 import type { FC }                from 'react'
 
+import type { CardProps }         from './card.interface.js'
+
 import { Backdrop }               from '@atls-ui-parts/card'
 import { Renderer }               from '@atls-ui-parts/card'
-
-import React                      from 'react'
 import { motion }                 from 'framer-motion'
 import { memo }                   from 'react'
+import React                      from 'react'
 
 export const Card: FC<PropsWithChildren<CardProps>> = memo(({ children, opened, onClose }) => (
   <Renderer opened={opened}>

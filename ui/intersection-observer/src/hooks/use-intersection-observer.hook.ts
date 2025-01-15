@@ -1,10 +1,11 @@
 /* eslint-disable */
 
+import type { MutableRefObject }      from 'react'
+
 import type { OnIntersection }        from './use-intersection-observer.interfaces.js'
 import type { Observers }             from './use-intersection-observer.interfaces.js'
 import type { IntersectionObservers } from './use-intersection-observer.interfaces.js'
 import type { Observer }              from './use-intersection-observer.interfaces.js'
-import type { MutableRefObject }      from 'react'
 
 import { useRef }                     from 'react'
 

@@ -3,8 +3,8 @@
 
 import type { ContainerProps } from './container.interfaces.js'
 
-import React                   from 'react'
 import { memo }                from 'react'
+import React                   from 'react'
 
 import { baseStyles }          from './container.css.js'
 import { shapeStyles }         from './container.css.js'

@@ -1,10 +1,11 @@
 'use client'
 
-import type { RootLayoutProps } from './root-layout.interfaces.js'
 import type { FC }              from 'react'
 
-import React                    from 'react'
+import type { RootLayoutProps } from './root-layout.interfaces.js'
+
 import { IntlProvider }         from 'react-intl'
+import React                    from 'react'
 
 export const RootLayoutProviders: FC<RootLayoutProps> = ({ messages, children }) => (
   <IntlProvider messages={messages} locale='ru' defaultLocale='ru'>

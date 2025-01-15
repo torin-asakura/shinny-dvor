@@ -1,18 +1,18 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 
+import type { UseAddonNavigationResult }  from '@atls-ui-parts/carousel'
+
 import type { UseCarouselOptions }        from '../carousel.interface.js'
 import type { UseCarouselReturn }         from './use-carousel.interface.js'
-import type { UseAddonNavigationResult }  from '@atls-ui-parts/carousel'
 
 import { Container }                      from '@atls-ui-parts/carousel'
 import { Slide }                          from '@atls-ui-parts/carousel'
 import { Wrapper }                        from '@atls-ui-parts/carousel'
 import { useAddonNavigation }             from '@atls-ui-parts/carousel'
 import { useCarousel as useCarouselBase } from '@atls-ui-parts/carousel'
-
-import React                              from 'react'
 import { Children }                       from 'react'
 import { useRef }                         from 'react'
+import React                              from 'react'
 
 export const useCarousel = ({
   children,

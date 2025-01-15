@@ -1,10 +1,10 @@
-import type { InputProps }  from './input.interfaces.js'
 import type { ChangeEvent } from 'react'
 
-import { RawInput }         from '@atls-ui-parts/input'
+import type { InputProps }  from './input.interfaces.js'
 
-import React                from 'react'
+import { RawInput }         from '@atls-ui-parts/input'
 import { forwardRef }       from 'react'
+import React                from 'react'
 
 import { Divider }          from '@ui/divider'
 import { Column }           from '@ui/layout'

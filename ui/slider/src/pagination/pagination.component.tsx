@@ -1,11 +1,12 @@
-import type { PaginationProps } from './pagination.interface.js'
 import type { FC }              from 'react'
 
-import React                    from 'react'
+import type { PaginationProps } from './pagination.interface.js'
+
 import { useEffect }            from 'react'
 import { useState }             from 'react'
 import { memo }                 from 'react'
 import { useMemo }              from 'react'
+import React                    from 'react'
 
 import { Layout }               from '@ui/layout'
 import { Row }                  from '@ui/layout'

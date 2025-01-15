@@ -1,9 +1,9 @@
-import type { BookingProps } from './booking.interfaces.js'
 import type { Screen }       from '@store/booking'
 import type { FC }           from 'react'
 
-import { useReactiveVar }    from '@apollo/client'
+import type { BookingProps } from './booking.interfaces.js'
 
+import { useReactiveVar }    from '@apollo/client'
 import React                 from 'react'
 
 import { INITIAL }           from '@store/booking'

@@ -1,7 +1,7 @@
 import type { RadioProps } from './radio.interface.js'
 
-import React               from 'react'
 import { memo }            from 'react'
+import React               from 'react'
 
 import { Column }          from '@ui/layout'
 

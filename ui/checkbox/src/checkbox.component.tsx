@@ -1,7 +1,7 @@
 import type { CheckboxProps } from './checkbox.interface.js'
 
-import React                  from 'react'
 import { memo }               from 'react'
+import React                  from 'react'
 
 import { CheckIcon }          from '@ui/icons'
 
