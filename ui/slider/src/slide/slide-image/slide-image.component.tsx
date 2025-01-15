@@ -18,7 +18,7 @@ const ReactCompareImage = BaseReactCompareImage as unknown as FC<ReactCompareIma
 
 export const SlideImage = memo(({ swiperSlide, image, isYandexTurbo }: SlideImageProps) => (
   <Box fill>
-    <Condition match={!!isYandexTurbo}>
+    <Condition match={!isYandexTurbo}>
       <Box
         fill
         alignItems='center'

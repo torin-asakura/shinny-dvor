@@ -43,7 +43,7 @@ const Contacts: FC<ContactsProps> = memo((props) => {
         justifyContent='space-between'
       >
         <ContactsInformation contactsData={contactsInformationData} />
-        <Condition match={!!isYandexTurbo}>
+        <Condition match={!isYandexTurbo}>
           <MapComponent />
         </Condition>
       </Row>
