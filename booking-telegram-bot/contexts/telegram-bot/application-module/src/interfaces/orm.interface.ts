@@ -8,7 +8,7 @@ type OrmAppointmentDataType = {
   carBody: string
   radii: string
   service: string
-  commentary?: string
+  commentary: string | null
 }
 
 export type { OrmAppointmentDataType }

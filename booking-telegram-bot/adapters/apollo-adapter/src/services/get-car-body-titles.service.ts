@@ -22,7 +22,8 @@ class GetCarBodyTitlesService {
   }
 
   private async getCarBodiesData(): ReturnDataType {
-    const queryData = await this.apolloAdapterService.runQuery(GET_CAR_BODIES)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryData = (await this.apolloAdapterService.runQuery(GET_CAR_BODIES)) as any
     const carBodiesQueryData: Awaited<ReturnDataType> = queryData.data.carBodyItems
       .nodes as Awaited<ReturnDataType>
     checkArrayLength({ carBodiesQueryData })

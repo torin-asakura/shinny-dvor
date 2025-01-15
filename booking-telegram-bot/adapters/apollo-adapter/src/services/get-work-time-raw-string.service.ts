@@ -16,7 +16,8 @@ class GetWorkTimeRawStringService {
   }
 
   private async getWorkTimeQueryData(): ReturnWorkTimeDataType {
-    const queryData = await this.apolloAdapterService.runQuery(GET_CONTACTS)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryData = (await this.apolloAdapterService.runQuery(GET_CONTACTS)) as any
     const workTimeData: Awaited<ReturnWorkTimeDataType> = queryData.data.contactItems
       .nodes as Awaited<ReturnWorkTimeDataType>
     return workTimeData

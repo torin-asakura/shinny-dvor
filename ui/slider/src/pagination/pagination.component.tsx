@@ -38,7 +38,9 @@ const Pagination: FC<PaginationProps> = memo(({ activeItem = 0, totalItems, swip
 
     swiper.on('slideChange', handleSlideChange)
 
-    swiper.off('slideChange', handleSlideChange)
+    return (): void => {
+      swiper.off('slideChange', handleSlideChange)
+    }
   }, [swiper])
 
   return (

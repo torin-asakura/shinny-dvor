@@ -55,7 +55,7 @@ export const formatOutputDataHelper = (
           output.push({
             service: itemServiceTitle.wpVariant,
             radii: itemRadiiTitle?.wpVariant || '',
-            carBody: carBodyTitle,
+            carBody: carBodyTitle.wpVariant,
             price: itemPrice,
           })
         }

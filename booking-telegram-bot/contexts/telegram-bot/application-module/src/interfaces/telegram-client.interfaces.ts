@@ -9,6 +9,6 @@ export type TelegramBotFormattedContextType = {
 }
 
 export type CreateConversationReturnType = {
-  data: object
+  data: Record<string, string | boolean | object>
   waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => Promise<object>
 }

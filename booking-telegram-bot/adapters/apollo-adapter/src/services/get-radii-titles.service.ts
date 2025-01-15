@@ -22,7 +22,8 @@ class GetRadiiTitlesService {
   }
 
   private async getRadiiData(): ReturnDataType {
-    const queryData = await this.apolloAdapterService.runQuery(GET_AVAILABLE_RADII)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryData = (await this.apolloAdapterService.runQuery(GET_AVAILABLE_RADII)) as any
     const radiiQueryData: Awaited<ReturnDataType> = queryData.data.availableRadiusItems
       .nodes as Awaited<ReturnDataType>
     checkArrayLength({ radiiQueryData })
