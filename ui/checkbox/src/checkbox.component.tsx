@@ -11,7 +11,7 @@ import { Container }          from './container/index.js'
 import { Label }              from './label/index.js'
 
 export const Checkbox = memo(({ children, active, onCheck }: CheckboxProps) => {
-  const handleClick = () => {
+  const handleClick = (): void => {
     if (onCheck) {
       onCheck(!active)
     }

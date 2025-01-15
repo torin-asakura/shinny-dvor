@@ -1,6 +1,7 @@
+import type { LinkProps } from '../link.interfaces.js'
+
 import React              from 'react'
 
-import { LinkProps }      from '../link.interfaces.js'
 import { NavLink }        from '../nav-link/index.js'
 import { useNextNavLink } from './hooks/index.js'
 

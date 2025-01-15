@@ -1,12 +1,13 @@
-import { memo }                         from 'react'
-import React                            from 'react'
+import type { TransitionContainerSprinkles } from './transition-container.css.js'
+import type { TransitionContainerProps }     from './transition-container.interfaces.js'
 
-import { vars }                         from '@ui/theme'
+import { memo }                              from 'react'
+import React                                 from 'react'
 
-import { TransitionContainerSprinkles } from './transition-container.css.js'
-import { TransitionContainerProps }     from './transition-container.interfaces.js'
-import { transitionContainerSprinkles } from './transition-container.css.js'
-import { transitionContainerStyles }    from './transition-container.css.js'
+import { vars }                              from '@ui/theme'
+
+import { transitionContainerSprinkles }      from './transition-container.css.js'
+import { transitionContainerStyles }         from './transition-container.css.js'
 
 export const TransitionContainer = memo(({
   isHighlighted,

@@ -45,6 +45,7 @@ export const AllArticles: FC<AllArticlesProps> = memo(({
       >
         {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
           <Article
+            key={`post-data-${title}`}
             uri={uri}
             title={title}
             date={date}

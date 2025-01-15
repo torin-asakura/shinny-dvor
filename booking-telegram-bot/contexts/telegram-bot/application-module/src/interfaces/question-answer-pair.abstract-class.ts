@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/sort-type-constituents */
+
 import type { CreateConversationReturnType }    from '../interfaces/index.js'
 import type { TelegramBotFormattedContextType } from '../interfaces/index.js'
 import type { TelegramClientPort }              from '../ports/index.js'
@@ -14,7 +16,7 @@ abstract class QuestionAnswerPairAbstractClass {
   async process<Type>(
     ctx: TelegramBotFormattedContextType,
     conversation: CreateConversationReturnType,
-    processData?: Record<'questionData', Record<string, any> | number>
+    processData?: Record<'questionData', object | number>
   ): Promise<Type> {
     let outputData
 
@@ -47,9 +49,7 @@ abstract class QuestionAnswerPairAbstractClass {
     return outputData as Type
   }
 
-  checkWriteConversationDataCondition(
-    checkAnswerResult: Record<string, any> | boolean | string
-  ): boolean {
+  checkWriteConversationDataCondition(checkAnswerResult: object | boolean | string): boolean {
     if (checkAnswerResult) {
       return true
     }
@@ -65,10 +65,10 @@ abstract class QuestionAnswerPairAbstractClass {
 
   abstract sendQuestion(
     ctx: TelegramBotFormattedContextType,
-    questionData?: Record<string, any> | number
+    questionData?: object | number
   ): Promise<void>
 
-  abstract checkAnswer(ctx: TelegramBotFormattedContextType): Record<string, any> | boolean | string
+  abstract checkAnswer(ctx: TelegramBotFormattedContextType): object | boolean | string
 }
 
 export { QuestionAnswerPairAbstractClass }

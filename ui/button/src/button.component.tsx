@@ -49,9 +49,15 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>((
       {...hoverProps}
       {...props}
     >
-      {icon && iconPlacement === IconPlacement.LEFT && icon}
+      {
+        // eslint-disable-next-line react/jsx-no-leaked-render
+        icon && iconPlacement === IconPlacement.LEFT && icon
+      }
       {children}
-      {icon && iconPlacement === IconPlacement.RIGHT && icon}
+      {
+        // eslint-disable-next-line react/jsx-no-leaked-render
+        icon && iconPlacement === IconPlacement.RIGHT && icon
+      }
     </button>
   )
 })

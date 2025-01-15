@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/sort-type-constituents */
+
 import type { Composer }     from 'tgsnake'
 import type { Conversation } from 'tgsnake/lib/src/Conversation/conversation.js'
 import type { TypeUpdate }   from 'tgsnake/lib/src/TL/Updates/Update.js'
@@ -27,7 +29,7 @@ type OnMessageReturnType = Composer
 type OnCommandReturnType = Composer
 
 type CreateConversationReturnType = {
-  data: Record<string, any>
+  data: Record<string, boolean | string | object>
   waitMessage: (callback: WaitMessageCallbackType) => WaitMessageType
 }
 

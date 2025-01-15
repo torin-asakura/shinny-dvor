@@ -1,20 +1,21 @@
-import type { InputProps } from './input.interfaces.js'
+import type { ChangeEvent } from 'react'
 
-import { RawInput }        from '@atls-ui-parts/input'
-import { ChangeEvent }     from 'react'
-import { forwardRef }      from 'react'
-import React               from 'react'
+import type { InputProps }  from './input.interfaces.js'
 
-import { Divider }         from '@ui/divider'
-import { Column }          from '@ui/layout'
+import { RawInput }         from '@atls-ui-parts/input'
+import { forwardRef }       from 'react'
+import React                from 'react'
 
-import { baseStyles }      from './input.css.js'
+import { Divider }          from '@ui/divider'
+import { Column }           from '@ui/layout'
+
+import { baseStyles }       from './input.css.js'
 
 export const Input = forwardRef<HTMLInputElement, InputProps>((
   { type, disabled, value, onChange, onChangeValue, ...props },
   ref
 ) => {
-  const onChangeRaw = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChangeRaw = (e: ChangeEvent<HTMLInputElement>): void => {
     if (onChange) {
       onChange(e)
     }

@@ -1,1 +1,1 @@
-export * from './progress-bar.css.js'
+export type * from './progress-bar.css.js'

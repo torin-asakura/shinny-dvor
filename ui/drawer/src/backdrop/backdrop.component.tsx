@@ -1,7 +1,7 @@
+import type { BoxProps }      from '@ui/layout'
+
 import { memo }               from 'react'
 import React                  from 'react'
-
-import { BoxProps }           from '@ui/layout'
 
 import { baseBackdropStyles } from './backdrop.css.js'
 

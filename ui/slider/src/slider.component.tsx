@@ -1,24 +1,19 @@
-import { Swiper }      from '@atls-ui-parts/swiper'
+import type { SliderProps } from './slider.interfaces.js'
 
-import React           from 'react'
-// @ts-ignore
-import { Keyboard }    from 'swiper/modules'
-// @ts-ignore
-import { Navigation }  from 'swiper/modules'
-import { memo }        from 'react'
-
-import { SliderProps } from './slider.interfaces.js'
+import { Swiper }           from '@atls-ui-parts/swiper'
+import { Keyboard }         from 'swiper/modules'
+import { Navigation }       from 'swiper/modules'
+import { memo }             from 'react'
+import React                from 'react'
 
 export const Slider = memo(({ onSwiper, children }: SliderProps) => (
   <Swiper
-    initialSlide={2}
-    // @ts-ignore
-    onSwiper={onSwiper}
     loop
     centeredSlides
+    initialSlide={2}
     loopAddBlankSlides={false}
     allowTouchMove={false}
-    // @ts-ignore
+    // @ts-expect-error incompletable types
     modules={[Keyboard, Navigation]}
     style={{}}
     keyboard={{
@@ -41,6 +36,8 @@ export const Slider = memo(({ onSwiper, children }: SliderProps) => (
         spaceBetween: 40,
       },
     }}
+    // @ts-expect-error incompletable types
+    onSwiper={onSwiper}
   >
     {children}
   </Swiper>

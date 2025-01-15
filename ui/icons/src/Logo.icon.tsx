@@ -1,3 +1,6 @@
+/* eslint-disable prefer-object-spread */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import type { IconProps } from '../icons.interfaces.js'
 
 import { clsx }           from 'clsx'

@@ -3,7 +3,6 @@ import type { RadioProps } from './radio.interface.js'
 import { memo }            from 'react'
 import React               from 'react'
 
-import { Layout }          from '@ui/layout'
 import { Column }          from '@ui/layout'
 
 import { Checkmark }       from './checkmark/index.js'

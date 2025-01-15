@@ -1,7 +1,8 @@
 'use client'
 
-import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 import type { FC }                      from 'react'
+
+import type { ContactsPageClientProps } from './contacts-page.interfaces.js'
 
 import React                            from 'react'
 

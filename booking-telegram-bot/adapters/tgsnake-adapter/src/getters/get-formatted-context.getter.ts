@@ -1,11 +1,10 @@
-import type { TelegramBotFormattedContextKeyType } from '@booking-telegram-bot/tgsnake-adapter'
-import type { TgsnakeContextType }                 from '@booking-telegram-bot/tgsnake-adapter'
-import type { TelegramBotFormattedContextType }    from '@booking-telegram-bot/tgsnake-adapter'
+import type { TgsnakeContextType }              from '@booking-telegram-bot/tgsnake-adapter'
+import type { TelegramBotFormattedContextType } from '@booking-telegram-bot/tgsnake-adapter'
 
-import { checkFormattedContextHelper }             from '../helpers/index.js'
+import { checkFormattedContextHelper }          from '../helpers/index.js'
 
 const getFormattedContextGetter = (ctx: TgsnakeContextType): TelegramBotFormattedContextType => {
-  const formattedContext: Record<TelegramBotFormattedContextKeyType, any> = {
+  const formattedContext = {
     userId: ctx.message?.from?.id,
     userFirstName: ctx.message?.from?.firstname,
     userLastName: ctx.message?.from?.lastname,

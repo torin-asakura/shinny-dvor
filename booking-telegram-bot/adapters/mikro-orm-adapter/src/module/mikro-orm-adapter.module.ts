@@ -1,9 +1,9 @@
+import type { MikroORM }        from '@mikro-orm/core'
 import type { Options }         from '@mikro-orm/postgresql'
 import type { DynamicModule }   from '@nestjs/common'
 import type { OnModuleInit }    from '@nestjs/common'
 import type { Provider }        from '@nestjs/common'
 
-import { MikroORM }             from '@mikro-orm/core'
 import { MikroOrmModule }       from '@mikro-orm/nestjs'
 import { Module }               from '@nestjs/common'
 import { ModuleRef }            from '@nestjs/core'

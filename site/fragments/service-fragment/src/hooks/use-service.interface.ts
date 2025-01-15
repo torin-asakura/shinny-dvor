@@ -1,9 +1,9 @@
-import type { FragmentsDataType } from '@globals/data'
+import type { FragmentsDataType }    from '@globals/data'
 
-import { WorkExamplesDataType }   from '../service.interface.js'
-import { CarBodiesType }          from '../service.interface.js'
-import { PriceType }              from '../service.interface.js'
-import { WorkExamplesType }       from '../service.interface.js'
+import type { WorkExamplesDataType } from '../service.interface.js'
+import type { CarBodiesType }        from '../service.interface.js'
+import type { PriceType }            from '../service.interface.js'
+import type { WorkExamplesType }     from '../service.interface.js'
 
 export interface UseServiceProps {
   carBodies: CarBodiesType

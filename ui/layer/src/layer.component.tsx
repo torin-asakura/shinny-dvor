@@ -29,13 +29,16 @@ export const Layer: FC<PropsWithChildren<LayerProps>> = ({ children, visible }) 
 
   return (
     <AnimatePresence>
-      {visible && (
-        <Container>
-          <Box width='100%' height='100%' justifyContent='center' alignItems='center'>
-            {children}
-          </Box>
-        </Container>
-      )}
+      {
+        // eslint-disable-next-line react/jsx-no-leaked-render
+        visible && (
+          <Container>
+            <Box width='100%' height='100%' justifyContent='center' alignItems='center'>
+              {children}
+            </Box>
+          </Container>
+        )
+      }
     </AnimatePresence>
   )
 }

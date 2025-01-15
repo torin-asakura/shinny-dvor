@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/sort-type-constituents */
+
 import type { SEOInt }                    from '@globals/data'
 import type { DataInt }                   from '@globals/data'
 import type { ServicesDataToReplaceType } from '@globals/data'
@@ -8,7 +10,7 @@ export interface SeoProps {
 }
 
 export interface IndexPageProps {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Record<string, string | Array<string> | undefined>
 }
 
 export interface IndexPageClientProps {

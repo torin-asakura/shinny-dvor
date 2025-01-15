@@ -13,19 +13,20 @@ export const useIndexPageClient: UseIndexPageClientType = ({
   servicesDataToReplace,
 }) => {
   const scrollHandler = (): void => {
-    const y = headerRef!.current!.getBoundingClientRect()
-    setScrollY(y.y)
+    const y = headerRef?.current?.getBoundingClientRect()
+    setScrollY(y?.y || 0)
   }
 
   useEffect(() => {
     setTimeout(() => {
+      // eslint-disable-next-line no-param-reassign
       isLoaded.current = true
     }, 200)
   }, [isLoaded])
 
   useEffect(() => {
     window.addEventListener('scroll', scrollHandler, false)
-    return () => {
+    return (): void => {
       window.removeEventListener('scroll', scrollHandler, false)
     }
   }, [scrollHandler])

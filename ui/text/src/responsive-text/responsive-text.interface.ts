@@ -1,7 +1,8 @@
 import type { BreakpointKey } from '@ui/theme'
 
-import { Sprinkles }          from './responsive-text.css.js'
+import type { Sprinkles }     from './responsive-text.css.js'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SprinklesResponseObject = Partial<Record<BreakpointKey, any>>
 
 type SprinklesKey = keyof Sprinkles

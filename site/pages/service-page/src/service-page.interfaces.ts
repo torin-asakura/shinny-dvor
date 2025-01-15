@@ -1,7 +1,11 @@
 import type { ServicesDataToReplaceType } from '@globals/data'
 
-type ParamsType = {
+export type ParamsType = {
   uri: string
+}
+
+export type PropsType = {
+  params: ParamsType
 }
 
 export interface ServicePageClientProps {

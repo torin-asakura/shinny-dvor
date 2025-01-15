@@ -18,7 +18,8 @@ class GetServiceTitlesService {
   }
 
   private async getServicesData(): ReturnServicesDataType {
-    const queryData = await this.apolloAdapterService.runQuery(GET_SERVICES)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryData = (await this.apolloAdapterService.runQuery(GET_SERVICES)) as any
     const servicesQueryData = queryData.data.services.nodes
     checkArrayLength({ servicesQueryData })
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return

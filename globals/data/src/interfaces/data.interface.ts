@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { FragmentsDataType } from '@globals/data'
 
 export type DataInt = {

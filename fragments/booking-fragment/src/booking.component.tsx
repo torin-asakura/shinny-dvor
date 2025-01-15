@@ -55,7 +55,13 @@ export const Booking: FC<BookingProps> = ({
               <Logo path={mainPage.content} />
             </Layout>
             <Layout>
-              <Button variant='tertiary' size='round' onClick={() => setVisible(false)}>
+              <Button
+                variant='tertiary'
+                size='round'
+                onClick={() => {
+                  setVisible(false)
+                }}
+              >
                 <Box
                   width={46}
                   height={46}

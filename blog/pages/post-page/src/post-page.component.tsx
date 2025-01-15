@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import type { PostPageProps }        from './post-page.interfaces.js'
 
 import React                         from 'react'

@@ -1,4 +1,4 @@
-import { RawInput } from '@atls-ui-parts/input'
+import type { RawInput } from '@atls-ui-parts/input'
 
 type RawInputProps = React.ComponentProps<typeof RawInput>
 

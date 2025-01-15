@@ -14,7 +14,7 @@ export class BookingController {
   async writeData(@Body() body: Body): Promise<number> {
     try {
       return await this.writeBookingDataUseCase.process(body)
-    } catch (error) {
+    } catch {
       throw new InternalServerError()
     }
   }

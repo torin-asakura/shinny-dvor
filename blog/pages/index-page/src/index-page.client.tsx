@@ -1,5 +1,3 @@
-// TODO move it directive to fragment level
-
 'use client'
 
 import type { FC }               from 'react'
@@ -22,7 +20,6 @@ import { getServicesData }       from '@globals/data'
 
 export const IndexPageClient: FC<IndexPageProps> = () => {
   const { contacts } = getContactsData()
-  // TODO ошибка тут
   const { posts } = getBlogPostsData()
   const { navigation } = getNavigationData()
   const { availableRadii } = getAvailableRadiiData()
@@ -42,9 +39,9 @@ export const IndexPageClient: FC<IndexPageProps> = () => {
         servicesData={services}
       />
       <AllArticles
-        // @ts-expect-error undefined
+        // @ts-expect-error undefined not assignable
         fragmentsData={fragments}
-        // @ts-expect-error not assignable
+        // @ts-expect-error undefined not assignable
         postsData={posts}
       />
       <Footer

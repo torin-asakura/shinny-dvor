@@ -1,4 +1,4 @@
-export * from '../icons.interfaces.js'
+export type * from '../icons.interfaces.js'
 
 export * from './ArrowDown.icon.js'
 export * from './ArrowLeft.icon.js'

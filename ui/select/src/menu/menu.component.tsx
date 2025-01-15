@@ -1,14 +1,15 @@
-import { forwardRef }        from 'react'
-import { memo }              from 'react'
-import React                 from 'react'
+import type { MenuSprinkles } from './menu.css.js'
+import type { MenuProps }     from './menu.interfaces.js'
 
-import { MenuSprinkles }     from './menu.css.js'
-import { MenuProps }         from './menu.interfaces.js'
-import { menuBase }          from './menu.css.js'
-import { menuListBase }      from './menu.css.js'
-import { menuListSprinkles } from './menu.css.js'
-import { menuShape }         from './menu.css.js'
-import { menuAppearance }    from './menu.css.js'
+import { forwardRef }         from 'react'
+import { memo }               from 'react'
+import React                  from 'react'
+
+import { menuBase }           from './menu.css.js'
+import { menuListBase }       from './menu.css.js'
+import { menuListSprinkles }  from './menu.css.js'
+import { menuShape }          from './menu.css.js'
+import { menuAppearance }     from './menu.css.js'
 
 export const Menu = memo(
   forwardRef<HTMLDivElement, MenuProps & MenuSprinkles>((

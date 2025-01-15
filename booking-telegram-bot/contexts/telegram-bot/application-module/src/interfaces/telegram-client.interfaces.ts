@@ -1,4 +1,6 @@
-type TelegramBotFormattedContextType = {
+/* eslint-disable @typescript-eslint/sort-type-constituents */
+
+export type TelegramBotFormattedContextType = {
   userId: bigint
   userFirstName: string
   userLastName?: string
@@ -8,10 +10,7 @@ type TelegramBotFormattedContextType = {
   chatId: bigint
 }
 
-type CreateConversationReturnType = {
-  data: Record<string, any>
-  waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => Promise<any>
+export type CreateConversationReturnType = {
+  data: Record<string, boolean | string | object>
+  waitMessage: (callback: (ctx: TelegramBotFormattedContextType) => boolean) => Promise<object>
 }
-
-export type { TelegramBotFormattedContextType }
-export type { CreateConversationReturnType }

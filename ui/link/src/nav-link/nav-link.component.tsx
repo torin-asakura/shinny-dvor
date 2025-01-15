@@ -1,11 +1,13 @@
-import React           from 'react'
+import type { LinkProps } from '../link.interfaces.js'
 
-import { BaseLink }    from '../base-link/index.js'
-import { LinkProps }   from '../link.interfaces.js'
-import { baseNavLink } from './nav-link.css.js'
-import { navLink }     from './nav-link.css.js'
+import React              from 'react'
+
+import { BaseLink }       from '../base-link/index.js'
+import { baseNavLink }    from './nav-link.css.js'
+import { navLink }        from './nav-link.css.js'
 
 export const NavLink: LinkProps = (props) => {
-  const navLinkClassName = navLink[props.active ? 'active' : 'default']
+  const { active } = props
+  const navLinkClassName = navLink[active ? 'active' : 'default']
   return <BaseLink {...props} className={`${baseNavLink} ${navLinkClassName}`} />
 }

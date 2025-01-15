@@ -1,3 +1,5 @@
+/* eslint-disable dot-notation */
+
 import { createAppearanceStyles } from '@atls-ui-parts/button'
 
 import { vars }                   from '@ui/theme'

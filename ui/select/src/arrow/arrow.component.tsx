@@ -1,3 +1,4 @@
+import type { ArrowSprinkles }      from './arrow.css.js'
 import type { ArrowContainerProps } from './arrow.interface.js'
 
 import { memo }                     from 'react'
@@ -5,7 +6,6 @@ import React                        from 'react'
 
 import { DropDownIcon }             from '@ui/icons'
 
-import { ArrowSprinkles }           from './arrow.css.js'
 import { arrowSprinkles }           from './arrow.css.js'
 import { baseContainerStyles }      from './arrow.css.js'
 

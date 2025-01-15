@@ -1,18 +1,21 @@
-import type { ServicePageServerProps } from '../service-page.interfaces.js'
+import type { ServicesDataToReplaceType } from '@globals/data'
 
-import { GET_CONTACTS }                from '@globals/data'
-import { GET_BLOG_POSTS }              from '@globals/data'
-import { GET_NAVIGATION }              from '@globals/data'
-import { GET_AVAILABLE_RADII }         from '@globals/data'
-import { GET_SERVICES }                from '@globals/data'
-import { GET_FRAGMENTS }               from '@globals/data'
-import { GET_CAR_BODIES }              from '@globals/data'
-import { GET_SERVICE_BY }              from '@globals/data'
-import { getAqsiData }                 from '@globals/data'
-import { getServerClient }             from '@globals/data/apollo'
+import type { PropsType }                 from '../service-page.interfaces.js'
 
-// @ts-expect-error any type
-export const runServicePageServerQueries: ServicePageServerProps = async ({ params }) => {
+import { GET_CONTACTS }                   from '@globals/data'
+import { GET_BLOG_POSTS }                 from '@globals/data'
+import { GET_NAVIGATION }                 from '@globals/data'
+import { GET_AVAILABLE_RADII }            from '@globals/data'
+import { GET_SERVICES }                   from '@globals/data'
+import { GET_FRAGMENTS }                  from '@globals/data'
+import { GET_CAR_BODIES }                 from '@globals/data'
+import { GET_SERVICE_BY }                 from '@globals/data'
+import { getAqsiData }                    from '@globals/data'
+import { getServerClient }                from '@globals/data/apollo'
+
+export const runServicePageServerQueries = async ({
+  params,
+}: PropsType): Promise<{ servicesDataToReplace: ServicesDataToReplaceType }> => {
   const { uri } = params
   const client = getServerClient()
 

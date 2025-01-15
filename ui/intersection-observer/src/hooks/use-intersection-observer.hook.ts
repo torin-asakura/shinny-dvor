@@ -1,4 +1,7 @@
-import type { GetObserverOptions }    from './use-intersection-observer.interfaces.js'
+/* eslint-disable */
+
+import type { MutableRefObject }      from 'react'
+
 import type { OnIntersection }        from './use-intersection-observer.interfaces.js'
 import type { Observers }             from './use-intersection-observer.interfaces.js'
 import type { IntersectionObservers } from './use-intersection-observer.interfaces.js'
@@ -15,19 +18,7 @@ export class PageIntersectionObserver {
 
   private isExecutionAllowed = false
 
-  constructor(onIntersection: OnIntersection) {
-    this.onIntersection = onIntersection
-  }
-
-  getObserverOptions(id: string): ReturnType<GetObserverOptions> {
-    const ref = useRef(null)
-    this.observers.set(id, { ref })
-    return {
-      ref,
-    }
-  }
-
-  private initExecutionAllowed() {
+  private initExecutionAllowed(): void {
     setTimeout(() => {
       this.isExecutionAllowed = true
     })
@@ -44,8 +35,8 @@ export class PageIntersectionObserver {
     return observerThreshold
   }
 
-  private getIntersectionObserverCallback() {
-    const intersectionObserverCallback = (entries: Array<IntersectionObserverEntry>) => {
+  private getIntersectionObserverCallback(): (entries: Array<IntersectionObserverEntry>) => void {
+    const intersectionObserverCallback = (entries: Array<IntersectionObserverEntry>): void => {
       if (entries && this.isExecutionAllowed) {
         this.onIntersection((entries[0].target as any).observerId as string)
       }
@@ -53,20 +44,20 @@ export class PageIntersectionObserver {
     return intersectionObserverCallback
   }
 
-  private getIntersectionObserverOptions(observerThreshold: number) {
+  private getIntersectionObserverOptions(observerThreshold: number): { threshold: number } {
     const intersectionObserverOptions = {
       threshold: observerThreshold,
     }
     return intersectionObserverOptions
   }
 
-  private getIntersectionObserver(observerThreshold: number) {
+  private getIntersectionObserver(observerThreshold: number): IntersectionObserver {
     const intersectionObserverCallback = this.getIntersectionObserverCallback()
     const intersectionObserverOptions = this.getIntersectionObserverOptions(observerThreshold)
     return new IntersectionObserver(intersectionObserverCallback, intersectionObserverOptions)
   }
 
-  private getResizeObserver(key: string, observer?: Observer) {
+  private getResizeObserver(key: string, observer?: Observer): ResizeObserver {
     return new ResizeObserver(() => {
       if (observer?.ref.current) {
         const heightCoefficient = this.getHeightCoefficient(observer)
@@ -83,8 +74,11 @@ export class PageIntersectionObserver {
       }
     })
   }
+  constructor(onIntersection: OnIntersection) {
+    this.onIntersection = onIntersection
+  }
 
-  init() {
+  init(): void {
     this.initExecutionAllowed()
 
     Array.from(this.observers.keys()).forEach((key) => {
@@ -92,5 +86,13 @@ export class PageIntersectionObserver {
       const resizeObserver = this.getResizeObserver(key, observer)
       resizeObserver.observe(observer?.ref.current)
     })
+  }
+
+  getObserverOptions(id: string): { ref: MutableRefObject<null> } {
+    const ref = useRef(null)
+    this.observers.set(id, { ref })
+    return {
+      ref,
+    }
   }
 }

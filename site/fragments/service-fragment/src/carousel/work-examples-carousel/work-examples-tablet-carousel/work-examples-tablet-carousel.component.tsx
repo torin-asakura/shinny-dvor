@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/promise-function-async */
+
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 

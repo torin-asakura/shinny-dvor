@@ -8,7 +8,7 @@ const getFormattedAppointmentData: GetFormattedAppointmentDataType = (
   telegramFullName
 ) => {
   const { carBody, radii, service, commentary } = rawAppointmentData
-  const timeSlotStart = BigInt(rawAppointmentData.timeSlot.milliseconds as number)
+  const timeSlotStart = BigInt(rawAppointmentData.timeSlot.milliseconds)
   const timeSlotEnd = BigInt(Number(rawAppointmentData.timeSlot.milliseconds) + TIME_SLOT_STEP_MS)
 
   return {
@@ -20,7 +20,7 @@ const getFormattedAppointmentData: GetFormattedAppointmentDataType = (
     radii,
     isApproved: false,
     service,
-    commentary,
+    commentary: typeof commentary === 'string' ? commentary : null,
   }
 }
 export { getFormattedAppointmentData }

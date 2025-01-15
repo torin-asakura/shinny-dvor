@@ -13,7 +13,7 @@ export const IconPart: FC<IconPartProps> = ({ Icon, href, buttonSize = '$g48', s
   const [hover, hoverProps] = useHover()
   const buttonVariant = dark ? 'inverse' : 'tertiary'
 
-  const getIconColor = () => {
+  const getIconColor = (): string => {
     if (dark) {
       return 'white'
     }

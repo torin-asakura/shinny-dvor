@@ -1,2 +1,2 @@
 export * from './layer.component.js'
-export * from './layer.interface.js'
+export type * from './layer.interface.js'

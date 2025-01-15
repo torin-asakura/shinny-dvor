@@ -1,3 +1,5 @@
+import type { ArrayElement }     from '@globals/data'
+
 import type { ReturnDataType }   from '../interfaces/index.js'
 import type { ReturnTitlesType } from '../interfaces/index.js'
 
@@ -14,12 +16,14 @@ class GetRadiiTitlesService {
 
   async process(): ReturnTitlesType {
     const radiiData = await this.getRadiiData()
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-    return radiiData.map((singleRadiiData: any) => singleRadiiData.contentAddons.title)
+    return radiiData.map(
+      (singleRadiiData: ArrayElement<typeof radiiData>) => singleRadiiData.contentAddons.title
+    )
   }
 
   private async getRadiiData(): ReturnDataType {
-    const queryData = await this.apolloAdapterService.runQuery(GET_AVAILABLE_RADII)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const queryData = (await this.apolloAdapterService.runQuery(GET_AVAILABLE_RADII)) as any
     const radiiQueryData: Awaited<ReturnDataType> = queryData.data.availableRadiusItems
       .nodes as Awaited<ReturnDataType>
     checkArrayLength({ radiiQueryData })

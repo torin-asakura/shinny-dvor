@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import type { ApolloLink }            from '@apollo/client'
 import type { GraphQLFormattedError } from 'graphql'
 
@@ -7,6 +9,7 @@ export const getApolloErrorLink = (): ApolloLink => {
   const errorLink = onError((errorResponse) => {
     const extendedErrorResponse = errorResponse as unknown as {
       graphQLErrors: Array<GraphQLFormattedError & { debugMessage: string }>
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       cause?: Record<string, any>
     }
     const { graphQLErrors, cause } = extendedErrorResponse

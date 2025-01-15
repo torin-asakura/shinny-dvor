@@ -11,6 +11,7 @@ export const useNextNavLink: UseNextNavLinkType = (Link, pathProp = 'path') => {
   const pathname = usePathname()
 
   return (props) => {
+    // eslint-disable-next-line react/destructuring-assignment
     const newPathname: string = props[pathProp]
 
     const handleClick = (event: Event): void => {

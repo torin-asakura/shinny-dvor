@@ -4,5 +4,5 @@ import { extractFragment }        from '@globals/data'
 
 export const goBackTitle = (fragmentsData: FragmentsDataType): string => {
   const { title: goBack } = extractFragment('contentAddons', 'all-services', fragmentsData)
-  return goBack
+  return goBack as string
 }

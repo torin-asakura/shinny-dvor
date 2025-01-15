@@ -45,8 +45,8 @@ export const formatOutputDataHelper = (
       case DataVariants.FULL:
         output.push({
           service: itemServiceTitle.wpVariant,
-          radii: itemRadiiTitle!.wpVariant,
-          carBody: itemCarBodyTitle!.wpVariant,
+          radii: itemRadiiTitle?.wpVariant || '',
+          carBody: itemCarBodyTitle?.wpVariant || '',
           price: itemPrice,
         })
         break
@@ -54,7 +54,7 @@ export const formatOutputDataHelper = (
         for (const carBodyTitle of carBodyTitles) {
           output.push({
             service: itemServiceTitle.wpVariant,
-            radii: itemRadiiTitle!.wpVariant,
+            radii: itemRadiiTitle?.wpVariant || '',
             carBody: carBodyTitle.wpVariant,
             price: itemPrice,
           })

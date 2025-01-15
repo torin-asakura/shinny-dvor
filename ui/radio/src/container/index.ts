@@ -1,2 +1,2 @@
 export * from './container.component.js'
-export * from './container.interface.js'
+export type * from './container.interface.js'

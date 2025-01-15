@@ -97,15 +97,15 @@ export const Service: FC<ServiceProps> = ({
               </Text>
               <Condition match={variant === 'primary' || variant === 'tertiary'}>
                 <CarBodiesCarouselDesktopVariant
-                  onCarBody={onCarBody}
                   carBodies={carBodies}
                   setOnCarBody={setOnCarBody}
+                  onCarBody={onCarBody}
                 />
 
                 <CarBodiesCarouselMobileVariant
                   carBodies={carBodies}
-                  onCarBody={onCarBody}
                   setOnCarBody={setOnCarBody}
+                  onCarBody={onCarBody}
                 />
 
                 <Radii items={availableRadii} selectedItem={radius} setSelectedItem={setRadius} />
@@ -158,12 +158,12 @@ export const Service: FC<ServiceProps> = ({
 
             <SignupButtonPart
               radius={radius}
-              onCarBody={onCarBody}
               serviceName={serviceName}
               setVisible={setVisible}
               serviceVar={serviceVar}
               signUp={signUp}
               servicePrice={servicePrice}
+              onCarBody={onCarBody}
             />
           </Column>
         </Row>

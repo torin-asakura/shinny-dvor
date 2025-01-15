@@ -7,7 +7,7 @@ import { client }                from '../client/index.js'
 
 @Injectable()
 export class ApolloAdapterService implements ApolloAdapterInt {
-  async runQuery(query: QueryType): Promise<ReturnType<typeof client.query<any>>> {
+  async runQuery(query: QueryType): Promise<ReturnType<typeof client.query<QueryType>>> {
     return client.query({ query })
   }
 }

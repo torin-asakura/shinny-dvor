@@ -16,21 +16,19 @@ export const WorkExamplesMobileVariant: FC<WorkExamplesMobileVariantProps> = ({
   workExamplesData,
   workExamplesTitle,
   defaultPrice,
-}) => {
-  return (
-    <Row display={['flex', 'flex', 'none']}>
-      <Accordion text={workExamplesTitle}>
-        <WorkExamplesCarousel>
-          {workExamplesData?.map(({ image, title, price: cost }, index) => (
-            <React.Fragment key={title}>
-              <WorkExample image={image} title={title} price={defaultPrice} />
-              <Condition match={index === 0}>
-                <Layout flexBasis={32} flexShrink={0} />
-              </Condition>
-            </React.Fragment>
-          ))}
-        </WorkExamplesCarousel>
-      </Accordion>
-    </Row>
-  )
-}
+}) => (
+  <Row display={['flex', 'flex', 'none']}>
+    <Accordion text={workExamplesTitle}>
+      <WorkExamplesCarousel>
+        {workExamplesData?.map(({ image, title, price: cost }, index) => (
+          <React.Fragment key={title}>
+            <WorkExample image={image} title={title} price={defaultPrice} />
+            <Condition match={index === 0}>
+              <Layout flexBasis={32} flexShrink={0} />
+            </Condition>
+          </React.Fragment>
+        ))}
+      </WorkExamplesCarousel>
+    </Accordion>
+  </Row>
+)

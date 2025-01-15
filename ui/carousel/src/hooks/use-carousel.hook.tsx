@@ -1,4 +1,9 @@
+/* eslint-disable react-hooks/rules-of-hooks */
+
+import type { UseAddonNavigationResult }  from '@atls-ui-parts/carousel'
+
 import type { UseCarouselOptions }        from '../carousel.interface.js'
+import type { UseCarouselReturn }         from './use-carousel.interface.js'
 
 import { Container }                      from '@atls-ui-parts/carousel'
 import { Slide }                          from '@atls-ui-parts/carousel'
@@ -20,7 +25,7 @@ export const useCarousel = ({
   swipeThreshold = 10000,
   centered = true,
   loop = true,
-}: UseCarouselOptions) => {
+}: UseCarouselOptions): UseCarouselReturn => {
   const containerRef = useRef(null)
   const wrapperRef = useRef(null)
 
@@ -46,7 +51,7 @@ export const useCarousel = ({
       },
     })
 
-  const useControls = () =>
+  const useControls = (): UseAddonNavigationResult =>
     useAddonNavigation({
       slidesLength,
       activeSlide,

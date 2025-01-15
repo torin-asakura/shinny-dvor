@@ -1,5 +1,6 @@
-export interface CheckboxProps {
+import type { PropsWithChildren } from 'react'
+
+export interface CheckboxProps extends PropsWithChildren {
   active?: boolean
-  onCheck?: (newState: boolean) => any
-  children?: any
+  onCheck?: (newState: boolean) => void
 }

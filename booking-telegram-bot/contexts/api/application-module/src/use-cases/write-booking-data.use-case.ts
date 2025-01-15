@@ -14,7 +14,7 @@ export class WriteBookingDataUseCase {
 
   async process(body: Body): Promise<number> {
     if (typeof body === 'string') {
-      const parsedBody: Record<string, any> = await JSON.parse(body)
+      const parsedBody = (await JSON.parse(body)) as Record<string, unknown>
       const checkedBody = checkBookingDataHelper(parsedBody)
       await this.appointmentEntityRepository.writeData(checkedBody)
       return HttpStatus.OK

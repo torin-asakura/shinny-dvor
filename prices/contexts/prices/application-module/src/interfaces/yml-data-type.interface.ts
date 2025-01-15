@@ -15,7 +15,7 @@ export type YmlDataType = {
         category: CategoriesType
       }
       offers: {
-        offer: YandexOffersType | TwoGisOffersType
+        offer: TwoGisOffersType | YandexOffersType
       }
     }
   }

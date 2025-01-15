@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import type { FC }           from 'react'
 
 import type { InvalidProps } from './invalid.interface.js'

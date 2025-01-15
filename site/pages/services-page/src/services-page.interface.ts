@@ -9,8 +9,8 @@ export interface ServicesPageClientProps {
 
 export type ServicesPageServerProps = () => Promise<ServicesPageClientProps>
 
-// TODO any
 export interface SeoProps {
   ogCover: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   SEO: any
 }

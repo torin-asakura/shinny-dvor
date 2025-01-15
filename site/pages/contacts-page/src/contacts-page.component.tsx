@@ -1,5 +1,6 @@
-import type { ContactsPageProps }       from './contacts-page.interfaces.js'
 import type { FC }                      from 'react'
+
+import type { ContactsPageProps }       from './contacts-page.interfaces.js'
 
 import React                            from 'react'
 

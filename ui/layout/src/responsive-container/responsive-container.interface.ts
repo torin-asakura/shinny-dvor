@@ -2,8 +2,9 @@ import type { BoxProps }          from '@atls-ui-parts/layout'
 import type { BreakpointKey }     from '@ui/theme'
 import type { PropsWithChildren } from 'react'
 
-import { Sprinkles }              from './responsive-container.css.js'
+import type { Sprinkles }         from './responsive-container.css.js'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type SprinklesResponseObject = Partial<Record<BreakpointKey, any>>
 
 type SprinklesKey = keyof Sprinkles

@@ -1,1 +1,1 @@
-export interface TriggerContainerProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type TriggerContainerProps = React.HTMLAttributes<HTMLDivElement>
