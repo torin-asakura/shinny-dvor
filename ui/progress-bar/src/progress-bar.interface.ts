@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+
 export interface ProgressBarConfig {
   size: number | string
 
@@ -8,9 +10,9 @@ export interface ProgressBarConfig {
   delay: number
 }
 class ProgressBarInt {
-  start: () => void
+  start: () => void = () => {}
 
-  finish: () => void
+  finish: () => void = () => {}
 }
 
 export type ProgressBarConstructor = new (options: Partial<ProgressBarConfig>) => ProgressBarInt
