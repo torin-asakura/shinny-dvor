@@ -1,8 +1,8 @@
 import type { TransitionContainerSprinkles } from './transition-container.css.js'
 import type { TransitionContainerProps }     from './transition-container.interfaces.js'
 
-import React                                 from 'react'
 import { memo }                              from 'react'
+import React                                 from 'react'
 
 import { vars }                              from '@ui/theme'
 

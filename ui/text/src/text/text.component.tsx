@@ -1,9 +1,9 @@
-import type { ResponsiveTextProps } from '../responsive-text/index.js'
 import type { FC }                  from 'react'
 import type { PropsWithChildren }   from 'react'
 
-import { Text as BaseText }         from '@atls-ui-parts/text'
+import type { ResponsiveTextProps } from '../responsive-text/index.js'
 
+import { Text as BaseText }         from '@atls-ui-parts/text'
 import React                        from 'react'
 
 import { PropsMapper }              from '../mappers/props.mapper.js'

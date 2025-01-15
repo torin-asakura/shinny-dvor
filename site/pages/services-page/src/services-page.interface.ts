@@ -11,5 +11,6 @@ export type ServicesPageServerProps = () => Promise<ServicesPageClientProps>
 
 export interface SeoProps {
   ogCover: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   SEO: any
 }

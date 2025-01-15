@@ -1,6 +1,7 @@
+import type { ArrayElement }     from '@globals/data'
+
 import type { ReturnDataType }   from '../interfaces/index.js'
 import type { ReturnTitlesType } from '../interfaces/index.js'
-import type { ArrayElement }     from '@globals/data'
 
 import { Injectable }            from '@nestjs/common'
 

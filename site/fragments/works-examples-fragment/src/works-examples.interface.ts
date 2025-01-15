@@ -12,7 +12,7 @@ export type SlidesType = {
         sourceUrl: string
       }
     }
-    price: string | number
+    price: number | string
     description: string
     time: string
   }

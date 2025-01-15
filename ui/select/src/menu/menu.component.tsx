@@ -1,9 +1,9 @@
 import type { MenuSprinkles } from './menu.css.js'
 import type { MenuProps }     from './menu.interfaces.js'
 
-import React                  from 'react'
 import { forwardRef }         from 'react'
 import { memo }               from 'react'
+import React                  from 'react'
 
 import { menuBase }           from './menu.css.js'
 import { menuListBase }       from './menu.css.js'

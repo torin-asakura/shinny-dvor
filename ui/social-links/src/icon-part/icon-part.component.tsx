@@ -1,5 +1,6 @@
-import type { IconPartProps } from './icon-part.interfaces.js'
 import type { FC }            from 'react'
+
+import type { IconPartProps } from './icon-part.interfaces.js'
 
 import React                  from 'react'
 

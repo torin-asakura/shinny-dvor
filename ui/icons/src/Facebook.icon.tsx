@@ -1,8 +1,11 @@
+/* eslint-disable prefer-object-spread */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import type { IconProps } from '../icons.interfaces.js'
 
+import React              from 'react'
 import { clsx }           from 'clsx'
 import { memo }           from 'react'
-import React              from 'react'
 
 import { vars }           from '@ui/theme'
 

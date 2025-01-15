@@ -1,12 +1,12 @@
 import type { SelectProps }     from './select.interface.js'
 
 import { useSelect }            from '@atls-utils/use-select'
+
+import React                    from 'react'
 import { useMultipleSelection } from 'downshift'
 import { memo }                 from 'react'
-import React                    from 'react'
 
 import { Layout }               from '@ui/layout'
-import { Text }                 from '@ui/text'
 import { TextEllipsis }         from '@ui/text'
 
 import { Arrow }                from './arrow/index.js'
@@ -50,8 +50,10 @@ const Select = memo(({
       </Button>
       {renderMenu(
         <Menu {...menuProps}>
-          {items.map((item) => (
+          {items.map((item, index) => (
             <MenuItem
+              // eslint-disable-next-line react/no-array-index-key
+              key={`menu-item-${index}`}
               selectedItems={selectedItems}
               addSelectedItem={addSelectedItem}
               removeSelectedItem={removeSelectedItem}

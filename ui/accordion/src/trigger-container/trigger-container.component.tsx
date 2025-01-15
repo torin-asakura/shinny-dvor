@@ -1,8 +1,8 @@
 import type { TriggerContainerProps } from './trigger-container.interfaces.js'
 
-import React                          from 'react'
 import { forwardRef }                 from 'react'
 import { memo }                       from 'react'
+import React                          from 'react'
 
 import { triggerContainerBase }       from './trigger-container.css.js'
 

@@ -1,7 +1,7 @@
 import type { CheckmarkProps }       from './checkmark.interfaces.js'
 
-import React                         from 'react'
 import { memo }                      from 'react'
+import React                         from 'react'
 
 import { Text }                      from '@ui/text'
 

@@ -1,5 +1,6 @@
-import type { CarBodiesCarouselMobileVariantProps } from './car-bodies-carousel-mobile-variant.interface.js'
 import type { FC }                                  from 'react'
+
+import type { CarBodiesCarouselMobileVariantProps } from './car-bodies-carousel-mobile-variant.interface.js'
 
 import React                                        from 'react'
 
@@ -21,7 +22,7 @@ export const CarBodiesCarouselMobileVariant: FC<CarBodiesCarouselMobileVariantPr
     display={['flex', 'flex', 'none']}
   >
     <CarBodiesCarousel>
-      <CarBodiesPart carBodies={carBodies} onCarBody={onCarBody} setOnCarBody={setOnCarBody} />
+      <CarBodiesPart carBodies={carBodies} setOnCarBody={setOnCarBody} onCarBody={onCarBody} />
     </CarBodiesCarousel>
   </Box>
 )

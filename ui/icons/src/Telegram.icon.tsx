@@ -1,14 +1,17 @@
+/* eslint-disable prefer-object-spread */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
+
 import type { IconProps } from '../icons.interfaces.js'
 
+import React              from 'react'
 import { clsx }           from 'clsx'
 import { memo }           from 'react'
-import React              from 'react'
 
 import { vars }           from '@ui/theme'
 
 import { iconSprinkles }  from '../icon.css.js'
 
-export const TelegramIcon = React.memo(({ color, ...props }: IconProps) => {
+export const TelegramIcon = memo(({ color, ...props }: IconProps) => {
   const { className, style, otherProps } = iconSprinkles(props)
   return (
     <svg

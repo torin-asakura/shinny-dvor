@@ -1,8 +1,8 @@
 import type { LogoProps } from './logo.interface.js'
+import type { FC }        from 'react'
 
-import { FC }             from 'react'
-import { memo }           from 'react'
 import React              from 'react'
+import { memo }           from 'react'
 
 import { LogoIcon }       from '@ui/icons'
 import { Box }            from '@ui/layout'

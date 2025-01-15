@@ -1,7 +1,7 @@
 import type { CheckboxProps } from './checkbox.interface.js'
 
-import { memo }               from 'react'
 import React                  from 'react'
+import { memo }               from 'react'
 
 import { CheckIcon }          from '@ui/icons'
 
@@ -11,7 +11,7 @@ import { Container }          from './container/index.js'
 import { Label }              from './label/index.js'
 
 export const Checkbox = memo(({ children, active, onCheck }: CheckboxProps) => {
-  const handleClick = () => {
+  const handleClick = (): void => {
     if (onCheck) {
       onCheck(!active)
     }

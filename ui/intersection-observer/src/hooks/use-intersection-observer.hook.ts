@@ -37,7 +37,6 @@ export class PageIntersectionObserver {
   private getIntersectionObserverCallback(): (entries: Array<IntersectionObserverEntry>) => void {
     const intersectionObserverCallback = (entries: Array<IntersectionObserverEntry>): void => {
       if (entries && this.isExecutionAllowed) {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         this.onIntersection((entries[0].target as any).observerId as string)
       }
     }

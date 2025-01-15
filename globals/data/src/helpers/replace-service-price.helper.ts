@@ -1,8 +1,7 @@
 /* eslint-disable no-continue */
 
-import type { ServicesDataToReplaceType }             from '@globals/data'
-
 import type { RequiredReplaceServicePriceHelperType } from './replace-service-price.interface.js'
+import type { ServicesDataToReplaceType }             from '@globals/data'
 
 export const replaceServicePriceHelper = <T>(
   service: RequiredReplaceServicePriceHelperType & T,
@@ -30,6 +29,7 @@ export const replaceServicePriceHelper = <T>(
   for (const radiiKey of Object.keys(service.servicesParams.price)) {
     if (radiiKey === '__typename') continue
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const carBodyKeys = Object.keys(service.servicesParams.price[radiiKey] as Record<string, any>)
     if (!carBodyKeys.length) continue
 

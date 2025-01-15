@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import type { ApolloLink }    from '@apollo/client'
 import type { ErrorResponse } from '@apollo/client/link/error'
 
@@ -6,6 +8,7 @@ import { onError }            from '@apollo/client/link/error'
 export const getApolloErrorLink = (): ApolloLink => {
   const errorLink = onError((errorResponse) => {
     const extendedErrorResponse = errorResponse as unknown as ErrorResponse & {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       cause?: Record<string, any>
     }
     const { graphQLErrors, cause } = extendedErrorResponse

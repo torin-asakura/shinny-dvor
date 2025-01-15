@@ -1,8 +1,8 @@
-import { getFragmentsData }      from '@globals/data'
-import { getAvailableRadiiData } from '@globals/data'
-import { getCarBodiesData }      from '@globals/data'
-import { getServicesData }       from '@globals/data'
-import { getNavigationData }     from '@globals/data'
+import type { getNavigationData }     from '@globals/data'
+import type { getFragmentsData }      from '@globals/data'
+import type { getAvailableRadiiData } from '@globals/data'
+import type { getCarBodiesData }      from '@globals/data'
+import type { getServicesData }       from '@globals/data'
 
 export interface BookingProps {
   visible: boolean

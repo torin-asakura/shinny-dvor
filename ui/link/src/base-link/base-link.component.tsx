@@ -1,8 +1,8 @@
 import type { BaseLinkProps } from './base-link.interfaces.js'
 
+import { memo }               from 'react'
 import React                  from 'react'
 import clsx                   from 'clsx'
-import { memo }               from 'react'
 
 import { baseLink }           from './base-link.css.js'
 import { linkVariants }       from './base-link.css.js'

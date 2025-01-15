@@ -1,13 +1,12 @@
 'use client'
 
+import type { LayerProps }        from './layer.interface.js'
 import type { FC }                from 'react'
 import type { PropsWithChildren } from 'react'
 
-import type { LayerProps }        from './layer.interface.js'
-
+import React                      from 'react'
 import { AnimatePresence }        from 'framer-motion'
 import { useEffect }              from 'react'
-import React                      from 'react'
 
 import { Box }                    from '@ui/layout'
 
@@ -29,13 +28,16 @@ export const Layer: FC<PropsWithChildren<LayerProps>> = ({ children, visible }) 
 
   return (
     <AnimatePresence>
-      {visible && (
-        <Container>
-          <Box width='100%' height='100%' justifyContent='center' alignItems='center'>
-            {children}
-          </Box>
-        </Container>
-      )}
+      {
+        // eslint-disable-next-line react/jsx-no-leaked-render
+        visible && (
+          <Container>
+            <Box width='100%' height='100%' justifyContent='center' alignItems='center'>
+              {children}
+            </Box>
+          </Container>
+        )
+      }
     </AnimatePresence>
   )
 }

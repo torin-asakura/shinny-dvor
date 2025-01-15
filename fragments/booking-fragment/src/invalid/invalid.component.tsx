@@ -1,8 +1,5 @@
-/* eslint-disable */
-
-import type { FC }           from 'react'
-
 import type { InvalidProps } from './invalid.interface.js'
+import type { FC }           from 'react'
 
 import React                 from 'react'
 

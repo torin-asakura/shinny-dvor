@@ -1,16 +1,16 @@
 /* eslint-disable */
 
+import type { InitialProps }        from './initial.interface.js'
 import type { Service as IService } from '@store/services'
 import type { KeyboardEvent }       from 'react'
 import type { FC }                  from 'react'
 
-import type { InitialProps }        from './initial.interface.js'
-
 import { useReactiveVar }           from '@apollo/client'
+
+import React                        from 'react'
 import { useCallback }              from 'react'
 import { useEffect }                from 'react'
 import { useState }                 from 'react'
-import React                        from 'react'
 
 import { INVALID }                  from '@store/booking'
 import { SUCCESS }                  from '@store/booking'

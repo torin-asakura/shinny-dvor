@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { GoodsDataType }       from '../interfaces/index.js'
 
 import { GoodsDataValidationError } from '../error/index.js'

@@ -1,7 +1,8 @@
 /* eslint-disable react/no-array-index-key */
 
-import type { SliderPartProps } from './slider-part.interface.js'
 import type { FC }              from 'react'
+
+import type { SliderPartProps } from './slider-part.interface.js'
 
 import React                    from 'react'
 

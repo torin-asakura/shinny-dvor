@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
 import { memo }                   from 'react'
+import React                      from 'react'
 
 import { baseStyles }             from './checkmark.css.js'
 import { appearanceStyles }       from './checkmark.css.js'

@@ -1,5 +1,6 @@
-import type { CarBodiesPartProps } from './car-bodies-part.interface.js'
 import type { FC }                 from 'react'
+
+import type { CarBodiesPartProps } from './car-bodies-part.interface.js'
 
 import React                       from 'react'
 

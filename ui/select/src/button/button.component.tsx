@@ -1,8 +1,8 @@
 import type { ButtonProps } from './button.interfaces.js'
 
-import React                from 'react'
 import { forwardRef }       from 'react'
 import { memo }             from 'react'
+import React                from 'react'
 
 import { appearanceStyles } from './button.css.js'
 import { baseStyles }       from './button.css.js'

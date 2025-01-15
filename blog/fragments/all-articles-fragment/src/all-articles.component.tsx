@@ -1,9 +1,8 @@
+import type { AllArticlesProps } from './all-articles.interface.js'
 import type { FC }               from 'react'
 
-import type { AllArticlesProps } from './all-articles.interface.js'
-
-import { memo }                  from 'react'
 import React                     from 'react'
+import { memo }                  from 'react'
 
 import { Grid }                  from '@ui/layout'
 import { Column }                from '@ui/layout'
@@ -45,6 +44,7 @@ export const AllArticles: FC<AllArticlesProps> = memo(({
       >
         {postsData.map(({ uri, title, date, excerpt, featuredImage }) => (
           <Article
+            key={`post-data-${title}`}
             uri={uri}
             title={title}
             date={date}

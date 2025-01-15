@@ -1,6 +1,7 @@
+import type { BreakpointKey }            from '@ui/theme'
+
 import type { Sprinkles }                from '../responsive-text/index.js'
 import type { ResponsiveTextProps }      from '../responsive-text/index.js'
-import type { BreakpointKey }            from '@ui/theme'
 
 import { BREAKPOINT_CONDITIONS }         from '@ui/theme'
 

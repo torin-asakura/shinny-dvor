@@ -1,9 +1,9 @@
+import type { BookingProps } from './booking.interfaces.js'
 import type { Screen }       from '@store/booking'
 import type { FC }           from 'react'
 
-import type { BookingProps } from './booking.interfaces.js'
-
 import { useReactiveVar }    from '@apollo/client'
+
 import React                 from 'react'
 
 import { INITIAL }           from '@store/booking'
@@ -55,7 +55,13 @@ export const Booking: FC<BookingProps> = ({
               <Logo path={mainPage.content} />
             </Layout>
             <Layout>
-              <Button variant='tertiary' size='round' onClick={() => setVisible(false)}>
+              <Button
+                variant='tertiary'
+                size='round'
+                onClick={() => {
+                  setVisible(false)
+                }}
+              >
                 <Box
                   width={46}
                   height={46}

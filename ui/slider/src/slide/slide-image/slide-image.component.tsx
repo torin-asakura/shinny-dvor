@@ -1,12 +1,13 @@
 /* eslint-disable react/jsx-no-leaked-render */
 
-import type { ReactCompareImageProps }      from './slide-image.interfaces.js'
-import type { SlideImageProps }             from './slide-image.interfaces.js'
 import type { FC }                          from 'react'
 
-import React                                from 'react'
+import type { ReactCompareImageProps }      from './slide-image.interfaces.js'
+import type { SlideImageProps }             from './slide-image.interfaces.js'
+
 import { default as BaseReactCompareImage } from 'react-compare-image'
 import { memo }                             from 'react'
+import React                                from 'react'
 
 import { Condition }                        from '@ui/condition'
 import { Box }                              from '@ui/layout'

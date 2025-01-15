@@ -1,7 +1,7 @@
 import type { BoxProps } from './box.interface.js'
 
-import React             from 'react'
 import { memo }          from 'react'
+import React             from 'react'
 
 import { box }           from './box.css.js'
 

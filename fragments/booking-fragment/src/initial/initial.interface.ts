@@ -1,9 +1,7 @@
 import type { AvailableRadiiDataType } from '@globals/data'
 import type { CarBodiesDataType }      from '@globals/data'
-import type { ServiceDataType }        from '@globals/data'
-
-import { FragmentsDataType }           from '@globals/data'
-import { getServicesData }             from '@globals/data'
+import type { FragmentsDataType }      from '@globals/data'
+import type { getServicesData }        from '@globals/data'
 
 export interface ExtendedContentAddons {
   contentAddons: {

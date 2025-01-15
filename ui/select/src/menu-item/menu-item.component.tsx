@@ -1,8 +1,8 @@
 import type { MenuItemProps } from './menu-item.interface.js'
 
-import React                  from 'react'
 import { forwardRef }         from 'react'
 import { memo }               from 'react'
+import React                  from 'react'
 
 import { Checkbox }           from '@ui/checkbox'
 import { Layout }             from '@ui/layout'

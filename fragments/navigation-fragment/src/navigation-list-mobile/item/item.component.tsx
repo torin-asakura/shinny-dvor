@@ -1,5 +1,6 @@
-import type { ItemProps } from './item.interface.js'
 import type { FC }        from 'react'
+
+import type { ItemProps } from './item.interface.js'
 
 import React              from 'react'
 

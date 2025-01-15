@@ -1,7 +1,7 @@
 import type { PropsWithChildren } from 'react'
 
-import React                      from 'react'
 import { memo }                   from 'react'
+import React                      from 'react'
 
 import { labelStyles }            from './label.css.js'
 

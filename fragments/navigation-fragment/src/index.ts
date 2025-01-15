@@ -1,2 +1,2 @@
 export * from './navigation.component.js'
-export * from './navigation.interface.js'
+export type * from './navigation.interface.js'

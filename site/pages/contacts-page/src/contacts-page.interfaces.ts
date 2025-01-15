@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/sort-type-constituents */
+
 import type { SEOInt }  from '@globals/data'
 import type { DataInt } from '@globals/data'
 
@@ -9,7 +11,7 @@ export interface ContactsPageClientProps {
 }
 
 export interface ContactsPageProps {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: Record<string, string | Array<string> | undefined>
 }
 
 export type ContactsPageInt = () => Promise<JSX.Element>
