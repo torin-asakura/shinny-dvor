@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { join } from 'path'
 import { dirname } from 'path'
 
@@ -22,6 +24,7 @@ const nextConfig = {
       },
     ],
   },
+
   experimental: {
     instrumentationHook: true,
     externalDir: true,
