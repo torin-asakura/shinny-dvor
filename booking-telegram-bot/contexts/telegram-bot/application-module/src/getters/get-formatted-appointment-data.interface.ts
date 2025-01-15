@@ -5,7 +5,7 @@ type GetFormattedAppointmentDataType = (
     carBody: string
     radii: string
     service: string
-    commentary: string | boolean
+    commentary: boolean | string
     timeSlot: {
       milliseconds: number
     }

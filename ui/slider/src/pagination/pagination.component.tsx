@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+
 import type { FC }              from 'react'
 
 import type { PaginationProps } from './pagination.interface.js'
